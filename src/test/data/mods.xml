@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mods xmlns:xlink="http://www.w3.org/1999/xlink" version="3.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/mods/v3"
+	xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+	<titleInfo>
+		<nonSort>The </nonSort>
+		<title>Urban Question as a Scale Question</title>
+		<subTitle>Reflections on Henri Lefebre, Urban Theory and
+			the Politics of Scale</subTitle>
+	</titleInfo>
+	<name type="personal">
+		<namePart type="given">Neil</namePart>
+		<namePart type="family">Brenner</namePart>
+		<affiliation>Groupe Sociétés, Religions, Laïcités</affiliation>
+		<affiliation>CNRS : UMR8582</affiliation>
+		<affiliation>Ecole Pratique des Hautes Etudes</affiliation>
+		<role>
+			<roleTerm type="code" authority="marcrelator">aut</roleTerm>
+		</role>
+	</name>
+	<name type="corporate">
+		<namePart>Institution of the bidule</namePart>
+		<role>
+			<roleTerm type="code">edt</roleTerm>
+		</role>
+	</name>
+	<typeOfResource>text</typeOfResource>
+	<genre authority="marcgt">article</genre>
+	<originInfo>
+		<issuance>monographic</issuance>
+		<dateIssued encoding="iso8601">2008</dateIssued>
+	</originInfo>
+	<language>
+		<languageTerm type="code" authority="rfc3066">fr</languageTerm>
+		<languageTerm type="code" authority="iso639-2b">fre</languageTerm>
+	</language>
+	<abstract xml:lang="en"> This Paper reviews the pros and cons of an
+		early EU enlargement towards Central and Eastern European Countries
+		(CEECs hereafter). First, the Maastricht criteria, which cannot be
+		literally assessed during the catching up process, but that
+		nevertheless mirror the huge efforts undertaken in order to (i)
+		stabilise the economies, (ii) converge towards the EU, and then (iii)
+		participate into the EMU, are analysed. Second, real convergence is
+		observed to occur at different rates, depending upon the initial
+		conditions faced and the productivity gains realised by each country.
+		Third, computing the correlation of demand and supply shocks in a wide
+		sample of Euro countries and the CEECs, gives some indication of the
+		similarity of the business cycles and economic structures of the CEECs
+		on the one hand, and the EU on the other. Yet, we argue that looking
+		at static correlation only (averaged over the last decade) is too
+		simplistic, as the transition process will blur these averages. Using
+		the Kalman filter, we are EU enlargement towards Central and Eastern
+		European Countries (CEECs hereafter). First, the Maastricht criteria,
+		which cannot be literally assessed during the catching up process, but
+		that nevertheless mirror the huge efforts undertaken in order to (i)
+		stabilise the economies, (ii) converge towards the EU, and then (iii)
+		participate into the EMU, are analysed. Second, real convergence is
+		observed to occur at different rates, depending upon the initial
+		conditions faced and the productivity gains realised by each country.
+		Third, computing the correlation of demand and supply shocks in a wide
+		sample of Euro countries and the CEECs, gives some indication of the
+		similarity of the business cycles and economic structures of the CEECs
+		on the one hand, and the EU on the other. Yet, we argue that looking
+		at static correlation only (averaged over the last decade) is too
+		simplistic, as the transition process will blur these averages. Using
+		the Kalman filter, we are EU enlargement towards Central and Eastern
+		European Countries (CEECs hereafter). First, the Maastricht criteria,
+		which cannot be literally assessed during the catching up process, but
+		that nevertheless mirror the huge efforts undertaken in order to (i)
+		stabilise the economies, (ii) converge towards the EU, and then (iii)
+		participate into the EMU, are analysed. Second, real convergence is
+		observed to occur at different rates, depending upon the initial
+		conditions faced and the productivity gains realised by each country.
+		Third, computing the correlation of demand and supply shocks in a wide
+		sample of Euro countries and the CEECs, gives some indication of the
+		similarity of the business cycles and economic structures of the CEECs
+		on the one hand, and the EU on the other. Yet, we argue that looking
+		at static correlation only (averaged over the last decade) is too
+		simplistic, as the transition process will blur these averages. Using
+		the Kalman filter, we are EU enlargement towards Central and Eastern
+		European Countries (CEECs hereafter). First, the Maastricht criteria,
+		which cannot be literally assessed during the catching up process, but
+		that nevertheless mirror the huge efforts undertaken in order to (i)
+		stabilise the economies, (ii) converge towards the EU, and then (iii)
+		participate into the EMU, are analysed. Second, real convergence is
+		observed to occur at different rates, depending upon the initial
+		conditions faced and the productivity gains realised by each country.
+		Third, computing the correlation of demand and supply shocks in a wide
+		sample of Euro countries and the CEECs, gives some indication of the
+		similarity of the business cycles and economic structures of the CEECs
+		on the one hand, and the EU on the other. Yet, we argue that looking
+		at static correlation only (averaged over the last decade) is too
+		simplistic, as the transition process will blur these averages. Using
+		the Kalman filter, we are EU enlargement towards Central and Eastern
+		European Countries (CEECs hereafter). First, the Maastricht criteria,
+		which cannot be literally assessed during the catching up process, but
+		that nevertheless mirror the huge efforts undertaken in order to (i)
+		stabilise the economies, (ii) converge towards the EU, and then (iii)
+		participate into the EMU, are analysed. Second, real convergence is
+		observed to occur at different rates, depending upon the initial
+		conditions faced and the productivity gains realised by each country.
+		Third, computing the correlation of demand and supply shocks in a wide
+		sample of Euro countries and the CEECs, gives some indication of the
+		similarity of the business cycles and economic structures of the CEECs
+		on the one hand, and the EU on the other. Yet, we argue that looking
+		at static correlation only (averaged over the last decade) is too
+		simplistic, as the transition process will blur these averages. Using
+		the Kalman filter, we are EU enlargement towards Central and Eastern
+		European Countries (CEECs hereafter). First, the Maastricht criteria,
+		which cannot be literally assessed during the catching up process, but
+		that nevertheless mirror the huge efforts undertaken in order to (i)
+		stabilise the economies, (ii) converge towards the EU, and then (iii)
+		participate into the EMU, are analysed. Second, real convergence is
+		observed to occur at different rates, depending upon the initial
+		conditions faced and the productivity gains realised by each country.
+		Third, computing the correlation of demand and supply shocks in a wide
+		sample of Euro countries and the CEECs, gives some indication of the
+		similarity of the business cycles and economic structures of the CEECs
+		on the one hand, and the EU on the other. Yet, we argue that looking
+		at static correlation only (averaged over the last decade) is too
+		simplistic, as the transition process will blur these averages. Using
+		the Kalman filter, we are EU enlargement towards Central and Eastern
+		European Countries (CEECs hereafter). First, the Maastricht criteria,
+		which cannot be literally assessed during the catching up process, but
+		that nevertheless mirror the huge efforts undertaken in order to (i)
+		stabilise the economies, (ii) converge towards the EU, and then (iii)
+		participate into the EMU, are analysed. Second, real convergence is
+		observed to occur at different rates, depending upon the initial
+		conditions faced and the productivity gains realised by each country.
+		Third, computing the correlation of demand and supply shocks in a wide
+		sample of Euro countries and the CEECs, gives some indication of the
+		similarity of the business cycles and economic structures of the CEECs
+		on the one hand, and the EU on the other. Yet, we argue that looking
+		at static correlation only (averaged over the last decade) is too
+		simplistic, as the transition process will blur these averages. Using
+		the Kalman filter, we are EU enlargement towards Central and Eastern
+		European Countries (CEECs hereafter). First, the Maastricht criteria,
+		which cannot be literally assessed during the catching up process, but
+		that nevertheless mirror the huge efforts undertaken in order to (i)
+		stabilise the economies, (ii) converge towards the EU, and then (iii)
+		participate into the EMU, are analysed. Second, real convergence is
+		observed to occur at different rates, depending upon the initial
+		conditions faced and the productivity gains realised by each country.
+		Third, computing the correlation of demand and supply shocks in a wide
+		sample of Euro countries and the CEECs, gives some indication of the
+		similarity of the business cycles and economic structures of the CEECs
+		on the one hand, and the EU on the other. Yet, we argue that looking
+		at static correlation only (averaged over the last decade) is too
+		simplistic, as the transition process will blur these averages. Using
+		the Kalman filter, we are able to compute time varying correlation,
+		hence differentiating between the transition and the most recent
+		period. Our results emphasise an ongoing process of demand shocks
+		convergence, but supply shocks divergence. Various exchange rate
+		strategies are then discussed. </abstract>
+	<note>Includes bibliographical references (p. 291-312) and
+		index.</note>
+	<subject authority="lcsh">
+		<topic>Journalism</topic>
+		<geographic>United States.</geographic>
+		<topic>Political aspects</topic>
+		<temporal>20th centuary</temporal>
+		<titleInfo>
+			<title>The Urban Question as a Scale Question</title>
+			<subTitle>Reflections on Henri Lefebre, Urban Theory and
+				the Politics of Scale</subTitle>
+		</titleInfo>
+		<name type="personal">
+			<namePart type="given">Neil</namePart>
+			<namePart type="family">Brenner</namePart>
+			<role>
+				<roleTerm type="text">author</roleTerm>
+			</role>
+		</name>
+		<geographicCode authority="iso3166">FR</geographicCode>
+		<hierarchicalGeographic>
+			<continent>Europe</continent>
+		</hierarchicalGeographic>
+		<cartographics>
+			<scale>1:20000</scale>
+		</cartographics>
+		<occupation>Political aspects</occupation>
+		<genre>Juvenile fiction</genre>
+	</subject>
+	<subject authority="lcsh">
+		<geographic>France</geographic>
+		<topic>History</topic>
+		<genre>Dictionaries</genre>
+		<topic>French</topic>
+	</subject>
+	<subject>
+		<topic>Laïcité ; France ; Nicolas Sarkozy</topic>
+	</subject>
+	<classification edition="21" authority="ddc">071/.3</classification>
+	<relatedItem type="host" ID="test" displayLabel="truc" xlink:type="simple">
+		<titleInfo>
+			<title>International Journal of Urban and Regional
+				Research</title>
+		</titleInfo>
+		<originInfo>
+			<place>
+				<placeTerm type="code" authority="marccountry">fr</placeTerm>
+			</place>
+			<place>
+				<placeTerm type="text">Paris</placeTerm>
+			</place>
+			<publisher>Presses Universitaires de France.</publisher>
+			<dateIssued encoding="marc" point="start">1951</dateIssued>
+			<dateIssued encoding="marc" point="end">9999</dateIssued>
+			<issuance>continuing</issuance>
+			<frequency>Bimonthly, &lt;1972- &gt;; &lt;]&gt;; &lt;]]&gt;</frequency>
+			<frequency>Quarterly, 1951-  &quot; &apos; &amp; &lt; &gt; &quot; &apos;</frequency>
+		</originInfo>
+		<part>
+			<detail type="volume">
+				<number>24</number>
+			</detail>
+			<detail type="issue">
+				<number>2</number>
+				<caption>no.</caption>
+			</detail>
+			<extent unit="page">
+				<start>361</start>
+				<end>378</end>
+			</extent>
+			<date>2000</date>
+		</part>
+	</relatedItem>
+	<identifier>BrennerN2000a</identifier>
+	<accessCondition type="restriction on access">blabla</accessCondition>
+	<extension>
+		<dai:daiList xmlns:dai="info:eu-repo/dai" >
+			<dai:identifier IDref="n2" authority="info:eu-repo/dai/nl">157455590</dai:identifier>
+			<dai:identifier IDref="n1" authority="info:eu-repo/dai/nl">123456678</dai:identifier>
+		</dai:daiList>
+		<rml:researcherml xmlns:rml="http://bibliotheque.sciences-po.fr/standards/researcherml/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bibliotheque.sciences-po.fr/standards/researcherml/v1 http://bibliotheque.sciences-po.fr/standards/researcherml/researcherml-v1-0.xsd">
+			<rml:person IDref="_A3EDFE72CB91E299671245674450827">
+				<rml:firstname>Daniel</rml:firstname>
+				<rml:lastname>Compagnon</rml:lastname>
+				<rml:sex>not specified</rml:sex>
+				<rml:nationality authority="iso3166-1-a2">FR</rml:nationality>
+				<rml:email visible="true" preferred="true" relationType="work">compagnondan@wanadoo.fr</rml:email>
+				<rml:uri visible="true" preferred="true" relationType="work">http://www.cervl.sciencespobordeaux.fr/PagesCV/Compagnon%20Daniel.htm</rml:uri>
+				<rml:affiliation>
+					<rml:relationType authority="rmlaffrole">academic-staff</rml:relationType>
+					<rml:identifier type="hal">28721</rml:identifier>
+					<rml:identifier type="cnrs">UMR5116</rml:identifier>
+					<rml:name>Science Politique Relations Internationales Territoire</rml:name>
+					<rml:acronym>SPIRIT</rml:acronym>
+					<rml:uri>http://www.cervl.sciencespobordeaux.fr/</rml:uri>
+					<rml:affiliation preferred="true">
+						<rml:relationType authority="rmlaffroleorgunit2orgunit">isPartOf</rml:relationType>
+						<rml:name>CNRS</rml:name>
+					</rml:affiliation>
+					<rml:affiliation preferred="true">
+						<rml:relationType authority="rmlaffroleorgunit2orgunit">isPartOf</rml:relationType>
+						<rml:name>Université Montesquieu - Bordeaux IV</rml:name>
+					</rml:affiliation>
+					<rml:affiliation preferred="true">
+						<rml:relationType authority="rmlaffroleorgunit2orgunit">isPartOf</rml:relationType>
+						<rml:name>Institut d'études politiques de Bordeaux</rml:name>
+					</rml:affiliation>
+				</rml:affiliation>
+				<rml:affiliation>
+					<rml:relationType authority="rmlaffrole">academic-staff</rml:relationType>
+					<rml:identifier type="hal">54522</rml:identifier>
+					<rml:name>Sciences Po Bordeaux</rml:name>
+					<rml:uri>http://www.sciencespobordeaux.fr/accueil/</rml:uri>
+					<rml:affiliation preferred="true">
+						<rml:relationType authority="rmlaffroleorgunit2orgunit">isPartOf</rml:relationType>
+						<rml:name>Fonadation nationale de Sciences politiques</rml:name>
+					</rml:affiliation>
+				</rml:affiliation>
+			</rml:person>
+		</rml:researcherml>
+	</extension>
+	<recordInfo>
+		<recordContentSource>DLC</recordContentSource>
+		<recordCreationDate encoding="marc">990730</recordCreationDate>
+		<recordChangeDate encoding="iso8601">20000406144503.0</recordChangeDate>
+		<recordIdentifier>11761548</recordIdentifier>
+	</recordInfo>
+</mods>

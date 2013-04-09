@@ -1,0 +1,18 @@
+{
+    "col_id": "aime", 
+    "records": [
+        {
+            "identifiers": [
+                {
+                    "value": "BrennerN2000a"
+                }
+            ], 
+            "metajson_class": "Document", 
+            "metajson_version": 1, 
+            "rec_id": "BrennerN2000a", 
+            "rec_source": "../test/data/mods.xml", 
+            "rec_type": "JournalArticle"
+        }
+    ], 
+    "title": "AIME references"
+}
