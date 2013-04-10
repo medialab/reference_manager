@@ -4,8 +4,18 @@
         <title>Ref Manager - simple jsonrpc test</title>
         <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="https://raw.github.com/datagraph/jquery-jsonrpc/master/jquery.jsonrpc.js"></script>
+
+        <!-- domino.js -->
+        <!-- script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.7.2.min.js"></script -->
+
+        <!-- maize.js with domino wrapper -->
+        <script "text/javascript" src="js/maize.js"></script>
+        <script "text/javascript" src="js/maize/domino.js"></script>
+
+
         <script type="text/javascript">
             
+
             $(document).ready(function() {
              
                 $.jsonRPC.setup({
@@ -13,6 +23,7 @@
                     //endPoint : 'http://aime.medialab.sciences-po.fr:8980',
                     namespace : ''
                 });
+                /*
                 $("input#echo_button").click(function() {
                     $.jsonRPC.request("echo", {
                         params : [$("input#echo_input").val()],
@@ -50,6 +61,7 @@
                         }
                     });
                 });
+*/
             });
         </script>
     </head>

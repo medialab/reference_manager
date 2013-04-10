@@ -1,0 +1,49 @@
+//
+//  
+//    fonts mixins
+//    ============
+//
+
+.font-common( @font-size:12px, @text-transform:normal,@line-height-ratio:1.67 ){
+	font-size:@font-size;
+	line-height:@font-size * @line-height-ratio;
+	text-transform: @text-transform;
+	font-weight:normal;
+	font-style:normal;
+}
+
+.sans-serif( @font-size:12px, @text-transform:normal,@line-height-ratio:1.67 ){
+	font-family:'LatinModernSans10Regular';
+	.font-common( @font-size,@text-transform, @line-height-ratio );
+}
+
+.serif( @font-size:16px, @text-transform:normal,@line-height-ratio:1.414 ){
+	font-family: 'LatinModernRoman10Regular', serif;
+	.font-common( @font-size,@text-transform, @line-height-ratio );
+}
+
+.serif-bold( @font-size:16px, @text-transform:normal,@line-height-ratio:1.414 ){
+	font-family: 'LatinModernRoman10Bold', serif;
+	.font-common( @font-size,@text-transform, @line-height-ratio );
+}
+
+.serif-italic( @font-size:12px, @text-transform:normal,@line-height-ratio:1.67 ){
+	font-family: 'LatinModernRoman10Italic', serif;
+	.font-common( @font-size,@text-transform, @line-height-ratio );
+}
+
+.serif-slant( @font-size:12px, @text-transform:normal,@line-height-ratio:1.67 ){
+	font-family: 'LatinModernRomanSlanted10Rg', serif;
+	.font-common( @font-size,@text-transform, @line-height-ratio );
+}
+
+
+.mono( @font-size:12px, @text-transform:normal,@line-height-ratio:1.67 ){
+	font-family: 'LatinModernMonoProp10Regular', mono;
+	.font-common( @font-size,@text-transform, @line-height-ratio );
+}
+
+.mono-caps( @font-size:12px, @text-transform:normal,@line-height-ratio:1.67 ){
+	font-family: 'LatinModernMonoCaps10Regular', mono;
+	.font-common( @font-size,@text-transform, @line-height-ratio );
+}
