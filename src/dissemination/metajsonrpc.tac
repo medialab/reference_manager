@@ -16,7 +16,7 @@ from repository import mongodb_repository
 from citations import citations_manager
 from crosswalks import crosswalks_manager
 
-port = 8980
+port = 8080
 
 class References_repository(jsonrpc.JSONRPC):
     """
@@ -30,6 +30,8 @@ class References_repository(jsonrpc.JSONRPC):
 
     def render(self, request):
         request.setHeader("Access-Control-Allow-Origin", "*")
+        request.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+        # request.setHeader("Access-Control-Request-Headers", "Origin, X-Requested-With, Content-Type, Accept, content-type")
         print "REQUEST: %s" % request.content.read()
         return jsonrpc.JSONRPC.render(self, request)
 

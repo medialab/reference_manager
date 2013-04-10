@@ -11,7 +11,7 @@ from metadatas.metajson import Common, Document, Contributor, Identifier, Resour
 config={
     "host": "localhost",
     "port": 27017,
-    "db": "aime-biblio",
+    "db": "remanager",
     "refCol": "references"
 }
 
