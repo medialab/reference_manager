@@ -68,68 +68,76 @@
         </script>
     </head>
     <body>
-        <!-- modals -->
-        <div id="add-walt-l-modal" data-logic='modal-stepper' data-step="1" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h2>add a publication</h2>
-            </div>
-            <div class="modal-body">
-                <p>type bib text entry directly.
-                Each object should have at least a <b>slug</b> and a <b>title</b>.</p>
-            
-                <p>
-                    <label for="id_add_pin_content">bibtext entry</label>
-                    <textarea class="span6" id="id_add_walt_l_content">
-
-                    </textarea>
-                    <input type="hidden" id="id_add_walt_l_mimetype" value="text/x-bibtex">
-                </p>
-                <p>
-                    <label for="id_add_walt_l_title_en">its title</label>
-                    <input type="text" class="span6 repeatable" data-target="id_add_walt_l_slug" id="id_add_walt_l_title_en" placeholder="title">
-                </p>
-                
-                <p>
-                    <label for="id_add_walt_l_slug">slug</label>
-                    <input type="text" class="span6" id="id_add_walt_l_slug" placeholder="slug">
-                </p>
-            
-            </div>
-            <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">close</button>
-                <button class="btn btn-primary add-walt-pin" data-page-slug="learn" data-auto-id="id_add_walt_l">add publication</button>
-            </div>
-        </div>
+        
 
 
         <div class="container_12">
 
-            <h1>Wrapp - simple jsonrpc test</h1>
+            <h1>Welcome to Remanager</h1>
+            <h2>till now, your favourite reference manager...</h2>
             <form>
             <p>
-                <label for="echo_input">Write something to test jsonRPC connection</label>
-                <input autofocus type="text" class="span6" name="echo_input" id="echo_input" value="echo me" >
-                <br />
-                <button id="test-json" class="btn btn-primary" data-domino-module='Chapter' data-chapter-index="add.starter">test jsonRPC</button>
+                
+                <button class="btn btn-primary"  data-domino-module='ChapterLink' data-chapter-index="add.starter">try to add something</button>
             </p>
            </form>
-           
+
+
+           <!-- MODALS -->
+           <!-- modals -->
+            <div id="add-starter"
+                 data-domino-module='Chapter' data-story="add" data-chapter-index="add.starter"
+                 class="modal fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h2>add a publication</h2>
+                </div>
+                <div class="modal-body">
+                    <p>... yes, but what type?
+                    </p>
+                    <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.publication">add with bibtex</button>
+                    <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.video">add a video</button>
+                    <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.image">add an image</button>
+                    <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.text">add a text</button>
+                
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">close</button>
+                   
+                </div>
+            </div>
+
+             <div id="add-publication"
+                 data-domino-module='Chapter' data-story="add" data-chapter-index="add.publication"
+                 class="modal fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h2>add a publication</h2>
+                </div>
+                <div class="modal-body">
+                    <p>uhm... title?
+                    </p>
+                   
+                
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.starter" data-dismiss="modal" aria-hidden="true">back</button>
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">close</button>
+                   
+                </div>
+            </div>
+
+
+
+
+
+
             <!-- "modal" chapter modules -->
-            <div data-domino-module='Chapter' data-story="add-reference" data-chapter-index="add.starter">
-                <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.publication">add a publication</button>
-                <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.video">add a video</button>
-                <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.image">add an image</button>
-                <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.text">add a text</button>
+            <div data-domino-module='Chapter' data-story="add" data-chapter-index="add.publication">
+                hey!
             </div>
 
-            <div data-domino-module='Chapter' data-story="test" data-chapter-index="test.2">
-                <button class="btn" >start Test</button>
-            </div>
-
-            <div data-domino-module='Chapter' data-story="test" data-chapter-index="test.3">
-                <button class="btn" >start Test</button>
-            </div>
+            
         </div>
     </body>
 </html>

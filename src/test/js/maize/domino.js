@@ -128,8 +128,11 @@
 			], hacks:[
 				{
 					triggers: 'chapter.switch',
-					method: function( data ) {
-						maize.log( '[hack:chapter.switch]', data);
+					method: function( event ) {
+						maize.log( '[hack:chapter.switch]', event);
+						$('.modal').modal('hide');
+						$("#" + event.data.chapter.replace(".","-") ).modal('show');
+
 						return;
 						if (!this.get('updating'))
 							this.request('getValue');
@@ -185,7 +188,8 @@
 				element:[] // jquery *empty* element
 			}, options);
 
-		this.html = o.element.on('click', function(){
+		this.html = o.element.on('click', function( event ){
+			event.preventDefault();
 			maize.log( '<maize.domino.module.ChapterLink> on click', o.value);
 			self.dispatchEvent('chapter.switch', {'chapter':o.value});
 		});
