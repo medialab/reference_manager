@@ -53,3 +53,5 @@ mongodb/remanager.1
 mongodb/remanager.ns
 
 *.pid
+
+*.out
