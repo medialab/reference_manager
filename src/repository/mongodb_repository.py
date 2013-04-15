@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-# mongod --dbpath /Users/jrault/Documents/SciencesPo/Projets/AIME/MongoData/db
+# mongod --dbpath /Users/jrault/Documents/SciencesPo/Projets/ReferenceManager/mongodb
 
 import pymongo
 import bson
@@ -11,7 +11,7 @@ from metadatas.metajson import Common, Document, Contributor, Identifier, Resour
 config={
     "host": "localhost",
     "port": 27017,
-    "db": "aime-biblio",
+    "db": "refmanager",
     "refCol": "references"
 }
 
