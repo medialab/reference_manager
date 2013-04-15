@@ -34,8 +34,9 @@
 
 			Print out the pseudo identifier for this jsonrpc wrapper instance
 		*/
-		this.label = function(){
-			return typeof _this.ns == "undefined"? _this.model: [_this.ns, _this.model].join(".")
+		this.label = function( joiner ){
+
+			return typeof _this.ns == "undefined"? _this.model: [_this.ns, _this.model].join( typeof joiner== "undefined"? "." : joiner )
 		}
 
 		/*
@@ -51,7 +52,7 @@
 			@param fault - funciton (optional, override the existing one)
 		*/
 		this.execute = function( params, callback, proceed, fault ){ maize.log( '<maize.domino.JsonRPCBuilder:' + _this.label() +'> execute]' , params );
-			$.jsonRPC.request( _this.model,{ 
+			$.jsonRPC.request( _this.label("_"),{ 
 				params : params,
 				success: function( result ){ typeof proceed == "undefined"? _this.proceed( result, callback ):proceed( result, callback); }, 
 				error: typeof fault == "undefined"?  _this.fault: fault });

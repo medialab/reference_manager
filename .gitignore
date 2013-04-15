@@ -55,3 +55,9 @@ mongodb/remanager.ns
 *.pid
 
 *.out
+
+mongodb/refmanager.0
+
+mongodb/refmanager.1
+
+*.ns
