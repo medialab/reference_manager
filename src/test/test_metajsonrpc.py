@@ -16,7 +16,7 @@ def shutDown(data):
     print "Shutting down reactor..."
     reactor.stop()
 
-proxy = Proxy("http://127.0.0.1:8980/")
+proxy = Proxy("http://127.0.0.1:8080/")
 if len(sys.argv) > 2 and sys.argv[2] == "array":
     print sys.argv[1], [a for a in sys.argv[3:]]
     d = proxy.callRemote(sys.argv[1], [a for a in sys.argv[3:]])

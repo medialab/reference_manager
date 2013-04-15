@@ -7,7 +7,7 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $.jsonRPC.setup({
-                    endPoint : 'http://localhost:8980',
+                    endPoint : 'http://localhost:8080',
                     //endPoint : 'http://aime.medialab.sciences-po.fr:8980',
                     namespace : ''
                 });
@@ -42,6 +42,17 @@
                         params : [my_list,"mla","html"],
                         success : function(data) {
                             $("<p />").text(data.result).appendTo($("p#citation_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#save_button").click(function() {
+                    $.jsonRPC.request("save", {
+                        params : [$("textarea#save_input").val()],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("p#save_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -84,6 +95,16 @@
         </p>
         <p>Results :</p>
         <p id="citation_result"></p>
+
+        <h2>Method save</h2>
+        <p><label for="save_input">JSON to save</label> : 
+            <textarea name="save_input" id="save_input" rows="10" cols="30"></textarea>
+        </p>
+        <p>
+            <input name="save_button" id="save_button" value="Save metadata in JSON" type="button" />
+        </p>
+        <p>Results :</p>
+        <p id="save_result"></p>
 
     </body>
 </html>

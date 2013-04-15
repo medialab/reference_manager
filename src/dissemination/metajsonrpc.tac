@@ -36,8 +36,7 @@ class References_repository(jsonrpc.JSONRPC):
         return jsonrpc.JSONRPC.render(self, request)
 
     def _cbRender(self, result, request, id, version):                      
-        #print "RESULT: %s" % jsonrpclib.dumps(result, id=id, version=version)
-        print "RESULT: %s" % jsonrpclib.dumps(result, id=id, version=2.0)
+        print "RESULT: %s" % jsonrpclib.dumps(result, id=id, version=version)
         return jsonrpc.JSONRPC._cbRender(self, result, request, id, version=2.0)
 
     def format_bson(self, bson_data) :
@@ -47,11 +46,13 @@ class References_repository(jsonrpc.JSONRPC):
         """Return all passed args."""
         return x
 
-    def jsonrpc_save(self, metajson_document):
+    def jsonrpc_save(self, ref):
         """ insert or update a reference in the repository 
             return object id if ok or error
         """
-        return mongodb_repository.save_metajson(metajson_document)
+        json_ref = json.loads(ref)
+        print json.dumps(json_ref, indent = 4, ensure_ascii = False, encoding = "utf-8", sort_keys = True)
+        return self.format_bson(mongodb_repository.save_metajson(json_ref))
 
     def jsonrpc_metadata_by_rec_ids(self, rec_ids, meta_format):
         """ get metadata of a list of references
