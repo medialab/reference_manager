@@ -6,6 +6,7 @@
 
 import pymongo
 import bson
+from bson.objectid import ObjectId
 from metadatas.metajson import Common, Document, Contributor, Identifier, Resource
 
 config={
@@ -36,15 +37,23 @@ def convert_to_metajson(mongoitems):
     return metajson_list
 
 def save_metajson(metajson):
+    # todo add rec_id if is None
     return mongo_db[config['refCol']].insert(metajson)
 
 def get_by_mongo_id(mongo_id):
+    print mongo_id
     return Document(mongo_db[config['refCol']].find_one({'_id': ObjectId(mongo_id)}))
 
 def get_by_mongo_ids(mongo_ids):
-    return convert_to_metajson(mongo_db[config['refCol']].for_ids(mongo_ids))
+    print mongo_ids
+    mongo_object_ids = []
+    for mongo_id in mongo_ids :
+        mongo_object_ids.append(ObjectId(mongo_id))
+    #return convert_to_metajson(mongo_db[config['refCol']].for_ids(mongo_ids))
+    return convert_to_metajson(mongo_db[config['refCol']].find({"_id": {"$in": mongo_object_ids}}))
 
 def get_by_rec_id(rec_id):
+    print rec_id
     return Document(mongo_db[config['refCol']].find_one({"rec_id": rec_id}))
 
 def get_by_rec_ids(rec_ids):

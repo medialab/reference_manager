@@ -22,13 +22,26 @@
                         }
                     });
                 });
-                $("input#metadata_button").click(function() {
-                    var my_list = $("input#metadata_input").val().split(",")
+                $("input#metadata_by_rec_ids_button").click(function() {
+                    var my_list = $("input#metadata_by_rec_ids_input").val().split(",")
                     $.jsonRPC.request("metadata_by_rec_ids", {
-                        //params : [["296","579","697"],"json"],
-                        params : [my_list,"json"],
+                        //params : [["296","579","697"],"metajson"],
+                        params : [my_list,"metajson"],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#metadata_result"));
+                            $("<p />").text(data.result).appendTo($("pre#metadata_by_rec_ids_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#metadata_by_mongo_ids_button").click(function() {
+                    var my_list = $("input#metadata_by_mongo_ids_input").val().split(",")
+                    $.jsonRPC.request("metadata_by_mongo_ids", {
+                        //params : [["516c07483b71f34764274feb","516c08f63b71f34a8a77b908","516c0b963b71f34a8a77b909"],"metajson"],
+                        params : [my_list,"metajson"],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#metadata_by_mongo_ids_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -38,7 +51,7 @@
                 $("input#citation_button").click(function() {
                     var my_list = $("input#citation_input").val().split(",")
                     $.jsonRPC.request("citation_by_rec_ids", {
-                        //params : [["296","579","697"],"json"],
+                        //params : [["296","579","697"],"mla","html"],
                         params : [my_list,"mla","html"],
                         success : function(data) {
                             $("<p />").text(data.result).appendTo($("p#citation_result"));
@@ -75,15 +88,26 @@
         <p id="echo_result"></p>
 
         <h2>Method metadata_by_rec_ids</h2>
-        <p><label for="metadata_input">List of ref ids</label> : 
-            <input type="text" name="metadata_input" id="metadata_input">
+        <p><label for="metadata_by_rec_ids_input">List of ref ids</label> : 
+            <input type="text" name="metadata_by_rec_ids_input" id="metadata_by_rec_ids_input">
             example : 296,579,697
         </p>
         <p>
-            <input name="metadata_button" id="metadata_button" value="Send metadata request" type="button" />
+            <input name="metadata_by_rec_ids_button" id="metadata_by_rec_ids_button" value="Send metadata by rec ids request" type="button" />
         </p>
         <p>Results :</p>
-        <pre id="metadata_result"></pre>
+        <pre id="metadata_by_rec_ids_result"></pre>
+
+        <h2>Method metadata_by_mongo_ids</h2>
+        <p><label for="metadata_by_mongo_ids_input">List of ref ids</label> : 
+            <input type="text" name="metadata_by_mongo_ids_input" id="metadata_by_mongo_ids_input">
+            example : 516c07483b71f34764274feb,516c08f63b71f34a8a77b908,516c0b963b71f34a8a77b909
+        </p>
+        <p>
+            <input name="metadata_by_mongo_ids_button" id="metadata_by_mongo_ids_button" value="Send metadata by mongo ids request" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="metadata_by_mongo_ids_result"></pre>
 
         <h2>Method citation_by_rec_ids</h2>
         <p><label for="citation_input">List of ref ids</label> : 

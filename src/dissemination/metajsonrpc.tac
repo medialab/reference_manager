@@ -54,15 +54,18 @@ class References_repository(jsonrpc.JSONRPC):
         print json.dumps(json_ref, indent = 4, ensure_ascii = False, encoding = "utf-8", sort_keys = True)
         return self.format_bson(mongodb_repository.save_metajson(json_ref))
 
-    def jsonrpc_metadata_by_rec_ids(self, rec_ids, meta_format):
+    def jsonrpc_metadata_by_rec_ids(self, rec_ids, format="metajson"):
         """ get metadata of a list of references
             params : 
                 - ids : list of record ids (rec_id)
                 - format : the format wanted to describe references  
             return the asked references in the specified format
         """
-        if meta_format == "json" :
-            return self.format_bson(mongodb_repository.get_by_rec_ids(rec_ids))
+        metajson_document = mongodb_repository.get_by_rec_ids(rec_ids)
+        if format == "metajson" :
+            return self.format_bson(metajson_document)
+        else :
+            return crosswalks_manager.convert_document(metajson_document, "metajson", format)
 
     def jsonrpc_metadata_by_mongo_ids(self, mongo_ids, format="metajson"):
         """ get metadata of a list of references
@@ -73,7 +76,7 @@ class References_repository(jsonrpc.JSONRPC):
         """
         metajson_document = mongodb_repository.get_by_mongo_ids(mongo_ids)
         if format == "metajson" :
-            return format_bson(metajson_document)
+            return self.format_bson(metajson_document)
         else :
             return crosswalks_manager.convert_document(metajson_document, "metajson", format)
 
