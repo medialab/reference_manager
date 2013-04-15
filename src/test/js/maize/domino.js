@@ -70,7 +70,7 @@
 			REAL FAULT
 			(server not responding)
 		*/
-		this.fault =function( result ){ maize.log( '<maize.domino.JsonRPCBuilder:' + _this.label() +'> jsonrpc fault]' , data );
+		this.fault =function( result ){ maize.log( '<maize.domino.JsonRPCBuilder:' + _this.label() +'> jsonrpc fault]' , result );
 			maize.fault( result.error );
 		}
 
