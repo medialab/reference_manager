@@ -4,24 +4,29 @@
 
 import json
 from metadatas import metajson
-from metadatas.metajson import Common, Document, Contributor, Identifier, Resource
+from metadatas.metajson import Common
+from metadatas.metajson import Document
+from metadatas.metajson import Resource
+from metadatas.metajson import Contributor
+from metadatas.metajson import Identifier
+from metadatas.metajson import Person
+from metadatas.metajson import Family
+from metadatas.metajson import Orgunit
+from metadatas.metajson import Event
 from metadatas import metajson_contrib_util
 from util import language_util
 from util import other_util
 from dissemination import file_export
 import xml.etree.ElementTree as ET
-
-XMLNS_MODS = "http://www.loc.gov/mods/v3"
-XMLNS_DAI = "info:eu-repo/dai"
-XMLNS_RESEARCHERML = "http://bibliotheque.sciences-po.fr/standards/researcherml/v1"
+from xml.etree.ElementTree import QName
 
 xmlns_map = {
-    "mods" : XMLNS_MODS, 
-    "dai" : XMLNS_DAI,
-    "researcherml" : XMLNS_RESEARCHERML
+    "mods" : "http://www.loc.gov/mods/v3", 
+    "dai" : "info:eu-repo/dai",
+    "researcherml" : "http://bibliotheque.sciences-po.fr/standards/researcherml/v1"
 }
 
-mods_genre_uri_to_metajson_document_type = {
+mods_genre_eurepo_to_metajson_document_type = {
     # info:eu-repo/semantics
     "info:eu-repo/semantics/annotation" : "Annotation",
     "info:eu-repo/semantics/article" : "JournalArticle",
@@ -58,8 +63,10 @@ mods_genre_uri_to_metajson_document_type = {
     "info:eu-repo/semantics/series" : "Series",
     "info:eu-repo/semantics/unspecified" : "Document",
     "info:eu-repo/semantics/website" : "Website",
-    "info:eu-repo/semantics/websiteContribution" : "WebsiteContribution",
+    "info:eu-repo/semantics/websiteContribution" : "WebsiteContribution"
+}
 
+mods_genre_eprint_to_metajson_document_type = {
     # http://purl.org/eprint/type/
     "http://purl.org/eprint/type/Book" : "Book",
     "http://purl.org/eprint/type/BookItem" : "BookPart",
@@ -77,7 +84,8 @@ mods_genre_uri_to_metajson_document_type = {
     "http://purl.org/eprint/type/WorkingPaper" : "WorkingPaper"
 }
 
-mods_genre_margt_to_metajson_document_type = {
+mods_genre_marcgt_to_metajson_document_type = {
+    # marcgt
     "abstract or summary" : "Book",
     "article" : "JournalArticle",
     "atlas" : "Map",
@@ -152,6 +160,14 @@ def register_namespaces():
         ET.register_namespace(key, xmlns_map[key])
 
 
+def prefixtag(ns_prefix, tagname):
+    if tagname:
+        if ns_prefix and ns_prefix in xmlns_map:
+            return str( QName(xmlns_map[ns_prefix], tagname))
+        else:
+            return tagname
+
+
 def convert_mods_file_to_metajson_document_list(mods_filename):
     register_namespaces()
 
@@ -177,60 +193,74 @@ def convert_mods_file_to_metajson_document_list(mods_filename):
 
 def convert_mods_to_metajson_document(mods, source):
     document = Document()
-
-    # identifiers
-    identifiers = convert_mods_identifiers(mods.findall("./{"+XMLNS_MODS+"}identifier"))
-    rec_id = None
-    if identifiers:
-        rec_id = identifiers[0]["value"]
     
-    rec_type = None
-    type_dict = extract_class_type_genres(mods)
-    if type_dict and "rec_type" in type_dict:
-        rec_type = type_dict["rec_type"]
-
-    # rec_id, rec_source
-    document["rec_id"] = rec_id
+    # source
     document["rec_source"] = source
+
+    # rec_type, metajson_class, genres
+    document.update(extract_class_type_genres(mods))
+    rec_type = document["rec_type"]
+
+    # rec_id, identifiers
+    identifiers = convert_mods_identifiers(mods.findall(prefixtag("mods", "identifier")))
+    rec_id = ""
+    if identifiers:
+        if identifiers[0]["type"]:
+            rec_id = identifiers[0]["type"] + "_"
+        rec_id += identifiers[0]["value"]
+    document["rec_id"] = rec_id
     document["identifiers"] = identifiers
 
-    document["rec_type"] = rec_type
+    # title
+    document.update(convert_mods_titleinfos(mods.findall(prefixtag("mods", "titleInfo"))))
+
+    # contributors
+    contributors = extract_contributors(mods)
+    if contributors:
+        print contributors
+        document["contributors"] = contributors
+
+
     return document
 
 
 def extract_class_type_genres(mods):
-    mods_genres = mods.findall("./{"+XMLNS_MODS+"}genre")
+    genres_dict = {}
+    genres_dict["genres"] = []
+
+    mods_genres = mods.findall(prefixtag("mods", "genre"))
     if mods_genres:
-        rec_type = None
-        genres = []
-        metajson_class = None
         for mods_genre in mods_genres:
-            if mods_genre.text in mods_genre_uri_to_metajson_document_type:
-                rec_type = mods_genre_uri_to_metajson_document_type[mods_genre.text]
-                metajson_class = "Document"
-            elif mods_genre.text in mods_genre_margt_to_metajson_document_type:
-                rec_type = mods_genre_margt_to_metajson_document_type[mods_genre.text]
-                metajson_class = "Document"
+            if mods_genre.text.startswith("info:eu-repo/semantics/"):
+                genres_dict["eurepo"] = mods_genre.text
+            elif mods_genre.text.startswith("http://purl.org/eprint/type/"):
+                genres_dict["eprint"] = mods_genre.text
+            elif "marcgt" not in genres_dict and mods_genre.text in mods_genre_marcgt_to_metajson_document_type:
+                genres_dict["marcgt"] = mods_genre.text
             else:
-                genres.append(mods_genre.text)
-        if rec_type or genres or metajson_class:
-            result = {}
-            if rec_type:
-                result["rec_type"] = rec_type
-            if genres:
-                result["genres"] = genres
-            if metajson_class:
-                result["metajson_class"] = metajson_class
-            return result
+                genre = {}
+                if mods_genre.get("authority"):
+                    genre["authority"] = mods_genre.get("authority")
+                genre["value"] = mods_genre.text
+                genres_dict["genres"].append(genre)
 
+    result = {}
+    result["metajson_class"] = "Document"
+    result["rec_type"] = None
+    if "eurepo" in genres_dict and genres_dict["eurepo"] in mods_genre_eurepo_to_metajson_document_type:
+        result["rec_type"] = mods_genre_eurepo_to_metajson_document_type[genres_dict["eurepo"]]
+    elif "eprint" in genres_dict and genres_dict["eprint"] in mods_genre_eprint_to_metajson_document_type:
+        result["rec_type"] = mods_genre_eprint_to_metajson_document_type[genres_dict["eprint"]]
+    elif "marcgt" in genres_dict and genres_dict["marcgt"] in mods_genre_marcgt_to_metajson_document_type:
+        result["rec_type"] = mods_genre_marcgt_to_metajson_document_type[genres_dict["marcgt"]]
+    else :
+        result["rec_type"] = "Document"
+    
+    if genres_dict["genres"]:
+       result["genres"] = genres_dict["genres"]
 
-def convert_mods_genre_list_to_metajson_document_type(genre_list):
-    if genre_list:
-        for genre in genre_list:
-            if genre in mods_genre_uri_to_metajson_document_type:
-                return mods_genre_uri_to_metajson_document_type[genre]
-            elif genre in mods_genre_margt_to_metajson_document_type:
-                return mods_genre_margt_to_metajson_document_type
+    #print result
+    return result
 
 
 def convert_mods_identifiers(mods_identifiers):
@@ -248,12 +278,137 @@ def convert_mods_identifier(mods_identifier):
         return metajson.create_identifier(mods_identifier.get("type"), mods_identifier.text)
 
 
+def convert_mods_titleinfos(mods_titleinfos):
+    result = {}
+    if mods_titleinfos is not None:
+        for mods_titleinfo in mods_titleinfos:
+            title_dict = convert_mods_titleinfo(mods_titleinfo)
+            if title_dict["type"] is None:
+                del title_dict["type"]
+                result.update(title_dict)
+            elif title_dict["type"] == "abbreviated":
+                del title_dict["type"]
+                result["title_abbreviated"] = title_dict
+            elif title_dict["type"] == "alternative":
+                del title_dict["type"]
+                result["title_alternative"] = title_dict
+            elif title_dict["type"] == "translated":
+                del title_dict["type"]
+                result["title_translated"] = title_dict
+            elif title_dict["type"] == "uniform":
+                del title_dict["type"]
+                result["title_uniform"] = title_dict
+            else:
+                print "error convert_mods_titleinfos unknown type : {}".format(title_dict["type"])
+
+    return result
+
+
+def convert_mods_titleinfo(mods_titleinfo):
+    if mods_titleinfo is not None:
+        title_dict = {}
+        title_dict["type"] = mods_titleinfo.get("type")
+        if mods_titleinfo.find(prefixtag("mods", "title")) is not None:
+            title_dict["title"] = mods_titleinfo.find(prefixtag("mods", "title")).text
+        if mods_titleinfo.find(prefixtag("mods", "nonSort")) is not None:
+            title_dict["title_non_sort"] = mods_titleinfo.find(prefixtag("mods", "nonSort")).text
+        if mods_titleinfo.find(prefixtag("mods", "subTitle")) is not None:
+            title_dict["title_sub"] = mods_titleinfo.find(prefixtag("mods", "subTitle")).text
+        if mods_titleinfo.find(prefixtag("mods", "partNumber")) is not None:
+            title_dict["part_number"] = mods_titleinfo.find(prefixtag("mods", "partNumber")).text
+        if mods_titleinfo.find(prefixtag("mods", "partName")) is not None:
+            title_dict["part_name"] = mods_titleinfo.find(prefixtag("mods", "partName")).text
+        
+        #print title_dict
+        return title_dict
+
+
+def extract_contributors(mods):
+    mods_names = mods.findall(prefixtag("mods", "name"))
+    if mods_names:
+        extension = mods.find(prefixtag("mods", "extension"))
+        dai_dict = None
+        if extension is not None:
+            dai_dict = convert_mods_dailist_to_dict(extension.find(prefixtag("dai", "daiList")))
+
+        result = []
+        for mods_name in mods_names:
+            contributor = convert_mods_name_to_contributor(mods_name, dai_dict)
+            if contributor is not None:
+                result.append(contributor)
+        return result
+
+
+def convert_mods_dailist_to_dict(dai_list):
+    if dai_list is not None:
+        dai_identifiers = dai_list.findall(prefixtag("dai", "identifier"))
+        if dai_identifiers:
+            result = {}
+            for dai_identifier in dai_identifiers:
+                result[dai_identifier.get("IDref")] = {"authority" : dai_identifier.get("authority"), "value" : dai_identifier.text}
+            print result
+            return result
+
+
+def convert_mods_name_to_contributor(mods_name, dai_dict):
+    if mods_name is not None:
+        contributor = Contributor()
+        # extract properties
+        name_type = mods_name.get("type")
+        name_id = mods_name.get("ID")
+        name_parts = mods_name.findall(prefixtag("mods", "namePart"))
+        name_affiliations = mods_name.findall(prefixtag("mods", "affiliation"))
+        name_roleterm = None
+        name_role = mods_name.find(prefixtag("mods", "role"))
+        if name_role is not None:
+            name_roleterm = name_role.find(prefixtag("mods", "roleTerm"))
+        name_descriptions = mods_name.findall(prefixtag("mods", "description"))
+
+        if name_type == "personal":
+            person = Person()
+
+            if name_id is not None and dai_dict is not None and name_id in dai_dict:
+                id_value = dai_dict[name_id]["authority"] + "/" + dai_dict[name_id]["value"]
+                identifier = metajson.create_identifier("uri", id_value)
+                person.add_item_to_key(identifier, "identifiers")
+
+            if name_parts:
+                for name_part in name_parts:
+                    if name_part.get("type") == "given":
+                        person["name_given"] = name_part.text
+                    elif name_part.get("type") == "family":
+                        person["name_family"] = name_part.text
+                    elif name_part.get("type") == "date":
+                        date = name_part.text.replace("(", "").replace(")", "")
+                        minus_index = date.find("-")
+                        if minus_index == -1:
+                            person["date_of_birth"] = date
+                        else:
+                            person["date_of_birth"] = date[:minus_index]
+                            person["date_of_death"] = date[minus_index+1:]
+                    elif name_part.get("termsOfAddress") == "date":
+                        person["name_terms_of_address"] = name_part.text
+
+            contributor["person"] = person
+        print name_type, name_id, name_parts, name_affiliations, name_roleterm, name_descriptions
+        return contributor
+
+
+def convert_mods_name_roleterms(mods_roleterms):
+    if mods_roleterms:
+        for mods_roleterm in mods_roleterms:
+            authority = mods_roleterm.get("authority")
+            term_type = mods_roleterm.get("type")
+            value = mods_roleterm.text
+            print authority, term_type, value
+
+
 def test():
-    metajson_list = convert_mods_file_to_metajson_document_list("../test/data/mods.xml")
+    metajson_list = convert_mods_file_to_metajson_document_list("../test/data/mods2.xml")
     file_export.export_metajson(metajson_list, "../test/data/result_mods_metajon.json")
     print json.dumps(metajson_list, indent = 4, ensure_ascii = False, encoding = "utf-8", sort_keys = True)
  
 
 other_util.setup_console()
 test()
-
+ 

@@ -13,7 +13,7 @@ Install MongoDB with brew:
 
     brew install mongodb
 
-Create a data folder for the AIME MongoDB:
+Create a data folder for the ReferenceManager MongoDB:
 
 	mkdir $HOME/somewhere
 
@@ -89,13 +89,13 @@ Install virtualenv and virtualenvwrapper:
     sudo apt-get install python-virtualenv
     sudo pip install virtualenvwrapper
  
-Create AIME virtualenv:
+Create REFMAN virtualenv:
 
-    virtualenv AIME
+    virtualenv REFMAN
 
 Switch to the AIME virtualenv:
     
-    source ~/AIME/bin/activate
+    source ~/REFMAN/bin/activate
     
 To deactivate:
 	
@@ -141,14 +141,14 @@ Exit and relog.
 
 ### Install required modules in python
 
-Create the AIME virtualenv:
+Create the REFMAN virtualenv:
 
 	mkdir .virtualenv
-    v.mk AIME
+    v.mk REFMAN
 
-Switch to the AIME virtualenv:
+Switch to the REFMAN virtualenv:
 
-    v AIME
+    v REFMAN
 
 Install required modules:
     
@@ -162,7 +162,7 @@ Install the correct txjsonrpc:
 
 Clone the git repository:
 
-    git clone git@github.com:medialab/aime.git
+    git clone git@github.com:medialab/reference_manager.git
     
 To update the source:
     
@@ -178,7 +178,7 @@ Create the MongoDB
     mongo
 	db
 	show dbs
-	use aime-biblio
+	use refmanager
 	j = { name : "mongo" }
 	db.references.insert( j )
 	show dbs
@@ -186,7 +186,7 @@ Create the MongoDB
 	
 Edit the repository conf:
 
-	cd aime/biblio_data/repository
+	cd src/repository
     vi mongodb_repository.py
     
 Modify the config dict:
@@ -194,14 +194,14 @@ Modify the config dict:
     config={
     "host": "localhost",
     "port": 27017,
-    "db": "aime-biblio",
+    "db": "refmanager",
     "refCol": "references"
     }
     
 ###Configure JSON-RPC:
 Edit the json-rpc conf:
 
-	cd aime/biblio_data/dissemination
+	cd src/dissemination
     vi metajsonrpc.tac
 
 Modify the json-rpc port:
@@ -212,14 +212,14 @@ Modify the json-rpc port:
 ### Test
 To test all (convert endnote, insert ref inside MongoDB, export json and MLA):
 
-	v AIME
-	cd aime/biblio_data/test
-    python test_all.py
+	v REFMAN
+	cd src
+    python aime_refmanager.py
     
 To start the json-rpc server:
 
-	v AIME
-	cd aime/biblio_data/dissemination
+	v REFMAN
+	cd src/dissemination
     twistd -noy metajsonrpc.tac -l -
     
 or 
@@ -229,7 +229,7 @@ or
 
 Modify the HTML page to test the json-rpc server
     
-    cd aime/biblio_data/test
+    cd src/test
     vi test_metajsonrpc.html
     
 Modify the endPoint:

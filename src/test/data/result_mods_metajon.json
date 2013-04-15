@@ -2,16 +2,59 @@
     "col_id": "aime", 
     "records": [
         {
+            "contributors": [
+                {
+                    "person": {
+                        "name_family": "Dagand", 
+                        "name_given": "Sophie"
+                    }
+                }, 
+                {
+                    "person": {
+                        "name_family": "Deroche-Gurcel", 
+                        "name_given": "Liliane"
+                    }
+                }, 
+                {
+                    "person": {
+                        "identifiers": [
+                            {
+                                "type": "uri", 
+                                "value": "http://spire.sciences-po.fr/hdl:/2441/53r60a8s3kup1vc9kc499cq2k"
+                            }
+                        ], 
+                        "name_family": "Ramel", 
+                        "name_given": "Frédéric"
+                    }
+                }, 
+                {}
+            ], 
+            "genres": [
+                {
+                    "authority": "marcgt", 
+                    "value": "novel"
+                }, 
+                {
+                    "authority": "titi", 
+                    "value": "toto"
+                }
+            ], 
             "identifiers": [
                 {
-                    "value": "BrennerN2000a"
+                    "type": "issn", 
+                    "value": "17617146"
                 }
             ], 
             "metajson_class": "Document", 
             "metajson_version": 1, 
-            "rec_id": "BrennerN2000a", 
-            "rec_source": "../test/data/mods.xml", 
-            "rec_type": "JournalArticle"
+            "rec_id": "issn_17617146", 
+            "rec_source": "../test/data/mods2.xml", 
+            "rec_type": "ReportPart", 
+            "title": "Penser l'Union européenne en tant que Tiers statégique ", 
+            "title_abbreviated": {
+                "title": "institutions économiques internationales et la sécurité humaine dans l'après-guerre froide. Portée, limites, et demande d'un nouveau régime", 
+                "title_non_sort": "Les "
+            }
         }
     ], 
     "title": "AIME references"

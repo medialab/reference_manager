@@ -38,6 +38,7 @@ class Common(dict):
             except :
                 self[key] = [item]
 
+
 # Document
 class Document(Common):
     def __init__(self, *args, **kwargs):
@@ -166,38 +167,64 @@ class Document(Common):
 
 # Contributor
 class Contributor(Common):
-
     def get_formated_name(self) :
         if "type" in self :
-            name=""
-            if self["type"]=="person" :
+            name = ""
+            if self["type"] == "person" :
                 if "name_family" in self and self["name_family"] :
-                    name+=self["name_family"]
+                    name += self["name_family"]
                 if "name_given" in self and self["name_given"]:
-                    name+=", "+self["name_given"]
-            elif self["type"]=="orgunit" and "name" in self :
-                name=self["name"]
-            elif self["type"]=="event" and "title" in self : 
-                name=self["title"]
-            elif self["type"]=="family" and "name_family" in self : 
-                name=self["title"]
-            if name and len(name)>0 : return name
+                    name += ", " + self["name_given"]
+            elif self["type"] == "orgunit" and "name" in self :
+                name = self["name"]
+            elif self["type"] == "event" and "title" in self : 
+                name = self["title"]
+            elif self["type"] == "family" and "name_family" in self : 
+                name = self["title"]
+            if name and len(name) > 0 :
+                return name
+
+
+# Family
+class Family(Common):
+    pass
+
+
+# Person
+class Person(Common):
+    pass
+
+
+# Orgunit
+class Orgunit(Common):
+    pass
+
+
+# Event
+class Event(Common):
+    pass
+
 
 # Collection
 class Collection(Common):
     pass
 
+
 # Identifier
 class Identifier(Common):
     pass
+
 
 # Resource
 class Resource(Common):
     pass
 
+
+
 # Rights
 class Rights(Common):
     pass
+
 
 # Subject
 class Subject(Common):
