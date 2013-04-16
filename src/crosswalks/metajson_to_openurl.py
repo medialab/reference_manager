@@ -160,7 +160,7 @@ def convert_metajson_document_to_openurl(document):
         # au
         aus = document.get_contributors_by_role("aut")
         if len(aus) > 0 :
-            openurl["rft.au"]=aus[0].get_formated_name()
+            openurl["rft.au"]=aus[0].formatted_name()
 
         # cc
         cc = document.get_publisher_country()
@@ -169,12 +169,12 @@ def convert_metajson_document_to_openurl(document):
         # inst
         insts = document.get_contributors_by_role("dgg")
         if len(insts) > 0 :
-            openurl["rft.inst"]=insts[0].get_formated_name()
+            openurl["rft.inst"]=insts[0].formatted_name()
 
         # advisor
         advisors = document.get_contributors_by_role("dgg")
         if len(advisors) > 0 :
-            openurl["rft.advisor"]=advisors[0].get_formated_name()
+            openurl["rft.advisor"]=advisors[0].formatted_name()
 
         # degree
         degree = document.get_type_degree()
@@ -241,10 +241,10 @@ def convert_metajson_document_to_openurl(document):
         if "contributors" in document :
             for contributor in document["contributors"] :
                 if contributor["role"] in metajson_contrib_util.contributor_citable_roles :
-                    if "rft.au" not in openurl and contributor["type"]=="person" :
-                        openurl["rft.au"]=contributor.get_formated_name()
-                    elif "rft.aucorp" not in openurl and contributor["type"]=="orgunit" :
-                        openurl["rft.aucorp"]=contributor.get_formated_name()
+                    if "rft.au" not in openurl and "person" in contributor:
+                        openurl["rft.au"]= contributor.formatted_name()
+                    elif "rft.aucorp" not in openurl and "orgunit" in contributor :
+                        openurl["rft.aucorp"]=contributor.formatted_name()
 
         # issn
         issn = document.get_first_value_for_type_in_list_from_all_level("identifiers", "issn")

@@ -4,6 +4,7 @@
 
 # mongod --dbpath /Users/jrault/Documents/SciencesPo/Projets/ReferenceManager/mongodb
 
+import uuid
 import pymongo
 import bson
 from bson.objectid import ObjectId
@@ -32,12 +33,15 @@ def empty_db():
 
 def convert_to_metajson(mongoitems):
     metajson_list=[]
-    for ref in mongoitems :
-        metajson_list.append(Document(ref))
+    for mongoitem in mongoitems :
+        metajson_list.append(Document(mongoitem))
     return metajson_list
 
 def save_metajson(metajson):
-    # todo add rec_id if is None
+    if "rec_id" not in metajson:
+        rec_id = str(uuid.uuid1())
+        print rec_id
+        metajson["rec_id"] = rec_id
     return mongo_db[config['refCol']].insert(metajson)
 
 def get_by_mongo_id(mongo_id):

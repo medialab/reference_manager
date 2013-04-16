@@ -4,9 +4,9 @@
 
 import json
 from metadatas.metajson import Contributor
-
-STYLE_GIVEN_FAMILY = "given_family"
-STYLE_FAMILY_COMMA_GIVEN = "family_comma_given"
+from metadatas.metajson import Event
+from metadatas.metajson import Person
+from metadatas.metajson import Orgunit
 
 contributor_person_terms_of_address=[
     "baron",
@@ -198,30 +198,6 @@ contributor_citable_roles=[
     "edt"
 ]
 
-def format_contributor(contributor, style):
-    if contributor["type"]=="orgunit":
-        return contributor["name"]
-    elif contributor["type"]=="event":
-        return contributor["title"]
-    elif contributor["type"]=="person":
-        name_family = ""
-        name_given = ""
-        if "name_family" in contributor and contributor["name_family"]:
-            name_family = contributor["name_family"]
-        if "name_given" in contributor and contributor["name_given"]:
-            name_given = contributor["name_given"]
-
-        result = ""
-        if style is None or style == STYLE_FAMILY_COMMA_GIVEN:
-            result = name_family
-            if name_given:
-                 result += ", " + name_given
-        else :
-            if name_given:
-                result = name_given + " "
-            result += name_family
-        return result
-
 def convert_formatted_name_list_to_contributor_list(formatted_name_list, contributor_type = "person", role = "aut"):
     if formatted_name_list :
         contributor_list = []
@@ -234,15 +210,10 @@ def convert_formatted_name_list_to_contributor_list(formatted_name_list, contrib
 def convert_formatted_name_to_contributor(formatted_name, contributor_type, role):
     if formatted_name :
         formatted_name = formatted_name.strip()
-        title = ""
-        name = ""
-        name_given = ""
-        name_middle = ""
-        name_family = ""
-        name_particule_non_dropping = ""
-        name_terms_of_address = ""
-        date_of_birth = ""
-        date_of_death = ""
+        event = None
+        family = None
+        orgunit = None
+        person = None
 
         #print("name : %s"%formatted_name)
         # contributor_type determination
@@ -257,13 +228,30 @@ def convert_formatted_name_to_contributor(formatted_name, contributor_type, role
         if contributor_type is None:
             contributor_type = "person"
 
+        contributor = Contributor()
+        if role:
+            contributor["role"] = role
 
         if contributor_type == "event" :
-            title=formatted_name
+            event = Event()
+            event["title"] = formatted_name
+            contributor["event"] = event
+
         elif contributor_type == "orgunit" :
-            name=formatted_name
+            orgunit = Orgunit()
+            orgunit["name"] = formatted_name
+            contributor["orgunit"] = orgunit
+
         elif contributor_type == "person" or contributor_type == "family" :
             #type is "person" or "family"
+
+            name_given = ""
+            name_middle = ""
+            name_family = ""
+            name_particule_non_dropping = ""
+            name_terms_of_address = ""
+            date_of_birth = ""
+            date_of_death = ""
             
             parenthesis_index = formatted_name.rfind("(")
             if parenthesis_index != -1 :
@@ -338,24 +326,29 @@ def convert_formatted_name_to_contributor(formatted_name, contributor_type, role
                         name_particule_non_dropping=name_given
                         name_given=None
 
-        contributor = Contributor()
-        contributor["type"] = contributor_type
-        if role:
-            contributor["role"] = role
-        contributor.set_key_if_not_none("title",title)
-        contributor.set_key_if_not_none("name",name)
-        contributor.set_key_if_not_none("name_family",name_family)
-        contributor.set_key_if_not_none("name_given",name_given)
-        contributor.set_key_if_not_none("name_middle",name_middle)
-        contributor.set_key_if_not_none("name_terms_of_address",name_terms_of_address)
-        contributor.set_key_if_not_none("name_particule_non_dropping",name_particule_non_dropping)
-        contributor.set_key_if_not_none("date_of_birth",date_of_birth)
-        contributor.set_key_if_not_none("date_of_death",date_of_death)
-        if vars().has_key('affiliation_name') and affiliation_name :
-            contributor["affiliations"]=[{"type" :"orgunit","preferred" :True,"name" :affiliation_name}]
+            if contributor_type == "person" :
+                person = Person()
+                person.set_key_if_not_none("name_family",name_family)
+                person.set_key_if_not_none("name_given",name_given)
+                person.set_key_if_not_none("name_middle",name_middle)
+                person.set_key_if_not_none("name_terms_of_address",name_terms_of_address)
+                person.set_key_if_not_none("name_particule_non_dropping",name_particule_non_dropping)
+                person.set_key_if_not_none("date_of_birth",date_of_birth)
+                person.set_key_if_not_none("date_of_death",date_of_death)
+                if vars().has_key('affiliation_name') and affiliation_name :
+                    #todo manage as an object
+                    person["affiliations"]=[{"type" :"orgunit","preferred" :True,"name" :affiliation_name}]
+                
+                contributor["person"] = person
+            
+            elif contributor_type == "family" :
+                family = Family()
+                family.set_key_if_not_none("name_family",name_family)
+                contributor["family"] = family
         
         #print json.dumps(contributor,ensure_ascii=False,indent=4,encoding="utf-8")
         return contributor
+
 
 def change_contibutors_role(contributors, role) :
     if contributors :

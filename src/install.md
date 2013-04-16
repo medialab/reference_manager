@@ -152,7 +152,10 @@ Switch to the REFMAN virtualenv:
 
 Install required modules:
     
-    pip install -r requirements.txt    add2virtualenv .        
+    pip install -r requirements.txt
+    add2virtualenv .
+    
+    
 Install the correct txjsonrpc:
 
 	git clone git@github.com:hefee/txjsonrpc.git
@@ -210,12 +213,15 @@ Modify the json-rpc port:
     
    
 ### Test
+
+#### Import data
 To test all (convert endnote, insert ref inside MongoDB, export json and MLA):
 
 	v REFMAN
 	cd src
     python aime_refmanager.py
-    
+
+#### Start the json-rpc server
 To start the json-rpc server:
 
 	v REFMAN
@@ -226,7 +232,7 @@ or
 
 	twistd -noy metajsonrpc.tac -l server.log $
 
-
+#### Test the json-rpc with the simple page
 Modify the HTML page to test the json-rpc server
     
     cd src/test
@@ -237,5 +243,13 @@ Modify the endPoint:
 	endPoint : 'http://aime.medialab.sciences-po.fr:8980',
 	
 Try this web page in your browser
+
+#### Starting the webserver
+
+cd src/test
+python -m SimpleHTTPServer 8090
+
+http://localhost:8089/echo.html
+http://localhost:8089/index.html
 
 ...

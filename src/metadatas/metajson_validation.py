@@ -116,15 +116,20 @@ def validate_metajson_contributor(contributor):
     errors=[]
     if "role" not in contributor or not contributor["role"]:
         errors.append("No role for contributor")
-    if contributor["type"]=="orgunit":
-        if "name" not in contributor or not contributor["name"]:
-            errors.append("No name in contributor orgunit")
-    elif contributor["type"]=="event":
-        if "title" not in contributor or not contributor["title"]:
-            errors.append("No title in contributor event")
-    elif contributor["type"]=="person":
-        if "name_family" not in contributor or not contributor["name_family"]:
+    if "person" in contributor:
+        if "name_family" not in contributor["person"] or not contributor["person"]["name_family"]:
             errors.append("No name_family in contributor person")
+    elif "orgunit" in contributor:
+        if "name" not in contributor["orgunit"] or not contributor["orgunit"]["name"]:
+            errors.append("No name in contributor orgunit")
+    elif "event" in contributor:
+        if "title" not in contributor["event"] or not contributor["event"]["title"]:
+            errors.append("No title in contributor event")
+    elif "family" in contributor:
+        if "name_family" not in contributor["family"] or not contributor["family"]["name_family"]:
+            errors.append("No name_family in contributor family")
+    else:
+        errors.append("No entity in contributor")
     return errors
 
 def validate_metajson_resource(resource):

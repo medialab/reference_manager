@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+from metadatas import metajson
 from metadatas import metajson_contrib_util
 
 def cite(document, format):
@@ -226,8 +227,8 @@ def format_contributors_of_document(document, level):
 
 
 def format_contributor(contributor, position):
-    style = metajson_contrib_util.STYLE_FAMILY_COMMA_GIVEN
+    style = metajson.STYLE_FAMILY_COMMA_GIVEN
     if position > 0:
-        style = metajson_contrib_util.STYLE_GIVEN_FAMILY
-    return metajson_contrib_util.format_contributor(contributor, style)
+        style = metajson.STYLE_GIVEN_FAMILY
+    return contributor.formatted_name(style)
 

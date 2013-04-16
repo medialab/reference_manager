@@ -4,6 +4,9 @@
 
 METAJSON_VERSION = 1
 
+STYLE_GIVEN_FAMILY = "given_family"
+STYLE_FAMILY_COMMA_GIVEN = "family_comma_given"
+
 # Common
 class Common(dict):
     def set_key_if_not_none(self, key, value):
@@ -48,8 +51,9 @@ class Document(Common):
         if "metajson_class" not in self:
             self["metajson_class"] = "Document"
         if "contributors" in self:
-            tmp = [Contributor(x) for x in self["contributors"]]
-            self["contributors"] = tmp
+            self["contributors"] = [Contributor(x) for x in self["contributors"]]
+        if "is_part_of" in self:
+            self["is_part_of"] = [Document(x) for x in self["is_part_of"]]
 
     def add_contributors(self,contributors):
         self.add_items_to_key(contributors,"contributors")
@@ -167,42 +171,92 @@ class Document(Common):
 
 # Contributor
 class Contributor(Common):
-    def get_formated_name(self) :
-        if "type" in self :
-            name = ""
-            if self["type"] == "person" :
-                if "name_family" in self and self["name_family"] :
-                    name += self["name_family"]
-                if "name_given" in self and self["name_given"]:
-                    name += ", " + self["name_given"]
-            elif self["type"] == "orgunit" and "name" in self :
-                name = self["name"]
-            elif self["type"] == "event" and "title" in self : 
-                name = self["title"]
-            elif self["type"] == "family" and "name_family" in self : 
-                name = self["title"]
-            if name and len(name) > 0 :
-                return name
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "person" in self:
+            self["person"] = Person(self["person"])
+        elif "orgunit" in self:
+            self["orgunit"] = Orgunit(self["orgunit"])
+        elif "event" in self:
+            self["event"] = Event(self["event"])
+        elif "family" in self:
+            self["family"] = Family(self["family"])
 
-
-# Family
-class Family(Common):
-    pass
-
-
-# Person
-class Person(Common):
-    pass
-
-
-# Orgunit
-class Orgunit(Common):
-    pass
+    def formatted_name(self, style = STYLE_FAMILY_COMMA_GIVEN):
+        if "person" in self:
+            return self["person"].formatted_name(style)
+        elif "orgunit" in self:
+            return self["orgunit"].formatted_name()
+        elif "event" in self:
+            return self["event"].formatted_name()
+        elif "family" in self:
+            return self["family"].formatted_name()
 
 
 # Event
 class Event(Common):
-    pass
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "metajson_version" not in self:
+            self["metajson_version"] = METAJSON_VERSION
+        if "metajson_class" not in self:
+            self["metajson_class"] = "Event"
+
+    def formatted_name(self):
+        if "title" in self:
+            return self["title"]
+
+
+# Family
+class Family(Common):
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "metajson_version" not in self:
+            self["metajson_version"] = METAJSON_VERSION
+        if "metajson_class" not in self:
+            self["metajson_class"] = "Family"
+
+    def formatted_name(self):
+        if "name_family" in self:
+            return self["name_family"]
+
+
+# Orgunit
+class Orgunit(Common):
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "metajson_version" not in self:
+            self["metajson_version"] = METAJSON_VERSION
+        if "metajson_class" not in self:
+            self["metajson_class"] = "Orgunit"
+
+    def formatted_name(self) :
+        if "name" in self :
+            return self["name"]
+
+
+# Person
+class Person(Common):
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "metajson_version" not in self:
+            self["metajson_version"] = METAJSON_VERSION
+        if "metajson_class" not in self:
+            self["metajson_class"] = "Person"
+
+    def formatted_name(self, style = STYLE_FAMILY_COMMA_GIVEN) :
+        result = ""
+        if style == STYLE_FAMILY_COMMA_GIVEN:
+            if "name_family" in self and self["name_family"]:
+                result += self["name_family"]
+            if "name_given" in self and self["name_given"]:
+                result += ", " + self["name_given"]
+        else:
+            if "name_given" in self and self["name_given"]:
+                result += self["name_given"] + " "
+            if "name_family" in self and self["name_family"]:
+                result += self["name_family"]
+        return result
 
 
 # Collection
@@ -239,3 +293,4 @@ def create_identifier(id_type, id_value):
         if id_type:
             identifier["type"] = id_type
         return identifier
+
