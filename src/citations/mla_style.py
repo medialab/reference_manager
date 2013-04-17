@@ -89,7 +89,7 @@ def cite(document, format):
         result += publisher + ", "
     else:
         pass
-        # todo dgg
+        # todo contributor dgg
 
     # part_volume, part_issue
     part_volume = document.get_part_volume()

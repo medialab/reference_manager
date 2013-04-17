@@ -16,11 +16,15 @@ def convert_document(input_data, input_format, output_data):
     
 
 def convert_file(input_file, input_format, output_format):
-    if input_format == "endnote":
+    metajson_document_list = None
 
-        if output_format == "metajson":
-            return endnote_to_metajson.convert_endnote_file_to_metajson_document_list(input_data)
+    # convert to metajson
+    if input_format == "endnote":
+        metajson_document_list = endnote_to_metajson.convert_endnote_file_to_metajson_document_list(input_data)
 
     elif input_format == "bibtex":
-        pass
-        # todo
+
+    # export to the output_format
+    if output_format == "metajson":
+        
+        return metajson_document_list

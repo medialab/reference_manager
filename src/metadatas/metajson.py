@@ -54,6 +54,14 @@ class Document(Common):
             self["contributors"] = [Contributor(x) for x in self["contributors"]]
         if "is_part_of" in self:
             self["is_part_of"] = [Document(x) for x in self["is_part_of"]]
+        if "resources" in self:
+            self["resources"] = [Resource(x) for x in self["resources"]]
+
+    def document_type_tree():
+        tree = {}
+
+        # first level
+
 
     def add_contributors(self,contributors):
         self.add_items_to_key(contributors,"contributors")
@@ -271,8 +279,12 @@ class Identifier(Common):
 
 # Resource
 class Resource(Common):
-    pass
-
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "metajson_version" not in self:
+            self["metajson_version"] = METAJSON_VERSION
+        if "metajson_class" not in self:
+            self["metajson_class"] = "Resource"
 
 
 # Rights

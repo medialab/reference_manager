@@ -8,7 +8,7 @@ from pybtex.database.input import bibtex
 
 def convert_bibtext_entry_to_metajson_document(bibtextentry, source):
     document = Document()
-    # todo
+    # todo convert bibtext to metajson
     return document
 
 def convert_bibtext_file_to_metasjon_document_list(bibtex_filename):
