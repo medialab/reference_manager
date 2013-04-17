@@ -34,30 +34,15 @@ nosetests.xml
 .project
 .pydevproject
 
+#
+# !gitignore .gitignore
+#
+!.gitignore
+
+#
+# other extensions
+# 
 .DS_Store
-
-mongodb/journal/j._0
-
-mongodb/journal/lsn
-
-mongodb/local.0
-
-mongodb/local.ns
-
 *.lock
-
-mongodb/remanager.0
-
-mongodb/remanager.1
-
-mongodb/remanager.ns
-
 *.pid
-
 *.out
-
-mongodb/refmanager.0
-
-mongodb/refmanager.1
-
-*.ns
