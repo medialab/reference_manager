@@ -680,6 +680,58 @@ ul.typeahead dropdown-menu{
 																		TILES
 
 */
+.slidebox{
+	// an absolute positioned without TOP or LEFT
+	position:absolute;
+	height:100%;
+	width:960px;
+	background: #bdbdbd;
+	.slides{
+		position:absolute;
+		width: 64%;
+		height:100%;
+		.slide{
+			position:absolute;
+			height: 100%;
+			width: 100%;
+			.box-shadow();
+			background-color: white;
+			.transition( top, .3s, ease-in-out );
+			
+			&.out{
+				top:100%;
+				display: none;
+			}
+			&.in{
+				top:0%;
+			}
+			&.back{
+				top:-105%;
+			}
+			.tile{
+				position:absolute;
+				height: 100%;
+				h2{
+					.mono(18px);
+					padding: 0 10px;
+
+				}
+				&:hover{
+					background-color: gold;
+				}
+				
+			}
+			
+		}
+	}
+	.preview{
+		position:absolute;
+		width:36%;
+		left:64%;
+		height:100%;
+	}
+}
+
 .tiles{
 	position:absolute; height:100%; width: 100%;
 

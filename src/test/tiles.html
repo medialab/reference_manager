@@ -79,48 +79,52 @@
         </div>
 
         <!-- pseudo treemap (percentage only) modulus -->
+        <script>
+
+
+        </script>
         <div class="container_12">
             <!-- the position absolute method-->
-            <div style="position:absolute; height:400px; width:960px">
-                <div class="tiles">
-                    <div class="wrapper">
-                        <div class="tile" style="top: 0%;  left:0%;   width: 50%; height:50%;">
-                            <h2>text</h2>
+            <div class="slidebox" >
 
-                            <div style="position:absolute; height:80%; top:20%; width: 100%">
-                                <div class="tiles">
-                                    <div class="wrapper" style="width:100%">
-                                        <div class="tile" style="top: 0%;  left:0%;   width: 50%; height:50%;">a</div>
-                                        <div class="tile" style="top: 0%;  left:50%;  width: 50%; height:50%;">b</div>
-                                        <div class="tile" style="top: 50%; left:0%;   width: 50%; height:50%;">c</div>
-                                        <div class="tile" style="top: 50%; left:50%;  width: 50%; height:50%;">d</div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="tile" style="top: 0%;  left: 50%; width: 50%; height: 50%;">
-                            <h2>image</h2>
-                        </div>
-
-                        <div class="tile" style="top: 50%; left: 0%;  width: 50%; height: 50%;">
-                            <h2>video</h2>
-                        </div>
-
-                        <div class="tile" style="top: 50%; left: 50%; width: 50%; height: 50%;">
-                            <h2>audio</h2>
-                        </div>
+                <div class="slides">
+                    <div id="c-index" class="slide" data-domino-module='Chapter'>
+                        <div class="tile" style="width:25%; left:0%" data-domino-module='ChapterLink' data-href="c-text"><h2>text</h2></div>
+                        <div class="tile" style="width:25%; left:25%" data-domino-module='ChapterLink' data-href="c-image"><h2>image</h2></div>
+                        <div class="tile" style="width:25%; left:50%" data-domino-module='ChapterLink' data-href="c-video"><h2>video</h2></div>
+                        <div class="tile" style="width:25%; left:75%" data-domino-module='ChapterLink' data-href="c-audio"><h2>audio</h2></div>
                     </div>
 
-                    <div class="preview">
-                        <h2>preview</h2>
-                        <div class="content">
-                           bibtext
-                        </div>
+                    <div id="c-text" class="slide out" data-domino-module='Chapter'>
+                        <div class="tile" style="width:25%; left:0%; height: 25%" data-domino-module='ChapterLink' data-href="c-text-article">Article</div>
+                        <div class="tile" style="width:25%; left:25%; height: 25%" data-domino-module='ChapterLink' data-href="c-text-book">Book</div>
+                        <div class="tile" style="width:25%; left:50%; height: 25%">DocumentPart</div>
+                        <div class="tile" style="width:25%; left:75%; height: 25%">Thesis</div>
+                        <div class="tile" style="width:25%; left:0%; top: 25%; height: 25%">TechnicalText</div>
+                        <div class="tile" style="width:25%; left:25%; top: 25%; height: 25%">WebEntity</div>
+                        <div class="tile" style="width:25%; left:50%; top: 25%; height: 25%">Event</div>
+                        <div class="tile" style="width:25%; left:75%; top: 25%; height: 25%">UnpublishedDocument</div>
+                        <div class="tile" style="width:25%; left:0%; top: 50%; height: 25%">other</div>
+                    </div>
+
+                    <div id="c-text-article" class="slide out" data-domino-module='Chapter'>
+                        ARTICLE!!!
+                    </div>
+
+                     <div id="c-image" class="slide out" data-domino-module='Chapter'>
+                        <div class="tile">text</div>
+                        <div class="tile">image</div>
+                        <div class="tile">image</div>
+                        <div class="tile">image</div>
                     </div>
                 </div>
+                <div class="preview">
+                    <h2>preview</h2>
+                    <div class="content">
+                           bibtext
+                    </div>
+                </div>
+                
             </div>
         </div>
 

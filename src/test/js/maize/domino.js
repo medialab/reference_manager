@@ -129,10 +129,19 @@
 			], hacks:[
 				{
 					triggers: 'chapter.switch',
-					method: function( event ) {
+					method: function( event ) { // launch autosave
 						maize.log( '[hack:chapter.switch]', event);
 						$('.modal').modal('hide');
-						$("#" + event.data.chapter.replace(".","-") ).modal('show');
+						
+						$(".modal #" + event.data.chapter.replace(".","-") ).modal('show');
+
+						// get domino object ??
+						if (typeof maize.d.story == "undefined"){
+							maize.d.story = ["c-index"];
+						}	
+						$("#" + maize.d.story[ maize.d.story.length - 1 ] ).addClass("back"); 
+						maize.d.story.push( event.data.chapter );
+						$("#" + event.data.chapter ).show().addClass("in");
 
 						return;
 						if (!this.get('updating'))
@@ -203,7 +212,7 @@
 			
 			var el = $(this),
 				story = el.attr('data-story'),
-				index = el.attr('data-chapter-index')
+				index = el.attr('id')
 
 				// note: 'next' link can be overridden by children with data-chapter-next data-story-jump "Jumper" moudles
 				// next chapter event will be trigger from 
@@ -222,7 +231,7 @@
 		// setup chapter button behaviour
 		$("[data-domino-module=ChapterLink]").each( function(i, e){
 			var el = $(this),
-				target = el.attr('data-chapter-index');
+				target = el.attr('data-href');
 
 			maize.log( '[maize.domino.module.ready]', 'data-domino-module=ChapterLink',  target );
 
