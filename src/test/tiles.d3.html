@@ -77,43 +77,6 @@ text {
   pointer-events: none;
 }
 
-.grandparent text {
-  font-weight: bold;
-}
-
-rect {
-  fill: none;
-  stroke: #fff;
-}
-
-rect.parent,
-.grandparent rect {
-  stroke-width: 2px;
-}
-
-.grandparent rect {
-  fill: #fff;
-}
-
-.children rect.parent,
-.grandparent rect {
-  cursor: pointer;
-}
-
-rect.parent {
-  pointer-events: all;
-}
-
-.children:hover rect.child,
-.grandparent:hover rect {
-  fill: #aaa;
-}
-
-.child{
-    border: 1px solid red;
-
-}
-
         </style>
     </head>
     <body style="height:100%">
@@ -126,20 +89,29 @@ rect.parent {
            
         </div>
 
-        <!-- pseudo treemap (percentage only) modulus -->
         <div class="container_12">
+        <!-- pseudo treemap (percentage only) modulus -->
+        <div id="back">&nbsp;</div>
+            
+        <div style="position:relative; width: 100%; height: 500px">
             <!-- the position absolute method-->
-            <div style="position:absolute; height:400px; width:960px" id="treemap">
+            <div style="position:absolute; height:100%; width:64%;" id="treemap">
                
             </div>
-        </div>
+            <div style="position:absolute; height:100%; width:36%; left: 64%" id="preview">
+               <h2>preview</h2>
 
+               <h3>type</h3>
+               <span id="reference-type"></div>
+            </div>
+        </div>
+      </div>
           <script>
 
 var margin = {top: 20, right: 20, bottom: 20, left: 20};
 
-var width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom,
+var width = 100, //960 - margin.left - margin.right,
+    height = 100, //500 - margin.top - margin.bottom,
     formatNumber = d3.format(",d"),
     transitioning;
 
@@ -161,11 +133,11 @@ var svg = d3.select("#treemap").append("div")
     .attr("class","tiles")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.bottom + margin.top)
-    .style("background", "gold")
+    //.style("background", "gold")
     //.attr("transform", "translate(" + margin.left + "," + margin.top + ")")
    //  .style("shape-rendering", "crispEdges");
 
-var grandparent = svg.append("div")
+var grandparent = d3.select("#back")
     .attr("class", "grandparent");
 
 grandparent.append("div")
@@ -225,16 +197,15 @@ d3.json("flare.json", function(root) {
         .datum(d.parent)
         .on("click", transition)
       .select("h2")
-        .text(name(d));
+        .html(name(d));
         
     var g1 = svg.insert("div", ".grandparent")
         .datum(d)
         .attr("class", "depth")
-        .attr("style", "position:absolute;top:"+margin.top + "px;left:"+margin.left+"px");
    
     var g = g1.selectAll("div")
         .data(d.children)
-      .enter().append("div")
+      .enter().append("div").attr("class", "tile")
     
     
     g.filter(function(d) { return d.children; })
@@ -254,15 +225,9 @@ d3.json("flare.json", function(root) {
     g.append("div")
         .attr("class", "parent rect")
         .call(rect)
-      .attr("title", function(d) { return formatNumber(d.value); });
-
-
-
-    g.append("h4")
-        .attr("dy", ".75em")
-
+      .attr("title", function(d) { return formatNumber(d.value); }).append("h4")
         .text(function(d) { return d.name; })
-        .call(text);
+        
 
 
     
@@ -288,8 +253,8 @@ d3.json("flare.json", function(root) {
       g2.selectAll("h4").style("opacity", 0);
 
       // Transition to the new view.
-      t1.selectAll("h4").call(text).style("opacity", 0);
-      t2.selectAll("h4").call(text).style("opacity", 1);
+      t1.selectAll("h4").style("opacity", 0);
+      t2.selectAll("h4").style("opacity", 1);
       t1.selectAll(".rect").call(rect);
       t2.selectAll(".rect").call(rect);
 
@@ -307,8 +272,8 @@ d3.json("flare.json", function(root) {
         text.attr("style",function(d) {
             return [
                 "position:absolute",
-                "left:" + x(d.x) + "px",
-                "top:" + y(d.y)+ "px"
+                "left:" + x(d.x) + "%",
+                "top:" + y(d.y)+ "%"
             ].join(";");
         });
     };
@@ -317,15 +282,15 @@ d3.json("flare.json", function(root) {
         rect.attr("style",function(d) {
             return [
                 "position:absolute",
-                "left:" + x(d.x) + "px",
-                "top:" + y(d.y)+ "px",
-                "width:" + ( x(d.x + d.dx) - x(d.x) )+ "px",
-                "height:" + ( y(d.y + d.dy) - y(d.y) )+ "px" ].join(";")
+                "left:" + x(d.x) + "%",
+                "top:" + y(d.y)+ "%",
+                "width:" + ( x(d.x + d.dx) - x(d.x) )+ "%",
+                "height:" + ( y(d.y + d.dy) - y(d.y) )+ "%" ].join(";")
         });
     };
 
     function name(d) {
-        return d.parent? name(d.parent) + "." + d.name: d.name;
+        return d.parent? name(d.parent) + " &rarr; " + d.name: d.name;
     }
 });
 

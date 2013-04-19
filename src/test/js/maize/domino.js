@@ -99,6 +99,8 @@
 
 		$("#test-json").on("click", function( event ){ event.preventDefault(); maize.domino.api.echo.execute([$("#echo_input").val()], function(data){maize.log(data); maize.toast( data.result, "received");}) });
 
+		// maize.domino.structure();
+
 		maize.d = new domino({
 			properties: [
 				/*{
@@ -130,10 +132,30 @@
 				{
 					triggers: 'chapter.switch',
 					method: function( event ) { // launch autosave
-						maize.log( '[hack:chapter.switch]', event);
-						$('.modal').modal('hide');
+						maize.log( '[hack:chapter.switch] ui:', event.data.ui, ";", event.data.chapter, event);
 						
-						$(".modal #" + event.data.chapter.replace(".","-") ).modal('show');
+						if (typeof maize.d.current == "undefined"){
+							maize.d.current = [];
+						};	
+
+						if ( event.data.ui == "modal" ){
+							$('.modal').modal('hide');
+							$("#" + event.data.chapter ).modal('show');
+							return;
+						}
+
+						if( event.data.ui == "stack" ){
+							$("#" + event.data.chapter ).removeClass("out").addClass("ready");
+							$("#" + event.data.chapter ).addClass("in");
+							if(maize.d.current.length){
+								$("#" + maize.d.current +".in").removeClass("in").removeClass("ready").addClass("out");
+							}
+							maize.d.current = event.data.chapter;
+							//maize.d.story.push( event.data.chapter );
+
+							//$("#" + maize.d.story[ maize.d.story.length - 1 ] +".in").addClass("out");
+						}
+							
 
 						// get domino object ??
 						if (typeof maize.d.story == "undefined"){
@@ -195,13 +217,14 @@
 		var self = this,
 			o = $.extend({
 				value:'',
+				ui:'modal', // values are 'stack'|'modal'|undefined
 				element:[] // jquery *empty* element
 			}, options);
 
 		this.html = o.element.on('click', function( event ){
 			event.preventDefault();
 			maize.log( '<maize.domino.module.ChapterLink> on click', o.value);
-			self.dispatchEvent('chapter.switch', {'chapter':o.value});
+			self.dispatchEvent('chapter.switch', {'chapter':o.value, 'ui':o.ui});
 		});
 	}
 
@@ -237,6 +260,7 @@
 
 			maize.d.addModule( maize.domino.module.ChapterLink, [{
 				value: target,
+				ui : el.attr('data-ui'),
 				property: 'chapter',
 				element: el
 			}]);

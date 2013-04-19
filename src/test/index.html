@@ -78,35 +78,63 @@
             <h1>Welcome to Remanager</h1>
             <h2>till now, your favourite reference manager...</h2>
             <form>
-            <p>
-                
-                <button class="btn btn-primary"  data-domino-module='ChapterLink' data-chapter-index="add.starter">try to add something</button>
-            </p>
-           </form>
+                <p>
+                    <button class="btn btn-primary"  data-domino-module='ChapterLink' data-ui="stack" data-href="add-reference">add bibliographic reference</button>
+                </p>
+            </form>
 
 
+            <div class="stacks">
+
+                <div id="add-reference" class="stack-page">
+                    <h2>add bibliographic reference</h2>
+                    <ul>
+                        <li data-domino-module='ChapterLink' data-ui="stack" data-href="add-reference-text"><h3>Text</h3></li>
+                        <li data-domino-module='ChapterLink' data-ui="stack" data-href="add-reference-audio"><h3>Image</h3></li>
+                        <li data-domino-module='ChapterLink' data-ui="stack" data-href="add-reference-audio"><h3>Audio</h3></li>
+                        <li data-domino-module='ChapterLink' data-ui="stack" data-href="add-reference-video"><h3>Video</h3></li>
+                    </ul>
+                </div>
+
+                <div id="add-reference-text" class="stack-page">
+                    <h2>add bibliographic reference / book</h2>
+                    <ul>
+                        <li data-domino-module='ChapterLink' data-ui="stack" data-href="add-reference-text-article"><h3>Article</h3></li>
+                        <li data-domino-module='ChapterLink' data-ui="stack" data-href="add-reference-audio"><h3>Book</h3></li>
+                    </ul>
+                </div>
+
+                <div id="add-reference-text-article" class="stack-page">
+                    <h2>add bibliographic reference / book</h2>
+                    <ul>
+                        <li data-domino-module='ChapterLink' data-ui="stack" data-href="add-reference-text">Article</li>
+                        <li data-domino-module='ChapterLink' data-ui="stack" data-href="add-reference-audio">Book</li>
+                    </ul>
+                </div>
+
+                <div class="stack-controller">
+                    close
+                </div>
+            </div>
            <!-- MODALS -->
            <!-- modals -->
-            <div id="add-starter"
+            <div id="add-reference-old"
                  data-domino-module='Chapter' data-story="add" data-chapter-index="add.starter"
-                 class="modal page fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+                 class="modal fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h2>add a publication</h2>
+                    <h2>add a reference</h2>
                 </div>
                 <div class="modal-body">
-                    <p>... yes, but what type?
-                    </p>
-                    <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.publication">add with bibtex</button>
-                    <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.video">add a video</button>
-                    <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.image">add an image</button>
-                    <button class="btn" data-domino-module='ChapterLink' data-chapter-index="add.text">add a text</button>
-                
+                    <ul>    
+                        <li data-domino-module='ChapterLink' data-ui="modal" data-href="add-reference-text">Text</li>
+                        <li data-domino-module='ChapterLink' data-ui="modal" data-href="add-reference-audio">Image</li>
+                        <li data-domino-module='ChapterLink' data-ui="modal" data-href="add-reference-audio">Audio</li>
+                        <li data-domino-module='ChapterLink' data-ui="modal" data-href="add-reference-video">Video</li>
+                    </ul>
+                    
                 </div>
-                <div class="modal-footer">
-                    <button class="btn" data-dismiss="modal" aria-hidden="true">close</button>
-                   
-                </div>
+               
             </div>
 
              <div id="add-publication"
