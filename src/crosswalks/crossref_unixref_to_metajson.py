@@ -3,28 +3,25 @@
 # coding=utf-8
 
 from metadatas.metajson import Common, Document, Contributor, Identifier, Resource
-from metadatas import metajson_contrib_util
-from util import language_util
 import xml.etree.ElementTree as ET
-
 import bson
-from bson.json_util import dumps
+
 
 def convert_crossref_unixref_records_to_metajson_document_list(unixref, source, only_first_result=False):
-    parser = ET.XMLParser(encoding = "utf-8")
-    tree = ET.parse(unixref, parser = parser)
+    parser = ET.XMLParser(encoding="utf-8")
+    tree = ET.parse(unixref, parser=parser)
     records_elements = tree.getroot()
     records = records_elements.findall('doi_record')
 
     document_list = []
     if records:
-        if only_first_result :
-            document_list.append(convert_crossref_unixref_record_to_metajson_document(records[0],source))
-        else :
+        if only_first_result:
+            document_list.append(convert_crossref_unixref_record_to_metajson_document(records[0], source))
+        else:
             for record in records:
-                document_list.append(convert_crossref_unixref_record_to_metajson_document(record,source))
-    
+                document_list.append(convert_crossref_unixref_record_to_metajson_document(record, source))
     return document_list
+
 
 def convert_crossref_unixref_record_to_metajson_document(record, source):
     journal_metadata = record.find("./crossref/journal/journal_metadata")
@@ -55,14 +52,14 @@ def convert_crossref_unixref_record_to_metajson_document(record, source):
         resource_url = journal_article.find("doi_data/resource")
 
     document = Document()
-    # todo : how to find the type ?
+    # todo: how to find the type ?
     document["rec_type"] = "JournalArticle"
 
     if doi is not None:
         document.set_key_with_value_type_in_list("identifiers", doi.text, "doi")
 
     if resource_url is not None:
-        resource=Resource()
+        resource = Resource()
         resource["remote_url"] = resource_url.text
         document["resources"] = [resource]
 
@@ -97,10 +94,10 @@ def convert_crossref_unixref_record_to_metajson_document(record, source):
     if part_page_end is not None:
         document["part_page_end"] = part_page_end.text
 
-    # todo : contributor
-    
+    # todo: contributor
+
     is_part_of = Document()
-    # todo : how to find the type ?
+    # todo: how to find the type ?
     is_part_of["rec_type"] = "Journal"
 
     if journal_title is not None:
@@ -118,4 +115,4 @@ def convert_crossref_unixref_record_to_metajson_document(record, source):
 
 
 document_list = convert_crossref_unixref_records_to_metajson_document_list("../test/data/unixref2.xml", "test")
-print bson.json_util.dumps(document_list[0],ensure_ascii=False,indent=4,encoding="utf-8",sort_keys=True)
+print bson.json_util.dumps(document_list[0], ensure_ascii=False, indent=4, encoding="utf-8", sort_keys=True)

@@ -5,67 +5,70 @@
 import re
 from util import resource_util
 
+
 def validate_metajson_document(metajson):
-    errors=[]
+    errors = []
     # common
     if "rec_type" not in metajson or not metajson["rec_type"]:
         errors.append("Empty type")
     if "title" not in metajson or not metajson["title"]:
         errors.append("Empty title")
     date = metajson.get_date()
-    if date :
+    if date:
         errors.extend(validate_metajson_date(date))
-    else :
+    else:
         errors.append("Empty date_issued")
     if "contributors" in metajson and metajson["contributors"]:
         for contributor in metajson["contributors"]:
             errors.extend(validate_metajson_contributor(contributor))
-    else :
+    else:
         errors.append("No contributor")
 
     # related_items
-    if "is_part_of" in metajson :
-        for is_part_of in metajson["is_part_of"] :
+    if "is_part_of" in metajson:
+        for is_part_of in metajson["is_part_of"]:
             errors.extend(validate_metajson_is_part_of(is_part_of))
-    if "series" in metajson :
-        for series in metajson["series"] :
+    if "series" in metajson:
+        for series in metajson["series"]:
             errors.extend(validate_metajson_series(series))
-    if "original" in metajson :
-        for original in metajson["original"] :
+    if "original" in metajson:
+        for original in metajson["original"]:
             errors.extend(validate_metajson_original(original))
-    if "review_of" in metajson :
-        for review_of in metajson["review_of"] :
+    if "review_of" in metajson:
+        for review_of in metajson["review_of"]:
             errors.extend(validate_metajson_review_of(review_of))
-    if "archive" in metajson :
-        for archive in metajson["archive"] :
+    if "archive" in metajson:
+        for archive in metajson["archive"]:
             errors.extend(validate_metajson_archive(archive))
-    #if "resources" in metajson :
-    #    for resource in metajson["resources"] :
+    #if "resources" in metajson:
+    #    for resource in metajson["resources"]:
     #        errors.extend(validate_metajson_resource(resource))
-    
+
     return errors
 
+
 def validate_metajson_is_part_of(is_part_of):
-    errors=[]
-    if not is_part_of :
+    errors = []
+    if not is_part_of:
         errors.append("Empty is_part_of")
-    if "rec_type" not in is_part_of or not is_part_of["rec_type"] :
+    if "rec_type" not in is_part_of or not is_part_of["rec_type"]:
         errors.append("Empty type in is_part_of")
-    if "title" not in is_part_of or not is_part_of["title"] :
+    if "title" not in is_part_of or not is_part_of["title"]:
         errors.append("Empty title in is_part_of")
-    if "contributors" in is_part_of and is_part_of["contributors"] :
-        for contributor in is_part_of["contributors"] :
+    if "contributors" in is_part_of and is_part_of["contributors"]:
+        for contributor in is_part_of["contributors"]:
             errors.extend(validate_metajson_contributor(contributor))
-    if "is_part_of" in is_part_of :
-        for is_part_of_is_part_of in is_part_of["is_part_of"] :
+    if "is_part_of" in is_part_of:
+        for is_part_of_is_part_of in is_part_of["is_part_of"]:
             errors.extend(validate_metajson_is_part_of(is_part_of_is_part_of))
-    if "series" in is_part_of :
-        for is_part_of_series in is_part_of["series"] :
+    if "series" in is_part_of:
+        for is_part_of_series in is_part_of["series"]:
             errors.extend(validate_metajson_series(is_part_of_series))
     return errors
 
+
 def validate_metajson_original(original):
-    errors=[]
+    errors = []
     if not original:
         errors.append("Empty original")
     if "rec_type" not in original or not original["rec_type"]:
@@ -77,8 +80,9 @@ def validate_metajson_original(original):
             errors.extend(validate_metajson_contributor(contributor))
     return errors
 
+
 def validate_metajson_archive(archive):
-    errors=[]
+    errors = []
     if not archive:
         errors.append("Empty archive")
     if "title" not in archive or not archive["title"]:
@@ -88,8 +92,9 @@ def validate_metajson_archive(archive):
             errors.extend(validate_metajson_contributor(contributor))
     return errors
 
+
 def validate_metajson_series(series):
-    errors=[]
+    errors = []
     if not series:
         errors.append("Empty series")
     if "title" not in series or not series["title"]:
@@ -99,8 +104,9 @@ def validate_metajson_series(series):
             errors.extend(validate_metajson_contributor(contributor))
     return errors
 
+
 def validate_metajson_review_of(review_of):
-    errors=[]
+    errors = []
     if not review_of:
         review_of.append("Empty review_of")
     if "rec_type" not in review_of or not review_of["rec_type"]:
@@ -112,8 +118,9 @@ def validate_metajson_review_of(review_of):
             errors.extend(validate_metajson_contributor(contributor))
     return errors
 
+
 def validate_metajson_contributor(contributor):
-    errors=[]
+    errors = []
     if "role" not in contributor or not contributor["role"]:
         errors.append("No role for contributor")
     if "person" in contributor:
@@ -132,8 +139,9 @@ def validate_metajson_contributor(contributor):
         errors.append("No entity in contributor")
     return errors
 
+
 def validate_metajson_resource(resource):
-    errors=[]
+    errors = []
     if "remote_url" in resource:
         url_dict = resource_util.verify_url(resource["remote_url"])
         if url_dict["error"]:
@@ -142,12 +150,13 @@ def validate_metajson_resource(resource):
             errors.append("Redirected URL: {}".format(url_dict["redirect_url"]))
     return errors
 
+
 def validate_metajson_date(date):
-    errors=[]
-    if date :
+    errors = []
+    if date:
         date_regex = re.compile('^([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$')
         if not date_regex.match(date):
             errors.append("Maybe malformed date: "+date)
-    else :
+    else:
         errors.append("Empty date")
     return errors

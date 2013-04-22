@@ -1,0 +1,230 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "code": "accessionnumber",
+            "labels": {
+                "en": "Accession number",
+                "fr": "Num\u00e9ro d'acc\u00e8s"
+            }
+        },
+        {
+            "code": "artnum",
+            "labels": {
+                "en": "Artnum",
+                "fr": "Artnum"
+            }
+        },
+        {
+            "code": "arxiv",
+            "labels": {
+                "en": "Arxiv",
+                "fr": "Arxiv"
+            }
+        },
+        {
+            "code": "bibcode",
+            "labels": {
+                "en": "Bib code",
+                "fr": "Bib code"
+            }
+        },
+        {
+            "code": "callnumber",
+            "labels": {
+                "en": "Call number",
+                "fr": "Cote"
+            }
+        },
+        {
+            "code": "citationkey",
+            "labels": {
+                "en": "Citation identifier",
+                "fr": "Identifiant de la citation"
+            }
+        },
+        {
+            "code": "coden",
+            "labels": {
+                "en": "CODEN",
+                "fr": "CODEN"
+            }
+        },
+        {
+            "code": "doi",
+            "labels": {
+                "en": "DOI",
+                "fr": "DOI"
+            }
+        },
+        {
+            "code": "ean",
+            "labels": {
+                "en": "EAN",
+                "fr": "EAN"
+            }
+        },
+        {
+            "code": "eisbn",
+            "labels": {
+                "en": "EISBN",
+                "fr": "EISBN"
+            }
+        },
+        {
+            "code": "eissn",
+            "labels": {
+                "en": "EISSN",
+                "fr": "EISSN"
+            }
+        },
+        {
+            "code": "hdl",
+            "labels": {
+                "en": "Handle",
+                "fr": "Handle"
+            }
+        },
+        {
+            "code": "ird",
+            "labels": {
+                "en": "IRD",
+                "fr": "IRD"
+            }
+        },
+        {
+            "code": "isam",
+            "labels": {
+                "en": "ISAM : International Standard Audiovisual Number",
+                "fr": "ISAM : International Standard Audiovisual Number"
+            }
+        },
+        {
+            "code": "isbn",
+            "labels": {
+                "en": "ISBN : International Standard Book Number",
+                "fr": "Num\u00e9ro ISBN de la publication et/ou du support de publication"
+            }
+        },
+        {
+            "code": "ismn",
+            "labels": {
+                "en": "ISMN : International Standard Music Number",
+                "fr": "ISMN : International Standard Music Number"
+            }
+        },
+        {
+            "code": "isrc",
+            "labels": {
+                "en": "ISRC : International Standard Recording Code",
+                "fr": "ISRC : International Standard Recording Code"
+            }
+        },
+        {
+            "code": "issn",
+            "labels": {
+                "en": "ISSN : International Standard Serial Number",
+                "fr": "Num\u00e9ro ISSN de la publication et/ou du support de publication"
+            }
+        },
+        {
+            "code": "istc",
+            "labels": {
+                "en": "ISTC : International Standard Text Code",
+                "fr": "ISTC : International Standard Text Code"
+            }
+        },
+        {
+            "code": "lccallnum",
+            "labels": {
+                "en": "LC Call number",
+                "fr": "Cote LC"
+            }
+        },
+        {
+            "code": "lccn",
+            "labels": {
+                "en": "LCCN : Library of Congress Control Number",
+                "fr": "LCCN : Library of Congress Control Number"
+            }
+        },
+        {
+            "code": "nationalbibliography",
+            "labels": {
+                "en": null,
+                "fr": null
+            }
+        },
+        {
+            "code": "oclc",
+            "labels": {
+                "en": "OCLC",
+                "fr": "OCLC"
+            }
+        },
+        {
+            "code": "patentnumber",
+            "labels": {
+                "en": "Patent number",
+                "fr": "Num\u00e9ro de brevet"
+            }
+        },
+        {
+            "code": "pmcid",
+            "labels": {
+                "en": "PMCID : PubMed Central reference number",
+                "fr": "PMCID : PubMed Central reference number"
+            }
+        },
+        {
+            "code": "pmid",
+            "labels": {
+                "en": "PMID : PubMed identifier",
+                "fr": "PMID : PubMed identifier"
+            }
+        },
+        {
+            "code": "repec",
+            "labels": {
+                "en": "RePEc identifier",
+                "fr": "RePEc identifier"
+            }
+        },
+        {
+            "code": "sici",
+            "labels": {
+                "en": "SICI : Serial Item and Contribution Identifier",
+                "fr": "SICI : Serial Item and Contribution Identifier"
+            }
+        },
+        {
+            "code": "summon",
+            "labels": {
+                "en": "Summon identifier",
+                "fr": "Identifiant Summon"
+            }
+        },
+        {
+            "code": "unitid",
+            "labels": {
+                "en": "UnitId",
+                "fr": "UnitId"
+            }
+        },
+        {
+            "code": "uri",
+            "labels": {
+                "en": "URI",
+                "fr": "URI"
+            }
+        },
+        {
+            "code": "visa",
+            "labels": {
+                "en": "Motion Picture Association of America visa",
+                "fr": "Visa d'exploitation"
+            }
+        }
+    ],
+    "code": "identifier_type"
+}

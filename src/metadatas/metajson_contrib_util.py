@@ -7,8 +7,9 @@ from metadatas.metajson import Contributor
 from metadatas.metajson import Event
 from metadatas.metajson import Person
 from metadatas.metajson import Orgunit
+from metadatas.metajson import Family
 
-contributor_person_terms_of_address=[
+contributor_person_terms_of_address = [
     "baron",
     "captain",
     "chevalier",
@@ -18,8 +19,8 @@ contributor_person_terms_of_address=[
     "professeur"
 ]
 
-contributor_particule=[
-    #composed :
+contributor_particule = [
+    #composed:
     "de la",
     "de las",
     "de les",
@@ -68,7 +69,7 @@ contributor_particule=[
     "zur"
 ]
 
-contributor_role_terms=[
+contributor_role_terms = [
     "(Eds)",
     "(eds)",
     "(eds.)",
@@ -93,7 +94,7 @@ contributor_role_terms=[
     "[]"
 ]
 
-contributor_event_terms=[
+contributor_event_terms = [
     "colloque",
     "conference",
     u"conférence",
@@ -102,7 +103,7 @@ contributor_event_terms=[
     "symposium"
 ]
 
-contributor_orgunit_terms=[
+contributor_orgunit_terms = [
     u"académie",
     "alternatives",
     "archives",
@@ -165,7 +166,7 @@ contributor_orgunit_terms=[
     "museo",
     "naciones",
     "observatoire",
-    "ofce",    
+    "ofce",
     "office",
     "organisation",
     "paris match",
@@ -193,29 +194,31 @@ contributor_orgunit_terms=[
     "universi"
 ]
 
-contributor_citable_roles=[
+contributor_citable_roles = [
     "aut",
     "edt"
 ]
 
-def convert_formatted_name_list_to_contributor_list(formatted_name_list, contributor_type = "person", role = "aut"):
-    if formatted_name_list :
+
+def convert_formatted_name_list_to_contributor_list(formatted_name_list, contributor_type="person", role="aut"):
+    if formatted_name_list:
         contributor_list = []
-        for formatted_name in formatted_name_list :
+        for formatted_name in formatted_name_list:
             contributor = convert_formatted_name_to_contributor(formatted_name, contributor_type, role)
             if contributor:
                 contributor_list.append(contributor)
         return contributor_list
 
+
 def convert_formatted_name_to_contributor(formatted_name, contributor_type, role):
-    if formatted_name :
+    if formatted_name:
         formatted_name = formatted_name.strip()
         event = None
         family = None
         orgunit = None
         person = None
 
-        #print("name : %s"%formatted_name)
+        #print("name: %s"%formatted_name)
         # contributor_type determination
         for event_term in contributor_event_terms:
             if event_term in formatted_name.lower():
@@ -232,17 +235,17 @@ def convert_formatted_name_to_contributor(formatted_name, contributor_type, role
         if role:
             contributor["role"] = role
 
-        if contributor_type == "event" :
+        if contributor_type == "event":
             event = Event()
             event["title"] = formatted_name
             contributor["event"] = event
 
-        elif contributor_type == "orgunit" :
+        elif contributor_type == "orgunit":
             orgunit = Orgunit()
             orgunit["name"] = formatted_name
             contributor["orgunit"] = orgunit
 
-        elif contributor_type == "person" or contributor_type == "family" :
+        elif contributor_type == "person" or contributor_type == "family":
             #type is "person" or "family"
 
             name_given = ""
@@ -252,10 +255,10 @@ def convert_formatted_name_to_contributor(formatted_name, contributor_type, role
             name_terms_of_address = ""
             date_of_birth = ""
             date_of_death = ""
-            
+
             parenthesis_index = formatted_name.rfind("(")
-            if parenthesis_index != -1 :
-                #may be like : name (date_of_birth-date_of_death)
+            if parenthesis_index != -1:
+                #may be like: name (date_of_birth-date_of_death)
                 dates_part = formatted_name[parenthesis_index + 1:-1].strip()
                 date_of_birth = dates_part[:4]
                 date_of_death = dates_part[5:]
@@ -264,94 +267,94 @@ def convert_formatted_name_to_contributor(formatted_name, contributor_type, role
                 formatted_name = formatted_name[:parenthesis_index].strip()
 
             slash_index = formatted_name.find("/")
-            if slash_index != -1 :
-                #like : name/affiliation
+            if slash_index != -1:
+                #like: name/affiliation
                 affiliation_name = formatted_name[slash_index + 1:].strip()
                 formatted_name = formatted_name[:slash_index].strip()
-            
+
             commaspacejrdot_index = formatted_name.rfind(", Jr.")
-            if (commaspacejrdot_index != -1) :
+            if (commaspacejrdot_index != -1):
                 #like "Paul B. Harvey, Jr."
-                formatted_name = value[:commaspacejrdot_index].strip()
+                formatted_name = formatted_name[:commaspacejrdot_index].strip()
                 name_middle = "Jr."
-            
+
             #Is it formatted like "Family, Given" or "Given Family" ?
             comma_index = formatted_name.find(",")
-            if comma_index == -1 :
+            if comma_index == -1:
                 space_index = formatted_name.rfind(" ")
                 #print formatted_name
                 #print space_index
-                if space_index != -1 :
+                if space_index != -1:
                     #like Given Family
                     name_given = formatted_name[:space_index].strip()
                     name_family = formatted_name[space_index+1:].strip()
-                else :
+                else:
                     #like Family
                     name_family = formatted_name.strip()
 
-            else :
+            else:
                 #like Family, Given
                 name_family = formatted_name[:comma_index].strip()
                 name_given = formatted_name[comma_index+1:].strip()
 
             # manage the terms_of_address and particule
-            for term_of_address in contributor_person_terms_of_address :
-                if name_family and name_family.lower().startswith(term_of_address+" ") :
-                    name_terms_of_address=name_family[:len(term_of_address)]
-                    name_family=name_family[len(term_of_address):].strip()
-                if name_given :
-                    if name_given.lower().endswith(" "+term_of_address) :
-                        name_terms_of_address=name_given[-len(term_of_address):]
-                        name_given=name_given[:-len(term_of_address)].strip()
-                    if name_given.lower().startswith(term_of_address+" ") :
-                        name_terms_of_address=name_given[:len(term_of_address)]
-                        name_given=name_given[len(term_of_address):].strip()
-                    if name_given.lower() == term_of_address :
-                        name_terms_of_address=name_given
-                        name_given=None
+            for term_of_address in contributor_person_terms_of_address:
+                if name_family and name_family.lower().startswith(term_of_address+" "):
+                    name_terms_of_address = name_family[:len(term_of_address)]
+                    name_family = name_family[len(term_of_address):].strip()
+                if name_given:
+                    if name_given.lower().endswith(" "+term_of_address):
+                        name_terms_of_address = name_given[-len(term_of_address):]
+                        name_given = name_given[:-len(term_of_address)].strip()
+                    if name_given.lower().startswith(term_of_address+" "):
+                        name_terms_of_address = name_given[:len(term_of_address)]
+                        name_given = name_given[len(term_of_address):].strip()
+                    if name_given.lower() == term_of_address:
+                        name_terms_of_address = name_given
+                        name_given = None
 
-            # Be careful with a particule inside the name like : Viveiros de Castro, Eduardo
-            for particule in contributor_particule :
-                if name_family and name_family.lower().startswith(particule+" ") :
-                    name_particule_non_dropping=name_family[0:len(particule)]
-                    name_family=name_family[len(particule):].strip()
-                if name_given :
-                    if name_given.lower().endswith(" "+particule) :
-                        name_particule_non_dropping=name_given[-len(particule):]
-                        name_given=name_given[:-len(particule)].strip()
-                    if name_given.lower().startswith(particule+" ") :
-                        name_particule_non_dropping=name_given[:len(particule)]
-                        name_given=name_given[len(particule):].strip()
-                    if name_given.lower() == particule :
-                        name_particule_non_dropping=name_given
-                        name_given=None
+            # Be careful with a particule inside the name like: Viveiros de Castro, Eduardo
+            for particule in contributor_particule:
+                if name_family and name_family.lower().startswith(particule+" "):
+                    name_particule_non_dropping = name_family[0:len(particule)]
+                    name_family = name_family[len(particule):].strip()
+                if name_given:
+                    if name_given.lower().endswith(" "+particule):
+                        name_particule_non_dropping = name_given[-len(particule):]
+                        name_given = name_given[:-len(particule)].strip()
+                    if name_given.lower().startswith(particule+" "):
+                        name_particule_non_dropping = name_given[:len(particule)]
+                        name_given = name_given[len(particule):].strip()
+                    if name_given.lower() == particule:
+                        name_particule_non_dropping = name_given
+                        name_given = None
 
-            if contributor_type == "person" :
+            if contributor_type == "person":
                 person = Person()
-                person.set_key_if_not_none("name_family",name_family)
-                person.set_key_if_not_none("name_given",name_given)
-                person.set_key_if_not_none("name_middle",name_middle)
-                person.set_key_if_not_none("name_terms_of_address",name_terms_of_address)
-                person.set_key_if_not_none("name_particule_non_dropping",name_particule_non_dropping)
-                person.set_key_if_not_none("date_of_birth",date_of_birth)
-                person.set_key_if_not_none("date_of_death",date_of_death)
-                if vars().has_key('affiliation_name') and affiliation_name :
+                person.set_key_if_not_none("name_family", name_family)
+                person.set_key_if_not_none("name_given", name_given)
+                person.set_key_if_not_none("name_middle", name_middle)
+                person.set_key_if_not_none("name_terms_of_address", name_terms_of_address)
+                person.set_key_if_not_none("name_particule_non_dropping", name_particule_non_dropping)
+                person.set_key_if_not_none("date_of_birth", date_of_birth)
+                person.set_key_if_not_none("date_of_death", date_of_death)
+                if 'affiliation_name' in vars() and affiliation_name:
                     #todo manage as an object
-                    person["affiliations"]=[{"type" :"orgunit","preferred" :True,"name" :affiliation_name}]
-                
+                    person["affiliations"] = [{"type": "orgunit", "preferred": True, "name": affiliation_name}]
+
                 contributor["person"] = person
-            
-            elif contributor_type == "family" :
+
+            elif contributor_type == "family":
                 family = Family()
-                family.set_key_if_not_none("name_family",name_family)
+                family.set_key_if_not_none("name_family", name_family)
                 contributor["family"] = family
-        
+
         #print json.dumps(contributor,ensure_ascii=False,indent=4,encoding="utf-8")
         return contributor
 
 
-def change_contibutors_role(contributors, role) :
-    if contributors :
-        for contributor in contributors :
-            contributor.set_key_if_not_none("role",role)
+def change_contibutors_role(contributors, role):
+    if contributors:
+        for contributor in contributors:
+            contributor.set_key_if_not_none("role", role)
     return contributors

@@ -46,3 +46,6 @@ nosetests.xml
 *.lock
 *.pid
 *.out
+
+# protect the config credentials
+config.json

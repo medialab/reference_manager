@@ -3,8 +3,10 @@
 # coding=utf-8
 
 from crosswalks import metajson_to_openurl
+from crosswalks import endnote_to_metajson
 
-def convert_document(input_data, input_format, output_data):
+
+def convert_document(input_data, input_format, output_format):
     if input_format == "metajson":
 
         if output_format == "openurl":
@@ -13,14 +15,14 @@ def convert_document(input_data, input_format, output_data):
     elif input_format == "bibtex":
         pass
         # todo
-    
+
 
 def convert_file(input_file, input_format, output_format):
     metajson_document_list = None
 
     # convert to metajson
     if input_format == "endnote":
-        metajson_document_list = endnote_to_metajson.convert_endnote_file_to_metajson_document_list(input_data)
+        metajson_document_list = endnote_to_metajson.convert_endnote_file_to_metajson_document_list(input_file)
 
     elif input_format == "bibtex":
         pass

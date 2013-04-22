@@ -3,7 +3,7 @@
 # coding=utf-8
 
 from metadatas import metajson
-from metadatas import metajson_contrib_util
+
 
 def cite(document, format):
 
@@ -28,7 +28,6 @@ def cite(document, format):
 
     # is_part_of
     if is_part_of:
-        
         # is_part_of_title
         is_part_of_title = format_title_of_document(is_part_of)
         if is_part_of_title:
@@ -95,11 +94,11 @@ def cite(document, format):
     part_volume = document.get_part_volume()
     if part_volume:
         result += part_volume + "."
-    
+
     part_issue = document.get_part_issue()
     if part_issue:
         result += part_issue
-    
+
     if part_volume or part_issue:
         result += " "
 
@@ -184,14 +183,14 @@ def get_contributors_dict_of_document(document):
         # "aut", "act", "cph", "dgg", "edt", "pro", "trl"
         for contributor in document["contributors"]:
             if "role" in contributor:
-                try :
+                try:
                     result[contributor["role"]].append(contributor)
-                except :
+                except:
                     result[contributor["role"]] = [contributor]
             else:
-                try :
+                try:
                     result["ctb"].append(contributor)
-                except :
+                except:
                     result["ctb"] = [contributor]
         return result
 
@@ -231,4 +230,3 @@ def format_contributor(contributor, position):
     if position > 0:
         style = metajson.STYLE_GIVEN_FAMILY
     return contributor.formatted_name(style)
-

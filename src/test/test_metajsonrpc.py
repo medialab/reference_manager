@@ -2,19 +2,23 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-from twisted.internet import reactor, defer
+from twisted.internet import reactor
 from txjsonrpc.web.jsonrpc import Proxy
 import sys
- 
+
+
 def printValue(value):
     print "Result: %s" % str(value)
 
+
 def printError(error):
     print ' !! ERROR: ', error
- 
+
+
 def shutDown(data):
     print "Shutting down reactor..."
     reactor.stop()
+
 
 proxy = Proxy("http://127.0.0.1:8080/")
 if len(sys.argv) > 2 and sys.argv[2] == "array":

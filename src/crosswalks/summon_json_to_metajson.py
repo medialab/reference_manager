@@ -12,81 +12,82 @@ from dissemination import file_export
 
 
 summon_document_type_to_metajson_document_type = {
-    "Audio Recording" : "AudioRecording",
-    "Book" : "Book",
-    "Book Chapter" : "BookPart",
-    "Book Review" : "BookReview",
-    "Case" : "LegalCase",
-    "Computer File" : "Software",
-    "Conference Proceeding" : "Book",
-    "Data Set" : "Dataset",
-    "Dissertation" : "Thesis",
-    "Image" : "Image",
-    "Journal" : "Journal",
-    "Journal Article" : "JournalArticle",
-    "Magazine" : "Magazine",
-    "Magazine Article" : "MagazineArticle",
-    "Manuscript" : "UnpublishedDocument",
-    "Map" : "Map",
-    "Music Recording" : "MusicRecording",
-    "Music Score" : "MusicalScore",
-    "Newspaper" : "Newspaper",
-    "Newspaper Article" : "NewspaperArticle",
-    "Patent" : "Patent",
-    "Poster" : "ConferencePoster",
-    "Realia" : "PhysicalObject",
-    "Reference" : "Dictionary",
-    "Report" : "Report",
-    "Thesis" : "Thesis",
-    "Video Recording" : "VideoRecording",
-    "Web Resource" : "WebEntity"
+    "Audio Recording": "AudioRecording",
+    "Book": "Book",
+    "Book Chapter": "BookPart",
+    "Book Review": "BookReview",
+    "Case": "LegalCase",
+    "Computer File": "Software",
+    "Conference Proceeding": "Book",
+    "Data Set": "Dataset",
+    "Dissertation": "Thesis",
+    "Image": "Image",
+    "Journal": "Journal",
+    "Journal Article": "JournalArticle",
+    "Magazine": "Magazine",
+    "Magazine Article": "MagazineArticle",
+    "Manuscript": "UnpublishedDocument",
+    "Map": "Map",
+    "Music Recording": "MusicRecording",
+    "Music Score": "MusicalScore",
+    "Newspaper": "Newspaper",
+    "Newspaper Article": "NewspaperArticle",
+    "Patent": "Patent",
+    "Poster": "ConferencePoster",
+    "Realia": "PhysicalObject",
+    "Reference": "Dictionary",
+    "Report": "Report",
+    "Thesis": "Thesis",
+    "Video Recording": "VideoRecording",
+    "Web Resource": "WebEntity"
 }
 
 
 summon_document_type_to_metajson_document_is_part_of_type = {
-    "Book Chapter" : "Book",
-    "Book Review" : "Journal",
-    "Journal Article" : "Journal",
-    "Magazine Article" : "Magazine",
-    "Newspaper Article" : "Newspaper"
+    "Book Chapter": "Book",
+    "Book Review": "Journal",
+    "Journal Article": "Journal",
+    "Magazine Article": "Magazine",
+    "Newspaper Article": "Newspaper"
 }
 
 
 summon_identifier_type_to_metajson_identifier_type = {
-    "CODEN" : "coden",
-    "DOI" : "doi",
-    "EAN" : "ean",
-    "EISBN" : "eisbn",
-    "EISSN" : "eissn",
-    "ISBN" : "isbn",
-    "ISMN" : "ismn",
-    "ISRC" : "isrc",
-    "ISSN" : "issn",
-    "LCCallNum" : "lccallnum",
-    "LCCN" : "lccn",
-    "OCLC" : "oclc",
-    "PatentNumber" : "patentnumber",
-    "PCID" : "pmcid",
-    "PMID" : "pmid",
-    "SICI" : "sici",
-    "ID" : "summon",
-    "URI" : "uri"
+    "CODEN": "coden",
+    "DOI": "doi",
+    "EAN": "ean",
+    "EISBN": "eisbn",
+    "EISSN": "eissn",
+    "ISBN": "isbn",
+    "ISMN": "ismn",
+    "ISRC": "isrc",
+    "ISSN": "issn",
+    "LCCallNum": "lccallnum",
+    "LCCN": "lccn",
+    "OCLC": "oclc",
+    "PatentNumber": "patentnumber",
+    "PCID": "pmcid",
+    "PMID": "pmid",
+    "SICI": "sici",
+    "ID": "summon",
+    "URI": "uri"
 }
 
+
 def convert_summon_json_file_to_metajson_document_list(summon_filename):
-    with open(summon_filename, "r") as summon_file :
+    with open(summon_filename, "r") as summon_file:
         summon_result = json.loads(summon_file.read())
         return convert_summon_json_result_to_metajson_document_list(summon_result, summon_filename)
 
 
 def convert_summon_json_result_to_metajson_document_list(summon_result, source, only_first_result=False):
-    if "documents" in summon_result :
+    if "documents" in summon_result:
         return convert_summon_json_document_list_to_metajson_document_list(summon_result["documents"], source, only_first_result)
 
 
 def convert_summon_json_document_list_to_metajson_document_list(sum_doc_list, source, only_first_result=False):
     results = []
-    for sum_doc in sum_doc_list :
+    for sum_doc in sum_doc_list:
         results.append(convert_summon_json_document_to_metajson_document(sum_doc, source))
     return results
 
@@ -106,13 +107,13 @@ def convert_summon_json_document_to_metajson_document(sum_doc, source):
 
     # languages
     main_language = None
-    if "Language" in sum_doc :
+    if "Language" in sum_doc:
         languages = []
-        for sum_lang in sum_doc["Language"] :
+        for sum_lang in sum_doc["Language"]:
             lang = language_util.convert_english_to_rfc5646(sum_lang)
-            if lang :
+            if lang:
                 languages.append(lang)
-        if languages :
+        if languages:
             main_language = languages[0]
             document["languages"] = languages
 
@@ -169,7 +170,7 @@ def convert_summon_json_document_to_metajson_document(sum_doc, source):
     is_part_of_type = None
     if sum_type in summon_document_type_to_metajson_document_is_part_of_type:
         is_part_of_type = summon_document_type_to_metajson_document_is_part_of_type[sum_type]
-    
+
     elif is_part_of_title and is_part_of_title != title and rec_type not in ["Book", "Journal", "Magazine", "Newspaper", "Periodical"]:
         if has_isbn:
             is_part_of_type = "Book"
@@ -179,44 +180,44 @@ def convert_summon_json_document_to_metajson_document(sum_doc, source):
             is_part_of_type = "Book"
         elif is_part_of_title.lower().find("review") or is_part_of_title.lower().find("journal"):
             is_part_of_type = "Journal"
-        elif rec_type == "Dataset" :
+        elif rec_type == "Dataset":
             is_part_of_type = "Periodical"
         else:
-            print "unknown is_part_of_type for rec_type : %s" % rec_type
+            print "unknown is_part_of_type for rec_type: %s" % rec_type
 
     # is_part_of
     if is_part_of_type:
         is_part_of = Document()
         is_part_of.set_key_if_not_none("rec_type", is_part_of_type)
         is_part_of.set_key_if_not_none("edition", is_part_of_edition)
-        is_part_of.add_items_to_key(identifiers_is_part_of,"identifiers")
+        is_part_of.add_items_to_key(identifiers_is_part_of, "identifiers")
         is_part_of.set_key_if_not_none("peer_reviewed", peer_reviewed)
         is_part_of.set_key_if_not_none("publisher", publisher)
         is_part_of.set_key_if_not_none("publisher_place", publisher_place)
         is_part_of.set_key_if_not_none("title", is_part_of_title)
         is_part_of.set_key_if_not_none("title_sub", is_part_of_title_sub)
-        
-        document.add_items_to_key(identifiers_item,"identifiers")
-        
-        document.add_items_to_key([is_part_of],"is_part_of")
+
+        document.add_items_to_key(identifiers_item, "identifiers")
+
+        document.add_items_to_key([is_part_of], "is_part_of")
     else:
         document.set_key_if_not_none("peer_reviewed", peer_reviewed)
         document.set_key_if_not_none("publisher", publisher)
         document.set_key_if_not_none("publisher_place", publisher_place)
-        document.add_items_to_key(identifiers_is_part_of,"identifiers")
-        document.add_items_to_key(identifiers_item,"identifiers")
+        document.add_items_to_key(identifiers_is_part_of, "identifiers")
+        document.add_items_to_key(identifiers_item, "identifiers")
 
     # series
     if series_title:
         series = Document()
         series.set_key_if_not_none("title", series_title)
 
-        document.add_items_to_key([series],"series")
+        document.add_items_to_key([series], "series")
 
     # classificiations
     extract_convert_add_classifications(sum_doc, document, "DEWEY", "ddc")
     extract_convert_add_classifications(sum_doc, document, "Discipline", "discipline")
-    extract_convert_add_classifications(sum_doc, document, "NAICS", "NAICS")    
+    extract_convert_add_classifications(sum_doc, document, "NAICS", "NAICS")
 
     # set properties
     document.set_key_if_not_none("contributors", contributors)
@@ -236,7 +237,7 @@ def convert_summon_json_document_to_metajson_document(sum_doc, source):
     document.set_key_if_not_none("table_of_contents", table_of_contents)
     document.set_key_if_not_none("title", title)
     document.set_key_if_not_none("title_sub", title_sub)
-    
+
     # subject
     subject = Subject()
     if subject_keywords:
@@ -248,20 +249,21 @@ def convert_summon_json_document_to_metajson_document(sum_doc, source):
     if subject:
         document["subjects"] = subject
 
-    debug=True
+    debug = True
     if debug:
-        related_items_msg="\t\t\t\t\t\t"
-        if is_part_of_type:related_items_msg="\tis_part_of : {} ".format(is_part_of_type)
-        print "{}\t->\titem : {} {}\t:\t{}\t:\t{}".format(sum_type, rec_type, related_items_msg, rec_id, title)
+        related_items_msg = "\t\t\t\t\t\t"
+        if is_part_of_type:
+            related_items_msg = "\tis_part_of: {} ".format(is_part_of_type)
+        print "{}\t->\titem: {} {}\t:\t{}\t:\t{}".format(sum_type, rec_type, related_items_msg, rec_id, title)
 
     return document
 
 
 def extract_convert_langstrings(sum_doc, sum_key, main_language):
-    if sum_key in sum_doc :
+    if sum_key in sum_doc:
         langstrings = []
-        for value in sum_doc[sum_key] :
-            langstrings.append({"language" : main_language, "value" : value})
+        for value in sum_doc[sum_key]:
+            langstrings.append({"language": main_language, "value": value})
         return langstrings
 
 
@@ -272,7 +274,7 @@ def extract_convert_add_classifications(sum_doc, document, sum_key, authority_id
         for classification in classificiations:
             if classification:
                 collection = Collection()
-                collection["autority"] = {"id" : authority_id}
+                collection["autority"] = {"id": authority_id}
                 collection["id"] = classification
                 results.append(collection)
         if results:
@@ -328,12 +330,12 @@ def convert_contributors(sum_doc, sum_authors_key, sum_affiliations_key, contrib
             for author in sum_authors:
                 contributor = Contributor()
                 if "surname" in author and "givenname" in author:
-                    contributor.set_key_if_not_none("name_family",author["surname"])
-                    contributor.set_key_if_not_none("name_given",author["givenname"])
+                    contributor.set_key_if_not_none("name_family", author["surname"])
+                    contributor.set_key_if_not_none("name_given", author["givenname"])
                     contributor["type"] = "person"
                     if role:
                         contributor["role"] = role
-                else :
+                else:
                     formatted_name = ""
                     if "fullname" in author:
                         formatted_name = author["fullname"]
@@ -346,13 +348,13 @@ def convert_contributors(sum_doc, sum_authors_key, sum_affiliations_key, contrib
 
                 if contributor:
                     contributors.append(contributor)
-    
+
     return contributors
 
 
 def extract_date_issued(sum_doc):
     publication_date_xml = extract_value(sum_doc, "PublicationDate_xml", True)
-    if publication_date_xml :
+    if publication_date_xml:
         date_dict = {}
         for item in publication_date_xml:
             if "year" in item:
@@ -361,7 +363,7 @@ def extract_date_issued(sum_doc):
                 date_dict["month"] = item["month"]
             if "day" in item:
                 date_dict["day"] = item["day"]
-        
+
         date = ""
         if "year" in date_dict:
             date += date_dict["year"]
@@ -369,11 +371,11 @@ def extract_date_issued(sum_doc):
             date += "-" + date_dict["month"]
         if "day" in date_dict:
             date += "-" + date_dict["day"]
-        
+
         return date
 
 
-def extract_value(sum_doc, key, as_list = False):
+def extract_value(sum_doc, key, as_list=False):
     if key in sum_doc:
         if as_list:
             return sum_doc[key]
@@ -389,7 +391,7 @@ def extract_boolean_value(sum_doc, key):
 def test():
     metajson_list = convert_summon_json_file_to_metajson_document_list("../test/data/summon.json")
     file_export.export_metajson(metajson_list, "../test/data/result_summon_metajon.json")
-    print json.dumps(metajson_list, indent = 4, ensure_ascii = False, encoding = "utf-8", sort_keys = True)
+    print json.dumps(metajson_list, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
 
 
 other_util.setup_console()

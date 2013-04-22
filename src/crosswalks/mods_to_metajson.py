@@ -21,139 +21,140 @@ import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import QName
 
 xmlns_map = {
-    "mods" : "http://www.loc.gov/mods/v3", 
-    "dai" : "info:eu-repo/dai",
-    "researcherml" : "http://bibliotheque.sciences-po.fr/standards/researcherml/v1"
+    "mods": "http://www.loc.gov/mods/v3",
+    "dai": "info:eu-repo/dai",
+    "researcherml": "http://bibliotheque.sciences-po.fr/standards/researcherml/v1"
 }
 
 mods_genre_eurepo_to_metajson_document_type = {
     # info:eu-repo/semantics
-    "info:eu-repo/semantics/annotation" : "Annotation",
-    "info:eu-repo/semantics/article" : "JournalArticle",
-    "info:eu-repo/semantics/bachelorThesis" : "MasterThesis",
-    "info:eu-repo/semantics/book" : "Book",
-    "info:eu-repo/semantics/bookPart" : "BookPart",
-    "info:eu-repo/semantics/bookReview" : "BookReview",
-    "info:eu-repo/semantics/conferenceContribution" : "ConferenceContribution",
-    "info:eu-repo/semantics/conferenceItem" : "ConferenceContribution",
-    "info:eu-repo/semantics/conferenceObject" : "ConferenceContribution",
-    "info:eu-repo/semantics/conferencePaper" : "ConferencePaper",
-    "info:eu-repo/semantics/conferencePoster" : "ConferencePoster",
-    "info:eu-repo/semantics/conferenceProceedings" : "ConferenceProceedings",
-    "info:eu-repo/semantics/contributionToPeriodical" : "ContributionToPeriodical",
-    "info:eu-repo/semantics/doctoralThesis" : "DoctoralThesis",
-    "info:eu-repo/semantics/lecture" : "ConferenceContribution",
-    "info:eu-repo/semantics/masterThesis" : "MasterThesis",
-    "info:eu-repo/semantics/other" : "Document",
-    "info:eu-repo/semantics/patent" : "Patent",
-    "info:eu-repo/semantics/preprint" : "Preprint",
-    "info:eu-repo/semantics/report" : "Report",
-    "info:eu-repo/semantics/reportPart" : "ReportPart",
-    "info:eu-repo/semantics/researchProposal" : "Document",
-    "info:eu-repo/semantics/review" : "BookReview",
-    "info:eu-repo/semantics/studentThesis" : "MasterThesis",
-    "info:eu-repo/semantics/technicalDocumentation" : "Document",
-    "info:eu-repo/semantics/workingPaper" : "WorkingPaper",
+    "info:eu-repo/semantics/annotation": "Annotation",
+    "info:eu-repo/semantics/article": "JournalArticle",
+    "info:eu-repo/semantics/bachelorThesis": "MasterThesis",
+    "info:eu-repo/semantics/book": "Book",
+    "info:eu-repo/semantics/bookPart": "BookPart",
+    "info:eu-repo/semantics/bookReview": "BookReview",
+    "info:eu-repo/semantics/conferenceContribution": "ConferenceContribution",
+    "info:eu-repo/semantics/conferenceItem": "ConferenceContribution",
+    "info:eu-repo/semantics/conferenceObject": "ConferenceContribution",
+    "info:eu-repo/semantics/conferencePaper": "ConferencePaper",
+    "info:eu-repo/semantics/conferencePoster": "ConferencePoster",
+    "info:eu-repo/semantics/conferenceProceedings": "ConferenceProceedings",
+    "info:eu-repo/semantics/contributionToPeriodical": "ContributionToPeriodical",
+    "info:eu-repo/semantics/doctoralThesis": "DoctoralThesis",
+    "info:eu-repo/semantics/lecture": "ConferenceContribution",
+    "info:eu-repo/semantics/masterThesis": "MasterThesis",
+    "info:eu-repo/semantics/other": "Document",
+    "info:eu-repo/semantics/patent": "Patent",
+    "info:eu-repo/semantics/preprint": "Preprint",
+    "info:eu-repo/semantics/report": "Report",
+    "info:eu-repo/semantics/reportPart": "ReportPart",
+    "info:eu-repo/semantics/researchProposal": "Document",
+    "info:eu-repo/semantics/review": "BookReview",
+    "info:eu-repo/semantics/studentThesis": "MasterThesis",
+    "info:eu-repo/semantics/technicalDocumentation": "Document",
+    "info:eu-repo/semantics/workingPaper": "WorkingPaper",
     # not registered info:eu-repo/semantics types
-    "info:eu-repo/semantics/audiovisual" : "Audiovisual",
-    "info:eu-repo/semantics/interview" : "Interview",
-    "info:eu-repo/semantics/map" : "Map",
-    "info:eu-repo/semantics/periodicalIssue" : "PeriodicalIssue",
-    "info:eu-repo/semantics/professoralThesis" : "ProfessoralThesis",
-    "info:eu-repo/semantics/series" : "Series",
-    "info:eu-repo/semantics/unspecified" : "Document",
-    "info:eu-repo/semantics/website" : "Website",
-    "info:eu-repo/semantics/websiteContribution" : "WebsiteContribution"
+    "info:eu-repo/semantics/audiovisual": "Audiovisual",
+    "info:eu-repo/semantics/interview": "Interview",
+    "info:eu-repo/semantics/map": "Map",
+    "info:eu-repo/semantics/periodicalIssue": "PeriodicalIssue",
+    "info:eu-repo/semantics/professoralThesis": "ProfessoralThesis",
+    "info:eu-repo/semantics/series": "Series",
+    "info:eu-repo/semantics/unspecified": "Document",
+    "info:eu-repo/semantics/website": "Website",
+    "info:eu-repo/semantics/websiteContribution": "WebsiteContribution"
 }
 
 mods_genre_eprint_to_metajson_document_type = {
     # http://purl.org/eprint/type/
-    "http://purl.org/eprint/type/Book" : "Book",
-    "http://purl.org/eprint/type/BookItem" : "BookPart",
-    "http://purl.org/eprint/type/BookReview" : "BookReview",
-    "http://purl.org/eprint/type/ConferenceItem" : "ConferenceContribution",
-    "http://purl.org/eprint/type/ConferencePaper" : "ConferencePaper",
-    "http://purl.org/eprint/type/ConferencePoster" : "ConferencePoster",
-    "http://purl.org/eprint/type/JournalArticle" : "JournalArticle",
-    "http://purl.org/eprint/type/JournalItem" : "PeriodicalIssue",
-    "http://purl.org/eprint/type/NewsItem" : "ContributionToPeriodical",
-    "http://purl.org/eprint/type/Patent" : "Patent",
-    "http://purl.org/eprint/type/Report" : "Report",
-    "http://purl.org/eprint/type/SubmittedJournalArticle" : "Preprint",
-    "http://purl.org/eprint/type/Thesis" : "DoctoralThesis",
-    "http://purl.org/eprint/type/WorkingPaper" : "WorkingPaper"
+    "http://purl.org/eprint/type/Book": "Book",
+    "http://purl.org/eprint/type/BookItem": "BookPart",
+    "http://purl.org/eprint/type/BookReview": "BookReview",
+    "http://purl.org/eprint/type/ConferenceItem": "ConferenceContribution",
+    "http://purl.org/eprint/type/ConferencePaper": "ConferencePaper",
+    "http://purl.org/eprint/type/ConferencePoster": "ConferencePoster",
+    "http://purl.org/eprint/type/JournalArticle": "JournalArticle",
+    "http://purl.org/eprint/type/JournalItem": "PeriodicalIssue",
+    "http://purl.org/eprint/type/NewsItem": "ContributionToPeriodical",
+    "http://purl.org/eprint/type/Patent": "Patent",
+    "http://purl.org/eprint/type/Report": "Report",
+    "http://purl.org/eprint/type/SubmittedJournalArticle": "Preprint",
+    "http://purl.org/eprint/type/Thesis": "DoctoralThesis",
+    "http://purl.org/eprint/type/WorkingPaper": "WorkingPaper"
 }
 
 mods_genre_marcgt_to_metajson_document_type = {
     # marcgt
-    "abstract or summary" : "Book",
-    "article" : "JournalArticle",
-    "atlas" : "Map",
-    "autobiography" : "Book",
-    "bibliography" : "Book",
-    "biography" : "Book",
-    "book" : "Book",
-    "conference publication" : "ConferenceProceedings",
-    "catalog" : "Book",
-    "chart" : "Map",
-    "comic strip" : "Book",
-    "database" : "Document",
-    "dictionary" : "Book",
-    "directory" : "Book",
-    "drama" : "Book",
-    "encyclopedia" : "Book",
-    "essay" : "Book",
-    "festschrift" : "Book",
-    "fiction" : "Book",
-    "folktale" : "Book",
-    "globe" : "Map",
-    "graphic" : "Map",
-    "handbook" : "Book",
-    "history" : "Book",
-    "humor, satire" : "Book",
-    "index" : "Book",
-    "instruction" : "Book",
-    "issue" : "PeriodicalIssue",
-    "interview" : "Interview",
-    "journal" : "journal",
-    "kit" : "Book",
-    "language instruction" : "Audiovisual",
-    "law report or digest" : "Annotation",
-    "legislation" : "Annotation",
-    "letter" : "Preprint",
-    "loose-leaf" : "Periodical",
-    "map" : "Map",
-    "motion picture" : "Audiovisual",
-    "memoir" : "Book",
-    "newspaper" : "Newspaper",
-    "novel" : "Book",
-    "numeric data" : "Book",
-    "online system or service" : "Website",
-    "patent" : "Patent",
-    "periodical" : "Periodical",
-    "picture" : "Map",
-    "poetry" : "Book",
-    "programmed text" : "Book",
-    "rehearsal" : "Book",
-    "remote sensing image" : "Map",
-    "report" : "Report",
-    "reporting" : "Report",
-    "review" : "BookReview",
-    "series" : "Series",
-    "short story" : "Book",
-    "slide" : "Audiovisual",
-    "sound" : "Audiovisual",
-    "speech" : "ConferenceContribution",
-    "statistics" : "Book",
-    "survey of literature" : "BookReview",
-    "technical drawing" : "Map",
-    "technical report" : "Report",
-    "thesis" : "DoctoralThesis",
-    "treaty" : "Book",
-    "videorecording" : "Audiovisual",
-    "web site" : "Website",
-    "websiteContribution" : "websiteContribution"
+    "abstract or summary": "Book",
+    "article": "JournalArticle",
+    "atlas": "Map",
+    "autobiography": "Book",
+    "bibliography": "Book",
+    "biography": "Book",
+    "book": "Book",
+    "conference publication": "ConferenceProceedings",
+    "catalog": "Book",
+    "chart": "Map",
+    "comic strip": "Book",
+    "database": "Document",
+    "dictionary": "Book",
+    "directory": "Book",
+    "drama": "Book",
+    "encyclopedia": "Book",
+    "essay": "Book",
+    "festschrift": "Book",
+    "fiction": "Book",
+    "folktale": "Book",
+    "globe": "Map",
+    "graphic": "Map",
+    "handbook": "Book",
+    "history": "Book",
+    "humor, satire": "Book",
+    "index": "Book",
+    "instruction": "Book",
+    "issue": "PeriodicalIssue",
+    "interview": "Interview",
+    "journal": "journal",
+    "kit": "Book",
+    "language instruction": "Audiovisual",
+    "law report or digest": "Annotation",
+    "legislation": "Annotation",
+    "letter": "Preprint",
+    "loose-leaf": "Periodical",
+    "map": "Map",
+    "motion picture": "Audiovisual",
+    "memoir": "Book",
+    "newspaper": "Newspaper",
+    "novel": "Book",
+    "numeric data": "Book",
+    "online system or service": "Website",
+    "patent": "Patent",
+    "periodical": "Periodical",
+    "picture": "Map",
+    "poetry": "Book",
+    "programmed text": "Book",
+    "rehearsal": "Book",
+    "remote sensing image": "Map",
+    "report": "Report",
+    "reporting": "Report",
+    "review": "BookReview",
+    "series": "Series",
+    "short story": "Book",
+    "slide": "Audiovisual",
+    "sound": "Audiovisual",
+    "speech": "ConferenceContribution",
+    "statistics": "Book",
+    "survey of literature": "BookReview",
+    "technical drawing": "Map",
+    "technical report": "Report",
+    "thesis": "DoctoralThesis",
+    "treaty": "Book",
+    "videorecording": "Audiovisual",
+    "web site": "Website",
+    "websiteContribution": "websiteContribution"
 }
+
 
 def register_namespaces():
     for key in xmlns_map:
@@ -163,7 +164,7 @@ def register_namespaces():
 def prefixtag(ns_prefix, tagname):
     if tagname:
         if ns_prefix and ns_prefix in xmlns_map:
-            return str( QName(xmlns_map[ns_prefix], tagname))
+            return str(QName(xmlns_map[ns_prefix], tagname))
         else:
             return tagname
 
@@ -171,8 +172,8 @@ def prefixtag(ns_prefix, tagname):
 def convert_mods_file_to_metajson_document_list(mods_filename):
     register_namespaces()
 
-    parser = ET.XMLParser(encoding = "utf-8")
-    tree = ET.parse(mods_filename, parser = parser)
+    parser = ET.XMLParser(encoding="utf-8")
+    tree = ET.parse(mods_filename, parser=parser)
 
     document_list = []
 
@@ -186,14 +187,13 @@ def convert_mods_file_to_metajson_document_list(mods_filename):
             if mods_list:
                 for mods in mods_list:
                     document_list.append(convert_mods_to_metajson_document(mods, mods_filename))
-    
-    return document_list
 
+    return document_list
 
 
 def convert_mods_to_metajson_document(mods, source):
     document = Document()
-    
+
     # source
     document["rec_source"] = source
 
@@ -219,7 +219,6 @@ def convert_mods_to_metajson_document(mods, source):
     if contributors:
         print contributors
         document["contributors"] = contributors
-
 
     return document
 
@@ -253,11 +252,11 @@ def extract_class_type_genres(mods):
         result["rec_type"] = mods_genre_eprint_to_metajson_document_type[genres_dict["eprint"]]
     elif "marcgt" in genres_dict and genres_dict["marcgt"] in mods_genre_marcgt_to_metajson_document_type:
         result["rec_type"] = mods_genre_marcgt_to_metajson_document_type[genres_dict["marcgt"]]
-    else :
+    else:
         result["rec_type"] = "Document"
-    
+
     if genres_dict["genres"]:
-       result["genres"] = genres_dict["genres"]
+        result["genres"] = genres_dict["genres"]
 
     #print result
     return result
@@ -299,7 +298,7 @@ def convert_mods_titleinfos(mods_titleinfos):
                 del title_dict["type"]
                 result["title_uniform"] = title_dict
             else:
-                print "error convert_mods_titleinfos unknown type : {}".format(title_dict["type"])
+                print "error convert_mods_titleinfos unknown type: {}".format(title_dict["type"])
 
     return result
 
@@ -318,7 +317,7 @@ def convert_mods_titleinfo(mods_titleinfo):
             title_dict["part_number"] = mods_titleinfo.find(prefixtag("mods", "partNumber")).text
         if mods_titleinfo.find(prefixtag("mods", "partName")) is not None:
             title_dict["part_name"] = mods_titleinfo.find(prefixtag("mods", "partName")).text
-        
+
         #print title_dict
         return title_dict
 
@@ -345,7 +344,7 @@ def convert_mods_dailist_to_dict(dai_list):
         if dai_identifiers:
             result = {}
             for dai_identifier in dai_identifiers:
-                result[dai_identifier.get("IDref")] = {"authority" : dai_identifier.get("authority"), "value" : dai_identifier.text}
+                result[dai_identifier.get("IDref")] = {"authority": dai_identifier.get("authority"), "value": dai_identifier.text}
             print result
             return result
 
@@ -406,9 +405,7 @@ def convert_mods_name_roleterms(mods_roleterms):
 def test():
     metajson_list = convert_mods_file_to_metajson_document_list("../test/data/mods2.xml")
     file_export.export_metajson(metajson_list, "../test/data/result_mods_metajon.json")
-    print json.dumps(metajson_list, indent = 4, ensure_ascii = False, encoding = "utf-8", sort_keys = True)
- 
+    print json.dumps(metajson_list, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
 
 other_util.setup_console()
 test()
- 
