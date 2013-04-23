@@ -3,17 +3,17 @@
 # coding=utf-8
 
 import json
-from metadatas import metajson
-from metadatas.metajson import Common
-from metadatas.metajson import Document
-from metadatas.metajson import Resource
-from metadatas.metajson import Contributor
-from metadatas.metajson import Identifier
-from metadatas.metajson import Person
-from metadatas.metajson import Family
-from metadatas.metajson import Orgunit
-from metadatas.metajson import Event
-from metadatas import metajson_contrib_util
+from metajson import metajson
+from metajson.metajson import Common
+from metajson.metajson import Document
+from metajson.metajson import Resource
+from metajson.metajson import Contributor
+from metajson.metajson import Identifier
+from metajson.metajson import Person
+from metajson.metajson import Family
+from metajson.metajson import Orgunit
+from metajson.metajson import Event
+from metajson import metajson_contrib_util
 from util import language_util
 from util import other_util
 from dissemination import file_export

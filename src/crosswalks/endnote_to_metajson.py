@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-from metadatas.metajson import Document
-from metadatas.metajson import Resource
-from metadatas import metajson_contrib_util
+from metajson.metajson import Document
+from metajson.metajson import Resource
+from metajson import metajson_contrib_util
 from util import language_util
 import xml.etree.ElementTree as ET
 

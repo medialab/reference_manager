@@ -3,11 +3,11 @@
 # coding=utf-8
 
 import json
-from metadatas.metajson import Contributor
-from metadatas.metajson import Event
-from metadatas.metajson import Person
-from metadatas.metajson import Orgunit
-from metadatas.metajson import Family
+from metajson import Contributor
+from metajson import Event
+from metajson import Person
+from metajson import Orgunit
+from metajson import Family
 
 contributor_person_terms_of_address = [
     "baron",

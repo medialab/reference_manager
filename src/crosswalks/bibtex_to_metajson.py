@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-from metadatas.metajson import Document
+from metajson.metajson import Document
 from pybtex.database.input import bibtex
 
 

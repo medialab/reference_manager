@@ -3,7 +3,7 @@
 # coding=utf-8
 
 from bson import json_util
-from metadatas.metajson import Collection
+from metajson.metajson import Collection
 from citations import citations_manager
 
 

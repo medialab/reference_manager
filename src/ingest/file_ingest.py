@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-from metadatas import metajson_validation
+from metajson import metajson_validation
 from crosswalks import endnote_to_metajson
 from repository import mongodb_repository
 
@@ -20,4 +20,4 @@ def import_endnote_files(files, error_file_name):
                 for error in errors:
                     error_file.write(rec_source+":"+rec_id+": "+error+"\n")
 
-                mongodb_repository.save_metajson(document)
+                mongodb_repository.save_reference(document)

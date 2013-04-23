@@ -4,7 +4,7 @@
 
 import urllib
 from xml.sax.saxutils import quoteattr
-from metadatas import metajson_contrib_util
+from metajson import metajson_contrib_util
 
 metajson_type_to_openurl_book_genre = {
     "Book": "book",

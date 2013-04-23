@@ -1,0 +1,179 @@
+{
+    "rec_type": "Book",
+    "datafields": [
+        {
+            "property": "title",
+            "type_ui": "CharField",
+            "type_data": "text",
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "required": true
+        },
+        {
+            "property": "title_sub",
+            "type_ui": "CharField",
+            "type_data": "text",
+            "labels": 
+            {
+                "en": "Sub title",
+                "fr": "sous-titre"
+            },
+            "required": false
+        },
+        {
+            "property": "contributors_aut",
+            "type_ui": "ChoiceField",
+            "type_data": "list.Person/Orgunit",
+            "labels": 
+            {
+                "en": "Authors",
+                "fr": "Auteurs"
+            },
+            "required": true
+        },
+        {
+            "property": "contributors_pbd",
+            "type_ui": "ChoiceField",
+            "type_data": "list.Person/Orgunit",
+            "labels": 
+            {
+                "en": "Publishing director",
+                "fr": "Directeur de publication ou de collection"
+            },
+            "required": false
+        },        {
+            "property": "contributors_trl",
+            "type_ui": "ChoiceField",
+            "type_data": "list.Person/Orgunit",
+            "labels": 
+            {
+                "en": "Translator",
+                "fr": "Traducteur"
+            },
+            "required": false
+        },
+        {
+            "property": "date_issued",
+            "type_ui": "DateField",
+            "type_data": "date",
+            "labels": 
+            {
+                "en": "Date issued",
+                "fr": "Date de publication"
+            },
+            "required": true
+        },
+        {
+            "property": "extent_pages",
+            "type_ui": "IntegerField",
+            "type_data": "number",
+            "labels": 
+            {
+                "en": "Number of pages",
+                "fr": "Nombre de pages"
+            },
+            "required": false
+        },
+        {
+            "property": "descriptions",
+            "type_ui": "ChoiceField",
+            "type_data": "list.LangString",
+            "labels": 
+            {
+                "en": "Abstracts",
+                "fr": "Resumés"
+            },
+            "required": false
+        },
+        {
+            "property": "subjects_keywords",
+            "type_ui": "ChoiceField",
+            "type_data": "list.text",
+            "labels": 
+            {
+                "en": "Keywords",
+                "fr": "Mots-clés"
+            },
+            "required": false
+        },
+        {
+            "property": "publisher",
+            "type_ui": "CharField",
+            "type_data": "text",
+            "labels": 
+            {
+                "en": "Publisher",
+                "fr": "Editeurs"
+            },
+            "required": true
+        },
+        {
+            "property": "publisher_country",
+            "type_ui": "ChoiceField",
+            "type_data": "type.country",
+            "labels": 
+            {
+                "en": "Publisher country",
+                "fr": "Pays de publication"
+            },
+            "required": false
+        },
+        {
+            "property": "edition",
+            "type_ui": "CharField",
+            "type_data": "text",
+            "labels": 
+            {
+                "en": "Edition",
+                "fr": "Edition"
+            },
+            "required": false
+        },
+        {
+            "property": "series_title",
+            "type_ui": "CharField",
+            "type_data": "text",
+            "labels": 
+            {
+                "en": "Publisher place",
+                "fr": "Lieu de publication"
+            },
+            "required": false
+        },
+        {
+            "property": "series_part_number",
+            "type_ui": "CharField",
+            "type_data": "text",
+            "labels": 
+            {
+                "en": "Collection item number",
+                "fr": "Numéro dans la collection"
+            },
+            "required": false
+        },
+        {
+            "property": "identifier_isbn",
+            "type_ui": "CharField",
+            "type_data": "text",
+            "labels": 
+            {
+                "en": "ISBN",
+                "fr": "ISBN"
+            },
+            "required": false
+        },
+        {
+            "property": "cursus",
+            "type_ui": "ChoiceField",
+            "type_data": "type.cursus",
+            "labels": 
+            {
+                "en": "Niveau d'étude",
+                "fr": "ISBN"
+            },
+            "required": false
+        }
+        ]
+}

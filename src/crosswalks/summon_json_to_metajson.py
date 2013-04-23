@@ -3,9 +3,9 @@
 # coding=utf-8
 
 import json
-from metadatas import metajson
-from metadatas.metajson import Collection, Common, Document, Contributor, Identifier, Resource, Subject
-from metadatas import metajson_contrib_util
+from metajson import metajson
+from metajson.metajson import Collection, Common, Document, Contributor, Identifier, Resource, Subject
+from metajson import metajson_contrib_util
 from util import language_util
 from util import other_util
 from dissemination import file_export

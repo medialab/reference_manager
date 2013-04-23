@@ -43,14 +43,43 @@ class Common(dict):
                 self[key] = [item]
 
 
-# Type
-class Type():
+# Collection
+class Collection(Common):
+    pass
+
+
+# Contributor
+class Contributor(Common):
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "person" in self:
+            self["person"] = Person(self["person"])
+        elif "orgunit" in self:
+            self["orgunit"] = Orgunit(self["orgunit"])
+        elif "event" in self:
+            self["event"] = Event(self["event"])
+        elif "family" in self:
+            self["family"] = Family(self["family"])
+
+    def formatted_name(self, style=STYLE_FAMILY_COMMA_GIVEN):
+        if "person" in self:
+            return self["person"].formatted_name(style)
+        elif "orgunit" in self:
+            return self["orgunit"].formatted_name()
+        elif "event" in self:
+            return self["event"].formatted_name()
+        elif "family" in self:
+            return self["family"].formatted_name()
+
+
+# Datafield
+class Datafield(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "metajson_version" not in self:
             self["metajson_version"] = METAJSON_VERSION
         if "metajson_class" not in self:
-            self["metajson_class"] = "Type"
+            self["metajson_class"] = "Datafield"
 
 
 # Document
@@ -67,11 +96,6 @@ class Document(Common):
             self["is_part_of"] = [Document(x) for x in self["is_part_of"]]
         if "resources" in self:
             self["resources"] = [Resource(x) for x in self["resources"]]
-
-    def document_type_tree():
-        tree = {}
-
-        # first level
 
     def add_contributors(self, contributors):
         self.add_items_to_key(contributors, "contributors")
@@ -190,28 +214,14 @@ class Document(Common):
                     return item[my_property]
 
 
-# Contributor
-class Contributor(Common):
+# DocumentUi
+class DocumentUi(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "person" in self:
-            self["person"] = Person(self["person"])
-        elif "orgunit" in self:
-            self["orgunit"] = Orgunit(self["orgunit"])
-        elif "event" in self:
-            self["event"] = Event(self["event"])
-        elif "family" in self:
-            self["family"] = Family(self["family"])
-
-    def formatted_name(self, style=STYLE_FAMILY_COMMA_GIVEN):
-        if "person" in self:
-            return self["person"].formatted_name(style)
-        elif "orgunit" in self:
-            return self["orgunit"].formatted_name()
-        elif "event" in self:
-            return self["event"].formatted_name()
-        elif "family" in self:
-            return self["family"].formatted_name()
+        if "metajson_version" not in self:
+            self["metajson_version"] = METAJSON_VERSION
+        if "metajson_class" not in self:
+            self["metajson_class"] = "DocumentUi"
 
 
 # Event
@@ -240,6 +250,22 @@ class Family(Common):
     def formatted_name(self):
         if "name_family" in self:
             return self["name_family"]
+
+
+# Identifier
+class Identifier(Common):
+    pass
+
+
+# Identifier util
+# todo : move it to the Identifier constructor
+def create_identifier(id_type, id_value):
+    if id_value:
+        identifier = Identifier()
+        identifier["value"] = id_value
+        if id_type:
+            identifier["type"] = id_type
+        return identifier
 
 
 # Orgunit
@@ -280,16 +306,6 @@ class Person(Common):
         return result
 
 
-# Collection
-class Collection(Common):
-    pass
-
-
-# Identifier
-class Identifier(Common):
-    pass
-
-
 # Resource
 class Resource(Common):
     def __init__(self, *args, **kwargs):
@@ -310,11 +326,11 @@ class Subject(Common):
     pass
 
 
-# util
-def create_identifier(id_type, id_value):
-    if id_value:
-        identifier = Identifier()
-        identifier["value"] = id_value
-        if id_type:
-            identifier["type"] = id_type
-        return identifier
+# Type
+class Type(Common):
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "metajson_version" not in self:
+            self["metajson_version"] = METAJSON_VERSION
+        if "metajson_class" not in self:
+            self["metajson_class"] = "Type"

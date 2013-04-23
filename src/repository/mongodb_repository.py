@@ -4,12 +4,12 @@
 
 # mongod --dbpath /Users/jrault/Documents/SciencesPo/Projets/ReferenceManager/mongodb
 
-import os
 import uuid
 import pymongo
-import json
 from bson.objectid import ObjectId
-from metadatas.metajson import Document
+from metajson.metajson import Document
+from metajson.metajson import Type
+from metajson.metajson import Datafield
 from util import config_loader
 
 config = config_loader.config["mongodb"]
@@ -24,76 +24,74 @@ mongodb = pymongo.Connection(config['host'], config['port'])[config['db']]
 
 
 def empty_db():
+    mongodb[config['datafieldsCol']].drop()
     mongodb[config['referencesCol']].drop()
     mongodb[config['typesCol']].drop()
-    mongodb[config['datafieldsCol']].drop()
     init_indexes()
-    #init_types()
 
 
 def init_indexes():
+    mongodb[config['datafieldsCol']].ensure_index([('_id', pymongo.ASCENDING)], safe=True)
     mongodb[config['referencesCol']].ensure_index([('_id', pymongo.ASCENDING)], safe=True)
     mongodb[config['typesCol']].ensure_index([('_id', pymongo.ASCENDING)], safe=True)
-    mongodb[config['datafieldsCol']].ensure_index([('_id', pymongo.ASCENDING)], safe=True)
 
 
-def init_types():
-    print("mongodb_repository.init_types")
-    types_dir = os.path.abspath(os.path.join(os.getcwd(), "types"))
-    print(types_dir)
-    for file_name in os.listdir(types_dir):
-        if file_name.endswith(".json"):
-            with open(file_name, 'r') as type_file:
-                json_type = json.load(type_file)
-                save_type(json_type)
+def get_datafield(rec_type):
+    return Datafield(mongodb[config['datafieldsCol']].find_one({"rec_type": rec_type}))
+
+
+def save_datafield(datafield):
+    return mongodb[config['datafieldsCol']].insert(datafield)
+
+
+def get_reference_by_mongo_id(mongo_id):
+    return Document(mongodb[config['referencesCol']].find_one({'_id': ObjectId(mongo_id)}))
+
+
+def get_references_by_mongo_ids(mongo_ids):
+    mongo_object_ids = []
+    for mongo_id in mongo_ids:
+        mongo_object_ids.append(ObjectId(mongo_id))
+    return convert_to_metajson_document(mongodb[config['referencesCol']].find({"_id": {"$in": mongo_object_ids}}))
+
+
+def get_reference_by_rec_id(rec_id):
+    return Document(mongodb[config['referencesCol']].find_one({"rec_id": rec_id}))
+
+
+def get_references_by_rec_ids(rec_ids):
+    return convert_to_metajson_document(mongodb[config['referencesCol']].find({"rec_id": {"$in": rec_ids}}))
+
+
+def get_references():
+    return convert_to_metajson_document(mongodb[config['referencesCol']].find())
+
+
+def get_references_count():
+    return mongodb[config['referencesCol']].count()
+
+
+def search_references(query):
+    # {"rec_id": {"$in": rec_ids}}
+    return convert_to_metajson_document(mongodb[config['referencesCol']].find(query))
+
+
+def save_reference(document):
+    if "rec_id" not in document:
+        document["rec_id"] = str(uuid.uuid1())
+    return mongodb[config['referencesCol']].insert(document)
+
+
+def convert_to_metajson_document(mongoitems):
+    document_list = []
+    for mongoitem in mongoitems:
+        document_list.append(Document(mongoitem))
+    return document_list
+
+
+def get_type(type_id):
+    return Type(mongodb[config['typesCol']].find_one({"type_id": type_id}))
 
 
 def save_type(metatype):
     return mongodb[config['typesCol']].insert(metatype)
-
-
-def convert_to_metajson(mongoitems):
-    metajson_list = []
-    for mongoitem in mongoitems:
-        metajson_list.append(Document(mongoitem))
-    return metajson_list
-
-
-def save_metajson(metajson):
-    if "rec_id" not in metajson:
-        rec_id = str(uuid.uuid1())
-        print rec_id
-        metajson["rec_id"] = rec_id
-    return mongodb[config['referencesCol']].insert(metajson)
-
-
-def get_by_mongo_id(mongo_id):
-    print mongo_id
-    return Document(mongodb[config['referencesCol']].find_one({'_id': ObjectId(mongo_id)}))
-
-
-def get_by_mongo_ids(mongo_ids):
-    print mongo_ids
-    mongo_object_ids = []
-    for mongo_id in mongo_ids:
-        mongo_object_ids.append(ObjectId(mongo_id))
-    #return convert_to_metajson(mongodb[config['referencesCol']].for_ids(mongo_ids))
-    return convert_to_metajson(mongodb[config['referencesCol']].find({"_id": {"$in": mongo_object_ids}}))
-
-
-def get_by_rec_id(rec_id):
-    print rec_id
-    return Document(mongodb[config['referencesCol']].find_one({"rec_id": rec_id}))
-
-
-def get_by_rec_ids(rec_ids):
-    print rec_ids
-    return convert_to_metajson(mongodb[config['referencesCol']].find({"rec_id": {"$in": rec_ids}}))
-
-
-def get_all():
-    return convert_to_metajson(mongodb[config['referencesCol']].find())
-
-
-def get_count():
-    return mongodb[config['referencesCol']].count()

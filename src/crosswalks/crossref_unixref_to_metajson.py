@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-from metadatas.metajson import Common, Document, Contributor, Identifier, Resource
+from metajson.metajson import Common, Document, Contributor, Identifier, Resource
 import xml.etree.ElementTree as ET
 import bson
 

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-from metadatas import metajson
+from metajson import metajson
 
 
 def cite(document, format):
@@ -19,24 +19,24 @@ def cite(document, format):
     # contributors
     contributors = format_contributors_of_document(document, 0)
     if contributors:
-        result += contributors
+        result += u"<span class=\"contributors\">{0}</span>".format(contributors)
 
     # title
     title = format_title_of_document(document)
     if title:
-        result += title
+        result += u"<span class=\"title\">{0}</span>".format(title)
 
     # is_part_of
     if is_part_of:
         # is_part_of_title
         is_part_of_title = format_title_of_document(is_part_of)
         if is_part_of_title:
-            result += is_part_of_title
+            result += u"<span class=\"title\">{0}</span>".format(is_part_of_title)
 
         # is_part_of_contributors
         is_part_of_contributors = format_contributors_of_document(is_part_of, 1)
         if is_part_of_contributors:
-            result += is_part_of_contributors
+            result += u"<span class=\"contributors\">{0}</span>".format(is_part_of_contributors)
 
         # is_part_of_is_part_of
         if is_part_of_is_part_of:
@@ -44,12 +44,13 @@ def cite(document, format):
             # is_part_of_is_part_of_title
             is_part_of_is_part_of_title = format_title_of_document(is_part_of_is_part_of)
             if is_part_of_is_part_of_title:
-                result += is_part_of_is_part_of_title
+                result += u"<span class=\"title\">{0}</span>".format(is_part_of_is_part_of_title)
 
             # is_part_of_is_part_of_contributors
             is_part_of_is_part_of_contributors = format_contributors_of_document(is_part_of_is_part_of, 2)
             if is_part_of_is_part_of_contributors:
-                result += is_part_of_is_part_of_contributors
+                result += u"<span class=\"contributors\">{0}</span>".format(is_part_of_is_part_of_contributors)
+
 
     # Others contributors
     # Trans. (translated by) trl
@@ -67,12 +68,14 @@ def cite(document, format):
     # edition
     edition = document.get_edition()
     if edition:
-        result += edition + " ed. "
+        result += u"<span class=\"edition\">{0}</span>".format(edition + " ed.")
+        result += " "
 
     # extent_volumes
     extent_volumes = document.get_extent_volumes()
     if extent_volumes:
-        result += extent_volumes + ". "
+        result += u"<span class=\"extent_volumes\">{0}</span>".format(extent_volumes)
+        result += ". "
 
     # degree
     # todo
@@ -80,12 +83,15 @@ def cite(document, format):
     # publisher_place
     publisher_place = document.get_publisher_place()
     if publisher_place:
-        result += publisher_place + ": "
+        result += u"<span class=\"publisher_place\">{0}</span>".format(publisher_place)
+        result += ": "
 
     # publisher
     publisher = document.get_publisher()
     if publisher:
-        result += publisher + ", "
+        result += u"<span class=\"publisher\">{0}</span>".format(publisher)
+        result += ", "
+
     else:
         pass
         # todo contributor dgg
@@ -93,11 +99,12 @@ def cite(document, format):
     # part_volume, part_issue
     part_volume = document.get_part_volume()
     if part_volume:
-        result += part_volume + "."
+        result += u"<span class=\"part_volume\">{0}</span>".format(part_volume)
+        result += "."
 
     part_issue = document.get_part_issue()
     if part_issue:
-        result += part_issue
+        result += u"<span class=\"part_issue\">{0}</span>".format(part_issue)
 
     if part_volume or part_issue:
         result += " "
@@ -105,16 +112,17 @@ def cite(document, format):
     # date
     date = document.get_date()
     if date:
-        result += date + ". "
+        result += u"<span class=\"date\">{0}</span>".format(date)
 
     # part_page_start & part_page_end
     part_page_start = document.get_part_page_start()
     if part_page_start:
-        result += part_page_start
+        result += u"<span class=\"part_page_start\">{0}</span>".format(part_page_start)
 
     part_page_end = document.get_part_page_end()
     if part_page_end:
-        result += "-" + part_page_end
+        result += "-"
+        result += u"<span class=\"part_page_end\">{0}</span>".format(part_page_end)
 
     if part_page_end or part_page_end:
         result += ". "
@@ -137,11 +145,15 @@ def cite(document, format):
         if "date_last_accessed" in document["resources"][0]:
             date_last_accessed = format_date_last_accessed(document["resources"][0]["date_last_accessed"])
     if medium_of_publication:
-        result += medium_of_publication + ". "
+        result += u"<span class=\"medium_of_publication\">{0}</span>".format(medium_of_publication)
+        result += ". "
+
     if date_last_accessed:
-        result += date_last_accessed + ". "
+        result += u"<span class=\"date_last_accessed\">{0}</span>".format(date_last_accessed)
+        result += ". "
+
     if remote_url:
-        result += format_url(remote_url)
+        result += u"<span class=\"remote_url\">{0}</span>".format(format_url(remote_url))
 
     print result
     return result
@@ -163,7 +175,7 @@ def format_date_last_accessed(date):
 
 def format_url(url):
     if url:
-        return "&lt;<a href=\"" + url + "\" target=\"_blank\">" + url + "</a>&gt;"
+        return u"&lt;<a href=\"{0}\" target=\"_blank\">{0}</a>&gt;".format(url)
 
 
 def format_title_of_document(document):

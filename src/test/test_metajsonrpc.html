@@ -61,11 +61,46 @@
                         }
                     });
                 });
+                $("input#types_button").click(function() {
+                    $.jsonRPC.request("types", {
+                        //params : ["identifier_type","fr"],
+                        params : [$("input#types_input").val(),"fr"],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("p#types_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#datafields_button").click(function() {
+                    $.jsonRPC.request("datafields", {
+                        //params : ["Book","fr"],
+                        params : [$("input#datafields_input").val(),"fr"],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("p#datafields_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
                 $("input#save_button").click(function() {
                     $.jsonRPC.request("save", {
                         params : [$("textarea#save_input").val()],
                         success : function(data) {
                             $("<p />").text(data.result).appendTo($("p#save_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#save_ui_button").click(function() {
+                    $.jsonRPC.request("save_ui", {
+                        params : [$("textarea#save_ui_input").val()],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("p#save_ui_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -120,6 +155,28 @@
         <p>Results :</p>
         <p id="citation_result"></p>
 
+        <h2>Method types</h2>
+        <p><label for="types_input">Type identifier (type_id)</label> : 
+            <input type="text" name="types_input" id="types_input">
+            example : identifier_type
+        </p>
+        <p>
+            <input name="types_button" id="types_button" value="Send types request" type="button" />
+        </p>
+        <p>Results :</p>
+        <p id="types_result"></p>
+
+        <h2>Method datafields</h2>
+        <p><label for="datafields_input">Document type (rec_type)</label> : 
+            <input type="text" name="types_input" id="datafields_input">
+            example : Book
+        </p>
+        <p>
+            <input name="datafields_button" id="datafields_button" value="Send datafields request" type="button" />
+        </p>
+        <p>Results :</p>
+        <p id="datafields_result"></p>
+
         <h2>Method save</h2>
         <p><label for="save_input">JSON to save</label> : 
             <textarea name="save_input" id="save_input" rows="10" cols="30"></textarea>
@@ -129,6 +186,16 @@
         </p>
         <p>Results :</p>
         <p id="save_result"></p>
+
+        <h2>Method save_ui</h2>
+        <p><label for="save_ui_input">JSON UI to save</label> : 
+            <textarea name="save_ui_input" id="save_ui_input" rows="10" cols="30"></textarea>
+        </p>
+        <p>
+            <input name="save_ui_button" id="save_ui_button" value="Save metadata in JSON UI" type="button" />
+        </p>
+        <p>Results :</p>
+        <p id="save_ui_result"></p>
 
     </body>
 </html>
