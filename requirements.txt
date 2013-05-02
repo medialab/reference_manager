@@ -1,0 +1,11 @@
+pymongo
+Twisted
+txJSON-RPC
+nose
+coverage
+httplib2
+pybtex
+beautifulsoup4
+phpserialize
+pyoai
+python-ldap

@@ -1,0 +1,93 @@
+{
+    "col_id": "aime", 
+    "records": [
+        {
+            "contributors": [
+                {
+                    "person": {
+                        "metajson_class": "Person", 
+                        "metajson_version": 1, 
+                        "name_family": "Brenner", 
+                        "name_given": "Neil"
+                    }
+                }, 
+                {}
+            ], 
+            "identifiers": [
+                {
+                    "value": "BrennerN2000a"
+                }
+            ], 
+            "metajson_class": "Document", 
+            "metajson_version": 1, 
+            "rec_id": "BrennerN2000a", 
+            "rec_source": "/Users/jrault/Documents/SciencesPo/Projets/ReferenceManager/workspace/data/mods/mods.xml", 
+            "rec_type": "JournalArticle", 
+            "title": "Urban Question as a Scale Question", 
+            "title_non_sort": "The ", 
+            "title_sub": "Reflections on Henri Lefebre, Urban Theory and\n\t\t\tthe Politics of Scale"
+        }, 
+        {
+            "contributors": [
+                {
+                    "person": {
+                        "metajson_class": "Person", 
+                        "metajson_version": 1, 
+                        "name_family": "Dagand", 
+                        "name_given": "Sophie"
+                    }
+                }, 
+                {
+                    "person": {
+                        "metajson_class": "Person", 
+                        "metajson_version": 1, 
+                        "name_family": "Deroche-Gurcel", 
+                        "name_given": "Liliane"
+                    }
+                }, 
+                {
+                    "person": {
+                        "identifiers": [
+                            {
+                                "type": "uri", 
+                                "value": "http://spire.sciences-po.fr/hdl:/2441/53r60a8s3kup1vc9kc499cq2k"
+                            }
+                        ], 
+                        "metajson_class": "Person", 
+                        "metajson_version": 1, 
+                        "name_family": "Ramel", 
+                        "name_given": "Frédéric"
+                    }
+                }, 
+                {}
+            ], 
+            "genres": [
+                {
+                    "authority": "marcgt", 
+                    "value": "novel"
+                }, 
+                {
+                    "authority": "titi", 
+                    "value": "toto"
+                }
+            ], 
+            "identifiers": [
+                {
+                    "type": "issn", 
+                    "value": "17617146"
+                }
+            ], 
+            "metajson_class": "Document", 
+            "metajson_version": 1, 
+            "rec_id": "issn_17617146", 
+            "rec_source": "/Users/jrault/Documents/SciencesPo/Projets/ReferenceManager/workspace/data/mods/mods2.xml", 
+            "rec_type": "ReportPart", 
+            "title": "Penser l'Union européenne en tant que Tiers statégique ", 
+            "title_abbreviated": {
+                "title": "institutions économiques internationales et la sécurité humaine dans l'après-guerre froide. Portée, limites, et demande d'un nouveau régime", 
+                "title_non_sort": "Les "
+            }
+        }
+    ], 
+    "title": "AIME references"
+}
