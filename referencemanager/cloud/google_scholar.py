@@ -4,7 +4,7 @@
 
 # based on :
 #
-# gscholar - Get bibtex entries from Goolge Scholar
+# gscholar - Get bibtex entries from Google Scholar
 # Copyright (C) 2011  Bastian Venthur <venthur at debian org>
 #
 # This program is free software; you can redistribute it and/or
