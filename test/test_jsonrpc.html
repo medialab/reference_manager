@@ -7,8 +7,9 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $.jsonRPC.setup({
-                    endPoint : 'http://localhost:8080',
-                    //endPoint : 'http://aime.medialab.sciences-po.fr:8980',
+                    //endPoint : 'http://localhost:8080',
+                    //endPoint : 'http://aime.medialab.sciences-po.fr:8090',
+                    endPoint : 'http://modesofexistence.org/biblio_manager',
                     namespace : ''
                 });
                 $("input#echo_button").click(function() {
@@ -54,7 +55,7 @@
                         //params : [["296","579","697"],"mla","html"],
                         params : [my_list,"mla","html"],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("p#citation_result"));
+                            $("<p />").text(data.result).appendTo($("pre#citation_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -153,7 +154,7 @@
             <input name="citation_button" id="citation_button" value="Send citation request" type="button" />
         </p>
         <p>Results :</p>
-        <p id="citation_result"></p>
+        <pre id="citation_result"></pre>
 
         <h2>Method types</h2>
         <p><label for="types_input">Type identifier (type_id)</label> : 

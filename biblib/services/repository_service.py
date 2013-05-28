@@ -105,7 +105,7 @@ def save_document(corpus, document):
 def get_datafield(corpus, prop):
     if not corpus:
         corpus = default_corpus
-    return metajson_service.load_dict(mongodb[COL_DATAFIELDS].find_one({"property": prop}))
+    return metajson_service.load_dict(mongodb[corpus][COL_DATAFIELDS].find_one({"property": prop}))
 
 
 def save_datafield(corpus, datafield):
