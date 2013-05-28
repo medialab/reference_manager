@@ -8,6 +8,6 @@ pybtex
 beautifulsoup4
 phpserialize
 pyoai
-python-ldap
 google-api-python-client
 gspreadsheet
+python-ldap
