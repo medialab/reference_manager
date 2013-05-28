@@ -9,5 +9,6 @@ beautifulsoup4
 phpserialize
 pyoai
 google-api-python-client
+gdata
 gspreadsheet
 python-ldap
