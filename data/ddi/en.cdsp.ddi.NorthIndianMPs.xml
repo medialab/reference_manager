@@ -1,0 +1,4880 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<codeBook ID="en.cdsp.ddi.NorthIndianMPs" version="1.2.2" xml-lang="fr" xmlns="http://www.icpsr.umich.edu/DDI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.icpsr.umich.edu/DDI http://www.icpsr.umich.edu/DDI/Version1-2-2.xsd">
+    <docDscr>
+        <citation>
+            <titlStmt>
+                <titl>Database regarding the North Indian MPs since 1952</titl>
+                <IDNo>en.cdsp.ddi.NorthIndianMPs</IDNo>
+            </titlStmt>
+            <prodStmt>
+                <copyright>CDSP 2010</copyright>
+                <prodDate date="2010-05-31">2010-05-31</prodDate>
+                <software date="2011-01-07" version="4.0.2">Nesstar Publisher</software>
+            </prodStmt>
+            <distStmt>
+                <depositr/>
+            </distStmt>
+        </citation>
+        <docSrc>
+            <titlStmt>
+                <titl>NorthIndianMPs</titl>
+            </titlStmt>
+            <distStmt>
+                <depositr/>
+            </distStmt>
+        </docSrc>
+    </docDscr>
+    <stdyDscr>
+        <citation>
+            <titlStmt>
+                <titl>Database regarding the North Indian MPs since 1952</titl>
+                <IDNo>en.cdsp.ddi.NorthIndianMPs</IDNo>
+            </titlStmt>
+            <rspStmt>
+                <AuthEnty affiliation="Centre d'études et de recherches internationales (CERI) Sciences Po/CNRS">Jaffrelot, Christophe</AuthEnty>
+            </rspStmt>
+            <prodStmt>
+                <producer affiliation="Centre d'études et de recherches internationales (CERI) Sciences Po/CNRS">Jaffrelot, Christophe</producer>
+                <prodDate date="2010-05-31">2010-05-31</prodDate>
+                <software date="2011-01-07" version="4.0.2">Nesstar Publisher</software>
+                <fundAg abbr="CERI (Sciences Po/CNRS)">Centre d'études et de recherches internationales</fundAg>
+            </prodStmt>
+            <distStmt>
+                <distrbtr URI="http://cdsp.sciences-po.fr" abbr="CDSP" affiliation="Sciences Po / CNRS">Centre de données socio-politiques</distrbtr>
+                <depositr/>
+            </distStmt>
+        </citation>
+        <stdyInfo>
+            <abstract><![CDATA[This database is a unique achievement to which we are happy to give you a free access. It covers the members of the lower house of the Indian parliament (the House of the People or Lok Sabha) who have been elected between the first general elections of 1951-52 and the 14th ones in 2004 in the Hindi-speaking states (Bihar, Chandigarh, Chhattisgarh, Delhi, Haryana, Himachal Pradesh, Jharkhand, Madhya Pradesh, Rajasthan, Uttar Pradesh, Uttarakhand). Many of these states did not exist in 1951-52. We have done as if they did by pooling together the constituencies which were to form them in order to make inter-temporal comparisons possible.
+For each Lok Sabha MP, this data base provides their name, first name, constituency, state of birth, party, gender, date of birth, religion, caste, level of education and occupation. These data draw from the Election Commission publications or website, Who's who in Lok Sabha and individual interviews with the MPs themselves or party old timers. 
+Such a database can only result from a collective endeavour. It was initiated by Christophe Jaffrelot who collected most of the data year after year from the mid-1990s onwards. Elisabeth Theunissen, Cyril Robin, Virginie Dutoya and Zuheir Desai played a major role successively over the last fifteen years.
+These data have been analysed in two books dealing with the growing presence of the low caste groups on the Indian political scene: Christophe Jaffrelot, India's silent revolution - The rise of the lower castes in North Indian politics (New York, Columbia University Press, 2003) and Christophe Jaffrelot, &quot;Introduction&quot;, in Christophe Jaffrelot and Sanjay Kumar (eds), Rise of the plebeians ? The changing face of Indian legislative assemblies, New Delhi, Routledge, 2009.]]></abstract>
+            <sumDscr>
+                <collDate date="1998" event="start"/>
+                <collDate date="2010" event="end"/>
+                <nation>India</nation>
+                <geogCover>The Hindi belt of Northern India: Bihar, Chandigarh, Chhattisgarh, Delhi, Haryana, Himachal Pradesh, Jharkhand, Madhya Pradesh, Rajasthan, Uttar Pradesh, Uttarakhand</geogCover>
+                <anlyUnit><![CDATA[Lok Sabha MPs' term
+(NB : a MP will appear in the database as many times as he has been elected)]]></anlyUnit>
+                <universe>This database records all the Lok Sabha MPs elected in the Hindi belt. It does not take into account bye-elections. Except for a few exceptional cases such as the Bhopal gas tragedy, which resulted in the postponement of the general elections in this city, or when one candidate has been elected in more than one constituency, the MPs on file are those who were elected during the general elections. As a result, its population is slightly smaller than the list of Lok Sabha MPs drawn up by the Parliament of India. This is also due to some missing values, especially in the double constituencies of the 1950s.</universe>
+            </sumDscr>
+        </stdyInfo>
+        <method>
+            <dataColl>
+                <timeMeth>1952-2004 (i.e., the 14 first elections)</timeMeth>
+                <collMode>Election Commission reports, Who's whos in Lok Sabha and interviews.</collMode>
+                <sources/>
+            </dataColl>
+        </method>
+        <dataAccs>
+            <useStmt>
+                <contact URI="http://cdsp.sciences-po.fr/fichiers_accesdonnees/CDSP_form.pdf">The data usage agreement must be completed and signed, then return to the CDSP to receive this data file.</contact>
+            </useStmt>
+        </dataAccs>
+        <othrStdyMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Government of India</titl>
+                    </titlStmt>
+                    <holdings URI="http://india.gov.in/"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Lok Sabha</titl>
+                    </titlStmt>
+                    <holdings URI="http://loksabha.nic.in/"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Government of Bihar</titl>
+                    </titlStmt>
+                    <holdings URI="http://gov.bih.nic.in/"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Government of Rajasthan</titl>
+                    </titlStmt>
+                    <holdings URI="http://www.rajasthan.gov.in/"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Legislative assembly of Rajasthan</titl>
+                    </titlStmt>
+                    <holdings URI="http://www.rajasthan.gov.in/"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Legislative assembly of Madhya Pradesh (hindi)</titl>
+                    </titlStmt>
+                    <holdings URI="http://mpvidhansabha.nic.in/"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Government of Madhya Pradesh</titl>
+                    </titlStmt>
+                    <holdings URI="http://www.mp.gov.in/default.htm"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Government of Chhattisgarh</titl>
+                    </titlStmt>
+                    <holdings URI="http://chhattisgarh.nic.in/"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Legislative assembly of Chhattisgarh</titl>
+                    </titlStmt>
+                    <holdings URI="http://cgvidhansabha.gov.in/english/englishindex.htm"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Legislative assembly of Uttar Pradesh</titl>
+                    </titlStmt>
+                    <holdings URI="http://uplegisassembly.gov.in/"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Government of Uttar Pradesh</titl>
+                    </titlStmt>
+                    <holdings URI="http://upgov.nic.in/"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Government of Himachal Pradesh</titl>
+                    </titlStmt>
+                    <holdings URI="http://himachal.nic.in/welcome.asp"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Legislative assembly of Himachal Pradesh</titl>
+                    </titlStmt>
+                    <holdings URI="http://hpvidhansabha.nic.in/"/>
+                </citation>
+            </relMat>
+            <relMat>
+                <citation>
+                    <titlStmt>
+                        <titl>Election Commisssion of India</titl>
+                    </titlStmt>
+                    <holdings URI="http://eci.nic.in/eci_main/index.asp"/>
+                </citation>
+            </relMat>
+            <relPubl>
+                <citation>
+                    <titlStmt>
+                        <titl>JAFFRELOT, Christophe, India’s Silent Revolution. The Rise of the Lower Castes in North Indian Politics, New York, Columbia University Press, 2003, 505 pages.</titl>
+                    </titlStmt>
+                </citation>
+            </relPubl>
+            <relPubl>
+                <citation>
+                    <titlStmt>
+                        <titl>JAFFRELOT, Christophe, KUMAR, Sanjay (eds), Rise of the Plebeians? The Changing Face of Indian Legislative Assemblies, New Delhi: Routledge India, 2009, 530 pages</titl>
+                    </titlStmt>
+                </citation>
+            </relPubl>
+        </othrStdyMat>
+    </stdyDscr>
+    <fileDscr URI="NorthIndianMPs.Nesstar?Index=0&amp;Name=cdsp-NorthIndianMPs">
+        <fileTxt>
+            <fileName ID="F1">cdsp-NorthIndianMPs.NSDstat</fileName>
+            <dimensns>
+                <caseQnty>3091</caseQnty>
+                <varQnty>24</varQnty>
+            </dimensns>
+            <fileType>Nesstar 200801</fileType>
+        </fileTxt>
+    </fileDscr>
+    <dataDscr>
+        <varGrp ID="VG1" type="subject" var="V1 V10 V11 V12 V20 V24 V21 V22">
+            <labl>ID of the MP</labl>
+        </varGrp>
+        <varGrp ID="VG2" type="subject" var="V2 V3 V4 V5 V6 V7">
+            <labl>Legislature</labl>
+        </varGrp>
+        <varGrp ID="VG3" type="subject" var="V8 V9">
+            <labl>Party of the MP</labl>
+        </varGrp>
+        <varGrp ID="VG4" type="subject" var="V23 V13 V14">
+            <labl>Caste of the MP</labl>
+        </varGrp>
+        <varGrp ID="VG5" type="subject" var="V15 V16">
+            <labl>Religion of the MP</labl>
+        </varGrp>
+        <varGrp ID="VG6" type="subject" var="V19 V17 V18">
+            <labl>Occupation and level of education of the MP</labl>
+        </varGrp>
+        <var ID="V1" dcml="0" files="F1" intrvl="contin" name="IDENT">
+            <location width="15"/>
+            <labl>Term identifier</labl>
+            <valrng>
+                <range UNITS="REAL" max="3344" min="1"/>
+            </valrng>
+            <sumStat type="vald">3091</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">3344</sumStat>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V2" dcml="0" files="F1" intrvl="discrete" name="LOKSABHA">
+            <location width="15"/>
+            <labl>Legislature</labl>
+            <valrng>
+                <range UNITS="REAL" max="14" min="1"/>
+            </valrng>
+            <sumStat type="vald">3091</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">14</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <catStat type="freq">206</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <catStat type="freq">209</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <catStat type="freq">212</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <catStat type="freq">217</catStat>
+            </catgry>
+            <catgry>
+                <catValu>5</catValu>
+                <catStat type="freq">219</catStat>
+            </catgry>
+            <catgry>
+                <catValu>6</catValu>
+                <catStat type="freq">226</catStat>
+            </catgry>
+            <catgry>
+                <catValu>7</catValu>
+                <catStat type="freq">225</catStat>
+            </catgry>
+            <catgry>
+                <catValu>8</catValu>
+                <catStat type="freq">226</catStat>
+            </catgry>
+            <catgry>
+                <catValu>9</catValu>
+                <catStat type="freq">226</catStat>
+            </catgry>
+            <catgry>
+                <catValu>10</catValu>
+                <catStat type="freq">223</catStat>
+            </catgry>
+            <catgry>
+                <catValu>11</catValu>
+                <catStat type="freq">226</catStat>
+            </catgry>
+            <catgry>
+                <catValu>12</catValu>
+                <catStat type="freq">225</catStat>
+            </catgry>
+            <catgry>
+                <catValu>13</catValu>
+                <catStat type="freq">226</catStat>
+            </catgry>
+            <catgry>
+                <catValu>14</catValu>
+                <catStat type="freq">225</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V3" dcml="0" files="F1" intrvl="discrete" name="YEAR_ELEC">
+            <location width="15"/>
+            <labl>Year of election</labl>
+            <valrng>
+                <range UNITS="REAL" max="2004" min="1952"/>
+            </valrng>
+            <sumStat type="vald">3091</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <sumStat type="min">1952</sumStat>
+            <sumStat type="max">2004</sumStat>
+            <catgry>
+                <catValu>1952</catValu>
+                <catStat type="freq">206</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1957</catValu>
+                <catStat type="freq">209</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1962</catValu>
+                <catStat type="freq">212</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1967</catValu>
+                <catStat type="freq">217</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1971</catValu>
+                <catStat type="freq">219</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1977</catValu>
+                <catStat type="freq">226</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1980</catValu>
+                <catStat type="freq">225</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1984</catValu>
+                <catStat type="freq">226</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1989</catValu>
+                <catStat type="freq">226</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1991</catValu>
+                <catStat type="freq">223</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1996</catValu>
+                <catStat type="freq">226</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1998</catValu>
+                <catStat type="freq">225</catStat>
+            </catgry>
+            <catgry>
+                <catValu>1999</catValu>
+                <catStat type="freq">226</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2004</catValu>
+                <catStat type="freq">225</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V4" dcml="0" files="F1" intrvl="discrete" name="STATE_ELEC">
+            <location width="15"/>
+            <labl>State of election of the MP at the time of elections</labl>
+            <valrng>
+                <range UNITS="REAL" max="12" min="1"/>
+            </valrng>
+            <invalrng>
+                <item UNITS="REAL" VALUE="99"/>
+            </invalrng>
+            <sumStat type="vald">3090</sumStat>
+            <sumStat type="invd">1</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">12</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <labl>Bihar</labl>
+                <catStat type="freq">732</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>Chandigargh</labl>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>Chhattisgarh</labl>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <labl>Delhi</labl>
+                <catStat type="freq">90</catStat>
+            </catgry>
+            <catgry>
+                <catValu>5</catValu>
+                <labl>Haryana</labl>
+                <catStat type="freq">108</catStat>
+            </catgry>
+            <catgry>
+                <catValu>6</catValu>
+                <labl>Himachal Pradesh</labl>
+                <catStat type="freq">54</catStat>
+            </catgry>
+            <catgry>
+                <catValu>7</catValu>
+                <labl>Madhya Pradesh</labl>
+                <catStat type="freq">530</catStat>
+            </catgry>
+            <catgry>
+                <catValu>8</catValu>
+                <labl>Rajasthan</labl>
+                <catStat type="freq">335</catStat>
+            </catgry>
+            <catgry>
+                <catValu>9</catValu>
+                <labl>Uttar Pradesh</labl>
+                <catStat type="freq">1173</catStat>
+            </catgry>
+            <catgry>
+                <catValu>10</catValu>
+                <labl>Uttarakhand</labl>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>11</catValu>
+                <labl>Jharkhand</labl>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>12</catValu>
+                <labl>Punjab</labl>
+                <catStat type="freq">27</catStat>
+            </catgry>
+            <catgry missing="Y">
+                <catValu>99</catValu>
+                <labl>Unidentified or missing information</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V5" dcml="0" files="F1" intrvl="discrete" name="STATE_2004">
+            <location width="15"/>
+            <labl>State of election of the MP according to the list of states as in 2004</labl>
+            <valrng>
+                <range UNITS="REAL" max="12" min="1"/>
+            </valrng>
+            <invalrng>
+                <item UNITS="REAL" VALUE="99"/>
+            </invalrng>
+            <sumStat type="vald">3090</sumStat>
+            <sumStat type="invd">1</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">11</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <labl>Bihar</labl>
+                <catStat type="freq">567</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>Chandigargh</labl>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>Chhattisgarh</labl>
+                <catStat type="freq">148</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <labl>Delhi</labl>
+                <catStat type="freq">90</catStat>
+            </catgry>
+            <catgry>
+                <catValu>5</catValu>
+                <labl>Haryana</labl>
+                <catStat type="freq">132</catStat>
+            </catgry>
+            <catgry>
+                <catValu>6</catValu>
+                <labl>Himachal Pradesh</labl>
+                <catStat type="freq">57</catStat>
+            </catgry>
+            <catgry>
+                <catValu>7</catValu>
+                <labl>Madhya Pradesh</labl>
+                <catStat type="freq">393</catStat>
+            </catgry>
+            <catgry>
+                <catValu>8</catValu>
+                <labl>Rajasthan</labl>
+                <catStat type="freq">335</catStat>
+            </catgry>
+            <catgry>
+                <catValu>9</catValu>
+                <labl>Uttar Pradesh</labl>
+                <catStat type="freq">1110</catStat>
+            </catgry>
+            <catgry>
+                <catValu>10</catValu>
+                <labl>Uttarakhand</labl>
+                <catStat type="freq">68</catStat>
+            </catgry>
+            <catgry>
+                <catValu>11</catValu>
+                <labl>Jharkhand</labl>
+                <catStat type="freq">179</catStat>
+            </catgry>
+            <catgry missing="Y">
+                <catValu>99</catValu>
+                <labl>Unidentified or missing information</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+            <notes>Since 1952, the administrative map of India has been transformed several times. In this data base, the MPs are considered as belonging to the states in which their constituency was in 2004, even when these states did not exist at the time of election. This organisation of the data base allows comparisons between the past and more recent developments for a given territory.</notes>
+        </var>
+        <var ID="V6" files="F1" intrvl="discrete" name="CONST_ELEC">
+            <location width="41"/>
+            <labl>Constituency at the time of the election</labl>
+            <sumStat type="vald">3090</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <catgry>
+                <catValu>AGRA</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AGRA EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AJMER</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AJMER NORTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AJMER SOUTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AKBARPUR SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALIGARH</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALLAHABAD</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALLAHABAD EAST cum JAUNPUR WEST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALLAHABAD WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALMORA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALMORA NORTH EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALWAR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AMBALA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AMBALA SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AMBALA-SIMLA</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AMETHI</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AMROHA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AONLA</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ARARIA SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ARRAH</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ARRAH-SHAHABAD</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AURANGABAD</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AZAMGARH</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AZAMGARH EAST cum BALLIA WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AZAMGARH WEST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAGAHA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAGAHA SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAGHPAT</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAHRAICH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAHRAICH EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BALAGHAT</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BALIA</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BALLIA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BALLIA EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BALODA BAZAR</catValu>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BALRAMPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANARAS CENTRAL</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANARAS EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANDA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANDA cum FATEHPUR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANKA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANSGAON SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANSWARA</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANSWARA ST</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANSWARA-DUNGARPUR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BARA BANKI</catValu>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BARA BANKI SC</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAREILLY</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAREILLY SOUTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BARH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BARMER</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BARMER-JALORE</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BASTAR ST</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BASTI</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BASTI CENTRE cum GORAKHPUR WEST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BASTI SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAYANA SC</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BEGUSARAI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BETTIAH</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BETUL</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHAGALPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHAGALPUR CENTRAL</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHAGALPUR SOUTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHAGALPUR cum PURNEA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHARATPUR</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHARATPUR-SAWAI MADHOPUR</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHILWARA</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHIND</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHIWANI</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHOPAL</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHOPAL-RAISEN</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BIJNOR</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BIJNOR SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BIJNOR SOUTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BIKANER</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BIKANER-CHURU</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BIKRAMGANJ</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BILASPUR</catValu>
+                <catStat type="freq">8</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BILASPUR SC</catValu>
+                <catStat type="freq">8</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BILASPUR-DURG-RAIPUR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BILHAUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BISAULI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BUDAUN</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BUDAUN WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BULANDSHAHR</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BUXAR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHAIBASSA ST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHAIL SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHAMBA-SIRMUR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHAMPARAN</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHAMPARAN EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHAMPARAN NORTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHANDAULI</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHANDIGARH</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHANDNI CHOWK</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHAPRA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHATRA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHHINDWARA</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHITTORGARH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHURU</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DAMOH</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DARBHANGA</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DARBHANGA CENTRAL</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DARBHANGA EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DARBHANGA NORTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DARBHANGA cum BHAGALPUR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DAUSA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DEHRA DUN</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DEHRA DUN-BIJNOR NW-SAHARANPUR W</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DELHI CITY</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DELHI SADAR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DEORIA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DEORIA EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DEORIA SOUTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DEORIA WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DEWAS SC</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DHANBAD</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DHAR ST</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DOMARIAGANJ</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DUMKA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DUMKA ST</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DURG</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DURG-BASTAR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>EAST DELHI</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ETAH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ETAH CENTRAL</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ETAH NORTH EAST cum BADAUN EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ETAH W cum MAINPURI W cum MATHURA EAS</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ETAWAH</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FAIZABAD</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FAIZABAD NORTH-WEST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FARIDABAD</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FARRUKHABAD</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FARRUKHABAD NORTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FATEHPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FIROZABAD</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FIROZABAD SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GANGANAGAR SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GANGANAGAR-JHUNJHUNU</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GARHWAL</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GARHWAL EAST cum MORADABAD N.E.</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GARHWAL W cum TEHRI GARHW W cum BIJNOR N</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GAYA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GAYA EAST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GAYA NORTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GAYA SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GHATAMPUR SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GHAZIPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GHAZIPUR EAST cum BALLIA SOUTH WE</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GHAZIPUR WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GHOSI</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GIRIDIH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GODDA</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GONDA</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GONDA EAST cum BASTI WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GONDA NORTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GONDA WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GOPALGANJ</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GORAKHPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GORAKHPUR NORTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GORAKHPUR SOUTH</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GUNA</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GURGAON</catValu>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GWALIOR</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAJIPUR</catValu>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAJIPUR SC</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAMIRPUR</catValu>
+                <catStat type="freq">26</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HARDOI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HARDOI NW cum FARRUKHABAD E cum SHAJAHANP</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HARDOI SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HARDWAR SC</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HATA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HATHRAS SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAZARIBAGH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAZARIBAGH EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAZARIBAGH WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HINDAUN</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HISSAR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HOSHANGABAD</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>INDORE</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JABALPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JABALPUR NORTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAHANABAD</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAINAGAR</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAIPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAIPUR SAWAI MADHOPUR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JALAUN SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JALAUN cum ETAWAH W cum JHANSI N</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JALESAR</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JALORE</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JALORE SC</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAMSHEDPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAMUI SC</catValu>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JANJGIR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAUNPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAUNPUR EAST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHABUA ST</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHAJJAR</catValu>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHAJJAR-REWARI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHALAWAR</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHANJHARPUR</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHANSI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHANSI SOUTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHUNJHUNU</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JODHPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KAIMGANJ</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KAIRANA</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KAISERGANJ</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KAITHAL</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANGRA</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANKER ST</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANNAUJ</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANPUR CENTRAL</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANPUR N cum FARRUKHABAD S</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANPUR SOUTH cum ETAWAH EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KARNAL</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KAROL BAGH SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KASGANJ</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KATIHAR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KESARIA</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHAGARIA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHAJURAHO</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHALILABAD</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHANDWA</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHANDWA (Nimar)</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHARGONE</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHERI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHUNTI ST</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHURJA SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KISHANGANJ</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KODARMA</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KOTA</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KOTA SC</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KOTAH</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KOTAH BUNDI</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KOTAH SC</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KOTAH-JHALAWAR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KURUKSHETRA</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>LALGANJ SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>LOHARDAGA ST</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>LUCKNOW</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>LUCKNOW cum BARA BANKI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MACHHLISHAHR</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MADHEPURA</catValu>
+                <catStat type="freq">10</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MADHUBANI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MAHARAJGANJ</catValu>
+                <catStat type="freq">25</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MAHASAMUND</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MAHASU</catValu>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MAHENDRAGARH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MAINPURI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MAINPURI EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MANBHUM NORTH</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MANDI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MANDI-MAHASU</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MANDLA ST</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MANDLA-JABALPUR SOUTH</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MANDSAUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MATHURA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MATHURA WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MEERUT</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MEERUT NORTH-EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MEERUT SOUTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MEERUT WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MIRZAPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MIRZAPUR cum BANARAS WEST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MISRIKH SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MOAHNA SC</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MOHANLALGANJ SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MOHINDERGARH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MONGHYR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MONGHYR NORTH-WEST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MONGHYR SADAR cum JAMUI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MORADABAD</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MORADABAD CENTRAL</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MORADABAD WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MORENA SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MORENA-BHIND</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MOTIHARI</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUSAFIRKHANA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUZAFFARNAGAR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUZAFFARNAGAR SOUTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUZAFFARPUR</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUZAFFARPUR CENTRAL</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUZAFFARPUR EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUZAFFARPUR NORTH EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUZAFFARPUR cum DARBHANGA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NAGAUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NAGAUR PALI</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NAINITAL</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NAINITAL cum ALMORA SW cum BAREILLY N</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NALANDA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NAWADA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NAWADA SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NEW DELHI</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>OUTER DELHI</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PADRAUNA</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PALAMAU</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PALAMAU SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PALAMAU cum HAZARIBAGH cum RANCHI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PALI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PATNA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PATNA CENTRAL</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PATNA EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PATNA cum SHAHABAD</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PHULPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PILIBHIT</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PILIBHIT cum BAREILLY EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PRATAPGARH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PRATAPGARH EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PRATAPGARH W cum RAE BARELI EAST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PUPRI</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PURNEA</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PURNEA CENTRAL</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PURNEA NORTH EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PURNEA cum SANTAL PARGANAS</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAE BARELI</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAIGARH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAIGARH ST</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAIPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAJGARH</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAJGARH ST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAJMAHAL</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAJMAHAL ST</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAJNANDGAON</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAMPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAMPUR cum BAREILLY</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAMSANEHIGHAT SC</catValu>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RANCHI</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RANCHI EAST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RANCHI NORTH-EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RANCHI WEST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RANCHI WEST ST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RASRA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>REWA</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ROBERTSGANJ SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ROHTAK</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ROSERA SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAGAR</catValu>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAGAR SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAHARANPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAHARANPUR W cum MUZAFFARNAGAR N</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAHARSA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAHARSA SC</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAIDPUR SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SALEMPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SALONE</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SALUMBER ST</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAMASTIPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAMASTIPUR EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAMBHAL</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SANTAL PARGANAS cum HAZARIBAGH</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SARAN CENTRAL</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SARAN EAST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SARAN NORTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SARAN SOUTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SARAN cum CHAMPARAN</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SARANGARH SC</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SARDHANA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SARGUJA ST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SARGUJA-RAIGARH</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SASARAM</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SASARAM SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SATNA</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAWAI MADHOPUR</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAWAI MADHOPUR ST</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SEONI</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SEONI ST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHABAD</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHABAD NORTH-WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHABAD SOUTH</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHDOL</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHDOL ST</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHDOL-SIDHI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHJAHANPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHJAHANPUR NORTH cum KHERI EAST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAJAPUR</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAJAPUR SC</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAJAPUR-RAJGARH</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHEOHAR</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIDHI</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIDHI ST</catValu>
+                <catStat type="freq">8</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIKAR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIMLA SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SINGHBHUM</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SINGHBHUM ST</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIROHI-PALI</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIRSA SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SITAMARHI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SITAPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SITAPUR cum KHERI WEST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIWAN</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SONBARSA</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SONEPAT</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SOUTH DELHI</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SULTANPUR</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SULTANPUR NORTH cum FAIZABAD S.W.</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SULTANPUR SOUTH</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SURGUJA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SURGUJA ST</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>TEHRI GARHWAL</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>TONK</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>TONK SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>UDAIPUR</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>UJJAIN</catValu>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>UJJAIN SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>UNNAO</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu><![CDATA[UNNAO cum RAE BARELI  W cum HARDOI S.E.]]></catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>VAISHALI</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>VARANASI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>VIDISHA</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <varFormat schema="other" type="character"/>
+        </var>
+        <var ID="V7" files="F1" intrvl="discrete" name="CONST_2004">
+            <location width="50"/>
+            <labl>Constituency as in 2004</labl>
+            <sumStat type="vald">3089</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <catgry>
+                <catValu>AGRA</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AJMER</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AKBARPUR SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALIGARH</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALLAHABAD</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALMORA (SC) / NAINITAL-UDHAMSINGH NAGAR / BAREILLY</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALMORA SC</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ALWAR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AMBALA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AMBALA SC</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AMETHI</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AMROHA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AONLA</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ARARIA SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ARRAH</catValu>
+                <catStat type="freq">10</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AURANGABAD</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AZAMGARH</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>AZAMGARH / BALLIA</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAGAHA SC</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAGHPAT</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAHRAICH</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BALAGHAT</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BALIA</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BALLIA</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BALRAMPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANARAS</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANDA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANDA / FATEHPUR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANKA</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANSGAON SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BANSWARA ST</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BARA BANKI SC</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAREILLY</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BARH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BARMER</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BASTAR ST</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BASTI / GORAKHPUR</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BASTI SC</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BAYANA SC</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BEGUSARAI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BETTIAH</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BETTIAH / MOTIHARI</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BETUL</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHAGALPUR</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHAGALPUR / PURNEA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHARATPUR</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHARATPUR/ SAWAI MADHOPUR ST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHILWARA</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHIND</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHIWANI</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BHOPAL</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BIJNOR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BIJNOR SC</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BIJNOR-SAHARANPUR-HARDWAR SC</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BIKANER</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BIKRAMGANJ</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BILASPUR SC</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BILHAUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BUDAUN</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BULANDSHAHR</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>BUXAR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHAIL SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHANDAULI</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHANDIGARH</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHANDNI CHOWK</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHAPRA</catValu>
+                <catStat type="freq">17</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHAPRA / MOTIHARI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHATRA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHHINDWARA</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHITTORGARH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHURU</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>CHURU/ BIKANER</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DAMOH</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DARBHANGA</catValu>
+                <catStat type="freq">17</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DARBHANGA / BHAGALPUR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DAUSA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DELHI CITY</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DELHI SADAR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DEORIA</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DEORIA/BANSGAON</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DHANBAD</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DHAR ST</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DOMARIAGANJ</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DUMKA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DUMKA ST</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DURG</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DURG / BASTAR (ST)</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>DURG / RAIPUR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>EAST DELHI</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ETAH</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ETAH / BADAUN</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ETAH / MAINPURI / MATHURA</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ETAWAH</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FAIZABAD</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FARIDABAD</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FARRUKHABAD</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FATEHPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>FIROZABAD SC</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GANGANAGAR SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GANGANAGAR SC / JHUNJHUNU</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GARHWAL</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GARHWAL/MORADABAD</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GARHWAL/TEHRI GARHWAL/BIJNOR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GAYA SC</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GHATAMPUR SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GHAZIPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GHAZIPUR / BALLIA</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GHOSI</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GIRIDIH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GODDA</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GONDA</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GONDA / BASTI</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GOPALGANJ</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GORAKHPUR</catValu>
+                <catStat type="freq">17</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GUNA</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>GWALIOR</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAJIPUR SC</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAMIRPUR</catValu>
+                <catStat type="freq">30</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HARDOI / FARRUKHABAD / SHAHJAHANPUR</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HARDOI SC</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HARDWAR SC</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HATA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HATHRAS SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAZARIBAGH</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HAZARIBAGH / DUMKA ST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HISSAR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>HOSHANGABAD</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>INDORE</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JABALPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JABALPUR ST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAHANABAD</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAIPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAIPUR / SAWAI MADHOPUR SC</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JALAUN / ETAWAH / JHANSI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JALAUN SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JALESAR</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JALORE SC</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JALORE SC/ BARMER</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAMSHEDPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JANJGIR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JANJGIR-CHAMPA</catValu>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAUNPUR</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JAUNPUR / ALLAHABAD</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHABUA ST</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHALAWAR</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHANJHARPUR</catValu>
+                <catStat type="freq">10</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHANSI</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JHUNJHUNU</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>JODHPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KAIRANA</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KAISERGANJ</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANGRA</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANKER ST</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANNAUJ</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANPUR / ETAWAH - AKBARPUR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KANPUR / FARRUKHABAD</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KARNAL</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KAROL BAGH SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KATIHAR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHAGARIA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHAJURAHO</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHALILABAD</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHANDWA</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHARGONE</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHERI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHUNTI ST</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KHURJA SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KISHANGANJ</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KODARMA</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KOTA</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KOTA / JHALAWAR</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>KURUKSHETRA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>LALGANJ SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>LOHARDAGA ST</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>LUCKNOW</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>LUCKNOW / BARA BANKI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MACHHLISHAHR</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MADHEPURA</catValu>
+                <catStat type="freq">10</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MADHUBANI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MAHARAJGANJ</catValu>
+                <catStat type="freq">25</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MAHASAMUND</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MAHENDRAGARH</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MAINPURI</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MANDI</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MANDLA / JABALPUR ST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MANDLA ST</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MANDSOUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MATHURA</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MEERUT</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MIRZAPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MIRZAPUR / VARANASI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MISRIKH SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MOAHNA SC</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MOHANLALGANJ SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MONGHYR</catValu>
+                <catStat type="freq">18</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MORADABAD</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MORENA / BHIND SC</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MORENA SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MOTIHARI</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUZAFFARNAGAR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUZAFFARNAGAR/BAGHPAT</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUZAFFARPUR</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>MUZAFFARPUR / DARBHANGA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NAGAUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NAGAUR/ PALI</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NAINITAL</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NALANDA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NAWADA SC</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>NEW DELHI</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>OUTER DELHI</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PADRAUNA</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PALAMAU SC</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PALI</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PATNA</catValu>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PHULPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PILIBHIT</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PRATAPGARH</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PRATAPGARH / RAE BARELI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PURNEA</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>PURNEA / DUMKA ST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAE BARELI</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAIGARH ST</catValu>
+                <catStat type="freq">10</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAIPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAJGARH</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAJGARH ST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAJMAHAL ST</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAJNANDGAON</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAMPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RAMPUR / BAREILLY</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RANCHI</catValu>
+                <catStat type="freq">17</catStat>
+            </catgry>
+            <catgry>
+                <catValu>RANCHI / HAZARIBAGH / PALAMAU SC</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>REWA</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ROBERTSGANJ SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ROHTAK</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ROHTAK/MAHENDRAGARH</catValu>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>ROSERA SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAGAR</catValu>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAGAR SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAHARANPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAHARANPUR / MUZAFFARNAGAR</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAHARSA</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAHARSA SC</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAIDPUR SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SALEMPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SALUMBER ST</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAMASTIPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAMBHAL</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SARANGARH SC</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SARGUJA ST</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SASARAM SC</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SATNA</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SAWAI MADHOPUR ST</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SEONI</catValu>
+                <catStat type="freq">10</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHABAD</catValu>
+                <catStat type="freq">18</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHDOL ST</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHDOL ST / SIDHI</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAHJAHANPUR</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHAJAPUR SC</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHEOHAR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SHIMLA SC</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIDHI ST</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIKAR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIMLA SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SINGHBHUM</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SINGHBHUM ST</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIRSA SC</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SITAMARHI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SITAPUR</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SITAPUR / KHERI</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SIWAN</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SONEPAT</catValu>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SOUTH DELHI</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SULTANPUR</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SULTANPUR / FAIZABAD</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SURGUJA (ST) / RAIGARH (ST)</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>SURGUJA ST</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>TEHRI GARHWAL</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>TONK SC</catValu>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>UDAIPUR</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>UJJAIN SC</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>UNNAO</catValu>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>UNNAO / RAE BARELI / HARDOI</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>VAISHALI</catValu>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>VARANASI</catValu>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>VIDISHA</catValu>
+                <catStat type="freq">11</catStat>
+            </catgry>
+            <catgry>
+                <catValu>in BALLIA</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>in BARABANKI</catValu>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>in BUDAUN</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>in ETAH</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>in FARRUKHABAD</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>in MEERUT</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>in SAHARSA</catValu>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>in SASARAM SC</catValu>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>in SAWAI MADHOPUR ST</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>in SULTANPUR</catValu>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <varFormat schema="other" type="character"/>
+        </var>
+        <var ID="V8" dcml="0" files="F1" intrvl="discrete" name="PARTY_DET">
+            <location width="15"/>
+            <labl>Party of the candidate at the time of election</labl>
+            <valrng>
+                <range UNITS="REAL" max="56" min="1"/>
+            </valrng>
+            <sumStat type="vald">3091</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">56</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <labl>ABLTC: Akhil Bharatiya Lok Tantrik Congress</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>AIIC(T): All India Indira Congress (Tiwari)</labl>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>AIIC(S): All India Indira Congress (Secular)</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <labl>AIRJP: All India Rashtriya Janata Party</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>5</catValu>
+                <labl>BJP: Bharatiya Janata Party</labl>
+                <catStat type="freq">590</catStat>
+            </catgry>
+            <catgry>
+                <catValu>6</catValu>
+                <labl>BKD: Bharatiya Kranti Dal</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>8</catValu>
+                <labl>BSP: Bahujan Samaj Party</labl>
+                <catStat type="freq">50</catStat>
+            </catgry>
+            <catgry>
+                <catValu>9</catValu>
+                <labl>INC: Indian National Congress</labl>
+                <catStat type="freq">1248</catStat>
+            </catgry>
+            <catgry>
+                <catValu>10</catValu>
+                <labl>CON(U): Congress (Urs)</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>11</catValu>
+                <labl>CON(O): Congress (Organisation)</labl>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>12</catValu>
+                <labl>CON(R): Congress (Requisitionist)</labl>
+                <catStat type="freq">166</catStat>
+            </catgry>
+            <catgry>
+                <catValu>13</catValu>
+                <labl>CPI: Communist Party of India</labl>
+                <catStat type="freq">50</catStat>
+            </catgry>
+            <catgry>
+                <catValu>14</catValu>
+                <labl>CPI(M): Communist Party of India (Marxist)</labl>
+                <catStat type="freq">6</catStat>
+            </catgry>
+            <catgry>
+                <catValu>15</catValu>
+                <labl>CSP: Congress Socialist Party</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>16</catValu>
+                <labl>HLD: Haryana Lok Dal</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>17</catValu>
+                <labl>HLD(R): Haryana Lok Dal (Rashtriya)</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>18</catValu>
+                <labl>HLS: Haryana Lok Samiti</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>19</catValu>
+                <labl>HM: Hindu Mahasabha</labl>
+                <catStat type="freq">8</catStat>
+            </catgry>
+            <catgry>
+                <catValu>20</catValu>
+                <labl>HVC: Himachal Vikas Congress</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>21</catValu>
+                <labl>HVP: Haryana Vikas Party</labl>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>22</catValu>
+                <labl>LJSP</labl>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>24</catValu>
+                <labl>IND: Independent</labl>
+                <catStat type="freq">84</catStat>
+            </catgry>
+            <catgry>
+                <catValu>26</catValu>
+                <labl>INLD: Indian National Lok Dal</labl>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>27</catValu>
+                <labl>IPF: Indian People's Front</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>28</catValu>
+                <labl>IPG: Independent Parliamentary Group</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>29</catValu>
+                <labl>JD: Janata Dal</labl>
+                <catStat type="freq">184</catStat>
+            </catgry>
+            <catgry>
+                <catValu>30</catValu>
+                <labl>JD(U): Janata Dal (United)</labl>
+                <catStat type="freq">25</catStat>
+            </catgry>
+            <catgry>
+                <catValu>31</catValu>
+                <labl>JD(S): Janata Dal (Secular)</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>33</catValu>
+                <labl>Jharkh: any jharkhandi party other than JMM</labl>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>34</catValu>
+                <labl>JMM: Jharkhand Mukti Morcha</labl>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>35</catValu>
+                <labl>JP: Janata Party</labl>
+                <catStat type="freq">241</catStat>
+            </catgry>
+            <catgry>
+                <catValu>36</catValu>
+                <labl>JP(S): Janata Party (Secular)</labl>
+                <catStat type="freq">40</catStat>
+            </catgry>
+            <catgry>
+                <catValu>37</catValu>
+                <labl>JS: Jana Sangh</labl>
+                <catStat type="freq">73</catStat>
+            </catgry>
+            <catgry>
+                <catValu>38</catValu>
+                <labl>KLP</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>39</catValu>
+                <labl>KMPP: Kisan Mazdoor Praja Party</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>40</catValu>
+                <labl>LD: Lok Dal</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>41</catValu>
+                <labl>MC</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>42</catValu>
+                <labl>MPVC: Madhya Pradesh Vikas Congress</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>43</catValu>
+                <labl>NLP: National Loktantrik Party</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>44</catValu>
+                <labl>PSP: Praja Socialist Party</labl>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>45</catValu>
+                <labl>RJD: Rashtriya Janata Dal</labl>
+                <catStat type="freq">47</catStat>
+            </catgry>
+            <catgry>
+                <catValu>46</catValu>
+                <labl>RLD: Rashtriya Lok Dal</labl>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>47</catValu>
+                <labl>RPI: Republican Party of India</labl>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>48</catValu>
+                <labl>RRP: Ram Rajya Parishad</labl>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>49</catValu>
+                <labl>SAP: Shiromani Akali Party</labl>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>50</catValu>
+                <labl>SJP(R): Samajwadi Janata Party (Rashtriya)</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>51</catValu>
+                <labl>SP: Samajwadi Party</labl>
+                <catStat type="freq">123</catStat>
+            </catgry>
+            <catgry>
+                <catValu>54</catValu>
+                <labl>SSP: Samyukta Socialist Party</labl>
+                <catStat type="freq">17</catStat>
+            </catgry>
+            <catgry>
+                <catValu>55</catValu>
+                <labl>Swa: Swatantra Party</labl>
+                <catStat type="freq">23</catStat>
+            </catgry>
+            <catgry>
+                <catValu>56</catValu>
+                <labl>VHP: Vishal Haryana Party</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V9" dcml="0" files="F1" intrvl="discrete" name="PARTY_REC">
+            <location width="15"/>
+            <labl>Recodification of the party to which the MP belonged when he has been elected</labl>
+            <valrng>
+                <range UNITS="REAL" max="15" min="1"/>
+            </valrng>
+            <sumStat type="vald">3091</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">15</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <labl>Hindu right</labl>
+                <catStat type="freq">675</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>Indian National Congress</labl>
+                <catStat type="freq">1415</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>CON(O): Congress (Organisation)</labl>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <labl>Communist parties</labl>
+                <catStat type="freq">56</catStat>
+            </catgry>
+            <catgry>
+                <catValu>5</catValu>
+                <labl>JD+JD(S): Janatal Dal + Janata Dal (Secular)</labl>
+                <catStat type="freq">185</catStat>
+            </catgry>
+            <catgry>
+                <catValu>6</catValu>
+                <labl>JD(U): Janata Dal (United)</labl>
+                <catStat type="freq">25</catStat>
+            </catgry>
+            <catgry>
+                <catValu>7</catValu>
+                <labl>JP: Janata Party</labl>
+                <catStat type="freq">241</catStat>
+            </catgry>
+            <catgry>
+                <catValu>8</catValu>
+                <labl>JP(S): Janata Party (Secular)</labl>
+                <catStat type="freq">40</catStat>
+            </catgry>
+            <catgry>
+                <catValu>9</catValu>
+                <labl>IND: Independent</labl>
+                <catStat type="freq">84</catStat>
+            </catgry>
+            <catgry>
+                <catValu>10</catValu>
+                <labl>RJD+AIRJP: Rashtriya Janata Dal + All India Rashtriya Janata</labl>
+                <catStat type="freq">48</catStat>
+            </catgry>
+            <catgry>
+                <catValu>11</catValu>
+                <labl>BSP+RPI: Bahujan Samaj Party + Republican Party of India</labl>
+                <catStat type="freq">54</catStat>
+            </catgry>
+            <catgry>
+                <catValu>12</catValu>
+                <labl>Swa: Swatantra Party</labl>
+                <catStat type="freq">23</catStat>
+            </catgry>
+            <catgry>
+                <catValu>13</catValu>
+                <labl>Socialist parties</labl>
+                <catStat type="freq">35</catStat>
+            </catgry>
+            <catgry>
+                <catValu>14</catValu>
+                <labl>SP: Samajwadi Party</labl>
+                <catStat type="freq">123</catStat>
+            </catgry>
+            <catgry>
+                <catValu>15</catValu>
+                <labl>Other parties (including regional parties)</labl>
+                <catStat type="freq">83</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+            <notes>This recodification has been decided in order to aggregate parties with similar ideologies and/or social basis.</notes>
+        </var>
+        <var ID="V10" files="F1" intrvl="discrete" name="FIRST_TITLE">
+            <location width="24"/>
+            <labl>First name and/or title of the MP</labl>
+            <sumStat type="vald">3057</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <varFormat schema="other" type="character"/>
+        </var>
+        <var ID="V11" files="F1" intrvl="discrete" name="NAME">
+            <location width="18"/>
+            <labl>Name of the MP</labl>
+            <sumStat type="vald">3091</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <varFormat schema="other" type="character"/>
+        </var>
+        <var ID="V12" dcml="0" files="F1" intrvl="discrete" name="SEX">
+            <location width="15"/>
+            <labl>Sex of the MP</labl>
+            <valrng>
+                <range UNITS="REAL" max="2" min="1"/>
+            </valrng>
+            <sumStat type="vald">3091</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">2</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <labl>Male</labl>
+                <catStat type="freq">2856</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>Female</labl>
+                <catStat type="freq">235</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V13" dcml="0" files="F1" intrvl="discrete" name="CASTE_REC">
+            <location width="15"/>
+            <labl>Recodification of the caste (jati) of the MP</labl>
+            <valrng>
+                <range UNITS="REAL" max="62" min="11"/>
+            </valrng>
+            <invalrng>
+                <item UNITS="REAL" VALUE="99"/>
+            </invalrng>
+            <sumStat type="vald">3067</sumStat>
+            <sumStat type="invd">24</sumStat>
+            <sumStat type="min">11</sumStat>
+            <sumStat type="max">62</sumStat>
+            <catgry>
+                <catValu>11</catValu>
+                <labl>Brahmin</labl>
+                <catStat type="freq">531</catStat>
+            </catgry>
+            <catgry>
+                <catValu>12</catValu>
+                <labl>Rajput</labl>
+                <catStat type="freq">410</catStat>
+            </catgry>
+            <catgry>
+                <catValu>13</catValu>
+                <labl>Bhumihar</labl>
+                <catStat type="freq">96</catStat>
+            </catgry>
+            <catgry>
+                <catValu>14</catValu>
+                <labl>Banya/Jain</labl>
+                <catStat type="freq">170</catStat>
+            </catgry>
+            <catgry>
+                <catValu>15</catValu>
+                <labl>Kayasth</labl>
+                <catStat type="freq">87</catStat>
+            </catgry>
+            <catgry>
+                <catValu>16</catValu>
+                <labl>Khattri</labl>
+                <catStat type="freq">53</catStat>
+            </catgry>
+            <catgry>
+                <catValu>17</catValu>
+                <labl>Other FC</labl>
+                <catStat type="freq">50</catStat>
+            </catgry>
+            <catgry>
+                <catValu>21</catValu>
+                <labl>Jat</labl>
+                <catStat type="freq">149</catStat>
+            </catgry>
+            <catgry>
+                <catValu>22</catValu>
+                <labl>Other IC</labl>
+                <catStat type="freq">27</catStat>
+            </catgry>
+            <catgry>
+                <catValu>31</catValu>
+                <labl>Kurmi</labl>
+                <catStat type="freq">130</catStat>
+            </catgry>
+            <catgry>
+                <catValu>32</catValu>
+                <labl>Yadav</labl>
+                <catStat type="freq">193</catStat>
+            </catgry>
+            <catgry>
+                <catValu>33</catValu>
+                <labl>Other OBC</labl>
+                <catStat type="freq">176</catStat>
+            </catgry>
+            <catgry>
+                <catValu>41</catValu>
+                <labl>Chamar</labl>
+                <catStat type="freq">79</catStat>
+            </catgry>
+            <catgry>
+                <catValu>42</catValu>
+                <labl>Other SC</labl>
+                <catStat type="freq">471</catStat>
+            </catgry>
+            <catgry>
+                <catValu>50</catValu>
+                <labl>Scheduled Tribes</labl>
+                <catStat type="freq">228</catStat>
+            </catgry>
+            <catgry>
+                <catValu>61</catValu>
+                <labl>Muslim</labl>
+                <catStat type="freq">181</catStat>
+            </catgry>
+            <catgry>
+                <catValu>62</catValu>
+                <labl>Religious minorities &amp; Sadhu</labl>
+                <catStat type="freq">36</catStat>
+            </catgry>
+            <catgry missing="Y">
+                <catValu>99</catValu>
+                <labl>Unidentified or missing information</labl>
+                <catStat type="freq">24</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+            <notes>The first figure gives the caste of the MP in an aggregated form (VARNA_REC)</notes>
+        </var>
+        <var ID="V14" dcml="0" files="F1" intrvl="discrete" name="VARNA_REC">
+            <location width="15"/>
+            <labl>Caste of the MP in an aggregated form</labl>
+            <valrng>
+                <range UNITS="REAL" max="6" min="1"/>
+            </valrng>
+            <invalrng>
+                <item UNITS="REAL" VALUE="99"/>
+            </invalrng>
+            <sumStat type="vald">3069</sumStat>
+            <sumStat type="invd">22</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">6</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <labl>Forward Castes</labl>
+                <catStat type="freq">1397</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>Intermediate Castes</labl>
+                <catStat type="freq">176</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>Other Backward Classes</labl>
+                <catStat type="freq">498</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <labl>Scheduled Castes</labl>
+                <catStat type="freq">554</catStat>
+            </catgry>
+            <catgry>
+                <catValu>5</catValu>
+                <labl>Scheduled Tribes</labl>
+                <catStat type="freq">228</catStat>
+            </catgry>
+            <catgry>
+                <catValu>6</catValu>
+                <labl>Religious minorities</labl>
+                <catStat type="freq">216</catStat>
+            </catgry>
+            <catgry missing="Y">
+                <catValu>99</catValu>
+                <labl>Unidentified or missing information</labl>
+                <catStat type="freq">22</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V15" dcml="0" files="F1" intrvl="discrete" name="RELIGION">
+            <location width="15"/>
+            <labl>Religion of the MP</labl>
+            <valrng>
+                <range UNITS="REAL" max="8" min="1"/>
+            </valrng>
+            <sumStat type="vald">3091</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">8</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <labl>Buddhist</labl>
+                <catStat type="freq">6</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>Christian</labl>
+                <catStat type="freq">22</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>Hindu</labl>
+                <catStat type="freq">2592</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <labl>Jain</labl>
+                <catStat type="freq">46</catStat>
+            </catgry>
+            <catgry>
+                <catValu>5</catValu>
+                <labl>Muslim</labl>
+                <catStat type="freq">180</catStat>
+            </catgry>
+            <catgry>
+                <catValu>6</catValu>
+                <labl>Parsi</labl>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>7</catValu>
+                <labl>Sikh</labl>
+                <catStat type="freq">22</catStat>
+            </catgry>
+            <catgry>
+                <catValu>8</catValu>
+                <labl>Tribal Religion</labl>
+                <catStat type="freq">219</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V16" dcml="0" files="F1" intrvl="discrete" name="RELIGION_REC">
+            <location width="15"/>
+            <labl>Recodification of the religion of the MP</labl>
+            <valrng>
+                <range UNITS="REAL" max="4" min="1"/>
+            </valrng>
+            <sumStat type="vald">3091</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">4</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <labl>Hindu</labl>
+                <catStat type="freq">2594</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>Muslim</labl>
+                <catStat type="freq">180</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>Tribal Religion</labl>
+                <catStat type="freq">219</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <labl>Other</labl>
+                <catStat type="freq">98</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V17" dcml="0" files="F1" intrvl="discrete" name="OCCUP">
+            <location width="15"/>
+            <labl>Occupation of the MP</labl>
+            <valrng>
+                <range UNITS="REAL" max="93" min="11"/>
+            </valrng>
+            <invalrng>
+                <item UNITS="REAL" VALUE="99"/>
+            </invalrng>
+            <sumStat type="vald">2991</sumStat>
+            <sumStat type="invd">100</sumStat>
+            <sumStat type="min">11</sumStat>
+            <sumStat type="max">93</sumStat>
+            <catgry>
+                <catValu>11</catValu>
+                <labl>Agriculturist</labl>
+                <catStat type="freq">906</catStat>
+            </catgry>
+            <catgry>
+                <catValu>21</catValu>
+                <labl>Engineer</labl>
+                <catStat type="freq">48</catStat>
+            </catgry>
+            <catgry>
+                <catValu>22</catValu>
+                <labl>Lawyer</labl>
+                <catStat type="freq">566</catStat>
+            </catgry>
+            <catgry>
+                <catValu>23</catValu>
+                <labl>Medical practitioner</labl>
+                <catStat type="freq">74</catStat>
+            </catgry>
+            <catgry>
+                <catValu>24</catValu>
+                <labl>Pilot</labl>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>31</catValu>
+                <labl>Banker</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>32</catValu>
+                <labl>Industrialist</labl>
+                <catStat type="freq">65</catStat>
+            </catgry>
+            <catgry>
+                <catValu>33</catValu>
+                <labl>Manager</labl>
+                <catStat type="freq">7</catStat>
+            </catgry>
+            <catgry>
+                <catValu>34</catValu>
+                <labl>Trader</labl>
+                <catStat type="freq">238</catStat>
+            </catgry>
+            <catgry>
+                <catValu>41</catValu>
+                <labl>Former civil servant</labl>
+                <catStat type="freq">48</catStat>
+            </catgry>
+            <catgry>
+                <catValu>42</catValu>
+                <labl>Former serviceman, policeman</labl>
+                <catStat type="freq">39</catStat>
+            </catgry>
+            <catgry>
+                <catValu>51</catValu>
+                <labl>Teacher, lecturer</labl>
+                <catStat type="freq">219</catStat>
+            </catgry>
+            <catgry>
+                <catValu>52</catValu>
+                <labl>Journalist</labl>
+                <catStat type="freq">70</catStat>
+            </catgry>
+            <catgry>
+                <catValu>53</catValu>
+                <labl>Writer</labl>
+                <catStat type="freq">31</catStat>
+            </catgry>
+            <catgry>
+                <catValu>60</catValu>
+                <labl>Religious missionary</labl>
+                <catStat type="freq">40</catStat>
+            </catgry>
+            <catgry>
+                <catValu>70</catValu>
+                <labl>Former ruler</labl>
+                <catStat type="freq">42</catStat>
+            </catgry>
+            <catgry>
+                <catValu>81</catValu>
+                <labl>Artist</labl>
+                <catStat type="freq">8</catStat>
+            </catgry>
+            <catgry>
+                <catValu>82</catValu>
+                <labl>Sportsman</labl>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>91</catValu>
+                <labl>Political worker</labl>
+                <catStat type="freq">263</catStat>
+            </catgry>
+            <catgry>
+                <catValu>92</catValu>
+                <labl>Social worker</labl>
+                <catStat type="freq">266</catStat>
+            </catgry>
+            <catgry>
+                <catValu>93</catValu>
+                <labl>Trade union</labl>
+                <catStat type="freq">37</catStat>
+            </catgry>
+            <catgry missing="Y">
+                <catValu>99</catValu>
+                <labl>Unidentified or missing information</labl>
+                <catStat type="freq">100</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+            <notes>The first figure gives the occupational group of the MP (OCCUP_GR)</notes>
+        </var>
+        <var ID="V18" dcml="0" files="F1" intrvl="discrete" name="OCCUP_GR">
+            <location width="15"/>
+            <labl>Occupational group of the MP</labl>
+            <valrng>
+                <range UNITS="REAL" max="9" min="1"/>
+            </valrng>
+            <invalrng>
+                <item UNITS="REAL" VALUE="99"/>
+            </invalrng>
+            <sumStat type="vald">2991</sumStat>
+            <sumStat type="invd">100</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">9</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <labl>Agriculturists</labl>
+                <catStat type="freq">906</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>Liberal professions and engineers</labl>
+                <catStat type="freq">699</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>Business</labl>
+                <catStat type="freq">314</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <labl>Former civil servants</labl>
+                <catStat type="freq">87</catStat>
+            </catgry>
+            <catgry>
+                <catValu>5</catValu>
+                <labl>Intellectual professions</labl>
+                <catStat type="freq">320</catStat>
+            </catgry>
+            <catgry>
+                <catValu>6</catValu>
+                <labl>Religious missionaries</labl>
+                <catStat type="freq">40</catStat>
+            </catgry>
+            <catgry>
+                <catValu>7</catValu>
+                <labl>Former rulers</labl>
+                <catStat type="freq">42</catStat>
+            </catgry>
+            <catgry>
+                <catValu>8</catValu>
+                <labl>Artists, sportsmen</labl>
+                <catStat type="freq">17</catStat>
+            </catgry>
+            <catgry>
+                <catValu>9</catValu>
+                <labl>Political and social workers</labl>
+                <catStat type="freq">566</catStat>
+            </catgry>
+            <catgry missing="Y">
+                <catValu>99</catValu>
+                <labl>Unidentified or missing information</labl>
+                <catStat type="freq">100</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V19" dcml="0" files="F1" intrvl="discrete" name="EDUC">
+            <location width="15"/>
+            <labl>Level of education</labl>
+            <valrng>
+                <range UNITS="REAL" max="6" min="1"/>
+            </valrng>
+            <invalrng>
+                <item UNITS="REAL" VALUE="99"/>
+            </invalrng>
+            <sumStat type="vald">2765</sumStat>
+            <sumStat type="invd">326</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">6</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <labl>Doctorate</labl>
+                <catStat type="freq">125</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>Post Graduates</labl>
+                <catStat type="freq">857</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>Graduates</labl>
+                <catStat type="freq">1130</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <labl>Intermediary</labl>
+                <catStat type="freq">184</catStat>
+            </catgry>
+            <catgry>
+                <catValu>5</catValu>
+                <labl>Matriculate</labl>
+                <catStat type="freq">222</catStat>
+            </catgry>
+            <catgry>
+                <catValu>6</catValu>
+                <labl>Primary, secondary</labl>
+                <catStat type="freq">247</catStat>
+            </catgry>
+            <catgry missing="Y">
+                <catValu>99</catValu>
+                <labl>Unidentified or missing information</labl>
+                <catStat type="freq">326</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V20" dcml="0" files="F1" intrvl="contin" name="YEAR_BIRTH">
+            <location width="15"/>
+            <labl>Year of birth</labl>
+            <valrng>
+                <range UNITS="REAL" max="1977" min="1879"/>
+            </valrng>
+            <invalrng>
+                <item UNITS="REAL" VALUE="9999"/>
+            </invalrng>
+            <sumStat type="vald">2961</sumStat>
+            <sumStat type="invd">130</sumStat>
+            <sumStat type="min">1879</sumStat>
+            <sumStat type="max">1977</sumStat>
+            <catgry missing="Y">
+                <catValu>9999</catValu>
+                <labl>Unidentified or missing information</labl>
+                <catStat type="freq">130</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V21" dcml="0" files="F1" intrvl="discrete" name="STATE_BIRTH">
+            <location width="15"/>
+            <labl>Country or state where the MP was born</labl>
+            <valrng>
+                <range UNITS="REAL" max="27" min="2"/>
+            </valrng>
+            <invalrng>
+                <item UNITS="REAL" VALUE="99"/>
+            </invalrng>
+            <sumStat type="vald">2750</sumStat>
+            <sumStat type="invd">341</sumStat>
+            <sumStat type="min">2</sumStat>
+            <sumStat type="max">27</sumStat>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>Kenya</labl>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>Andhra Pradesh</labl>
+                <catStat type="freq">6</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <labl>Assam</labl>
+                <catStat type="freq">7</catStat>
+            </catgry>
+            <catgry>
+                <catValu>5</catValu>
+                <labl>Bangladesh</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>6</catValu>
+                <labl>Bihar</labl>
+                <catStat type="freq">606</catStat>
+            </catgry>
+            <catgry>
+                <catValu>7</catValu>
+                <labl>Burma</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>8</catValu>
+                <labl>Chandigarh</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>9</catValu>
+                <labl>Delhi</labl>
+                <catStat type="freq">47</catStat>
+            </catgry>
+            <catgry>
+                <catValu>10</catValu>
+                <labl>United Kingdom</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>11</catValu>
+                <labl>Gujarat</labl>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>12</catValu>
+                <labl>Haryana</labl>
+                <catStat type="freq">109</catStat>
+            </catgry>
+            <catgry>
+                <catValu>13</catValu>
+                <labl>Himachal Pradesh</labl>
+                <catStat type="freq">39</catStat>
+            </catgry>
+            <catgry>
+                <catValu>14</catValu>
+                <labl>Jammu &amp; Kashmir</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>16</catValu>
+                <labl>Karnataka</labl>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>17</catValu>
+                <labl>Kerala</labl>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>18</catValu>
+                <labl>Maharashtra</labl>
+                <catStat type="freq">59</catStat>
+            </catgry>
+            <catgry>
+                <catValu>19</catValu>
+                <labl>Madhya Pradesh</labl>
+                <catStat type="freq">434</catStat>
+            </catgry>
+            <catgry>
+                <catValu>20</catValu>
+                <labl>Nepal</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>21</catValu>
+                <labl>Pakistan</labl>
+                <catStat type="freq">47</catStat>
+            </catgry>
+            <catgry>
+                <catValu>22</catValu>
+                <labl>Punjab</labl>
+                <catStat type="freq">41</catStat>
+            </catgry>
+            <catgry>
+                <catValu>24</catValu>
+                <labl>Rajasthan</labl>
+                <catStat type="freq">277</catStat>
+            </catgry>
+            <catgry>
+                <catValu>25</catValu>
+                <labl>Saudi Arabia</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>26</catValu>
+                <labl>Uttar Pradesh</labl>
+                <catStat type="freq">1011</catStat>
+            </catgry>
+            <catgry>
+                <catValu>27</catValu>
+                <labl>West Bengal</labl>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry missing="Y">
+                <catValu>99</catValu>
+                <labl>Unidentified or missing information</labl>
+                <catStat type="freq">341</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V22" files="F1" intrvl="discrete" name="TOWN_BIRTH">
+            <location width="35"/>
+            <labl>Town or city where the MP was born</labl>
+            <sumStat type="vald">2822</sumStat>
+            <sumStat type="invd">0</sumStat>
+            <varFormat schema="other" type="character"/>
+        </var>
+        <var ID="V23" dcml="0" files="F1" intrvl="discrete" name="CASTE_DET">
+            <location width="15"/>
+            <labl>Caste (jati) of the MP</labl>
+            <valrng>
+                <range UNITS="REAL" max="98" min="3"/>
+            </valrng>
+            <invalrng>
+                <item UNITS="REAL" VALUE="99"/>
+            </invalrng>
+            <sumStat type="vald">3067</sumStat>
+            <sumStat type="invd">24</sumStat>
+            <sumStat type="min">3</sumStat>
+            <sumStat type="max">98</sumStat>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>1 Amil</labl>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>4</catValu>
+                <labl>1 Arora</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>6</catValu>
+                <labl>1 Banya/Jain</labl>
+                <catStat type="freq">170</catStat>
+            </catgry>
+            <catgry>
+                <catValu>7</catValu>
+                <labl>1 Bengali</labl>
+                <catStat type="freq">0</catStat>
+            </catgry>
+            <catgry>
+                <catValu>8</catValu>
+                <labl>1 Bhat</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>9</catValu>
+                <labl>1 Bhumihar</labl>
+                <catStat type="freq">96</catStat>
+            </catgry>
+            <catgry>
+                <catValu>10</catValu>
+                <labl>1 Brahmin</labl>
+                <catStat type="freq">531</catStat>
+            </catgry>
+            <catgry>
+                <catValu>11</catValu>
+                <labl>1 Charan</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>12</catValu>
+                <labl>1 Kayasth</labl>
+                <catStat type="freq">87</catStat>
+            </catgry>
+            <catgry>
+                <catValu>13</catValu>
+                <labl>1 Khattri</labl>
+                <catStat type="freq">53</catStat>
+            </catgry>
+            <catgry>
+                <catValu>14</catValu>
+                <labl>1 Marwari</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>15</catValu>
+                <labl>1 Nair</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>18</catValu>
+                <labl>1 Rajput</labl>
+                <catStat type="freq">410</catStat>
+            </catgry>
+            <catgry>
+                <catValu>19</catValu>
+                <labl>1 Sindhi</labl>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>20</catValu>
+                <labl>1 Tyagi</labl>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry>
+                <catValu>22</catValu>
+                <labl>1 others</labl>
+                <catStat type="freq">22</catStat>
+            </catgry>
+            <catgry>
+                <catValu>23</catValu>
+                <labl>2 Bairagi</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>24</catValu>
+                <labl>2 Bishnoi</labl>
+                <catStat type="freq">8</catStat>
+            </catgry>
+            <catgry>
+                <catValu>25</catValu>
+                <labl>2 Jat</labl>
+                <catStat type="freq">149</catStat>
+            </catgry>
+            <catgry>
+                <catValu>26</catValu>
+                <labl>2 Maratha</labl>
+                <catStat type="freq">16</catStat>
+            </catgry>
+            <catgry>
+                <catValu>27</catValu>
+                <labl>2 others</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>28</catValu>
+                <labl>3 Ahir(Roa)</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>29</catValu>
+                <labl>3 Bairagi</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>31</catValu>
+                <labl>3 Banya</labl>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>32</catValu>
+                <labl>3 Bharbhunja</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>33</catValu>
+                <labl>3 Bijoy</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>34</catValu>
+                <labl>3 Dhanuk</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>35</catValu>
+                <labl>3 Gujjar</labl>
+                <catStat type="freq">13</catStat>
+            </catgry>
+            <catgry>
+                <catValu>36</catValu>
+                <labl>3 Jaiswal</labl>
+                <catStat type="freq">6</catStat>
+            </catgry>
+            <catgry>
+                <catValu>37</catValu>
+                <labl>3 Kacchi</labl>
+                <catStat type="freq">12</catStat>
+            </catgry>
+            <catgry>
+                <catValu>38</catValu>
+                <labl>3 Kewat</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>39</catValu>
+                <labl>3 Kirar</labl>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>40</catValu>
+                <labl>3 Koeri</labl>
+                <catStat type="freq">31</catStat>
+            </catgry>
+            <catgry>
+                <catValu>41</catValu>
+                <labl>3 Kurmi</labl>
+                <catStat type="freq">130</catStat>
+            </catgry>
+            <catgry>
+                <catValu>42</catValu>
+                <labl>3 Kushwaha</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>44</catValu>
+                <labl>3 Lodhi</labl>
+                <catStat type="freq">18</catStat>
+            </catgry>
+            <catgry>
+                <catValu>45</catValu>
+                <labl>3 Mali</labl>
+                <catStat type="freq">10</catStat>
+            </catgry>
+            <catgry>
+                <catValu>46</catValu>
+                <labl>3 Nai</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>47</catValu>
+                <labl>3 Nishad</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>48</catValu>
+                <labl>3 Nonia</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>50</catValu>
+                <labl>3 Pankha</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>51</catValu>
+                <labl>3 Panwar</labl>
+                <catStat type="freq">8</catStat>
+            </catgry>
+            <catgry>
+                <catValu>52</catValu>
+                <labl>3 Paradhi</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>53</catValu>
+                <labl>3 Rajbhar</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>54</catValu>
+                <labl>3 Shakya</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>55</catValu>
+                <labl>3 Teli</labl>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>56</catValu>
+                <labl>3 Torak</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>57</catValu>
+                <labl>3 Yadav</labl>
+                <catStat type="freq">193</catStat>
+            </catgry>
+            <catgry>
+                <catValu>58</catValu>
+                <labl>3 others</labl>
+                <catStat type="freq">30</catStat>
+            </catgry>
+            <catgry>
+                <catValu>59</catValu>
+                <labl>4 Arya</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>60</catValu>
+                <labl>4 Balmiki</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>61</catValu>
+                <labl>4 Bhangi</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>62</catValu>
+                <labl>4 Chamar</labl>
+                <catStat type="freq">79</catStat>
+            </catgry>
+            <catgry>
+                <catValu>63</catValu>
+                <labl>4 Dhanuk</labl>
+                <catStat type="freq">3</catStat>
+            </catgry>
+            <catgry>
+                <catValu>64</catValu>
+                <labl>4 Dhobi</labl>
+                <catStat type="freq">8</catStat>
+            </catgry>
+            <catgry>
+                <catValu>65</catValu>
+                <labl>4 Dusadh</labl>
+                <catStat type="freq">30</catStat>
+            </catgry>
+            <catgry>
+                <catValu>66</catValu>
+                <labl>4 Jatav</labl>
+                <catStat type="freq">7</catStat>
+            </catgry>
+            <catgry>
+                <catValu>67</catValu>
+                <labl>4 Kalwar</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>68</catValu>
+                <labl>4 Katik</labl>
+                <catStat type="freq">4</catStat>
+            </catgry>
+            <catgry>
+                <catValu>69</catValu>
+                <labl>4 Khatri</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>71</catValu>
+                <labl>4 Kori</labl>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>72</catValu>
+                <labl>4 Mehtar</labl>
+                <catStat type="freq">7</catStat>
+            </catgry>
+            <catgry>
+                <catValu>73</catValu>
+                <labl>4 Mushar</labl>
+                <catStat type="freq">6</catStat>
+            </catgry>
+            <catgry>
+                <catValu>74</catValu>
+                <labl>4 Pasi</labl>
+                <catStat type="freq">21</catStat>
+            </catgry>
+            <catgry>
+                <catValu>75</catValu>
+                <labl>4 Ravidas</labl>
+                <catStat type="freq">5</catStat>
+            </catgry>
+            <catgry>
+                <catValu>76</catValu>
+                <labl>4 Satnamis</labl>
+                <catStat type="freq">14</catStat>
+            </catgry>
+            <catgry>
+                <catValu>78</catValu>
+                <labl>4 others</labl>
+                <catStat type="freq">352</catStat>
+            </catgry>
+            <catgry>
+                <catValu>79</catValu>
+                <labl>5 Bhilala</labl>
+                <catStat type="freq">8</catStat>
+            </catgry>
+            <catgry>
+                <catValu>80</catValu>
+                <labl>5 Gond</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>82</catValu>
+                <labl>5 Kharwar</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>83</catValu>
+                <labl>5 Meena</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>85</catValu>
+                <labl>5 Munda</labl>
+                <catStat type="freq">6</catStat>
+            </catgry>
+            <catgry>
+                <catValu>86</catValu>
+                <labl>5 Oraon</labl>
+                <catStat type="freq">8</catStat>
+            </catgry>
+            <catgry>
+                <catValu>87</catValu>
+                <labl>5 Panda Brahma</labl>
+                <catStat type="freq">1</catStat>
+            </catgry>
+            <catgry>
+                <catValu>89</catValu>
+                <labl>5 others</labl>
+                <catStat type="freq">200</catStat>
+            </catgry>
+            <catgry>
+                <catValu>90</catValu>
+                <labl>6 Christian</labl>
+                <catStat type="freq">10</catStat>
+            </catgry>
+            <catgry>
+                <catValu>92</catValu>
+                <labl>6 Muslim</labl>
+                <catStat type="freq">181</catStat>
+            </catgry>
+            <catgry>
+                <catValu>93</catValu>
+                <labl>6 Parsi</labl>
+                <catStat type="freq">2</catStat>
+            </catgry>
+            <catgry>
+                <catValu>96</catValu>
+                <labl>6 Sikh</labl>
+                <catStat type="freq">15</catStat>
+            </catgry>
+            <catgry>
+                <catValu>98</catValu>
+                <labl>Sadhu</labl>
+                <catStat type="freq">9</catStat>
+            </catgry>
+            <catgry missing="Y">
+                <catValu>99</catValu>
+                <labl>Unidentified or missing information</labl>
+                <catStat type="freq">24</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+        <var ID="V24" dcml="0" files="F1" intrvl="discrete" name="PLACE_BIRTH">
+            <location width="15"/>
+            <labl>Place of birth</labl>
+            <valrng>
+                <range UNITS="REAL" max="3" min="1"/>
+            </valrng>
+            <invalrng>
+                <item UNITS="REAL" VALUE="99"/>
+            </invalrng>
+            <sumStat type="vald">2750</sumStat>
+            <sumStat type="invd">341</sumStat>
+            <sumStat type="min">1</sumStat>
+            <sumStat type="max">3</sumStat>
+            <catgry>
+                <catValu>1</catValu>
+                <labl>Out of India</labl>
+                <catStat type="freq">66</catStat>
+            </catgry>
+            <catgry>
+                <catValu>2</catValu>
+                <labl>Out of the Hindi Belt</labl>
+                <catStat type="freq">159</catStat>
+            </catgry>
+            <catgry>
+                <catValu>3</catValu>
+                <labl>In the Hindi Belt</labl>
+                <catStat type="freq">2525</catStat>
+            </catgry>
+            <catgry missing="Y">
+                <catValu>99</catValu>
+                <labl>Unidentified or missing information</labl>
+                <catStat type="freq">341</catStat>
+            </catgry>
+            <varFormat schema="other" type="numeric"/>
+        </var>
+    </dataDscr>
+</codeBook>

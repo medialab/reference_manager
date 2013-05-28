@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE codeBook
+  SYSTEM 'http://www.icpsr.umich.edu/DDI/Version2-0.dtd'>
+<codeBook>
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>CUADRO 3.1 - POBLACIÓN TOTAL POR SEXO SEGÚN GRUPO QUINQUENAL DE EDAD Al 5 de noviembre de 1995</titl>
+      </titlStmt>
+      <prodStmt>
+        <producer>Yale University Social Science Research Services and Social Science Libraries and Information Services</producer>
+        <prodDate>2004-09-29</prodDate>
+        <prodPlac>New Haven, Connecticut, United States of America</prodPlac>
+      </prodStmt>
+    </citation>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>CUADRO 3.1 - POBLACIÓN TOTAL POR SEXO SEGÚN GRUPO QUINQUENAL DE EDAD Al 5 de noviembre de 1995</titl>
+        <IDNo>agua200003.01</IDNo>
+      </titlStmt>
+      <prodStmt>
+        <producer role="original publisher of print Anuarios Estatales">Instituto Nacional de Estadística, Geografía e Informática, México</producer>
+        <producer role="digitizer of Anuarios Estatales">Yale University Social Science Research Services and Social Science Libraries and Information Services</producer>
+        <prodDate>2000-00-00</prodDate>
+        <fundAg>The Andrew W. Mellon Foundation</fundAg>
+      </prodStmt>
+      <biblCit>&quot;CUADRO 3.1 - POBLACIÓN TOTAL POR SEXO SEGÚN GRUPO QUINQUENAL DE EDAD Al 5 de noviembre de 1995,&quot; Anuario Estadístico del Estado de Aguascalientes, 2000, Chapter 03, Estado y Movimiento de la Población. Instituto Nacional de Estadística, Geografía e Informática, México. Digital version in Microsoft Excel produced by Yale University Social Science Research Services and Social Science Libraries and Information Services, 2003. URL: http://ssrs.yale.edu/egcdl/xls/Aguascalientes/2000/Aguascalientes_2000_03_01.xls</biblCit>
+    </citation>
+    <stdyInfo>
+      <subject>
+        <keyword>demografía</keyword>
+      </subject>
+      <sumDscr>
+        <nation abbr="mx">México</nation>
+        <geogCover>Aguascalientes</geogCover>
+        <dataKind>aggregate data</dataKind>
+      </sumDscr>
+    </stdyInfo>
+    <method>
+      <dataColl>
+        <sources>
+          <dataSrc>Anuario Estadístico del Estado de Aguascalientes, 2000, Chapter 03, Estado y Movimiento de la Población</dataSrc>
+        </sources>
+      </dataColl>
+    </method>
+    <dataAccs>
+      <useStmt>
+        <restrctn>For use on the Yale network only.</restrctn>
+      </useStmt>
+    </dataAccs>
+  </stdyDscr>
+  <fileDscr ID="Aguascalientes_2000_03_01.xls" URI="ssrs.yale.edu/egcdl/xls/Aguascalientes/2000/Aguascalientes_2000_03_01.xls">
+    <fileTxt>
+      <fileName ID="C1">Aguascalientes_2000_03_01.xls</fileName>
+      <fileType>Microsoft Excel</fileType>
+      <verStmt>
+        <verResp>Yale University Social Science Research Services and Social Science Libraries and Information Services</verResp>
+      </verStmt>
+    </fileTxt>
+    <notes>a/ Incluye una estimación de población por un total de 732 personas, correspondientes a 244 &quot;viviendas sin Información de ocupantes&quot;. FUENTE: INEGI. Aguascalientes, Resultados Definitivos; Tabulados Básicos. Corteo de Población y Vivienda 1995.</notes>
+  </fileDscr>
+  <dataDscr>
+    <var ID="V1" files="C1" name="GRUPO DE EDAD">
+      <labl>GRUPO DE EDAD</labl>
+      <catgry>
+        <catValu>1</catValu>
+        <labl>TOTAL</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>MENORES DE UN AÑO</labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl>1 A 4 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>4</catValu>
+        <labl>5 A 9 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>5</catValu>
+        <labl>10 A 14 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>6</catValu>
+        <labl>15 A 19 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>7</catValu>
+        <labl>20 A 24 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>8</catValu>
+        <labl>25 A 29 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>9</catValu>
+        <labl>30 A 34 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>10</catValu>
+        <labl>35 A 39 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl>40 A 44 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl>45 A 49 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>13</catValu>
+        <labl>50 A 54 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>14</catValu>
+        <labl>55 A 59 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>15</catValu>
+        <labl>60 A 64 AÑOS</labl>
+      </catgry>
+      <catgry>
+        <catValu>16</catValu>
+        <labl>65 AÑOS Y MAS</labl>
+      </catgry>
+      <catgry>
+        <catValu>17</catValu>
+        <labl>NO ESPECIFICADO a/</labl>
+      </catgry>
+    </var>
+    <var ID="V2" dcml="0" files="C1" name=" ">
+      <catgry>
+        <catValu>1</catValu>
+        <labl>TOTAL</labl>
+      </catgry>
+      <catgry>
+        <catValu>2</catValu>
+        <labl>HOMBRES</labl>
+      </catgry>
+      <catgry>
+        <catValu>3</catValu>
+        <labl>MUJERES</labl>
+      </catgry>
+    </var>
+    <nCube dmnsQnty="2" name="Aguascalientes_2000_03_01.xls">
+      <location fileid="Aguascalientes_2000_03_01.xls"/>
+      <labl>POBLACIÓN TOTAL POR SEXO SEGÚN GRUPO QUINQUENAL DE EDAD Al 5 de noviembre de 1995</labl>
+      <dmns varRef="V1"/>
+      <dmns varRef="V2"/>
+    </nCube>
+  </dataDscr>
+</codeBook>

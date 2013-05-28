@@ -1,0 +1,110 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "type_id": "Print"
+        }, 
+        {
+            "type_id": "Web"
+        }, 
+        {
+            "type_id": "Radio"
+        }, 
+        {
+            "type_id": "Television"
+        }, 
+        {
+            "type_id": "Audiocassette"
+        }, 
+        {
+            "type_id": "Audiotape"
+        }, 
+        {
+            "type_id": "CD"
+        }, 
+        {
+            "type_id": "LP"
+        }, 
+        {
+            "type_id": "Film"
+        }, 
+        {
+            "type_id": "DVD"
+        }, 
+        {
+            "type_id": "Videocassette"
+        }, 
+        {
+            "type_id": "Laser disc"
+        }, 
+        {
+            "type_id": "Sound filmstrip"
+        }, 
+        {
+            "type_id": "Slide program"
+        }, 
+        {
+            "type_id": "Performance"
+        }, 
+        {
+            "type_id": "Photograph"
+        }, 
+        {
+            "type_id": "Graphite on paper"
+        }, 
+        {
+            "type_id": "Bronze"
+        }, 
+        {
+            "type_id": "Oil on canvas"
+        }, 
+        {
+            "type_id": "Personal interview"
+        }, 
+        {
+            "type_id": "Telephone interview"
+        }, 
+        {
+            "type_id": "E-mail"
+        }, 
+        {
+            "type_id": "Microform"
+        }, 
+        {
+            "type_id": "CD-ROM "
+        }, 
+        {
+            "type_id": "DVD-ROM"
+        }, 
+        {
+            "type_id": "Scores"
+        }, 
+        {
+            "type_id": "Digital file"
+        }, 
+        {
+            "type_id": "PDF file"
+        }, 
+        {
+            "type_id": "Microsoft Word file"
+        }, 
+        {
+            "type_id": "MP3 file"
+        }, 
+        {
+            "type_id": "JPEG file"
+        }, 
+        {
+            "type_id": "Kindle file"
+        }, 
+        {
+            "type_id": "Nook file"
+        }, 
+        {
+            "type_id": "EPUB file"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "medium"
+}

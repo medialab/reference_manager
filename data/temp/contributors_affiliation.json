@@ -1,0 +1,48 @@
+{
+    "contributors": [
+        {
+            "agent": {
+                "affiliations": [
+                    {
+                        "metajson": 1,
+                        "name": "Centre d'\u00e9tudes et de recherches internationales",
+                        "preferred": true,
+                        "rec_class": "Orgunit",
+                        "rec_id": "2441/hrhdgs"
+                    }
+                ],
+                "name_family": "Gal\u00e8s",
+                "name_given": "Patrick",
+                "name_prefix_non_drop": "Le",
+                "rec_class": "Person",
+                "rec_id": "hdl:2441/dfssdf"
+            },
+            "role": "aut"
+        },
+        {
+            "agent": {
+                "acronym": "CERI",
+                "metajson": 1,
+                "name": "Centre d'\u00e9tudes et de recherches internationales",
+                "rec_class": "Orgunit",
+                "rec_id": "hdl:2441/dfssdf"
+            },
+            "role": "pro"
+        },
+        {
+            "agent": {
+                "country": "FR",
+                "date_end": "2009-10-20",
+                "date_start": "2009-10-17",
+                "international": true,
+                "metajson": 1,
+                "number": "27",
+                "place": "Paris",
+                "rec_class": "Event",
+                "rec_id": "hdl:2441/dfssdf",
+                "title": "Colloque international ..."
+            },
+            "role": "aut"
+        }
+    ]
+}

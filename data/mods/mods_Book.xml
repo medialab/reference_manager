@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:nonSort>The </mods:nonSort>
+    <mods:title>Member States of the European Union</mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i789685q54lsl_-_2441__9labe9r4se65i789685q54lsl_-_2441__9labe9r4se65i789685q380gh_-_dambferfb7dfprc9m26c708i0" type="personal">
+    <mods:namePart type="given">Christian</mods:namePart>
+    <mods:namePart type="family">Lequesne</mods:namePart>
+    <mods:affiliation>Centre d'études et de recherches internationales</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">edt</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i7896860j0h0m_-__-_2441__5l6uh8ogmqildh09h520k4p9m_-_dambferfb7dfprc9m26c72a0n" type="personal">
+    <mods:namePart type="given">Simon</mods:namePart>
+    <mods:namePart type="family">Bulmer</mods:namePart>
+    <mods:affiliation>Department of Politics</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">edt</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/book</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/Book</mods:genre>
+  <mods:genre authority="marcgt">book</mods:genre>
+  <mods:originInfo>
+    <mods:publisher>Oxford University Press</mods:publisher>
+    <mods:dateIssued encoding="iso8601">2012-12</mods:dateIssued>
+    <mods:edition>2e éd.</mods:edition>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+  </mods:language>
+  <mods:physicalDescription>
+    <mods:extent>480</mods:extent>
+  </mods:physicalDescription>
+  <mods:abstract lang="en">The Member States of the European Union combines an analysis of individual EU member states with the effects of Europeanization on domestic institutions and policies. Examining both sides of this crucial relationship, it is the best guide to EU member state relations available.
+The second edition has been thoroughly updated to take in the latest round of EU enlargement and includes chapters on eight member states from different geographical regions and dates of accession. These are followed by seven thematic chapters on the Europeanization of structures, actors, and processes within the EU 27.    </mods:abstract>
+  <mods:tableOfContents lang="fr">1: Simon Bulmer &amp; Christian Lequesne: The European Union and its Member States: An Overview
+Part 1 Analysis
+2: Paolo R. Graziano and Maarten P. Vink: Europeanization: Concept, Theory and Methods
+Part 2 The Member States
+3: Olivier Rozenberg: Genuine Europeanization or Monnet for Nothing?
+4: Timm Beichelt: Germany: In Search of a New Balance
+5: David Allen: The United Kingdom: Towards Isolation and a Parting of the Ways?
+6: Francesc Morata: Spain: Modernization through Europeanization
+7: Anna Michalski: Sweden: From Scepticism to Pragmatic Support
+8: Nathaniel Copsey: Poland: An Awkward Partner Redeemed
+9: Piret Ehin: Estonia: Excelling at Self-Exertion
+10: Dimitris Papadimitriou and David Phinnemore: Romania: Uneven Europeanization
+11: Simon Bulmer and Christian Lequesne: Contrasting States of Europeanization
+Part 3 Europeanization
+12: Hussein Kassim: Europeanization and Member State Institutions
+13: Robert Ladrech: Europeanization and Political Parties
+14: Sabine Saurugger: The Europeanization of Interest Groups and Social Movements
+15: Simon Bulmer and Claudio M. Radaelli: The Europeanization of Member State Policy
+16: Peter Bursens: Europeanization and Sub-national Authorities
+17: Vivien A. Schmidt: The Europeanization of National Economies
+Simon Bulmer and Christian Lequesne: Conclusion</mods:tableOfContents>
+  <mods:subject lang="fr">
+    <mods:topic>Union européenne</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Etudes comparatives</mods:topic>
+  </mods:subject>
+  <mods:relatedItem type="series">
+    <mods:titleInfo>
+      <mods:title>The New European Union Series </mods:title>
+    </mods:titleInfo>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre authority="marcgt">series</mods:genre>
+  </mods:relatedItem>
+  <mods:identifier type="isbn">9780199544837</mods:identifier>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__9labe9r4se65i789685q54lsl_-_2441__9labe9r4se65i789685q54lsl_-_2441__9labe9r4se65i789685q380gh_-_dambferfb7dfprc9m26c708i0" authority="http://spire.sciences-po.fr/hdl:">2441/9labe9r4se65i789685q54lsl</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

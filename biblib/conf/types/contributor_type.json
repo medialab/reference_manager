@@ -1,0 +1,36 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "personal", 
+                "fr": "personne"
+            }, 
+            "type_id": "personal"
+        }, 
+        {
+            "labels": {
+                "en": "corporate", 
+                "fr": "organisation"
+            }, 
+            "type_id": "corporate"
+        }, 
+        {
+            "labels": {
+                "en": "family", 
+                "fr": "famille"
+            }, 
+            "type_id": "family"
+        }, 
+        {
+            "labels": {
+                "en": "conference", 
+                "fr": "conférence"
+            }, 
+            "type_id": "event"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "contributor_type"
+}

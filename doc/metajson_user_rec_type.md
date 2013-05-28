@@ -1,4 +1,4 @@
-# ReferenceManager user form
+# biblib user form
 
 ## Document type determination
 

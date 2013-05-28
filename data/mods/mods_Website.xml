@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:title>Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)</mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i789685q571ko_-_2441__9labe9r4se65i789685q571ko_-_2441__9labe9r4se65i789685q021gm_-_53r60a8s3kup1vc9jcu4m0gag" type="personal">
+    <mods:namePart type="given">Marie-Françoise</mods:namePart>
+    <mods:namePart type="family">Durand</mods:namePart>
+    <mods:affiliation>Sciences Po</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i789685q54lsl_-_2441__9labe9r4se65i789685q54lsl_-_2441__9labe9r4se65i789685q380gh_-_53r60a8s3kup1vc9je4j830oo" type="personal">
+    <mods:namePart type="given">Christian</mods:namePart>
+    <mods:namePart type="family">Lequesne</mods:namePart>
+    <mods:affiliation>Centre d'études et de recherches internationales</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre authority="marcgt">web site</mods:genre>
+  <mods:originInfo>
+    <mods:publisher>Sciences Po - CERI</mods:publisher>
+    <mods:publisher>Sciences Po - Atelier de cartographie</mods:publisher>
+    <mods:dateIssued encoding="iso8601">2012</mods:dateIssued>
+    <mods:dateCreated encoding="iso8601">2012</mods:dateCreated>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">fre</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">fr</mods:languageTerm>
+  </mods:language>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+  </mods:language>
+  <mods:abstract lang="fr">Le thème de cette deuxième édition du Ceriscope (2012) porte sur la pauvreté, sujet majeur de la période contemporaine, rarement abordé à la fois de façon pluridisciplinaire, à l’échelle des sociétés du monde et sous un angle comparatif. Les contributions croisent les approches de chercheurs appartenant à plusieurs disciplines des sciences sociales : l’anthropologie, l’économie, l’histoire, la géographie, la science politique et la sociologie. Chacune s’attache à donner du sujet qu’il traite une lecture simple et qualifiée, faite à la fois de clés d’interprétation et d’éléments factuels précis.</mods:abstract>
+  <mods:tableOfContents lang="fr">[Introduction] : Changer d'échelle et de regard sur la pauvreté / Marie-Françoise Durand et Christian Lequesne ; [Partie 1, Concepts et mesures de la pauvreté] Quelles « mesures » pour quantifier la pauvreté ? / Benoît Martin ; Les enjeux de la sociologie de la pauvreté / Jeanne Lazarus ; La lutte contre la pauvreté, un enjeu international / Isabelle Hillenkamp et Jean-Michel Servet ; Inégalités, pauvreté, globalisation : faits et débats / Pierre-Noël Giraud ; Vers les objectifs mondiaux pour la globalisation / Jean-Michel Severino ; [Partie 2, La pauvreté territorialisée] La pauvreté dans les villes chinoises : le cas des migrants / Alice Ekman ; Le Nordeste dans la configuration sociale du Brésil contemporain / Camille Goirand ; Pauvreté et clientélisme électoral en Colombie / Juan Carlos Guerrero Bernal et Yann Basset ; En France, les pauvres s'en vont aussi à la campagne / Marianne Berthod-Wurmser ; Migrations et pauvreté : essai sur la situation malienne / Patrick Gonin et Nathalie Kotlok ; La pauvreté en Afrique : cartes-clés / Atelier de cartographie de Sciences Po ; [Partie 3, La pauvreté, enjeu des mobilisations sociales et politiques] Injustices sociales et contestations politiques au Maghreb / Luis Martinez ; La pauvreté en Inde - une bombe à retardement ? / Christophe Jaffrelot  ; Les Sans Terre du Brésil, l'activisme transnational et la souveraineté alimentaire comme alternative à la faim / Breno Bringel ; La faiblesse des mouvements de revendication contre la pauvreté en Afrique sub-saharienne / Mahaman Tidjani  ; [Partie 4, Les politiques de lutte contre la pauvreté] La pauvreté dans l'agenda de l'ONU / Jean-Jacques Gabas et Camille Laporte ; Les politiques de cohésion économique et sociale au sein de l'Union européenne / Rachel Guyet ; Pauvreté et politique sociale sous la présidence Obama : vers une tentative d'évaluation / Taoufik Djebali ; Éducation, pauvreté, inégalités : quelles relations économiques ? / Jérôme Sgard et Florence Arestoff ; Bolsa Família : une nouvelle génération de programmes sociaux au Brésil / Valeria Pero ; Questions and Answers on microcredit / R. Ramakumar ; Coopération Sud-Sud et lutte contre la pauvreté : le cas du forum IBAS / Folashadé A. Soulé-Kohndou ; Les ONG et la lutte contre la pauvreté: de la marginalité à l'exemplarité / Simon Tordjman ; [Partie 5, Post-industrialisation, mondialisation et nouvelles formes de pauvreté] Les formes contemporaines dans la disqualification sociale / Serge Paugam ; La pauvreté post-industrielle au Royaume-Uni / Corinne Nativel ; La pauvreté et l'inégalité en Russie / Lidia Prokovieva ; Pauvreté et droits humains / Christophe Gironde et Christophe Golay</mods:tableOfContents>
+  <mods:location>
+    <mods:url>http://ceriscope.sciences-po.fr/pauvrete</mods:url>
+  </mods:location>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__9labe9r4se65i789685q571ko_-_2441__9labe9r4se65i789685q571ko_-_2441__9labe9r4se65i789685q021gm_-_eu4vqp9ompqllr09ij4jlca4n" authority="http://spire.sciences-po.fr/hdl:">2441/9labe9r4se65i789685q571ko</dai:identifier>
+      <dai:identifier IDref="_-_spire_-_2441__9labe9r4se65i789685q54lsl_-_2441__9labe9r4se65i789685q54lsl_-_2441__9labe9r4se65i789685q380gh_-_eu4vqp9ompqllr09ij4jle8pg" authority="http://spire.sciences-po.fr/hdl:">2441/9labe9r4se65i789685q54lsl</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

@@ -3,7 +3,7 @@
 # coding=utf-8
 
 import os
-from referencemanager.cloud import google_scholar
+from biblib.cloud import google_scholar
 
 
 def test():

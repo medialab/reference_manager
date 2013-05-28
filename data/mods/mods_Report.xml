@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:title>Greengram - Green Growth in South East Asian Metropolis</mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i7896860ig2b0_-_2441__9labe9r4se65i7896860ig2b0_-__-_5rkqqmvrn4tl22s9mc0sld418" type="personal">
+    <mods:namePart type="given">Alvaro</mods:namePart>
+    <mods:namePart type="family">Artigas</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__5rkqqmvrn4tl22s9mc0slh0gj_-__-__-_5rkqqmvrn4tl22s9mc0sob64o" type="personal">
+    <mods:namePart type="family">Matsumoto</mods:namePart>
+    <mods:namePart type="given">Tadashi</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__5k7940uimfdf9c8990p8ph108_-_2441__5k7940uimfdf9c8990p8ph108_-_2441__9labe9r4se65i789685q384oh_-_5rkqqmvrn4tl22s9mc0slil24" type="personal">
+    <mods:namePart type="given">Tommaso</mods:namePart>
+    <mods:namePart type="family">Vitale</mods:namePart>
+    <mods:affiliation>Centre d'études européennes de Sciences Po</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/report</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/Report</mods:genre>
+  <mods:genre authority="marcgt">report</mods:genre>
+  <mods:originInfo>
+    <mods:place>
+      <mods:placeTerm type="text">Paris</mods:placeTerm>
+    </mods:place>
+    <mods:publisher>CEE (Sciences Po)</mods:publisher>
+    <mods:dateIssued encoding="iso8601">2013-04</mods:dateIssued>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+  </mods:language>
+  <mods:physicalDescription>
+    <mods:extent>29</mods:extent>
+  </mods:physicalDescription>
+  <mods:abstract lang="en">The increasing environmental concerns at the world scale have pointed out to the unsustainability of present development and growth models as well as its unforeseen consequences such as the chaotic sprawl in space, the fragmentation of territorial units, or the issue of human security. Nowhere else than in the emergent world cities’ does the imperative of reconciling national development, metropolitan expansion and sustainable production models appear more vividly. Here impressive population increases will be absorbed by cities that are and will undisputedly remain the main driver for economic growth. Addressing the issue of sustainable metropolitan development in its most visible form (emissions, access to important utilities like water or electricity, or urban sprawl) is a vital necessity for a substantial share of cities in the South. Yet several hurdles impair the achievement of a holistic model of green growth. 
+
+The capacity of public, corporate and social actors to come about consensual development models designs that address these urgent demands pose the problem in terms of expertise buildup and leadership –the steering of development- as well as in financial terms –how to arbitrate between mitigation costs and competitiveness. Metropolitan development therefore has to include indicators of sustainability dependent on a consistent –and readable –model of green growth. Also, specific decision-making formats that remain vertical for the most part reveal entrenched interests between the State and powerful non-State actors that more often than not become crucial veto players when it comes to a revision of preexistent operational models. The integration of Asian metropolis to regional value-chains and their impact on national development plans (in the form of Special Economic Zones, high-added value technological corridors) reveal the weight of transnational capital as a decisive factor for change. As a direct consequence, transformations become erratic and the temporality of reform appears to lag behind ever growing necessities. 
+
+Our project aims at studying systems of action that contribute to the emergence of green strategies in rapidly developing metropolis in Southeast Asia, namely Bangkok (Thailand), Kuala Lumpur (Malaysia), Jakarta (Indonesia) and Manila (Philippines). These cities are confronted to the simultaneous necessity to (i) adapt manufacturing infrastructural development to sustainability principles (transports, energy accessibility), (ii) improve social standards through spatial redistribution (segregation, more efficient layout of manufacturing and residential areas) and (iii) ensure the economic competitiveness at both the national and international level (first-class services, state of the art regulatory frameworks for investors, and reinforcement of strategic economic sectors). Our research also wishes to explore the leverage capacity of these cities to promote green growth models autonomous enough as to reflect the operational concerns of metropolitan entities as well as to take into account national developmental constraints and orientations. Furthermore, and irrespective of this double constraint of green growth strategies, our research wishes to explore to what extent existing programs are able to interrelate these metropolitan concerns and solutions to neighboring territories –within or outside metropolitan regions- and other cities at a national and regional scale.
+
+The selected approach to the subject combines a technical economic study (economic growth, financial flows, manufacturing transformations and innovations) and a socio-political study of systems of action and actor’s interactions. The proposed methodology combines several in-depth case studies and a systematization ambition that would lead to the development of a model of sustainable metropolitan development in emerging countries. 
+
+The project stands out in its ambition to combine the study of both productive models transformations and their socio-political dimensions, two elements that are usually addressed from a separate perspective. The adjustment of urban and environmental policies to these major challenges presupposes a precise understanding of interdependencies between developmental, urban and financial choices and the transformation of metropolis growth models. </mods:abstract>
+  <mods:subject lang="fr">
+    <mods:topic>Metropolis</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>SouthEast Asia</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Urban Sociology</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Urban Policy</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Green Growth</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Brownfield</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Compact city</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Comparative Studies</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Urban Political Economy</mods:topic>
+  </mods:subject>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__9labe9r4se65i7896860ig2b0_-_2441__9labe9r4se65i7896860ig2b0_-__-_5rkqqmvrn4tl22s9mc0sld418" authority="http://spire.sciences-po.fr/hdl:">2441/9labe9r4se65i7896860ig2b0</dai:identifier>
+      <dai:identifier IDref="_-_spire_-_2441__5k7940uimfdf9c8990p8ph108_-_2441__5k7940uimfdf9c8990p8ph108_-_2441__9labe9r4se65i789685q384oh_-_5rkqqmvrn4tl22s9mc0slil24" authority="http://spire.sciences-po.fr/hdl:">2441/5k7940uimfdf9c8990p8ph108</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

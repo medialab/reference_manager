@@ -1,0 +1,35 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "type_id": "normal*"
+        }, 
+        {
+            "type_id": "normal, image flipped"
+        }, 
+        {
+            "type_id": "normal, rotated 180°"
+        }, 
+        {
+            "type_id": "normal, image flipped, rotated 180°"
+        }, 
+        {
+            "type_id": "normal, image flipped, rotated cw 90°"
+        }, 
+        {
+            "type_id": "normal, rotated ccw 90°"
+        }, 
+        {
+            "type_id": "normal, image flipped, rotated ccw 90°"
+        }, 
+        {
+            "type_id": "normal, rotated cw 90°"
+        }, 
+        {
+            "type_id": "unknown"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "image_orientation"
+}

@@ -1,0 +1,1233 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "Actor", 
+                "fr": "Acteur"
+            }, 
+            "type_id": "act"
+        }, 
+        {
+            "labels": {
+                "en": "Adapter", 
+                "fr": "Adaptateur"
+            }, 
+            "type_id": "adp"
+        }, 
+        {
+            "labels": {
+                "en": "Author of afterword, colophon, etc.", 
+                "fr": "Postface"
+            }, 
+            "type_id": "aft"
+        }, 
+        {
+            "labels": {
+                "en": "Annotator", 
+                "fr": "Annotateur"
+            }, 
+            "type_id": "ann"
+        }, 
+        {
+            "labels": {
+                "en": "Bibliographic antecedent", 
+                "fr": "Auteur adapté / Précédent"
+            }, 
+            "type_id": "ant"
+        }, 
+        {
+            "labels": {
+                "en": "Applicant", 
+                "fr": "Demandeur candidat postulant (doctorant ?)"
+            }, 
+            "type_id": "app"
+        }, 
+        {
+            "labels": {
+                "en": "Author in quotations or text extracts", 
+                "fr": "Auteur de citation ou d'extrait de texte"
+            }, 
+            "type_id": "aqt"
+        }, 
+        {
+            "labels": {
+                "en": "Architect", 
+                "fr": "Architecte"
+            }, 
+            "type_id": "arc"
+        }, 
+        {
+            "labels": {
+                "en": "Arranger", 
+                "fr": "Arrangeur"
+            }, 
+            "type_id": "arr"
+        }, 
+        {
+            "labels": {
+                "en": "Artist", 
+                "fr": "Artiste"
+            }, 
+            "type_id": "art"
+        }, 
+        {
+            "labels": {
+                "en": "Assignee", 
+                "fr": "Nouveau détenteur du privilège"
+            }, 
+            "type_id": "asg"
+        }, 
+        {
+            "labels": {
+                "en": "Associated name", 
+                "fr": "Nom associé"
+            }, 
+            "type_id": "asn"
+        }, 
+        {
+            "labels": {
+                "en": "Attributed name", 
+                "fr": "Nom attribué (auteur supposé ?)"
+            }, 
+            "type_id": "att"
+        }, 
+        {
+            "labels": {
+                "en": "Auctioneer", 
+                "fr": "Commissaire-priseur"
+            }, 
+            "type_id": "auc"
+        }, 
+        {
+            "labels": {
+                "en": "Author of dialog", 
+                "fr": "Dialoguiste"
+            }, 
+            "type_id": "aud"
+        }, 
+        {
+            "labels": {
+                "en": "Author of introduction, etc.", 
+                "fr": "Préface"
+            }, 
+            "type_id": "aui"
+        }, 
+        {
+            "labels": {
+                "en": "Author of screenplay, etc.", 
+                "fr": "Auteur de scénario, etc."
+            }, 
+            "type_id": "aus"
+        }, 
+        {
+            "labels": {
+                "en": "Author", 
+                "fr": "Auteur"
+            }, 
+            "type_id": "aut"
+        }, 
+        {
+            "labels": {
+                "en": "Binding designer", 
+                "fr": "Dessinateur de la reliure"
+            }, 
+            "type_id": "bdd"
+        }, 
+        {
+            "labels": {
+                "en": "Bookjacket designer", 
+                "fr": "Dessinateur de la jaquette"
+            }, 
+            "type_id": "bjd"
+        }, 
+        {
+            "labels": {
+                "en": "Book designer", 
+                "fr": "Maquettiste de livres"
+            }, 
+            "type_id": "bkd"
+        }, 
+        {
+            "labels": {
+                "en": "Book producer", 
+                "fr": "Editeur"
+            }, 
+            "type_id": "bkp"
+        }, 
+        {
+            "labels": {
+                "en": "Binder", 
+                "fr": "Relieur"
+            }, 
+            "type_id": "bnd"
+        }, 
+        {
+            "labels": {
+                "en": "Bookplate designer", 
+                "fr": "Dessinateur d'ex-libris"
+            }, 
+            "type_id": "bpd"
+        }, 
+        {
+            "labels": {
+                "en": "Bookseller", 
+                "fr": "Libraire"
+            }, 
+            "type_id": "bsl"
+        }, 
+        {
+            "labels": {
+                "en": "Conceptor", 
+                "fr": "Concepteur auteur de l'idée originale"
+            }, 
+            "type_id": "ccp"
+        }, 
+        {
+            "labels": {
+                "en": "Choreographer", 
+                "fr": "Chorégraphe"
+            }, 
+            "type_id": "chr"
+        }, 
+        {
+            "labels": {
+                "en": "Collaborator", 
+                "fr": "Collaborateur"
+            }, 
+            "type_id": "clb"
+        }, 
+        {
+            "labels": {
+                "en": "Client", 
+                "fr": "Client"
+            }, 
+            "type_id": "cli"
+        }, 
+        {
+            "labels": {
+                "en": "Calligrapher", 
+                "fr": "Calligraphe"
+            }, 
+            "type_id": "cll"
+        }, 
+        {
+            "labels": {
+                "en": "Collotyper", 
+                "fr": "Phototypeur"
+            }, 
+            "type_id": "clt"
+        }, 
+        {
+            "labels": {
+                "en": "Commentator", 
+                "fr": "Commentateur"
+            }, 
+            "type_id": "cmm"
+        }, 
+        {
+            "labels": {
+                "en": "Composer", 
+                "fr": "Compositeur"
+            }, 
+            "type_id": "cmp"
+        }, 
+        {
+            "labels": {
+                "en": "Compositor", 
+                "fr": "Typographe"
+            }, 
+            "type_id": "cmt"
+        }, 
+        {
+            "labels": {
+                "en": "Conductor", 
+                "fr": "Chef d'orchestre"
+            }, 
+            "type_id": "cnd"
+        }, 
+        {
+            "labels": {
+                "en": "Censor", 
+                "fr": "Censeur"
+            }, 
+            "type_id": "cns"
+        }, 
+        {
+            "labels": {
+                "en": "Contestant-appellee", 
+                "fr": "Partie Civile devant une juridiction d'appel"
+            }, 
+            "type_id": "coe"
+        }, 
+        {
+            "labels": {
+                "en": "Collector", 
+                "fr": "Collectionneur (contrôleur ?)"
+            }, 
+            "type_id": "col"
+        }, 
+        {
+            "labels": {
+                "en": "Compiler", 
+                "fr": "Compilateur"
+            }, 
+            "type_id": "com"
+        }, 
+        {
+            "labels": {
+                "en": "Contestant", 
+                "fr": "Partie civile contestante"
+            }, 
+            "type_id": "cos"
+        }, 
+        {
+            "labels": {
+                "en": "Contestant-appellant", 
+                "fr": "Partie civile contestante en appel"
+            }, 
+            "type_id": "cot"
+        }, 
+        {
+            "labels": {
+                "en": "Copyright claimant", 
+                "fr": "Requérant en droits d'auteur"
+            }, 
+            "type_id": "cpc"
+        }, 
+        {
+            "labels": {
+                "en": "Complainant-appellee", 
+                "fr": "Partie Plaignant devant une juridiction d'appel"
+            }, 
+            "type_id": "cpe"
+        }, 
+        {
+            "labels": {
+                "en": "Copyright holder", 
+                "fr": "Détenteur de droits d'auteur"
+            }, 
+            "type_id": "cph"
+        }, 
+        {
+            "labels": {
+                "en": "Complainant", 
+                "fr": "Partie plaignante"
+            }, 
+            "type_id": "cpl"
+        }, 
+        {
+            "labels": {
+                "en": "Complainant-appellant", 
+                "fr": "Partie plaignante allant en appel"
+            }, 
+            "type_id": "cpt"
+        }, 
+        {
+            "labels": {
+                "en": "Creator", 
+                "fr": "Créateur"
+            }, 
+            "type_id": "cre"
+        }, 
+        {
+            "labels": {
+                "en": "Correspondent", 
+                "fr": "Correspondant (reporter ? destinataire d'un courrier ?)"
+            }, 
+            "type_id": "crp"
+        }, 
+        {
+            "labels": {
+                "en": "Corrector", 
+                "fr": "Correcteur imprimés"
+            }, 
+            "type_id": "crr"
+        }, 
+        {
+            "labels": {
+                "en": "Consultant", 
+                "fr": "Consultant"
+            }, 
+            "type_id": "csl"
+        }, 
+        {
+            "labels": {
+                "en": "Consultant to a project", 
+                "fr": "Consultant"
+            }, 
+            "type_id": "csp"
+        }, 
+        {
+            "labels": {
+                "en": "Costume designer", 
+                "fr": "Costumier scénographe éclairagiste décorateur"
+            }, 
+            "type_id": "cst"
+        }, 
+        {
+            "labels": {
+                "en": "Contributor", 
+                "fr": "Collaborateur"
+            }, 
+            "type_id": "ctb"
+        }, 
+        {
+            "labels": {
+                "en": "Contestee-appellee", 
+                "fr": "Partie civile contestée en appel"
+            }, 
+            "type_id": "cte"
+        }, 
+        {
+            "labels": {
+                "en": "Cartographer", 
+                "fr": "Cartographe"
+            }, 
+            "type_id": "ctg"
+        }, 
+        {
+            "labels": {
+                "en": "Contractor", 
+                "fr": "Partie contractante"
+            }, 
+            "type_id": "ctr"
+        }, 
+        {
+            "labels": {
+                "en": "Contestee", 
+                "fr": "Partie civile contestée"
+            }, 
+            "type_id": "cts"
+        }, 
+        {
+            "labels": {
+                "en": "Contestee-appellant", 
+                "fr": "Partie civile contestée en appel"
+            }, 
+            "type_id": "ctt"
+        }, 
+        {
+            "labels": {
+                "en": "Curator of an exhibition", 
+                "fr": "Commissaire d'une exposition"
+            }, 
+            "type_id": "cur"
+        }, 
+        {
+            "labels": {
+                "en": "Commentator for written text", 
+                "fr": "Commentateur d'un texte"
+            }, 
+            "type_id": "cwt"
+        }, 
+        {
+            "labels": {
+                "en": "Defendant", 
+                "fr": "Accusé"
+            }, 
+            "type_id": "dfd"
+        }, 
+        {
+            "labels": {
+                "en": "Defendant-appellee", 
+                "fr": "Accusé allant en appel"
+            }, 
+            "type_id": "dfe"
+        }, 
+        {
+            "labels": {
+                "en": "Defendant-appellant", 
+                "fr": "Accusé en appel"
+            }, 
+            "type_id": "dft"
+        }, 
+        {
+            "labels": {
+                "en": "Degree grantor", 
+                "fr": "Institution délivrant des diplômes"
+            }, 
+            "type_id": "dgg"
+        }, 
+        {
+            "labels": {
+                "en": "Dissertant", 
+                "fr": "Doctorant"
+            }, 
+            "type_id": "dis"
+        }, 
+        {
+            "labels": {
+                "en": "Delineator", 
+                "fr": "Exécuteur de sketchs ? (humoriste 207) (illustrateur 440)"
+            }, 
+            "type_id": "dln"
+        }, 
+        {
+            "labels": {
+                "en": "Dancer", 
+                "fr": "Danseur"
+            }, 
+            "type_id": "dnc"
+        }, 
+        {
+            "labels": {
+                "en": "Donor", 
+                "fr": "Donateur"
+            }, 
+            "type_id": "dnr"
+        }, 
+        {
+            "labels": {
+                "en": "Depositor", 
+                "fr": "Déposant"
+            }, 
+            "type_id": "dpt"
+        }, 
+        {
+            "labels": {
+                "en": "Draftsman", 
+                "fr": "Dessinateur"
+            }, 
+            "type_id": "drm"
+        }, 
+        {
+            "labels": {
+                "en": "Director", 
+                "fr": "Directeur ou metteur en scène"
+            }, 
+            "type_id": "drt"
+        }, 
+        {
+            "labels": {
+                "en": "Designer", 
+                "fr": "Styliste ou maquettiste"
+            }, 
+            "type_id": "dsr"
+        }, 
+        {
+            "labels": {
+                "en": "Distributor", 
+                "fr": "Distributeur"
+            }, 
+            "type_id": "dst"
+        }, 
+        {
+            "labels": {
+                "en": "Dedicatee", 
+                "fr": "Récipiendaire d'une dédicace"
+            }, 
+            "type_id": "dte"
+        }, 
+        {
+            "labels": {
+                "en": "Dedicator", 
+                "fr": "Auteur d'une dédicace"
+            }, 
+            "type_id": "dto"
+        }, 
+        {
+            "labels": {
+                "en": "Dubious author", 
+                "fr": "Auteur incertain/supposé"
+            }, 
+            "type_id": "dub"
+        }, 
+        {
+            "labels": {
+                "en": "Editor", 
+                "fr": "Éditeur scientifique"
+            }, 
+            "type_id": "edt"
+        }, 
+        {
+            "labels": {
+                "en": "Engraver", 
+                "fr": "Graveur"
+            }, 
+            "type_id": "egr"
+        }, 
+        {
+            "labels": {
+                "en": "Electrotyper", 
+                "fr": "Électrotypographe"
+            }, 
+            "type_id": "elt"
+        }, 
+        {
+            "labels": {
+                "en": "Engineer", 
+                "fr": "Ingénieur"
+            }, 
+            "type_id": "eng"
+        }, 
+        {
+            "labels": {
+                "en": "Etcher", 
+                "fr": "Graveur d'eaux-fortes/Aquafortiste"
+            }, 
+            "type_id": "etr"
+        }, 
+        {
+            "labels": {
+                "en": "Expert", 
+                "fr": "Expert"
+            }, 
+            "type_id": "exp"
+        }, 
+        {
+            "labels": {
+                "en": "Facsimilist", 
+                "fr": "Éditeur de copie fac-similaires"
+            }, 
+            "type_id": "fac"
+        }, 
+        {
+            "labels": {
+                "en": "Film editor", 
+                "fr": "Monteur de films"
+            }, 
+            "type_id": "flm"
+        }, 
+        {
+            "labels": {
+                "en": "Former owner", 
+                "fr": "Précédent propriétaire"
+            }, 
+            "type_id": "fmo"
+        }, 
+        {
+            "labels": {
+                "en": "Funder", 
+                "fr": "Mécène"
+            }, 
+            "type_id": "fnd"
+        }, 
+        {
+            "labels": {
+                "en": "Forger", 
+                "fr": "Faussaire"
+            }, 
+            "type_id": "frg"
+        }, 
+        {
+            "labels": {
+                "en": "Graphic technician", 
+                "fr": "Technicien graphique coloriste"
+            }, 
+            "type_id": "grt"
+        }, 
+        {
+            "labels": {
+                "en": "Honoree", 
+                "fr": "Personne honorée"
+            }, 
+            "type_id": "hnr"
+        }, 
+        {
+            "labels": {
+                "en": "Host", 
+                "fr": "Hôte (serveur ?)"
+            }, 
+            "type_id": "hst"
+        }, 
+        {
+            "labels": {
+                "en": "Illustrator", 
+                "fr": "Illustrateur"
+            }, 
+            "type_id": "ill"
+        }, 
+        {
+            "labels": {
+                "en": "Illuminator", 
+                "fr": "Enlumineur"
+            }, 
+            "type_id": "ilu"
+        }, 
+        {
+            "labels": {
+                "en": "Illuminator", 
+                "fr": "Eclairagiste"
+            }, 
+            "type_id": "ilu"
+        }, 
+        {
+            "labels": {
+                "en": "Inscriber", 
+                "fr": "Graveur"
+            }, 
+            "type_id": "ins"
+        }, 
+        {
+            "labels": {
+                "en": "Inventor", 
+                "fr": "Inventeur"
+            }, 
+            "type_id": "inv"
+        }, 
+        {
+            "labels": {
+                "en": "Instrumentalist", 
+                "fr": "Instrumentiste"
+            }, 
+            "type_id": "itr"
+        }, 
+        {
+            "labels": {
+                "en": "Interviewee", 
+                "fr": "Personne interviewée"
+            }, 
+            "type_id": "ive"
+        }, 
+        {
+            "labels": {
+                "en": "Interviewer", 
+                "fr": "Intervieweur"
+            }, 
+            "type_id": "ivr"
+        }, 
+        {
+            "labels": {
+                "en": "Librettist", 
+                "fr": "Librettiste"
+            }, 
+            "type_id": "lbt"
+        }, 
+        {
+            "labels": {
+                "en": "Libelee-appellee", 
+                "fr": "Plaignant en appel dans un procès en diffamation"
+            }, 
+            "type_id": "lee"
+        }, 
+        {
+            "labels": {
+                "en": "Libelee", 
+                "fr": "Personne victime de diffamation"
+            }, 
+            "type_id": "lel"
+        }, 
+        {
+            "labels": {
+                "en": "Lender", 
+                "fr": "Prêteur"
+            }, 
+            "type_id": "len"
+        }, 
+        {
+            "labels": {
+                "en": "Libelee-appellant", 
+                "fr": "Plaignant en appel victime de diffamation"
+            }, 
+            "type_id": "let"
+        }, 
+        {
+            "labels": {
+                "en": "Libelant-appellee", 
+                "fr": "Auteur de diffamation en appel"
+            }, 
+            "type_id": "lie"
+        }, 
+        {
+            "labels": {
+                "en": "Libelant", 
+                "fr": "Plaignant accusé de diffamation"
+            }, 
+            "type_id": "lil"
+        }, 
+        {
+            "labels": {
+                "en": "Libelant-appellant", 
+                "fr": "Plaignant accusé de diffamation en appel"
+            }, 
+            "type_id": "lit"
+        }, 
+        {
+            "labels": {
+                "en": "Landscape architec", 
+                "fr": "Architecte paysagiste"
+            }, 
+            "type_id": "lsa"
+        }, 
+        {
+            "labels": {
+                "en": "Licensee", 
+                "fr": "Concessionnaire d'une licence"
+            }, 
+            "type_id": "lse"
+        }, 
+        {
+            "labels": {
+                "en": "Licensor", 
+                "fr": "Celui qui accorde une licence"
+            }, 
+            "type_id": "lso"
+        }, 
+        {
+            "labels": {
+                "en": "Lithographer", 
+                "fr": "Lithographe"
+            }, 
+            "type_id": "ltg"
+        }, 
+        {
+            "labels": {
+                "en": "Lyricist", 
+                "fr": "Parolier"
+            }, 
+            "type_id": "lyr"
+        }, 
+        {
+            "labels": {
+                "en": "Metadata contact", 
+                "fr": "Contact pour les métadonnées"
+            }, 
+            "type_id": "mdc"
+        }, 
+        {
+            "labels": {
+                "en": "Moderator", 
+                "fr": "Modérateur"
+            }, 
+            "type_id": "mod"
+        }, 
+        {
+            "labels": {
+                "en": "Monitor", 
+                "fr": "Contrôleur"
+            }, 
+            "type_id": "mon"
+        }, 
+        {
+            "labels": {
+                "en": "Metal-engraver", 
+                "fr": "Graveur sur métal"
+            }, 
+            "type_id": "mte"
+        }, 
+        {
+            "labels": {
+                "en": "Musician", 
+                "fr": "Musicien"
+            }, 
+            "type_id": "mus"
+        }, 
+        {
+            "labels": {
+                "en": "Narrator", 
+                "fr": "Narrateur"
+            }, 
+            "type_id": "nrt"
+        }, 
+        {
+            "labels": {
+                "en": "Opponent", 
+                "fr": "Adversaire"
+            }, 
+            "type_id": "opn"
+        }, 
+        {
+            "labels": {
+                "en": "Originator", 
+                "fr": "Créateur"
+            }, 
+            "type_id": "org"
+        }, 
+        {
+            "labels": {
+                "en": "Organizer of meeting", 
+                "fr": "Organisateur d'une réunion"
+            }, 
+            "type_id": "orm"
+        }, 
+        {
+            "labels": {
+                "en": "Other", 
+                "fr": "Autre"
+            }, 
+            "type_id": "oth"
+        }, 
+        {
+            "labels": {
+                "en": "Owner", 
+                "fr": "Possesseur, propriétaire précédent"
+            }, 
+            "type_id": "own"
+        }, 
+        {
+            "labels": {
+                "en": "Patron", 
+                "fr": "Patron ou client ?"
+            }, 
+            "type_id": "pat"
+        }, 
+        {
+            "labels": {
+                "en": "Publishing director", 
+                "fr": "Directeur de publication ou de collection"
+            }, 
+            "type_id": "pbd"
+        }, 
+        {
+            "labels": {
+                "en": "Publisher", 
+                "fr": "Éditeur commercial"
+            }, 
+            "type_id": "pbl"
+        }, 
+        {
+            "labels": {
+                "en": "Proofreader", 
+                "fr": "Correcteur d'épreuves"
+            }, 
+            "type_id": "pfr"
+        }, 
+        {
+            "labels": {
+                "en": "Photographer", 
+                "fr": "Photographe"
+            }, 
+            "type_id": "pht"
+        }, 
+        {
+            "labels": {
+                "en": "Platemaker", 
+                "fr": "Clicheur (maquettiste ?)"
+            }, 
+            "type_id": "plt"
+        }, 
+        {
+            "labels": {
+                "en": "Printer of plates", 
+                "fr": "Imprimeur de gravures"
+            }, 
+            "type_id": "pop"
+        }, 
+        {
+            "labels": {
+                "en": "Papermaker", 
+                "fr": "Fabriquant de papier"
+            }, 
+            "type_id": "ppm"
+        }, 
+        {
+            "labels": {
+                "en": "Process contact", 
+                "fr": "Fabrication d'épreuves par contact ??"
+            }, 
+            "type_id": "prc"
+        }, 
+        {
+            "labels": {
+                "en": "Production personnel", 
+                "fr": "Équipe de production (collaborateur ?)"
+            }, 
+            "type_id": "prd"
+        }, 
+        {
+            "labels": {
+                "en": "Performer", 
+                "fr": "Exécutant"
+            }, 
+            "type_id": "prf"
+        }, 
+        {
+            "labels": {
+                "en": "Programmer", 
+                "fr": "Programmeur"
+            }, 
+            "type_id": "prg"
+        }, 
+        {
+            "labels": {
+                "en": "Producer", 
+                "fr": "Directeur de production "
+            }, 
+            "type_id": "pro"
+        }, 
+        {
+            "labels": {
+                "en": "Printer", 
+                "fr": "Imprimeur"
+            }, 
+            "type_id": "prt"
+        }, 
+        {
+            "labels": {
+                "en": "Patent applicant", 
+                "fr": "Demandeur de brevet"
+            }, 
+            "type_id": "pta"
+        }, 
+        {
+            "labels": {
+                "en": "Plaintiff-appellee", 
+                "fr": "Plaignant en appel"
+            }, 
+            "type_id": "pte"
+        }, 
+        {
+            "labels": {
+                "en": "Plaintiff", 
+                "fr": "Plaignant"
+            }, 
+            "type_id": "ptf"
+        }, 
+        {
+            "labels": {
+                "en": "Patent holder", 
+                "fr": "Détenteur d'un brevet"
+            }, 
+            "type_id": "pth"
+        }, 
+        {
+            "labels": {
+                "en": "Plaintiff-appellant", 
+                "fr": "Partie Plaignante en appel"
+            }, 
+            "type_id": "ptt"
+        }, 
+        {
+            "labels": {
+                "en": "Rubricator", 
+                "fr": "Rubricateur"
+            }, 
+            "type_id": "rbr"
+        }, 
+        {
+            "labels": {
+                "en": "Recording engineer", 
+                "fr": "Ingénieur du son"
+            }, 
+            "type_id": "rce"
+        }, 
+        {
+            "labels": {
+                "en": "Recipient", 
+                "fr": "Destinataire"
+            }, 
+            "type_id": "rcp"
+        }, 
+        {
+            "labels": {
+                "en": "Redactor", 
+                "fr": "Rédacteur"
+            }, 
+            "type_id": "red"
+        }, 
+        {
+            "labels": {
+                "en": "Renderer", 
+                "fr": "Celui qui met en valeur une personne, un texte etc."
+            }, 
+            "type_id": "ren"
+        }, 
+        {
+            "labels": {
+                "en": "Researcher", 
+                "fr": "Chercheur"
+            }, 
+            "type_id": "res"
+        }, 
+        {
+            "labels": {
+                "en": "Reviewer", 
+                "fr": "Critique / Membre du comité de lecture"
+            }, 
+            "type_id": "rev"
+        }, 
+        {
+            "labels": {
+                "en": "Respondent-appellee", 
+                "fr": "Partie civile en appel"
+            }, 
+            "type_id": "rse"
+        }, 
+        {
+            "labels": {
+                "en": "Respondent", 
+                "fr": "Partie civile"
+            }, 
+            "type_id": "rsp"
+        }, 
+        {
+            "labels": {
+                "en": "Respondent-appellant", 
+                "fr": "Partie civile allant en appel"
+            }, 
+            "type_id": "rst"
+        }, 
+        {
+            "labels": {
+                "en": "Research team head", 
+                "fr": "Directeur d'équipe de recherche"
+            }, 
+            "type_id": "rth"
+        }, 
+        {
+            "labels": {
+                "en": "Research team member", 
+                "fr": "Membre d'équipe de recherche"
+            }, 
+            "type_id": "rtm"
+        }, 
+        {
+            "labels": {
+                "en": "Scientific advisor", 
+                "fr": "Conseiller scientifique"
+            }, 
+            "type_id": "sad"
+        }, 
+        {
+            "labels": {
+                "en": "Scenarist", 
+                "fr": "Scénariste"
+            }, 
+            "type_id": "sce"
+        }, 
+        {
+            "labels": {
+                "en": "Sculptor", 
+                "fr": "Sculpteur"
+            }, 
+            "type_id": "scl"
+        }, 
+        {
+            "labels": {
+                "en": "Scribe", 
+                "fr": "Scribe"
+            }, 
+            "type_id": "scr"
+        }, 
+        {
+            "labels": {
+                "en": "Secretary", 
+                "fr": "Attaché de presse, secrétaire, rapporteur"
+            }, 
+            "type_id": "sec"
+        }, 
+        {
+            "labels": {
+                "en": "Signer", 
+                "fr": "Signataire"
+            }, 
+            "type_id": "sgn"
+        }, 
+        {
+            "labels": {
+                "en": "Singer", 
+                "fr": "Chanteur"
+            }, 
+            "type_id": "sng"
+        }, 
+        {
+            "labels": {
+                "en": "Speaker", 
+                "fr": "Conférencier"
+            }, 
+            "type_id": "spk"
+        }, 
+        {
+            "labels": {
+                "en": "Sponsor", 
+                "fr": "Commanditaire"
+            }, 
+            "type_id": "spn"
+        }, 
+        {
+            "labels": {
+                "en": "Surveyor", 
+                "fr": "Contrôleur ?"
+            }, 
+            "type_id": "srv"
+        }, 
+        {
+            "labels": {
+                "en": "Standards body", 
+                "fr": "Agence de normalisation"
+            }, 
+            "type_id": "stn"
+        }, 
+        {
+            "labels": {
+                "en": "Stereotyper", 
+                "fr": "Stéréotypeur"
+            }, 
+            "type_id": "str"
+        }, 
+        {
+            "labels": {
+                "en": "Thesis advisor", 
+                "fr": "Directeur de thèse ou de mémoire"
+            }, 
+            "type_id": "ths"
+        }, 
+        {
+            "labels": {
+                "en": "Transcriber", 
+                "fr": "Transcripteur"
+            }, 
+            "type_id": "trc"
+        }, 
+        {
+            "labels": {
+                "en": "Translator", 
+                "fr": "Traducteur"
+            }, 
+            "type_id": "trl"
+        }, 
+        {
+            "labels": {
+                "en": "Type designer", 
+                "fr": "Dessinateur de caractères d'imprimerie"
+            }, 
+            "type_id": "tyd"
+        }, 
+        {
+            "labels": {
+                "en": "Typographer", 
+                "fr": "Typographe"
+            }, 
+            "type_id": "tyg"
+        }, 
+        {
+            "labels": {
+                "en": "Vocalist", 
+                "fr": "Chanteur, lecteur avec ou sans accompagnement musical"
+            }, 
+            "type_id": "voc"
+        }, 
+        {
+            "labels": {
+                "en": "Writer of accompanying material", 
+                "fr": "Auteur du matériel d'accompagnement"
+            }, 
+            "type_id": "wam"
+        }, 
+        {
+            "labels": {
+                "en": "Woodcutter", 
+                "fr": "Graveur sur métal"
+            }, 
+            "type_id": "wdc"
+        }, 
+        {
+            "labels": {
+                "en": "Wood-engraver", 
+                "fr": "Graveur sur bois"
+            }, 
+            "type_id": "wde"
+        }, 
+        {
+            "labels": {
+                "en": "Witness", 
+                "fr": "Témoin"
+            }, 
+            "type_id": "wit"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "contributor_role"
+}

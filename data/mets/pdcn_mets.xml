@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:mods="http://www.loc.gov/mods/v3" 
+  xmlns:mix="http://www.loc.gov/mix/v20" 
+  xmlns:premis="info:lc/xmlns/premis-v2" 
+  xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd 
+  http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd 
+  http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd 
+  http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd 
+  info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/v2/premis-v2-0.xsd" 
+  OBJID="sciencespo_catalog_0000588971" 
+  PROFILE="http://www.loc.gov/mets/profiles/?.xml">
+  <mets:metsHdr CREATEDATE="2013-05-17T14:40:35.5Z" LASTMODDATE="2013-05-17T14:40:35.5Z" RECORDSTATUS="Complete">
+    <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+      <mets:name>Prestataire</mets:name>
+    </mets:agent>
+    <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+      <mets:name>Sciences Po</mets:name>
+    </mets:agent>
+  </mets:metsHdr>
+  <mets:dmdSec ID="DMD_000001" GROUPID="DMDGRP_000001">
+    <mets:mdWrap MDTYPE="MODS">
+      <mets:xmlData>
+        <mods:mods version="3.4">
+          <mods:titleInfo>
+            <mods:nonSort>The </mods:nonSort>
+            <mods:title>musical languages of Elliott Carter</mods:title>
+          </mods:titleInfo>
+          <mods:name type="personal">
+            <mods:namePart type="given">Neil</mods:namePart>
+            <mods:namePart type="family">Brenner</mods:namePart>
+            <mods:namePart type="date">1927-</mods:namePart>
+            <affiliation>Ecole Pratique des Hautes Etudes</affiliation>
+            <mods:role>
+              <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+            </mods:role>
+          </mods:name>
+          <mods:typeOfResource>text</mods:typeOfResource>
+          <mods:genre authority="marc">bibliography</mods:genre>
+          <mods:originInfo>
+            <mods:place>
+              <mods:placeTerm type="code" authority="marccountry">dcu</mods:placeTerm>
+            </mods:place>
+            <mods:place>
+              <mods:placeTerm type="text">Washington, [D.C.]</mods:placeTerm>
+            </mods:place>
+            <mods:publisher>Music Division, Research Services, Library of Congress</mods:publisher>
+            <mods:publisher>For sale by the Supt. of Docs., U.S. G.P.O.</mods:publisher>
+            <mods:dateIssued>1984</mods:dateIssued>
+            <mods:dateIssued encoding="marc">1985</mods:dateIssued>
+            <mods:issuance>monographic</mods:issuance>
+          </mods:originInfo>
+          <mods:language>
+            <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+          </mods:language>
+          <mods:physicalDescription>
+            <mods:form authority="marcform">print</mods:form>
+            <mods:extent>viii, 87 p. : music, port. ; 24 cm.</mods:extent>
+          </mods:physicalDescription>
+          <mods:note type="statement of responsibility">by Charles Rosen.</mods:note>
+          <mods:note>Includes: A guide to Elliott Carter research materials at the Library of Congress Music Division / by Morgan Cundiff.</mods:note>
+          <mods:note>Bibliography: p. 73-86.</mods:note>
+          <mods:subject authority="lcsh">
+            <mods:name type="personal">
+              <mods:namePart>Carter, Elliott</mods:namePart>
+              <mods:namePart type="date">1908-</mods:namePart>
+            </mods:name>
+          </mods:subject>
+          <mods:subject authority="lcsh">
+            <mods:name type="personal">
+              <mods:namePart>Carter, Elliott</mods:namePart>
+              <mods:namePart type="date">1908-</mods:namePart>
+            </mods:name>
+            <mods:topic>Bibliography</mods:topic>
+          </mods:subject>
+          <mods:subject authority="lcsh">
+            <mods:name type="corporate">
+              <mods:namePart>Library of Congress.</mods:namePart>
+              <mods:namePart>Music Division</mods:namePart>
+            </mods:name>
+            <mods:topic>Catalogs</mods:topic>
+          </mods:subject>
+          <mods:classification authority="lcc">ML410.C3293 R7 1984</mods:classification>
+          <mods:classification authority="ddc" edition="19">780/.92/4</mods:classification>
+          <mods:relatedItem type="constituent">
+            <mods:titleInfo>
+              <mods:title>Guide to Elliott Carter research materials at the Library of Congress 
+            Music Division. 1984</mods:title>
+            </mods:titleInfo>
+            <mods:name type="personal">
+              <mods:namePart>Cundiff, Morgan.</mods:namePart>
+            </mods:name>
+          </mods:relatedItem>
+          <mods:identifier type="isbn">0844404497</mods:identifier>
+          <mods:identifier type="lccn">84003851</mods:identifier>
+          <mods:recordInfo>
+            <mods:recordContentSource authority="marcorg">DLC</mods:recordContentSource>
+            <mods:recordCreationDate encoding="marc">840217</mods:recordCreationDate>
+            <mods:recordChangeDate encoding="iso8601">19850430000000.0</mods:recordChangeDate>
+            <mods:recordIdentifier>2367614</mods:recordIdentifier>
+          </mods:recordInfo>
+        </mods:mods>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:dmdSec ID="DMD_000002" GROUPID="DMDGRP_000001">
+    <mets:mdWrap MDTYPE="DC">
+      <mets:xmlData>
+        <oai_dc:dc>
+          <dc:contributor>Peder Claussøn</dc:contributor>
+          <dc:coverage>Nordland (Comté, Norvège)</dc:coverage>
+          <dc:coverage>Descriptions et voyages</dc:coverage>
+          <dc:coverage>17e siècle</dc:coverage>
+          <dc:coverage>Norvège</dc:coverage>
+          <dc:creator>Claussøn (Peder Friis)</dc:creator>
+          <dc:date>1632</dc:date>
+          <dc:description>"Norriges oc omliggende Øers sandfoerdige Bescriffuelse...;Peder Claussøn;"</dc:description>
+          <dc:format>18 cm</dc:format>
+          <dc:language>dan</dc:language>
+          <dc:rights>Domaine public</dc:rights>
+          <dc:source>Bibliothèque Sainte-Geneviève</dc:source>
+          <dc:subject>Voyageurs norvégiens</dc:subject>
+          <dc:title>Norriges oc omliggende Øers sandfoerdige Bescriffuelse...</dc:title>
+          <dc:publisher>Non renseigné</dc:publisher>
+        </oai_dc:dc>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:amdSec>
+    <mets:techMD ID="AMDTECH_000001">
+      <mets:mdWrap MDTYPE="NISOIMG">
+        <mets:xmlData>
+          <mix:mix>
+            <mix:BasicDigitalObjectInformation>
+              <mix:fileSize>1238801</mix:fileSize>
+              <mix:FormatDesignation>
+                <mix:formatName>Tagged Image File Format</mix:formatName>
+                <mix:formatVersion>5.0</mix:formatVersion>
+              </mix:FormatDesignation>
+              <mix:FormatRegistry>
+                <mix:formatRegistryName>PRONOM</mix:formatRegistryName>
+                <mix:formatRegistryKey>fmt/9</mix:formatRegistryKey>
+              </mix:FormatRegistry>
+              <mix:Compression>
+                <mix:compressionScheme>Uncompressed</mix:compressionScheme>
+                <mix:compressionRatio>1</mix:compressionRatio>
+              </mix:Compression>
+            </mix:BasicDigitalObjectInformation>
+            <mix:BasicImageInformation>
+              <mix:BasicImageCharacteristics>
+                <mix:imageWidth>3891</mix:imageWidth>
+                <mix:imageHeight>4903</mix:imageHeight>
+                <mix:PhotometricInterpretation>
+                  <mix:colorSpace>RGB</mix:colorSpace>
+                </mix:PhotometricInterpretation>
+              </mix:BasicImageCharacteristics>
+              <mix:SpecialFormatCharacteristics/>
+            </mix:BasicImageInformation>
+            <mix:ImageCaptureMetadata>
+              <mix:GeneralCaptureInformation>
+                <mix:dateTimeCreated>2008-09-24T00:00:00</mix:dateTimeCreated>
+                <mix:imageProducer>University of North Carolina; Digital Production Center; Brody Selleck</mix:imageProducer>
+                <mix:captureDevice>transmission scanner</mix:captureDevice>
+              </mix:GeneralCaptureInformation>
+              <mix:ScannerCapture>
+                <mix:ScannerModel>
+                  <mix:scannerModelName>Zeutschel OS 12000</mix:scannerModelName>
+                </mix:ScannerModel>
+                <mix:MaximumOpticalResolution>400dpi</mix:MaximumOpticalResolution>
+                <mix:ScanningSystemSoftware>
+                  <mix:scanningSoftwareName>Omniscan V11.10 SR1 (8)</mix:scanningSoftwareName>
+                </mix:ScanningSystemSoftware>
+              </mix:ScannerCapture>
+            </mix:ImageCaptureMetadata>
+            <mix:ImageAssessmentMetadata>
+              <mix:ImageColorEncoding>
+                <mix:bitsPerSample>
+                  <mix:bitsPerSampleValue>8, 8, 8</mix:bitsPerSampleValue>
+                  <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+                </mix:bitsPerSample>
+              </mix:ImageColorEncoding>
+            </mix:ImageAssessmentMetadata>
+          </mix:mix>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:techMD>
+    <mets:techMD ID="AMDTECH_000002">
+      <mets:mdWrap MDTYPE="NISOIMG">
+        <mets:xmlData>
+          <mix>
+            <MIMEtype>image/png</MIMEtype>
+            <Compression>Deflate/zlib</Compression>
+            <PhotometricInterpretation>TODO</PhotometricInterpretation>
+            <Orientation>1</Orientation>
+            <ScanningAgency>Diadeis</ScanningAgency>
+            <digiprovMD>Zeutschel OS 14000 A2</digiprovMD>
+            <fileSize>1238801</fileSize>
+          </mix>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:techMD>
+    <mets:rightsMD ID="AMDRIGHTS_000001">
+      <mets:mdWrap MDTYPE="NISOIMG">
+        <mets:xmlData>
+          <premis>
+          </premis>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:rightsMD>  
+  </mets:amdSec>
+  <fileSec>
+    <fileGrp USE="master">
+      <file ID="FILE_MASTER_000001" ADMID="AMDTECH_000001, AMDRIGHTS_000001" MIMETYPE="image/jp2">
+        <FLocat LOCTYPE="URL" xlink:href="files/master/sciencespo_catalog_0000588971_file_master_000001.jp2" />
+      </file>
+      <file ID="FILE_MASTER_000002" ADMID="AMDTECH_000002, AMDRIGHTS_000002" MIMETYPE="image/jpx">
+        <FLocat LOCTYPE="URL" xlink:href="files/master/sciencespo_catalog_0000588971_file_master_000002.jpx" />
+      </file>
+      <file ID="FILE_MASTER_000003" ADMID="AMDTECH_000003, AMDRIGHTS_000003" MIMETYPE="image/png">
+        <FLocat LOCTYPE="URL" xlink:href="files/master/sciencespo_catalog_0000588971_file_master_000003.png" />
+      </file>
+      <file ID="FILE_MASTER_000004" ADMID="AMDTECH_000004, AMDRIGHTS_000004" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="files/master/sciencespo_catalog_0000588971_file_master_000004.tif" />
+      </file>
+    </fileGrp>
+    <fileGrp USE="view">
+      <file ID="FILE_VIEW_000001" MIMETYPE="image/jpeg">
+        <FLocat LOCTYPE="URL" xlink:href="files/view/sciencespo_catalog_0000588971_file_view_000001.jpg" />
+      </file>
+      <file ID="FILE_VIEW_000002" MIMETYPE="image/jpeg">
+        <FLocat LOCTYPE="URL" xlink:href="files/view/sciencespo_catalog_0000588971_file_view_000002.jpg" />
+      </file>
+      <file ID="FILE_VIEW_000003" MIMETYPE="image/jpeg">
+        <FLocat LOCTYPE="URL" xlink:href="files/view/sciencespo_catalog_0000588971_file_view_000003.jpg" />
+      </file>
+    </fileGrp>
+  </fileSec>
+
+  <structMap TYPE="physical">
+    <div DMDID="DMD_000001" TYPE="book" LABEL="Titre">
+      <div TYPE="binging" LABEL="Dos" ORDER="0" ORDERLABEL="">
+        <fptr FILEID="FILE_MASTER_000001" />
+        <fptr FILEID="FILE_VIEW_000001" />
+      </div>
+      <div TYPE="frontcover" LABEL="Première de couverture" ORDER="1" ORDERLABEL="">
+        <fptr FILEID="FILE_MASTER_000002" />
+        <fptr FILEID="FILE_VIEW_000002" />
+      </div>
+      <div TYPE="page" LABEL="Deuxième de couverture" ORDER="2" ORDERLABEL="">
+        <fptr FILEID="FILE_MASTER_000003" />
+        <fptr FILEID="FILE_VIEW_000003" />
+      </div>
+      <div TYPE="page" LABEL="" ORDER="3" ORDERLABEL="">
+        <fptr FILEID="FILE_MASTER_000004" />
+        <fptr FILEID="FILE_VIEW_000004" />
+      </div>
+      <div TYPE="page" LABEL="" ORDER="4" ORDERLABEL="">
+        <fptr FILEID="FILE_MASTER_000005" />
+        <fptr FILEID="FILE_VIEW_000005" />
+      </div>
+      <div TYPE="titlepage" LABEL="Titre" ORDER="5" ORDERLABEL="">
+        <fptr FILEID="FILE_MASTER_000006" />
+        <fptr FILEID="FILE_VIEW_000006" />
+      </div>
+      <div TYPE="page" LABEL="" ORDER="6" ORDERLABEL="">
+        <fptr FILEID="FILE_MASTER_000007" />
+        <fptr FILEID="FILE_VIEW_000007" />
+      </div>
+      <div TYPE="page" LABEL="" ORDER="7" ORDERLABEL="i">
+        <fptr FILEID="FILE_MASTER_000008" />
+        <fptr FILEID="FILE_VIEW_000008" />
+      </div>
+      <div TYPE="page" LABEL="" ORDER="8" ORDERLABEL="ii">
+        <fptr FILEID="FILE_MASTER_000009" />
+        <fptr FILEID="FILE_VIEW_000009" />
+      </div>
+      <div DMDID="DMD_000002" TYPE="page" LABEL="Titre partie 1" ORDER="9" ORDERLABEL="[1]">
+        <fptr FILEID="FILE_MASTER_000010" />
+        <fptr FILEID="FILE_VIEW_000010" />
+      </div>
+      <div TYPE="page" LABEL="" ORDER="10" ORDERLABEL="2">
+        <fptr FILEID="FILE_MASTER_000011" />
+        <fptr FILEID="FILE_VIEW_000011" />
+      </div>
+      <div TYPE="page" LABEL="" ORDER="11" ORDERLABEL="3">
+        <fptr FILEID="FILE_MASTER_000012" />
+        <fptr FILEID="FILE_VIEW_000012" />
+      </div>
+
+      <div TYPE="page" LABEL="Troisième de couverture" ORDER="97" ORDERLABEL="">
+        <fptr FILEID="FILE_MASTER_000098" />
+        <fptr FILEID="FILE_VIEW_000098" />
+      </div>
+      <div TYPE="backcover" LABEL="Quatrième de couverture" ORDER="98" ORDERLABEL="">
+        <fptr FILEID="FILE_MASTER_000099" />
+        <fptr FILEID="FILE_VIEW_000099" />
+      </div>
+    </div>
+  </structMap>
+
+  <structMap TYPE="logical">
+    <div TYPE="book" LABEL="Titre du document" DMDID="DMD_000001">
+      <div TYPE="section" ORDER="1" LABEL="Reliure">
+        <div TYPE="binding" ORDER="0" ORDERLABEL="" LABEL="Dos">
+          <fptr FILEID="FILE_MASTER_000001" />
+          <fptr FILEID="FILE_VIEW_000001" />
+        </div>
+        <div TYPE="frontcover" ORDER="1" ORDERLABEL="" LABEL="Première de couverture">
+          <fptr FILEID="FILE_MASTER_000002" />
+          <fptr FILEID="FILE_VIEW_000002" />
+        </div>
+        <div TYPE="page" ORDER="2" ORDERLABEL="" LABEL="Deuxième de couverture">
+          <fptr FILEID="FILE_MASTER_000003" />
+          <fptr FILEID="FILE_VIEW_000003" />
+        </div>
+        <div TYPE="page" ORDER="3" ORDERLABEL="" LABEL="Page de garde">
+          <fptr FILEID="FILE_MASTER_000004" />
+          <fptr FILEID="FILE_VIEW_000004" />
+        </div>
+        <div TYPE="page" ORDER="4" ORDERLABEL="" LABEL="Page de garde">
+          <fptr FILEID="FILE_MASTER_000005" />
+          <fptr FILEID="FILE_VIEW_000005" />
+        </div>
+      </div>
+      <div TYPE="section" ORDER="2" LABEL="Page de titre">
+        <div TYPE="page" ORDER="1" ORDERLABEL="" LABEL="">
+          <fptr FILEID="FILE_MASTER_000004" />
+          <fptr FILEID="FILE_VIEW_000004" />
+        </div>
+        <div TYPE="page" ORDER="2" ORDERLABEL="" LABEL="">
+          <fptr FILEID="FILE_MASTER_000005" />
+          <fptr FILEID="FILE_VIEW_000005" />
+        </div>
+        <div TYPE="titlepage" ORDER="3" ORDERLABEL="" LABEL="Titre du document">
+          <fptr FILEID="FILE_MASTER_000006" />
+          <fptr FILEID="FILE_VIEW_000006" />
+        </div>
+        <div TYPE="page" ORDER="4" ORDERLABEL="" LABEL="">
+          <fptr FILEID="FILE_MASTER_000007" />
+          <fptr FILEID="FILE_VIEW_000007" />
+        </div>
+      </div>
+      <div TYPE="section" ORDER="3" LABEL="Introduction" DMDID="DMD_000002">
+        <div TYPE="page" ORDER="1" ORDERLABEL="i" LABEL="">
+          <fptr FILEID="FILE_MASTER_000008" />
+          <fptr FILEID="FILE_VIEW_000008" />
+        </div>
+        <div TYPE="page" ORDER="2" ORDERLABEL="ii" LABEL="">
+          <fptr FILEID="FILE_MASTER_000009" />
+          <fptr FILEID="FILE_VIEW_000009" />
+        </div>
+        <div TYPE="page" ORDER="3" ORDERLABEL="iii" LABEL="">
+          <fptr FILEID="FILE_MASTER_000010" />
+          <fptr FILEID="FILE_VIEW_000010" />
+        </div>
+        <div TYPE="page" ORDER="4" ORDERLABEL="iv" LABEL="">
+          <fptr FILEID="FILE_MASTER_000011" />
+          <fptr FILEID="FILE_VIEW_000011" />
+        </div>
+      </div>
+      <div TYPE="section" LABEL="Titre partie 1" ORDER="3" ORDERLABEL="" DMDID="DMD_000003">
+        <div TYPE="page" LABEL="" ORDER="1" ORDERLABEL="[1]">
+          <fptr FILEID="FILE_MASTER_000010" />
+          <fptr FILEID="FILE_VIEW_000010" />
+        </div>
+        <div TYPE="page" LABEL="" ORDER="2" ORDERLABEL="2">
+          <fptr FILEID="FILE_MASTER_000011" />
+          <fptr FILEID="FILE_VIEW_000011" />
+        </div>
+        <div TYPE="page" LABEL="" ORDER="3" ORDERLABEL="3">
+          <fptr FILEID="FILE_MASTER_000012" />
+          <fptr FILEID="FILE_VIEW_000012" />
+        </div>
+      </div>
+      <div TYPE="section" ORDER="4" ORDERLABEL="" LABEL="Titre partie 2" DMDID="DMD_000004">
+        <div TYPE="page" LABEL="" ORDER="1" ORDERLABEL="23">
+          <fptr FILEID="FILE_MASTER_000022" />
+          <fptr FILEID="FILE_VIEW_000022" />
+        </div>
+        <div TYPE="page" LABEL="" ORDER="2" ORDERLABEL="24">
+          <fptr FILEID="FILE_MASTER_000023" />
+          <fptr FILEID="FILE_VIEW_000023" />
+        </div>
+        <div TYPE="page" LABEL="" ORDER="3" ORDERLABEL="25">
+          <fptr FILEID="FILE_MASTER_000024" />
+          <fptr FILEID="FILE_VIEW_000024" />
+        </div>
+      </div>
+      <div TYPE="section" ORDER="33" ORDERLABEL="" LABEL="Table des matières">
+        <div TYPE="page" LABEL="" ORDER="1" ORDERLABEL="94">
+          <fptr FILEID="FILE_MASTER_000093" />
+          <fptr FILEID="FILE_VIEW_000093" />
+        </div>
+        <div TYPE="page" LABEL="" ORDER="2" ORDERLABEL="95">
+          <fptr FILEID="FILE_MASTER_000094" />
+          <fptr FILEID="FILE_VIEW_000094" />
+        </div>
+        <div TYPE="page" LABEL="" ORDER="3" ORDERLABEL="96">
+          <fptr FILEID="FILE_MASTER_000095" />
+          <fptr FILEID="FILE_VIEW_000095" />
+        </div>
+        <div TYPE="page" LABEL="" ORDER="4" ORDERLABEL="97">
+          <fptr FILEID="FILE_MASTER_000096" />
+          <fptr FILEID="FILE_VIEW_000096" />
+        </div>
+      </div>
+      <div TYPE="section" ORDER="34" LABEL="Reliure">
+        <div TYPE="page" ORDER="1" ORDERLABEL="" LABEL="Page de garde">
+          <fptr FILEID="FILE_MASTER_000097" />
+          <fptr FILEID="FILE_VIEW_000097" />
+        </div>
+        <div TYPE="page" ORDER="2" ORDERLABEL="" LABEL="Page de garde">
+          <fptr FILEID="FILE_MASTER_000097" />
+          <fptr FILEID="FILE_VIEW_000097" />
+        </div>
+        <div TYPE="page" ORDER="3" ORDERLABEL="" LABEL="Troisième de couverture">
+          <fptr FILEID="FILE_MASTER_000098" />
+          <fptr FILEID="FILE_VIEW_000098" />
+        </div>
+        <div TYPE="backcover" ORDER="4" ORDERLABEL="" LABEL="Quatrième de couverture">
+          <fptr FILEID="FILE_MASTER_000099" />
+          <fptr FILEID="FILE_VIEW_000099" />
+        </div>
+      </div>
+    </div>
+  </structMap>
+</mets:mets>

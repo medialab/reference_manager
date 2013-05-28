@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:title>Raymond Saleilles et au-delà</mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__5k7940uimfdf9c8990p900c2l_-_2441__5k7940uimfdf9c8990p900c2l_-_2441__9labe9r4se65i789685q385ph_-_7t638g2jjsquujs9mcc0jb120" type="personal">
+    <mods:namePart type="given">Frédéric</mods:namePart>
+    <mods:namePart type="family">Audren</mods:namePart>
+    <mods:affiliation>Ecole de Droit</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__7t638g2jjsquujs9mcc0jeu8l_-__-__-_7t638g2jjsquujs9mcc0mcg3h" type="personal">
+    <mods:namePart type="family">Chêne</mods:namePart>
+    <mods:namePart type="given">Christian</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__7t638g2jjsquujs9mcc0jii04_-__-__-_7t638g2jjsquujs9mcc0mcg3j" type="personal">
+    <mods:namePart type="family">Mathey</mods:namePart>
+    <mods:namePart type="given">Nicolas</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__7t638g2jjsquujs9mcc0k2e43_-__-__-_7t638g2jjsquujs9mcc0mcg3l" type="personal">
+    <mods:namePart type="family">Vergne</mods:namePart>
+    <mods:namePart type="given">Arnaud</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-__-__-__-_7t638g2jjsquujs9mcc0mcg3m" type="conference">
+    <mods:namePart>Raymond Saleilles et au-delà</mods:namePart>
+    <mods:namePart type="date">2012-03-29/2012-03-30</mods:namePart>
+    <mods:namePart type="termsOfAddress">Faculté de Droit de l'Université Paris-Descartes ;FR</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/conferenceProceedings</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/ConferenceItem</mods:genre>
+  <mods:genre authority="marcgt">conference publication</mods:genre>
+  <mods:originInfo>
+    <mods:publisher>Dalloz</mods:publisher>
+    <mods:dateIssued encoding="iso8601">2013-03</mods:dateIssued>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">fre</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">fr</mods:languageTerm>
+  </mods:language>
+  <mods:physicalDescription>
+    <mods:extent>192</mods:extent>
+  </mods:physicalDescription>
+  <mods:abstract lang="fr">À l'occasion du centenaire du décès de Raymond Saleilles (1855-1912), des juristes et des politistes ont réuni leurs efforts pour revisiter, à la lumière des derniers apports de l'historiographie juridique, certains aspects de la vie professionnelle de cette grande figure des facultés de droit, ses engagements politiques et religieux, sa conception de la science du droit ainsi que la réception de son oeuvre. Cet ouvrage se propose ainsi, en premier lieu, de mettre en lumière tant la complexité de ses options politiques que l'impact de ses opinions religieuses sur sa pensée juridique. Il s'efforce, ensuite, d'explorer le rôle de Saleilles dans le renouvellement de la science du droit autour de 1900. Enfin, certaines contributions sont l'occasion d'évaluer non seulement l'intérêt de l'auteur pour les droits étrangers et le comparatisme, mais encore le retentissement de son oeuvre à travers le Monde ainsi que son apport à certaines branches du droit. </mods:abstract>
+  <mods:relatedItem type="series">
+    <mods:titleInfo>
+      <mods:title>Thèmes &amp; commentaires</mods:title>
+    </mods:titleInfo>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre authority="marcgt">series</mods:genre>
+  </mods:relatedItem>
+  <mods:identifier type="isbn">9782247125265</mods:identifier>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__5k7940uimfdf9c8990p900c2l_-_2441__5k7940uimfdf9c8990p900c2l_-_2441__9labe9r4se65i789685q385ph_-_7t638g2jjsquujs9mcc0jb120" authority="http://spire.sciences-po.fr/hdl:">2441/5k7940uimfdf9c8990p900c2l</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

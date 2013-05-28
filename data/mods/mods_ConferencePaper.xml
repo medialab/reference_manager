@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:nonSort>Le </mods:nonSort>
+    <mods:title>régime mixte des Modernes et la question de l’Histoire </mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i789685q5908j_-_2441__9labe9r4se65i789685q5908j_-_2441__9labe9r4se65i789685q380qo_-_eo6779thqgm5r489mam2m8oq2" type="personal">
+    <mods:namePart type="given">Alexandre</mods:namePart>
+    <mods:namePart type="family">Escudier</mods:namePart>
+    <mods:affiliation>Centre de recherches politiques de Sciences Po</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/conferencePaper</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/ConferencePaper</mods:genre>
+  <mods:genre authority="marcgt">conference publication</mods:genre>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">fre</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">fr</mods:languageTerm>
+  </mods:language>
+  <mods:abstract lang="fr">Contribution autour de la pensée anthropologique et sociologique du philosophe afin d'éclairer ses analyses politiques, historiques, et ses différentes observations de l'actualité.</mods:abstract>
+  <mods:relatedItem type="host">
+    <mods:titleInfo>
+      <mods:title>L’Anthropologie de Marcel Gauchet : analyse et débats</mods:title>
+    </mods:titleInfo>
+    <mods:name ID="_-_spire_-_2441__eo6779thqgm5r489mam2pgtr2_-__-__-_eo6779thqgm5r489mam352psi" type="personal">
+      <mods:namePart type="family">Louzeau</mods:namePart>
+      <mods:namePart type="given">Frédéric</mods:namePart>
+      <mods:role>
+        <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:name ID="_-_spire_-__-__-__-_eo6779thqgm5r489mam352psj" type="conference">
+      <mods:namePart>L’anthropologie de Marcel Gauchet : analyse et débats</mods:namePart>
+      <mods:namePart type="date">2011-10-14/2011-10-15</mods:namePart>
+      <mods:namePart type="termsOfAddress">Paris - Collège des Bernardins;FR</mods:namePart>
+      <mods:role>
+        <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre>info:eu-repo/semantics/other</mods:genre>
+    <mods:genre>http://purl.org/eprint/type/ScholarlyText</mods:genre>
+    <mods:genre authority="marcgt">unspecified</mods:genre>
+    <mods:originInfo>
+      <mods:place>
+        <mods:placeTerm type="text">Paris</mods:placeTerm>
+      </mods:place>
+      <mods:publisher>Lethielleux</mods:publisher>
+      <mods:dateIssued encoding="iso8601">2013-02</mods:dateIssued>
+    </mods:originInfo>
+    <mods:relatedItem type="series">
+      <mods:titleInfo>
+        <mods:title>Collège des Bernardins - Cours-colloques-conférences</mods:title>
+      </mods:titleInfo>
+      <mods:typeOfResource>text</mods:typeOfResource>
+      <mods:genre authority="marcgt">series</mods:genre>
+    </mods:relatedItem>
+    <mods:identifier type="isbn">9782249622557</mods:identifier>
+    <mods:part>
+      <mods:extent unit="page">
+        <mods:start>69</mods:start>
+        <mods:end>86</mods:end>
+      </mods:extent>
+    </mods:part>
+    <mods:extension>
+      <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd"/>
+    </mods:extension>
+  </mods:relatedItem>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__9labe9r4se65i789685q5908j_-_2441__9labe9r4se65i789685q5908j_-_2441__9labe9r4se65i789685q380qo_-_eo6779thqgm5r489mam2m8oq2" authority="http://spire.sciences-po.fr/hdl:">2441/9labe9r4se65i789685q5908j</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

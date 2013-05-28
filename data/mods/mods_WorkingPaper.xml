@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:title>Isolated Capital Cities, Accountability and Corruption Evidence from US States</mods:title>
+    <mods:subTitle>Evidence from US States</mods:subTitle>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__53r60a8s3kup1vc9kc6cl8m9l_-_2441__53r60a8s3kup1vc9kc6cl8m9l_-_2441__9labe9r4se65i789685q385c7_-_45eb019724sn6sg9mf22k25b8" type="personal">
+    <mods:namePart type="given">Quoc-Anh</mods:namePart>
+    <mods:namePart type="family">Do</mods:namePart>
+    <mods:affiliation>Département d'économie</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__dambferfb7dfprc9lj6bkb4sj_-__-__-_dambferfb7dfprc9lj6bo200n" type="personal">
+    <mods:namePart type="family">Campante</mods:namePart>
+    <mods:namePart type="given">Filipe R</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/workingPaper</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/WorkingPaper</mods:genre>
+  <mods:genre authority="marcgt">report</mods:genre>
+  <mods:originInfo>
+    <mods:place>
+      <mods:placeTerm type="text">Paris</mods:placeTerm>
+    </mods:place>
+    <mods:publisher>Sciences Po - ECON</mods:publisher>
+    <mods:dateIssued encoding="iso8601">2012-08</mods:dateIssued>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+  </mods:language>
+  <mods:abstract lang="en">We show that isolated capital cities are robustly associated with greater levels of corruption across
+US states, in line with the view that spatial distance between citizens and the seat of political power
+reduces accountability, and in contrast with the alternative hypothesis that keeping distance between
+the capital and major economic interests might decrease the risk of political capture. In particular,
+this stylized fact holds when we use the location of a state’s centroid and the spatial distribution of
+land suitability as sources of exogenous variation for the isolation of the capital city. We then show
+direct evidence that di↵erent mechanisms for holding state politicians accountable are indeed a↵ected
+by the spatial distribution of population: newspapers provide greater coverage of state politics when
+their audiences are more concentrated around the capital, voters are less knowledgeable and interested
+in state politics when they are far from the capital, and voter turnout in state elections is greater in
+places that are closer to the capital. We find that the role of media accountability seems particularly
+important in explaining the connection between isolated capitals and corruption. We also find evidence
+that there is more money in state-level political campaigns in those states with isolated capitals,
+again contrary to the capture hypothesis. Finally, we provide some evidence that these patterns are
+associated with lower levels of public good spending and outcomes.</mods:abstract>
+  <mods:subject lang="fr">
+    <mods:topic>Corruption; Accountability; Population Concentration; Capital Cities; Capture; US State Politics; Media; Newspapers; Turnout; Campaign Contributions; Public Good Provision</mods:topic>
+  </mods:subject>
+  <mods:classification authority="info:eu-repo/authority/jel" lang="fr">D72</mods:classification>
+  <mods:classification authority="info:eu-repo/authority/jel" lang="fr">D73</mods:classification>
+  <mods:classification authority="info:eu-repo/authority/jel" lang="fr">L82</mods:classification>
+  <mods:classification authority="info:eu-repo/authority/jel" lang="fr">R12</mods:classification>
+  <mods:classification authority="info:eu-repo/authority/jel" lang="fr">R23</mods:classification>
+  <mods:classification authority="info:eu-repo/authority/jel" lang="fr">R50</mods:classification>
+  <mods:relatedItem type="series">
+    <mods:titleInfo>
+      <mods:title>Sciences Po Economics Discussion Papers</mods:title>
+      <mods:partNumber>2013-01</mods:partNumber>
+    </mods:titleInfo>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre authority="marcgt">series</mods:genre>
+  </mods:relatedItem>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__53r60a8s3kup1vc9kc6cl8m9l_-_2441__53r60a8s3kup1vc9kc6cl8m9l_-_2441__9labe9r4se65i789685q385c7_-_dambferfb7dfprc9lj6bh6oo0" authority="http://spire.sciences-po.fr/hdl:">2441/53r60a8s3kup1vc9kc6cl8m9l</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

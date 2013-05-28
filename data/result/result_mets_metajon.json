@@ -1,0 +1,87 @@
+{
+    "col_id": "test_mets", 
+    "records": [
+        [
+            {
+                "dmds": [
+                    {
+                        "meta_type": "DDI", 
+                        "rec_class": "Warpper", 
+                        "rec_metajson": 1, 
+                        "rec_id": "DMD00001", 
+                        "rec_id_group": null, 
+                        "records": [
+                            null
+                        ]
+                    }
+                ], 
+                "rec_class": "Document", 
+                "rec_metajson": 1, 
+                "rec_source": "test"
+            }
+        ], 
+        [
+            {
+                "dmds": [
+                    {
+                        "meta_type": "DC", 
+                        "rec_class": "Warpper", 
+                        "rec_metajson": 1, 
+                        "rec_id": "DMD001", 
+                        "rec_id_group": null, 
+                        "records": [
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null
+                        ]
+                    }
+                ], 
+                "rec_class": "Document", 
+                "rec_metajson": 1, 
+                "rec_source": "test"
+            }
+        ], 
+        [
+            {
+                "dmds": [
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_metajson": 1, 
+                        "rec_id": "DMD-0001", 
+                        "rec_id_group": "DMDGRP-0001", 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "DC", 
+                        "rec_class": "Warpper", 
+                        "rec_metajson": 1, 
+                        "rec_id": "DMD-0002", 
+                        "rec_id_group": "DMDGRP-0001", 
+                        "records": [
+                            null
+                        ]
+                    }
+                ], 
+                "rec_class": "Document", 
+                "rec_metajson": 1, 
+                "rec_source": "test"
+            }
+        ]
+    ], 
+    "title": "Test mets"
+}

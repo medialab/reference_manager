@@ -1,0 +1,113 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "Professor/Researcher", 
+                "fr": "Enseignant/Chercheur"
+            }, 
+            "type_id": "academic-staff"
+        }, 
+        {
+            "labels": {
+                "en": "Administrative staff", 
+                "fr": "Personnel administratif"
+            }, 
+            "type_id": "administrative-staff"
+        }, 
+        {
+            "labels": {
+                "en": "Associate researcher", 
+                "fr": "Chercheur associé"
+            }, 
+            "type_id": "associate-researcher"
+        }, 
+        {
+            "labels": {
+                "en": "Director", 
+                "fr": "Directeur"
+            }, 
+            "type_id": "director"
+        }, 
+        {
+            "labels": {
+                "en": "Doctoral researcher", 
+                "fr": "Chercheur doctorant"
+            }, 
+            "type_id": "doctoral-researcher"
+        }, 
+        {
+            "labels": {
+                "en": "Guest researcher", 
+                "fr": "Chercheur invité"
+            }, 
+            "type_id": "guest-researcher"
+        }, 
+        {
+            "labels": {
+                "en": "Permanent researcher", 
+                "fr": "Chercheur permanent"
+            }, 
+            "type_id": "permanent-researcher"
+        }, 
+        {
+            "labels": {
+                "en": "Post doctoral researcher", 
+                "fr": "Chercheur post-doctoral"
+            }, 
+            "type_id": "post-doctoral-researcher"
+        }, 
+        {
+            "labels": {
+                "en": "president", 
+                "fr": "President"
+            }, 
+            "type_id": "president"
+        }, 
+        {
+            "labels": {
+                "en": "professor", 
+                "fr": "Professeur des universités"
+            }, 
+            "type_id": "professor"
+        }, 
+        {
+            "labels": {
+                "en": "Research assistant", 
+                "fr": "Assistant de recherche"
+            }, 
+            "type_id": "research-assistant"
+        }, 
+        {
+            "labels": {
+                "en": "Secretary general", 
+                "fr": "Secrétaire général"
+            }, 
+            "type_id": "secretary-general"
+        }, 
+        {
+            "labels": {
+                "en": "Teacher", 
+                "fr": "Enseignant"
+            }, 
+            "type_id": "teacher"
+        }, 
+        {
+            "labels": {
+                "en": "Technical staff", 
+                "fr": "Personnel technique"
+            }, 
+            "type_id": "technical-staff"
+        }, 
+        {
+            "labels": {
+                "en": "Treasurer", 
+                "fr": "Trésorier"
+            }, 
+            "type_id": "treasurer"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "affiliation_relation_person_orgunit"
+}

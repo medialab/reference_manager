@@ -3,9 +3,8 @@
 # coding=utf-8
 
 import os
-import json
-from referencemanager.cloud import crossref
-from referencemanager.services import export_service
+from biblib.cloud import crossref
+from biblib.services import export_service
 
 
 def test():
@@ -16,7 +15,6 @@ def test():
     metajson_list = crossref.query_openurl_and_retrieve_metadata(openurl, True)
     if metajson_list:
         output_path = os.path.join(base_dir, "result", "result_crossref_metajon.json")
-        export_service.export_metajson(metajson_list, output_path)
-        print json.dumps(metajson_list, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
+        print export_service.export_metajson_collection("test_crossref", "Crossref import test", metajson_list, output_path)
     else:
         assert False

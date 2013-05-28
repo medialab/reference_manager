@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<collection>
+<record>
+<leader>01544cam0 2200313 n 450 </leader>
+<controlfield tag="001">1/1188528</controlfield>
+<controlfield tag="005">20111005055123.0</controlfield>
+<datafield tag="035" ind1=" " ind2=" "><subfield code="a">ppn138945047</subfield>
+</datafield>
+<datafield tag="100" ind1=" " ind2=" "><subfield code="a">20091202d1679    m  y0frey0103    ba</subfield>
+</datafield>
+<datafield tag="101" ind1="0" ind2=" "><subfield code="a">swe</subfield>
+</datafield>
+<datafield tag="102" ind1=" " ind2=" "><subfield code="a">SE</subfield>
+</datafield>
+<datafield tag="105" ind1=" " ind2=" "><subfield code="a">y   |   000zy</subfield>
+</datafield>
+<datafield tag="200" ind1="1" ind2=" "><subfield code="a">Observationes juris practicae</subfield>
+<subfield code="b">Texte imprimé</subfield>
+<subfield code="e">thet är åthskillige påminnelser uthi rättegångs saker ...</subfield>
+<subfield code="a">Kort beskriffning om thet som wid then Constantinopolitaniske resan är föreluppit</subfield>
+<subfield code="f">Clas Rålamb</subfield>
+</datafield>
+<datafield tag="210" ind1=" " ind2=" "><subfield code="a">Stockholm</subfield>
+<subfield code="d">1679</subfield>
+<subfield code="g">Henrich Keyser</subfield>
+</datafield>
+<datafield tag="215" ind1=" " ind2=" "><subfield code="a">1 vol. (330, 93-[11  p.])</subfield>
+<subfield code="d">19 cm</subfield>
+</datafield>
+<datafield tag="325" ind1="1" ind2=" "><subfield code="a">Reproduit sous forme électronique</subfield>
+</datafield>
+<datafield tag="423" ind1=" " ind2="#"><subfield code="t">Kort beskriffning om thet som wid then Constantinopolitaniske resan är föreluppit</subfield>
+</datafield>
+<datafield tag="456" ind1=" " ind2="#"><subfield code="0">ppn155328077</subfield>
+<subfield code="t">Observationes juris practicae</subfield>
+<subfield code="b">Ressource électronique</subfield>
+<subfield code="o">thet är åthskillige påminnelser uthi rättegångs saker ...</subfield>
+<subfield code="f">Clas Rålamb</subfield>
+<subfield code="c">Paris</subfield>
+<subfield code="n">Bibliothèque Sainte Geneviève</subfield>
+<subfield code="d">2011</subfield>
+</datafield>
+<datafield tag="606" ind1=" " ind2=" "><subfield code="a">Droit</subfield>
+<subfield code="y">Suède</subfield>
+</datafield>
+<datafield tag="606" ind1=" " ind2=" "><subfield code="a">Voyageurs suédois</subfield>
+<subfield code="y">Turquie</subfield>
+<subfield code="z">17e siècle</subfield>
+</datafield>
+<datafield tag="606" ind1=" " ind2=" "><subfield code="1">027466868</subfield>
+<subfield code="a">Droit</subfield>
+<subfield code="2">rameau</subfield>
+</datafield>
+<datafield tag="606" ind1=" " ind2=" "><subfield code="1">028725638</subfield>
+<subfield code="a">Voyageurs suédois</subfield>
+<subfield code="2">rameau</subfield>
+<subfield code="8">frefre</subfield>
+</datafield>
+<datafield tag="607" ind1=" " ind2=" "><subfield code="a">Turquie</subfield>
+<subfield code="x">Descriptions et voyages</subfield>
+<subfield code="z">17e siècle</subfield>
+</datafield>
+<datafield tag="607" ind1=" " ind2=" "><subfield code="1">027254755</subfield>
+<subfield code="a">Turquie</subfield>
+<subfield code="2">rameau</subfield>
+</datafield>
+<datafield tag="700" ind1=" " ind2="1"><subfield code="1">137805020</subfield>
+<subfield code="a">Rålamb</subfield>
+<subfield code="b">Claes</subfield>
+<subfield code="f">1622-1698</subfield>
+<subfield code="4">070</subfield>
+</datafield>
+<datafield tag="801" ind1=" " ind2="3"><subfield code="a">FR</subfield>
+<subfield code="b">Abes</subfield>
+<subfield code="c">20111003</subfield>
+<subfield code="g">AFNOR</subfield>
+</datafield>
+<datafield tag="801" ind1=" " ind2="0"><subfield code="b">COL</subfield>
+<subfield code="g">AACR2</subfield>
+</datafield>
+<datafield tag="801" ind1=" " ind2="2"><subfield code="b">Lin1</subfield>
+<subfield code="g">AACR2</subfield>
+</datafield>
+<datafield tag="852"><subfield code="a">BSG</subfield>
+<subfield code="b">NOR</subfield>
+<subfield code="c">RARN</subfield>
+<subfield code="e">20091202</subfield>
+<subfield code="h">8 NN 1840 NOR</subfield>
+<subfield code="p">9108534101</subfield>
+<subfield code="q">9108534101</subfield>
+<subfield code="t">RPR</subfield>
+<subfield code="y">0</subfield>
+</datafield>
+<datafield tag="852"><subfield code="a">BSG</subfield>
+<subfield code="b">NOR</subfield>
+<subfield code="y">2</subfield>
+</datafield>
+</record>
+<record>
+<leader>01399cam0 2200313   450 </leader>
+<controlfield tag="001">1/306661</controlfield>
+<controlfield tag="005">20111026060308.0</controlfield>
+<datafield tag="035" ind1=" " ind2=" "><subfield code="a">ppn099546760</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" "><subfield code="a">BSGNOR1140627001</subfield>
+</datafield>
+<datafield tag="039" ind1=" " ind2=" "><subfield code="a">10318181</subfield>
+</datafield>
+<datafield tag="100" ind1=" " ind2=" "><subfield code="a">19970725d1632    m  y0frey0103    ba</subfield>
+</datafield>
+<datafield tag="101" ind1="0" ind2=" "><subfield code="a">dan</subfield>
+</datafield>
+<datafield tag="102" ind1=" " ind2=" "><subfield code="a">DK</subfield>
+</datafield>
+<datafield tag="105" ind1=" " ind2=" "><subfield code="a">y   |||||||||</subfield>
+</datafield>
+<datafield tag="200" ind1="1" ind2=" "><subfield code="a">Norriges oc omliggende Øers sandfoerdige Bescriffuelse...</subfield>
+<subfield code="b">Texte imprimé</subfield>
+<subfield code="f">Peder Claussøn</subfield>
+</datafield>
+<datafield tag="210" ind1=" " ind2=" "><subfield code="a">Kiobenhaffn</subfield>
+<subfield code="c">Melchior Marzan</subfield>
+<subfield code="d">1632</subfield>
+</datafield>
+<datafield tag="215" ind1=" " ind2=" "><subfield code="a">1 vol. (185 p.)</subfield>
+<subfield code="d">18 cm</subfield>
+</datafield>
+<datafield tag="302" ind1=" " ind2=" "><subfield code="a">Danemark</subfield>
+</datafield>
+<datafield tag="325" ind1="1" ind2=" "><subfield code="a">Reproduit sous forme électronique</subfield>
+</datafield>
+<datafield tag="456" ind1=" " ind2="#"><subfield code="0">ppn155865331</subfield>
+<subfield code="t">Norriges oc omliggende Øers sandfoerdige Bescriffuelse...</subfield>
+<subfield code="b">Ressource électronique</subfield>
+<subfield code="f">Peder Claussøn</subfield>
+<subfield code="c">Paris</subfield>
+<subfield code="n">Bibliothèque Sainte Geneviève</subfield>
+<subfield code="d">2011</subfield>
+</datafield>
+<datafield tag="606" ind1=" " ind2=" "><subfield code="a">Voyageurs norvégiens</subfield>
+<subfield code="y">Norvège</subfield>
+<subfield code="z">17e siècle</subfield>
+</datafield>
+<datafield tag="606" ind1=" " ind2=" "><subfield code="1">030334578</subfield>
+<subfield code="a">Voyageurs norvégiens</subfield>
+<subfield code="2">rameau</subfield>
+<subfield code="8">frefre</subfield>
+</datafield>
+<datafield tag="607" ind1=" " ind2=" "><subfield code="a">Nordland (Comté, Norvège)</subfield>
+<subfield code="x">Descriptions et voyages</subfield>
+<subfield code="z">17e siècle</subfield>
+</datafield>
+<datafield tag="607" ind1=" " ind2=" "><subfield code="a">Norvège</subfield>
+<subfield code="x">Descriptions et voyages</subfield>
+<subfield code="z">17e siècle</subfield>
+</datafield>
+<datafield tag="607" ind1=" " ind2=" "><subfield code="1">027855384</subfield>
+<subfield code="a">Nordland (Comté, Norvège)</subfield>
+<subfield code="2">rameau</subfield>
+</datafield>
+<datafield tag="607" ind1=" " ind2=" "><subfield code="1">027263762</subfield>
+<subfield code="a">Norvège</subfield>
+<subfield code="2">rameau</subfield>
+</datafield>
+<datafield tag="700" ind1=" " ind2="1"><subfield code="1">137630891</subfield>
+<subfield code="a">Claussøn</subfield>
+<subfield code="d">1545-1614</subfield>
+<subfield code="b">Peder Friis</subfield>
+<subfield code="4">070</subfield>
+</datafield>
+<datafield tag="801" ind1=" " ind2="3"><subfield code="a">FR</subfield>
+<subfield code="b">Abes</subfield>
+<subfield code="c">20111025</subfield>
+<subfield code="g">AFNOR</subfield>
+</datafield>
+<datafield tag="801" ind1=" " ind2="1"><subfield code="a">FR</subfield>
+<subfield code="b">BSGNOR</subfield>
+<subfield code="c">19970725</subfield>
+</datafield>
+<datafield tag="852"><subfield code="a">BSG</subfield>
+<subfield code="b">NOR</subfield>
+<subfield code="c">RARN</subfield>
+<subfield code="e">19970912</subfield>
+<subfield code="h">8 LA ROQ 695 NOR</subfield>
+<subfield code="p">N10305952</subfield>
+<subfield code="q">9100107647</subfield>
+<subfield code="t">RPR</subfield>
+<subfield code="y">0</subfield>
+</datafield>
+</record>
+<record>
+<leader>02103cam0 2200337   450 </leader>
+<controlfield tag="001">1/428946</controlfield>
+<controlfield tag="005">20120718055133.0</controlfield>
+<datafield tag="035" ind1=" " ind2=" "><subfield code="a">ppn106773631</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" "><subfield code="a">PRITEC.BSG8.010161301002</subfield>
+</datafield>
+<datafield tag="039" ind1=" " ind2=" "><subfield code="a">11031757</subfield>
+</datafield>
+<datafield tag="100" ind1=" " ind2=" "><subfield code="a">20050310d1879    k  a0frey0103    ba</subfield>
+</datafield>
+<datafield tag="101" ind1="0" ind2=" "><subfield code="a">fre</subfield>
+</datafield>
+<datafield tag="102" ind1=" " ind2=" "><subfield code="a">FR</subfield>
+</datafield>
+<datafield tag="105" ind1=" " ind2=" "><subfield code="a">a   ||||10|yy</subfield>
+</datafield>
+<datafield tag="106" ind1=" " ind2=" "><subfield code="a">r</subfield>
+</datafield>
+<datafield tag="200" ind1="1" ind2=" "><subfield code="a">Conférences du Palais du Trocadéro</subfield>
+<subfield code="h">Deuxièmes série</subfield>
+<subfield code="i">Arts, sciences</subfield>
+<subfield code="f">Ministère de l&apos;Agriculture et du commerce ; Exposition universelle internationale de 1878, à Paris</subfield>
+</datafield>
+<datafield tag="210" ind1=" " ind2=" "><subfield code="a">Paris</subfield>
+<subfield code="c">Impr. nationale</subfield>
+<subfield code="d">1879</subfield>
+</datafield>
+<datafield tag="215" ind1=" " ind2=" "><subfield code="a">1 vol. (286 p.)</subfield>
+<subfield code="c">fig., dépl.</subfield>
+<subfield code="d">25 cm</subfield>
+</datafield>
+<datafield tag="225" ind1="1" ind2=" "><subfield code="a">Congrès et conférences du Palais du Trocadéro</subfield>
+<subfield code="e">comptes rendus sténographiques</subfield>
+<subfield code="f">publiés sous les auspices du Comité central des congrès et conférences et la direction de M. Ch. Thirion,...</subfield>
+<subfield code="v">2</subfield>
+</datafield>
+<datafield tag="325" ind1="1" ind2=" "><subfield code="a">Reproduit sous forme électronique</subfield>
+</datafield>
+<datafield tag="456" ind1=" " ind2="#"><subfield code="0">ppn162385501</subfield>
+<subfield code="t">Conférences du Palais du Trocadéro</subfield>
+<subfield code="b">Ressource électronique</subfield>
+<subfield code="h">Deuxièmes série</subfield>
+<subfield code="i">Arts, sciences</subfield>
+<subfield code="f">Ministère de l&apos;Agriculture et du commerce ; Exposition universelle internationale de 1878, à Paris</subfield>
+<subfield code="c">Paris</subfield>
+<subfield code="n">Bibliothèque Sainte Geneviève</subfield>
+<subfield code="d">2012</subfield>
+<subfield code="s">Congrès et conférences du Palais du Trocadéro / publiés sous les auspices du Comité central des congrès et conférences et la direction de M. Ch. Thirion,...</subfield>
+</datafield>
+<datafield tag="461" ind1=" " ind2="#"><subfield code="t">Congrès et conférences du Palais du Trocadéro</subfield>
+<subfield code="o">comptes rendus sténographiques</subfield>
+<subfield code="f">publiés sous les auspices du Comité central des congrès et conférences</subfield>
+<subfield code="g">et la direction de M. Ch. Thirion,...</subfield>
+<subfield code="v">2</subfield>
+</datafield>
+<datafield tag="503" ind1="1" ind2=" "><subfield code="a">Exposition internationale</subfield>
+<subfield code="m">Paris</subfield>
+<subfield code="j">1878</subfield>
+</datafield>
+<datafield tag="686" ind1="0" ind2=" "><subfield code="2">retro</subfield>
+<subfield code="a">900</subfield>
+</datafield>
+<datafield tag="702" ind1=" " ind2="1"><subfield code="1">086274112</subfield>
+<subfield code="a">Thirion</subfield>
+<subfield code="b">Charles</subfield>
+<subfield code="f">1827-19..</subfield>
+<subfield code="4">651</subfield>
+</datafield>
+<datafield tag="712" ind1="0" ind2="2"><subfield code="1">096150335</subfield>
+<subfield code="a">Comité central des congrès et conférences</subfield>
+<subfield code="4">340</subfield>
+</datafield>
+<datafield tag="712" ind1="0" ind2="1"><subfield code="1">031473008</subfield>
+<subfield code="a">France</subfield>
+<subfield code="b">Ministère de l&apos;agriculture et du commerce</subfield>
+<subfield code="c">1869-1881</subfield>
+<subfield code="4">340</subfield>
+</datafield>
+<datafield tag="712" ind1="0" ind2="2"><subfield code="1">029240751</subfield>
+<subfield code="a">Exposition internationale</subfield>
+<subfield code="f">1878</subfield>
+<subfield code="e">Paris</subfield>
+<subfield code="4">340</subfield>
+<subfield code="8">frefre</subfield>
+</datafield>
+<datafield tag="801" ind1=" " ind2="3"><subfield code="a">FR</subfield>
+<subfield code="b">Abes</subfield>
+<subfield code="c">20120717</subfield>
+<subfield code="g">AFNOR</subfield>
+</datafield>
+<datafield tag="801" ind1=" " ind2="0"><subfield code="a">FR</subfield>
+<subfield code="b">751052116</subfield>
+<subfield code="c">20050310</subfield>
+</datafield>
+<datafield tag="852"><subfield code="a">BSG</subfield>
+<subfield code="b">FG</subfield>
+<subfield code="c">CTLF</subfield>
+<subfield code="e">20050513</subfield>
+<subfield code="h">8 V SUP 121 (2)</subfield>
+<subfield code="p">N10966460</subfield>
+<subfield code="q">9105939145</subfield>
+<subfield code="t">MFG</subfield>
+<subfield code="y">0</subfield>
+</datafield>
+</record>
+<record>
+<leader>03107cam0 2200409   450 </leader>
+<controlfield tag="001">1/428983</controlfield>
+<controlfield tag="005">20120716055109.0</controlfield>
+<datafield tag="035" ind1=" " ind2=" "><subfield code="a">ppn106773828</subfield>
+</datafield>
+<datafield tag="035" ind1=" " ind2=" "><subfield code="a">PRITEC.BSG8.010161412001</subfield>
+</datafield>
+<datafield tag="039" ind1=" " ind2=" "><subfield code="a">11031794</subfield>
+</datafield>
+<datafield tag="100" ind1=" " ind2=" "><subfield code="a">20050310d1879    k  a0frey0103    ba</subfield>
+</datafield>
+<datafield tag="101" ind1="0" ind2=" "><subfield code="a">fre</subfield>
+</datafield>
+<datafield tag="102" ind1=" " ind2=" "><subfield code="a">FR</subfield>
+</datafield>
+<datafield tag="105" ind1=" " ind2=" "><subfield code="a">y   ||||10|yy</subfield>
+</datafield>
+<datafield tag="106" ind1=" " ind2=" "><subfield code="a">r</subfield>
+</datafield>
+<datafield tag="200" ind1="1" ind2=" "><subfield code="a">Congrès universel pour l&apos;amélioration du sort des aveugles et des sourds-muets, 1878 , tenu à Paris, du 23 au 30 septembre</subfield>
+<subfield code="b">Texte imprimé</subfield>
+</datafield>
+<datafield tag="210" ind1=" " ind2=" "><subfield code="a">Paris</subfield>
+<subfield code="c">Impr. nationale</subfield>
+<subfield code="d">1879</subfield>
+</datafield>
+<datafield tag="215" ind1=" " ind2=" "><subfield code="a">1 vol. (539 p.- [10] p. de pl.)</subfield>
+<subfield code="d">25 cm</subfield>
+</datafield>
+<datafield tag="225" ind1="1" ind2=" "><subfield code="a">Congrès et conférences du Palais du Trocadéro</subfield>
+<subfield code="e">comptes rendus sténographiques</subfield>
+<subfield code="f">publiés sous les auspices du Comité central des congrès et conférences et la direction de M. Ch. Thirion,... ; Ministère de l&apos;agriculture et du commerce ; Exposition universelle internationale de 1878, à Paris</subfield>
+<subfield code="v">29</subfield>
+</datafield>
+<datafield tag="307" ind1=" " ind2=" "><subfield code="a">Contient des planches en Braille, type romain, système Alston, alphabet Moon et carte en relief</subfield>
+</datafield>
+<datafield tag="325" ind1="1" ind2=" "><subfield code="a">Reproduit sous forme électronique</subfield>
+</datafield>
+<datafield tag="456" ind1=" " ind2="#"><subfield code="0">ppn162341520</subfield>
+<subfield code="t">Congrès universel pour l&apos;amélioration du sort des aveugles et des sourds-muets, 1878 , tenu à Paris, du 23 au 30 septembre</subfield>
+<subfield code="b">Ressource électronique</subfield>
+<subfield code="c">Paris</subfield>
+<subfield code="n">Bibliothèque Sainte Geneviève</subfield>
+<subfield code="d">2012</subfield>
+<subfield code="s">Congrès et conférences du Palais du Trocadéro / publiés sous les auspices du Comité central des congrès et conférences et la direction de M. Ch. Thirion,... ; Ministère de l&apos;agriculture et du commerce ; Exposition universelle internationale de 1878, à Paris</subfield>
+</datafield>
+<datafield tag="456" ind1=" " ind2="#"><subfield code="0">ppn159225957</subfield>
+<subfield code="t">Congrès universel pour l&apos;amélioration du sort des aveugles et des sourds-muets, 1878 (sept., 21-30) Paris</subfield>
+<subfield code="b">Ressource électronique</subfield>
+<subfield code="o">Comptes rendus sténographiques</subfield>
+<subfield code="e">Édition électronique : numérisation 2010</subfield>
+<subfield code="f">Congrès universel pour l&apos;amélioration du sort des aveugles et des sourds-muets</subfield>
+<subfield code="c">Paris</subfield>
+<subfield code="n">Conservatoire national des arts et métiers</subfield>
+<subfield code="d">2010</subfield>
+</datafield>
+<datafield tag="461" ind1=" " ind2="#"><subfield code="t">Congrès et conférences du Palais du Trocadéro</subfield>
+<subfield code="o">comptes rendus sténographiques</subfield>
+<subfield code="f">publiés sous les auspices du Comité central des congrès et conférences</subfield>
+<subfield code="g">et la direction de M. Ch. Thirion,...</subfield>
+<subfield code="g">Ministère de l&apos;agriculture et du commerce ; Exposition universelle internationale de 1878, à Paris</subfield>
+<subfield code="v">29</subfield>
+</datafield>
+<datafield tag="503" ind1="1" ind2=" "><subfield code="a">Exposition internationale</subfield>
+<subfield code="m">Paris</subfield>
+<subfield code="j">1878</subfield>
+</datafield>
+<datafield tag="606" ind1=" " ind2=" "><subfield code="a">Sourds</subfield>
+<subfield code="x">Congrès</subfield>
+</datafield>
+<datafield tag="606" ind1=" " ind2=" "><subfield code="a">Aveugles</subfield>
+<subfield code="x">Congrès</subfield>
+</datafield>
+<datafield tag="606" ind1=" " ind2=" "><subfield code="1">027599981</subfield>
+<subfield code="a">Sourds</subfield>
+<subfield code="2">rameau</subfield>
+<subfield code="8">frefre</subfield>
+</datafield>
+<datafield tag="606" ind1=" " ind2=" "><subfield code="1">027387658</subfield>
+<subfield code="a">Aveugles</subfield>
+<subfield code="2">rameau</subfield>
+<subfield code="8">frefre</subfield>
+</datafield>
+<datafield tag="676" ind1=" " ind2=" "><subfield code="a">362.4</subfield>
+<subfield code="v">22</subfield>
+</datafield>
+<datafield tag="686" ind1="0" ind2=" "><subfield code="2">retro</subfield>
+<subfield code="a">300</subfield>
+</datafield>
+<datafield tag="702" ind1=" " ind2="1"><subfield code="1">086274112</subfield>
+<subfield code="a">Thirion</subfield>
+<subfield code="b">Charles</subfield>
+<subfield code="f">1827-19..</subfield>
+<subfield code="4">651</subfield>
+</datafield>
+<datafield tag="710" ind1="1" ind2="2"><subfield code="1">162341156</subfield>
+<subfield code="a">Congrès universel pour l&apos;amélioration du sort des aveugles et des sourds muets</subfield>
+<subfield code="f">1878</subfield>
+<subfield code="e">Paris</subfield>
+<subfield code="4">070</subfield>
+</datafield>
+<datafield tag="712" ind1="0" ind2="2"><subfield code="1">096150335</subfield>
+<subfield code="a">Comité central des congrès et conférences</subfield>
+<subfield code="4">340</subfield>
+</datafield>
+<datafield tag="712" ind1="0" ind2="1"><subfield code="1">031473008</subfield>
+<subfield code="a">France</subfield>
+<subfield code="b">Ministère de l&apos;agriculture et du commerce</subfield>
+<subfield code="c">1869-1881</subfield>
+<subfield code="4">340</subfield>
+</datafield>
+<datafield tag="712" ind1="0" ind2="2"><subfield code="1">029240751</subfield>
+<subfield code="a">Exposition internationale</subfield>
+<subfield code="f">1878</subfield>
+<subfield code="e">Paris</subfield>
+<subfield code="4">340</subfield>
+<subfield code="8">frefre</subfield>
+</datafield>
+<datafield tag="801" ind1=" " ind2="3"><subfield code="a">FR</subfield>
+<subfield code="b">Abes</subfield>
+<subfield code="c">20120713</subfield>
+<subfield code="g">AFNOR</subfield>
+</datafield>
+<datafield tag="801" ind1=" " ind2="0"><subfield code="a">FR</subfield>
+<subfield code="b">751052116</subfield>
+<subfield code="c">20050310</subfield>
+</datafield>
+<datafield tag="852"><subfield code="a">BSG</subfield>
+<subfield code="b">FG</subfield>
+<subfield code="c">CTLF</subfield>
+<subfield code="e">20050513</subfield>
+<subfield code="h">8 V SUP 122 (29)</subfield>
+<subfield code="p">N10966500</subfield>
+<subfield code="q">9105938988</subfield>
+<subfield code="t">MFG</subfield>
+<subfield code="y">0</subfield>
+</datafield>
+<datafield tag="999" ind1=" " ind2=" "><subfield code="a">ANT</subfield>
+</datafield>
+</record>
+</collection>

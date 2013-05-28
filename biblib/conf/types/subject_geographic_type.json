@@ -1,0 +1,99 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "Geographic area", 
+                "fr": "Zone géographique"
+            }, 
+            "type_id": "area"
+        }, 
+        {
+            "labels": {
+                "en": "City", 
+                "fr": "Ville"
+            }, 
+            "type_id": "city"
+        }, 
+        {
+            "labels": {
+                "en": "City section", 
+                "fr": "Partie de la ville"
+            }, 
+            "type_id": "citySection"
+        }, 
+        {
+            "labels": {
+                "en": "Geographical description coded", 
+                "fr": "Description géographique codée"
+            }, 
+            "type_id": "code"
+        }, 
+        {
+            "labels": {
+                "en": "Continent", 
+                "fr": "Continent"
+            }, 
+            "type_id": "continent"
+        }, 
+        {
+            "labels": {
+                "en": "Country", 
+                "fr": "Pays"
+            }, 
+            "type_id": "country"
+        }, 
+        {
+            "labels": {
+                "en": "County", 
+                "fr": "Comté"
+            }, 
+            "type_id": "county"
+        }, 
+        {
+            "labels": {
+                "en": "Extraterrestrial area", 
+                "fr": "Zone extraterrestre"
+            }, 
+            "type_id": "extraterrestrialArea"
+        }, 
+        {
+            "labels": {
+                "en": "Island", 
+                "fr": "Île"
+            }, 
+            "type_id": "island"
+        }, 
+        {
+            "labels": {
+                "en": "Province", 
+                "fr": "Province"
+            }, 
+            "type_id": "province"
+        }, 
+        {
+            "labels": {
+                "en": "Region", 
+                "fr": "Région"
+            }, 
+            "type_id": "region"
+        }, 
+        {
+            "labels": {
+                "en": "State", 
+                "fr": "Etat"
+            }, 
+            "type_id": "state"
+        }, 
+        {
+            "labels": {
+                "en": "Territory", 
+                "fr": "Territoire"
+            }, 
+            "type_id": "territory"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "subject_geographic_type"
+}

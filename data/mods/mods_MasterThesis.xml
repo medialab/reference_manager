@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:title>Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006</mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i7896860ngch2_-__-_2441__d7a7evb2ctdg4i89ges9oe5ao_-_5l6uh8ogmqildh09h86a62p0j" type="personal">
+    <mods:namePart type="given">Thomas</mods:namePart>
+    <mods:namePart type="family">Piketty</mods:namePart>
+    <mods:affiliation>Paris-Jourdan Sciences Economiques</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">ths</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__5l6uh8ogmqildh09h6l10gtqo_-_2441__5l6uh8ogmqildh09h6l10gtqo_-_2441__9labe9r4se65i789685q38226_-_f4rshpf3v1umfa09lae8jf1g8" type="personal">
+    <mods:namePart type="given">Céline</mods:namePart>
+    <mods:namePart type="family">Antonin</mods:namePart>
+    <mods:affiliation>OFCE</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/masterThesis</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/Thesis</mods:genre>
+  <mods:genre authority="marcgt">thesis</mods:genre>
+  <mods:originInfo>
+    <mods:place>
+      <mods:placeTerm type="text">Paris</mods:placeTerm>
+    </mods:place>
+    <mods:publisher>Ecole d'Economie de Paris</mods:publisher>
+    <mods:dateIssued encoding="iso8601">2009-09</mods:dateIssued>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">fre</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">fr</mods:languageTerm>
+  </mods:language>
+  <mods:physicalDescription>
+    <mods:extent>75</mods:extent>
+  </mods:physicalDescription>
+  <mods:abstract lang="fr">Au cours des cinquante dernières années, des modèles successifs ont été élaborés pour rendre
+compte du comportement d’épargne des ménages. Ces modèles diffèrent principalement par la
+longueur de l’horizon décisionnel : après avoir supposé une vision de court terme, l’horizon s’est
+progressivement élargi à la durée de vie du ménage, avant de devenir illimité ; on est ainsi passé
+du modèle myope keynésien, au modèle de cycle de vie, puis au modèle dynastique. Ces modèles
+ne sont pas exclusifs, et les théories développées récemment montrent que différents horizons
+peuvent coexister, par exemple dans le cadre d’une épargne de précaution avec volonté de transmission
+intergénérationnelle.
+L’objectif principal de cette étude est de tester la pertinence de ces différents cadres de pensée,
+et de déterminer l’horizon pertinent d’épargne des ménages à partir des enquêtes INSEE
+Budget des Familles, sur la période 1979-2006.
+On montre d’abord que l’hypothèse de cycle de vie constitue un cadre un peu simpliste pour
+rendre compte du comportement d’épargne des ménages, car l’on observe pas de décroissance
+des taux d’épargne en fin de vie. Il s’agit ensuite de détailler les comportements par âge, en
+distinguant les ménages d’âge actif des ménages retraités :
+– Les ménages d’âge actif sont essentiellement sensibles au motif de précaution (assurance
+contre les chocs de revenu à court terme), et au motif cycle de vie (perspective de préparation
+de la retraite). Ils ont peu de considérations dynastiques, et épargnent davantage sur
+les revenus du travail que sur les revenus du capital.
+– Les ménages retraités ont un comportement dynastique quel que soit leur niveau de richesse,
+avec une désaccumulation de capital très limitée.
+Autrement dit, au cours de leur vie active, les ménages se soucient essentiellement du lendemain,
+et dans une certaine mesure de leur retraite ; la prise en compte des générations futures
+n’intervient qu’au moment de la retraite.
+Le second objectif de cette étude est d’analyser l’existence de taux d’épargne différents sur
+le capital et sur le travail, une question récurrente dans le débat économique. Le consensus des
+macroéconomistes, selon lequel on épargne davantage sur le capital que sur le travail, est aujourd’hui
+battu en brèche par les nouvelles théories de l’épargne, notamment les théories de l’épargne
+de précaution. L’étude empirique à partir des données Budget des Familles suggère, pour la population
+d’âge actif, l’existence de taux d’épargne plus élevés sur le travail que sur le capital, ce
+qui légitime le motif de précaution.    </mods:abstract>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__5l6uh8ogmqildh09h6l10gtqo_-_2441__5l6uh8ogmqildh09h6l10gtqo_-_2441__9labe9r4se65i789685q38226_-_5l6uh8ogmqildh09h6m8h2gg7" authority="http://spire.sciences-po.fr/hdl:">2441/5l6uh8ogmqildh09h6l10gtqo</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

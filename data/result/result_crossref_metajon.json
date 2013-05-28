@@ -1,5 +1,5 @@
 {
-    "col_id": "aime", 
+    "col_id": "test_crossref", 
     "records": [
         {
             "date_issued": "1997-02-28", 
@@ -21,29 +21,29 @@
                             "value": "10959203"
                         }
                     ], 
-                    "metajson_class": "Document", 
-                    "metajson_version": 1, 
+                    "rec_class": "Document", 
+                    "rec_metajson": 1, 
                     "rec_type": "Journal", 
                     "title": "Science"
                 }
             ], 
-            "metajson_class": "Document", 
-            "metajson_version": 1, 
+            "rec_class": "Document", 
+            "rec_metajson": 1, 
             "part_issue": "5304", 
             "part_page_end": "1323", 
             "part_page_start": "1320", 
             "part_volume": "275", 
-            "rec_source": "crossref", 
+            "rec_source": "CrossRef", 
             "rec_type": "JournalArticle", 
             "resources": [
                 {
-                    "metajson_class": "Resource", 
-                    "metajson_version": 1, 
+                    "rec_class": "Resource", 
+                    "rec_metajson": 1, 
                     "remote_url": "http://www.sciencemag.org/cgi/doi/10.1126/science.275.5304.1320"
                 }
             ], 
             "title": "Isolation of a Common Receptor for Coxsackie B Viruses and Adenoviruses 2 and 5"
         }
     ], 
-    "title": "AIME references"
+    "title": "Crossref import test"
 }

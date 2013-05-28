@@ -1,4 +1,4 @@
-# Reference Manager
+# BibLib
 
 ## Install dependencies on Mac OS X
 ### Intall Apple Xcode and Command Line Tools
@@ -15,7 +15,7 @@ Install MongoDB with brew:
 
     brew install mongodb
 
-Create a data folder for the ReferenceManager MongoDB:
+Create a data folder for the biblib MongoDB:
 
     mkdir $HOME/somewhere
 
@@ -91,13 +91,13 @@ Install virtualenv and virtualenvwrapper:
     sudo apt-get install python-virtualenv
     sudo pip install virtualenvwrapper
  
-Create REFMAN virtualenv:
+Create BIBLIB virtualenv:
 
-    virtualenv REFMAN
+    virtualenv BIBLIB
 
 Switch to the AIME virtualenv:
     
-    source ~/REFMAN/bin/activate
+    source ~/BIBLIB/bin/activate
     
 To deactivate:
     
@@ -143,14 +143,14 @@ Exit and relog.
 
 ### Install required modules in python
 
-Create the REFMAN virtualenv:
+Create the BIBLIB virtualenv:
 
     mkdir .virtualenv
-    v.mk REFMAN
+    v.mk BIBLIB
 
-Switch to the REFMAN virtualenv:
+Switch to the BIBLIB virtualenv:
 
-    v REFMAN
+    v BIBLIB
 
 Install required modules:
     
@@ -162,7 +162,7 @@ Install the correct txjsonrpc:
 
     git clone git@github.com:hefee/txjsonrpc.git
     cd txjsonrpc
-    sudo python setup.py install
+    python setup.py install
 
 
 Clone the git repository:
@@ -181,25 +181,25 @@ To update the source:
     mongo
     db
     show dbs
-    use refmanager
+    use biblib
     j = { name : "mongo" }
-    db.references.insert( j )
+    db.documents.insert( j )
     show dbs
     show collections
     
 ### Edit the config.json
 
-    cd src/referencemanager
+    cd src/biblib
     cp config.template.json config.json
     vi config.json
     
 #### Configure mongodb server
 
     "mongodb": {
-        "db": "refmanager",
+        "db": "biblib",
         "host": "localhost",
         "port": 27017,
-        "referencesCol": "references",
+        "documentsCol": "documents",
         "typesCol": "types",
         "datafieldsCol": "datafields"
     }
@@ -223,15 +223,15 @@ To update the source:
 ### Import data
 To test all (convert endnote, insert ref inside MongoDB, export json and MLA):
 
-    v REFMAN
-    cd referencemanager
+    v BIBLIB
+    cd biblib
     python main.py
 
 ### Start the json-rpc server
 To start the json-rpc server:
 
-    v REFMAN
-    cd referencemanager/services
+    v BIBLIB
+    cd biblib/services
     twistd -noy jsonrpc_service.tac -l -
     
 or 
@@ -242,7 +242,7 @@ or
 Modify the HTML page to test the json-rpc server
     
     cd test
-    vi test_metajsonrpc.html
+    vi test_jsonrpc.html
     
 Modify the endPoint:
     
@@ -252,7 +252,7 @@ Try this web page in your browser
 
 ### Starting the webserver
 
-	cd referencemanager/web
+	cd biblib/web
 	python -m SimpleHTTPServer 8090
 
 In your browser try these URL :

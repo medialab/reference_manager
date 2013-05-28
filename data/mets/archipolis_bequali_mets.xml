@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mets OBJID="cdsp_bequali_sp1" PROFILE="$?" xmlns="http://www.loc.gov/METS/" xmlns:DC="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:mix="http://www.loc.gov/mix/v20" xmlns:premis="info:lc/xmlns/premis-v2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd http://www.loc.gov/mix/v20
+ http://www.loc.gov/standards/mix/mix20/mix20.xsd">
+  <metsHdr CREATEDATE="2013-04-24T14:15:35.5Z" LASTMODDATE="2013-05-23T17:15:35.5Z" RECORDSTATUS="Complete">
+    <agent ROLE="CREATOR" TYPE="ORGANIZATION">
+      <name>archiPolis / beQuali</name>
+    </agent>
+    <agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+      <name>archiPolis / beQuali</name>
+    </agent>
+  </metsHdr>
+  <dmdSec ID="DMD_00001">
+    <mdWrap MDTYPE="DDI">
+      <xmlData>
+        <codeBook xmlns="http://www.icpsr.umich.edu/DDI">
+          <docDscr>
+            <citation>
+              <titlStmt>
+                <titl>XML codeBook for SN:5860</titl>
+              </titlStmt>
+              <prodStmt>
+                <prodDate date="2008-12-01">1 December 2008 </prodDate>
+              </prodStmt>
+            </citation>
+          </docDscr>
+          <stdyDscr>
+            <citation>
+              <titlStmt>
+                <titl>Comment les discussions deviennent politiques à partir du cas de l'Europe</titl>
+                <altTitl></altTitl>
+                <IDNo agency="UKDA">cdsp_bequali_sp1</IDNo>
+              </titlStmt>
+              <rspStmt>
+                <AuthEnty affiliation="CEVIPOF">Sophie Duchesne</AuthEnty>
+              </rspStmt>
+              <prodStmt>
+                <copyright></copyright>
+                <fundAg>CNRS</fundAg>
+				<grantNo>ACI</grantNo>
+              </prodStmt>
+              <distStmt>
+                <distrbtr affiliation="">CDSP</distrbtr>
+                <depositr></depositr>
+                <depDate date=""></depDate>
+                <distDate date="2013-05-03">3 Mai 2013</distDate>
+              </distStmt>
+              <serStmt>
+                <serName></serName>
+              </serStmt>
+            </citation>
+            <stdyInfo>
+              <subject>
+                <keyword vocab="Y"></keyword>
+				<keyword vocab="S">politisation</keyword>
+				<keyword vocab="S">Europe</keyword>
+                <topcClas vocab="I\H"></topcClas>
+              </subject>
+              <abstract>Enquête comparative (France, Belgique, Royaume-Uni) par entretiens collectés centrée sur la politisation individuelle et le thème de l'Europe</abstract>
+              <abstract></abstract>
+              <sumDscr>
+                <timePrd date="1966-00-00" event="start">Années 2000</timePrd>
+                <timePrd date="2005-00-00" event="end"></timePrd>
+                <nation>France</nation>
+				<nation>Belgique</nation>
+				<nation>Royaume-Uni</nation>
+                <geogUnit>Paris, Bruxelles, Oxford</geogUnit>
+				<geogCover>nationale (France, Belgique, Royaume-Uni)</geogCover>
+                <anlyUnit>Individuals; Administrative units (geographical/political)</anlyUnit>
+                <universe level="study">Location of units of observation:</universe>
+                <universe level="study">international</universe>
+                <universe level="study">observunit:</universe>
+                <universe level="study">groupes de discussion</universe>
+				<universe level="study">targetgroup:</universe>
+                <universe level="study">cadres, employés, ouvriers, militants</universe>
+                <dataKind>Numeric data; Alpha/numeric data; Individual (micro) level</dataKind>
+              </sumDscr>
+            </stdyInfo>
+            <method>
+              <dataColl>
+                <timeMeth>BESIS is constructed from the BES, a repeated cross-sectional study, and election returns.</timeMeth>
+                <sampProc>Data are taken from BES studies, currently 1966-2005. See individual BES studies under GN 33066 (1969-2005) for details of sampling.</sampProc>
+                <collMode>Compilation or synthesis of existing material</collMode>
+                <collMode>See individual BES studies for details of data collection.</collMode>
+                <sources>
+                  <dataSrc>BES studies 1966-2005 (see BESIS site, and under GN 33066, for details), and election returns.</dataSrc>
+                </sources>
+                <weight>Weighting used for BES data. See BESIS site and individual BES studies for details.</weight>
+                <cleanOps/>
+              </dataColl>
+            </method>
+            <dataAccs>
+              <setAvail>
+                <accsPlac>These data are available from a service other than ESDS, UK Data Archive -</accsPlac>
+              </setAvail>
+              <useStmt>
+                <specPerm>Other</specPerm>
+                <restrctn>See the &lt;a href=&quot;http://www.besis.org&quot; title=&quot;BESIS&quot;&gt;&lt;i&gt;British Election Studies Information Site&lt;/i&gt; (BESIS)&lt;a/&gt; web site for details of access and registration.</restrctn>
+                <contact>Help desk: help@esds.ac.uk</contact>
+              </useStmt>
+            </dataAccs>
+            <othrStdyMat>
+              <relStdy/>
+              <relStdy>British Election Studies, 1969-</relStdy>
+              <othRefs>Study Description: English</othRefs>
+              <othRefs>Study Documentation: English</othRefs>
+            </othrStdyMat>
+          </stdyDscr>
+        </codeBook>
+      </xmlData>
+    </mdWrap>
+  </dmdSec>
+  <amdSec>
+    <techMD ID="AMDTECH_000001">
+      <mdWrap MDTYPE="NISOIMG">
+        <xmlData>
+          <mix:mix>
+            <mix:BasicDigitalObjectInformation>
+              <mix:FormatDesignation>
+                <mix:formatVersion>5.0</mix:formatVersion>
+              </mix:FormatDesignation>
+              <mix:FormatRegistry>
+                <mix:formatRegistryName>PRONOM</mix:formatRegistryName>
+                <mix:formatRegistryKey>fmt/9</mix:formatRegistryKey>
+              </mix:FormatRegistry>
+              <mix:Compression>
+                <mix:compressionScheme>Uncompressed</mix:compressionScheme>
+                <mix:compressionRatio>1</mix:compressionRatio>
+              </mix:Compression>
+            </mix:BasicDigitalObjectInformation>
+            <mix:BasicImageInformation>
+              <mix:BasicImageCharacteristics>
+                <mix:imageWidth>3891</mix:imageWidth>
+                <mix:imageHeight>4903</mix:imageHeight>
+                <mix:PhotometricInterpretation>
+                  <mix:colorSpace>RGB</mix:colorSpace>
+                </mix:PhotometricInterpretation>
+              </mix:BasicImageCharacteristics>
+              <mix:SpecialFormatCharacteristics/>
+            </mix:BasicImageInformation>
+            <mix:ImageCaptureMetadata>
+              <mix:GeneralCaptureInformation>
+                <mix:dateTimeCreated>2008-09-24T00:00:00</mix:dateTimeCreated>
+                <mix:imageProducer>University of North Carolina; Digital Production Center; Brody Selleck</mix:imageProducer>
+                <mix:captureDevice>transmission scanner</mix:captureDevice>
+              </mix:GeneralCaptureInformation>
+              <mix:ScannerCapture>
+                <mix:ScannerModel>
+                  <mix:scannerModelName>Zeutschel OS 12000</mix:scannerModelName>
+                </mix:ScannerModel>
+                <mix:MaximumOpticalResolution>400dpi</mix:MaximumOpticalResolution>
+                <mix:ScanningSystemSoftware>
+                  <mix:scanningSoftwareName>Omniscan V11.10 SR1 (8)</mix:scanningSoftwareName>
+                </mix:ScanningSystemSoftware>
+              </mix:ScannerCapture>
+            </mix:ImageCaptureMetadata>
+            <mix:ImageAssessmentMetadata>
+              <mix:ImageColorEncoding>
+                <mix:bitsPerSample>
+                  <mix:bitsPerSampleValue>8, 8, 8</mix:bitsPerSampleValue>
+                  <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+                </mix:bitsPerSample>
+              </mix:ImageColorEncoding>
+            </mix:ImageAssessmentMetadata>
+          </mix:mix>
+        </xmlData>
+      </mdWrap>
+    </techMD>
+    <techMD ID="AMDTECH_000002">
+      <mdWrap MDTYPE="NISOIMG">
+        <xmlData>
+          <mix>
+            <MIMEtype>image/png</MIMEtype>
+            <Compression>Deflate/zlib</Compression>
+            <PhotometricInterpretation>TODO</PhotometricInterpretation>
+            <Orientation>1</Orientation>
+            <ScanningAgency>Diadeis</ScanningAgency>
+            <digiprovMD>Zeutschel OS 14000 A2</digiprovMD>
+            <fileSize>1238801</fileSize>
+          </mix>
+        </xmlData>
+      </mdWrap>
+    </techMD>
+    <rightsMD ID="AMDRIGHTS_000001">
+      <mdWrap MDTYPE="NISOIMG">
+        <xmlData>
+          <premis>
+          </premis>
+        </xmlData>
+      </mdWrap>
+    </rightsMD>  
+  </amdSec>
+  <fileSec>
+    <fileGrp USE="sr">
+      <file ID="sr_000001" DMDID="DMD_000002" ADMID="AMD_TECH_000002" MIMETYPE="application/msword" SIZE="1234" CHECKSUM="9aa2877a2903711862ba3861f99fb234" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:href="files/sources/sr/Transcription GROUPE 1BXL.doc"/>
+      </file>
+    </fileGrp>
+    <fileGrp USE="nc">
+      <file ID="nc_000021" DMDID="DMD_000022" ADMID="AMD_TECH_000022" MIMETYPE="text/csv" SIZE="1234" CHECKSUM="9aa2877a2903711862ba3861f99fb234" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:href="files/processed/nc/archipolis_sp32_prep_methodo_recrut_fr_volontaire_tableau_nc.csv"/>
+      </file>
+    </fileGrp>
+    <fileGrp USE="dl">
+      <file ID="dl_000011" DMDID="DMD_000012" ADMID="AMD_TECH_000012" MIMETYPE="application/pdf" SIZE="1234" CHECKSUM="9aa2877a2903711862ba3861f99fb234" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:href="files/processed/dl/archipolis_sp32_col_transcr_entretiencoll_bel_employe_paraverbal1_dl.pdf"/>
+      </file>
+    </fileGrp>
+    <fileGrp USE="ol">
+      <file ID="ol_000031" DMDID="DMD_000032" ADMID="AMD_TECH_000032" MIMETYPE="application/pdf" SIZE="1234" CHECKSUM="9aa2877a2903711862ba3861f99fb234" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:href="files/processed/ol/archipolis_sp32_prep_methodo_recrut_fr_volontaire_autre_nc.pdf"/>
+      </file>
+    </fileGrp>
+    <fileGrp USE="vi">
+      <file ID="vi_000041" DMDID="DMD_000042" ADMID="AMD_TECH_000042" MIMETYPE="text/xml" SIZE="1234" CHECKSUM="9aa2877a2903711862ba3861f99fb234" CHECKSUMTYPE="MD5">
+        <FLocat LOCTYPE="URL" xlink:href="files/processed/vi/archipolis_sp32_col_transcr_entretiencoll_bel_employe_paraverbal1_dl.xml"/>
+      </file>
+    </fileGrp>
+  </fileSec>
+  <structMap ID="SM_001" TYPE="logical">
+    <div TYPE="study" DMDID="DMD_000001" LABEL="Comment les discussions deviennent politiques à partir du cas de l'Europe" >
+      <div TYPE="subcollection" ORDER="1" DMDID="DMD_000101" LABEL="prep">
+        <div TYPE="folder" ORDER="1" DMDID="DMD_000102" LABEL="admi">
+          <div TYPE="subfolder" ORDER="1" DMDID="DMD_000103" LABEL="finance">
+            <div TYPE="item" ORDER="1" DMDID="DMD_000104" LABEL="Formulaire type pour subvention de l'Economic and Social Research Council ">
+              <fptr FILEID="sr_000001"/>
+              <fptr FILEID="dl_000011"/>
+              <fptr FILEID="vi_000041"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </structMap>
+</mets>

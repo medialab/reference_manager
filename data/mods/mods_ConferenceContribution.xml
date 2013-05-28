@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:title>Airport companies as silent partners?</mods:title>
+    <mods:subTitle>The slow awakening of Aéroports de Paris</mods:subTitle>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-__-__-__-_eo6779thqgm5r489m4m2k6d40" type="conference">
+    <mods:namePart>Governing Paris and Mexico</mods:namePart>
+    <mods:namePart type="date">2013-02-27/2013-02-28</mods:namePart>
+    <mods:namePart type="termsOfAddress">Sciences Po, Paris;FR</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__53r60a8s3kup1vc9kc4942gk9_-_2441__53r60a8s3kup1vc9kc4942gk9_-_2441__9labe9r4se65i789685q384oh_-_eo6779thqgm5r489m4m2k6e49" type="personal">
+    <mods:namePart type="given">Charlotte</mods:namePart>
+    <mods:namePart type="family">Halpern</mods:namePart>
+    <mods:affiliation>Centre d'études européennes de Sciences Po</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/conferenceContribution</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/ConferenceItem</mods:genre>
+  <mods:genre authority="marcgt">speech</mods:genre>
+  <mods:originInfo>
+    <mods:dateCreated encoding="iso8601">2013-02-27</mods:dateCreated>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+  </mods:language>
+  <mods:abstract lang="en">Focus on the long-term trajectory of airport companies, namely Aéroports de Paris (ADP) in order to explain politics of airport planning.</mods:abstract>
+  <mods:note type="creation/production credits">Programme Paris - Mexico (CEE-Sciences Po &amp; COLMEX)</mods:note>
+  <mods:subject lang="en">
+    <mods:topic>Airports</mods:topic>
+  </mods:subject>
+  <mods:subject lang="en">
+    <mods:topic>Public policy</mods:topic>
+  </mods:subject>
+  <mods:subject lang="en">
+    <mods:topic>Paris metropolitan area</mods:topic>
+  </mods:subject>
+  <mods:subject lang="en">
+    <mods:topic>Conflicts</mods:topic>
+  </mods:subject>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__53r60a8s3kup1vc9kc4942gk9_-_2441__53r60a8s3kup1vc9kc4942gk9_-_2441__9labe9r4se65i789685q384oh_-_eo6779thqgm5r489m4m2k6e49" authority="http://spire.sciences-po.fr/hdl:">2441/53r60a8s3kup1vc9kc4942gk9</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

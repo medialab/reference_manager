@@ -1,0 +1,228 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "Accession number", 
+                "fr": "Numéro d'accès"
+            }, 
+            "type_id": "accessionnumber"
+        }, 
+        {
+            "labels": {
+                "en": "Artnum", 
+                "fr": "Artnum"
+            }, 
+            "type_id": "artnum"
+        }, 
+        {
+            "labels": {
+                "en": "Arxiv", 
+                "fr": "Arxiv"
+            }, 
+            "type_id": "arxiv"
+        }, 
+        {
+            "labels": {
+                "en": "Bib code", 
+                "fr": "Bib code"
+            }, 
+            "type_id": "bibcode"
+        }, 
+        {
+            "labels": {
+                "en": "Call number", 
+                "fr": "Cote"
+            }, 
+            "type_id": "callnumber"
+        }, 
+        {
+            "labels": {
+                "en": "Citation identifier", 
+                "fr": "Identifiant de la citation"
+            }, 
+            "type_id": "citationkey"
+        }, 
+        {
+            "labels": {
+                "en": "CODEN", 
+                "fr": "CODEN"
+            }, 
+            "type_id": "coden"
+        }, 
+        {
+            "labels": {
+                "en": "DOI", 
+                "fr": "DOI"
+            }, 
+            "type_id": "doi"
+        }, 
+        {
+            "labels": {
+                "en": "EAN", 
+                "fr": "EAN"
+            }, 
+            "type_id": "ean"
+        }, 
+        {
+            "labels": {
+                "en": "EISBN", 
+                "fr": "EISBN"
+            }, 
+            "type_id": "eisbn"
+        }, 
+        {
+            "labels": {
+                "en": "EISSN", 
+                "fr": "EISSN"
+            }, 
+            "type_id": "eissn"
+        }, 
+        {
+            "labels": {
+                "en": "Handle", 
+                "fr": "Handle"
+            }, 
+            "type_id": "hdl"
+        }, 
+        {
+            "labels": {
+                "en": "IRD", 
+                "fr": "IRD"
+            }, 
+            "type_id": "ird"
+        }, 
+        {
+            "labels": {
+                "en": "ISAM : International Standard Audiovisual Number", 
+                "fr": "ISAM : International Standard Audiovisual Number"
+            }, 
+            "type_id": "isam"
+        }, 
+        {
+            "labels": {
+                "en": "ISBN : International Standard Book Number", 
+                "fr": "Numéro ISBN de la publication et/ou du support de publication"
+            }, 
+            "type_id": "isbn"
+        }, 
+        {
+            "labels": {
+                "en": "ISMN : International Standard Music Number", 
+                "fr": "ISMN : International Standard Music Number"
+            }, 
+            "type_id": "ismn"
+        }, 
+        {
+            "labels": {
+                "en": "ISRC : International Standard Recording Code", 
+                "fr": "ISRC : International Standard Recording Code"
+            }, 
+            "type_id": "isrc"
+        }, 
+        {
+            "labels": {
+                "en": "ISSN : International Standard Serial Number", 
+                "fr": "Numéro ISSN de la publication et/ou du support de publication"
+            }, 
+            "type_id": "issn"
+        }, 
+        {
+            "labels": {
+                "en": "ISTC : International Standard Text Code", 
+                "fr": "ISTC : International Standard Text Code"
+            }, 
+            "type_id": "istc"
+        }, 
+        {
+            "labels": {
+                "en": "LC Call number", 
+                "fr": "Cote LC"
+            }, 
+            "type_id": "lccallnum"
+        }, 
+        {
+            "labels": {
+                "en": "LCCN : Library of Congress Control Number", 
+                "fr": "LCCN : Library of Congress Control Number"
+            }, 
+            "type_id": "lccn"
+        }, 
+        {
+            "type_id": "nationalbibliography"
+        }, 
+        {
+            "labels": {
+                "en": "OCLC", 
+                "fr": "OCLC"
+            }, 
+            "type_id": "oclc"
+        }, 
+        {
+            "labels": {
+                "en": "Patent number", 
+                "fr": "Numéro de brevet"
+            }, 
+            "type_id": "patentnumber"
+        }, 
+        {
+            "labels": {
+                "en": "PMCID : PubMed Central reference number", 
+                "fr": "PMCID : PubMed Central reference number"
+            }, 
+            "type_id": "pmcid"
+        }, 
+        {
+            "labels": {
+                "en": "PMID : PubMed identifier", 
+                "fr": "PMID : PubMed identifier"
+            }, 
+            "type_id": "pmid"
+        }, 
+        {
+            "labels": {
+                "en": "RePEc identifier", 
+                "fr": "RePEc identifier"
+            }, 
+            "type_id": "repec"
+        }, 
+        {
+            "labels": {
+                "en": "SICI : Serial Item and Contribution Identifier", 
+                "fr": "SICI : Serial Item and Contribution Identifier"
+            }, 
+            "type_id": "sici"
+        }, 
+        {
+            "labels": {
+                "en": "Summon identifier", 
+                "fr": "Identifiant Summon"
+            }, 
+            "type_id": "summon"
+        }, 
+        {
+            "labels": {
+                "en": "UnitId", 
+                "fr": "UnitId"
+            }, 
+            "type_id": "unitid"
+        }, 
+        {
+            "labels": {
+                "en": "URI", 
+                "fr": "URI"
+            }, 
+            "type_id": "uri"
+        }, 
+        {
+            "labels": {
+                "en": "Motion Picture Association of America visa", 
+                "fr": "Visa d'exploitation"
+            }, 
+            "type_id": "visa"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "identifier_type"
+}

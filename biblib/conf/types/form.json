@@ -1,0 +1,257 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "type_id": "electronic resource"
+        }, 
+        {
+            "type_id": "chip cartridge"
+        }, 
+        {
+            "type_id": "computer optical disc cartridge"
+        }, 
+        {
+            "type_id": "magnetic disk"
+        }, 
+        {
+            "type_id": "magneto-optical disc"
+        }, 
+        {
+            "type_id": "optical disc"
+        }, 
+        {
+            "type_id": "remote"
+        }, 
+        {
+            "type_id": "tape cartridge"
+        }, 
+        {
+            "type_id": "tape cassette"
+        }, 
+        {
+            "type_id": "tape reel"
+        }, 
+        {
+            "type_id": "globe"
+        }, 
+        {
+            "type_id": "celestial globe"
+        }, 
+        {
+            "type_id": "earth moon globe"
+        }, 
+        {
+            "type_id": "planetary or lunar globe"
+        }, 
+        {
+            "type_id": "terrestrial globe"
+        }, 
+        {
+            "type_id": "map"
+        }, 
+        {
+            "type_id": "atlas"
+        }, 
+        {
+            "type_id": "diagram"
+        }, 
+        {
+            "type_id": "map"
+        }, 
+        {
+            "type_id": "model"
+        }, 
+        {
+            "type_id": "profile "
+        }, 
+        {
+            "type_id": "remote-sensing image"
+        }, 
+        {
+            "type_id": "section"
+        }, 
+        {
+            "type_id": "view"
+        }, 
+        {
+            "type_id": "microform"
+        }, 
+        {
+            "type_id": "aperture card"
+        }, 
+        {
+            "type_id": "microfiche"
+        }, 
+        {
+            "type_id": "microfiche cassette"
+        }, 
+        {
+            "type_id": "microfilm cartridge"
+        }, 
+        {
+            "type_id": "microfilm cassette"
+        }, 
+        {
+            "type_id": "microfilm reel"
+        }, 
+        {
+            "type_id": "microopaque"
+        }, 
+        {
+            "type_id": "microscopic"
+        }, 
+        {
+            "type_id": "motion picture"
+        }, 
+        {
+            "type_id": "film cartridge"
+        }, 
+        {
+            "type_id": "film cassette"
+        }, 
+        {
+            "type_id": "film reel"
+        }, 
+        {
+            "type_id": "nonprojected graphic"
+        }, 
+        {
+            "type_id": "chart"
+        }, 
+        {
+            "type_id": "collage"
+        }, 
+        {
+            "type_id": "drawing"
+        }, 
+        {
+            "type_id": "flash card"
+        }, 
+        {
+            "type_id": "painting"
+        }, 
+        {
+            "type_id": "photomechanical print"
+        }, 
+        {
+            "type_id": "photonegative"
+        }, 
+        {
+            "type_id": "photoprint"
+        }, 
+        {
+            "type_id": "picture "
+        }, 
+        {
+            "type_id": "print"
+        }, 
+        {
+            "type_id": "technical drawing"
+        }, 
+        {
+            "type_id": "projected graphic"
+        }, 
+        {
+            "type_id": "filmslip"
+        }, 
+        {
+            "type_id": "filmstrip cartridge"
+        }, 
+        {
+            "type_id": "filmstrip roll"
+        }, 
+        {
+            "type_id": "other filmstrip type "
+        }, 
+        {
+            "type_id": "slide"
+        }, 
+        {
+            "type_id": "transparency"
+        }, 
+        {
+            "type_id": "sound recording"
+        }, 
+        {
+            "type_id": "cylinder"
+        }, 
+        {
+            "type_id": "roll "
+        }, 
+        {
+            "type_id": "sound cartridge"
+        }, 
+        {
+            "type_id": "sound cassette "
+        }, 
+        {
+            "type_id": "sound disc "
+        }, 
+        {
+            "type_id": "sound-tape reel"
+        }, 
+        {
+            "type_id": "sound-track film "
+        }, 
+        {
+            "type_id": "wire recording"
+        }, 
+        {
+            "type_id": "tactile material"
+        }, 
+        {
+            "type_id": "braille"
+        }, 
+        {
+            "type_id": "combination"
+        }, 
+        {
+            "type_id": "moon"
+        }, 
+        {
+            "type_id": "tactile, with no writing system"
+        }, 
+        {
+            "type_id": "text"
+        }, 
+        {
+            "type_id": "braille"
+        }, 
+        {
+            "type_id": "large print"
+        }, 
+        {
+            "type_id": "regular print"
+        }, 
+        {
+            "type_id": "text in looseleaf binder"
+        }, 
+        {
+            "type_id": "videorecording"
+        }, 
+        {
+            "type_id": "videocartridge"
+        }, 
+        {
+            "type_id": "videocassette"
+        }, 
+        {
+            "type_id": "videodisc"
+        }, 
+        {
+            "type_id": "videoreel"
+        }, 
+        {
+            "type_id": "unspecified"
+        }, 
+        {
+            "type_id": "notated music"
+        }, 
+        {
+            "type_id": "kit"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "form"
+}

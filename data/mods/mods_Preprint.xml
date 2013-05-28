@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:nonSort>The </mods:nonSort>
+    <mods:title>effects at home of initiating production abroad: evidence from matched french firms</mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__c8dmi8nm4pdjkuc9g8m3565k5_-__-_2441__d7a7evb2ctdg4i89gesapaoj4_-_d7a7evb2ctdg4i89gesapaph9" type="personal">
+    <mods:namePart type="given">Sébastien</mods:namePart>
+    <mods:namePart type="family">Jean</mods:namePart>
+    <mods:affiliation>Laboratoire de Conception et d'Intégration des Systèmes</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__c8dmi8nm4pdjkuc9g8m34i593_-__-_2441__5l6uh8ogmqildh09h29b6gkol_-_5l6uh8ogmqildh09h2cs84t3k" type="personal">
+    <mods:namePart type="given">Alexander</mods:namePart>
+    <mods:namePart type="family">Hijzen</mods:namePart>
+    <mods:affiliation>Leverhulme Centre for Research on Globalisation and Economic Policy (GEP)</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i789685q5aqa5_-_2441__9labe9r4se65i789685q5aqa5_-_2441__9labe9r4se65i789685q385c7_-_53r60a8s3kup1vc9je4p8e8b8" type="personal">
+    <mods:namePart type="given">Thierry</mods:namePart>
+    <mods:namePart type="family">Mayer</mods:namePart>
+    <mods:affiliation>Département d'économie</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/preprint</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/SubmittedJournalArticle</mods:genre>
+  <mods:genre authority="marcgt">article</mods:genre>
+  <mods:originInfo>
+    <mods:dateCreated encoding="iso8601">2011</mods:dateCreated>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+  </mods:language>
+  <mods:abstract lang="en">Based on matching techniques in combination with a difference-in-difference estimator, this paper estimates the effects at home of initiating production abroad through the establishment of a foreign production affiliate. The analysis covers manufacturing and service firms active in France during the period 1987–1999. We show that the motivation to start producing abroad is an important determinant of its impact at home. Market-seeking foreign direct investment (FDI) in manufacturing is associated with significant scale effects, resulting in job creation. By contrast, factor-seeking FDI in manufacturing has no significant effect on employment. However, there is some evidence that this type of FDI is associated with technology effects, in the form of greater capital-intensity and efficiency, as well as larger exports. Finally, FDI in service sectors is associated with significant positive employment effects, presumably reflecting the importance of the market-seeking motive in these sectors. </mods:abstract>
+  <mods:subject lang="fr">
+    <mods:topic>FDI, multinationals, propensity sc ore matching, services, delocalisation</mods:topic>
+  </mods:subject>
+  <mods:classification authority="info:eu-repo/authority/jel" lang="fr">F14</mods:classification>
+  <mods:classification authority="info:eu-repo/authority/jel" lang="fr">F21</mods:classification>
+  <mods:classification authority="info:eu-repo/authority/jel" lang="fr">F23</mods:classification>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__9labe9r4se65i789685q5aqa5_-_2441__9labe9r4se65i789685q5aqa5_-_2441__9labe9r4se65i789685q385c7_-_1t7h32b38tdhjk89g8mb00e9n" authority="http://spire.sciences-po.fr/hdl:">2441/9labe9r4se65i789685q5aqa5</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

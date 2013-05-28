@@ -3,7 +3,7 @@
 # coding=utf-8
 
 import os
-from referencemanager.cloud import summon
+from biblib.cloud import summon
 
 
 def test():

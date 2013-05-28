@@ -1,0 +1,62 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "accepted"
+            }, 
+            "type_id": "accepted"
+        }, 
+        {
+            "labels": {
+                "en": "draft"
+            }, 
+            "type_id": "draft"
+        }, 
+        {
+            "labels": {
+                "en": "forthcoming"
+            }, 
+            "type_id": "forthcoming"
+        }, 
+        {
+            "labels": {
+                "en": "legal"
+            }, 
+            "type_id": "legal"
+        }, 
+        {
+            "labels": {
+                "en": "nonPeerReviewed"
+            }, 
+            "type_id": "nonPeerReviewed"
+        }, 
+        {
+            "labels": {
+                "en": "peerReviewed"
+            }, 
+            "type_id": "peerReviewed"
+        }, 
+        {
+            "labels": {
+                "en": "published"
+            }, 
+            "type_id": "published"
+        }, 
+        {
+            "labels": {
+                "en": "rejected"
+            }, 
+            "type_id": "rejected"
+        }, 
+        {
+            "labels": {
+                "en": "unpublished"
+            }, 
+            "type_id": "unpublished"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "document_status"
+}

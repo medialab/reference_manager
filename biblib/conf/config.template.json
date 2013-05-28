@@ -1,0 +1,55 @@
+{
+    "mongodb": {
+        "db": "biblib",
+        "host": "localhost",
+        "port": 27017,
+        "default_corpus": "aime"
+    },
+    "jsonrpc": {
+        "port": 8080
+    },
+    "anta": {
+        "endpoint": "http://anta.example.com/api/",
+        "endpoint_frog": "http://anta.example.com/api-frog/",
+        "username": "username",
+        "password": "password"
+    },
+    "sven": {
+        "endpoint": "http://sven.example.com/anta/api/",
+        "username": "username",
+        "password": "password"
+    },
+    "crossref_openurl": {
+        "endpoint": "http://www.crossref.org/openurl",
+        "format": "unixref",
+        "pid": "me@example.org"
+    },
+    "google_scholar": {
+        "endpoint": "http://scholar.google.com"
+    },
+    "pubmed": {
+        "endpoint_baseurl": "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+        "db": "pubmed",
+        "tool": "biblib",
+        "email": "me@example.org",
+        "usehistory":"y",
+        "retmax":1
+    },
+    "summon": {
+        "host": "api.summon.serialssolutions.com",
+        "path": "/2.0.0/search",
+        "access_id": "university",
+        "secret_key": "***"
+    },
+    "abbyy": {
+        "endpoint": "http://cloud.ocrsdk.com/",
+        "application_id": "toolName",
+        "password": "***"
+    },
+    "ldap": {
+        "host": "ldap://ldap.example.org",
+        "port": 389,
+        "dn": "uid=me, ou=Users, o=example, c=com",
+        "password": "***"
+    }
+}

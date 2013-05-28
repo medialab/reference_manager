@@ -1,0 +1,32 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "type_id": "[periodical]"
+        }, 
+        {
+            "type_id": "year"
+        }, 
+        {
+            "type_id": "volume"
+        }, 
+        {
+            "type_id": "issue"
+        }, 
+        {
+            "type_id": "section (chapter, article, book review)"
+        }, 
+        {
+            "type_id": "page"
+        }, 
+        {
+            "type_id": "entry (column…)"
+        }, 
+        {
+            "type_id": "ill"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "structure_type"
+}
