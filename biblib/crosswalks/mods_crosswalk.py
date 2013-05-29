@@ -7,12 +7,12 @@ from xml.etree.ElementTree import QName
 from biblib import metajson
 from biblib.metajson import Document
 from biblib.metajson import Resource
-from biblib.metajson import Contributor
+from biblib.metajson import Creator
 from biblib.metajson import Person
 from biblib.metajson import Family
 from biblib.metajson import Orgunit
 from biblib.metajson import Event
-from biblib.services import contributor_service
+from biblib.services import creator_service
 from biblib.services import language_service
 
 
@@ -199,11 +199,11 @@ def mods_xmletree_to_metajson(mods, source):
     # title
     document.update(convert_mods_titleinfos(mods.findall(prefixtag("mods", "titleInfo"))))
 
-    # contributors
-    contributors = extract_contributors(mods)
-    if contributors:
-        #print contributors
-        document["contributors"] = contributors
+    # creators
+    creators = extract_creators(mods)
+    if creators:
+        #print creators
+        document["creators"] = creators
 
     return document
 
@@ -307,7 +307,7 @@ def convert_mods_titleinfo(mods_titleinfo):
         return title_dict
 
 
-def extract_contributors(mods):
+def extract_creators(mods):
     mods_names = mods.findall(prefixtag("mods", "name"))
     if mods_names:
         extension = mods.find(prefixtag("mods", "extension"))
@@ -317,9 +317,9 @@ def extract_contributors(mods):
 
         result = []
         for mods_name in mods_names:
-            contributor = convert_mods_name_to_contributor(mods_name, dai_dict)
-            if contributor is not None:
-                result.append(contributor)
+            creator = convert_mods_name_to_creator(mods_name, dai_dict)
+            if creator is not None:
+                result.append(creator)
         return result
 
 
@@ -334,9 +334,9 @@ def convert_mods_dailist_to_dict(dai_list):
             return result
 
 
-def convert_mods_name_to_contributor(mods_name, dai_dict):
+def convert_mods_name_to_creator(mods_name, dai_dict):
     if mods_name is not None:
-        contributor = Contributor()
+        creator = Creator()
         # extract properties
         name_type = mods_name.get("type")
         name_id = mods_name.get("ID")
@@ -373,9 +373,9 @@ def convert_mods_name_to_contributor(mods_name, dai_dict):
                     elif name_part.get("termsOfAddress") == "date":
                         person["name_terms_of_address"] = name_part.text
 
-            contributor["person"] = person
+            creator["agent"] = person
         #print name_type, name_id, name_parts, name_affiliations, name_roleterm, name_descriptions
-        return contributor
+        return creator
 
 
 def convert_mods_name_roleterms(mods_roleterms):

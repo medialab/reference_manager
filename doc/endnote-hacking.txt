@@ -38,10 +38,10 @@ Nous avons défini le détournement d'EndNote suivant afin d'enregistrer les don
 
 - Description : champ EndNote : XPath EndNote : MetaJSON
 
-*- AUTEUR (1) DE L'IMAGE ou oeuvre d'art : Created by : /contributors/authors/author/style : contributors[i]@role=aut
+*- AUTEUR (1) DE L'IMAGE ou oeuvre d'art : Created by : /contributors/authors/author/style : creators[i]@role=aut
 *- DATE (1) DE L'IMAGE ou oeuvre d'art : Year : /dates/year/style : date_issued
 *- TITRE (1) DE L'IMAGE ou l'oeuvre d'art : Title : /titles/title/style : title
-*- AUTEUR (2) DU DOCUMENT qui le contient (livre, article, etc.) : Name of file : /contributors/secondary-authors/author/style : is_part_of/contributors[i]@role=edt
+*- AUTEUR (2) DU DOCUMENT qui le contient (livre, article, etc.) : Name of file : /contributors/secondary-authors/author/style : is_part_of/creators[i]@role=edt
 *- TITRE (2) DU DOCUMENT  qui le contient (livre, article, etc.) : Image Source Program : /titles/secondary-title/style : is_part_of/title
 - DATE (2) DU DOCUMENT qui le contient (livre, article, etc.) : Date : 
 - TITRE (3) [Pour Julien : si ‘Translated Tile’ : associer la date, Place Published, Publisher, Description/pages à ce translated Title] : Translated Title : /titles/translated-title/style : is_part_of/is_part_of/title

@@ -9,7 +9,6 @@ from gspreadsheet import GSpreadsheet
 from bson import json_util
 
 from biblib.metajson import Type
-from biblib.util import console
 
 locations = [
     os.path.abspath(os.path.join(os.getcwd(), 'biblib')),
@@ -18,13 +17,8 @@ locations = [
     os.path.abspath(os.path.join(os.getcwd(), os.pardir, os.pardir)),
     os.path.expanduser("~"),
     "/etc/biblib",
-    os.environ.get("REFMAN_CONF")
+    os.environ.get("BIBLIB_CONF")
 ]
-
-google_client_email = 'julien.rault@gmail.com'
-google_client_password = 'jr77drd12'
-
-google_spreadsheet_key = "tOdyzJZlKfSeqxWcfnMiwog"
 
 
 def load_config():
@@ -62,12 +56,12 @@ def load_metajson_title_non_sort():
 
 
 def retrieve_google_types(app):
-    spreadsheet = GSpreadsheet(key=google_spreadsheet_key, email=google_client_email, password=google_client_password)
+    spreadsheet = GSpreadsheet(key=config["conf_key"], email=config["email"], password=config["password"])
     keys = {}
     type_worksheets = get_google_types_worksheets(spreadsheet)
     for ws_id, ws_name in type_worksheets:
         print 'worksheet code: {}, name: {}'.format(ws_id, ws_name)
-        worksheet = GSpreadsheet(worksheet=ws_id, key=google_spreadsheet_key, email=google_client_email, password=google_client_password)
+        worksheet = GSpreadsheet(worksheet=ws_id, key=config["conf_key"], email=config["email"], password=config["password"])
         type_bundle = google_worksheet_to_type(ws_name, worksheet, app, keys)
         type_bundle_id = type_bundle["type_id"]
         type_bundle_dump = dump_metajson(type_bundle)

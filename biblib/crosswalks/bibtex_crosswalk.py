@@ -3,7 +3,7 @@
 # coding=utf-8
 
 from biblib.metajson import Document
-from biblib.services import contributor_service
+from biblib.services import creator_service
 from pybtex.database.input import bibtex
 from pybtex.database import BibliographyData
 from pybtex.database import Person
@@ -23,7 +23,7 @@ def bibtex_entry_to_metajson(entry, source):
     print "bibtex_entry_to_metajson"
     # todo convert bibtext to metajson
     document = Document()
-    document["contributors"] = extract_contributors(entry)
+    document["creators"] = extract_creators(entry)
     document["title"] = get_field(entry, 'title')
     document["date_issued"] = get_field(entry, 'year')
     is_part_of_title = get_field(entry, 'journal')
@@ -40,16 +40,16 @@ def bibtex_entry_to_metajson(entry, source):
     return document
 
 
-def extract_contributors(entry):
+def extract_creators(entry):
     if "author" in entry.persons:
-        contributors = []
+        creators = []
         authors = entry.persons["author"]
         for author in authors:
             formatted_name = unicode(author).encode('utf-8')
             formatted_name = formatted_name.replace("{", "").replace("}", "")
-            contributor = contributor_service.formatted_name_to_contributor(formatted_name, "person", "aut")
-            contributors.append(contributor)
-            return contributors
+            creator = creator_service.formatted_name_to_creator(formatted_name, "person", "aut")
+            creators.append(creator)
+            return creators
     else:
         return None
 

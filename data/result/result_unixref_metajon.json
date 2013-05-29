@@ -28,12 +28,12 @@
                         "title": "Science"
                     }
                 ], 
-                "rec_class": "Document", 
-                "rec_metajson": 1, 
                 "part_issue": "5304", 
                 "part_page_end": "1323", 
                 "part_page_start": "1320", 
                 "part_volume": "275", 
+                "rec_class": "Document", 
+                "rec_metajson": 1, 
                 "rec_source": "test", 
                 "rec_type": "JournalArticle", 
                 "resources": [
@@ -74,12 +74,12 @@
                         "title_abbreviated": "J. Phys. Oceanogr."
                     }
                 ], 
-                "rec_class": "Document", 
-                "rec_metajson": 1, 
                 "part_issue": "3", 
                 "part_page_end": "890", 
                 "part_page_start": "870", 
                 "part_volume": "32", 
+                "rec_class": "Document", 
+                "rec_metajson": 1, 
                 "rec_source": "test", 
                 "rec_type": "JournalArticle", 
                 "resources": [

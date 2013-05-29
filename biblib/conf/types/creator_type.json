@@ -32,5 +32,5 @@
     ], 
     "rec_class": "Type", 
     "rec_metajson": 1, 
-    "type_id": "contributor_type"
+    "type_id": "creator_type"
 }

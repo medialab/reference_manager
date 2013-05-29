@@ -48,8 +48,8 @@ class Collection(Common):
     pass
 
 
-# Contributor
-class Contributor(Common):
+# Creator
+class Creator(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "agent" in self:
@@ -98,22 +98,22 @@ class Document(Common):
             self["rec_metajson"] = rec_metajson
         if "rec_class" not in self:
             self["rec_class"] = "Document"
-        if "contributors" in self:
-            self["contributors"] = [Contributor(x) for x in self["contributors"]]
+        if "creators" in self:
+            self["creators"] = [Creator(x) for x in self["creators"]]
         if "is_part_of" in self:
             self["is_part_of"] = [Document(x) for x in self["is_part_of"]]
         if "resources" in self:
             self["resources"] = [Resource(x) for x in self["resources"]]
 
-    def add_contributors(self, contributors):
-        self.add_items_to_key(contributors, "contributors")
+    def add_creators(self, creators):
+        self.add_items_to_key(creators, "creators")
 
-    def get_contributors_by_role(self, role):
+    def get_creators_by_role(self, role):
         results = []
-        if "contributors" in self:
-            for contributor in self["contributors"]:
-                if contributor["role"] == role:
-                    results.append(contributor)
+        if "creators" in self:
+            for creator in self["creators"]:
+                if creator["role"] == role:
+                    results.append(creator)
         return results
 
     def get_date(self):

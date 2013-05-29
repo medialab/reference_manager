@@ -4,7 +4,7 @@
 
 import urllib
 from xml.sax.saxutils import quoteattr
-from biblib.services import contributor_service
+from biblib.services import creator_service
 
 metajson_type_to_openurl_book_genre = {
     "Book": "book",
@@ -173,7 +173,7 @@ def metajson_to_openurl(document):
         openurl["rft.atitle"] = document["title"]
 
         # au
-        aus = document.get_contributors_by_role("aut")
+        aus = document.get_creators_by_role("aut")
         if len(aus) > 0:
             openurl["rft.au"] = aus[0].formatted_name()
 
@@ -183,12 +183,12 @@ def metajson_to_openurl(document):
             openurl["rft.cc"] = cc
 
         # inst
-        insts = document.get_contributors_by_role("dgg")
+        insts = document.get_creators_by_role("dgg")
         if len(insts) > 0:
             openurl["rft.inst"] = insts[0].formatted_name()
 
         # advisor
-        advisors = document.get_contributors_by_role("dgg")
+        advisors = document.get_creators_by_role("dgg")
         if len(advisors) > 0:
             openurl["rft.advisor"] = advisors[0].formatted_name()
 
@@ -258,13 +258,13 @@ def metajson_to_openurl(document):
         # common properties for book and journal
 
         # au, aucorp
-        if "contributors" in document:
-            for contributor in document["contributors"]:
-                if "role" in contributor and contributor["role"] in contributor_service.contributor_citable_roles:
-                    if "rft.au" not in openurl and "person" in contributor:
-                        openurl["rft.au"] = contributor.formatted_name()
-                    elif "rft.aucorp" not in openurl and "orgunit" in contributor:
-                        openurl["rft.aucorp"] = contributor.formatted_name()
+        if "creators" in document:
+            for creator in document["creators"]:
+                if "role" in creator and creator["role"] in creator_service.creator_citable_roles:
+                    if "rft.au" not in openurl and "person" in creator:
+                        openurl["rft.au"] = creator.formatted_name()
+                    elif "rft.aucorp" not in openurl and "orgunit" in creator:
+                        openurl["rft.aucorp"] = creator.formatted_name()
 
         # issn
         issn = document.get_first_value_for_type_in_list_from_all_level("identifiers", "issn")

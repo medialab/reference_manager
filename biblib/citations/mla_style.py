@@ -16,10 +16,10 @@ def cite(document, format):
 
     result = ""
 
-    # contributors
-    contributors = format_contributors_of_document(document, 0)
-    if contributors:
-        result += contributors
+    # creators
+    creators = format_creators_of_document(document, 0)
+    if creators:
+        result += creators
 
     # title
     title = format_title_of_document(document)
@@ -33,10 +33,10 @@ def cite(document, format):
         if is_part_of_title:
             result += is_part_of_title
 
-        # is_part_of_contributors
-        is_part_of_contributors = format_contributors_of_document(is_part_of, 1)
-        if is_part_of_contributors:
-            result += is_part_of_contributors
+        # is_part_of_creators
+        is_part_of_creators = format_creators_of_document(is_part_of, 1)
+        if is_part_of_creators:
+            result += is_part_of_creators
 
         # is_part_of_is_part_of
         if is_part_of_is_part_of:
@@ -46,13 +46,13 @@ def cite(document, format):
             if is_part_of_is_part_of_title:
                 result += is_part_of_is_part_of_title
 
-            # is_part_of_is_part_of_contributors
-            is_part_of_is_part_of_contributors = format_contributors_of_document(is_part_of_is_part_of, 2)
-            if is_part_of_is_part_of_contributors:
-                result += is_part_of_is_part_of_contributors
+            # is_part_of_is_part_of_creators
+            is_part_of_is_part_of_creators = format_creators_of_document(is_part_of_is_part_of, 2)
+            if is_part_of_is_part_of_creators:
+                result += is_part_of_is_part_of_creators
 
 
-    # Others contributors
+    # Others creators
     # Trans. (translated by) trl
     # Dir. (directed by) drt
     # Writ. (written by). sce
@@ -63,7 +63,7 @@ def cite(document, format):
     # aut
     # dgg
     # cph
-    contrib_dict = get_contributors_dict_of_document(document)
+    contrib_dict = get_creators_dict_of_document(document)
 
     # edition
     edition = document.get_edition()
@@ -94,7 +94,7 @@ def cite(document, format):
 
     else:
         pass
-        # todo contributor dgg
+        # todo creator dgg
 
     # part_volume, part_issue
     part_volume = document.get_part_volume()
@@ -192,38 +192,38 @@ def format_title_of_document(document):
             return u"<span class=\"title\">{0}</span>. ".format(result)
 
 
-def get_contributors_dict_of_document(document):
-    if "contributors" in document:
+def get_creators_dict_of_document(document):
+    if "creators" in document:
         result = {}
         # "aut", "act", "cph", "dgg", "edt", "pro", "trl"
-        for contributor in document["contributors"]:
-            if "role" in contributor:
+        for creator in document["creators"]:
+            if "role" in creator:
                 try:
-                    result[contributor["role"]].append(contributor)
+                    result[creator["role"]].append(creator)
                 except:
-                    result[contributor["role"]] = [contributor]
+                    result[creator["role"]] = [creator]
             else:
                 try:
-                    result["ctb"].append(contributor)
+                    result["ctb"].append(creator)
                 except:
-                    result["ctb"] = [contributor]
+                    result["ctb"] = [creator]
         return result
 
 
-def format_contributors_of_document(document, level):
-    if "contributors" in document:
+def format_creators_of_document(document, level):
+    if "creators" in document:
         result = ""
-        contri_count = len(document["contributors"])
+        contri_count = len(document["creators"])
         has_edt = False
-        for position, contributor in enumerate(document["contributors"]):
-            if contributor["role"] in ["aut", "edt"]:
-                if contributor["role"] == "edt":
+        for position, creator in enumerate(document["creators"]):
+            if creator["role"] in ["aut", "edt"]:
+                if creator["role"] == "edt":
                     has_edt = True
                 if 0 < position < contri_count - 1:
                     result += ", "
                 elif position == contri_count - 1 and contri_count > 1:
                     result += ", and "
-                result += format_contributor(contributor, position)
+                result += format_creator(creator, position)
 
                 if contri_count > 3:
                     result += ", et al"
@@ -240,10 +240,10 @@ def format_contributors_of_document(document, level):
                 return result + ". "
 
 
-def format_contributor(contributor, position):
+def format_creator(creator, position):
     style = metajson.STYLE_FAMILY_COMMA_GIVEN
     if position > 0:
         style = metajson.STYLE_GIVEN_FAMILY
-    formatted_name = contributor.formatted_name(style)
+    formatted_name = creator.formatted_name(style)
     if formatted_name:
-        return u"<span class=\"contributor\">{0}</span>".format(formatted_name)
+        return u"<span class=\"creator\">{0}</span>".format(formatted_name)

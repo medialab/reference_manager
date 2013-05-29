@@ -114,10 +114,11 @@ class References_repository(jsonrpc.JSONRPC):
         if document_list:
             results = []
             for document in document_list:
-                result = {"rec_id": document["rec_id"]}
+                result = {}
+                result["rec_id"] = document["rec_id"]
                 result[style] = citations_manager.cite(document, style, format)
                 results.append(result)
-            return results
+            return self.format_bson(results)
 
     def jsonrpc_search(self, query):
         """ search for one or more data from the repository
@@ -125,7 +126,7 @@ class References_repository(jsonrpc.JSONRPC):
                 - mongoquery: search query must respect the mongoquery syntax
             return the asked data (in JSON)
         """
-        repository_service.search_documents(None, query)
+        return self.format_bson(repository_service.search_documents(None, query))
 
     def jsonrpc_types(self, type_id, language):
         """ search for one or more types from the repository

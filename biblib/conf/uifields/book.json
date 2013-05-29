@@ -23,7 +23,7 @@
             "required": false
         },
         {
-            "property": "contributors_aut",
+            "property": "creators_aut",
             "type_ui": "ChoiceField",
             "type_data": "list.Person/Orgunit",
             "labels": 
@@ -34,7 +34,7 @@
             "required": true
         },
         {
-            "property": "contributors_pbd",
+            "property": "creators_pbd",
             "type_ui": "ChoiceField",
             "type_data": "list.Person/Orgunit",
             "labels": 
@@ -44,7 +44,7 @@
             },
             "required": false
         },        {
-            "property": "contributors_trl",
+            "property": "creators_trl",
             "type_ui": "ChoiceField",
             "type_data": "list.Person/Orgunit",
             "labels": 

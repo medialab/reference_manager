@@ -2,7 +2,7 @@
     "col_id": "aime", 
     "records": [
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -51,7 +51,7 @@
             "title_sub": "DESCRIBED AND DISCUSSED. Railroading as an Employment. TRAFFIC ASSOCIATIONS. REASONABLE RATES. The Palace Car Service. POPULAR HOSTILITY TO RAILROADS. Steam and Electric Railways. A YEAR'S HISTORY IN <h>EUROPE</h> AND AUSTRALIA. Progressive Centralization of Power in the <h>Federal</h> Government. A SYMPOSIUM BY A CHAPTER IN THE EARLY HISTORY OF THE NEW YORK CENTRAL RAILROAD"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -121,7 +121,7 @@
             "title": "Specialized Medical Education in the European Region. EURO Reports and Studies 112"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -199,7 +199,7 @@
             "title": "Component parts of the World Heat Flow Data Collection"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -261,7 +261,7 @@
             "title": "Thermal Spray Solutions For Diesel Engine Piston Rings"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -339,7 +339,7 @@
                     "id": "Languages & Literatures"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -412,7 +412,7 @@
             "title": "Working With Our Neighbors All Over the World"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -558,7 +558,7 @@
             "title_sub": "1"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -642,7 +642,7 @@
                     "id": "Economics"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -809,7 +809,7 @@
             "title": "Country Forecast Belgium May 2009 Updater"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "orgunit": {
                         "rec_class": "Orgunit", 
@@ -901,7 +901,7 @@
                     "id": "Business"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -981,7 +981,7 @@
             "title": "The Misery Index: wake up, Canada! We're shouldering a heavier tax burden than most industrialized countries"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -1073,7 +1073,7 @@
                     "id": "Economics"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -1209,7 +1209,7 @@
                     "id": "Economics"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -1366,7 +1366,7 @@
                     "id": "Medicine"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -1441,7 +1441,7 @@
                     "id": "Economics"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -1513,7 +1513,7 @@
                     "id": "Journalism & Communications"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -1684,7 +1684,7 @@
             "title": "Fact sheet"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -1875,7 +1875,7 @@
                     "id": "Business"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -1948,7 +1948,7 @@
                     "id": "Business"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -2331,7 +2331,7 @@
                     "id": "Business"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -2402,7 +2402,7 @@
                     "id": "Business"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -2474,7 +2474,7 @@
                     "id": "Business"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -2546,7 +2546,7 @@
                     "id": "Business"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -3100,7 +3100,7 @@
                     "id": "Law"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -3177,7 +3177,7 @@
                     "id": "Business"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -3503,7 +3503,7 @@
                     "id": "Political Science"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -3589,7 +3589,7 @@
             "title": "<h>Federal</h> <h>Europe</h>"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -3744,7 +3744,7 @@
             "title_sub": "1F Edition"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -3878,7 +3878,7 @@
             "title": "<h>Federal</h> <h>Europe</h>, A"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -3911,7 +3911,7 @@
             "title": "Towards a <h>Federal</h> <h>Europe</h>?"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -3974,7 +3974,7 @@
             "title_sub": "Letters to the Editor"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -4086,7 +4086,7 @@
                     "id": "Business"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -4169,7 +4169,7 @@
                     "id": "Political Science"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -4227,7 +4227,7 @@
             "title": "Le <h>fédéralisme</h> en <h>Europe</h>"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -4285,7 +4285,7 @@
             "title_sub": "First Edition"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -4343,7 +4343,7 @@
             "title_sub": "Final 4 Edition"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -4401,7 +4401,7 @@
             "title_sub": "First Edition"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -4547,7 +4547,7 @@
             "title_sub": "CITY EDITION"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -4613,7 +4613,7 @@
                     "id": "Economics"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -4812,7 +4812,7 @@
             "title_sub": "GENEVA DISCUSSION ON THE BRIAND PLAN"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5011,7 +5011,7 @@
                     "id": "Law"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5059,7 +5059,7 @@
             "title": "Towards a <h>federal</h> <h>Europe</h>?"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5129,7 +5129,7 @@
             "title": "Santa Backs <h>Federal</h> <h>Europe</h>"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5354,7 +5354,7 @@
             "title": "Owen rejects <h>federal</h> <h>Europe</h>"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5407,7 +5407,7 @@
             "title_sub": "<h>Europe</h> des Etatsun projet de synthèse"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5465,7 +5465,7 @@
             "title": "A <h>federal</h> <h>Europe</h>, by order"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5517,7 +5517,7 @@
             "title_sub": "Single Government Proposed By Briton; Action Delayed Strasbourg, France, Nov. 19"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5625,7 +5625,7 @@
             "title": "Alternative to a <h>federal</h> <h>Europe</h>"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5691,7 +5691,7 @@
             "title": "British want <h>federal</h> <h>Europe</h>"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5757,7 +5757,7 @@
             "title_sub": "London edition"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5851,7 +5851,7 @@
             "title_sub": "2 Edition"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5908,7 +5908,7 @@
             "title_sub": "3 Edition"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -5967,7 +5967,7 @@
             "title_sub": "Final Chaser Edition"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -6030,7 +6030,7 @@
             "title_sub": "North Sports Final Edition"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -6092,7 +6092,7 @@
             "title_sub": "The EEC"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -6155,7 +6155,7 @@
             "title_sub": "She Resists, Correctly, a Blurring of Sovereignty for Expedience"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -6226,7 +6226,7 @@
                     "id": "Business"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -6309,7 +6309,7 @@
                     "id": "History & Archaeology"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "name_family": "GONZÁLEZ", 
                     "name_given": "FELIPE", 
@@ -6410,7 +6410,7 @@
                     "id": "Law"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "name_family": "HASELER", 
                     "name_given": "STEPHEN", 
@@ -6500,7 +6500,7 @@
                     "id": "International Relations"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "name_family": "Toulemon", 
                     "name_given": "Robert", 
@@ -6563,7 +6563,7 @@
                     "id": "Social Welfare & Social Work"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "name_family": "Spicker", 
                     "name_given": "Paul", 
@@ -6625,7 +6625,7 @@
                     "id": "Social Sciences (General)"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -6690,7 +6690,7 @@
                     "id": "Economics"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -6825,7 +6825,7 @@
                     "id": "History & Archaeology"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "name_family": "Thielemann", 
                     "name_given": "Eiko R", 
@@ -6980,7 +6980,7 @@
                     "id": "Political Science"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "date_of_birth": "1968", 
@@ -7056,7 +7056,7 @@
             "title_sub": "les espoirs et les actions <h>fédéralistes</h> au sortir de la seconde guerre mondiale"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -7121,7 +7121,7 @@
             "title": "<h>Federalisme</h> en <h>Europe</h> orientale"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -7166,7 +7166,7 @@
             "title": "From Confederacy to Federation: A case for a <h>Federal</h> <h>Europe</h>"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -7199,7 +7199,7 @@
             "title": "Internal security and the making of a <h>federal</h> <h>Europe</h>"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -7251,7 +7251,7 @@
             "title": "The hinge of <h>Europe</h>: a history of the artificial state of Belgium and how it prefigures a <h>federal</h> <h>Europe</h>"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -7288,7 +7288,7 @@
             "title": "<h>Federal</h> Republic of <h>Europe</h>: German Federalism as a probable model for the European Union"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -7349,7 +7349,7 @@
             "title": "<h>Federal</h> Republic of <h>Europe</h>: German Federalism as a probable model for the European Union"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -7408,7 +7408,7 @@
             "title": "THE MANAGEMENT OF POSTINDUSTRIAL PROBLEMS IN WESTERN <h>EUROPE</h>: ENERGY POLICY IN THE <h>FEDERAL</h> REPUBLIC OF GERMANY, FRANCE AND THE NETHERLANDS"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -7449,7 +7449,7 @@
             "title": "Bundesstaat und europäische Integration : die \"Europatauglichkeit\" des deutschen Föderalismus"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -7769,7 +7769,7 @@
                     "id": "History & Archaeology"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -8171,7 +8171,7 @@
                     "id": "Economics"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "date_of_birth": "1948", 
@@ -8245,7 +8245,7 @@
                     "id": "Government"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -8375,7 +8375,7 @@
                     "id": "Law"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -8465,7 +8465,7 @@
                     "id": "Political Science"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -8533,7 +8533,7 @@
             "title_sub": "Etats-Unis <h>d'Europe</h>, <h>Europe</h> des Etats-Unis ou indépendance"
         }, 
         {
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -8601,7 +8601,7 @@
                     "id": "Law"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "date_of_birth": "1948", 
@@ -8682,7 +8682,7 @@
                     "id": "Law"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 
@@ -8833,7 +8833,7 @@
                     "id": "940.55"
                 }
             ], 
-            "contributors": [
+            "creators": [
                 {
                     "person": {
                         "rec_class": "Person", 

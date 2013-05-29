@@ -7,9 +7,9 @@
                     {
                         "meta_type": "DDI", 
                         "rec_class": "Warpper", 
-                        "rec_metajson": 1, 
-                        "rec_id": "DMD00001", 
+                        "rec_id": "DMD_00001", 
                         "rec_id_group": null, 
+                        "rec_metajson": 1, 
                         "records": [
                             null
                         ]
@@ -26,15 +26,144 @@
                     {
                         "meta_type": "DC", 
                         "rec_class": "Warpper", 
-                        "rec_metajson": 1, 
                         "rec_id": "DMD001", 
                         "rec_id_group": null, 
+                        "rec_metajson": 1, 
                         "records": [
                             null, 
                             null, 
                             null, 
                             null, 
                             null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null
+                        ]
+                    }
+                ], 
+                "rec_class": "Document", 
+                "rec_metajson": 1, 
+                "rec_source": "test"
+            }
+        ], 
+        [
+            {
+                "dmds": [
+                    {
+                        "meta_type": "DC", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "DMD001", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null
+                        ]
+                    }
+                ], 
+                "rec_class": "Document", 
+                "rec_metajson": 1, 
+                "rec_source": "test"
+            }
+        ], 
+        [
+            {
+                "dmds": [
+                    {
+                        "meta_type": "DC", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "DMD001", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null
+                        ]
+                    }
+                ], 
+                "rec_class": "Document", 
+                "rec_metajson": 1, 
+                "rec_source": "test"
+            }
+        ], 
+        [
+            {
+                "dmds": [
+                    {
+                        "meta_type": "DC", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "DMD001", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null, 
+                            null
+                        ]
+                    }
+                ], 
+                "rec_class": "Document", 
+                "rec_metajson": 1, 
+                "rec_source": "test"
+            }
+        ], 
+        [
+            {
+                "dmds": [
+                    {
+                        "meta_type": "DC", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "DMD001", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
                             null, 
                             null, 
                             null, 
@@ -59,9 +188,1418 @@
                     {
                         "meta_type": "MODS", 
                         "rec_class": "Warpper", 
+                        "rec_id": "nla.news-issn18339719_19450913", 
+                        "rec_id_group": null, 
                         "rec_metajson": 1, 
-                        "rec_id": "DMD-0001", 
-                        "rec_id_group": "DMDGRP-0001", 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle1", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle2", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle3", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle4", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle5", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle6", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle7", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle8", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle9", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle10", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle11", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle12", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle13", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle14", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle15", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle16", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle17", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle18", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle19", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle20", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle21", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle22", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle23", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle24", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle25", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle26", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle27", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle28", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle29", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle30", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle31", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle32", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle33", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle34", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle35", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle36", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle37", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle38", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle39", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle40", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle41", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle42", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle43", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle44", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle45", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle46", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle47", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle48", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle49", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle50", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle51", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle52", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle53", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle54", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle55", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle56", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle57", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle58", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle59", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle60", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle61", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle62", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle63", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle64", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle65", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle66", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle67", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle68", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle69", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle70", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle71", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle72", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle73", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle74", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle75", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle76", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle77", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle78", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle79", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle80", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle81", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle82", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle83", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle84", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle85", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle86", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle87", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle88", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle89", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle90", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle91", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle92", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle93", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle94", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle95", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle96", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle97", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle98", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle99", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle100", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle101", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle102", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle103", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle104", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle105", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle106", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle107", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle108", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle109", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle110", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle111", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle112", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle113", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle114", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle115", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle116", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle117", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle118", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle119", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle120", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle121", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle122", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle123", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle124", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle125", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle126", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle127", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle128", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle129", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle130", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle131", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle132", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle133", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle134", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle135", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle136", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle137", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle138", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }, 
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "modsarticle139", 
+                        "rec_id_group": null, 
+                        "rec_metajson": 1, 
+                        "records": [
+                            null
+                        ]
+                    }
+                ], 
+                "rec_class": "Document", 
+                "rec_metajson": 1, 
+                "rec_source": "test"
+            }
+        ], 
+        [
+            {
+                "dmds": [
+                    {
+                        "meta_type": "MODS", 
+                        "rec_class": "Warpper", 
+                        "rec_id": "DMD_000001", 
+                        "rec_id_group": "DMDGRP_000001", 
+                        "rec_metajson": 1, 
                         "records": [
                             null
                         ]
@@ -69,9 +1607,9 @@
                     {
                         "meta_type": "DC", 
                         "rec_class": "Warpper", 
+                        "rec_id": "DMD_000002", 
+                        "rec_id_group": "DMDGRP_000001", 
                         "rec_metajson": 1, 
-                        "rec_id": "DMD-0002", 
-                        "rec_id_group": "DMDGRP-0001", 
                         "records": [
                             null
                         ]

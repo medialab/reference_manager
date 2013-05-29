@@ -3,12 +3,12 @@
     "records": [
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "AOSIS", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "AOSIS"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -20,12 +20,12 @@
                 "title": "Alliance of Small Island States Leaders ’ Declaration , 2012"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "AOSIS", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "AOSIS"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -37,13 +37,13 @@
                 "title": "AOSIS DECLARATION ON CLIMATE CHANGE 2009"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "Forum", 
-                            "name_given": "Climate Vulnerable"
+                            "name_given": "Climate Vulnerable", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -55,13 +55,13 @@
                 "title": "Climate Vulnerable Forum Declaration"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "Forum", 
-                            "name_given": "Climate Vulnerable"
+                            "name_given": "Climate Vulnerable", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -73,13 +73,13 @@
                 "title": "Climate Vulnerable Forum - DHAKA DECLARATION"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "Forum", 
-                            "name_given": "Climate Vulnerable"
+                            "name_given": "Climate Vulnerable", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -91,12 +91,12 @@
                 "title": "Climate Vulnerable Forum - AMBO DECLARATION"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -108,12 +108,12 @@
                 "title": "SUMMARY OF THE SECOND CONFERENCE OF THE PARTIES TO THE FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -125,12 +125,12 @@
                 "title": "SUBSIDIARY BODIES OF THE UN FRAMEWORK CONVENTION ON CLIMATE CHANGE : A BRIEF HISTORY OF THE FCCC AND ITS"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -142,12 +142,12 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -159,12 +159,12 @@
                 "title": "THE AD HOC GROUP ON THE BERLIN"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -176,12 +176,12 @@
                 "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -193,12 +193,12 @@
                 "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -210,12 +210,12 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -227,12 +227,12 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -244,12 +244,12 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -261,12 +261,12 @@
                 "title": "SESSION OF THE INC FOR A FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -278,12 +278,12 @@
                 "title": "A BRIEF HISTORY OF THE FRAMEWORK CONVENTION ON"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -295,12 +295,12 @@
                 "title": "A BRIEF HISTORY OF THE UNFCCC AND"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -312,12 +312,12 @@
                 "title": "CONFERENCE OF THE PARTIES FOR THE FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -329,12 +329,12 @@
                 "title": "Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -346,12 +346,12 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -363,12 +363,12 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -380,12 +380,12 @@
                 "title": "REPORT OF THE MEETINGS OF THE SUBSIDIARY BODIES TO THE FRAMEWORK"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -397,12 +397,12 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -414,12 +414,12 @@
                 "title": "HIGHLIGHTS FROM THE SIXTH SESSION OF THE AD HOC GROUP ON THE BERLIN MANDATE"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -431,12 +431,12 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -448,13 +448,13 @@
                 "title": "REPORT OF THE AD HOC GROUP ON THE BERLIN MANDATE"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "date_of_birth": "2011", 
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -474,12 +474,12 @@
                 "title": "Summary of the Durban Climate Change Conference"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "GEF", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "GEF"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -491,13 +491,13 @@
                 "title": "GEF CONTRIBUTIONS TO AGENDA 21"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "Hansen", 
-                            "name_given": "J E"
+                            "name_given": "J E", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -517,12 +517,12 @@
                 "title": "Scientific reticence and sea level rise"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "Head", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "Head"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -534,12 +534,12 @@
                 "title": "Progress in Human Geography Progress reports Cultural ecology : adaptation – retrofi tting a concept ?"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "Matczak", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "Matczak"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -551,13 +551,13 @@
                 "title": "Different perceptions of adaptation to climate change : a mental model approach applied to the evidence from expert interviews"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "Negotiations", 
-                            "name_given": "Development"
+                            "name_given": "Development", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -569,13 +569,13 @@
                 "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "Negotiations", 
-                            "name_given": "Development"
+                            "name_given": "Development", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -587,13 +587,13 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "Negotiations", 
-                            "name_given": "Development"
+                            "name_given": "Development", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -605,13 +605,13 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "Pattberg", 
-                            "name_given": "Philipp"
+                            "name_given": "Philipp", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -623,13 +623,13 @@
                 "title": "Beyond the public and private divide : remapping transnational climate governance in the 21st century"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "et al", 
-                            "name_given": "Reid"
+                            "name_given": "Reid", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -641,12 +641,12 @@
                 "title": "Southern voices on climate policy choices"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "Schipper", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "Schipper"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -658,13 +658,13 @@
                 "title": "Conceptual History of Adaptation in the UNFCCC Process"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "Pilifosova", 
-                            "name_given": "Smit \\&"
+                            "name_given": "Smit \\&", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -676,12 +676,12 @@
                 "title": "Adaptation to Climate Change in the Context of Sustainable Development and Equity"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "SSEE", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "SSEE"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -693,12 +693,12 @@
                 "title": "International climate change negotiations: key lessons and next steps"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "UNFCCC", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "UNFCCC"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -710,12 +710,12 @@
                 "title": "Report of the Conference of the Parties on its thirteenth session , held in Bali Part Two : Action taken by the Conference of the Parties at its thirteenth session"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "WWF", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "WWF"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -727,12 +727,12 @@
                 "title": "Scaling up investments in global climate solutions WWF recommendations for the G20"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "WWF", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "WWF"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -744,12 +744,12 @@
                 "title": "wwf RECOMMENDATIONs"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "WWF", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "WWF"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -761,12 +761,12 @@
                 "title": "WWF 2010 RECOMMENDATIONS"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "WWF", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "WWF"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -778,12 +778,12 @@
                 "title": "WWF Expectations for the UNFCCC Bonn Session"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "WWF", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "WWF"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -795,12 +795,12 @@
                 "title": "WWF Global Climate Policy WWF Expectations for a fair , ambitious and binding global climate deal in Copenhagen"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "WWF", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "WWF"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -812,12 +812,12 @@
                 "title": "The Montreal Climate Conference , Results and Next Steps January 2006 Introduction What were the cornerstones of the Montreal outcomes ? Launch of negotiations for the future"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -829,12 +829,12 @@
                 "title": "OF CLIMATE CHANGE AND THE IMPACT OF"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -846,12 +846,12 @@
                 "title": "SUMMARY OF THE UNFCCC EXPERT GROUP A BRIEF HISTORY OF ADAPTATION TO CLIMATE"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -863,12 +863,12 @@
                 "title": "SUMMARY OF THE UNFCCC TECHNICAL"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -880,12 +880,12 @@
                 "title": "SUMMARY OF THE WORKSHOP ON BEST"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -897,13 +897,13 @@
                 "title": "UNFCCC TECHNICAL WORKSHOP ON"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "Smith", 
-                            "name_given": "Mark Stafford"
+                            "name_given": "Mark Stafford", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -915,12 +915,12 @@
                 "title": "Rethinking adaptation for a 4 ° C world"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "UNFCCC", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "UNFCCC"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -932,12 +932,12 @@
                 "title": "REPORT OF THE CONFERENCE OF THE PARTIES ON ITS SECOND SESSION, HELD AT GENEVA FROM 8 TO 19 JULY 1996"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "WWF", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "WWF"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -951,12 +951,12 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -968,12 +968,12 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "ENB", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "ENB"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -985,13 +985,13 @@
                 "title": "Earth Negotiations Bulletin"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
-                            "rec_class": "Person", 
-                            "rec_metajson": 1, 
+                        "agent": {
                             "name_family": "Corfee-Morlot", 
-                            "name_given": "Jamet and"
+                            "name_given": "Jamet and", 
+                            "rec_class": "Person", 
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -1003,12 +1003,12 @@
                 "title": "Assessing the Impacts of Climate Change"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "Remig", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "Remig"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -1020,12 +1020,12 @@
                 "title": "Historical responsibility and equity in international climate change negotiations"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "Sierra", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "Sierra"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -1037,12 +1037,12 @@
                 "title": "The Green Climate Fund : Options for Mobilizing the Private Sector"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "UNFCCC", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "UNFCCC"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -1054,12 +1054,12 @@
                 "title": "Framework Convention on Climate Change Conference of the Parties Report of the Conference of the Parties on its sixteenth session , held in Cancun from 29 November to Part Two : Action taken by the Conference of the Parties at its sixteenth session The Ca"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "UNFCCC", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "UNFCCC"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }
@@ -1071,12 +1071,12 @@
                 "title": "Framework Convention on Climate Change Conference of the Parties Report of the Conference of the Parties on its sixteenth session , held in Cancun from 29 November to Part Two : Action taken by the Conference of the Parties at its sixteenth session The Ca"
             }, 
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
+                            "name_family": "UNFCCC", 
                             "rec_class": "Person", 
-                            "rec_metajson": 1, 
-                            "name_family": "UNFCCC"
+                            "rec_metajson": 1
                         }, 
                         "role": "aut"
                     }

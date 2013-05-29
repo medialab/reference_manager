@@ -3,7 +3,7 @@
 # coding=utf-8
 
 from biblib.metajson import Document
-from biblib.metajson import Contributor
+from biblib.metajson import Creator
 from biblib.metajson import Identifier
 from biblib.metajson import Resource
 import xml.etree.ElementTree as ET
@@ -39,7 +39,7 @@ def unixref_record_to_metajson(record, source):
     journal_article = record.find("./crossref/journal/journal_article")
     if journal_article is not None:
         titles = journal_article.findall("titles/title")
-        contributors = journal_article.findall("contributors")
+        creators = journal_article.findall("creators")
         year = journal_article.find("publication_date/year")
         month = journal_article.find("publication_date/month")
         day = journal_article.find("publication_date/day")
@@ -91,7 +91,7 @@ def unixref_record_to_metajson(record, source):
     if part_page_end is not None:
         document["part_page_end"] = part_page_end.text
 
-    # todo: contributor
+    # todo: creator
 
     is_part_of = Document()
     # todo: how to find the type ?

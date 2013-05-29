@@ -1229,5 +1229,5 @@
     ], 
     "rec_class": "Type", 
     "rec_metajson": 1, 
-    "type_id": "contributor_role"
+    "type_id": "creator_role"
 }

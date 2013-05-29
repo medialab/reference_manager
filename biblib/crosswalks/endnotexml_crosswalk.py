@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 
 from biblib.metajson import Document
 from biblib.metajson import Resource
-from biblib.services import contributor_service
+from biblib.services import creator_service
 from biblib.services import language_service
 
 endnote_import_note = False
@@ -123,7 +123,7 @@ def endnotexml_record_to_metajson(record, source):
     document = Document()
 
     # TODO
-    # translated_contributors: /contributors/translated-authors/author/style
+    # translated_creators: /contributors/translated-authors/author/style
     # auth_address: /auth-address/style
     # label: /label/style
     # custom1
@@ -134,19 +134,19 @@ def endnotexml_record_to_metajson(record, source):
     endnote_type = record.find("ref-type").text
     rec_type = endnote_record_type_to_metajson_document_type[endnote_type]
 
-    primary_contributors = extract_contributors(None, "aut", record, "./contributors/authors/author/style")
-    secondary_contributors = extract_contributors(None, "edt", record, "./contributors/secondary-authors/author/style")
+    primary_creators = extract_creators(None, "aut", record, "./contributors/authors/author/style")
+    secondary_creators = extract_creators(None, "edt", record, "./contributors/secondary-authors/author/style")
     if endnote_type in [TYPE_BOOK, TYPE_BOOK_SECTION]:
-        tertiary_contributors = extract_contributors(None, "edt", record, "./contributors/tertiary-authors/author/style")
+        tertiary_creators = extract_creators(None, "edt", record, "./contributors/tertiary-authors/author/style")
     elif endnote_type == TYPE_THESIS:
-        tertiary_contributors = extract_contributors(None, "ths", record, "./contributors/tertiary-authors/author/style")
+        tertiary_creators = extract_creators(None, "ths", record, "./contributors/tertiary-authors/author/style")
     elif endnote_type == TYPE_FILM_OR_BROADCAST:
-        tertiary_contributors = extract_contributors(None, "pro", record, "./contributors/tertiary-authors/author/style")
+        tertiary_creators = extract_creators(None, "pro", record, "./contributors/tertiary-authors/author/style")
     if endnote_type in [TYPE_BOOK, TYPE_BOOK_SECTION]:
-        subsidiary_contributors = extract_contributors(None, "trl", record, "./contributors/subsidiary-authors/author/style")
+        subsidiary_creators = extract_creators(None, "trl", record, "./contributors/subsidiary-authors/author/style")
     elif endnote_type == TYPE_FILM_OR_BROADCAST:
-        subsidiary_contributors = extract_contributors(None, "act", record, "./contributors/subsidiary-authors/author/style")
-    translated_contributors = extract_contributors(None, "trl", record, "./contributors/translated-authors/author/style")
+        subsidiary_creators = extract_creators(None, "act", record, "./contributors/subsidiary-authors/author/style")
+    translated_creators = extract_creators(None, "trl", record, "./contributors/translated-authors/author/style")
     auth_address = extract_text(record, "./auth-address/style")
 
     title = extract_text(record, "./titles/title/style")
@@ -247,15 +247,15 @@ def endnotexml_record_to_metajson(record, source):
 
         if is_part_of_is_part_of_type is not None:
             # is_part_of in case of is_part_of.is_part_of
-            # contributors with role aut
-            is_part_of.add_contributors(contributor_service.change_contibutors_role(secondary_contributors, "aut"))
+            # creators with role aut
+            is_part_of.add_creators(creator_service.change_contibutors_role(secondary_creators, "aut"))
 
             # is_part_of.is_part_of
             is_part_of_is_part_of = Document()
             is_part_of_is_part_of.set_key_if_not_none("rec_type", is_part_of_is_part_of_type)
             is_part_of_is_part_of.set_key_if_not_none("title", title_translated)
-            # contributors with role edt
-            is_part_of_is_part_of.add_contributors(contributor_service.change_contibutors_role(translated_contributors, "edt"))
+            # creators with role edt
+            is_part_of_is_part_of.add_creators(creator_service.change_contibutors_role(translated_creators, "edt"))
             #is_part_of_is_part_of.set_key_if_not_none("date_issued",date_year)
             is_part_of_is_part_of.set_key_if_not_none("publisher", publisher)
             is_part_of_is_part_of.set_key_if_not_none("publisher_place", publisher_place)
@@ -265,8 +265,8 @@ def endnotexml_record_to_metajson(record, source):
 
         else:
             # is_part_of in case of no is_part_of.is_part_of
-            # contributors with role edt
-            is_part_of.add_contributors(secondary_contributors)
+            # creators with role edt
+            is_part_of.add_creators(secondary_creators)
             #is_part_of.set_key_if_not_none("date_issued",date_year)
             is_part_of.set_key_if_not_none("publisher", publisher)
             is_part_of.set_key_if_not_none("publisher_place", publisher_place)
@@ -278,9 +278,9 @@ def endnotexml_record_to_metajson(record, source):
         document.set_key_with_value_type_in_list("identifiers", isbn_or_issn, isbn_or_issn_type)
         if publisher:
             if endnote_type == TYPE_THESIS:
-                document.add_contributors([contributor_service.formatted_name_to_contributor(publisher, "orgunit", "dgg")])
+                document.add_creators([creator_service.formatted_name_to_creator(publisher, "orgunit", "dgg")])
             elif endnote_type == TYPE_FILM_OR_BROADCAST:
-                document.add_contributors([contributor_service.formatted_name_to_contributor(publisher, "orgunit", "dst")])
+                document.add_creators([creator_service.formatted_name_to_creator(publisher, "orgunit", "dst")])
             else:
                 document.set_key_if_not_none("publisher", publisher)
         document.set_key_if_not_none("publisher_place", publisher_place)
@@ -290,11 +290,11 @@ def endnotexml_record_to_metajson(record, source):
         series = Document()
         if endnote_type == TYPE_BOOK and title_secondary:
             series.set_key_if_not_none("title", title_secondary)
-            series.add_contributors(secondary_contributors)
+            series.add_creators(secondary_creators)
             series.set_key_if_not_none("part_volume", part_number)
         if endnote_type == TYPE_BOOK_SECTION and title_tertiary:
             series.set_key_if_not_none("title", title_tertiary)
-            series.add_contributors(tertiary_contributors)
+            series.add_creators(tertiary_creators)
             series.set_key_if_not_none("part_volume", part_number)
         if "title" in series and len(series) > 2:
             document.add_items_to_key([series], "series")
@@ -330,16 +330,16 @@ def endnotexml_record_to_metajson(record, source):
     # caption
     document.set_key_if_not_none("caption", caption)
 
-    # contributors[]
-    document.add_contributors(primary_contributors)
+    # creators[]
+    document.add_creators(primary_creators)
     if endnote_type in [TYPE_BOOK, TYPE_THESIS, TYPE_FILM_OR_BROADCAST]:
-        document.add_contributors(tertiary_contributors)
+        document.add_creators(tertiary_creators)
     if endnote_type in [TYPE_BOOK, TYPE_BOOK_SECTION, TYPE_FILM_OR_BROADCAST]:
-        document.add_contributors(subsidiary_contributors)
+        document.add_creators(subsidiary_creators)
     if custom4:
-        document.add_contributors(endnote_authors_to_contributors(custom4, "person", "rev"))
+        document.add_creators(endnote_authors_to_creators(custom4, "person", "rev"))
     if endnote_type == TYPE_FIGURE and remote_database_name:
-        document.add_contributors(endnote_authors_to_contributors(remote_database_name, None, "cph"))
+        document.add_creators(endnote_authors_to_creators(remote_database_name, None, "cph"))
 
     # edition
     if endnote_type in [TYPE_BOOK, TYPE_BOOK_SECTION, TYPE_FILM_OR_BROADCAST, TYPE_WEB_PAGE] and edition:
@@ -477,23 +477,23 @@ def extract_text_and_set_key_with_type_in_list(common_dict, key, my_type, elemen
     common_dict.set_key_with_value_type_in_list(key, extract_text(element, xpath), my_type)
 
 
-def extract_contributors(contributor_type, role, element, xpath):
+def extract_creators(creator_type, role, element, xpath):
     authors_list = extract_list(element, xpath)
     if authors_list is not None and len(authors_list) != 0:
-        contributors = []
+        creators = []
         for author_item in authors_list:
-            contributors.extend(endnote_authors_to_contributors(author_item, contributor_type, role))
-        return contributors
+            creators.extend(endnote_authors_to_creators(author_item, creator_type, role))
+        return creators
 
 
-def extract_and_set_contributors(common_dict, contributor_type, role, element, xpath):
-    common_dict.add_contributors(extract_contributors(contributor_type, role, element, xpath))
+def extract_and_set_creators(common_dict, creator_type, role, element, xpath):
+    common_dict.add_creators(extract_creators(creator_type, role, element, xpath))
 
 
-def endnote_authors_to_contributors(authors, contributor_type="person", role="aut"):
-    contributors = []
+def endnote_authors_to_creators(authors, creator_type="person", role="aut"):
+    creators = []
     for author in authors.splitlines():
-        contributor = contributor_service.formatted_name_to_contributor(author, contributor_type, role)
-        if contributor:
-            contributors.append(contributor)
-    return contributors
+        creator = creator_service.formatted_name_to_creator(author, creator_type, role)
+        if creator:
+            creators.append(creator)
+    return creators

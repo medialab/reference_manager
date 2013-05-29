@@ -27,6 +27,11 @@
     "google_scholar": {
         "endpoint": "http://scholar.google.com"
     },
+    "google": {
+        "conf_key": "fgfgfgsg70qsf9fsf97",
+        "email": "me@gmail.com",
+        "password": "password"
+    },
     "pubmed": {
         "endpoint_baseurl": "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
         "db": "pubmed",

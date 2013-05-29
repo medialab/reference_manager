@@ -13,7 +13,7 @@ Number of references : 69
         "_id": {
             "$oid": "5134b43f3b71f3102de42e20"
         }, 
-        "contributors": [
+        "creators": [
             {
                 "name_family": "Family1", 
                 "name_given": "Given1", 
@@ -53,7 +53,7 @@ Number of references : 0
         "_id": {
             "$oid": "5134b43f3b71f3102de42e21"
         }, 
-        "contributors": [
+        "creators": [
             {
                 "name_family": "Family1", 
                 "name_given": "Given2", 
@@ -91,7 +91,7 @@ Number of references : 0
         "_id": {
             "$oid": "5134b43f3b71f3102de42e21"
         }, 
-        "contributors": [
+        "creators": [
             {
                 "name_family": "Family1", 
                 "name_given": "Given2", 
@@ -129,7 +129,7 @@ Number of references : 0
         "_id": {
             "$oid": "5134b43f3b71f3102de42e21"
         }, 
-        "contributors": [
+        "creators": [
             {
                 "name_family": "Family1", 
                 "name_given": "Given2", 

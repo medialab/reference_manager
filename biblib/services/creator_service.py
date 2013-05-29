@@ -4,13 +4,13 @@
 
 import json
 from biblib import metajson
-from biblib.metajson import Contributor
+from biblib.metajson import Creator
 from biblib.metajson import Event
 from biblib.metajson import Person
 from biblib.metajson import Orgunit
 from biblib.metajson import Family
 
-contributor_person_terms_of_address = [
+creator_person_terms_of_address = [
     "baron",
     "captain",
     "chevalier",
@@ -20,7 +20,7 @@ contributor_person_terms_of_address = [
     "professeur"
 ]
 
-contributor_particule = [
+creator_particule = [
     #composed:
     "de la",
     "de las",
@@ -70,7 +70,7 @@ contributor_particule = [
     "zur"
 ]
 
-contributor_role_terms = [
+creator_role_terms = [
     "(Eds)",
     "(eds)",
     "(eds.)",
@@ -95,7 +95,7 @@ contributor_role_terms = [
     "[]"
 ]
 
-contributor_event_terms = [
+creator_event_terms = [
     "colloque",
     "conference",
     u"conférence",
@@ -104,7 +104,7 @@ contributor_event_terms = [
     "symposium"
 ]
 
-contributor_orgunit_terms = [
+creator_orgunit_terms = [
     u"académie",
     "alternatives",
     "archives",
@@ -195,23 +195,23 @@ contributor_orgunit_terms = [
     "universi"
 ]
 
-contributor_citable_roles = [
+creator_citable_roles = [
     "aut",
     "edt"
 ]
 
 
-def formatted_name_list_to_contributor_list(formatted_name_list, contributor_type="person", role="aut"):
+def formatted_name_list_to_creator_list(formatted_name_list, creator_type="person", role="aut"):
     if formatted_name_list:
-        contributor_list = []
+        creator_list = []
         for formatted_name in formatted_name_list:
-            contributor = formatted_name_to_contributor(formatted_name, contributor_type, role)
-            if contributor:
-                contributor_list.append(contributor)
-        return contributor_list
+            creator = formatted_name_to_creator(formatted_name, creator_type, role)
+            if creator:
+                creator_list.append(creator)
+        return creator_list
 
 
-def formatted_name_to_contributor(formatted_name, contributor_type, role):
+def formatted_name_to_creator(formatted_name, creator_type, role):
     if formatted_name:
         formatted_name = formatted_name.strip()
         event = None
@@ -220,33 +220,33 @@ def formatted_name_to_contributor(formatted_name, contributor_type, role):
         person = None
 
         #print("name: %s"%formatted_name)
-        # contributor_type determination
-        for event_term in contributor_event_terms:
+        # creator_type determination
+        for event_term in creator_event_terms:
             if event_term in formatted_name.lower():
-                contributor_type = "event"
+                creator_type = "event"
                 break
-        for orgunit_term in contributor_orgunit_terms:
+        for orgunit_term in creator_orgunit_terms:
             if orgunit_term in formatted_name.lower():
-                contributor_type = "orgunit"
+                creator_type = "orgunit"
                 break
-        if contributor_type is None:
-            contributor_type = "person"
+        if creator_type is None:
+            creator_type = "person"
 
-        contributor = Contributor()
+        creator = Creator()
         if role:
-            contributor["role"] = role
+            creator["role"] = role
 
-        if contributor_type == "event":
+        if creator_type == "event":
             event = Event()
             event["title"] = formatted_name
-            contributor["agent"] = event
+            creator["agent"] = event
 
-        elif contributor_type == "orgunit":
+        elif creator_type == "orgunit":
             orgunit = Orgunit()
             orgunit["name"] = formatted_name
-            contributor["agent"] = orgunit
+            creator["agent"] = orgunit
 
-        elif contributor_type == "person" or contributor_type == "family":
+        elif creator_type == "person" or creator_type == "family":
             #type is "person" or "family"
 
             name_given = ""
@@ -299,7 +299,7 @@ def formatted_name_to_contributor(formatted_name, contributor_type, role):
                 name_given = formatted_name[comma_index+1:].strip()
 
             # manage the terms_of_address and particule
-            for term_of_address in contributor_person_terms_of_address:
+            for term_of_address in creator_person_terms_of_address:
                 if name_family and name_family.lower().startswith(term_of_address+" "):
                     name_terms_of_address = name_family[:len(term_of_address)]
                     name_family = name_family[len(term_of_address):].strip()
@@ -315,7 +315,7 @@ def formatted_name_to_contributor(formatted_name, contributor_type, role):
                         name_given = None
 
             # Be careful with a particule inside the name like: Viveiros de Castro, Eduardo
-            for particule in contributor_particule:
+            for particule in creator_particule:
                 if name_family and name_family.lower().startswith(particule+" "):
                     name_particule_non_dropping = name_family[0:len(particule)]
                     name_family = name_family[len(particule):].strip()
@@ -330,7 +330,7 @@ def formatted_name_to_contributor(formatted_name, contributor_type, role):
                         name_particule_non_dropping = name_given
                         name_given = None
 
-            if contributor_type == "person":
+            if creator_type == "person":
                 person = Person()
                 person.set_key_if_not_none("name_family", name_family)
                 person.set_key_if_not_none("name_given", name_given)
@@ -343,24 +343,24 @@ def formatted_name_to_contributor(formatted_name, contributor_type, role):
                     #todo manage as an object
                     person["affiliations"] = [{"type": "orgunit", "preferred": True, "name": affiliation_name}]
 
-                contributor["agent"] = person
+                creator["agent"] = person
 
-            elif contributor_type == "family":
+            elif creator_type == "family":
                 family = Family()
                 family.set_key_if_not_none("name_family", name_family)
-                contributor["agent"] = family
+                creator["agent"] = family
 
-        #print json.dumps(contributor,ensure_ascii=False,indent=4,encoding="utf-8")
-        return contributor
-
-
-def formatted_name(contributor, style=metajson.STYLE_FAMILY_COMMA_GIVEN):
-    if contributor:
-        return contributor.formatted_name(style)
+        #print json.dumps(creator,ensure_ascii=False,indent=4,encoding="utf-8")
+        return creator
 
 
-def change_contibutors_role(contributors, role):
-    if contributors:
-        for contributor in contributors:
-            contributor.set_key_if_not_none("role", role)
-    return contributors
+def formatted_name(creator, style=metajson.STYLE_FAMILY_COMMA_GIVEN):
+    if creator:
+        return creator.formatted_name(style)
+
+
+def change_contibutors_role(creators, role):
+    if creators:
+        for creator in creators:
+            creator.set_key_if_not_none("role", role)
+    return creators

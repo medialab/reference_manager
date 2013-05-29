@@ -18,11 +18,11 @@ def validate_metajson_document(metajson):
         errors.extend(validate_metajson_date(date))
     else:
         errors.append("Empty date_issued")
-    if "contributors" in metajson and metajson["contributors"]:
-        for contributor in metajson["contributors"]:
-            errors.extend(validate_metajson_contributor(contributor))
+    if "creators" in metajson and metajson["creators"]:
+        for creator in metajson["creators"]:
+            errors.extend(validate_metajson_creator(creator))
     else:
-        errors.append("No contributor")
+        errors.append("No creator")
 
     # related_items
     if "is_part_of" in metajson:
@@ -55,9 +55,9 @@ def validate_metajson_is_part_of(is_part_of):
         errors.append("Empty type in is_part_of")
     if "title" not in is_part_of or not is_part_of["title"]:
         errors.append("Empty title in is_part_of")
-    if "contributors" in is_part_of and is_part_of["contributors"]:
-        for contributor in is_part_of["contributors"]:
-            errors.extend(validate_metajson_contributor(contributor))
+    if "creators" in is_part_of and is_part_of["creators"]:
+        for creator in is_part_of["creators"]:
+            errors.extend(validate_metajson_creator(creator))
     if "is_part_of" in is_part_of:
         for is_part_of_is_part_of in is_part_of["is_part_of"]:
             errors.extend(validate_metajson_is_part_of(is_part_of_is_part_of))
@@ -75,9 +75,9 @@ def validate_metajson_original(original):
         errors.append("Empty type in original")
     if "title" not in original or not original["title"]:
         errors.append("Empty title in original")
-    if "contributors" in original and original["contributors"]:
-        for contributor in original["contributors"]:
-            errors.extend(validate_metajson_contributor(contributor))
+    if "creators" in original and original["creators"]:
+        for creator in original["creators"]:
+            errors.extend(validate_metajson_creator(creator))
     return errors
 
 
@@ -87,9 +87,9 @@ def validate_metajson_archive(archive):
         errors.append("Empty archive")
     if "title" not in archive or not archive["title"]:
         errors.append("Empty title in archive")
-    if "contributors" in archive and archive["contributors"]:
-        for contributor in archive["contributors"]:
-            errors.extend(validate_metajson_contributor(contributor))
+    if "creators" in archive and archive["creators"]:
+        for creator in archive["creators"]:
+            errors.extend(validate_metajson_creator(creator))
     return errors
 
 
@@ -99,9 +99,9 @@ def validate_metajson_series(series):
         errors.append("Empty series")
     if "title" not in series or not series["title"]:
         errors.append("Empty title in series")
-    if "contributors" in series and series["contributors"]:
-        for contributor in series["contributors"]:
-            errors.extend(validate_metajson_contributor(contributor))
+    if "creators" in series and series["creators"]:
+        for creator in series["creators"]:
+            errors.extend(validate_metajson_creator(creator))
     return errors
 
 
@@ -113,30 +113,30 @@ def validate_metajson_review_of(review_of):
         errors.append("Empty type in review_of")
     if "title" not in review_of or not review_of["title"]:
         errors.append("Empty title in review_of")
-    if "contributors" in review_of and review_of["contributors"]:
-        for contributor in review_of["contributors"]:
-            errors.extend(validate_metajson_contributor(contributor))
+    if "creators" in review_of and review_of["creators"]:
+        for creator in review_of["creators"]:
+            errors.extend(validate_metajson_creator(creator))
     return errors
 
 
-def validate_metajson_contributor(contributor):
+def validate_metajson_creator(creator):
     errors = []
-    if "role" not in contributor or not contributor["role"]:
-        errors.append("No role for contributor")
-    if "person" in contributor:
-        if "name_family" not in contributor["person"] or not contributor["person"]["name_family"]:
-            errors.append("No name_family in contributor person")
-    elif "orgunit" in contributor:
-        if "name" not in contributor["orgunit"] or not contributor["orgunit"]["name"]:
-            errors.append("No name in contributor orgunit")
-    elif "event" in contributor:
-        if "title" not in contributor["event"] or not contributor["event"]["title"]:
-            errors.append("No title in contributor event")
-    elif "family" in contributor:
-        if "name_family" not in contributor["family"] or not contributor["family"]["name_family"]:
-            errors.append("No name_family in contributor family")
+    if "role" not in creator or not creator["role"]:
+        errors.append("No role for creator")
+    if "person" in creator:
+        if "name_family" not in creator["person"] or not creator["person"]["name_family"]:
+            errors.append("No name_family in creator person")
+    elif "orgunit" in creator:
+        if "name" not in creator["orgunit"] or not creator["orgunit"]["name"]:
+            errors.append("No name in creator orgunit")
+    elif "event" in creator:
+        if "title" not in creator["event"] or not creator["event"]["title"]:
+            errors.append("No title in creator event")
+    elif "family" in creator:
+        if "name_family" not in creator["family"] or not creator["family"]["name_family"]:
+            errors.append("No name_family in creator family")
     else:
-        errors.append("No entity in contributor")
+        errors.append("No entity in creator")
     return errors
 
 

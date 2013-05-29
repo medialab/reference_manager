@@ -3,9 +3,9 @@
     "records": [
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "identifiers": [
                                 {
                                     "type": "uri", 
@@ -19,7 +19,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Corsetti", 
                             "name_given": "Giancarlo", 
                             "rec_class": "Person", 
@@ -27,7 +27,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Pesenti", 
                             "name_given": "Paolo", 
                             "rec_class": "Person", 
@@ -51,9 +51,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Barnavie", 
                             "name_given": "Elie", 
                             "rec_class": "Person", 
@@ -61,7 +61,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Dieckhoff", 
                             "name_given": "Alain", 
                             "rec_class": "Person", 
@@ -69,7 +69,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Lequesne", 
                             "name_given": "Christian", 
                             "rec_class": "Person", 
@@ -88,9 +88,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "identifiers": [
                                 {
                                     "type": "uri", 
@@ -104,7 +104,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Bulmer", 
                             "name_given": "Simon", 
                             "rec_class": "Person", 
@@ -129,9 +129,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Membretti", 
                             "name_given": "Andrea", 
                             "rec_class": "Person", 
@@ -139,7 +139,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "identifiers": [
                                 {
                                     "type": "uri", 
@@ -164,9 +164,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "identifiers": [
                                 {
                                     "type": "uri", 
@@ -192,10 +192,10 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {}, 
                     {
-                        "person": {
+                        "agent": {
                             "identifiers": [
                                 {
                                     "type": "uri", 
@@ -221,9 +221,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "identifiers": [
                                 {
                                     "type": "uri", 
@@ -249,9 +249,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "identifiers": [
                                 {
                                     "type": "uri", 
@@ -265,7 +265,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Chêne", 
                             "name_given": "Christian", 
                             "rec_class": "Person", 
@@ -273,7 +273,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Mathey", 
                             "name_given": "Nicolas", 
                             "rec_class": "Person", 
@@ -281,7 +281,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Vergne", 
                             "name_given": "Arnaud", 
                             "rec_class": "Person", 
@@ -306,9 +306,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "identifiers": [
                                 {
                                     "type": "uri", 
@@ -333,9 +333,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Castañeda Lefèvre", 
                             "name_given": "Dorly", 
                             "rec_class": "Person", 
@@ -343,7 +343,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Devin", 
                             "name_given": "Guillaume", 
                             "rec_class": "Person", 
@@ -365,9 +365,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Epstein", 
                             "name_given": "Renaud", 
                             "rec_class": "Person", 
@@ -375,7 +375,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Le Galès", 
                             "name_given": "Patrick", 
                             "rec_class": "Person", 
@@ -394,9 +394,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Piketty", 
                             "name_given": "Thomas", 
                             "rec_class": "Person", 
@@ -404,7 +404,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Antonin", 
                             "name_given": "Céline", 
                             "rec_class": "Person", 
@@ -423,9 +423,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Combes", 
                             "name_given": "Hélène", 
                             "rec_class": "Person", 
@@ -444,9 +444,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Jean", 
                             "name_given": "Sébastien", 
                             "rec_class": "Person", 
@@ -454,7 +454,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Hijzen", 
                             "name_given": "Alexander", 
                             "rec_class": "Person", 
@@ -462,7 +462,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Mayer", 
                             "name_given": "Thierry", 
                             "rec_class": "Person", 
@@ -482,9 +482,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "identifiers": [
                                 {
                                     "type": "uri", 
@@ -498,7 +498,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Matsumoto", 
                             "name_given": "Tadashi", 
                             "rec_class": "Person", 
@@ -506,7 +506,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "identifiers": [
                                 {
                                     "type": "uri", 
@@ -531,9 +531,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Vitale", 
                             "name_given": "Tommaso", 
                             "rec_class": "Person", 
@@ -552,9 +552,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Durand", 
                             "name_given": "Marie-Françoise", 
                             "rec_class": "Person", 
@@ -562,7 +562,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Lequesne", 
                             "name_given": "Christian", 
                             "rec_class": "Person", 
@@ -581,9 +581,9 @@
         ], 
         [
             {
-                "contributors": [
+                "creators": [
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Do", 
                             "name_given": "Quoc-Anh", 
                             "rec_class": "Person", 
@@ -591,7 +591,7 @@
                         }
                     }, 
                     {
-                        "person": {
+                        "agent": {
                             "name_family": "Campante", 
                             "name_given": "Filipe R", 
                             "rec_class": "Person", 

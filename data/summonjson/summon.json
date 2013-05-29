@@ -15715,7 +15715,7 @@
             ], 
             "References_xml": [
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "archer c."
                     }, 
                     "ident": "x", 
@@ -15723,7 +15723,7 @@
                     "year": "1992"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "cash w."
                     }, 
                     "ident": "x", 
@@ -15732,7 +15732,7 @@
                 }, 
                 {
                     "article-title": "Poverty in Europe: competing paradigms of analysis", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Room"
                     }, 
                     "doi": "10.1332/030557395782453473", 
@@ -15745,7 +15745,7 @@
                     "year": "1995"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "evans g."
                     }, 
                     "ident": "x", 
@@ -15753,7 +15753,7 @@
                     "year": "1992"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "emiliou n."
                     }, 
                     "ident": "x", 
@@ -15764,7 +15764,7 @@
                     "ident": "uns"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "kleinman m."
                     }, 
                     "ident": "x", 
@@ -15772,7 +15772,7 @@
                     "year": "1992"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "wistrich e."
                     }, 
                     "ident": "x", 
@@ -15780,7 +15780,7 @@
                     "year": "1994"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "smith g."
                     }, 
                     "ident": "x", 
@@ -15788,7 +15788,7 @@
                     "year": "1995"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "majnoni d'intignano b."
                     }, 
                     "ident": "x", 
@@ -15796,7 +15796,7 @@
                     "year": "1993"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "berghman j."
                     }, 
                     "ident": "x", 
@@ -15804,7 +15804,7 @@
                     "year": "1991"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "pinder j."
                     }, 
                     "ident": "x", 
@@ -15812,7 +15812,7 @@
                     "year": "1993"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "nugent n."
                     }, 
                     "ident": "x", 
@@ -15820,7 +15820,7 @@
                     "year": "1994"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "leibfried s."
                     }, 
                     "ident": "x", 
@@ -15828,7 +15828,7 @@
                     "year": "1991"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "hughes c."
                     }, 
                     "ident": "x", 
@@ -15836,7 +15836,7 @@
                     "year": "1993"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "holland m."
                     }, 
                     "ident": "x", 
@@ -15844,7 +15844,7 @@
                     "year": "1993"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "pierson p."
                     }, 
                     "ident": "x", 
@@ -15853,7 +15853,7 @@
                 }, 
                 {
                     "article-title": "The Green and White Papers of the European Union: the Apparent Goal of Reduced Social Benefits", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Kuper"
                     }, 
                     "doi": "10.1177/095892879400400204", 
@@ -15866,7 +15866,7 @@
                     "year": "1994"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "james e."
                     }, 
                     "ident": "x", 
@@ -15874,7 +15874,7 @@
                     "year": "1970"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "briggs a."
                     }, 
                     "ident": "x", 
@@ -15885,7 +15885,7 @@
                 }, 
                 {
                     "article-title": "The Principle of Subsidiarity and the Social Policy of the European Community", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Spicker"
                     }, 
                     "doi": "10.1177/095892879100100102", 
@@ -15898,7 +15898,7 @@
                     "year": "1991"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "lenoir d."
                     }, 
                     "ident": "x", 
@@ -15906,7 +15906,7 @@
                     "year": "1994"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "zimmerman j."
                     }, 
                     "ident": "x", 
@@ -15914,7 +15914,7 @@
                     "year": "1992"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "wheare k. c."
                     }, 
                     "ident": "x", 
@@ -16043,7 +16043,7 @@
                     "ident": "b3_3"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "TUFTE E. R."
                     }, 
                     "ident": "b10_10", 
@@ -16057,7 +16057,7 @@
                     "ident": "b2_2"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "SCHMIDT M. G."
                     }, 
                     "ident": "b9_9", 
@@ -16068,7 +16068,7 @@
                     "ident": "b6_6"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "POMMEREHNE W. W."
                     }, 
                     "ident": "b8_8", 
@@ -16076,7 +16076,7 @@
                     "year": "1979"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "NASCHOLD F."
                     }, 
                     "ident": "b7_7", 
@@ -16084,7 +16084,7 @@
                     "year": "1985"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "HIBBS D. A."
                     }, 
                     "ident": "b4_4", 
@@ -16571,7 +16571,7 @@
             ], 
             "References_xml": [
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Müller-Brandeck-Bocquet, G"
                     }, 
                     "publication-title": "Deutsche Europapolitik von Konrad Adenauer bis Gerhard Schröder", 
@@ -16579,7 +16579,7 @@
                 }, 
                 {
                     "article-title": "Ideas and Foreign Policy: An Analytical Framework", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Keohane, R"
                     }, 
                     "end-page": "30", 
@@ -16589,7 +16589,7 @@
                 }, 
                 {
                     "article-title": "Die Europaminister-Konferenz der deutschen Länder: Aufgaben, Themen, Selbstverständnis", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Gerster, F"
                     }, 
                     "end-page": "67", 
@@ -16600,7 +16600,7 @@
                 }, 
                 {
                     "article-title": "Gerrmany in the EU: Constructing Normality", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Jeffery, C"
                     }, 
                     "end-page": "717", 
@@ -16610,7 +16610,7 @@
                     "year": "2001"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Moravcsik, A"
                     }, 
                     "publication-title": "The Choice For Europe", 
@@ -16618,7 +16618,7 @@
                 }, 
                 {
                     "article-title": "Constructing Europe? The evolution of French, British and German Nation State identities", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Roscher, J"
                     }, 
                     "end-page": "633", 
@@ -16628,7 +16628,7 @@
                     "year": "1999"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Olsen, G"
                     }, 
                     "publication-title": "The Institutional Dynamics of International Political Orders", 
@@ -16636,7 +16636,7 @@
                 }, 
                 {
                     "article-title": "European integration and democracy: the differences among member states", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Schmidt, V"
                     }, 
                     "end-page": "145", 
@@ -16646,7 +16646,7 @@
                     "year": "1997"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Olsen, G"
                     }, 
                     "publication-title": "Rediscovering Institutions: The Organizational Basis of Politics", 
@@ -16654,7 +16654,7 @@
                 }, 
                 {
                     "article-title": "The joint-decision trap: lesson from German federalism and European integration", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Scharpf, F"
                     }, 
                     "end-page": "278", 
@@ -16664,14 +16664,14 @@
                     "year": "1988"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Paterson, W"
                     }, 
                     "publication-title": "Germany's European Diplomacy: Shaping the Regional Milieu", 
                     "year": "2000"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Schild, -L"
                     }, 
                     "publication-title": "The Institutional Architecture of the European Union: A Third Franco-German Way?", 
@@ -16679,7 +16679,7 @@
                 }, 
                 {
                     "article-title": "Germany and Mitteleuropa", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Katzenstein, P"
                     }, 
                     "publication-title": "Mitteleuropa: Between Europe and Germany", 
@@ -16687,14 +16687,14 @@
                 }, 
                 {
                     "article-title": "Speech to the European Parliament at the end of the German Council Presidency', Strasbourg", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Fischer, J"
                     }, 
                     "year": "1999"
                 }, 
                 {
                     "article-title": "Preferences and power in the European community: a liberal intergovernmentalist approach", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Moravcsik, A"
                     }, 
                     "end-page": "524", 
@@ -16705,7 +16705,7 @@
                 }, 
                 {
                     "article-title": "Deutscher Föderalismus als Hemmschuh für die europäische Integration?", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Hrbek, R"
                     }, 
                     "end-page": "298", 
@@ -16714,7 +16714,7 @@
                     "year": "2002"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Thaysen, U"
                     }, 
                     "publication-title": "Die deutschen Länder und die Europäischen Gemeinschaften", 
@@ -16722,7 +16722,7 @@
                 }, 
                 {
                     "article-title": "Aussenpolitische Verantwortung Deutschlands in der Welt, Rede vom 2.9.1999 for dem DGAP", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Schröder, G"
                     }, 
                     "end-page": "72", 
@@ -16732,7 +16732,7 @@
                     "year": "1999"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Ash, T"
                     }, 
                     "publication-title": "In Europe's Name: Germany and the Divided Continent", 
@@ -16740,7 +16740,7 @@
                 }, 
                 {
                     "article-title": "The Normative Roots of the New Institutionalism: Historical Institutionalism and Comparative Policy Studies", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Immergut, E"
                     }, 
                     "end-page": "355", 
@@ -16750,7 +16750,7 @@
                 }, 
                 {
                     "article-title": "Shaping the Rules? The Constitutive Politics of the European Union and German Power", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Bulmer, S"
                     }, 
                     "end-page": "79", 
@@ -16760,14 +16760,14 @@
                 }, 
                 {
                     "article-title": "Speech to the Belgian Parliament on 14 11 2000", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Fischer, J"
                     }, 
                     "year": "2000b"
                 }, 
                 {
                     "article-title": "German unification and 'model Germany': an adventure of institutional conservatism", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Wiesenthal, H"
                     }, 
                     "end-page": "58", 
@@ -16778,7 +16778,7 @@
                 }, 
                 {
                     "article-title": "The new institutionalism: organizational factors in political life", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Olsen, G"
                     }, 
                     "end-page": "749", 
@@ -16789,7 +16789,7 @@
                 }, 
                 {
                     "article-title": "Why comply? Social learning and European identity change", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Checkel, J"
                     }, 
                     "end-page": "588", 
@@ -16800,7 +16800,7 @@
                 }, 
                 {
                     "article-title": "Deutscher Föderalismus vor der Herausforderung einer europäischen Verfassung", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Fischer, T"
                     }, 
                     "end-page": "5", 
@@ -16810,7 +16810,7 @@
                     "year": "2003"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Abromeit, H"
                     }, 
                     "publication-title": "Der verkappte Einheitsstaat", 
@@ -16818,14 +16818,14 @@
                 }, 
                 {
                     "article-title": "Vom Staatenverbund zur Föderation - Gedanken über die Finalität der europäischen Integration", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Fischer, J"
                     }, 
                     "year": "2000a"
                 }, 
                 {
                     "article-title": "Auswirkungen der Entwicklung Europas zur Rechtsgemeinschaft auf die Länder der Bundesrepublik Deutschland", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Stoiber, E"
                     }, 
                     "end-page": "552", 
@@ -16836,7 +16836,7 @@
                 }, 
                 {
                     "article-title": "The Effects of EU Integration on German Federalism", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Hrbek, R"
                     }, 
                     "end-page": "233", 
@@ -16845,14 +16845,14 @@
                     "year": "1999"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Schröder, G"
                     }, 
                     "year": "2001"
                 }, 
                 {
                     "article-title": "Europäisierung regionalen Regierens: Mit Sinatra zum 'autonomieorientierten Systemwechsel' im deutschen Bundesstaat", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Knodt, M"
                     }, 
                     "end-page": "234", 
@@ -16863,7 +16863,7 @@
                 }, 
                 {
                     "article-title": "Taking preferences seriously: a liberal theory of international politics", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Moravcsik, A"
                     }, 
                     "end-page": "553", 
@@ -16874,7 +16874,7 @@
                 }, 
                 {
                     "article-title": "Institutional limits of a 'Europe with the regions': EC state-aid control meets German federalism", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Thielemann, E"
                     }, 
                     "end-page": "418", 
@@ -16885,7 +16885,7 @@
                 }, 
                 {
                     "article-title": "Die Selbstbeschränkung der Macht muss fortbestehen", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Fischer, J"
                     }, 
                     "end-page": "98", 
@@ -16895,7 +16895,7 @@
                 }, 
                 {
                     "article-title": "Das Schröder-Papier und die Jospin-Rede", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Kreile, M"
                     }, 
                     "end-page": "257", 
@@ -16906,7 +16906,7 @@
                 }, 
                 {
                     "article-title": "Mars or Minerva? A United Germany in a Post Cold War Europe", 
-                    "contributor": {
+                    "creator": {
                         "fullname": "Goodman, J"
                     }, 
                     "end-page": "62", 
@@ -16915,14 +16915,14 @@
                     "year": "1993"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Maull, H"
                     }, 
                     "publication-title": "Germany as a Civilian Power", 
                     "year": "2001"
                 }, 
                 {
-                    "contributor": {
+                    "creator": {
                         "fullname": "Hesse, K"
                     }, 
                     "publication-title": "Der unitarische Bundesstaat,", 

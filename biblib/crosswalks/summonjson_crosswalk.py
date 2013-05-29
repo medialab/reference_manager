@@ -6,9 +6,9 @@ import json
 from biblib import metajson
 from biblib.metajson import Collection
 from biblib.metajson import Document
-from biblib.metajson import Contributor
+from biblib.metajson import Creator
 from biblib.metajson import Subject
-from biblib.services import contributor_service
+from biblib.services import creator_service
 from biblib.services import language_service
 
 
@@ -111,7 +111,7 @@ def summonjson_document_to_metajson(sum_doc, source):
             document["languages"] = languages
 
     # extract summon properties
-    contributors = extract_contributors(sum_doc)
+    creators = extract_creators(sum_doc)
     copyright_statement = extract_value(sum_doc, "Copyright")
     date_issued = extract_date_issued(sum_doc)
     degree = extract_value(sum_doc, "DissertationDegree")
@@ -133,7 +133,7 @@ def summonjson_document_to_metajson(sum_doc, source):
     scholarly = extract_boolean_value(sum_doc, "IsScholarly")
     series_title = extract_value(sum_doc, "PublicationSeriesTitle")
     subject_keywords = extract_value(sum_doc, "Keywords", True)
-    subject_names = convert_contributors(sum_doc, "RelatedPersons", None, "person", None)
+    subject_names = convert_creators(sum_doc, "RelatedPersons", None, "person", None)
     subject_terms = extract_value(sum_doc, "SubjectTerms", True)
     table_of_contents = extract_convert_langstrings(sum_doc, "TableOfContents", main_language)
     title = extract_value(sum_doc, "Title")
@@ -213,7 +213,7 @@ def summonjson_document_to_metajson(sum_doc, source):
     extract_convert_add_classifications(sum_doc, document, "NAICS", "NAICS")
 
     # set properties
-    document.set_key_if_not_none("contributors", contributors)
+    document.set_key_if_not_none("creators", creators)
     document.set_key_if_not_none("copyright_statement", copyright_statement)
     document.set_key_if_not_none("date_issued", date_issued)
     document.set_key_if_not_none("degree", degree)
@@ -296,20 +296,20 @@ def extract_convert_identifiers(sum_doc):
     return identifiers_item, identifiers_is_part_of
 
 
-def extract_contributors(sum_doc):
-    contributors = []
-    contributors.extend(convert_contributors(sum_doc, "Author_xml", "AuthorAffiliation_xml", "person", "aut"))
-    contributors.extend(convert_contributors(sum_doc, "CorporateAuthor_xml", None, "orgunit", "aut"))
-    contributors.extend(convert_contributors(sum_doc, "DissertationAdvisor_xml", None, "person", "ths"))
-    contributors.extend(convert_contributors(sum_doc, "DissertationSchool_xml", None, "orgunit", "dgg"))
-    contributors.extend(convert_contributors(sum_doc, "Distribution", None, None, "dst"))
-    contributors.extend(convert_contributors(sum_doc, "Editor_xml", None, "person", "edt"))
-    contributors.extend(convert_contributors(sum_doc, "MeetingName", None, "event", "aut"))
-    return contributors
+def extract_creators(sum_doc):
+    creators = []
+    creators.extend(convert_creators(sum_doc, "Author_xml", "AuthorAffiliation_xml", "person", "aut"))
+    creators.extend(convert_creators(sum_doc, "CorporateAuthor_xml", None, "orgunit", "aut"))
+    creators.extend(convert_creators(sum_doc, "DissertationAdvisor_xml", None, "person", "ths"))
+    creators.extend(convert_creators(sum_doc, "DissertationSchool_xml", None, "orgunit", "dgg"))
+    creators.extend(convert_creators(sum_doc, "Distribution", None, None, "dst"))
+    creators.extend(convert_creators(sum_doc, "Editor_xml", None, "person", "edt"))
+    creators.extend(convert_creators(sum_doc, "MeetingName", None, "event", "aut"))
+    return creators
 
 
-def convert_contributors(sum_doc, sum_authors_key, sum_affiliations_key, contributor_type, role):
-    contributors = []
+def convert_creators(sum_doc, sum_authors_key, sum_affiliations_key, creator_type, role):
+    creators = []
     if sum_authors_key in sum_doc:
         sum_authors = sum_doc[sum_authors_key]
         if sum_authors:
@@ -321,13 +321,13 @@ def convert_contributors(sum_doc, sum_authors_key, sum_affiliations_key, contrib
                         affiliations_dict[index + 1] = affiliation
 
             for author in sum_authors:
-                contributor = Contributor()
+                creator = Creator()
                 if "surname" in author and "givenname" in author:
-                    contributor.set_key_if_not_none("name_family", author["surname"])
-                    contributor.set_key_if_not_none("name_given", author["givenname"])
-                    contributor["type"] = "person"
+                    creator.set_key_if_not_none("name_family", author["surname"])
+                    creator.set_key_if_not_none("name_given", author["givenname"])
+                    creator["type"] = "person"
                     if role:
-                        contributor["role"] = role
+                        creator["role"] = role
                 else:
                     formatted_name = ""
                     if "fullname" in author:
@@ -335,14 +335,14 @@ def convert_contributors(sum_doc, sum_authors_key, sum_affiliations_key, contrib
                     elif "name" in author:
                         formatted_name = author["name"]
 
-                    contributor = contributor_service.formatted_name_to_contributor(formatted_name, contributor_type, role)
+                    creator = creator_service.formatted_name_to_creator(formatted_name, creator_type, role)
                 if "sequence" in author and author["sequence"] in affiliations_dict:
-                    contributor["affiliation"] = affiliations_dict[author["sequence"]]
+                    creator["affiliation"] = affiliations_dict[author["sequence"]]
 
-                if contributor:
-                    contributors.append(contributor)
+                if creator:
+                    creators.append(creator)
 
-    return contributors
+    return creators
 
 
 def extract_date_issued(sum_doc):

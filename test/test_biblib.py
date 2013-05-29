@@ -34,16 +34,16 @@ def test_services():
 
 
 def test_cloud():
-    #test_crossref.test()
+    test_crossref.test()
     #test_google_scholar.test()
     test_oaipmh_harvester.test()
-    #test_summon.test()
+    test_summon.test()
 
 
 def test_main():
     pass
-    #refman.init_repository()
-    #refman.import_references()
+    refman.init_repository()
+    refman.import_references()
 
 
 console.setup_console()
