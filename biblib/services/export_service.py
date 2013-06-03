@@ -38,7 +38,7 @@ def export_metajson_collection(col_id, col_title, records, output_path):
             collection["col_id"] = col_id
             collection["title"] = col_title
             collection["records"] = records
-            dump = json_util.dumps(collection, ensure_ascii=False, indent=4, encoding="utf-8", sort_keys=True)
+            dump = json_util.dumps(collection, ensure_ascii=False, indent=2, encoding="utf-8", sort_keys=True)
             output_file.write(dump)
             return dump
 

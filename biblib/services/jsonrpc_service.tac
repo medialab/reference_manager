@@ -138,16 +138,16 @@ class References_repository(jsonrpc.JSONRPC):
         # todo filter LangString by language, send only children
         return self.format_bson(repository_service.get_type(None, type_id))
 
-    def jsonrpc_datafields(self, rec_type, language):
-        """ search for one or more datafields for user interface
+    def jsonrpc_uifields(self, rec_type, language):
+        """ search for one or more uifields for user interface
             from the repository
             params:
                 - rec_type: document type
                 - language: language for label and description
-            return the asked datafields for user interface (in JSON)
+            return the asked uifields for user interface (in JSON)
         """
         # todo filter LangString by language
-        return self.format_bson(repository_service.get_datafield(None, rec_type))
+        return self.format_bson(repository_service.get_uifield(None, rec_type))
 
 
 application = service.Application("References repository web service")

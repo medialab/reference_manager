@@ -272,7 +272,7 @@ def create_identifier(id_type, id_value):
         identifier = Identifier()
         identifier["value"] = id_value
         if id_type:
-            identifier["type"] = id_type
+            identifier["id_type"] = id_type
         return identifier
 
 

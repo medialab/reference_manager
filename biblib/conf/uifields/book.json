@@ -1,6 +1,6 @@
 {
     "rec_type": "Book",
-    "datafields": [
+    "children": [
         {
             "property": "title",
             "type_ui": "CharField",
@@ -23,36 +23,15 @@
             "required": false
         },
         {
-            "property": "creators_aut",
+            "property": "creators",
             "type_ui": "ChoiceField",
-            "type_data": "list.Person/Orgunit",
+            "type_data": "list.Creator",
             "labels": 
             {
-                "en": "Authors",
-                "fr": "Auteurs"
+                "en": "Creators",
+                "fr": "Créateurs"
             },
             "required": true
-        },
-        {
-            "property": "creators_pbd",
-            "type_ui": "ChoiceField",
-            "type_data": "list.Person/Orgunit",
-            "labels": 
-            {
-                "en": "Publishing director",
-                "fr": "Directeur de publication ou de collection"
-            },
-            "required": false
-        },        {
-            "property": "creators_trl",
-            "type_ui": "ChoiceField",
-            "type_data": "list.Person/Orgunit",
-            "labels": 
-            {
-                "en": "Translator",
-                "fr": "Traducteur"
-            },
-            "required": false
         },
         {
             "property": "date_issued",
@@ -88,7 +67,7 @@
             "required": false
         },
         {
-            "property": "subjects_keywords",
+            "property": "keywords",
             "type_ui": "ChoiceField",
             "type_data": "list.text",
             "labels": 

@@ -188,13 +188,9 @@ def mods_xmletree_to_metajson(mods, source):
 
     # rec_id, identifiers
     identifiers = convert_mods_identifiers(mods.findall(prefixtag("mods", "identifier")))
-    rec_id = ""
     if identifiers:
-        if "type" in identifiers[0]:
-            rec_id = identifiers[0]["type"] + "_"
-        rec_id += identifiers[0]["value"]
-    document["rec_id"] = rec_id
-    document["identifiers"] = identifiers
+        document["identifiers"] = identifiers
+        document["rec_id"] = identifiers[0]["value"]
 
     # title
     document.update(convert_mods_titleinfos(mods.findall(prefixtag("mods", "titleInfo"))))
@@ -348,13 +344,38 @@ def convert_mods_name_to_creator(mods_name, dai_dict):
             name_roleterm = name_role.find(prefixtag("mods", "roleTerm"))
         name_descriptions = mods_name.findall(prefixtag("mods", "description"))
 
+        # affiliation
+        affiliation = None
+        if name_affiliations:
+            affiliation = Orgunit()
+            affiliation["name"] = name_affiliations[0].text
+
+        #agent_rec_id, agent_identifiers, affiliation_rec_id
+        agent_rec_id = None
+        agent_identifiers = None
+        if name_id is not None:
+            spire_name_ids = name_id.split("_-_")
+            if spire_name_ids and len(spire_name_ids) >= 4:
+                agent_rec_id = spire_name_ids[2].replace("__", "/")
+                affiliation_rec_id = spire_name_ids[4]
+                if affiliation_rec_id:
+                    if not affiliation:
+                        affiliation = Orgunit()
+                    affiliation["rec_id"] = affiliation_rec_id.replace("__", "/")
+            elif dai_dict is not None and name_id in dai_dict:
+                # identifiers
+                id_value = dai_dict[name_id]["authority"] + "/" + dai_dict[name_id]["value"]
+                agent_identifiers = [metajson.create_identifier("uri", id_value)]
+                # rec_id
+                agent_rec_id = dai_dict[name_id]["value"]
+
         if name_type == "personal":
             person = Person()
 
-            if name_id is not None and dai_dict is not None and name_id in dai_dict:
-                id_value = dai_dict[name_id]["authority"] + "/" + dai_dict[name_id]["value"]
-                identifier = metajson.create_identifier("uri", id_value)
-                person.add_item_to_key(identifier, "identifiers")
+            if agent_rec_id:
+                person["rec_id"] = agent_rec_id
+            if agent_identifiers:
+                person["identifiers"] = agent_identifiers
 
             if name_parts:
                 for name_part in name_parts:
@@ -366,14 +387,52 @@ def convert_mods_name_to_creator(mods_name, dai_dict):
                         date = name_part.text.replace("(", "").replace(")", "")
                         minus_index = date.find("-")
                         if minus_index == -1:
-                            person["date_of_birth"] = date
+                            person["date_birth"] = date
                         else:
-                            person["date_of_birth"] = date[:minus_index]
-                            person["date_of_death"] = date[minus_index+1:]
+                            person["date_birth"] = date[:minus_index]
+                            person["date_death"] = date[minus_index+1:]
                     elif name_part.get("termsOfAddress") == "date":
                         person["name_terms_of_address"] = name_part.text
 
             creator["agent"] = person
+
+        elif name_type == "corporate":
+            print "corporate"
+            orgunit = Orgunit()
+            creator["agent"] = orgunit
+
+        elif name_type == "conference":
+            print "conference"
+            event = Event()
+            creator["agent"] = event
+
+            if name_parts:
+                for name_part in name_parts:
+                    if name_part.get("type") is None:
+                        event["title"] = name_part.text
+                    elif name_part.get("type") == "termsOfAddress":
+                        address = name_part.text
+                        sep_index = address.find(";")
+                        if sep_index == -1:
+                            event["place"] = address
+                        else:
+                            event["place"] = address[:sep_index]
+                            event["country"] = address[sep_index+1:]
+                    elif name_part.get("type") == "date":
+                        date = name_part.text
+                        slash_index = date.find("/")
+                        if slash_index == -1:
+                            event["date_start"] = date
+                        else:
+                            event["date_start"] = date[:slash_index]
+                            event["date_end"] = date[slash_index+1:]
+
+        if affiliation:
+            creator["affiliation"] = affiliation
+
+        if name_roleterm is not None:
+            creator["role"] = name_roleterm.text
+
         #print name_type, name_id, name_parts, name_affiliations, name_roleterm, name_descriptions
         return creator
 

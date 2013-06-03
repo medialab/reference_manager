@@ -1,614 +1,774 @@
 {
-    "col_id": "test_mods", 
-    "records": [
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "identifiers": [
-                                {
-                                    "type": "uri", 
-                                    "value": "http://spire.sciences-po.fr/hdl:/2441/9labe9r4se65i789685q5apa2"
-                                }
-                            ], 
-                            "name_family": "Martin", 
-                            "name_given": "Philippe", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Corsetti", 
-                            "name_given": "Giancarlo", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Pesenti", 
-                            "name_given": "Paolo", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": [
-                    {
-                        "type": "doi", 
-                        "value": "10.1016/j.jinteco.2012.05.011"
-                    }
-                ], 
-                "rec_class": "Document", 
-                "rec_id": "doi_10.1016/j.jinteco.2012.05.011", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "JournalArticle", 
-                "title": "Varieties and the transfer problem "
-            }
+  "col_id": "test_mods", 
+  "records": [
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Département d'économie", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q385c7", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Martin", 
+              "name_given": "Philippe", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i789685q5apa2", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "affiliation": {
+              "name": "University of Rome", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9micbn", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Corsetti", 
+              "name_given": "Giancarlo", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i7896860lchjn", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "affiliation": {
+              "name": "International Research", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9mikg3", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Pesenti", 
+              "name_given": "Paolo", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i7896860lci21", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
         ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "name_family": "Barnavie", 
-                            "name_given": "Elie", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Dieckhoff", 
-                            "name_given": "Alain", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Lequesne", 
-                            "name_given": "Christian", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "Audiovisual", 
-                "title": "Israël et l’Europe. Filiations et ruptures"
-            }
+        "identifiers": [
+          {
+            "id_type": "doi", 
+            "value": "10.1016/j.jinteco.2012.05.011"
+          }
         ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "identifiers": [
-                                {
-                                    "type": "uri", 
-                                    "value": "http://spire.sciences-po.fr/hdl:/2441/9labe9r4se65i789685q54lsl"
-                                }
-                            ], 
-                            "name_family": "Lequesne", 
-                            "name_given": "Christian", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Bulmer", 
-                            "name_given": "Simon", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": [
-                    {
-                        "type": "isbn", 
-                        "value": "9780199544837"
-                    }
-                ], 
-                "rec_class": "Document", 
-                "rec_id": "isbn_9780199544837", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "Book", 
-                "title": "Member States of the European Union", 
-                "title_non_sort": "The "
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "name_family": "Membretti", 
-                            "name_given": "Andrea", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "identifiers": [
-                                {
-                                    "type": "uri", 
-                                    "value": "http://spire.sciences-po.fr/hdl:/2441/5k7940uimfdf9c8990p8ph108"
-                                }
-                            ], 
-                            "name_family": "Vitale", 
-                            "name_given": "Tommaso", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "BookPart", 
-                "title": "Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy"
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "identifiers": [
-                                {
-                                    "type": "uri", 
-                                    "value": "http://spire.sciences-po.fr/hdl:/2441/53r60a8s3kup1vc9kc4942gk9"
-                                }
-                            ], 
-                            "name_family": "Halpern", 
-                            "name_given": "Charlotte", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "BookReview", 
-                "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks", 
-                "title_non_sort": "The "
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {}, 
-                    {
-                        "agent": {
-                            "identifiers": [
-                                {
-                                    "type": "uri", 
-                                    "value": "http://spire.sciences-po.fr/hdl:/2441/53r60a8s3kup1vc9kc4942gk9"
-                                }
-                            ], 
-                            "name_family": "Halpern", 
-                            "name_given": "Charlotte", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "ConferenceContribution", 
-                "title": "Airport companies as silent partners?", 
-                "title_sub": "The slow awakening of Aéroports de Paris"
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "identifiers": [
-                                {
-                                    "type": "uri", 
-                                    "value": "http://spire.sciences-po.fr/hdl:/2441/9labe9r4se65i789685q5908j"
-                                }
-                            ], 
-                            "name_family": "Escudier", 
-                            "name_given": "Alexandre", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "ConferencePaper", 
-                "title": "régime mixte des Modernes et la question de l’Histoire ", 
-                "title_non_sort": "Le "
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "identifiers": [
-                                {
-                                    "type": "uri", 
-                                    "value": "http://spire.sciences-po.fr/hdl:/2441/5k7940uimfdf9c8990p900c2l"
-                                }
-                            ], 
-                            "name_family": "Audren", 
-                            "name_given": "Frédéric", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Chêne", 
-                            "name_given": "Christian", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Mathey", 
-                            "name_given": "Nicolas", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Vergne", 
-                            "name_given": "Arnaud", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {}
-                ], 
-                "identifiers": [
-                    {
-                        "type": "isbn", 
-                        "value": "9782247125265"
-                    }
-                ], 
-                "rec_class": "Document", 
-                "rec_id": "isbn_9782247125265", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "ConferenceProceedings", 
-                "title": "Raymond Saleilles et au-delà"
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "identifiers": [
-                                {
-                                    "type": "uri", 
-                                    "value": "http://spire.sciences-po.fr/hdl:/2441/9labe9r4se65i789685q56sp5"
-                                }
-                            ], 
-                            "name_family": "Rouban", 
-                            "name_given": "Luc", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "ContributionToPeriodical", 
-                "title": "Fonctionnaires, la fin du mérite républicain "
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "name_family": "Castañeda Lefèvre", 
-                            "name_given": "Dorly", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Devin", 
-                            "name_given": "Guillaume", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "DoctoralThesis", 
-                "title": "Peace Laboratories in Colombia: the European Approach to Peace-building", 
-                "title_translated": {
-                    "title": "Les Laboratoires de paix en Colombie: L'approche européenne de la construction de la paix"
-                }
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "name_family": "Epstein", 
-                            "name_given": "Renaud", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Le Galès", 
-                            "name_given": "Patrick", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "Interview", 
-                "title": "Vers une révolution bureaucratique ?"
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "name_family": "Piketty", 
-                            "name_given": "Thomas", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Antonin", 
-                            "name_given": "Céline", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "MasterThesis", 
-                "title": "Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006"
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "name_family": "Combes", 
-                            "name_given": "Hélène", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "PeriodicalIssue", 
-                "title": "Clientélisme en situation. Échanges politiques, politisation et conflits moraux"
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "name_family": "Jean", 
-                            "name_given": "Sébastien", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Hijzen", 
-                            "name_given": "Alexander", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Mayer", 
-                            "name_given": "Thierry", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "Preprint", 
-                "title": "effects at home of initiating production abroad: evidence from matched french firms", 
-                "title_non_sort": "The "
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "identifiers": [
-                                {
-                                    "type": "uri", 
-                                    "value": "http://spire.sciences-po.fr/hdl:/2441/9labe9r4se65i7896860ig2b0"
-                                }
-                            ], 
-                            "name_family": "Artigas", 
-                            "name_given": "Alvaro", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Matsumoto", 
-                            "name_given": "Tadashi", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "identifiers": [
-                                {
-                                    "type": "uri", 
-                                    "value": "http://spire.sciences-po.fr/hdl:/2441/5k7940uimfdf9c8990p8ph108"
-                                }
-                            ], 
-                            "name_family": "Vitale", 
-                            "name_given": "Tommaso", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "Report", 
-                "title": "Greengram - Green Growth in South East Asian Metropolis"
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "name_family": "Vitale", 
-                            "name_given": "Tommaso", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "ReportPart", 
-                "title": "Famiglie, corsi di vita e accoglienza. Spazi e opportunità di solidarietà in contesto urbano "
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "name_family": "Durand", 
-                            "name_given": "Marie-Françoise", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Lequesne", 
-                            "name_given": "Christian", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "Website", 
-                "title": "Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)"
-            }
-        ], 
-        [
-            {
-                "creators": [
-                    {
-                        "agent": {
-                            "name_family": "Do", 
-                            "name_given": "Quoc-Anh", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }, 
-                    {
-                        "agent": {
-                            "name_family": "Campante", 
-                            "name_given": "Filipe R", 
-                            "rec_class": "Person", 
-                            "rec_metajson": 1
-                        }
-                    }
-                ], 
-                "identifiers": null, 
-                "rec_class": "Document", 
-                "rec_id": "", 
-                "rec_metajson": 1, 
-                "rec_source": "test", 
-                "rec_type": "WorkingPaper", 
-                "title": "Isolated Capital Cities, Accountability and Corruption Evidence from US States", 
-                "title_sub": "Evidence from US States"
-            }
-        ]
+        "rec_class": "Document", 
+        "rec_id": "10.1016/j.jinteco.2012.05.011", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "JournalArticle", 
+        "title": "Varieties and the transfer problem "
+      }
     ], 
-    "title": "Test mods"
+    [
+      {
+        "creators": [
+          {
+            "agent": {
+              "name_family": "Barnavie", 
+              "name_given": "Elie", 
+              "rec_class": "Person", 
+              "rec_id": "2441/eu4vqp9ompqllr09hh1aij5g1", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "affiliation": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Dieckhoff", 
+              "name_given": "Alain", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i789685q54c93", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "affiliation": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Lequesne", 
+              "name_given": "Christian", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i789685q54lsl", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "Audiovisual", 
+        "title": "Israël et l’Europe. Filiations et ruptures"
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Lequesne", 
+              "name_given": "Christian", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i789685q54lsl", 
+              "rec_metajson": 1
+            }, 
+            "role": "edt"
+          }, 
+          {
+            "affiliation": {
+              "name": "Department of Politics", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/5l6uh8ogmqildh09h520k4p9m", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Bulmer", 
+              "name_given": "Simon", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i7896860j0h0m", 
+              "rec_metajson": 1
+            }, 
+            "role": "edt"
+          }
+        ], 
+        "identifiers": [
+          {
+            "id_type": "isbn", 
+            "value": "9780199544837"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_id": "9780199544837", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "Book", 
+        "title": "Member States of the European Union", 
+        "title_non_sort": "The "
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "agent": {
+              "name_family": "Membretti", 
+              "name_given": "Andrea", 
+              "rec_class": "Person", 
+              "rec_id": "2441/eo6779thqgm5r489makgk11ai", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "affiliation": {
+              "name": "Centre d'études européennes de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Vitale", 
+              "name_given": "Tommaso", 
+              "rec_class": "Person", 
+              "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "BookPart", 
+        "title": "Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy"
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Centre d'études européennes de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Halpern", 
+              "name_given": "Charlotte", 
+              "rec_class": "Person", 
+              "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "BookReview", 
+        "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks", 
+        "title_non_sort": "The "
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "agent": {
+              "country": "FR", 
+              "date_end": "2013-02-28", 
+              "date_start": "2013-02-27", 
+              "place": "Sciences Po, Paris", 
+              "rec_class": "Event", 
+              "rec_metajson": 1, 
+              "title": "Governing Paris and Mexico"
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "affiliation": {
+              "name": "Centre d'études européennes de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Halpern", 
+              "name_given": "Charlotte", 
+              "rec_class": "Person", 
+              "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "ConferenceContribution", 
+        "title": "Airport companies as silent partners?", 
+        "title_sub": "The slow awakening of Aéroports de Paris"
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Centre de recherches politiques de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380qo", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Escudier", 
+              "name_given": "Alexandre", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i789685q5908j", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "ConferencePaper", 
+        "title": "régime mixte des Modernes et la question de l’Histoire ", 
+        "title_non_sort": "Le "
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Ecole de Droit", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q385ph", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Audren", 
+              "name_given": "Frédéric", 
+              "rec_class": "Person", 
+              "rec_id": "2441/5k7940uimfdf9c8990p900c2l", 
+              "rec_metajson": 1
+            }, 
+            "role": "pbd"
+          }, 
+          {
+            "agent": {
+              "name_family": "Chêne", 
+              "name_given": "Christian", 
+              "rec_class": "Person", 
+              "rec_id": "2441/7t638g2jjsquujs9mcc0jeu8l", 
+              "rec_metajson": 1
+            }, 
+            "role": "pbd"
+          }, 
+          {
+            "agent": {
+              "name_family": "Mathey", 
+              "name_given": "Nicolas", 
+              "rec_class": "Person", 
+              "rec_id": "2441/7t638g2jjsquujs9mcc0jii04", 
+              "rec_metajson": 1
+            }, 
+            "role": "pbd"
+          }, 
+          {
+            "agent": {
+              "name_family": "Vergne", 
+              "name_given": "Arnaud", 
+              "rec_class": "Person", 
+              "rec_id": "2441/7t638g2jjsquujs9mcc0k2e43", 
+              "rec_metajson": 1
+            }, 
+            "role": "pbd"
+          }, 
+          {
+            "agent": {
+              "country": "FR", 
+              "date_end": "2012-03-30", 
+              "date_start": "2012-03-29", 
+              "place": "Faculté de Droit de l'Université Paris-Descartes ", 
+              "rec_class": "Event", 
+              "rec_metajson": 1, 
+              "title": "Raymond Saleilles et au-delà"
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "identifiers": [
+          {
+            "id_type": "isbn", 
+            "value": "9782247125265"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_id": "9782247125265", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "ConferenceProceedings", 
+        "title": "Raymond Saleilles et au-delà"
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Centre de recherches politiques de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380qo", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Rouban", 
+              "name_given": "Luc", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i789685q56sp5", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "ContributionToPeriodical", 
+        "title": "Fonctionnaires, la fin du mérite républicain "
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "agent": {
+              "name_family": "Castañeda Lefèvre", 
+              "name_given": "Dorly", 
+              "rec_class": "Person", 
+              "rec_id": "2441/3fm4jv3k2s99lms9jb5i1ag8p", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "affiliation": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Devin", 
+              "name_given": "Guillaume", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i789685q568qo", 
+              "rec_metajson": 1
+            }, 
+            "role": "ths"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "DoctoralThesis", 
+        "title": "Peace Laboratories in Colombia: the European Approach to Peace-building", 
+        "title_translated": {
+          "title": "Les Laboratoires de paix en Colombie: L'approche européenne de la construction de la paix"
+        }
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "agent": {
+              "name_family": "Epstein", 
+              "name_given": "Renaud", 
+              "rec_class": "Person", 
+              "rec_id": "2441/53r60a8s3kup1vc9k0sklgecj", 
+              "rec_metajson": 1
+            }, 
+            "role": "ivr"
+          }, 
+          {
+            "affiliation": {
+              "name": "Centre d'études européennes de Sciences Po (CEE)", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Le Galès", 
+              "name_given": "Patrick", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i789685q58ub0", 
+              "rec_metajson": 1
+            }, 
+            "role": "ive"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "Interview", 
+        "title": "Vers une révolution bureaucratique ?"
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Paris-Jourdan Sciences Economiques", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9oe5ao", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Piketty", 
+              "name_given": "Thomas", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i7896860ngch2", 
+              "rec_metajson": 1
+            }, 
+            "role": "ths"
+          }, 
+          {
+            "affiliation": {
+              "name": "OFCE", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q38226", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Antonin", 
+              "name_given": "Céline", 
+              "rec_class": "Person", 
+              "rec_id": "2441/5l6uh8ogmqildh09h6l10gtqo", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "MasterThesis", 
+        "title": "Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006"
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Combes", 
+              "name_given": "Hélène", 
+              "rec_class": "Person", 
+              "rec_id": "2441/eu4vqp9ompqllr09hga9pgk39", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "PeriodicalIssue", 
+        "title": "Clientélisme en situation. Échanges politiques, politisation et conflits moraux"
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Laboratoire de Conception et d'Intégration des Systèmes", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/d7a7evb2ctdg4i89gesapaoj4", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Jean", 
+              "name_given": "Sébastien", 
+              "rec_class": "Person", 
+              "rec_id": "2441/c8dmi8nm4pdjkuc9g8m3565k5", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "affiliation": {
+              "name": "Leverhulme Centre for Research on Globalisation and Economic Policy (GEP)", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/5l6uh8ogmqildh09h29b6gkol", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Hijzen", 
+              "name_given": "Alexander", 
+              "rec_class": "Person", 
+              "rec_id": "2441/c8dmi8nm4pdjkuc9g8m34i593", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "affiliation": {
+              "name": "Département d'économie", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q385c7", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Mayer", 
+              "name_given": "Thierry", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i789685q5aqa5", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "Preprint", 
+        "title": "effects at home of initiating production abroad: evidence from matched french firms", 
+        "title_non_sort": "The "
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "agent": {
+              "name_family": "Artigas", 
+              "name_given": "Alvaro", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i7896860ig2b0", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "agent": {
+              "name_family": "Matsumoto", 
+              "name_given": "Tadashi", 
+              "rec_class": "Person", 
+              "rec_id": "2441/5rkqqmvrn4tl22s9mc0slh0gj", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "affiliation": {
+              "name": "Centre d'études européennes de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Vitale", 
+              "name_given": "Tommaso", 
+              "rec_class": "Person", 
+              "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "Report", 
+        "title": "Greengram - Green Growth in South East Asian Metropolis"
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Centre d'études européennes de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Vitale", 
+              "name_given": "Tommaso", 
+              "rec_class": "Person", 
+              "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "ReportPart", 
+        "title": "Famiglie, corsi di vita e accoglienza. Spazi e opportunità di solidarietà in contesto urbano "
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q021gm", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Durand", 
+              "name_given": "Marie-Françoise", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i789685q571ko", 
+              "rec_metajson": 1
+            }, 
+            "role": "pbd"
+          }, 
+          {
+            "affiliation": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Lequesne", 
+              "name_given": "Christian", 
+              "rec_class": "Person", 
+              "rec_id": "2441/9labe9r4se65i789685q54lsl", 
+              "rec_metajson": 1
+            }, 
+            "role": "pbd"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "Website", 
+        "title": "Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)"
+      }
+    ], 
+    [
+      {
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Département d'économie", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q385c7", 
+              "rec_metajson": 1
+            }, 
+            "agent": {
+              "name_family": "Do", 
+              "name_given": "Quoc-Anh", 
+              "rec_class": "Person", 
+              "rec_id": "2441/53r60a8s3kup1vc9kc6cl8m9l", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }, 
+          {
+            "agent": {
+              "name_family": "Campante", 
+              "name_given": "Filipe R", 
+              "rec_class": "Person", 
+              "rec_id": "2441/dambferfb7dfprc9lj6bkb4sj", 
+              "rec_metajson": 1
+            }, 
+            "role": "aut"
+          }
+        ], 
+        "rec_class": "Document", 
+        "rec_metajson": 1, 
+        "rec_source": "test", 
+        "rec_type": "WorkingPaper", 
+        "title": "Isolated Capital Cities, Accountability and Corruption Evidence from US States", 
+        "title_sub": "Evidence from US States"
+      }
+    ]
+  ], 
+  "title": "Test mods"
 }
