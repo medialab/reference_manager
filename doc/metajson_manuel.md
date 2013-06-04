@@ -28,7 +28,7 @@ Number of references : 69
             }
         ], 
         "date_issued": "2003", 
-        "is_part_of": [
+        "is_part_ofs": [
             {
                 "rec_type": "Journal", 
                 "title": "Journal title"
@@ -68,7 +68,7 @@ Number of references : 0
             }
         ], 
         "date_issued": "2010", 
-        "is_part_of": [
+        "is_part_ofs": [
             {
                 "rec_type": "Magazine", 
                 "title": "Magazine title"
@@ -106,7 +106,7 @@ Number of references : 0
             }
         ], 
         "date_issued": "2010-12-31", 
-        "is_part_of": [
+        "is_part_ofs": [
             {
                 "rec_type": "Newspaper", 
                 "title": "Newspaper title"
@@ -144,7 +144,7 @@ Number of references : 0
             }
         ], 
         "date_issued": "2010-12-31", 
-        "is_part_of": [
+        "is_part_ofs": [
             {
                 "rec_type": "Newspaper", 
                 "title": "Newspaper title"

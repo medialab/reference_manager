@@ -25,20 +25,20 @@ def validate_metajson_document(metajson):
         errors.append("No creator")
 
     # related_items
-    if "is_part_of" in metajson:
-        for is_part_of in metajson["is_part_of"]:
+    if "is_part_ofs" in metajson:
+        for is_part_of in metajson["is_part_ofs"]:
             errors.extend(validate_metajson_is_part_of(is_part_of))
     if "series" in metajson:
         for series in metajson["series"]:
             errors.extend(validate_metajson_series(series))
-    if "original" in metajson:
-        for original in metajson["original"]:
+    if "originals" in metajson:
+        for original in metajson["originals"]:
             errors.extend(validate_metajson_original(original))
-    if "review_of" in metajson:
-        for review_of in metajson["review_of"]:
-            errors.extend(validate_metajson_review_of(review_of))
-    if "archive" in metajson:
-        for archive in metajson["archive"]:
+    if "review_ofs" in metajson:
+        for review_ofs in metajson["review_ofs"]:
+            errors.extend(validate_metajson_review_ofs(review_ofs))
+    if "archives" in metajson:
+        for archive in metajson["archives"]:
             errors.extend(validate_metajson_archive(archive))
     #if "resources" in metajson:
     #    for resource in metajson["resources"]:
@@ -52,14 +52,14 @@ def validate_metajson_is_part_of(is_part_of):
     if not is_part_of:
         errors.append("Empty is_part_of")
     if "rec_type" not in is_part_of or not is_part_of["rec_type"]:
-        errors.append("Empty type in is_part_of")
+        errors.append("Empty type in is_part_ofs")
     if "title" not in is_part_of or not is_part_of["title"]:
         errors.append("Empty title in is_part_of")
     if "creators" in is_part_of and is_part_of["creators"]:
         for creator in is_part_of["creators"]:
             errors.extend(validate_metajson_creator(creator))
-    if "is_part_of" in is_part_of:
-        for is_part_of_is_part_of in is_part_of["is_part_of"]:
+    if "is_part_ofs" in is_part_of:
+        for is_part_of_is_part_of in is_part_of["is_part_ofs"]:
             errors.extend(validate_metajson_is_part_of(is_part_of_is_part_of))
     if "series" in is_part_of:
         for is_part_of_series in is_part_of["series"]:
@@ -105,16 +105,16 @@ def validate_metajson_series(series):
     return errors
 
 
-def validate_metajson_review_of(review_of):
+def validate_metajson_review_ofs(review_ofs):
     errors = []
-    if not review_of:
-        review_of.append("Empty review_of")
-    if "rec_type" not in review_of or not review_of["rec_type"]:
-        errors.append("Empty type in review_of")
-    if "title" not in review_of or not review_of["title"]:
-        errors.append("Empty title in review_of")
-    if "creators" in review_of and review_of["creators"]:
-        for creator in review_of["creators"]:
+    if not review_ofs:
+        review_ofs.append("Empty review_ofs")
+    if "rec_type" not in review_ofs or not review_ofs["rec_type"]:
+        errors.append("Empty type in review_ofs")
+    if "title" not in review_ofs or not review_ofs["title"]:
+        errors.append("Empty title in review_ofs")
+    if "creators" in review_ofs and review_ofs["creators"]:
+        for creator in review_ofs["creators"]:
             errors.extend(validate_metajson_creator(creator))
     return errors
 

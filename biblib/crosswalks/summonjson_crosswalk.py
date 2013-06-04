@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import json
 from biblib import metajson
 from biblib.metajson import Collection
 from biblib.metajson import Document
@@ -115,27 +114,27 @@ def summonjson_document_to_metajson(sum_doc, source):
     copyright_statement = extract_value(sum_doc, "Copyright")
     date_issued = extract_date_issued(sum_doc)
     degree = extract_value(sum_doc, "DissertationDegree")
-    descriptions = extract_convert_langstrings(sum_doc, "Abstract", main_language)
+    descriptions = extract_convert_languageValues(sum_doc, "Abstract", main_language)
     edition = extract_value(sum_doc, "Edition")
     extent_pages = extract_value(sum_doc, "PageCount")
     genre = extract_value(sum_doc, "Genre")
     is_part_of_edition = extract_value(sum_doc, "PublicationEdition")
     is_part_of_title = extract_value(sum_doc, "PublicationTitle")
     is_part_of_title_sub = extract_value(sum_doc, "PublicationSubtitle")
-    notes = extract_convert_langstrings(sum_doc, "Notes", main_language)
+    notes = extract_convert_languageValues(sum_doc, "Notes", main_language)
     part_issue = extract_value(sum_doc, "Issue")
     part_page_end = extract_value(sum_doc, "EndPage")
     part_page_start = extract_value(sum_doc, "StartPage")
     part_volume = extract_value(sum_doc, "Volume")
     peer_reviewed = extract_boolean_value(sum_doc, "IsPeerReviewed")
     publisher = extract_value(sum_doc, "Publisher")
-    publisher_place = extract_value(sum_doc, "PublicationPlace")
+    publication_place = extract_value(sum_doc, "PublicationPlace")
     scholarly = extract_boolean_value(sum_doc, "IsScholarly")
     series_title = extract_value(sum_doc, "PublicationSeriesTitle")
     subject_keywords = extract_value(sum_doc, "Keywords", True)
-    subject_names = convert_creators(sum_doc, "RelatedPersons", None, "person", None)
-    subject_terms = extract_value(sum_doc, "SubjectTerms", True)
-    table_of_contents = extract_convert_langstrings(sum_doc, "TableOfContents", main_language)
+    subject_agents = convert_creators(sum_doc, "RelatedPersons", None, "person", None)
+    subject_topics = extract_value(sum_doc, "SubjectTerms", True)
+    table_of_contents = extract_convert_languageValues(sum_doc, "TableOfContents", main_language)
     title = extract_value(sum_doc, "Title")
     title_sub = extract_value(sum_doc, "Subtitle")
 
@@ -143,19 +142,19 @@ def summonjson_document_to_metajson(sum_doc, source):
     has_isbn = False
     has_eissn = False
     identifiers_item = []
-    identifiers_is_part_of = []
+    is_part_of_identifiers = []
     for sum_key in summon_identifier_type_to_metajson_identifier_type:
         if sum_key in sum_doc:
             for id_value in sum_doc[sum_key]:
                 id_type = summon_identifier_type_to_metajson_identifier_type[sum_key]
                 if id_type == "issn":
-                    identifiers_is_part_of.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
                 elif id_type == "eissn":
                     has_eissn = True
-                    identifiers_is_part_of.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
                 elif id_type == "isbn":
                     has_isbn = True
-                    identifiers_is_part_of.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
                 else:
                     identifiers_item.append(metajson.create_identifier(id_type, id_value))
 
@@ -183,21 +182,21 @@ def summonjson_document_to_metajson(sum_doc, source):
         is_part_of = Document()
         is_part_of.set_key_if_not_none("rec_type", is_part_of_type)
         is_part_of.set_key_if_not_none("edition", is_part_of_edition)
-        is_part_of.add_items_to_key(identifiers_is_part_of, "identifiers")
+        is_part_of.add_items_to_key(is_part_of_identifiers, "identifiers")
         is_part_of.set_key_if_not_none("peer_reviewed", peer_reviewed)
-        is_part_of.set_key_if_not_none("publisher", publisher)
-        is_part_of.set_key_if_not_none("publisher_place", publisher_place)
+        is_part_of.set_key_if_not_none("publishers", [publisher])
+        is_part_of.set_key_if_not_none("publication_places", [publication_place])
         is_part_of.set_key_if_not_none("title", is_part_of_title)
         is_part_of.set_key_if_not_none("title_sub", is_part_of_title_sub)
 
         document.add_items_to_key(identifiers_item, "identifiers")
 
-        document.add_items_to_key([is_part_of], "is_part_of")
+        document.add_items_to_key([is_part_of], "is_part_ofs")
     else:
         document.set_key_if_not_none("peer_reviewed", peer_reviewed)
-        document.set_key_if_not_none("publisher", publisher)
-        document.set_key_if_not_none("publisher_place", publisher_place)
-        document.add_items_to_key(identifiers_is_part_of, "identifiers")
+        document.set_key_if_not_none("publishers", [publisher])
+        document.set_key_if_not_none("publication_places", [publication_place])
+        document.add_items_to_key(is_part_of_identifiers, "identifiers")
         document.add_items_to_key(identifiers_item, "identifiers")
 
     # series
@@ -231,16 +230,20 @@ def summonjson_document_to_metajson(sum_doc, source):
     document.set_key_if_not_none("title", title)
     document.set_key_if_not_none("title_sub", title_sub)
 
-    # subject
-    subject = Subject()
+    # keywords, subjects
+    subjects = []
     if subject_keywords:
-        subject["keywords"] = subject_keywords
-    if subject_names:
-        subject["names"] = subject_names
-    if subject_terms:
-        subject["terms"] = subject_terms
-    if subject:
-        document["subjects"] = subject
+        document["keywords"] = subject_keywords
+    if subject_agents:
+        subject = Subject()
+        subject["agents"] = subject_agents
+        subjects.append(subject)
+    if subject_topics:
+        subject = Subject()
+        subject["topics"] = subject_topics
+        subjects.append(subject)
+    if subjects:
+        document["subjects"] = subjects
 
     debug = True
     if debug:
@@ -252,12 +255,12 @@ def summonjson_document_to_metajson(sum_doc, source):
     return document
 
 
-def extract_convert_langstrings(sum_doc, sum_key, main_language):
+def extract_convert_languageValues(sum_doc, sum_key, main_language):
     if sum_key in sum_doc:
-        langstrings = []
+        languageValues = []
         for value in sum_doc[sum_key]:
-            langstrings.append({"language": main_language, "value": value})
-        return langstrings
+            languageValues.append({"language": main_language, "value": value})
+        return languageValues
 
 
 def extract_convert_add_classifications(sum_doc, document, sum_key, authority_id):
@@ -278,22 +281,22 @@ def extract_convert_identifiers(sum_doc):
     has_isbn = False
     has_eissn = False
     identifiers_item = []
-    identifiers_is_part_of = []
+    is_part_of_identifiers = []
     for sum_key in summon_identifier_type_to_metajson_identifier_type:
         if sum_key in sum_doc:
             for id_value in sum_doc[sum_key]:
                 id_type = summon_identifier_type_to_metajson_identifier_type[sum_key]
                 if id_type == "issn":
-                    identifiers_is_part_of.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
                 elif id_type == "eissn":
                     has_eissn = True
-                    identifiers_is_part_of.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
                 elif id_type == "isbn":
                     has_isbn = True
-                    identifiers_is_part_of.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
                 else:
                     identifiers_item.append(metajson.create_identifier(id_type, id_value))
-    return identifiers_item, identifiers_is_part_of
+    return identifiers_item, is_part_of_identifiers
 
 
 def extract_creators(sum_doc):

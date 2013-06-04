@@ -31,7 +31,7 @@ def bibtex_entry_to_metajson(entry, source):
         is_part_of = Document()
         is_part_of["rec_type"] = "journal"
         is_part_of["title"] = is_part_of_title
-        document["is_part_of"] = [is_part_of]
+        document["is_part_ofs"] = [is_part_of]
     document["description"] = get_field(entry, 'abstract')
 
     myfile = get_field(entry, 'file')

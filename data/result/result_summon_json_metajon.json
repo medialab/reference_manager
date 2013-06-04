@@ -26,7 +26,7 @@
                     "value": "FETCH-proquest_dll_8291154920"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -221,7 +221,7 @@
                     "value": "FETCH-asm_corrosion_5a279077a4838110VgnVCM100000701e010aRCRD0"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -373,7 +373,7 @@
                     "value": "VISPAG"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -519,7 +519,7 @@
                     "value": "ECSTA3"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -587,7 +587,7 @@
                     "value": "FETCH-proquest_dll_15507818810"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -671,7 +671,7 @@
                     "value": "FETCH-proquest_dll_8903483110"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -737,7 +737,7 @@
                     "value": "FETCH-proquest_dll_17341060510"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -944,7 +944,7 @@
                     "value": "CABUDO"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1019,7 +1019,7 @@
                     "value": "FETCH-asm_corrosion_3546cbe12baa3210VgnVCM100000701e010aRCRD0"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -1102,7 +1102,7 @@
                     "value": "FETCH-proquest_dll_8903482810"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1162,7 +1162,7 @@
                     "value": "FETCH-proquest_dll_20924473210"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1238,7 +1238,7 @@
                     "value": "FETCH-proquest_dll_9588375010"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1290,7 +1290,7 @@
                     "value": "FETCH-proquest_dll_8292484620"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -1334,7 +1334,7 @@
                     "value": "FETCH-proquest_dll_8769173120"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -1390,7 +1390,7 @@
                     "value": "FETCH-proquest_dll_3585071710"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1471,7 +1471,7 @@
                     "value": "FETCH-proquest_dll_6180577610"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1547,7 +1547,7 @@
                     "value": "JCMNAA"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1602,7 +1602,7 @@
                     "value": "FETCH-proquest_dll_6574388010"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1651,7 +1651,7 @@
                     "value": "FETCH-proquest_dll_20924484210"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1707,7 +1707,7 @@
                     "value": "FETCH-proquest_dll_19625555310"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1770,7 +1770,7 @@
                     "value": "NBUSAY"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1818,7 +1818,7 @@
                     "value": "FETCH-proquest_dll_23005647010"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -1882,7 +1882,7 @@
                         "rec_metajson": 1, 
                         "name_family": "Digman", 
                         "name_given": "Lester", 
-                        "name_particule_non_dropping": "A"
+                        "name_prefix": "A"
                     }, 
                     "role": "aut"
                 }
@@ -1906,7 +1906,7 @@
                     "value": "FETCH-proquest_dll_6562400410"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -1955,7 +1955,7 @@
                         "rec_metajson": 1, 
                         "name_family": "Digman", 
                         "name_given": "Lester", 
-                        "name_particule_non_dropping": "A"
+                        "name_prefix": "A"
                     }, 
                     "role": "aut"
                 }
@@ -1979,7 +1979,7 @@
                     "value": "FETCH-proquest_dll_6562398010"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -2026,7 +2026,7 @@
                     "value": "FETCH-proquest_dll_24070775610"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -2088,7 +2088,7 @@
                     "value": "FETCH-proquest_dll_23984941610"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -2150,7 +2150,7 @@
                     "value": "FETCH-proquest_dll_23554904610"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -2212,7 +2212,7 @@
                     "value": "FETCH-proquest_dll_23299236910"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -2274,7 +2274,7 @@
                     "value": "FETCH-proquest_dll_22671199710"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -2364,7 +2364,7 @@
                     "value": "FETCH-proquest_dll_832945800"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -2431,7 +2431,7 @@
                     "value": "FETCH-proquest_dll_461969220"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -2508,7 +2508,7 @@
                     "value": "BUQUAL"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -2570,7 +2570,7 @@
                     "value": "FETCH-proquest_dll_832920220"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -2621,7 +2621,7 @@
                     "value": "FETCH-proquest_dll_25822726110"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -2698,7 +2698,7 @@
                     "value": "FETCH-proquest_dll_20849894910"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -2775,7 +2775,7 @@
                     "value": "FETCH-proquest_dll_20871143910"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -2864,7 +2864,7 @@
                     "value": "FETCH-proquest_dll_20850303610"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -2941,7 +2941,7 @@
                     "value": "FETCH-proquest_dll_20843758110"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -3030,7 +3030,7 @@
                     "value": "FETCH-proquest_dll_20850303710"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -3134,7 +3134,7 @@
                     "value": "NTXJAC"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -3211,7 +3211,7 @@
                     "value": "NBUSAY"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -3267,7 +3267,7 @@
                     "value": "FETCH-proquest_dll_20849630110"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -3356,7 +3356,7 @@
                     "value": "FETCH-proquest_dll_23790391010"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -3433,7 +3433,7 @@
                     "value": "FETCH-proquest_dll_22999673810"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -3568,7 +3568,7 @@
                     "value": "FETCH-proquest_dll_28285684510"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -3613,7 +3613,7 @@
                     "value": "FETCH-sciencespo_catalog_00008627910"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -3669,7 +3669,7 @@
                     "value": "FETCH-proquest_dll_547246140"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -3716,7 +3716,7 @@
                     "value": "FETCH-proquest_dll_545999940"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -3813,7 +3813,7 @@
                     "value": "FETCH-proquest_dll_894666490"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -3851,7 +3851,7 @@
                     "value": "FETCH-chadwyckhealey_pio_q351212114540"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -3940,7 +3940,7 @@
                     "value": "FETCH-proquest_dll_24453817110"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "edition": "1", 
                     "identifiers": [
@@ -4003,7 +4003,7 @@
                     "value": "FETCH-proquest_dll_24453793110"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "edition": "Eire 1", 
                     "identifiers": [
@@ -4046,7 +4046,7 @@
                     "value": "FETCH-gale_primary_2664601460"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -4115,7 +4115,7 @@
                     "value": "FETCH-LOGICAL-p501-5a8962f7382e61efa12bc289d5a562d30e03baf204b3735f45e924272fef50b00"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -4257,7 +4257,7 @@
                     "value": "FETCH-proquest_dll_7858896810"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -4315,7 +4315,7 @@
                     "value": "FETCH-proquest_dll_3399384710"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -4373,7 +4373,7 @@
                     "value": "FETCH-proquest_dll_6209332610"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -4432,7 +4432,7 @@
                     "value": "FETCH-LOGICAL-p427-80556e4e3a3f3936e1eb018fc3b7f6034dfb0d1cf60a260f8ee77c2ec54c021f0"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -4483,7 +4483,7 @@
                     "value": "FETCH-proquest_dll_3454266510"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -4524,7 +4524,7 @@
                     "value": "FETCH-proquest_dll_645994310"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -4571,7 +4571,7 @@
                     "value": "FETCH-LOGICAL-p421-92cd47cd33a19ca948c459ec64633f8b0c26e83c4b5ec8005f8e92e4178f117d0"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -4645,7 +4645,7 @@
                     "value": "ECSTA3"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -4707,7 +4707,7 @@
                     "value": "FETCH-proquest_dll_696629220"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -4748,7 +4748,7 @@
                     "value": "FETCH-proquest_dll_11784607020"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -4790,7 +4790,7 @@
                     "value": "FETCH-proquest_dll_19138217720"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -4842,7 +4842,7 @@
                     "value": "FETCH-proquest_dll_2897047320"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -4883,7 +4883,7 @@
                     "value": "FETCH-proquest_dll_342347300"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -4924,7 +4924,7 @@
                     "value": "FETCH-LOGICAL-p511-4abcb6770079fa26bfd6f5534d1e5d2dabc1b6134239267958d3604916a46540"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -4975,7 +4975,7 @@
                     "value": "CDNAEC"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -5030,7 +5030,7 @@
                     "value": "FETCH-gale_legaltrac_123832680"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -5093,7 +5093,7 @@
                     "value": "PNCHAH"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -5187,7 +5187,7 @@
                     "value": "FETCH-proquest_dll_4167063010"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -5238,7 +5238,7 @@
                     "value": "FETCH-proquest_dll_22270648120"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -5278,7 +5278,7 @@
                     "value": "FETCH-proquest_dll_26658980"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -5327,7 +5327,7 @@
                     "value": "FETCH-proquest_dll_11231468520"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -5378,7 +5378,7 @@
                     "value": "FETCH-sciencespo_catalog_00005056380"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -5437,7 +5437,7 @@
                     "value": "FETCH-proquest_dll_27001373310"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -5494,7 +5494,7 @@
                     "value": "FETCH-proquest_dll_16809337020"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -5542,7 +5542,7 @@
                     "value": "FETCH-LOGICAL-g451-c866aade591cf79498f5999332e6c976af46a8498a0bc1bd8853da3531b5a5a90"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "edition": "LONDON 3RD EDITION", 
                     "identifiers": [
@@ -5598,7 +5598,7 @@
                     "value": "FETCH-proquest_dll_25318193510"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -5656,7 +5656,7 @@
                     "value": "FETCH-LOGICAL-p434-829793d0d8a9c09bbfefc94530fa4be945777f40b411dbdaccf977182c27522b0"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -5722,7 +5722,7 @@
                     "value": "FETCH-proquest_dll_730685420"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -5787,7 +5787,7 @@
                     "value": "FETCH-proquest_dll_720072920"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -5829,7 +5829,7 @@
                     "value": "FETCH-proquest_dll_538432690"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "rec_class": "Document", 
                     "rec_metajson": 1, 
@@ -5881,7 +5881,7 @@
                     "value": "FETCH-proquest_dll_1332895510"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -5938,7 +5938,7 @@
                     "value": "FETCH-proquest_dll_726436590"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -5997,7 +5997,7 @@
                     "value": "FETCH-proquest_dll_720065960"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6064,7 +6064,7 @@
                     "value": "FETCH-proquest_dll_11267896620"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6123,7 +6123,7 @@
                     "value": "FETCH-proquest_dll_21856191620"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6186,7 +6186,7 @@
                     "value": "FETCH-proquest_dll_947570110"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6255,7 +6255,7 @@
                     "value": "FETCH-LOGICAL-p501-5a8962f7382e61efa12bc289d5a562d30e03baf204b3735f45e924272fef50b02"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6345,7 +6345,7 @@
                     "value": "FETCH-LOGICAL-c1490-784e33614763eb92fbd32c70275ea09ada1c6525bcd904d89372c0d5a44270c22"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6440,7 +6440,7 @@
                     "value": "FETCH-LOGICAL-j781-5fab598ae02f8ce43007f3e38b81f8d09fe3bbffd34462d107a4a046cbf6b9972"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6519,7 +6519,7 @@
                     "value": "FETCH-LOGICAL-c675-76a05dc7920b8e3da027004dc39c13a101f268af45b372bcd7970a5aa5d011fd2"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6582,7 +6582,7 @@
                     "value": "FETCH-LOGICAL-c1142-fe8faf72383f273eb7c2cd270450f6682c1290de6996dd43559be824741733e62"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6647,7 +6647,7 @@
                     "value": "FETCH-LOGICAL-c1091-f34f12da9bdcfee5f3cd296a722bcd44232a320322af8d808586eec395ed88d22"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6722,7 +6722,7 @@
                     "value": "FETCH-cairn_primary_oai_cairn_info_MULT_047_00052"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6775,7 +6775,7 @@
                     "value": "FETCH-gale_primary_1925011532"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6855,7 +6855,7 @@
                     "value": "FETCH-LOGICAL-c1161-368b27fedf94cd664860f91be958c652bda00bee08c9ae92c8f1dd0a447e6d8f2"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6930,7 +6930,7 @@
                     "value": "FETCH-wiley_primary_10_1111_j_1478_9299_2004_004_4_x_PSR4_42"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -6983,7 +6983,7 @@
             "creators": [
                 {
                     "person": {
-                        "date_of_birth": "1968", 
+                        "date_birth": "1968", 
                         "rec_class": "Person", 
                         "rec_metajson": 1, 
                         "name_family": "Bertrand", 
@@ -6993,7 +6993,7 @@
                 }, 
                 {
                     "person": {
-                        "date_of_birth": "1944", 
+                        "date_birth": "1944", 
                         "rec_class": "Person", 
                         "rec_metajson": 1, 
                         "name_family": "Gérard", 
@@ -7533,7 +7533,7 @@
                     "value": "FETCH-wiley_primary_10_1111_j_1478_9302_2011_00241_6_x_PSR241_60"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -7595,7 +7595,7 @@
                     "value": "FETCH-wiley_primary_10_1111_j_1478_9302_2011_00234_6_x_PSR234_60"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -7657,7 +7657,7 @@
                     "value": "FETCH-wiley_primary_10_1111_j_1478_9302_2010_00227_6_x_PSR227_60"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -7726,7 +7726,7 @@
                     "value": "FETCH-proquest_dll_29013557410"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -7807,7 +7807,7 @@
                     "value": "HSRNAN"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -7876,7 +7876,7 @@
                     "value": "FETCH-wiley_primary_10_1111_j_1478_9302_2008_00165_3_x_PSR165_30"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -7938,7 +7938,7 @@
                     "value": "FETCH-wiley_primary_10_1111_j_1478_9302_2008_00156_4_x_PSR156_40"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -7999,7 +7999,7 @@
                     "value": "FETCH-wiley_primary_10_1111_j_1478_9299_2007_00147_4_x_PSR147_40"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -8060,7 +8060,7 @@
                     "value": "FETCH-wiley_primary_10_1111_j_1478_9299_2007_00137_4_x_PSR137_40"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -8121,7 +8121,7 @@
                     "value": "FETCH-wiley_primary_10_1111_j_1478_9299_2007_00132_4_x_PSR132_40"
                 }
             ], 
-            "is_part_of": [
+            "is_part_ofs": [
                 {
                     "identifiers": [
                         {
@@ -8174,7 +8174,7 @@
             "creators": [
                 {
                     "person": {
-                        "date_of_birth": "1948", 
+                        "date_birth": "1948", 
                         "rec_class": "Person", 
                         "rec_metajson": 1, 
                         "name_family": "Philippe", 
@@ -8387,7 +8387,7 @@
                 }, 
                 {
                     "person": {
-                        "date_of_birth": "1942", 
+                        "date_birth": "1942", 
                         "rec_class": "Person", 
                         "rec_metajson": 1, 
                         "name_family": "G.", 
@@ -8604,18 +8604,18 @@
             "creators": [
                 {
                     "person": {
-                        "date_of_birth": "1948", 
+                        "date_birth": "1948", 
                         "rec_class": "Person", 
                         "rec_metajson": 1, 
                         "name_family": "de", 
                         "name_given": "Loyère Georges", 
-                        "name_particule_non_dropping": "La"
+                        "name_prefix": "La"
                     }, 
                     "role": "aut"
                 }, 
                 {
                     "person": {
-                        "date_of_birth": "1926", 
+                        "date_birth": "1926", 
                         "rec_class": "Person", 
                         "rec_metajson": 1, 
                         "name_family": "Valéry", 
@@ -8694,7 +8694,7 @@
                 }, 
                 {
                     "person": {
-                        "date_of_birth": "1960", 
+                        "date_birth": "1960", 
                         "rec_class": "Person", 
                         "rec_metajson": 1, 
                         "name_family": "Pierre", 

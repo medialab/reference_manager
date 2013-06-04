@@ -97,17 +97,6 @@
                         }
                     });
                 });
-                $("input#save_ui_button").click(function() {
-                    $.jsonRPC.request("save_ui", {
-                        params : [$("textarea#save_ui_input").val()],
-                        success : function(data) {
-                            $("<p />").text(data.result).appendTo($("p#save_ui_result"));
-                        },
-                        error : function(data) {
-                            alert(JSON.stringify(data));
-                        }
-                    });
-                });
             });
         </script>
     </head>
@@ -187,16 +176,6 @@
         </p>
         <p>Results :</p>
         <p id="save_result"></p>
-
-        <h2>Method save_ui</h2>
-        <p><label for="save_ui_input">JSON UI to save</label> : 
-            <textarea name="save_ui_input" id="save_ui_input" rows="10" cols="30"></textarea>
-        </p>
-        <p>
-            <input name="save_ui_button" id="save_ui_button" value="Save metadata in JSON UI" type="button" />
-        </p>
-        <p>Results :</p>
-        <p id="save_ui_result"></p>
 
     </body>
 </html>

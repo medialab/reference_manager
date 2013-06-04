@@ -8,6 +8,7 @@ from biblib.metajson import Document
 from biblib.metajson import Resource
 from biblib.services import creator_service
 from biblib.services import language_service
+from biblib.util import constants
 
 endnote_import_note = False
 endnote_import_research_note = False
@@ -52,61 +53,61 @@ TYPE_ENCYCLOPEDIA = "53"
 TYPE_GRANT = "54"
 
 endnote_record_type_to_metajson_document_type = {
-    "Aggregated Database": "Document",
-    "Ancient Text": "UnpublishedDocument",
-    TYPE_ARTWORK: "Image",
-    TYPE_AUDIOVISUAL_MATERIAL: "AudioRecording",
-    TYPE_BILL: "Document",
-    "Blog": "WebEntity",
-    TYPE_BOOK: "Book",
-    TYPE_BOOK_SECTION: "BookPart",
-    TYPE_CASE: "Document",
-    "Catalog": "Document",
-    TYPE_CHART_OR_TABLE: "Image",
-    TYPE_CLASSICAL_WORK: "AudioRecording",
-    "Computer Program": "Software",
-    TYPE_CONFERENCE_PAPER: "BookPart",
-    TYPE_CONFERENCE_PROCEEDINGS: "Book",
-    "Dataset": "Document",
-    "Dictionary": "Dictionary",
-    TYPE_EDITED_BOOK: "Book",
-    TYPE_ENCYCLOPEDIA: "Book",
-    TYPE_ELECTRONIC_ARTICLE: "Article",
-    "Electronic Book Section": "BookPart",
-    TYPE_EQUATION: "Document",
-    TYPE_FIGURE: "Image",
-    TYPE_FILM_OR_BROADCAST: "Film",
-    TYPE_GRANT: "UnpublishedDocument",
-    TYPE_GENERIC: "Document",
-    TYPE_GOVERNMENT_DOCUMENT: "Document",
-    TYPE_HEARING: "Document",
-    TYPE_JOURNAL_ARTICLE: "Article",
-    "Legal": "Document",
-    TYPE_LEGAL_RULE_OR_REGULATION: "Document",
-    TYPE_MAGAZINE_ARTICLE: "Article",
-    TYPE_MANUSCRIPT: "UnpublishedDocument",
-    TYPE_MAP: "Image",
-    TYPE_NEWSPAPER_ARTICLE: "Article",
-    TYPE_ONLINE_DATABASE: "Document",
-    TYPE_ONLINE_MULTIMEDIA: "WebEntity",
-    TYPE_PATENT: "Document",
-    TYPE_REPORT: "UnpublishedDocument",
-    "Serial": "Document",
-    "Standard": "Document",
-    TYPE_STATUTE: "Document",
-    TYPE_THESIS: "Thesis",
-    TYPE_UNPUBLISHED_WORK: "UnpublishedDocument",
-    TYPE_WEB_PAGE: "WebEntity"
+    "Aggregated Database": constants.DOC_TYPE_DOCUMENT,
+    "Ancient Text": constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
+    TYPE_ARTWORK: constants.DOC_TYPE_IMAGE,
+    TYPE_AUDIOVISUAL_MATERIAL: constants.DOC_TYPE_AUDIORECORDING,
+    TYPE_BILL: constants.DOC_TYPE_DOCUMENT,
+    "Blog": constants.DOC_TYPE_WEBENTITY,
+    TYPE_BOOK: constants.DOC_TYPE_BOOK,
+    TYPE_BOOK_SECTION: constants.DOC_TYPE_BOOKPART,
+    TYPE_CASE: constants.DOC_TYPE_DOCUMENT,
+    "Catalog": constants.DOC_TYPE_DOCUMENT,
+    TYPE_CHART_OR_TABLE: constants.DOC_TYPE_IMAGE,
+    TYPE_CLASSICAL_WORK: constants.DOC_TYPE_AUDIORECORDING,
+    "Computer Program": constants.DOC_TYPE_SOFTWARE,
+    TYPE_CONFERENCE_PAPER: constants.DOC_TYPE_BOOKPART,
+    TYPE_CONFERENCE_PROCEEDINGS: constants.DOC_TYPE_BOOK,
+    "Dataset": constants.DOC_TYPE_DOCUMENT,
+    "Dictionary": constants.DOC_TYPE_DICTIONARY,
+    TYPE_EDITED_BOOK: constants.DOC_TYPE_BOOK,
+    TYPE_ENCYCLOPEDIA: constants.DOC_TYPE_BOOK,
+    TYPE_ELECTRONIC_ARTICLE: constants.DOC_TYPE_ARTICLE,
+    "Electronic Book Section": constants.DOC_TYPE_BOOKPART,
+    TYPE_EQUATION: constants.DOC_TYPE_DOCUMENT,
+    TYPE_FIGURE: constants.DOC_TYPE_IMAGE,
+    TYPE_FILM_OR_BROADCAST: constants.DOC_TYPE_FILM,
+    TYPE_GRANT: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
+    TYPE_GENERIC: constants.DOC_TYPE_DOCUMENT,
+    TYPE_GOVERNMENT_DOCUMENT: constants.DOC_TYPE_DOCUMENT,
+    TYPE_HEARING: constants.DOC_TYPE_DOCUMENT,
+    TYPE_JOURNAL_ARTICLE: constants.DOC_TYPE_JOURNALARTICLE,
+    "Legal": constants.DOC_TYPE_DOCUMENT,
+    TYPE_LEGAL_RULE_OR_REGULATION: constants.DOC_TYPE_DOCUMENT,
+    TYPE_MAGAZINE_ARTICLE: constants.DOC_TYPE_MAGAZINEARTICLE,
+    TYPE_MANUSCRIPT: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
+    TYPE_MAP: constants.DOC_TYPE_IMAGE,
+    TYPE_NEWSPAPER_ARTICLE: constants.DOC_TYPE_NEWSPAPERARTICLE,
+    TYPE_ONLINE_DATABASE: constants.DOC_TYPE_DOCUMENT,
+    TYPE_ONLINE_MULTIMEDIA: constants.DOC_TYPE_WEBENTITY,
+    TYPE_PATENT: constants.DOC_TYPE_DOCUMENT,
+    TYPE_REPORT: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
+    "Serial": constants.DOC_TYPE_DOCUMENT,
+    "Standard": constants.DOC_TYPE_DOCUMENT,
+    TYPE_STATUTE: constants.DOC_TYPE_DOCUMENT,
+    TYPE_THESIS: constants.DOC_TYPE_THESIS,
+    TYPE_UNPUBLISHED_WORK: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
+    TYPE_WEB_PAGE: constants.DOC_TYPE_WEBENTITY
 }
 
 endnote_record_type_to_metajson_document_is_part_of_type = {
-    TYPE_BOOK_SECTION: "Book",
-    TYPE_CONFERENCE_PAPER: "ConferenceProceedings",
-    TYPE_ELECTRONIC_ARTICLE: "Journal",
-    "Electronic Book Section": "Book",
-    TYPE_JOURNAL_ARTICLE: "Journal",
-    TYPE_MAGAZINE_ARTICLE: "Magazine",
-    TYPE_NEWSPAPER_ARTICLE: "Newspaper"
+    TYPE_BOOK_SECTION: constants.DOC_TYPE_BOOK,
+    TYPE_CONFERENCE_PAPER: constants.DOC_TYPE_CONFERENCEPROCEEDINGS,
+    TYPE_ELECTRONIC_ARTICLE: constants.DOC_TYPE_JOURNAL,
+    "Electronic Book Section": constants.DOC_TYPE_BOOK,
+    TYPE_JOURNAL_ARTICLE: constants.DOC_TYPE_JOURNAL,
+    TYPE_MAGAZINE_ARTICLE: constants.DOC_TYPE_MAGAZINE,
+    TYPE_NEWSPAPER_ARTICLE: constants.DOC_TYPE_NEWSPAPER
 }
 
 
@@ -166,8 +167,8 @@ def endnotexml_record_to_metajson(record, source):
     keywords = extract_text(record, "./keywords/keyword/style")
     date_year = extract_text(record, "./dates/year/style")
     date_pub = extract_text(record, "./dates/pub-dates/date/style")
-    publisher_place = extract_text(record, "./pub-location/style")
-    publisher = extract_text(record, "./publisher/style")
+    publication_places_formatted = extract_text(record, "./pub-location/style")
+    publishers_formatted = extract_text(record, "./publisher/style")
     orig_pub = extract_text(record, "./orig-pub/style")
     isbn_or_issn = extract_text(record, "./isbn/style")
     accessionnumber = extract_text(record, "./accession-num/style")
@@ -200,11 +201,13 @@ def endnotexml_record_to_metajson(record, source):
     document["rec_id"] = rec_id
     document["rec_source"] = source
 
-    # publisher, publisher_place
-    if publisher:
-        publisher = publisher.replace("\r", "; ")
-    if publisher_place:
-        publisher_place = publisher_place.replace("\r", "; ")
+    # publishers_formatted, publication_places_formatted
+    publishers = None
+    publication_places = None
+    if publishers_formatted:
+        publishers = publishers_formatted.split("\r")
+    if publication_places_formatted:
+        publication_places = publication_places_formatted.split("\r")
 
     # type, is_part_of.type, is_part_of.is_part_of.type
     try:
@@ -257,35 +260,35 @@ def endnotexml_record_to_metajson(record, source):
             # creators with role edt
             is_part_of_is_part_of.add_creators(creator_service.change_contibutors_role(translated_creators, "edt"))
             #is_part_of_is_part_of.set_key_if_not_none("date_issued",date_year)
-            is_part_of_is_part_of.set_key_if_not_none("publisher", publisher)
-            is_part_of_is_part_of.set_key_if_not_none("publisher_place", publisher_place)
+            is_part_of_is_part_of.set_key_if_not_none("publishers", publishers)
+            is_part_of_is_part_of.set_key_if_not_none("publication_places", publication_places)
             is_part_of_is_part_of.set_key_with_value_type_in_list("identifiers", isbn_or_issn, isbn_or_issn_type)
 
-            is_part_of.add_items_to_key([is_part_of_is_part_of], "is_part_of")
+            is_part_of.add_items_to_key([is_part_of_is_part_of], "is_part_ofs")
 
         else:
             # is_part_of in case of no is_part_of.is_part_of
             # creators with role edt
             is_part_of.add_creators(secondary_creators)
             #is_part_of.set_key_if_not_none("date_issued",date_year)
-            is_part_of.set_key_if_not_none("publisher", publisher)
-            is_part_of.set_key_if_not_none("publisher_place", publisher_place)
+            is_part_of.set_key_if_not_none("publishers", publishers)
+            is_part_of.set_key_if_not_none("publication_places", publication_places)
             is_part_of.set_key_with_value_type_in_list("identifiers", isbn_or_issn, isbn_or_issn_type)
 
-        document.add_items_to_key([is_part_of], "is_part_of")
+        document.add_items_to_key([is_part_of], "is_part_ofs")
 
     else:
         document.set_key_with_value_type_in_list("identifiers", isbn_or_issn, isbn_or_issn_type)
-        if publisher:
+        if publishers:
             if endnote_type == TYPE_THESIS:
-                document.add_creators([creator_service.formatted_name_to_creator(publisher, "orgunit", "dgg")])
+                document.add_creators([creator_service.formatted_name_to_creator(publishers[0], "orgunit", "dgg")])
             elif endnote_type == TYPE_FILM_OR_BROADCAST:
-                document.add_creators([creator_service.formatted_name_to_creator(publisher, "orgunit", "dst")])
+                document.add_creators([creator_service.formatted_name_to_creator(publishers[0], "orgunit", "dst")])
             else:
-                document.set_key_if_not_none("publisher", publisher)
-        document.set_key_if_not_none("publisher_place", publisher_place)
+                document.set_key_if_not_none("publishers", publishers)
+        document.set_key_if_not_none("publication_places", publication_places)
 
-    # series[]
+    # seriess[]
     if endnote_type in [TYPE_BOOK, TYPE_BOOK_SECTION]:
         series = Document()
         if endnote_type == TYPE_BOOK and title_secondary:
@@ -297,7 +300,7 @@ def endnotexml_record_to_metajson(record, source):
             series.add_creators(tertiary_creators)
             series.set_key_if_not_none("part_volume", part_number)
         if "title" in series and len(series) > 2:
-            document.add_items_to_key([series], "series")
+            document.add_items_to_key([series], "seriess")
 
     # originals[]
     if (reprint_edition or orig_pub) and endnote_type in [TYPE_BOOK, TYPE_BOOK_SECTION, TYPE_JOURNAL_ARTICLE, TYPE_FILM_OR_BROADCAST]:
@@ -308,14 +311,14 @@ def endnotexml_record_to_metajson(record, source):
             original_title = orig_pub
         original.set_key_if_not_none("title", original_title)
         original.set_key_if_not_none("rec_type", rec_type)
-        document.add_items_to_key([original], "original")
+        document.add_items_to_key([original], "originals")
 
-    # review_of[]
+    # review_ofs[]
     if reviewed_item and endnote_type in [TYPE_BOOK_SECTION, TYPE_JOURNAL_ARTICLE]:
-        review_of = Document()
-        review_of.set_key_if_not_none("title", reviewed_item)
-        review_of.set_key_if_not_none("rec_type", "Book")
-        document.add_items_to_key([review_of], "review_of")
+        review_ofs = Document()
+        review_ofs.set_key_if_not_none("title", reviewed_item)
+        review_ofs.set_key_if_not_none("rec_type", "Book")
+        document.add_items_to_key([review_ofs], "review_ofs")
 
     # abstracts[0].value
     if abstract:
@@ -363,13 +366,13 @@ def endnotexml_record_to_metajson(record, source):
         else:
             date_issued = date_year.strip()
 
-        if "is_part_of" in document:
-            if document["is_part_of"][0]["rec_type"] == "Book":
-                document["is_part_of"][0].set_key_if_not_none("date_issued", date_issued)
-                document["is_part_of"][0].set_key_if_not_none("date_issued_first", date_issued_first)
-            elif "is_part_of" in document["is_part_of"][0] and document["is_part_of"][0]["is_part_of"][0]["rec_type"] == "Book":
-                document["is_part_of"][0]["is_part_of"][0].set_key_if_not_none("date_issued", date_issued)
-                document["is_part_of"][0]["is_part_of"][0].set_key_if_not_none("date_issued_first", date_issued_first)
+        if "is_part_ofs" in document:
+            if document["is_part_ofs"][0]["rec_type"] == "Book":
+                document["is_part_ofs"][0].set_key_if_not_none("date_issued", date_issued)
+                document["is_part_ofs"][0].set_key_if_not_none("date_issued_first", date_issued_first)
+            elif "is_part_ofs" in document["is_part_ofs"][0] and document["is_part_ofs"][0]["is_part_ofs"][0]["rec_type"] == "Book":
+                document["is_part_ofs"][0]["is_part_ofs"][0].set_key_if_not_none("date_issued", date_issued)
+                document["is_part_ofs"][0]["is_part_ofs"][0].set_key_if_not_none("date_issued_first", date_issued_first)
             else:
                 document.set_key_if_not_none("date_issued_first", date_issued_first)
                 document.set_key_if_not_none("date_issued", date_issued)

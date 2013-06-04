@@ -100,10 +100,30 @@ class Document(Common):
             self["rec_class"] = "Document"
         if "creators" in self:
             self["creators"] = [Creator(x) for x in self["creators"]]
-        if "is_part_of" in self:
-            self["is_part_of"] = [Document(x) for x in self["is_part_of"]]
+        if "has_parts" in self:
+            self["has_parts"] = [Document(x) for x in self["has_parts"]]
+        if "is_part_ofs" in self:
+            self["is_part_ofs"] = [Document(x) for x in self["is_part_ofs"]]
+        if "is_referenced_bys" in self:
+            self["is_referenced_bys"] = [Document(x) for x in self["is_referenced_bys"]]
+        if "originals" in self:
+            self["originals"] = [Document(x) for x in self["originals"]]
+        if "projects" in self:
+            self["projects"] = [Project(x) for x in self["projects"]]
+        if "references" in self:
+            self["references"] = [Document(x) for x in self["references"]]
         if "resources" in self:
             self["resources"] = [Resource(x) for x in self["resources"]]
+        if "requires" in self:
+            self["requires"] = [Resource(x) for x in self["requires"]]
+        if "resources" in self:
+            self["resources"] = [Resource(x) for x in self["resources"]]
+        if "review_ofs" in self:
+            self["review_ofs"] = [Document(x) for x in self["review_ofs"]]
+        if "rightss" in self:
+            self["rightss"] = [Rights(x) for x in self["rightss"]]
+        if "seriess" in self:
+            self["seriess"] = [Document(x) for x in self["seriess"]]
 
     def add_creators(self, creators):
         self.add_items_to_key(creators, "creators")
@@ -160,17 +180,20 @@ class Document(Common):
     def get_part_volume(self):
         return self.get_property_from_all_level("part_volume")
 
-    def get_publisher(self):
-        return self.get_property_from_all_level("publisher")
+    def get_publishers(self):
+        return self.get_property_from_all_level("publishers")
 
-    def get_publisher_country(self):
-        return self.get_property_from_all_level("publisher_country")
+    def get_publication_countries(self):
+        return self.get_property_from_all_level("publication_countries")
 
-    def get_publisher_place(self):
-        return self.get_property_from_all_level("publisher_place")
+    def get_publication_places(self):
+        return self.get_property_from_all_level("publication_places")
+
+    def get_publication_states(self):
+        return self.get_property_from_all_level("publication_states")
 
     def get_series_title(self):
-        return self.get_property_in_object_from_all_level("series", "title")
+        return self.get_property_in_first_object_in_list_from_all_level("seriess", "title")
 
     def get_type_degree(self):
         return self.get_property_from_all_level("type_degree")
@@ -178,33 +201,42 @@ class Document(Common):
     def get_property_from_all_level(self, my_property):
         if my_property in self and self[my_property]:
             return self[my_property]
-        if "is_part_of" in self:
-            if my_property in self["is_part_of"][0] and self["is_part_of"][0][my_property]:
-                return self["is_part_of"][0][my_property]
-            if "is_part_of" in self["is_part_of"][0] and my_property in self["is_part_of"][0]["is_part_of"][0] and self["is_part_of"][0]["is_part_of"][0][my_property]:
-                return self["is_part_of"][0]["is_part_of"][0][my_property]
+        if "is_part_ofs" in self:
+            if my_property in self["is_part_ofs"][0] and self["is_part_ofs"][0][my_property]:
+                return self["is_part_ofs"][0][my_property]
+            if "is_part_ofs" in self["is_part_ofs"][0] and my_property in self["is_part_ofs"][0]["is_part_ofs"][0] and self["is_part_ofs"][0]["is_part_ofs"][0][my_property]:
+                return self["is_part_ofs"][0]["is_part_ofs"][0][my_property]
 
     def get_property_in_object_from_all_level(self, my_object, my_property):
         if my_object in self and my_property in self[my_object] and self[my_object][my_property]:
             return self[my_object][my_property]
-        if "is_part_of" in self:
-            if my_object in self["is_part_of"][0] and my_property in self["is_part_of"][0][my_object] and self["is_part_of"][0][my_object][my_property]:
-                return self["is_part_of"][0][my_object][my_property]
-            if "is_part_of" in self["is_part_of"][0] and my_object in self["is_part_of"][0]["is_part_of"][0] and my_property in self["is_part_of"][0]["is_part_of"][0][my_object] and self["is_part_of"]["is_part_of"][my_object][my_property]:
-                return self["is_part_of"][0]["is_part_of"][0][my_object][my_property]
+        if "is_part_ofs" in self:
+            if my_object in self["is_part_ofs"][0] and my_property in self["is_part_ofs"][0][my_object] and self["is_part_ofs"][0][my_object][my_property]:
+                return self["is_part_ofs"][0][my_object][my_property]
+            if "is_part_ofs" in self["is_part_ofs"][0] and my_object in self["is_part_ofs"][0]["is_part_ofs"][0] and my_property in self["is_part_ofs"][0]["is_part_ofs"][0][my_object] and self["is_part_ofs"]["is_part_ofs"][my_object][my_property]:
+                return self["is_part_ofs"][0]["is_part_ofs"][0][my_object][my_property]
+
+    def get_property_in_first_object_in_list_from_all_level(self, my_list, my_property):
+        if my_list in self and len(self[my_list]) > 0 and my_property in self[my_list][0] and self[my_list][0][my_property]:
+            return self[my_list][0][my_property]
+        if "is_part_ofs" in self and len(self["is_part_ofs"]) > 0:
+            if my_list in self["is_part_ofs"][0] and len(self["is_part_ofs"][0][my_list]) > 0 and my_property in self["is_part_ofs"][0][my_list][0] and self["is_part_ofs"][0][my_list][0][my_property]:
+                return self["is_part_ofs"][0][my_list][0][my_property]
+            if "is_part_ofs" in self["is_part_ofs"][0] and len(self["is_part_ofs"][0]["is_part_ofs"]) > 0 and my_list in self["is_part_ofs"][0]["is_part_ofs"][0] and len(self["is_part_ofs"][0]["is_part_ofs"][0][my_list]) > 0 and my_property in self["is_part_ofs"][0]["is_part_ofs"][0][my_list][0] and self["is_part_ofs"][0]["is_part_ofs"][0][my_list][0][my_property]:
+                return self["is_part_ofs"][0]["is_part_ofs"][0][my_list][0][my_property]
 
     def get_first_value_for_type_in_list_from_all_level(self, my_list, my_type):
         if my_list in self:
             my_value = self.get_first_value_for_type_in_list(self[my_list], my_type)
             if my_value:
                 return my_value
-        if "is_part_of" in self:
-            if my_list in self["is_part_of"][0]:
-                my_value = self.get_first_value_for_type_in_list(self["is_part_of"][0][my_list], my_type)
+        if "is_part_ofs" in self:
+            if my_list in self["is_part_ofs"][0]:
+                my_value = self.get_first_value_for_type_in_list(self["is_part_ofs"][0][my_list], my_type)
                 if my_value:
                     return my_value
-            if "is_part_of" in self["is_part_of"][0] and my_list in self["is_part_of"][0]["is_part_of"][0]:
-                my_value = self.get_first_value_for_type_in_list(self["is_part_of"][0]["is_part_of"][0][my_list], my_type)
+            if "is_part_ofs" in self["is_part_ofs"][0] and my_list in self["is_part_ofs"][0]["is_part_ofs"][0]:
+                my_value = self.get_first_value_for_type_in_list(self["is_part_ofs"][0]["is_part_ofs"][0][my_list], my_type)
                 if my_value:
                     return my_value
 
@@ -312,6 +344,11 @@ class Person(Common):
             if "name_family" in self and self["name_family"]:
                 result += self["name_family"]
         return result
+
+
+# Project
+class Project(Common):
+    pass
 
 
 # Resource

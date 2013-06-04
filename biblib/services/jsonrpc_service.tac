@@ -8,7 +8,8 @@ from bson import json_util
 from txjsonrpc.web import jsonrpc
 from txjsonrpc import jsonrpclib
 from twisted.web import server
-from twisted.application import service, internet
+from twisted.application import service
+from twisted.application import internet
 
 from biblib.citations import citations_manager
 from biblib.crosswalks import metajsonui_crosswalk
@@ -62,16 +63,6 @@ class References_repository(jsonrpc.JSONRPC):
         json_doc = json.loads(document)
         print json.dumps(json_doc, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
         return self.format_bson(repository_service.save_document(None, json_doc))
-
-    def jsonrpc_save_ui(self, document_ui):
-        """ insert or update a reference in the repository
-            return object id if ok or error
-        """
-        json_doc_ui = json.loads(document_ui)
-        print json.dumps(json_doc_ui, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
-        document = metajsonui_crosswalk.metajsonui_to_metajson(json_doc_ui)
-        print json.dumps(document, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
-        return self.format_bson(repository_service.save_document(None, document))
 
     def jsonrpc_metadata_by_rec_ids(self, rec_ids, format="metajson"):
         """ get metadata of a list of references
@@ -135,7 +126,7 @@ class References_repository(jsonrpc.JSONRPC):
                 - language: language for label and description
             return the asked types (in JSON)
         """
-        # todo filter LangString by language, send only children
+        # todo filter LanguageValue by language, send only children
         return self.format_bson(repository_service.get_type(None, type_id))
 
     def jsonrpc_uifields(self, rec_type, language):
@@ -146,7 +137,7 @@ class References_repository(jsonrpc.JSONRPC):
                 - language: language for label and description
             return the asked uifields for user interface (in JSON)
         """
-        # todo filter LangString by language
+        # todo filter LanguageValue by language
         return self.format_bson(repository_service.get_uifield(None, rec_type))
 
 

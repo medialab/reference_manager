@@ -24,14 +24,15 @@
         },
         {
             "property": "creators",
-            "type_ui": "ChoiceField",
-            "type_data": "list.Creator",
+            "type_ui": "CreatorField",
+            "type_data": "Creator",
             "labels": 
             {
                 "en": "Creators",
                 "fr": "Créateurs"
             },
-            "required": true
+            "required": true,
+            "multiple": true
         },
         {
             "property": "date_issued",
@@ -57,28 +58,30 @@
         },
         {
             "property": "descriptions",
-            "type_ui": "ChoiceField",
-            "type_data": "list.LangString",
+            "type_ui": "LanguageValueField",
+            "type_data": "LanguageValue",
             "labels": 
             {
                 "en": "Abstracts",
                 "fr": "Resumés"
             },
-            "required": false
+            "required": false,
+            "multiple": true
         },
         {
             "property": "keywords",
-            "type_ui": "ChoiceField",
-            "type_data": "list.text",
+            "type_ui": "LanguageValueField",
+            "type_data": "LanguageValue",
             "labels": 
             {
                 "en": "Keywords",
                 "fr": "Mots-clés"
             },
-            "required": false
+            "required": false,
+            "multiple": true
         },
         {
-            "property": "publisher",
+            "property": "publishers",
             "type_ui": "CharField",
             "type_data": "text",
             "labels": 
@@ -86,18 +89,22 @@
                 "en": "Publisher",
                 "fr": "Editeurs"
             },
-            "required": true
+            "required": true,
+            "multiple": true,
+            "only_first": true
         },
         {
-            "property": "publisher_country",
-            "type_ui": "ChoiceField",
-            "type_data": "type.country",
+            "property": "publication_places",
+            "type_ui": "CharField",
+            "type_data": "text",
             "labels": 
             {
-                "en": "Publisher country",
-                "fr": "Pays de publication"
+                "en": "Publication place",
+                "fr": "Lieu de publication"
             },
-            "required": false
+            "required": false,
+            "multiple": true,
+            "only_first": true
         },
         {
             "property": "edition",

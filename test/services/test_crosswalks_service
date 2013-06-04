@@ -45,13 +45,13 @@ def test_crosswalk(input_format):
 
 
 def test():
-    #test_crosswalk(constants.FORMAT_BIBTEX)
-    #test_crosswalk(constants.FORMAT_DDI)
-    #test_crosswalk(constants.FORMAT_ENDNOTEXML)
-    #test_crosswalk(constants.FORMAT_METS)
+    test_crosswalk(constants.FORMAT_BIBTEX)
+    test_crosswalk(constants.FORMAT_DDI)
+    test_crosswalk(constants.FORMAT_ENDNOTEXML)
+    test_crosswalk(constants.FORMAT_METS)
     test_crosswalk(constants.FORMAT_MODS)
-    #test_crosswalk(constants.FORMAT_SUMMONJSON)
-    #test_crosswalk(constants.FORMAT_UNIXREF)
+    test_crosswalk(constants.FORMAT_SUMMONJSON)
+    test_crosswalk(constants.FORMAT_UNIXREF)
 
 console.setup_console()
 test()

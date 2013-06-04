@@ -79,21 +79,21 @@ def metajson_to_openurl(document):
         openurl["rft.genre"] = metajson_type_to_openurl_book_genre[rec_type]
 
         # atitle, btitle
-        if "is_part_of" in document and "title" in document["is_part_of"]:
+        if "is_part_ofs" in document and "title" in document["is_part_ofs"][0]:
             openurl["rft.atitle"] = document["title"]
-            openurl["rft.btitle"] = document["is_part_of"]["title"]
+            openurl["rft.btitle"] = document["is_part_ofs"][0]["title"]
         else:
             openurl["rft.btitle"] = document["title"]
 
         # place
-        place = document.get_publisher_place()
-        if place:
-            openurl["rft.place"] = place
+        publication_places = document.get_publication_places()
+        if publication_places:
+            openurl["rft.place"] = publication_places[0]
 
         # pub
-        pub = document.get_publisher()
-        if pub:
-            openurl["rft.pub"] = pub
+        publishers = document.get_publishers()
+        if publishers:
+            openurl["rft.pub"] = publishers[0]
 
         # edition
         edition = document.get_edition()
@@ -118,9 +118,9 @@ def metajson_to_openurl(document):
         openurl["rft.genre"] = metajson_type_to_openurl_journal_genre[rec_type]
 
         # atitle, jtitle
-        if "is_part_of" in document and "title" in document["is_part_of"]:
+        if "is_part_ofs" in document and "title" in document["is_part_ofs"][0]:
             openurl["rft.atitle"] = document["title"]
-            openurl["rft.jtitle"] = document["is_part_of"]["title"]
+            openurl["rft.jtitle"] = document["is_part_ofs"][0]["title"]
         else:
             openurl["rft.jtitle"] = document["title"]
 
@@ -178,9 +178,9 @@ def metajson_to_openurl(document):
             openurl["rft.au"] = aus[0].formatted_name()
 
         # cc
-        cc = document.get_publisher_country()
-        if cc:
-            openurl["rft.cc"] = cc
+        publication_countries = document.get_publication_countries()
+        if publication_countries:
+            openurl["rft.cc"] = publication_countries[0]
 
         # inst
         insts = document.get_creators_by_role("dgg")

@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-TYPE_BIBTEX = 'bibtex'
-TYPE_CSV = 'csv'
-TYPE_JSON = 'json'
-TYPE_MARC = 'marc'
-TYPE_TXT = 'txt'
-TYPE_XMLETREE = 'xmletree'
+FILE_TYPE_BIBTEX = 'bibtex'
+FILE_TYPE_CSV = 'csv'
+FILE_TYPE_JSON = 'json'
+FILE_TYPE_MARC = 'marc'
+FILE_TYPE_TXT = 'txt'
+FILE_TYPE_XMLETREE = 'xmletree'
 
 FORMAT_ALTO = 'alto'
 FORMAT_BIBJSON = 'bibjson'
@@ -30,40 +30,40 @@ FORMAT_SUMMONJSON = 'summonjson'
 FORMAT_UNIXREF = 'unixref'
 
 file_extension_to_type = {
-    'bib': TYPE_BIBTEX,
-    'json': TYPE_JSON,
-    'marc': TYPE_MARC,
-    'mrc': TYPE_MARC,
-    'ris': TYPE_TXT,
-    'xml': TYPE_XMLETREE
+    'bib': FILE_TYPE_BIBTEX,
+    'json': FILE_TYPE_JSON,
+    'marc': FILE_TYPE_MARC,
+    'mrc': FILE_TYPE_MARC,
+    'ris': FILE_TYPE_TXT,
+    'xml': FILE_TYPE_XMLETREE
 }
 
 type_to_file_extension = {
-    TYPE_BIBTEX: 'bib',
-    TYPE_JSON: 'json',
-    TYPE_MARC: 'mrc',# todo list with marc
-    TYPE_TXT: 'ris',
-    TYPE_XMLETREE: 'xml'
+    FILE_TYPE_BIBTEX: 'bib',
+    FILE_TYPE_JSON: 'json',
+    FILE_TYPE_MARC: 'mrc',  # todo list with marc
+    FILE_TYPE_TXT: 'ris',
+    FILE_TYPE_XMLETREE: 'xml'
 }
 
 input_format_to_type = {
-    'alto': TYPE_BIBTEX,
-    'bibjson': TYPE_JSON,
-    'bibtex': TYPE_BIBTEX,
-    'dc': TYPE_XMLETREE,
-    'ddi': TYPE_XMLETREE,
-    'endnotexml': TYPE_XMLETREE,
-    'metajson': TYPE_JSON,
-    'mets': TYPE_XMLETREE,
-    'mix': TYPE_XMLETREE,
-    'mods': TYPE_XMLETREE,
-    'oai_dc': TYPE_XMLETREE,
-    'premis': TYPE_XMLETREE,
-    'repec': TYPE_TXT,
-    'ris': TYPE_TXT,
-    'researcherml': TYPE_XMLETREE,
-    'summonjson': TYPE_JSON,
-    'unixref': TYPE_XMLETREE
+    'alto': FILE_TYPE_BIBTEX,
+    'bibjson': FILE_TYPE_JSON,
+    'bibtex': FILE_TYPE_BIBTEX,
+    'dc': FILE_TYPE_XMLETREE,
+    'ddi': FILE_TYPE_XMLETREE,
+    'endnotexml': FILE_TYPE_XMLETREE,
+    'metajson': FILE_TYPE_JSON,
+    'mets': FILE_TYPE_XMLETREE,
+    'mix': FILE_TYPE_XMLETREE,
+    'mods': FILE_TYPE_XMLETREE,
+    'oai_dc': FILE_TYPE_XMLETREE,
+    'premis': FILE_TYPE_XMLETREE,
+    'repec': FILE_TYPE_TXT,
+    'ris': FILE_TYPE_TXT,
+    'researcherml': FILE_TYPE_XMLETREE,
+    'summonjson': FILE_TYPE_JSON,
+    'unixref': FILE_TYPE_XMLETREE
 }
 
 xmlns_map = {
@@ -131,3 +131,23 @@ xmltag_to_input_format = {
     'title': 'dc',
     'type': 'dc'
 }
+
+DOC_TYPE_ARTICLE = "Article"
+DOC_TYPE_AUDIORECORDING = "AudioRecording"
+DOC_TYPE_BOOK = "Book"
+DOC_TYPE_BOOKPART = "BookPart"
+DOC_TYPE_CONFERENCEPROCEEDINGS = "ConferenceProceedings"
+DOC_TYPE_DICTIONARY = "Dictionary"
+DOC_TYPE_DOCUMENT = "Document"
+DOC_TYPE_FILM = "Film"
+DOC_TYPE_IMAGE = "Image"
+DOC_TYPE_JOURNAL = "Journal"
+DOC_TYPE_JOURNALARTICLE = "JournalArticle"
+DOC_TYPE_MAGAZINE = "Magazine"
+DOC_TYPE_MAGAZINEARTICLE = "MagazineArticle"
+DOC_TYPE_NEWSPAPER = "Newspaper"
+DOC_TYPE_NEWSPAPERARTICLE = "NewspaperArticle"
+DOC_TYPE_SOFTWARE = "Software"
+DOC_TYPE_THESIS = "Thesis"
+DOC_TYPE_UNPUBLISHEDDOCUMENT = "UnpublishedDocument"
+DOC_TYPE_WEBENTITY = "WebEntity"

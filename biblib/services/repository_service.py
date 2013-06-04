@@ -41,11 +41,17 @@ def empty_corpus(corpus):
 
 
 def init_corpus_indexes(corpus):
-    mongodb[corpus][DOCUMENTS].ensure_index([('_id', pymongo.ASCENDING)], safe=True)
-    mongodb[corpus][AGENTS].ensure_index([('_id', pymongo.ASCENDING)], safe=True)
-    mongodb[corpus][TYPES].ensure_index([('_id', pymongo.ASCENDING)], safe=True)
-    mongodb[corpus][DATAFIELDS].ensure_index([('_id', pymongo.ASCENDING)], safe=True)
-    mongodb[corpus][UIFIELDS].ensure_index([('_id', pymongo.ASCENDING)], safe=True)
+    index_id = ('_id', pymongo.ASCENDING)
+    index_rec_id = ('rec_id', pymongo.ASCENDING)
+    index_title = ('title', pymongo.ASCENDING)
+    index_name = ('name', pymongo.ASCENDING)
+    index_name_family = ('name_family', pymongo.ASCENDING)
+
+    mongodb[corpus][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
+    mongodb[corpus][AGENTS].ensure_index([index_id, index_rec_id, index_name, index_name_family], safe=True)
+    mongodb[corpus][TYPES].ensure_index([index_id], safe=True)
+    mongodb[corpus][DATAFIELDS].ensure_index([index_id], safe=True)
+    mongodb[corpus][UIFIELDS].ensure_index([index_id], safe=True)
 
 
 def get_document_by_mongo_id(corpus, mongo_id):
@@ -90,7 +96,16 @@ def get_documents_count(corpus):
 def search_documents(corpus, query):
     if not corpus:
         corpus = default_corpus
+    # {"_id": {"$in": mongo_object_ids}}
     # {"rec_id": {"$in": rec_ids}}
+    # {rec_type:"Book"}
+    # {"is_part_ofs.rec_type":"Book"}
+    # {"is_part_ofs.rec_type":"Journal"}
+    # {"is_part_ofs.rec_type":"VideoRecording"}
+    # {"is_part_ofs.is_part_ofs.rec_type":"Book"}
+    # {"creators.agent.name_family":"Latour"}
+    # {"is_part_ofs.creators.agent.name_family":"Latour"}
+    # {"is_part_ofs.creators.agent.name_family":"Latour", "is_part_of.creators.agent.name_given":"Bruno"}
     return metajson_service.load_dict_list(mongodb[corpus][DOCUMENTS].find(query))
 
 

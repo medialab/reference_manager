@@ -9,10 +9,10 @@ def cite(document, format):
 
     is_part_of = None
     is_part_of_is_part_of = None
-    if "is_part_of" in document and len(document["is_part_of"]) > 0:
-        is_part_of = document["is_part_of"][0]
-        if "is_part_of" in is_part_of and len(is_part_of["is_part_of"]) > 0:
-            is_part_of_is_part_of = is_part_of["is_part_of"][0]
+    if "is_part_ofs" in document and len(document["is_part_ofs"]) > 0:
+        is_part_of = document["is_part_ofs"][0]
+        if "is_part_ofs" in is_part_of and len(is_part_of["is_part_ofs"]) > 0:
+            is_part_of_is_part_of = is_part_of["is_part_ofs"][0]
 
     result = ""
 
@@ -80,16 +80,16 @@ def cite(document, format):
     # degree
     # todo
 
-    # publisher_place
-    publisher_place = document.get_publisher_place()
-    if publisher_place:
-        result += u"<span class=\"publisher_place\">{0}</span>".format(publisher_place)
+    # publication_places
+    publication_places = document.get_publication_places()
+    if publication_places:
+        result += u"<span class=\"publication_places\">{0}</span>".format(publication_places[0])
         result += ": "
 
-    # publisher
-    publisher = document.get_publisher()
-    if publisher:
-        result += u"<span class=\"publisher\">{0}</span>".format(publisher)
+    # publishers
+    publishers = document.get_publishers()
+    if publishers:
+        result += u"<span class=\"publishers\">{0}</span>".format(publishers[0])
         result += ", "
 
     else:
@@ -186,7 +186,7 @@ def format_title_of_document(document):
         result += remove_last_point(document["title"])
         if "title_sub" in document:
             result += u": " + remove_last_point(document["title_sub"])
-        if "is_part_of" in document:
+        if "is_part_ofs" in document:
             return u"\"<span class=\"title\">{0}</span>.\" ".format(result)
         else:
             return u"<span class=\"title\">{0}</span>. ".format(result)

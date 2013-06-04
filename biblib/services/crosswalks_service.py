@@ -25,13 +25,13 @@ def convert_native(input_data, input_format, output_format, source, only_first_r
         input_type = guess_format_type(input_format)
 
         if input_type is not None:
-            if input_type == constants.TYPE_XMLETREE:
+            if input_type == constants.FILE_TYPE_XMLETREE:
                 return convert_xmletree(input_data, input_format, output_format, source, only_first_record)
-            elif input_type == constants.TYPE_JSON:
+            elif input_type == constants.FILE_TYPE_JSON:
                 return convert_json(input_data, input_format, output_format, source, only_first_record)
-            elif input_type == constants.TYPE_BIBTEX:
+            elif input_type == constants.FILE_TYPE_BIBTEX:
                 return convert_bibtex(input_data, input_format, output_format, source, only_first_record)
-            elif input_type == constants.TYPE_TXT:
+            elif input_type == constants.FILE_TYPE_TXT:
                 print convert_txt(input_data, input_format, output_format, source, only_first_record)
 
 
@@ -50,24 +50,24 @@ def convert_file(input_file, input_format, output_format, source, only_first_rec
         input_type = guess_file_type(input_file)
 
     if input_type is not None:
-        if input_type == constants.TYPE_XMLETREE:
+        if input_type == constants.FILE_TYPE_XMLETREE:
             xmlparser = ET.XMLParser(encoding="utf-8")
             xmletree_tree = ET.parse(input_file, xmlparser)
             xmletree_root = xmletree_tree.getroot()
             return convert_xmletree(xmletree_root, input_format, output_format, source, only_first_record)
 
-        elif input_type == constants.TYPE_JSON:
+        elif input_type == constants.FILE_TYPE_JSON:
             with open(input_file) as json_file:
                 json_data = json.load(json_file)
                 # json.loads(json_file.read())
                 return convert_json(json_data, input_format, output_format, source, only_first_record)
 
-        elif input_type == constants.TYPE_BIBTEX:
+        elif input_type == constants.FILE_TYPE_BIBTEX:
             bibtex_parser = bibtex.Parser()
             bibtex_root = bibtex_parser.parse_file(input_file)
             return convert_bibtex(bibtex_root, input_format, output_format, source, only_first_record)
 
-        elif input_type == constants.TYPE_TXT:
+        elif input_type == constants.FILE_TYPE_TXT:
             with open(input_file) as txt_file:
                 txt_data = txt_file.readall()
                 return convert_txt(txt_data, input_format, output_format, source, only_first_record)
@@ -81,21 +81,21 @@ def convert_string(input_string, input_format, output_format, source, only_first
         input_type = guess_string_type(input_string)
 
     if input_type is not None:
-        if input_type == constants.TYPE_XMLETREE:
+        if input_type == constants.FILE_TYPE_XMLETREE:
             register_namespaces()
             xmletree = ET.fromstring(input_string)
             return convert_xmletree(xmletree, input_format, output_format, source, only_first_record)
 
-        elif input_type == constants.TYPE_JSON:
+        elif input_type == constants.FILE_TYPE_JSON:
             json_data = json.loads(input_string)
             return convert_json(json_data, input_format, output_format, source, only_first_record)
 
-        elif input_type == constants.TYPE_BIBTEX:
+        elif input_type == constants.FILE_TYPE_BIBTEX:
             bibtexparser = bibtex.Parser()
             bib_data = bibtexparser.parse_file(input_string)
             return convert_bibtex(bib_data, input_format, output_format, source, only_first_record)
 
-        elif input_type == constants.TYPE_TXT:
+        elif input_type == constants.FILE_TYPE_TXT:
             return convert_txt(input_string, input_format, output_format, source, only_first_record)
 
 

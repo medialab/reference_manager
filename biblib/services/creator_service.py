@@ -107,6 +107,7 @@ creator_event_terms = [
 creator_orgunit_terms = [
     u"académie",
     "alternatives",
+    "aosis",
     "archives",
     "association",
     "associates",
@@ -137,12 +138,14 @@ creator_orgunit_terms = [
     "droits",
     "ecole",
     u"édition",
+    "enb",
     "euroframe",
     u"faculté",
     "faculty",
     "faculdade",
     u"fédération",
     "fondation",
+    "forum",
     "groupe",
     "harmattan",
     "hopital",
@@ -191,8 +194,10 @@ creator_orgunit_terms = [
     "trade",
     "tv",
     "unesco",
+    "unfccc",
     "union",
-    "universi"
+    "universi",
+    "wwf"
 ]
 
 creator_citable_roles = [
@@ -252,19 +257,19 @@ def formatted_name_to_creator(formatted_name, creator_type, role):
             name_given = ""
             name_middle = ""
             name_family = ""
-            name_particule_non_dropping = ""
+            name_prefix = ""
             name_terms_of_address = ""
-            date_of_birth = ""
-            date_of_death = ""
+            date_birth = ""
+            date_death = ""
 
             parenthesis_index = formatted_name.rfind("(")
             if parenthesis_index != -1:
-                #may be like: name (date_of_birth-date_of_death)
+                #may be like: name (date_birth-date_death)
                 dates_part = formatted_name[parenthesis_index + 1:-1].strip()
-                date_of_birth = dates_part[:4]
-                date_of_death = dates_part[5:]
-                if date_of_death == "....":
-                    date_of_death = ""
+                date_birth = dates_part[:4]
+                date_death = dates_part[5:]
+                if date_death == "....":
+                    date_death = ""
                 formatted_name = formatted_name[:parenthesis_index].strip()
 
             slash_index = formatted_name.find("/")
@@ -317,17 +322,17 @@ def formatted_name_to_creator(formatted_name, creator_type, role):
             # Be careful with a particule inside the name like: Viveiros de Castro, Eduardo
             for particule in creator_particule:
                 if name_family and name_family.lower().startswith(particule+" "):
-                    name_particule_non_dropping = name_family[0:len(particule)]
+                    name_prefix = name_family[0:len(particule)]
                     name_family = name_family[len(particule):].strip()
                 if name_given:
                     if name_given.lower().endswith(" "+particule):
-                        name_particule_non_dropping = name_given[-len(particule):]
+                        name_prefix = name_given[-len(particule):]
                         name_given = name_given[:-len(particule)].strip()
                     if name_given.lower().startswith(particule+" "):
-                        name_particule_non_dropping = name_given[:len(particule)]
+                        name_prefix = name_given[:len(particule)]
                         name_given = name_given[len(particule):].strip()
                     if name_given.lower() == particule:
-                        name_particule_non_dropping = name_given
+                        name_prefix = name_given
                         name_given = None
 
             if creator_type == "person":
@@ -336,9 +341,9 @@ def formatted_name_to_creator(formatted_name, creator_type, role):
                 person.set_key_if_not_none("name_given", name_given)
                 person.set_key_if_not_none("name_middle", name_middle)
                 person.set_key_if_not_none("name_terms_of_address", name_terms_of_address)
-                person.set_key_if_not_none("name_particule_non_dropping", name_particule_non_dropping)
-                person.set_key_if_not_none("date_of_birth", date_of_birth)
-                person.set_key_if_not_none("date_of_death", date_of_death)
+                person.set_key_if_not_none("name_prefix", name_prefix)
+                person.set_key_if_not_none("date_birth", date_birth)
+                person.set_key_if_not_none("date_death", date_death)
                 if 'affiliation_name' in vars() and affiliation_name:
                     #todo manage as an object
                     person["affiliations"] = [{"type": "orgunit", "preferred": True, "name": affiliation_name}]

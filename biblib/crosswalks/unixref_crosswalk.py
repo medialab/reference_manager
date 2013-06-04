@@ -106,6 +106,6 @@ def unixref_record_to_metajson(record, source):
     if journal_eissn is not None:
         is_part_of.set_key_with_value_type_in_list("identifiers", journal_eissn.text, "eissn")
 
-    document["is_part_of"] = [is_part_of]
+    document["is_part_ofs"] = [is_part_of]
 
     return document
