@@ -3,17 +3,47 @@
   <title>BibLib Front | Test 1</title>
 
   <!-- External JS dependencies -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/domino.min.js"></script>
+  <script src="js/ext/jquery.min.js"></script>
+  <script src="js/ext/domino.min.js"></script>
 
   <!-- MédiaLab utils -->
-  <script src="js/mlab.utils.js"></script>
+  <script src="js/ext/mlab.utils.js"></script>
 
   <!-- BibLib front -->
-  <script src="js/biblib.js"></script>
+  <script src="js/blf.control.js"></script>
+  <script src="js/blf.layout.js"></script>
+  <script src="js/modules/formGenerator.js"></script>
+
+  <!-- BibLib style -->
+  <style>
+    /* <insert custom style here> */
+
+  </style>
 </head>
 <body>
-  <div id="nav"></div>
-  <div id="form"></div>
+  <div id="layout">
+    <div id="nav">
+      <button data-action="create">Add entry</button>
+      <button data-action="search">Search entry</button>
+    </div>
+    <div id="panels">
+      <div data-panel="create" hidden>
+        <div class="create-form">
+          <!-- The form has to be filled with components depending of the
+               field. This will be done in JavaScript. -->
+        </div>
+        <div class="create-form">
+          <!-- The form has to be filled with components depending of the
+               field. This will be done in JavaScript. -->
+        </div>
+      </div>
+      <div data-panel="search" hidden>
+        <div class="search-form">
+          <input type="search" placeholder="Type something to search...">
+          <button class="validate">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

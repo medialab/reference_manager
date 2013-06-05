@@ -8,13 +8,13 @@
    *
    * Use case:
    * *********
-   * 
+   *
    *  > mlab.pkg('a.b.c');
    *  > // Is equivalent to:
    *  > window.a = window.a || {};
    *  > a.b = a.b || {}
    *  > a.b.c = a.b.c || {}
-   * 
+   *
    * @param  {string} str The path of the namespace, with "." to separe the
    *                      different parts of the path.
    * @return {object} Returns the related object.
@@ -53,10 +53,10 @@
    *  > //     content: 'def'
    *  > //   }
    *  > // }
-   * 
+   *
    * @param  {array} arr   The array to index.
    * @param  {?string} key The key that will be used as index. If not
-   *                       specified, 
+   *                       specified,
    * @return {object} Returns the object index.
    */
   mlab.pkg('mlab.array');

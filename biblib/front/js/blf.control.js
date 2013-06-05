@@ -6,13 +6,14 @@ $(document).ready(function() {
 
   // Domino global settings:
   domino.settings({
+    displayTime: true,
     verbose: true,
     strict: true
   });
 
   /**
    * First, let's describe our data here. To add a new type, just use:
-   * 
+   *
    *  > if (!domino.struct.isValid('blf.typeTest'))
    *  >   domino.struct.add({
    *  >     id: 'blf.typeTest',
@@ -53,15 +54,27 @@ $(document).ready(function() {
         children: [ 'blf.Property' ]
       }
     });
-  
-  blf.controller = new domino({
-    name: 'blf',
+
+  blf.control = new domino({
+    name: 'blf.control',
     properties: [
+      // DATA related properties
       {
         value: [],
         id: 'fields',
         type: ['blf.Field'],
-        triggers: 'fieldsUpdated'
+        dispatch: 'fieldsUpdated',
+        description: 'The field templates.'
+      },
+
+      // INTERFACE related properties
+      {
+        value: 'home',
+        id: 'mode',
+        type: 'string',
+        triggers: 'updateMode',
+        dispatch: 'modeUpdated',
+        description: 'The layout mode (home, search, create).'
       }
     ],
     services: [
@@ -75,7 +88,9 @@ $(document).ready(function() {
               arr = this.get('fields');
 
           // If the "rec_type" already exists, it overrides the old one:
-          if (mlab.array.index(this.get('fields'), 'rec_type')[data.rec_type])
+          if (this.get('fields').some(function(o) {
+            return o.rec_type === data.rec_type;
+          }))
             arr = arr.map(function(o) {
               return o.rec_type === data.rec_type ?
                 data :
@@ -93,8 +108,11 @@ $(document).ready(function() {
     ]
   });
 
-  // Initialization:
-  blf.controller.request('field', {
+  // Layout initialization:
+  blf.layout = blf.control.addModule(blf.modules.layout);
+
+  // Data initialization:
+  blf.control.request('field', {
     field: 'Book'
   });
 });
