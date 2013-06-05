@@ -109,26 +109,6 @@
         },
         {
             "labels": {
-                "en": "Publisher place",
-                "fr": "Lieu de publication"
-            },
-            "property": "series_title",
-            "required": false,
-            "type_data": "text",
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Collection item number",
-                "fr": "Numéro dans la collection"
-            },
-            "property": "series_part_number",
-            "required": false,
-            "type_data": "text",
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
                 "en": "ISBN",
                 "fr": "ISBN"
             },

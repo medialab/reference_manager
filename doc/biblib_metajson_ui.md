@@ -352,4 +352,3 @@ Number of references : 0
         "title": "Article title"
     }
 
-
