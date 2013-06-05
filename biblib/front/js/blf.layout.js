@@ -10,7 +10,8 @@
     var _self = this,
         _html = $('#layout'),
         _buttons = $('#nav', _html),
-        _panels = $('#panels', _html);
+        _panels = $('#panels', _html),
+        _modules = [];
 
     // Bind actions:
     $('button[data-action]', _buttons).click(function() {
@@ -18,6 +19,12 @@
         mode: $(this).data('action')
       });
     });
+
+    // Initialize other modules:
+    _modules.push(blf.control.addModule(
+      blf.modules.createPanel,
+      [ $('[data-panel="create"]', _panels) ]
+    ));
 
     // Listen to the controller:
     this.triggers.events.modeUpdated = function(d) {

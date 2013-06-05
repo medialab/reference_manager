@@ -4,6 +4,9 @@ $(document).ready(function() {
   // Package "blf": BibLib Front
   mlab.pkg('blf');
 
+  // Initialize lang:
+  blf.lang = 'en';
+
   // Domino global settings:
   domino.settings({
     displayTime: true,
@@ -66,6 +69,13 @@ $(document).ready(function() {
         dispatch: 'fieldsUpdated',
         description: 'The field templates.'
       },
+      {
+        value: {},
+        id: 'fieldsTree',
+        type: 'object',
+        dispatch: 'fieldsTreeUpdated',
+        description: 'The fields tree.'
+      },
 
       // INTERFACE related properties
       {
@@ -77,9 +87,28 @@ $(document).ready(function() {
         description: 'The layout mode (home, search, create).'
       }
     ],
+    hacks: [
+      {
+        // This hack is just useful to make the modules able to log, warn and
+        // die trough domino:
+        triggers: ['log', 'warn', 'die'],
+        method: function(e) {
+          this[e.type]((e.data || {}).message);
+        }
+      },
+      {
+        triggers: 'loadField',
+        method: function(e) {
+          this.log('Loading the template of a specific field.');
+          this.request('loadField', {
+            field: e.data.field
+          });
+        }
+      }
+    ],
     services: [
       {
-        id: 'field',
+        id: 'loadField',
         url: function(input) {
           return 'templates/' + input.field + '.json';
         },
@@ -104,6 +133,11 @@ $(document).ready(function() {
           // Finally, we update:
           this.update('fields', arr);
         }
+      },
+      {
+        id: 'fieldsTree',
+        url: 'templates-tree.json',
+        setter: 'fieldsTree'
       }
     ]
   });
@@ -112,7 +146,5 @@ $(document).ready(function() {
   blf.layout = blf.control.addModule(blf.modules.layout);
 
   // Data initialization:
-  blf.control.request('field', {
-    field: 'Book'
-  });
+  blf.control.request('fieldsTree');
 });
