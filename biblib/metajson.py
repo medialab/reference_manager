@@ -80,14 +80,14 @@ class Creator(Common):
                     return agent.formatted_name()
 
 
-# Datafield
-class Datafield(Common):
+# Field
+class Field(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_metajson" not in self:
             self["rec_metajson"] = rec_metajson
         if "rec_class" not in self:
-            self["rec_class"] = "Datafield"
+            self["rec_class"] = "Field"
 
 
 # Document

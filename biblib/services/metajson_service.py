@@ -6,7 +6,7 @@ from bson import json_util
 
 from biblib.metajson import Common
 from biblib.metajson import Collection
-from biblib.metajson import Datafield
+from biblib.metajson import Field
 from biblib.metajson import Document
 from biblib.metajson import DocumentUi
 from biblib.metajson import Event
@@ -36,8 +36,8 @@ def load_dict(meta_dict):
         return Event(meta_dict)
     elif meta_dict["rec_class"] == "Family":
         return Family(meta_dict)
-    elif meta_dict["rec_class"] == "Datafield":
-        return Datafield(meta_dict)
+    elif meta_dict["rec_class"] == "Field":
+        return Field(meta_dict)
     elif meta_dict["rec_class"] == "Resource":
         return Resource(meta_dict)
     elif meta_dict["rec_class"] == "Target":

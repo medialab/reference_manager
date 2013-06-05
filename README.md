@@ -198,10 +198,7 @@ To update the source:
     "mongodb": {
         "db": "biblib",
         "host": "localhost",
-        "port": 27017,
-        "documentsCol": "documents",
-        "typesCol": "types",
-        "datafieldsCol": "datafields"
+        "port": 27017
     }
     
 #### Configure JSON-RPC port
