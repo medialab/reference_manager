@@ -4,8 +4,25 @@ $(document).ready(function() {
   // Package "blf": BibLib Front
   mlab.pkg('blf');
 
-  // Initialize lang:
-  blf.lang = 'en';
+  // Initialize lang and other global assets:
+  mlab.pkg('blf.assets');
+  blf.assets.lang = 'en';
+  blf.assets.languages = [
+    {
+      id: 'fr',
+      labels: {
+        fr: 'Français',
+        en: 'French'
+      }
+    },
+    {
+      id: 'en',
+      labels: {
+        fr: 'Anglais',
+        en: 'English'
+      }
+    }
+  ];
 
   // Domino global settings:
   domino.settings({
@@ -136,7 +153,7 @@ $(document).ready(function() {
       },
       {
         id: 'fieldsTree',
-        url: 'templates-tree.json',
+        url: 'templates-tree_sample.json',
         setter: 'fieldsTree'
       }
     ]

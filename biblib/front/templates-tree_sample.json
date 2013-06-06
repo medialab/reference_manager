@@ -1,0 +1,23 @@
+{
+  "name": "",
+  "children": [
+    {
+      "name": "Text",
+      "value": 8,
+      "children": [
+        {
+          "name": "Article",
+          "children": [
+            {
+              "name": "JournalArticle",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "name": "Book"
+        }
+      ]
+    }
+  ]
+}

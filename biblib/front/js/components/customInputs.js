@@ -1,0 +1,136 @@
+;(function() {
+  'use strict';
+
+  mlab.pkg('blf.customInputs');
+
+  blf.customInputs.Creator = function(obj) {
+    var _dom,
+        _validate;
+
+    _dom = $(
+      '<fieldset>' +
+        '<label>' + obj.labels[blf.assets.lang] + ' :</label>' +
+        '<div class="creators-container">' +
+          '<ul class="creators-list"></ul>' +
+          '<button class="add-creator">+</button>' +
+        '</div>' +
+      '</fieldset>'
+    );
+
+    // Bind events:
+    $('button.add-creator', _dom).click(function() {
+      var li = $(
+        '<li>' +
+          '<input type="text" placeholder="Type something..." />' +
+          '<select>' +
+            '<option value="lorem">Lorem</option>' +
+            '<option value="ipsum">Ipsum</option>' +
+          '</select>' +
+          '<button class="remove-creator">-</button>' +
+        '</li>'
+      );
+      $('button.remove-creator', li).click(function() {
+        li.remove();
+      });
+
+      $('ul.creators-list', _dom).append(li);
+    });
+
+    return {
+      dom: _dom,
+      validate: _validate
+    };
+  };
+
+  blf.customInputs.LanguageValue = function(obj) {
+    var _dom,
+        _validate,
+        _selected = {},
+        _languages = blf.assets.languages;
+
+    _dom = $(
+      '<fieldset>' +
+        '<label>' + obj.labels[blf.assets.lang] + ' :</label>' +
+        '<div class="languages-container">' +
+          '<ul class="languages-list"></ul>' +
+          '<button class="add-creator">+</button>' +
+        '</div>' +
+      '</fieldset>'
+    );
+
+    // Bind events:
+    $('button.add-creator', _dom).click(function() {
+      var isAlreadySelected = false,
+          li = $(
+            '<li>' +
+              '<select>' +
+                _languages.map(function(o) {
+                  var selected = '';
+
+                  if (!isAlreadySelected && !_selected[o.id]) {
+                    selected = ' selected="true"'
+                    isAlreadySelected = true;
+                  }
+
+                  return (
+                    '<option value="' + o.id + '"' + selected + '>' +
+                      o.labels[blf.assets.lang] +
+                    '</option>'
+                  );
+                }).join() +
+              '</select>' +
+              '<button class="remove-creator">-</button>' +
+              '<textarea rows="3" cols="30"></textarea>' +
+            '</li>'
+          );
+
+      $('button.remove-creator', li).click(function() {
+        li.remove();
+        checkLanguagesCount();
+        checkLanguagesDups();
+      });
+
+      $('select', li).change(checkLanguagesDups);
+
+      $('ul.languages-list', _dom).append(li);
+      checkLanguagesCount();
+      checkLanguagesDups();
+    });
+
+    // Check that all languages are not added yet:
+    function checkLanguagesCount() {
+      if ($('ul.languages-list > li', _dom).length >= _languages.length)
+        $('button.add-creator', _dom).attr('hidden', 'true');
+      else
+        $('button.add-creator', _dom).attr('hidden', null);
+    }
+
+    // Deal with languages deduplication:
+    function checkLanguagesDups() {
+      var list = $('ul.languages-list > li > select', _dom);
+
+      // Find selected languages:
+      _selected = {};
+      list.each(function() {
+        _selected[$(this).val()] = 1;
+      });
+
+      // Disable selected languages:
+      list.each(function() {
+        var val = $(this).val();
+        $(this).find('option').each(function() {
+          var opt = $(this);
+          if (opt.is(':selected') || !_selected[opt.val()])
+            opt.attr('disabled', null);
+          else
+            opt.attr('disabled', 'true');
+        });
+      });
+    }
+
+    return {
+      dom: _dom,
+      validate: _validate
+    };
+  };
+})();

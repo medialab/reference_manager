@@ -1,7 +1,7 @@
 ;(function() {
   'use strict';
 
-  // Package "blf": BibLib Front
+  mlab.pkg('blf.modules');
   mlab.pkg('blf.customInputs');
 
   blf.modules.createPanel = function(html) {
@@ -55,7 +55,7 @@
               components.push({
                 dom: $(
                   '<fieldset>' +
-                    '<label for="' + obj.property + '"">' + obj.labels[blf.lang] + ' :</label>' +
+                    '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
                     '<input name="' + obj.property + '" type="text" />' +
                   '</fieldset>'
                 )
@@ -65,7 +65,7 @@
               components.push({
                 dom: $(
                   '<fieldset>' +
-                    '<label for="' + obj.property + '"">' + obj.labels[blf.lang] + ' :</label>' +
+                    '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
                     '<input name="' + obj.property + '" type="date" />' +
                   '</fieldset>'
                 )
@@ -75,14 +75,14 @@
               components.push({
                 dom: $(
                   '<fieldset>' +
-                    '<label for="' + obj.property + '"">' + obj.labels[blf.lang] + ' :</label>' +
+                    '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
                     '<input name="' + obj.property + '" type="number" />' +
                   '</fieldset>'
                 )
               });
               break;
             default:
-              _self.dispatchEvent('log', {
+              _self.dispatchEvent('warn', {
                 message: 'Data type "' + obj.type_data + '" not recognized.'
               });
               break;
