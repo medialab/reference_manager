@@ -114,12 +114,16 @@
 
       // Generate the HTML to select which field to use:
       dom = (function recursiveParse(node, depth) {
-        return(
-          ((node.name && !node.bundle) ?
+        var header =
+          (node.name && !node.bundle) ?
             '<button data-field="' + node.name + '">' +
               node.name +
             '</button>' :
-            '') +
+            node.name ?
+              '<span>' + node.name + '</span>' :
+              '';
+
+        return header +
           ((node.children || []).length ?
             '<ul class="tree-depth-' + depth + '">' +
               node.children.map(function(obj) {
@@ -130,8 +134,7 @@
                 );
               }).join('') +
             '</ul>' :
-            '')
-        );
+            '');
       })(tree, 0);
 
       // Add the HTML to the DOM:

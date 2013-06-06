@@ -129,6 +129,9 @@
 
     // Bind events:
     $('button.add-language', _dom).click(function() {
+      if ($('ul.languages-list > li', _dom).length >= _languages.length)
+        return;
+
       var isAlreadySelected = false,
           li = $(
             '<li>' +

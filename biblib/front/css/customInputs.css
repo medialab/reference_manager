@@ -15,11 +15,17 @@
 .CreatorField ul.creators-list {
   list-style-type: none;
   padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .CreatorField ul.creators-list li:first-child button.moveup-creator,
 .CreatorField ul.creators-list li:last-child button.movedown-creator {
   display: none;
+}
+
+.CreatorField div.creators-container select.select-role {
+  max-width: 120px;
 }
 
 /* LanguageValueField style */
@@ -39,6 +45,8 @@
 .LanguageValueField ul.languages-list {
   list-style-type: none;
   padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .LanguageValueField ul.languages-list li textarea {
