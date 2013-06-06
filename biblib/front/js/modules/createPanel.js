@@ -42,7 +42,7 @@
       // Parse children:
       for (i = 0, l = field.children.length; i < l; i++) {
         obj = field.children[i];
-        component = blf.customInputs[obj.type_data];
+        component = blf.customInputs[obj.type_ui];
 
         // If a custom component is found:
         if (typeof component === 'function') {
@@ -50,31 +50,31 @@
 
         // Else, if a basic component is recognized:
         } else {
-          switch (obj.type_data) {
-            case 'text':
+          switch (obj.type_ui) {
+            case 'CharField':
               components.push({
                 dom: $(
-                  '<fieldset>' +
+                  '<fieldset class="CharField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
                     '<input name="' + obj.property + '" type="text" />' +
                   '</fieldset>'
                 )
               });
               break;
-            case 'date':
+            case 'DateField':
               components.push({
                 dom: $(
-                  '<fieldset>' +
+                  '<fieldset class="DateField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
                     '<input name="' + obj.property + '" type="date" />' +
                   '</fieldset>'
                 )
               });
               break;
-            case 'number':
+            case 'IntegerField':
               components.push({
                 dom: $(
-                  '<fieldset>' +
+                  '<fieldset class="IntegerField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
                     '<input name="' + obj.property + '" type="number" />' +
                   '</fieldset>'
@@ -83,7 +83,7 @@
               break;
             default:
               _self.dispatchEvent('warn', {
-                message: 'Data type "' + obj.type_data + '" not recognized.'
+                message: 'Data type "' + obj.type_ui + '" not recognized.'
               });
               break;
           }

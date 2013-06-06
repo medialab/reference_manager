@@ -10,7 +10,7 @@
    *
    * Use case:
    * *********
-   *  > new blf.customInputs.Creator({
+   *  > new blf.customInputs.CreatorField({
    *  >   labels: {
    *  >       en: "Creators",
    *  >       fr: "Créateurs"
@@ -22,12 +22,12 @@
    *  >   type_ui: "CreatorField"
    *  > });
    */
-  blf.customInputs.Creator = function(obj) {
+  blf.customInputs.CreatorField = function(obj) {
     var _dom,
         _validate;
 
     _dom = $(
-      '<fieldset>' +
+      '<fieldset class="CreatorField">' +
         '<label>' + obj.labels[blf.assets.lang] + ' :</label>' +
         '<div class="creators-container">' +
           '<ul class="creators-list"></ul>' +
@@ -46,10 +46,24 @@
             '<option value="ipsum">Ipsum</option>' +
           '</select>' +
           '<button class="remove-creator">-</button>' +
+          '<button class="moveup-creator">↑</button>' +
+          '<button class="movedown-creator">↓</button>' +
         '</li>'
       );
-      $('button.remove-creator', li).click(function() {
-        li.remove();
+
+      li.click(function(e) {
+        var dom = $(e.target);
+
+        // Check if it is a field button:
+        if (dom.is('button.remove-creator')) {
+          li.remove();
+        } else if (dom.is('button.moveup-creator')) {
+          if (!li.is(':first-child'))
+            li.prev().before(li);
+        } else if (dom.is('button.movedown-creator')) {
+          if (!li.is(':last-child'))
+            li.next().after(li);
+        }
       });
 
       $('ul.creators-list', _dom).append(li);
@@ -67,7 +81,7 @@
    *
    * Use case:
    * *********
-   *  > new blf.customInputs.LanguageValue({
+   *  > new blf.customInputs.LanguageValueField({
    *  >   labels: {
    *  >       en: "Abstracts",
    *  >       fr: "Resumés"
@@ -79,14 +93,14 @@
    *  >   type_ui: "LanguageValueField"
    *  > });
    */
-  blf.customInputs.LanguageValue = function(obj) {
+  blf.customInputs.LanguageValueField = function(obj) {
     var _dom,
         _validate,
         _selected = {},
         _languages = blf.assets.languages;
 
     _dom = $(
-      '<fieldset>' +
+      '<fieldset class="LanguageValueField">' +
         '<label>' + obj.labels[blf.assets.lang] + ' :</label>' +
         '<div class="languages-container">' +
           '<ul class="languages-list"></ul>' +

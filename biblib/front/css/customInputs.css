@@ -1,0 +1,12 @@
+.CreatorField ul.creators-list li button {
+  display: none;
+}
+
+.CreatorField ul.creators-list li:hover button {
+  display: inline;
+}
+
+.CreatorField ul.creators-list li:first-child button.moveup-creator,
+.CreatorField ul.creators-list li:last-child button.movedown-creator {
+  display: none;
+}
