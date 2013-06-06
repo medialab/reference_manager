@@ -104,13 +104,13 @@
         '<label>' + obj.labels[blf.assets.lang] + ' :</label>' +
         '<div class="languages-container">' +
           '<ul class="languages-list"></ul>' +
-          '<button class="add-creator">+</button>' +
+          '<button class="add-language">+</button>' +
         '</div>' +
       '</fieldset>'
     );
 
     // Bind events:
-    $('button.add-creator', _dom).click(function() {
+    $('button.add-language', _dom).click(function() {
       var isAlreadySelected = false,
           li = $(
             '<li>' +
@@ -130,12 +130,12 @@
                   );
                 }).join() +
               '</select>' +
-              '<button class="remove-creator">-</button>' +
+              '<button class="remove-language">-</button>' +
               '<textarea rows="3" cols="30"></textarea>' +
             '</li>'
           );
 
-      $('button.remove-creator', li).click(function() {
+      $('button.remove-language', li).click(function() {
         li.remove();
         checkLanguagesCount();
         checkLanguagesDups();
@@ -151,9 +151,9 @@
     // Check that all languages are not added yet:
     function checkLanguagesCount() {
       if ($('ul.languages-list > li', _dom).length >= _languages.length)
-        $('button.add-creator', _dom).attr('hidden', 'true');
+        $('button.add-language', _dom).attr('hidden', 'true');
       else
-        $('button.add-creator', _dom).attr('hidden', null);
+        $('button.add-language', _dom).attr('hidden', null);
     }
 
     // Deal with languages deduplication:

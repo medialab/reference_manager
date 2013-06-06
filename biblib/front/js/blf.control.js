@@ -93,6 +93,13 @@ $(document).ready(function() {
         dispatch: 'fieldsTreeUpdated',
         description: 'The fields tree.'
       },
+      {
+        value: [],
+        id: 'creatorRoles',
+        type: 'array',
+        dispatch: 'creatorRolesUpdated',
+        description: 'The creator roles list.'
+      },
 
       // INTERFACE related properties
       {
@@ -126,6 +133,7 @@ $(document).ready(function() {
     services: [
       {
         id: 'loadField',
+        description: 'Loads the template of a specified field.',
         url: function(input) {
           return 'templates/' + input.field + '.json';
         },
@@ -152,9 +160,17 @@ $(document).ready(function() {
         }
       },
       {
-        id: 'fieldsTree',
-        url: 'templates-tree_sample.json',
-        setter: 'fieldsTree'
+        id: 'loadFieldsTree',
+        url: 'assets/templates-tree_sample.json',
+        setter: 'fieldsTree',
+        description: 'Loads the dependance tree of the fields.'
+      },
+      {
+        id: 'loadCreatorRoles',
+        url: 'assets/creator-roles.json',
+        setter: 'creatorRoles',
+        path: 'children',
+        description: 'Loads the list of the available creator roles.'
       }
     ]
   });
@@ -163,5 +179,5 @@ $(document).ready(function() {
   blf.layout = blf.control.addModule(blf.modules.layout);
 
   // Data initialization:
-  blf.control.request('fieldsTree');
+  blf.control.request(['loadFieldsTree', 'loadCreatorRoles']);
 });
