@@ -3,6 +3,25 @@
 
   mlab.pkg('blf.customInputs');
 
+  /**
+   * This custom input represents the creators of an entry. It is possible to
+   * add several creators. Each creator is categorized by a name (string), a
+   * role (huge external list) and a class ("Person", "Orgunit" or "Event").
+   *
+   * Use case:
+   * *********
+   *  > new blf.customInputs.Creator({
+   *  >   labels: {
+   *  >       en: "Creators",
+   *  >       fr: "Créateurs"
+   *  >   },
+   *  >   multiple: true,
+   *  >   property: "creators",
+   *  >   required: true,
+   *  >   type_data: "Creator",
+   *  >   type_ui: "CreatorField"
+   *  > });
+   */
   blf.customInputs.Creator = function(obj) {
     var _dom,
         _validate;
@@ -42,6 +61,24 @@
     };
   };
 
+  /**
+   * This custom input can be used to add several entries for different
+   * languages.
+   *
+   * Use case:
+   * *********
+   *  > new blf.customInputs.LanguageValue({
+   *  >   labels: {
+   *  >       en: "Abstracts",
+   *  >       fr: "Resumés"
+   *  >   },
+   *  >   multiple: true,
+   *  >   property: "descriptions",
+   *  >   required: false,
+   *  >   type_data: "LanguageValue",
+   *  >   type_ui: "LanguageValueField"
+   *  > });
+   */
   blf.customInputs.LanguageValue = function(obj) {
     var _dom,
         _validate,
