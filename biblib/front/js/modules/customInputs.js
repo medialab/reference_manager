@@ -1,16 +1,17 @@
 ;(function() {
   'use strict';
 
-  mlab.pkg('blf.customInputs');
+  mlab.pkg('blf.modules.customInputs');
 
   /**
    * This custom input represents the creators of an entry. It is possible to
    * add several creators. Each creator is categorized by a name (string), a
    * role (huge external list) and a class ("Person", "Orgunit" or "Event").
    *
-   * Use case:
-   * *********
-   *  > new blf.customInputs.CreatorField({
+   * Data sample:
+   * ************
+   *
+   *  > {
    *  >   labels: {
    *  >       en: "Creators",
    *  >       fr: "Créateurs"
@@ -20,9 +21,11 @@
    *  >   required: true,
    *  >   type_data: "Creator",
    *  >   type_ui: "CreatorField"
-   *  > });
+   *  > }
    */
-  blf.customInputs.CreatorField = function(obj) {
+  blf.modules.customInputs.CreatorField = function(obj, d) {
+    domino.module.call(this);
+
     var _dom,
         _validate;
 
@@ -41,9 +44,11 @@
       var li = $(
         '<li>' +
           '<input type="text" placeholder="Type something..." />' +
-          '<select>' +
-            '<option value="lorem">Lorem</option>' +
-            '<option value="ipsum">Ipsum</option>' +
+          '<select class="select-role">' +
+            // Find the roles through the global controler:
+            (d.get('creatorRoles') || []).map(function(o) {
+              return '<option value="' + o.type_id + '">' + o.labels[blf.assets.lang] + '</option>';
+            }).join() +
           '</select>' +
           '<button class="remove-creator">-</button>' +
           '<button class="moveup-creator">↑</button>' +
@@ -69,9 +74,19 @@
       $('ul.creators-list', _dom).append(li);
     });
 
-    return {
-      dom: _dom,
-      validate: _validate
+    this.triggers.events.creatorRolesUpdated = function(d) {
+      $('select.select-role', dom).html(
+        (d.get('creatorRoles') || []).map(function(o) {
+          return '<option value="' + o.type_id + '">' + o.labels[blf.assets.lang] + '</option>';
+        }).join()
+      );
+    };
+
+    this.getComponent = function() {
+      return {
+        dom: _dom,
+        validate: _validate
+      };
     };
   };
 
@@ -79,9 +94,10 @@
    * This custom input can be used to add several entries for different
    * languages.
    *
-   * Use case:
-   * *********
-   *  > new blf.customInputs.LanguageValueField({
+   * Data sample:
+   * ************
+   *
+   *  > {
    *  >   labels: {
    *  >       en: "Abstracts",
    *  >       fr: "Resumés"
@@ -91,9 +107,11 @@
    *  >   required: false,
    *  >   type_data: "LanguageValue",
    *  >   type_ui: "LanguageValueField"
-   *  > });
+   *  > }
    */
-  blf.customInputs.LanguageValueField = function(obj) {
+  blf.modules.customInputs.LanguageValueField = function(obj) {
+    domino.module.call(this);
+
     var _dom,
         _validate,
         _selected = {},
@@ -179,9 +197,11 @@
       });
     }
 
-    return {
-      dom: _dom,
-      validate: _validate
+    this.getComponent = function() {
+      return {
+        dom: _dom,
+        validate: _validate
+      };
     };
   };
 })();

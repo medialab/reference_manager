@@ -75,6 +75,9 @@ $(document).ready(function() {
       }
     });
 
+  /**
+   * Controler:
+   */
   blf.control = new domino({
     name: 'blf.control',
     properties: [

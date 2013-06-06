@@ -1,8 +1,7 @@
 ;(function() {
   'use strict';
 
-  mlab.pkg('blf.modules');
-  mlab.pkg('blf.customInputs');
+  mlab.pkg('blf.modules.customInputs');
 
   blf.modules.createPanel = function(html) {
     domino.module.call(this);
@@ -36,17 +35,19 @@
       var i,
           l,
           obj,
+          module,
           component,
           components = [];
 
       // Parse children:
       for (i = 0, l = field.children.length; i < l; i++) {
         obj = field.children[i];
-        component = blf.customInputs[obj.type_ui];
+        module = blf.modules.customInputs[obj.type_ui];
 
         // If a custom component is found:
-        if (typeof component === 'function') {
-          components.push(new component(obj));
+        if (typeof module === 'function') {
+          module = blf.control.addModule(module, [obj]);
+          components.push(module.getComponent());
 
         // Else, if a basic component is recognized:
         } else {
