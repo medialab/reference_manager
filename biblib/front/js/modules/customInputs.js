@@ -43,8 +43,8 @@
     $('button.add-creator', _dom).click(function() {
       var li = $(
         '<li>' +
-          '<input type="text" placeholder="Type something..." />' +
-          '<select class="select-role">' +
+          '<input class="col-2" type="text" placeholder="Type something..." />' +
+          '<select class="col-1" class="select-role">' +
             // Find the roles through the global controler:
             (d.get('creatorRoles') || []).map(function(o) {
               return '<option value="' + o.type_id + '">' + o.labels[blf.assets.lang] + '</option>';
@@ -152,7 +152,7 @@
                 }).join() +
               '</select>' +
               '<button class="remove-language">-</button>' +
-              '<textarea rows="3" cols="30"></textarea>' +
+              '<textarea class="col-3"></textarea>' +
             '</li>'
           );
 

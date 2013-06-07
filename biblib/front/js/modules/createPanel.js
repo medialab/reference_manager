@@ -57,7 +57,7 @@
                 dom: $(
                   '<fieldset class="CharField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
-                    '<input name="' + obj.property + '" type="text" />' +
+                    '<input class="col-3" name="' + obj.property + '" type="text" />' +
                   '</fieldset>'
                 )
               });
@@ -67,7 +67,7 @@
                 dom: $(
                   '<fieldset class="DateField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
-                    '<input name="' + obj.property + '" type="date" />' +
+                    '<input class="col-3" name="' + obj.property + '" type="date" />' +
                   '</fieldset>'
                 )
               });
@@ -77,7 +77,7 @@
                 dom: $(
                   '<fieldset class="IntegerField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
-                    '<input name="' + obj.property + '" type="number" />' +
+                    '<input class="col-3" name="' + obj.property + '" type="number" />' +
                   '</fieldset>'
                 )
               });
