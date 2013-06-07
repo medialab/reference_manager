@@ -27,7 +27,7 @@
     domino.module.call(this);
 
     var _dom,
-        _validate;
+        _creatorRoles = d.get('creatorRoles') || [];
 
     _dom = $(
       '<fieldset class="CreatorField">' +
@@ -46,7 +46,7 @@
           '<input class="col-2" type="text" placeholder="Type something..." />' +
           '<select class="col-1" class="select-role">' +
             // Find the roles through the global controler:
-            (d.get('creatorRoles') || []).map(function(o) {
+            _creatorRoles.map(function(o) {
               return '<option value="' + o.type_id + '">' + o.labels[blf.assets.lang] + '</option>';
             }).join() +
           '</select>' +
@@ -75,17 +75,96 @@
     });
 
     this.triggers.events.creatorRolesUpdated = function(d) {
+      _creatorRoles = d.get('creatorRoles') || [];
+
       $('select.select-role', dom).html(
-        (d.get('creatorRoles') || []).map(function(o) {
+        _creatorRoles.map(function(o) {
           return '<option value="' + o.type_id + '">' + o.labels[blf.assets.lang] + '</option>';
         }).join()
       );
     };
 
+    /**
+     *  Check if the content of the component is valid. Returns true if valid,
+     *  and false if not.
+     *
+     * @return {string} Returns true if the content id valid, and false else.
+     */
+    function _validate() {
+      // TODO
+      return true;
+    }
+
+    /**
+     * Fill the component with existing data.
+     *
+     * @param  {object} data The data to display in the component.
+     * @param  {object} full The full entry (sometimes might be needed).
+     */
+    function _fill(data) {
+      var li,
+          ul = $('ul.creators-list', _dom).empty();
+
+      // Parse data and create lines:
+      (data || []).forEach(function(creator) {
+        li = $(
+          '<li>' +
+            '<input class="col-2" type="text" placeholder="Type something..." />' +
+            '<select class="col-1" class="select-role">' +
+              // Find the roles through the global controler:
+              _creatorRoles.map(function(o) {
+                return '<option value="' + o.type_id + '">' + o.labels[blf.assets.lang] + '</option>';
+              }).join() +
+            '</select>' +
+            '<button class="remove-creator">-</button>' +
+            '<button class="moveup-creator">↑</button>' +
+            '<button class="movedown-creator">↓</button>' +
+          '</li>'
+        ).appendTo(ul);
+
+        $('> select', li).val(creator.role);
+        // TODO
+      });
+    }
+
+    /**
+     * Returns the well-formed data described by the component.
+     *
+     * @return {*} The data.
+     */
+    function _get() {
+      var creators = [];
+
+      // Parse line and form data:
+      $('ul.creators-list > li', _dom).each(function() {
+        var li = $(this);
+
+        creators.push({
+          role: $('> select', li).val(),
+          agents: {
+            name_family: 'Power',   // TODO
+            name_given: 'Michael',  // TODO
+            rec_class: 'Person',    // TODO
+            rec_metajson: 1
+          }
+        });
+      });
+
+      return creators.length ? creators : undefined;
+    }
+
+    /**
+     * This method returns the component object.
+     *
+     * @return {objext} The component object.
+     */
     this.getComponent = function() {
       return {
         dom: _dom,
-        validate: _validate
+        fill: _fill,
+        getData: _get,
+        validate: _validate,
+        property: obj.property
       };
     };
   };
@@ -113,7 +192,6 @@
     domino.module.call(this);
 
     var _dom,
-        _validate,
         _selected = {},
         _languages = blf.assets.languages;
 
@@ -200,10 +278,43 @@
       });
     }
 
+    /**
+     * Check if the content of the component is valid. Returns true if valid,
+     * and false if not.
+     *
+     * @return {string} Returns true if the content id valid, and false else.
+     */
+    function _validate() {
+      // TODO
+      return true;
+    }
+
+    /**
+     * Fill the component with existing data.
+     *
+     * @param  {object} data The data to display in the component.
+     * @param  {object} full The full entry (sometimes might be needed).
+     */
+    function _fill(data) {
+      // TODO
+    }
+
+    /**
+     * Returns the well-formed data described by the component.
+     *
+     * @return {*} The data.
+     */
+    function _get() {
+      // TODO
+    }
+
     this.getComponent = function() {
       return {
         dom: _dom,
-        validate: _validate
+        fill: _fill,
+        getData: _get,
+        validate: _validate,
+        property: obj.property
       };
     };
   };

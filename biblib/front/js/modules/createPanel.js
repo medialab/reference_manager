@@ -9,6 +9,9 @@
     var _self = this,
         _html = html,
         _waitingField,
+        _field,
+        _modules = [],
+        _components = [],
         _fieldsIndex = {};
 
     // Bind DOM events:
@@ -19,9 +22,10 @@
       if (dom.is('button[data-field]')) {
         var field = dom.attr('data-field');
 
-        if (_fieldsIndex[field])
-          generateForm(_fieldsIndex[field]);
-        else {
+        if (_fieldsIndex[field]) {
+          _field = _fieldsIndex[field]
+          generateForm();
+        } else {
           _waitingField = field;
           _self.dispatchEvent('loadField', {
             field: _waitingField
@@ -31,29 +35,33 @@
     });
 
     // The following method generates the form:
-    function generateForm(field) {
+    function generateForm() {
       var i,
           l,
           obj,
           module,
-          component,
-          components = [];
+          component;
+
+      _modules = [];
+      _components = [];
 
       // Parse children:
-      for (i = 0, l = field.children.length; i < l; i++) {
-        obj = field.children[i];
+      for (i = 0, l = _field.children.length; i < l; i++) {
+        obj = _field.children[i];
         module = blf.modules.customInputs[obj.type_ui];
 
         // If a custom component is found:
         if (typeof module === 'function') {
           module = blf.control.addModule(module, [obj]);
-          components.push(module.getComponent());
+          _modules.push(module);
+          _components.push(module.getComponent());
 
         // Else, if a basic component is recognized:
         } else {
           switch (obj.type_ui) {
             case 'CharField':
-              components.push({
+              _components.push({
+                property: obj.property,
                 dom: $(
                   '<fieldset class="CharField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
@@ -63,7 +71,8 @@
               });
               break;
             case 'DateField':
-              components.push({
+              _components.push({
+                property: obj.property,
                 dom: $(
                   '<fieldset class="DateField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
@@ -73,7 +82,8 @@
               });
               break;
             case 'IntegerField':
-              components.push({
+              _components.push({
+                property: obj.property,
                 dom: $(
                   '<fieldset class="IntegerField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
@@ -92,14 +102,57 @@
       }
 
       $('.select-field', _html).attr('hidden', 'true');
-      $('.create-form', _html).empty().attr('hidden', null).append(components.map(function(o) {
+      $('.create-form', _html).empty().attr('hidden', null).append(_components.map(function(o) {
         return o.dom;
       }));
+
+      $('<button class="validate-button">Validate</button>').click(function() {
+        if (_components.some(function(comp) {
+          return comp.validate && !comp.validate();
+        }))
+          console.log('not valid');
+        else
+          console.log('Data:', getData());
+      }).appendTo($('.create-form', _html));
     }
 
     function restart() {
       $('.create-form', _html).empty().attr('hidden', 'true');
       $('.select-field', _html).attr('hidden', null);
+    }
+
+    function getData() {
+      var i,
+          l,
+          component,
+          value,
+          data = {};
+
+      for (i = 0, l = _components.length; i < l; i++) {
+        component = _components[i];
+        value = component.getData ?
+          component.getData() :
+          getDataFromComponent.call(component);
+
+        if (value !== undefined)
+        data[component.property] = value;
+      }
+
+      return data;
+    }
+
+    /**
+     * The default "getData" method
+     * @return {[type]} [description]
+     */
+    function getDataFromComponent() {
+      var value = $('input', this.dom).val();
+
+      // Check empty strings:
+      if (value === '')
+        value = undefined;
+
+      return value;
     }
 
     // Listen to the controller:
@@ -145,7 +198,8 @@
       _fieldsIndex = mlab.array.index(d.get('fields'), 'rec_type');
 
       if (_waitingField && _fieldsIndex[_waitingField]) {
-        generateForm(_fieldsIndex[_waitingField]);
+        _field = _fieldsIndex[_waitingField];
+        generateForm();
         _waitingField = null;
       }
     };

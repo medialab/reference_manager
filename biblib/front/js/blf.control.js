@@ -125,8 +125,8 @@ $(document).ready(function() {
       },
       {
         triggers: 'loadField',
+        description: 'Loading the template of a specific field.',
         method: function(e) {
-          this.log('Loading the template of a specific field.');
           this.request('loadField', {
             field: e.data.field
           });
