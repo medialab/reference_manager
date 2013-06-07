@@ -43,8 +43,15 @@
     $('button.add-creator', _dom).click(function() {
       var li = $(
         '<li>' +
-          '<input class="col-2" type="text" placeholder="Type something..." />' +
-          '<select class="col-1" class="select-role">' +
+          '<select class="col-1" class="select-type">' +
+            // TODO:
+            // Set this in assets, find it automatically as well.
+            '<option value="person">Person</option>' +
+            '<option value="orgunit">Orgunit</option>' +
+            '<option value="event">Event</option>' +
+          '</select>' +
+          '<input class="col-3" type="text" placeholder="Type something..." />' +
+          '<select class="col-2" class="select-role">' +
             // Find the roles through the global controler:
             _creatorRoles.map(function(o) {
               return '<option value="' + o.type_id + '">' + o.labels[blf.assets.lang] + '</option>';
@@ -91,7 +98,7 @@
      * @return {string} Returns true if the content id valid, and false else.
      */
     function _validate() {
-      // TODO
+      // TODO: Check empty lines.
       return true;
     }
 
@@ -109,8 +116,8 @@
       (data || []).forEach(function(creator) {
         li = $(
           '<li>' +
-            '<input class="col-2" type="text" placeholder="Type something..." />' +
-            '<select class="col-1" class="select-role">' +
+            '<input class="col-4" type="text" placeholder="Type something..." />' +
+            '<select class="col-2" class="select-role">' +
               // Find the roles through the global controler:
               _creatorRoles.map(function(o) {
                 return '<option value="' + o.type_id + '">' + o.labels[blf.assets.lang] + '</option>';
@@ -164,6 +171,7 @@
         fill: _fill,
         getData: _get,
         validate: _validate,
+        propertyObject: obj,
         property: obj.property
       };
     };
@@ -230,7 +238,7 @@
                 }).join() +
               '</select>' +
               '<button class="remove-language">-</button>' +
-              '<textarea class="col-3"></textarea>' +
+              '<textarea class="col-6"></textarea>' +
             '</li>'
           );
 
@@ -285,7 +293,7 @@
      * @return {string} Returns true if the content id valid, and false else.
      */
     function _validate() {
-      // TODO
+      // TODO: Check empty lines.
       return true;
     }
 
@@ -314,6 +322,7 @@
         fill: _fill,
         getData: _get,
         validate: _validate,
+        propertyObject: obj,
         property: obj.property
       };
     };

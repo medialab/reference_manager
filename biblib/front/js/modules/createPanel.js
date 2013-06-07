@@ -61,33 +61,36 @@
           switch (obj.type_ui) {
             case 'CharField':
               _components.push({
+                propertyObject: obj,
                 property: obj.property,
                 dom: $(
                   '<fieldset class="CharField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
-                    '<input class="col-3" name="' + obj.property + '" type="text" />' +
+                    '<input class="col-6" name="' + obj.property + '" type="text" />' +
                   '</fieldset>'
                 )
               });
               break;
             case 'DateField':
               _components.push({
+                propertyObject: obj,
                 property: obj.property,
                 dom: $(
                   '<fieldset class="DateField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
-                    '<input class="col-3" name="' + obj.property + '" type="date" />' +
+                    '<input class="col-6" name="' + obj.property + '" type="date" />' +
                   '</fieldset>'
                 )
               });
               break;
             case 'IntegerField':
               _components.push({
+                propertyObject: obj,
                 property: obj.property,
                 dom: $(
                   '<fieldset class="IntegerField">' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
-                    '<input class="col-3" name="' + obj.property + '" type="number" />' +
+                    '<input class="col-6" name="' + obj.property + '" type="number" />' +
                   '</fieldset>'
                 )
               });
@@ -108,7 +111,7 @@
 
       $('<button class="validate-button">Validate</button>').click(function() {
         if (_components.some(function(comp) {
-          return comp.validate && !comp.validate();
+          return comp.validate ? !comp.validate() : !default_validate.call(comp);
         }))
           console.log('not valid');
         else
@@ -132,7 +135,7 @@
         component = _components[i];
         value = component.getData ?
           component.getData() :
-          getDataFromComponent.call(component);
+          default_getData.call(component);
 
         if (value !== undefined)
         data[component.property] = value;
@@ -142,10 +145,10 @@
     }
 
     /**
-     * The default "getData" method
-     * @return {[type]} [description]
+     * The default "getData" method.
+     * @return {*} The data to insert in the new entry.
      */
-    function getDataFromComponent() {
+    function default_getData() {
       var value = $('input', this.dom).val();
 
       // Check empty strings:
@@ -153,6 +156,23 @@
         value = undefined;
 
       return value;
+    }
+
+    /**
+     * The default "validate" method.
+     * @return {boolean} "true" if valid, "false" else.
+     */
+    function default_validate() {
+      var isValid;
+
+      if (this.propertyObject.required)
+        isValid = (this.getData ?
+          this.getData() :
+          default_getData.call(this)) !== undefined;
+      else
+        isValid = true;
+
+      return isValid;
     }
 
     // Listen to the controller:
