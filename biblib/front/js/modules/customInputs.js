@@ -40,8 +40,10 @@
       '</fieldset>'
     );
 
-    // Bind events:
-    $('button.add-creator', _dom).click(function() {
+    // Add a line. The line is empty (ie to be filled by the user) if data is
+    // not specified.
+    function addCreator(data) {
+      data = data || {};
       var li = $(
         '<li>' +
           '<select class="col-1" class="select-type">' +
@@ -64,22 +66,33 @@
         '</li>'
       );
 
-      li.click(function(e) {
-        var dom = $(e.target);
-
-        // Check if it is a field button:
-        if (dom.is('button.remove-creator')) {
-          li.remove();
-        } else if (dom.is('button.moveup-creator')) {
-          if (!li.is(':first-child'))
-            li.prev().before(li);
-        } else if (dom.is('button.movedown-creator')) {
-          if (!li.is(':last-child'))
-            li.next().after(li);
-        }
-      });
+      // TODO:
+      // Fill every inputs
+      if (data.role)
+        $('> select', li).val(data.role);
 
       $('ul.creators-list', _dom).append(li);
+    }
+
+    // Bind events:
+    _dom.click(function(e) {
+      var target = $(e.target),
+          li = target.parents('ul.creators-list > li');
+
+      // Check if it is a field button:
+      if (li.length && target.is('button.remove-creator')) {
+        li.remove();
+      } else if (li.length && target.is('button.moveup-creator')) {
+        if (!li.is(':first-child'))
+          li.prev().before(li);
+      } else if (li.length && target.is('button.movedown-creator')) {
+        if (!li.is(':last-child'))
+          li.next().after(li);
+      }
+    });
+
+    $('button.add-creator', _dom).click(function() {
+      addCreator();
     });
 
     this.triggers.events.creatorRolesUpdated = function(d) {
@@ -121,24 +134,7 @@
           ul = $('ul.creators-list', _dom).empty();
 
       // Parse data and create lines:
-      (data || []).forEach(function(creator) {
-        li = $(
-          '<li>' +
-            '<input class="col-4" type="text" placeholder="Type something..." />' +
-            '<select class="col-2" class="select-role">' +
-              // Find the roles through the global controler:
-              _creatorRoles.map(function(o) {
-                return '<option value="' + o.type_id + '">' + o.labels[blf.assets.lang] + '</option>';
-              }).join() +
-            '</select>' +
-            '<button class="remove-creator">-</button>' +
-            '<button class="moveup-creator">↑</button>' +
-            '<button class="movedown-creator">↓</button>' +
-          '</li>'
-        ).appendTo(ul);
-
-        $('> select', li).val(creator.role);
-      });
+      (data || []).forEach(addCreator);
     }
 
     /**
@@ -223,45 +219,66 @@
 
     // Bind events:
     $('button.add-language', _dom).click(function() {
-      if ($('ul.languages-list > li', _dom).length >= _languages.length)
-        return;
+      addLanguage();
+    });
 
-      var isAlreadySelected = false,
-          li = $(
-            '<li>' +
-              '<select>' +
-                _languages.map(function(o) {
-                  var selected = '';
+    // Bind events:
+    _dom.click(function(e) {
+      var target = $(e.target),
+          li = target.parents('ul.languages-list > li');
 
-                  if (!isAlreadySelected && !_selected[o.id]) {
-                    selected = ' selected="true"'
-                    isAlreadySelected = true;
-                  }
-
-                  return (
-                    '<option value="' + o.id + '"' + selected + '>' +
-                      o.labels[blf.assets.lang] +
-                    '</option>'
-                  );
-                }).join() +
-              '</select>' +
-              '<button class="remove-language">-</button>' +
-              '<textarea class="col-6"></textarea>' +
-            '</li>'
-          );
-
-      $('button.remove-language', li).click(function() {
+      // Check if it is a field button:
+      if (li.length && target.is('button.remove-language')) {
         li.remove();
         checkLanguagesCount();
         checkLanguagesDups();
-      });
+      }
+    });
+
+    // Add a line. The line is empty (ie to be filled by the user) if data is
+    // not specified.
+    function addLanguage(data) {
+      data = data || {};
+      var li = $(
+        '<li>' +
+          '<select class="select-language">' +
+            _languages.map(function(o) {
+              return (
+                '<option value="' + o.id + '">' +
+                  o.labels[blf.assets.lang] +
+                '</option>'
+              );
+            }).join() +
+          '</select>' +
+          '<button class="remove-language">-</button>' +
+          '<textarea class="col-6"></textarea>' +
+        '</li>'
+      );
+
+
+      if (data.language)
+        $('> select', li).val(data.language);
+
+      // If the language is not specified, we use the first language that is
+      // not used yet:
+      else
+        $('> select', li).val(_languages.reduce(function(res, lang) {
+          return res !== null ?
+            res :
+            !$('select.select-language > option[value="' + lang.id + '"]:selected', _dom).length ?
+              lang.id :
+              null;
+        }, null));
+
+
+      if (data.value)
+        $('> textarea', li).val(data.value);
 
       $('select', li).change(checkLanguagesDups);
-
       $('ul.languages-list', _dom).append(li);
       checkLanguagesCount();
       checkLanguagesDups();
-    });
+    }
 
     // Check that all languages are not added yet:
     function checkLanguagesCount() {
@@ -320,29 +337,10 @@
      */
     function _fill(data) {
       var li,
-          ul = $('ul.creators-list', _dom).empty();
+          ul = $('ul.languages-list', _dom).empty();
 
       // Parse data and create lines:
-      (data || []).forEach(function(language) {
-        li = $(
-          '<li>' +
-            '<select>' +
-              _languages.map(function(o) {
-                return (
-                  '<option value="' + o.id + '">' +
-                    o.labels[blf.assets.lang] +
-                  '</option>'
-                );
-              }).join() +
-            '</select>' +
-            '<button class="remove-language">-</button>' +
-            '<textarea class="col-6"></textarea>' +
-          '</li>'
-        ).appendTo(ul);
-
-        if (language.language)
-          $('> select', li).val(language.language);
-      });
+      (data || []).forEach(addLanguage);
     }
 
     /**
@@ -358,7 +356,8 @@
         var li = $(this);
 
         languages.push({
-          // TODO
+          language: $('> select', li).val(),
+          value: $('> textarea', li).val()
         });
       });
 
