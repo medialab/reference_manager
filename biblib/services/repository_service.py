@@ -98,7 +98,7 @@ def search_documents(corpus, query):
         corpus = default_corpus
     # {"_id": {"$in": mongo_object_ids}}
     # {"rec_id": {"$in": rec_ids}}
-    # {rec_type:"Book"}
+    # {"rec_type": "Book"}
     # {"is_part_ofs.rec_type":"Book"}
     # {"is_part_ofs.rec_type":"Journal"}
     # {"is_part_ofs.rec_type":"VideoRecording"}
