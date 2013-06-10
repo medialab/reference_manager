@@ -160,7 +160,10 @@ $(document).ready(function() {
         triggers: 'validateEntry',
         description: 'What happens when an entry is validated from the form.',
         method: function(e) {
-          console.log(e.data.entry);
+          this.dispatchEvent('displayEntry', {
+            entry: e.data.entry,
+            field: 'Book'
+          });
         }
       }
     ],

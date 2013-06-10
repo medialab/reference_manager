@@ -138,7 +138,6 @@
         ).appendTo(ul);
 
         $('> select', li).val(creator.role);
-        // TODO
       });
     }
 
@@ -320,7 +319,30 @@
      * @param  {object} full The full entry (sometimes might be needed).
      */
     function _fill(data) {
-      // TODO
+      var li,
+          ul = $('ul.creators-list', _dom).empty();
+
+      // Parse data and create lines:
+      (data || []).forEach(function(language) {
+        li = $(
+          '<li>' +
+            '<select>' +
+              _languages.map(function(o) {
+                return (
+                  '<option value="' + o.id + '">' +
+                    o.labels[blf.assets.lang] +
+                  '</option>'
+                );
+              }).join() +
+            '</select>' +
+            '<button class="remove-language">-</button>' +
+            '<textarea class="col-6"></textarea>' +
+          '</li>'
+        ).appendTo(ul);
+
+        if (language.language)
+          $('> select', li).val(language.language);
+      });
     }
 
     /**

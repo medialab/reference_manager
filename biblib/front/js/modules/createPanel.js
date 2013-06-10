@@ -211,8 +211,9 @@
 
     /**
      * The default "fill" method.
+     * @param  {*} value The value to set in the input.
      */
-    _defaultMethods.fill = function() {
+    _defaultMethods.fill = function(value) {
       $('input', this.dom).val(value);
     }
 
@@ -248,6 +249,16 @@
     this.triggers.events.modeUpdated = function(d) {
       if (d.get('mode') === 'create')
         restart();
+    };
+
+    this.triggers.events.displayEntry = function(d, e) {
+      var entry = e.data.entry;
+
+      _field = _fields[e.data.field];
+
+      restart();
+      generateForm();
+      fill(entry);
     };
 
     this.triggers.events.fieldsTreeUpdated = function(d) {
