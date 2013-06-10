@@ -57,7 +57,7 @@ def unixref_record_to_metajson(record, source):
 
     if resource_url is not None:
         resource = Resource()
-        resource["remote_url"] = resource_url.text
+        resource["url"] = resource_url.text
         document["resources"] = [resource]
 
     if source is not None:

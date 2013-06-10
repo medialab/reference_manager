@@ -142,10 +142,10 @@ def validate_metajson_creator(creator):
 
 def validate_metajson_resource(resource):
     errors = []
-    if "remote_url" in resource:
-        url_dict = resource_service.fetch_url(resource["remote_url"])
+    if "url" in resource:
+        url_dict = resource_service.fetch_url(resource["url"])
         if url_dict["error"]:
-            errors.append("Error {} with URL: {}".format(url_dict["code"], resource["remote_url"]))
+            errors.append("Error {} with URL: {}".format(url_dict["code"], resource["url"]))
         elif "redirect" in url_dict:
             errors.append("Redirected URL: {}".format(url_dict["redirect_url"]))
     return errors

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rml:researcherml xmlns:rml="http://bibliotheque.sciences-po.fr/standards/researcherml/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bibliotheque.sciences-po.fr/standards/researcherml/v1 http://bibliotheque.sciences-po.fr/standards/researcherml/researcherml-v1-0.xsd">
+    <rml:person>
+        <rml:identifier type="ldap">sophie.jacquot</rml:identifier>
+        <rml:identifier type="hdl">2441/9labe9r4se65i789685q591o2</rml:identifier>
+        <rml:identifier type="employeeNumber">16021</rml:identifier>
+        <rml:identifier type="dai">2441/9labe9r4se65i789685q591o2</rml:identifier>
+        <rml:firstname>Sophie</rml:firstname>
+        <rml:lastname>Jacquot</rml:lastname>
+        <rml:nationality authority="iso3166-1-a2">FR</rml:nationality>
+        <rml:dateOfBirth>1977</rml:dateOfBirth>
+        <rml:address groupName="SP28" preferred="true" relationType="work" visible="true">
+            <rml:street>28 RUE DES SAINT PERES</rml:street>
+            <rml:postCode>75007</rml:postCode>
+            <rml:localityCityTown>PARIS</rml:localityCityTown>
+            <rml:country authority="iso3166-1-a2">FR</rml:country>
+        </rml:address>
+        <rml:phone preferred="true" relationType="work" type="voice" visible="true">
+            <rml:formatted>+33145498359</rml:formatted>
+        </rml:phone>
+        <rml:email preferred="true" relationType="work" visible="true">sophie.jacquot@sciences-po.org</rml:email>
+        <rml:uri preferred="true" relationType="work">http://www.cee.sciences-po.fr/fr/le-centre/equipe-de-recherche/35-linda.html</rml:uri>
+        <rml:languageCapability>
+            <rml:language>fre</rml:language>
+            <rml:motherTong>true</rml:motherTong>
+            <rml:oralInput>medium</rml:oralInput>
+            <rml:oralOutput>medium</rml:oralOutput>
+            <rml:textInput>medium</rml:textInput>
+            <rml:textOutput>medium</rml:textOutput>
+        </rml:languageCapability>
+        <rml:languageCapability>
+            <rml:language>eng</rml:language>
+            <rml:oralInput>good</rml:oralInput>
+            <rml:oralOutput>excellent</rml:oralOutput>
+            <rml:textInput>good</rml:textInput>
+            <rml:textOutput>excellent</rml:textOutput>
+        </rml:languageCapability>
+        <rml:languageCapability>
+            <rml:language>ita</rml:language>
+            <rml:oralInput>medium</rml:oralInput>
+            <rml:oralOutput>good</rml:oralOutput>
+            <rml:textInput>basics</rml:textInput>
+            <rml:textOutput>medium</rml:textOutput>
+        </rml:languageCapability>
+        <rml:olBiography xml:lang="fr">coordinatrice scientifique du Centre d'études européennes de Sciences Po</rml:olBiography>
+        <rml:olBiography xml:lang="en">scientific coordinator of the Centre d'études européennes at Sciences Po</rml:olBiography>
+        <rml:biography xml:lang="fr">&amp;nbsp;Sophie Jacquot est docteure en science 
+politique. Sa thèse,&amp;nbsp; soutenue en 2006 (IEP de Paris), portait sur 
+«&amp;nbsp;L’action&amp;nbsp;&amp;nbsp; publique communautaire et ses instruments. La politique 
+d’égalité entre les femmes et les hommes à l’épreuve du &lt;em&gt;gender 
+mainstreaming&lt;/em&gt; ».
+&lt;p style=&quot;text-align: justify;&quot;&gt;Spécialiste de sociologie de l’action 
+publique et de l’intégration européenne, ses travaux portent sur les 
+transformations de l’action publique européenne, notamment dans le 
+domaine social et de la prise en compte des discriminations.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Elle coordonne actuellement avec Bruno 
+Palier (CEE Sciences Po) et Paolo Graziano (Université Milano Bocconi) 
+le projet comparatif européen «&amp;nbsp;The Europeanization of 
+‘employment-friendly’ welfare states Reforms&amp;nbsp;» sur les usages de 
+l’Europe dans les réformes de protection sociale de 11 pays européens 
+dans le cadre du réseau d’excellence européen RECWOWE (Reconciling Work 
+and Welfare).&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Sophie Jacquot a enseigné à l’Université
+ Paris 13, à l’IEP de Lille. Elle est actuellement responsable d’un 
+séminaire doctoral sur l’analyse des politiques publiques et enseigne 
+également&amp;nbsp;la politique sociale européenne dans le Master affaires 
+européennes ainsi que les nouvelles formes d’engagement politique en 
+second cycle à Sciences Po.&lt;/p&gt;       </rml:biography>
+        <rml:biography xml:lang="en">Sophie Jacquot holds a PhD in political 
+science. Her doctoral dissertation, defended in 2006 (IEP de Paris), 
+focused on «&amp;nbsp;EU Public Action and Its Instruments. Gender Equality 
+Policy and the Test of Mainstreaming&amp;nbsp;».
+&lt;p style=&quot;text-align: justify;&quot;&gt;She is a specialist of sociology of 
+policy analysis and European integration studies and her research 
+activities are concerned with the transformation of EU public action, 
+especially in the social and anti-discrimination field.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;She coordinates with Bruno Palier 
+(Centre d’études européennes de Sciences Po) and Paolo Graziano 
+(Universita Milano Bocconi) a comparative European project on «&amp;nbsp;The 
+Europeanization of ‘Employment Friendly’ Welfare States Reforms&amp;nbsp;» on the
+ usages of Europe in social policy reforms in 11 countries. This project
+ is funded by the European network of excellence RECWOWE (Reconciling 
+Work and Welfare).&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Sophie Jacquot has taught at University 
+Paris 13 and IEP de Lille. She is currently responsible for a doctoral 
+seminar on policy analysis and teaches European social policy in the 
+European affairs Master and the transformation of political mobilisation
+ at Sciences Po.&lt;/p&gt;      </rml:biography>
+        <rml:academicTitle type="academic" xml:lang="fr">Docteure en science politique</rml:academicTitle>
+        <rml:responsability xml:lang="fr">Responsable éditoriale des Cahiers européens de Sciences Po</rml:responsability>
+        <rml:responsability xml:lang="fr">Membre du comité de rédaction de la revue Politique européenne</rml:responsability>
+        <rml:degree>
+            <rml:level>phd</rml:level>
+            <rml:identifier type="hdl">2441/9labe9r4se65i789685q021gm</rml:identifier>
+            <rml:name>Sciences Po</rml:name>
+            <rml:date>2006-12</rml:date>
+            <rml:description xml:lang="fr">Doctorat de science politique – mention « très honorable » avec les félicitations du jury à l’unanimité, « L’action publique communautaire et ses instruments. La politique d’égalité entre les femmes et les hommes à l’épreuve du gender mainstreaming », sous la direction de Pierre Muller</rml:description>
+        </rml:degree>
+        <rml:degree>
+            <rml:level>dea</rml:level>
+            <rml:identifier type="hdl">2441/9labe9r4se65i789685q021gm</rml:identifier>
+            <rml:name>Sciences Po</rml:name>
+            <rml:date>2001-09</rml:date>
+            <rml:description xml:lang="fr">DEA de sociologie politique et politiques publiques – mention « bien », « L’évolution d’un groupe d’intérêt public communautaire : le Lobby Européen des Femmes depuis sa création », sous la direction d’Elisabeth Dupoirier et de Pierre Muller</rml:description>
+        </rml:degree>
+        <rml:degree>
+            <rml:level>diploma</rml:level>
+            <rml:identifier type="hdl">2441/9labe9r4se65i789685q021gm</rml:identifier>
+            <rml:name>Sciences Po</rml:name>
+            <rml:date>2000-06</rml:date>
+            <rml:description xml:lang="fr">Diplôme de l’IEP de Paris – mention « Lauréat avec les félicitations du jury »
+Section Internationale, filière Europe communautaire            </rml:description>
+        </rml:degree>
+        <rml:degree>
+            <rml:level>licence</rml:level>
+            <rml:identifier type="hdl">2441/d7a7evb2ctdg4i89gesag4t33</rml:identifier>
+            <rml:name>université Lumière Lyon 2</rml:name>
+            <rml:date>1998-06</rml:date>
+            <rml:description xml:lang="fr">Licence d’anglais – mention « bien »</rml:description>
+        </rml:degree>
+        <rml:teaching>
+            <rml:level>doctorat</rml:level>
+            <rml:title>Responsable du séminaire doctoral &quot;Analyser les politiques publiques aujourd'hui : regards croisés&quot; (avec Laurie Boussaguet, Patrick Hassenteufel et Bruno Palier)</rml:title>
+            <rml:identifier type="hdl">2441/9labe9r4se65i789685q021gm</rml:identifier>
+            <rml:name>Sciences Po</rml:name>
+            <rml:dateBegin>2009</rml:dateBegin>
+        </rml:teaching>
+        <rml:teaching>
+            <rml:level>master</rml:level>
+            <rml:title>Chargée de cours, « Politique sociale européenne et européanisation des politiques nationales », Master affaires européennes</rml:title>
+            <rml:identifier type="hdl">2441/9labe9r4se65i789685q021gm</rml:identifier>
+            <rml:name>Sciences Po</rml:name>
+            <rml:dateBegin>2009</rml:dateBegin>
+        </rml:teaching>
+        <rml:teaching>
+            <rml:level>master</rml:level>
+            <rml:title>Chargée de cours, « Méthodologie du mémoire de recherche », Euromaster / Transatlantic Master</rml:title>
+            <rml:identifier type="hdl">2441/9labe9r4se65i789685q021gm</rml:identifier>
+            <rml:name>Sciences Po</rml:name>
+            <rml:dateBegin>2010</rml:dateBegin>
+        </rml:teaching>
+        <rml:researchCoverage type="keyword" xml:lang="fr">Sociologie de l’action publique, Union européenne, genre, politiques anti-discriminatoires, politique sociale, européanisation des politiques nationales</rml:researchCoverage>
+        <rml:affiliation preferred="true">
+            <rml:relationType authority="rmlaffroleperson2orgunit">academic-staff</rml:relationType>
+            <rml:dateBegin encoding="iso8601">2008</rml:dateBegin>
+            <rml:identifier type="hdl">2441/9labe9r4se65i789685q384oh</rml:identifier>
+            <rml:name>Centre d'études européennes de Sciences Po</rml:name>
+        </rml:affiliation>
+        <rml:image>http://spire.sciences-po.fr/hdl:/2441/9labe9r4se65i789685q591o2/resources/sophie-jacquot.gif</rml:image>
+    </rml:person>
+</rml:researcherml>

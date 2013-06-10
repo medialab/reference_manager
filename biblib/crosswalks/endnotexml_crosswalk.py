@@ -182,7 +182,7 @@ def endnotexml_record_to_metajson(record, source):
     note = extract_text(record, "./notes/style")
     reviewed_item = extract_text(record, "./reviewed-item/style")
     rec_type_description = extract_text(record, "./work-type/style")
-    remote_url = extract_text(record, "./urls/related-urls/url/style")
+    url = extract_text(record, "./urls/related-urls/url/style")
     custom1 = extract_text(record, "./custom1/style")
     custom2 = extract_text(record, "./custom2/style")
     custom3 = extract_text(record, "./custom3/style")
@@ -414,9 +414,9 @@ def endnotexml_record_to_metajson(record, source):
     document.set_key_if_not_none("part_volume", part_volume)
 
     # resources[0]
-    if remote_url is not None:
+    if url is not None:
         resource = Resource()
-        resource.set_key_if_not_none("remote_url", remote_url)
+        resource.set_key_if_not_none("url", url)
         if endnote_type == TYPE_WEB_PAGE:
             resource.set_key_if_not_none("date_last_accessed", part_number)
         else:
