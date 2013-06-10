@@ -76,7 +76,7 @@ def retrieve_google_types(app):
 def get_google_types_worksheets(spreadsheet):
     worksheets = spreadsheet.list_worksheets()
     for worksheet in worksheets:
-        if worksheet[1].startswith("type."):
+        if worksheet[1].startswith("type.") and not worksheet[1].startswith("type.document_type"):
         #if worksheet[1].startswith("type.") and not worksheet[1].startswith("type.language"):
         #if worksheet[1].startswith("type.language"):
             yield worksheet
@@ -165,4 +165,4 @@ def dump_metajson(metajson):
 console.setup_console()
 config = load_config()
 metajson_title_non_sort = load_metajson_title_non_sort()
-retrieve_google_types("spire")
+#retrieve_google_types("spire")
