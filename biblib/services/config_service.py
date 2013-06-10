@@ -9,6 +9,7 @@ from gspreadsheet import GSpreadsheet
 from bson import json_util
 
 from biblib.metajson import Type
+from biblib.util import console
 
 locations = [
     os.path.abspath(os.path.join(os.getcwd(), 'biblib')),
@@ -56,12 +57,12 @@ def load_metajson_title_non_sort():
 
 
 def retrieve_google_types(app):
-    spreadsheet = GSpreadsheet(key=config["conf_key"], email=config["email"], password=config["password"])
+    spreadsheet = GSpreadsheet(key=config["google"]["conf_key"], email=config["google"]["email"], password=config["google"]["password"])
     keys = {}
     type_worksheets = get_google_types_worksheets(spreadsheet)
     for ws_id, ws_name in type_worksheets:
         print 'worksheet code: {}, name: {}'.format(ws_id, ws_name)
-        worksheet = GSpreadsheet(worksheet=ws_id, key=config["conf_key"], email=config["email"], password=config["password"])
+        worksheet = GSpreadsheet(worksheet=ws_id, key=config["google"]["conf_key"], email=config["google"]["email"], password=config["google"]["password"])
         type_bundle = google_worksheet_to_type(ws_name, worksheet, app, keys)
         type_bundle_id = type_bundle["type_id"]
         type_bundle_dump = dump_metajson(type_bundle)
@@ -75,7 +76,9 @@ def retrieve_google_types(app):
 def get_google_types_worksheets(spreadsheet):
     worksheets = spreadsheet.list_worksheets()
     for worksheet in worksheets:
-        if worksheet[1].startswith("type.") and not worksheet[1].startswith("type.language"):
+        if worksheet[1].startswith("type."):
+        #if worksheet[1].startswith("type.") and not worksheet[1].startswith("type.language"):
+        #if worksheet[1].startswith("type.language"):
             yield worksheet
 
 
@@ -123,20 +126,29 @@ def google_worksheet_to_type(ws_name, worksheet, app, keys):
             # -> preferred
             labels = {}
             type_id = None
+
+            # type.code -> type_id
+            if type_id_col in row and row[type_id_col]:
+                type_id = row[type_id_col]
+            if type_id:
+                type_row["type_id"] = type_id
+            else:
+                continue
+
+            # default -> default
+            if "default" in row and row["default"] == "1":
+                type_row["default"] = True
+
+            # major -> major
+            if "major" in row and row["major"] == "1":
+                type_row["major"] = True
+
             # label.en -> labels['en']
             if "label.en" in row and row["label.en"]:
                 labels['en'] = row["label.en"]
             # label.fr -> labels['fr']
             if "label.fr" in row and row["label.fr"]:
                 labels['fr'] = row["label.fr"]
-            # type.code -> labels['type_id']
-            if type_id_col in row and row[type_id_col]:
-                type_id = row[type_id_col]
-
-            if type_id:
-                type_row["type_id"] = type_id
-            else:
-                continue
 
             if labels:
                 type_row["labels"] = labels
@@ -150,8 +162,7 @@ def dump_metajson(metajson):
         return json_util.dumps(metajson, ensure_ascii=False, indent=4, encoding="utf-8", sort_keys=True)
 
 
+console.setup_console()
 config = load_config()
 metajson_title_non_sort = load_metajson_title_non_sort()
-
-#console.setup_console()
-#retrieve_google_types("spire")
+retrieve_google_types("spire")
