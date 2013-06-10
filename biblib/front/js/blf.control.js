@@ -155,6 +155,13 @@ $(document).ready(function() {
             field: e.data.field
           });
         }
+      },
+      {
+        triggers: 'validateEntry',
+        description: 'What happens when an entry is validated from the form.',
+        method: function(e) {
+          console.log(e.data.entry);
+        }
       }
     ],
     services: [

@@ -131,8 +131,8 @@
       _components.some(function(comp) {
         var isValid =
           comp.validate ?
-            !comp.validate() :
-            !_defaultMethods.validate.call(comp);
+            comp.validate() :
+            _defaultMethods.validate.call(comp);
 
         if (!isValid)
           invalid++;
