@@ -32,6 +32,7 @@
     fieldset {
       border: none;
       padding: 1px;
+      white-space: nowrap;
     }
 
     input {
@@ -54,7 +55,12 @@
               box-sizing: border-box;
     }
 
-    /* 6 column grid */
+    .container {
+      width: 550px;
+      margin: auto;
+    }
+
+    /* 6 column grid - 340px width */
     .col-1 {
       width: 55px;
     }
@@ -84,12 +90,12 @@
 </head>
 <body>
   <div id="layout">
-    <div id="nav">
+    <div id="nav" class="container">
       <button data-action="create">Add entry</button>
       <button data-action="search">Search entry</button>
     </div>
     <hr />
-    <div id="panels">
+    <div id="panels" class="container">
       <div data-panel="create" hidden>
         <div class="create-form">
           <!-- The form has to be filled with components depending of the
