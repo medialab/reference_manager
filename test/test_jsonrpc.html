@@ -86,6 +86,17 @@
                         }
                     });
                 });
+                $("input#search_button").click(function() {
+                    $.jsonRPC.request("search", {
+                        params : [$("input#search_input").val()],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("p#search_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
                 $("input#save_button").click(function() {
                     $.jsonRPC.request("save", {
                         params : [$("textarea#save_input").val()],
@@ -166,6 +177,17 @@
         </p>
         <p>Results :</p>
         <p id="uifields_result"></p>
+
+        <h2>Method search</h2>
+        <p><label for="search_input">MongoDB query</label> : 
+            <input type="text" name="types_input" id="search_input">
+            example : {"rec_type": "Book"}
+        </p>
+        <p>
+            <input name="search_button" id="search_button" value="Send search request" type="button" />
+        </p>
+        <p>Results :</p>
+        <p id="search_result"></p>
 
         <h2>Method save</h2>
         <p><label for="save_input">JSON to save</label> : 
