@@ -117,8 +117,8 @@ class References_repository(jsonrpc.JSONRPC):
                 - mongoquery: search query must respect the mongoquery syntax
             return the asked data (in JSON)
         """
-        json_query = json.loads(query)
-        return self.format_bson(repository_service.search_documents(None, json_query))
+        #json_query = json.loads(query)
+        return self.format_bson(repository_service.search_documents(None, query))
 
     def jsonrpc_types(self, type_id, language):
         """ search for one or more types from the repository

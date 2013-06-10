@@ -88,7 +88,7 @@
                 });
                 $("input#search_button").click(function() {
                     $.jsonRPC.request("search", {
-                        params : [$("input#search_input").val()],
+                        params : [JSON.parse($("input#search_input").val())],
                         success : function(data) {
                             $("<p />").text(data.result).appendTo($("p#search_result"));
                         },
@@ -112,7 +112,7 @@
         </script>
     </head>
     <body>
-        <h1>BibLib - simple jsonrpc test</h1>
+        <h1>BibLib - simple JSON-RPC test</h1>
         <h2>Method echo</h2>
         <p><label for="echo_input">Value</label> : 
             <input type="text" name="echo_input" id="echo_input">
