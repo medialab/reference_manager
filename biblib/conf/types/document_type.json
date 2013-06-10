@@ -79,6 +79,41 @@
                                 "fr": "Livre"
                             },
                             "type_id": "Book"
+                        },
+                        {
+                            "labels": {
+                                "en": "Edited book",
+                                "fr": "Direction d'ouvrage"
+                            },
+                            "type_id": "EditedBook"
+                        },
+                        {
+                            "labels": {
+                                "en": "Conference proceedings",
+                                "fr": "Actes de colloque"
+                            },
+                            "type_id": "ConferenceProceedings"
+                        },
+                        {
+                            "labels": {
+                                "en": "Dictionary",
+                                "fr": "Dictionnaire"
+                            },
+                            "type_id": "Dictionary"
+                        },
+                        {
+                            "labels": {
+                                "en": "Encyclopedia",
+                                "fr": "Encyclop\u00e9die"
+                            },
+                            "type_id": "Encyclopedia"
+                        },
+                        {
+                            "labels": {
+                                "en": "Multi volume book",
+                                "fr": "Ouvrage en plusieurs volumes"
+                            },
+                            "type_id": "MultiVolumeBook"
                         }
                     ],
                     "labels": {
@@ -231,7 +266,11 @@
                                     "type_id": "ConferenceContribution"
                                 },
                                 {
-                                    "type_id": "ConferenceItem"
+                                    "labels": {
+                                        "en": "Conference proceedings",
+                                        "fr": "Actes de colloque"
+                                    },
+                                    "type_id": "ConferenceProceedings"
                                 },
                                 {
                                     "labels": {
@@ -729,55 +768,6 @@
                 "fr": "Video"
             },
             "type_id": "VideoBundle"
-        },
-        {
-            "labels": {
-                "en": "Conference proceedings",
-                "fr": "Actes de colloque"
-            },
-            "type_id": "ConferenceProceedings"
-        },
-        {
-            "labels": {
-                "en": "Dictionary",
-                "fr": "Dictionnaire"
-            },
-            "type_id": "Dictionary"
-        },
-        {
-            "labels": {
-                "en": "Edited book",
-                "fr": "Direction d'ouvrage"
-            },
-            "type_id": "EditedBook"
-        },
-        {
-            "labels": {
-                "en": "Encyclopedia article",
-                "fr": "Encyclop\u00e9die"
-            },
-            "type_id": "Encyclopedia"
-        },
-        {
-            "labels": {
-                "en": "Multi volume book",
-                "fr": "Ouvrage en plusieurs volumes"
-            },
-            "type_id": "MultiVolumeBook"
-        },
-        {
-            "labels": {
-                "en": "Collection",
-                "fr": "Collection"
-            },
-            "type_id": "Collection"
-        },
-        {
-            "labels": {
-                "en": "Series",
-                "fr": "Collection, Series"
-            },
-            "type_id": "Series"
         }
     ],
     "rec_class": "Type",
