@@ -98,7 +98,7 @@
      * @return {string} Returns true if the content id valid, and false else.
      */
     function _validate() {
-      // TODO: Check empty lines.
+      // TODO: Check empty lines and required.
       return true;
     }
 
@@ -293,7 +293,7 @@
      * @return {string} Returns true if the content id valid, and false else.
      */
     function _validate() {
-      // TODO: Check empty lines.
+      // TODO: Check empty lines and required.
       return true;
     }
 

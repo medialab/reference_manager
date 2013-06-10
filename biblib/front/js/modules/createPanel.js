@@ -12,7 +12,8 @@
         _field,
         _modules = [],
         _components = [],
-        _fieldsIndex = {};
+        _fieldsIndex = {},
+        _defaultMethods = {};
 
     // Bind DOM events:
     $('.select-field', _html).click(function(e) {
@@ -110,8 +111,9 @@
       }));
 
       $('<button class="validate-button">Validate</button>').click(function() {
+        // TODO: Deal with both case.
         if (_components.some(function(comp) {
-          return comp.validate ? !comp.validate() : !default_validate.call(comp);
+          return comp.validate ? !comp.validate() : !_defaultMethods.validate.call(comp);
         }))
           console.log('not valid');
         else
@@ -124,6 +126,11 @@
       $('.select-field', _html).attr('hidden', null);
     }
 
+    /**
+     * This method returns the entry entered by the user in the form, according
+     * to the scheme described by the "_field" object.
+     * @return {object} The entry.
+     */
     function getData() {
       var i,
           l,
@@ -135,7 +142,7 @@
         component = _components[i];
         value = component.getData ?
           component.getData() :
-          default_getData.call(component);
+          _defaultMethods.getData.call(component);
 
         if (value !== undefined)
         data[component.property] = value;
@@ -145,10 +152,36 @@
     }
 
     /**
+     * This method fills the inputs in the form to represent an entry.
+     */
+    function fill(entry) {
+      var i,
+          l,
+          component;
+
+      for (i = 0, l = _components.length; i < l; i++) {
+        component = _components[i];
+
+        if (component.fill)
+          component.fill(entry[component.property], entry);
+        else
+          _defaultMethods.fill.call(
+            component,
+            entry[component.property],
+            entry
+          );
+      }
+    }
+
+    /**
+     * DEFAULT INPUT METHODS:
+     * **********************
+     */
+    /**
      * The default "getData" method.
      * @return {*} The data to insert in the new entry.
      */
-    function default_getData() {
+    _defaultMethods.getData = function() {
       var value = $('input', this.dom).val();
 
       // Check empty strings:
@@ -159,22 +192,33 @@
     }
 
     /**
+     * The default "fill" method.
+     */
+    _defaultMethods.fill = function() {
+      $('input', this.dom).val(value);
+    }
+
+    /**
      * The default "validate" method.
      * @return {boolean} "true" if valid, "false" else.
      */
-    function default_validate() {
+    _defaultMethods.validate = function() {
       var isValid;
 
       if (this.propertyObject.required)
         isValid = (this.getData ?
           this.getData() :
-          default_getData.call(this)) !== undefined;
+          _defaultMethods.getData.call(this)) !== undefined;
       else
         isValid = true;
 
       return isValid;
     }
 
+    /**
+     * DOMINO BINDINGS:
+     * ****************
+     */
     // Listen to the controller:
     this.triggers.events.modeUpdated = function(d) {
       if (d.get('mode') === 'create')
