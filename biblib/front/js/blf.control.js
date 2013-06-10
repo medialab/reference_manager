@@ -121,6 +121,14 @@ $(document).ready(function() {
         dispatch: 'creatorRolesUpdated',
         description: 'The creator roles list.'
       },
+      {
+        value: [],
+        id: 'resultsList',
+        type: 'array',
+        triggers: 'updateResultsList',
+        dispatch: 'resultsListUpdated',
+        description: 'The results list.'
+      },
 
       // INTERFACE related properties
       {
@@ -166,10 +174,28 @@ $(document).ready(function() {
             field: 'Book'
           });
         }
+      },
+      {
+        triggers: 'search',
+        description: 'Search for entries matching the specified query.',
+        method: function(e) {
+          this.request('search', {
+            query: e.data.query
+          });
+        }
+      },
+      {
+        triggers: ['resultsListUpdated'],
+        description: 'Updates the mode to "list" when results are loaded.',
+        method: function(e) {
+          this.dispatchEvent('updateMode', {
+            mode: 'list'
+          });
+        }
       }
     ],
     services: [
-      // Test services (on static JSONS)
+      // Test services (on static JSONS):
       {
         id: 'loadField',
         description: 'Loads the template of a specified field.',
@@ -183,12 +209,6 @@ $(document).ready(function() {
         }
       },
       {
-        id: 'loadFieldsTree',
-        url: 'assets/templates-tree_sample.json',
-        setter: 'fieldsTree',
-        description: 'Loads the dependance tree of the fields.'
-      },
-      {
         id: 'loadCreatorRoles',
         url: 'assets/creator-roles.json',
         setter: 'creatorRoles',
@@ -196,7 +216,7 @@ $(document).ready(function() {
         description: 'Loads the list of the available creator roles.'
       },
 
-      // RPC services
+      // RPC services:
       {
         id: 'echo',
         url: 'http://localhost\:8080',
@@ -231,14 +251,40 @@ $(document).ready(function() {
           return JSON.stringify({
             id: 1,
             jsonrpc: '2.0',
-            method: 'echo',
+            method: 'search',
             params: [
-              input.query
+              //input.query
+              { rec_type: 'Book'} // /!\ HARD-CODED
             ]
           });
         },
         success: function(data) {
-          this.log('SEARCH FROM RPC', data.result);
+          var results = JSON.parse(data.result);
+          this.log('SEARCH FROM RPC', results);
+
+          this.update('resultsList', results);
+        }
+      },
+      {
+        id: 'type',
+        url: 'http://localhost\:8080',
+        description: 'Loads the dependance tree of the fields.',
+        type: mlab.rpc.type,
+        error: mlab.rpc.error,
+        expect: mlab.rpc.expect,
+        contentType: mlab.rpc.contentType,
+        data: JSON.stringify({
+          id: 1,
+          jsonrpc: '2.0',
+          method: 'type',
+          params: [
+            'document_type',
+            'fr'
+          ]
+        }),
+        success: function(data) {
+          var results = JSON.parse(data.result);
+          this.update('fieldsTree', results);
         }
       }
     ]
@@ -248,5 +294,5 @@ $(document).ready(function() {
   blf.layout = blf.control.addModule(blf.modules.layout);
 
   // Data initialization:
-  blf.control.request(['loadFieldsTree', 'loadCreatorRoles']);
+  blf.control.request(['type', 'loadCreatorRoles']);
 });

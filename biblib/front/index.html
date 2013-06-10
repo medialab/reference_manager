@@ -13,9 +13,10 @@
   <!-- BibLib front -->
   <script src="js/blf.control.js"></script>
   <script src="js/blf.layout.js"></script>
+  <script src="js/modules/customInputs.js"></script>
   <script src="js/modules/createPanel.js"></script>
   <script src="js/modules/searchPanel.js"></script>
-  <script src="js/modules/customInputs.js"></script>
+  <script src="js/modules/listPanel.js"></script>
 
   <!-- BibLib style -->
   <style>
@@ -54,6 +55,12 @@
       -webkit-box-sizing: border-box;
          -moz-box-sizing: border-box;
               box-sizing: border-box;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     .container {
@@ -121,6 +128,9 @@
             </fieldset>
           </div>
         </div>
+      </div>
+      <div data-panel="list" hidden>
+        <ul class="entries-list"></ul>
       </div>
     </div>
   </div>

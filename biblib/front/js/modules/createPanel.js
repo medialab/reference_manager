@@ -268,12 +268,12 @@
       // Generate the HTML to select which field to use:
       dom = (function recursiveParse(node, depth) {
         var header =
-          (node.name && !node.bundle) ?
-            '<button data-field="' + node.name + '">' +
-              node.name +
+          (node.label && !node.bundle) ?
+            '<button data-field="' + node.type_id + '">' +
+              node.label +
             '</button>' :
-            node.name ?
-              '<span>' + node.name + '</span>' :
+            node.label ?
+              '<span>' + node.label + '</span>' :
               '';
 
         return header +
