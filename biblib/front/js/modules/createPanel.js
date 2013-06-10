@@ -12,7 +12,7 @@
         _field,
         _modules = [],
         _components = [],
-        _fieldsIndex = {},
+        _fields = {},
         _defaultMethods = {};
 
     // Bind DOM events:
@@ -23,8 +23,8 @@
       if (dom.is('button[data-field]')) {
         var field = dom.attr('data-field');
 
-        if (_fieldsIndex[field]) {
-          _field = _fieldsIndex[field]
+        if (_fields[field]) {
+          _field = _fields[field]
           generateForm();
         } else {
           _waitingField = field;
@@ -259,10 +259,10 @@
     };
 
     this.triggers.events.fieldsUpdated = function(d) {
-      _fieldsIndex = mlab.array.index(d.get('fields'), 'rec_type');
+      _fields = d.get('fields');
 
-      if (_waitingField && _fieldsIndex[_waitingField]) {
-        _field = _fieldsIndex[_waitingField];
+      if (_waitingField && _fields[_waitingField]) {
+        _field = _fields[_waitingField];
         generateForm();
         _waitingField = null;
       }

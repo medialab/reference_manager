@@ -75,6 +75,23 @@ $(document).ready(function() {
       }
     });
 
+  if (!domino.struct.isValid('blf.FieldsIndex'))
+    domino.struct.add({
+      id: 'blf.FieldsIndex',
+      struct: function(o) {
+        var k, test;
+
+        if (!domino.struct.check('object', o))
+          return false;
+
+        for (k in o)
+          if (!domino.struct.check('blf.Field', o[k]))
+            return false;
+
+        return true;
+      }
+    });
+
   /**
    * Controler:
    */
@@ -83,9 +100,9 @@ $(document).ready(function() {
     properties: [
       // DATA related properties
       {
-        value: [],
+        value: {},
         id: 'fields',
-        type: ['blf.Field'],
+        type: 'blf.FieldsIndex',
         dispatch: 'fieldsUpdated',
         description: 'The field templates.'
       },
@@ -108,9 +125,8 @@ $(document).ready(function() {
       {
         value: 'home',
         id: 'mode',
+        force: true,
         type: 'string',
-        triggers: 'updateMode',
-        dispatch: 'modeUpdated',
         description: 'The layout mode (home, search, create).'
       }
     ],
@@ -121,6 +137,14 @@ $(document).ready(function() {
         triggers: ['log', 'warn', 'die'],
         method: function(e) {
           this[e.type]((e.data || {}).message);
+        }
+      },
+      {
+        triggers: 'updateMode',
+        description: 'Update the mode. Hack necessary because of domino.js issue #27.',
+        method: function(e) {
+          this.update('mode', e.data.mode);
+          this.dispatchEvent('modeUpdated');
         }
       },
       {
@@ -141,25 +165,9 @@ $(document).ready(function() {
           return 'templates/' + input.field + '.json';
         },
         success: function(data) {
-          var k,
-              arr = this.get('fields');
-
-          // If the "rec_type" already exists, it overrides the old one:
-          if (this.get('fields').some(function(o) {
-            return o.rec_type === data.rec_type;
-          }))
-            arr = arr.map(function(o) {
-              return o.rec_type === data.rec_type ?
-                data :
-                o;
-            });
-
-          // If not, we just push it in our existing fields array:
-          else
-            arr.push(data);
-
-          // Finally, we update:
-          this.update('fields', arr);
+          var fields = this.get('fields');
+          fields[data.rec_type] = data;
+          this.update('fields', fields)
         }
       },
       {
