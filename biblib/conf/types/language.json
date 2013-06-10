@@ -1,0 +1,3409 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "Arabic", 
+                "fr": "arabe"
+            }, 
+            "major": true, 
+            "type_id": "ar"
+        }, 
+        {
+            "labels": {
+                "en": "German", 
+                "fr": "allemand"
+            }, 
+            "major": true, 
+            "type_id": "de"
+        }, 
+        {
+            "labels": {
+                "en": "Greek, Modern (1453-)", 
+                "fr": "grec moderne (après 1453)"
+            }, 
+            "major": true, 
+            "type_id": "el"
+        }, 
+        {
+            "default": true, 
+            "labels": {
+                "en": "English", 
+                "fr": "anglais"
+            }, 
+            "major": true, 
+            "type_id": "en"
+        }, 
+        {
+            "labels": {
+                "en": "Spanish; Castilian", 
+                "fr": "espagnol; castillan"
+            }, 
+            "major": true, 
+            "type_id": "es"
+        }, 
+        {
+            "labels": {
+                "en": "Persian", 
+                "fr": "persan"
+            }, 
+            "major": true, 
+            "type_id": "fa"
+        }, 
+        {
+            "labels": {
+                "en": "French", 
+                "fr": "français"
+            }, 
+            "major": true, 
+            "type_id": "fr"
+        }, 
+        {
+            "labels": {
+                "en": "Hebrew", 
+                "fr": "hébreu"
+            }, 
+            "major": true, 
+            "type_id": "he"
+        }, 
+        {
+            "labels": {
+                "en": "Hungarian", 
+                "fr": "hongrois"
+            }, 
+            "major": true, 
+            "type_id": "hu"
+        }, 
+        {
+            "labels": {
+                "en": "Italian", 
+                "fr": "italien"
+            }, 
+            "major": true, 
+            "type_id": "it"
+        }, 
+        {
+            "labels": {
+                "en": "Japanese", 
+                "fr": "japonais"
+            }, 
+            "major": true, 
+            "type_id": "ja"
+        }, 
+        {
+            "labels": {
+                "en": "Korean", 
+                "fr": "coréen"
+            }, 
+            "major": true, 
+            "type_id": "ko"
+        }, 
+        {
+            "labels": {
+                "en": "Dutch; Flemish", 
+                "fr": "néerlandais; flamand"
+            }, 
+            "major": true, 
+            "type_id": "nl"
+        }, 
+        {
+            "labels": {
+                "en": "Polish", 
+                "fr": "polonais"
+            }, 
+            "major": true, 
+            "type_id": "pl"
+        }, 
+        {
+            "labels": {
+                "en": "Portuguese", 
+                "fr": "portugais"
+            }, 
+            "major": true, 
+            "type_id": "pt"
+        }, 
+        {
+            "labels": {
+                "en": "Romanian", 
+                "fr": "roumain"
+            }, 
+            "major": true, 
+            "type_id": "ro"
+        }, 
+        {
+            "labels": {
+                "en": "Russian", 
+                "fr": "russe"
+            }, 
+            "major": true, 
+            "type_id": "ru"
+        }, 
+        {
+            "labels": {
+                "en": "Swedish", 
+                "fr": "suédois"
+            }, 
+            "major": true, 
+            "type_id": "sv"
+        }, 
+        {
+            "labels": {
+                "en": "Turkish", 
+                "fr": "turc"
+            }, 
+            "major": true, 
+            "type_id": "tr"
+        }, 
+        {
+            "labels": {
+                "en": "Chinese", 
+                "fr": "chinois"
+            }, 
+            "major": true, 
+            "type_id": "zh"
+        }, 
+        {
+            "labels": {
+                "en": "Afar", 
+                "fr": "afar"
+            }, 
+            "type_id": "aa"
+        }, 
+        {
+            "labels": {
+                "en": "Abkhazian", 
+                "fr": "abkhaze"
+            }, 
+            "type_id": "ab"
+        }, 
+        {
+            "labels": {
+                "en": "Achinese", 
+                "fr": "aceh"
+            }, 
+            "type_id": "ace"
+        }, 
+        {
+            "labels": {
+                "en": "Acoli", 
+                "fr": "acoli"
+            }, 
+            "type_id": "ach"
+        }, 
+        {
+            "labels": {
+                "en": "Adangme", 
+                "fr": "adangme"
+            }, 
+            "type_id": "ada"
+        }, 
+        {
+            "labels": {
+                "en": "Adyghe; Adygei", 
+                "fr": "adyghé"
+            }, 
+            "type_id": "ady"
+        }, 
+        {
+            "labels": {
+                "en": "Avestan", 
+                "fr": "avestique"
+            }, 
+            "type_id": "ae"
+        }, 
+        {
+            "labels": {
+                "en": "Afrikaans", 
+                "fr": "afrikaans"
+            }, 
+            "type_id": "af"
+        }, 
+        {
+            "labels": {
+                "en": "Afro-Asiatic (Other)", 
+                "fr": "afro-asiatiques, autres langues"
+            }, 
+            "type_id": "afa"
+        }, 
+        {
+            "labels": {
+                "en": "Afrihili", 
+                "fr": "afrihili"
+            }, 
+            "type_id": "afh"
+        }, 
+        {
+            "labels": {
+                "en": "Ainu", 
+                "fr": "aïnou"
+            }, 
+            "type_id": "ain"
+        }, 
+        {
+            "labels": {
+                "en": "Akan", 
+                "fr": "akan"
+            }, 
+            "type_id": "ak"
+        }, 
+        {
+            "labels": {
+                "en": "Akkadian", 
+                "fr": "akkadien"
+            }, 
+            "type_id": "akk"
+        }, 
+        {
+            "labels": {
+                "en": "Aleut", 
+                "fr": "aléoute"
+            }, 
+            "type_id": "ale"
+        }, 
+        {
+            "labels": {
+                "en": "Algonquian languages", 
+                "fr": "algonquines, langues"
+            }, 
+            "type_id": "alg"
+        }, 
+        {
+            "labels": {
+                "en": "Southern Altai", 
+                "fr": "altai du Sud"
+            }, 
+            "type_id": "alt"
+        }, 
+        {
+            "labels": {
+                "en": "Amharic", 
+                "fr": "amharique"
+            }, 
+            "type_id": "am"
+        }, 
+        {
+            "labels": {
+                "en": "Aragonese", 
+                "fr": "aragonais"
+            }, 
+            "type_id": "an"
+        }, 
+        {
+            "labels": {
+                "en": "English, Old (ca.450-1100)", 
+                "fr": "anglo-saxon (ca.450-1100)"
+            }, 
+            "type_id": "ang"
+        }, 
+        {
+            "labels": {
+                "en": "Angika", 
+                "fr": "angika"
+            }, 
+            "type_id": "anp"
+        }, 
+        {
+            "labels": {
+                "en": "Apache languages", 
+                "fr": "apache"
+            }, 
+            "type_id": "apa"
+        }, 
+        {
+            "labels": {
+                "en": "Aramaic", 
+                "fr": "araméen"
+            }, 
+            "type_id": "arc"
+        }, 
+        {
+            "labels": {
+                "en": "Mapudungun; Mapuche", 
+                "fr": "mapudungun; mapuche; mapuce"
+            }, 
+            "type_id": "arn"
+        }, 
+        {
+            "labels": {
+                "en": "Arapaho", 
+                "fr": "arapaho"
+            }, 
+            "type_id": "arp"
+        }, 
+        {
+            "labels": {
+                "en": "Artificial (Other)", 
+                "fr": "artificielles, autres langues"
+            }, 
+            "type_id": "art"
+        }, 
+        {
+            "labels": {
+                "en": "Arawak", 
+                "fr": "arawak"
+            }, 
+            "type_id": "arw"
+        }, 
+        {
+            "labels": {
+                "en": "Assamese", 
+                "fr": "assamais"
+            }, 
+            "type_id": "as"
+        }, 
+        {
+            "labels": {
+                "en": "Asturian; Bable", 
+                "fr": "asturien; bable"
+            }, 
+            "type_id": "ast"
+        }, 
+        {
+            "labels": {
+                "en": "Athapascan languages", 
+                "fr": "athapascanes, langues"
+            }, 
+            "type_id": "ath"
+        }, 
+        {
+            "labels": {
+                "en": "Australian languages", 
+                "fr": "australiennes, langues"
+            }, 
+            "type_id": "aus"
+        }, 
+        {
+            "labels": {
+                "en": "Avaric", 
+                "fr": "avar"
+            }, 
+            "type_id": "av"
+        }, 
+        {
+            "labels": {
+                "en": "Awadhi", 
+                "fr": "awadhi"
+            }, 
+            "type_id": "awa"
+        }, 
+        {
+            "labels": {
+                "en": "Aymara", 
+                "fr": "aymara"
+            }, 
+            "type_id": "ay"
+        }, 
+        {
+            "labels": {
+                "en": "Azerbaijani", 
+                "fr": "azéri"
+            }, 
+            "type_id": "az"
+        }, 
+        {
+            "labels": {
+                "en": "Bashkir", 
+                "fr": "bachkir"
+            }, 
+            "type_id": "ba"
+        }, 
+        {
+            "labels": {
+                "en": "Banda languages", 
+                "fr": "banda, langues"
+            }, 
+            "type_id": "bad"
+        }, 
+        {
+            "labels": {
+                "en": "Bamileke languages", 
+                "fr": "bamilékés, langues"
+            }, 
+            "type_id": "bai"
+        }, 
+        {
+            "labels": {
+                "en": "Baluchi", 
+                "fr": "baloutchi"
+            }, 
+            "type_id": "bal"
+        }, 
+        {
+            "labels": {
+                "en": "Balinese", 
+                "fr": "balinais"
+            }, 
+            "type_id": "ban"
+        }, 
+        {
+            "labels": {
+                "en": "Basa", 
+                "fr": "basa"
+            }, 
+            "type_id": "bas"
+        }, 
+        {
+            "labels": {
+                "en": "Baltic (Other)", 
+                "fr": "baltiques, autres langues"
+            }, 
+            "type_id": "bat"
+        }, 
+        {
+            "labels": {
+                "en": "Belarusian", 
+                "fr": "biélorusse"
+            }, 
+            "type_id": "be"
+        }, 
+        {
+            "labels": {
+                "en": "Beja", 
+                "fr": "bedja"
+            }, 
+            "type_id": "bej"
+        }, 
+        {
+            "labels": {
+                "en": "Bemba", 
+                "fr": "bemba"
+            }, 
+            "type_id": "bem"
+        }, 
+        {
+            "labels": {
+                "en": "Berber (Other)", 
+                "fr": "berbères, autres langues"
+            }, 
+            "type_id": "ber"
+        }, 
+        {
+            "labels": {
+                "en": "Bulgarian", 
+                "fr": "bulgare"
+            }, 
+            "type_id": "bg"
+        }, 
+        {
+            "labels": {
+                "en": "Bihari", 
+                "fr": "bihari"
+            }, 
+            "type_id": "bh"
+        }, 
+        {
+            "labels": {
+                "en": "Bhojpuri", 
+                "fr": "bhojpuri"
+            }, 
+            "type_id": "bho"
+        }, 
+        {
+            "labels": {
+                "en": "Bislama", 
+                "fr": "bichlamar"
+            }, 
+            "type_id": "bi"
+        }, 
+        {
+            "labels": {
+                "en": "Bikol", 
+                "fr": "bikol"
+            }, 
+            "type_id": "bik"
+        }, 
+        {
+            "labels": {
+                "en": "Bini; Edo", 
+                "fr": "bini; edo"
+            }, 
+            "type_id": "bin"
+        }, 
+        {
+            "labels": {
+                "en": "Siksika", 
+                "fr": "blackfoot"
+            }, 
+            "type_id": "bla"
+        }, 
+        {
+            "labels": {
+                "en": "Bambara", 
+                "fr": "bambara"
+            }, 
+            "type_id": "bm"
+        }, 
+        {
+            "labels": {
+                "en": "Bengali", 
+                "fr": "bengali"
+            }, 
+            "type_id": "bn"
+        }, 
+        {
+            "labels": {
+                "en": "Bantu (Other)", 
+                "fr": "bantoues, autres langues"
+            }, 
+            "type_id": "bnt"
+        }, 
+        {
+            "labels": {
+                "en": "Tibetan", 
+                "fr": "tibétain"
+            }, 
+            "type_id": "bo"
+        }, 
+        {
+            "labels": {
+                "en": "Breton", 
+                "fr": "breton"
+            }, 
+            "type_id": "br"
+        }, 
+        {
+            "labels": {
+                "en": "Braj", 
+                "fr": "braj"
+            }, 
+            "type_id": "bra"
+        }, 
+        {
+            "labels": {
+                "en": "Bosnian", 
+                "fr": "bosniaque"
+            }, 
+            "type_id": "bs"
+        }, 
+        {
+            "labels": {
+                "en": "Batak languages", 
+                "fr": "batak, langues"
+            }, 
+            "type_id": "btk"
+        }, 
+        {
+            "labels": {
+                "en": "Buriat", 
+                "fr": "bouriate"
+            }, 
+            "type_id": "bua"
+        }, 
+        {
+            "labels": {
+                "en": "Buginese", 
+                "fr": "bugi"
+            }, 
+            "type_id": "bug"
+        }, 
+        {
+            "labels": {
+                "en": "Blin; Bilin", 
+                "fr": "blin; bilen"
+            }, 
+            "type_id": "byn"
+        }, 
+        {
+            "labels": {
+                "en": "Catalan; Valencian", 
+                "fr": "catalan; valencien"
+            }, 
+            "type_id": "ca"
+        }, 
+        {
+            "labels": {
+                "en": "Caddo", 
+                "fr": "caddo"
+            }, 
+            "type_id": "cad"
+        }, 
+        {
+            "labels": {
+                "en": "Central American Indian (Other)", 
+                "fr": "indiennes d'Amérique centrale, autres langues"
+            }, 
+            "type_id": "cai"
+        }, 
+        {
+            "labels": {
+                "en": "Galibi Carib", 
+                "fr": "karib; galibi; carib"
+            }, 
+            "type_id": "car"
+        }, 
+        {
+            "labels": {
+                "en": "Caucasian (Other)", 
+                "fr": "caucasiennes, autres langues"
+            }, 
+            "type_id": "cau"
+        }, 
+        {
+            "labels": {
+                "en": "Chechen", 
+                "fr": "tchétchène"
+            }, 
+            "type_id": "ce"
+        }, 
+        {
+            "labels": {
+                "en": "Cebuano", 
+                "fr": "cebuano"
+            }, 
+            "type_id": "ceb"
+        }, 
+        {
+            "labels": {
+                "en": "Celtic (Other)", 
+                "fr": "celtiques, autres langues"
+            }, 
+            "type_id": "cel"
+        }, 
+        {
+            "labels": {
+                "en": "Chamorro", 
+                "fr": "chamorro"
+            }, 
+            "type_id": "ch"
+        }, 
+        {
+            "labels": {
+                "en": "Chibcha", 
+                "fr": "chibcha"
+            }, 
+            "type_id": "chb"
+        }, 
+        {
+            "labels": {
+                "en": "Chagatai", 
+                "fr": "djaghataï"
+            }, 
+            "type_id": "chg"
+        }, 
+        {
+            "labels": {
+                "en": "Chuukese", 
+                "fr": "chuuk"
+            }, 
+            "type_id": "chk"
+        }, 
+        {
+            "labels": {
+                "en": "Mari", 
+                "fr": "mari"
+            }, 
+            "type_id": "chm"
+        }, 
+        {
+            "labels": {
+                "en": "Chinook jargon", 
+                "fr": "chinook, jargon"
+            }, 
+            "type_id": "chn"
+        }, 
+        {
+            "labels": {
+                "en": "Choctaw", 
+                "fr": "choctaw"
+            }, 
+            "type_id": "cho"
+        }, 
+        {
+            "labels": {
+                "en": "Chipewyan", 
+                "fr": "chipewyan"
+            }, 
+            "type_id": "chp"
+        }, 
+        {
+            "labels": {
+                "en": "Cherokee", 
+                "fr": "cherokee"
+            }, 
+            "type_id": "chr"
+        }, 
+        {
+            "labels": {
+                "en": "Cheyenne", 
+                "fr": "cheyenne"
+            }, 
+            "type_id": "chy"
+        }, 
+        {
+            "labels": {
+                "en": "Chamic languages", 
+                "fr": "chames, langues"
+            }, 
+            "type_id": "cmc"
+        }, 
+        {
+            "labels": {
+                "en": "Corsican", 
+                "fr": "corse"
+            }, 
+            "type_id": "co"
+        }, 
+        {
+            "labels": {
+                "en": "Coptic", 
+                "fr": "copte"
+            }, 
+            "type_id": "cop"
+        }, 
+        {
+            "labels": {
+                "en": "Creoles and pidgins, English based (Other)", 
+                "fr": "créoles et pidgins anglais, autres"
+            }, 
+            "type_id": "cpe"
+        }, 
+        {
+            "labels": {
+                "en": "Creoles and pidgins, French-based (Other)", 
+                "fr": "créoles et pidgins français, autres"
+            }, 
+            "type_id": "cpf"
+        }, 
+        {
+            "labels": {
+                "en": "Creoles and pidgins, Portuguese-based (Other)", 
+                "fr": "créoles et pidgins portugais, autres"
+            }, 
+            "type_id": "cpp"
+        }, 
+        {
+            "labels": {
+                "en": "Cree", 
+                "fr": "cree"
+            }, 
+            "type_id": "cr"
+        }, 
+        {
+            "labels": {
+                "en": "Crimean Tatar; Crimean Turkish", 
+                "fr": "tatar de Crimé"
+            }, 
+            "type_id": "crh"
+        }, 
+        {
+            "labels": {
+                "en": "Creoles and pidgins (Other)", 
+                "fr": "créoles et pidgins divers"
+            }, 
+            "type_id": "crp"
+        }, 
+        {
+            "labels": {
+                "en": "Czech", 
+                "fr": "tchèque"
+            }, 
+            "type_id": "cs"
+        }, 
+        {
+            "labels": {
+                "en": "Kashubian", 
+                "fr": "kachoube"
+            }, 
+            "type_id": "csb"
+        }, 
+        {
+            "labels": {
+                "en": "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic", 
+                "fr": "slavon d'église; vieux slave; slavon liturgique; vieux bulgare"
+            }, 
+            "type_id": "cu"
+        }, 
+        {
+            "labels": {
+                "en": "Cushitic (Other)", 
+                "fr": "couchitiques, autres langues"
+            }, 
+            "type_id": "cus"
+        }, 
+        {
+            "labels": {
+                "en": "Chuvash", 
+                "fr": "tchouvache"
+            }, 
+            "type_id": "cv"
+        }, 
+        {
+            "labels": {
+                "en": "Welsh", 
+                "fr": "gallois"
+            }, 
+            "type_id": "cy"
+        }, 
+        {
+            "labels": {
+                "en": "Danish", 
+                "fr": "danois"
+            }, 
+            "type_id": "da"
+        }, 
+        {
+            "labels": {
+                "en": "Dakota", 
+                "fr": "dakota"
+            }, 
+            "type_id": "dak"
+        }, 
+        {
+            "labels": {
+                "en": "Dargwa", 
+                "fr": "dargwa"
+            }, 
+            "type_id": "dar"
+        }, 
+        {
+            "labels": {
+                "en": "Land Dayak languages", 
+                "fr": "dayak, langues"
+            }, 
+            "type_id": "day"
+        }, 
+        {
+            "labels": {
+                "en": "Delaware", 
+                "fr": "delaware"
+            }, 
+            "type_id": "del"
+        }, 
+        {
+            "labels": {
+                "en": "Slave (Athapascan)", 
+                "fr": "esclave (athapascan)"
+            }, 
+            "type_id": "den"
+        }, 
+        {
+            "labels": {
+                "en": "Dogrib", 
+                "fr": "dogrib"
+            }, 
+            "type_id": "dgr"
+        }, 
+        {
+            "labels": {
+                "en": "Dinka", 
+                "fr": "dinka"
+            }, 
+            "type_id": "din"
+        }, 
+        {
+            "labels": {
+                "en": "Dogri", 
+                "fr": "dogri"
+            }, 
+            "type_id": "doi"
+        }, 
+        {
+            "labels": {
+                "en": "Dravidian (Other)", 
+                "fr": "dravidiennes, autres langues"
+            }, 
+            "type_id": "dra"
+        }, 
+        {
+            "labels": {
+                "en": "Lower Sorbian", 
+                "fr": "bas-sorabe"
+            }, 
+            "type_id": "dsb"
+        }, 
+        {
+            "labels": {
+                "en": "Duala", 
+                "fr": "douala"
+            }, 
+            "type_id": "dua"
+        }, 
+        {
+            "labels": {
+                "en": "Dutch, Middle (ca.1050-1350)", 
+                "fr": "néerlandais moyen (ca. 1050-1350)"
+            }, 
+            "type_id": "dum"
+        }, 
+        {
+            "labels": {
+                "en": "Divehi; Dhivehi; Maldivian", 
+                "fr": "maldivien"
+            }, 
+            "type_id": "dv"
+        }, 
+        {
+            "labels": {
+                "en": "Dyula", 
+                "fr": "dioula"
+            }, 
+            "type_id": "dyu"
+        }, 
+        {
+            "labels": {
+                "en": "Dzongkha", 
+                "fr": "dzongkha"
+            }, 
+            "type_id": "dz"
+        }, 
+        {
+            "labels": {
+                "en": "Ewe", 
+                "fr": "éwé"
+            }, 
+            "type_id": "ee"
+        }, 
+        {
+            "labels": {
+                "en": "Efik", 
+                "fr": "efik"
+            }, 
+            "type_id": "efi"
+        }, 
+        {
+            "labels": {
+                "en": "Egyptian (Ancient)", 
+                "fr": "égyptien"
+            }, 
+            "type_id": "egy"
+        }, 
+        {
+            "labels": {
+                "en": "Ekajuk", 
+                "fr": "ekajuk"
+            }, 
+            "type_id": "eka"
+        }, 
+        {
+            "labels": {
+                "en": "Elamite", 
+                "fr": "élamite"
+            }, 
+            "type_id": "elx"
+        }, 
+        {
+            "labels": {
+                "en": "English, Middle (1100-1500)", 
+                "fr": "anglais moyen (1100-1500)"
+            }, 
+            "type_id": "enm"
+        }, 
+        {
+            "labels": {
+                "en": "Esperanto", 
+                "fr": "espéranto"
+            }, 
+            "type_id": "eo"
+        }, 
+        {
+            "labels": {
+                "en": "Estonian", 
+                "fr": "estonien"
+            }, 
+            "type_id": "et"
+        }, 
+        {
+            "labels": {
+                "en": "Basque", 
+                "fr": "basque"
+            }, 
+            "type_id": "eu"
+        }, 
+        {
+            "labels": {
+                "en": "Ewondo", 
+                "fr": "éwondo"
+            }, 
+            "type_id": "ewo"
+        }, 
+        {
+            "labels": {
+                "en": "Fang", 
+                "fr": "fang"
+            }, 
+            "type_id": "fan"
+        }, 
+        {
+            "labels": {
+                "en": "Fanti", 
+                "fr": "fanti"
+            }, 
+            "type_id": "fat"
+        }, 
+        {
+            "labels": {
+                "en": "Fulah", 
+                "fr": "peul"
+            }, 
+            "type_id": "ff"
+        }, 
+        {
+            "labels": {
+                "en": "Finnish", 
+                "fr": "finnois"
+            }, 
+            "type_id": "fi"
+        }, 
+        {
+            "labels": {
+                "en": "Filipino; Pilipino", 
+                "fr": "filipino; pilipino"
+            }, 
+            "type_id": "fil"
+        }, 
+        {
+            "labels": {
+                "en": "Finno-Ugrian (Other)", 
+                "fr": "finno-ougriennes, autres langues"
+            }, 
+            "type_id": "fiu"
+        }, 
+        {
+            "labels": {
+                "en": "Fijian", 
+                "fr": "fidjien"
+            }, 
+            "type_id": "fj"
+        }, 
+        {
+            "labels": {
+                "en": "Faroese", 
+                "fr": "féroïen"
+            }, 
+            "type_id": "fo"
+        }, 
+        {
+            "labels": {
+                "en": "Fon", 
+                "fr": "fon"
+            }, 
+            "type_id": "fon"
+        }, 
+        {
+            "labels": {
+                "en": "French, Middle (ca.1400-1600)", 
+                "fr": "français moyen (1400-1600)"
+            }, 
+            "type_id": "frm"
+        }, 
+        {
+            "labels": {
+                "en": "French, Old (842-ca.1400)", 
+                "fr": "français ancien (842-ca.1400)"
+            }, 
+            "type_id": "fro"
+        }, 
+        {
+            "labels": {
+                "en": "Northern Frisian", 
+                "fr": "frison septentrional"
+            }, 
+            "type_id": "frr"
+        }, 
+        {
+            "labels": {
+                "en": "Eastern Frisian", 
+                "fr": "frison oriental"
+            }, 
+            "type_id": "frs"
+        }, 
+        {
+            "labels": {
+                "en": "Friulian", 
+                "fr": "frioulan"
+            }, 
+            "type_id": "fur"
+        }, 
+        {
+            "labels": {
+                "en": "Western Frisian", 
+                "fr": "frison occidental"
+            }, 
+            "type_id": "fy"
+        }, 
+        {
+            "labels": {
+                "en": "Irish", 
+                "fr": "irlandais"
+            }, 
+            "type_id": "ga"
+        }, 
+        {
+            "labels": {
+                "en": "Ga", 
+                "fr": "ga"
+            }, 
+            "type_id": "gaa"
+        }, 
+        {
+            "labels": {
+                "en": "Gayo", 
+                "fr": "gayo"
+            }, 
+            "type_id": "gay"
+        }, 
+        {
+            "labels": {
+                "en": "Gbaya", 
+                "fr": "gbaya"
+            }, 
+            "type_id": "gba"
+        }, 
+        {
+            "labels": {
+                "en": "Gaelic; Scottish Gaelic", 
+                "fr": "gaélique; gaélique écossais"
+            }, 
+            "type_id": "gd"
+        }, 
+        {
+            "labels": {
+                "en": "Germanic (Other)", 
+                "fr": "germaniques, autres langues"
+            }, 
+            "type_id": "gem"
+        }, 
+        {
+            "labels": {
+                "en": "Geez", 
+                "fr": "guèze"
+            }, 
+            "type_id": "gez"
+        }, 
+        {
+            "labels": {
+                "en": "Gilbertese", 
+                "fr": "kiribati"
+            }, 
+            "type_id": "gil"
+        }, 
+        {
+            "labels": {
+                "en": "Galician", 
+                "fr": "galicien"
+            }, 
+            "type_id": "gl"
+        }, 
+        {
+            "labels": {
+                "en": "German, Middle High (ca.1050-1500)", 
+                "fr": "allemand, moyen haut (ca. 1050-1500)"
+            }, 
+            "type_id": "gmh"
+        }, 
+        {
+            "labels": {
+                "en": "Guarani", 
+                "fr": "guarani"
+            }, 
+            "type_id": "gn"
+        }, 
+        {
+            "labels": {
+                "en": "German, Old High (ca.750-1050)", 
+                "fr": "allemand, vieux haut (ca. 750-1050)"
+            }, 
+            "type_id": "goh"
+        }, 
+        {
+            "labels": {
+                "en": "Gondi", 
+                "fr": "gond"
+            }, 
+            "type_id": "gon"
+        }, 
+        {
+            "labels": {
+                "en": "Gorontalo", 
+                "fr": "gorontalo"
+            }, 
+            "type_id": "gor"
+        }, 
+        {
+            "labels": {
+                "en": "Gothic", 
+                "fr": "gothique"
+            }, 
+            "type_id": "got"
+        }, 
+        {
+            "labels": {
+                "en": "Grebo", 
+                "fr": "grebo"
+            }, 
+            "type_id": "grb"
+        }, 
+        {
+            "labels": {
+                "en": "Greek, Ancient (to 1453)", 
+                "fr": "grec ancien (jusqu'à 1453)"
+            }, 
+            "type_id": "grc"
+        }, 
+        {
+            "labels": {
+                "en": "Swiss German; Alemannic", 
+                "fr": "alémanique"
+            }, 
+            "type_id": "gsw"
+        }, 
+        {
+            "labels": {
+                "en": "Gujarati", 
+                "fr": "goudjrati"
+            }, 
+            "type_id": "gu"
+        }, 
+        {
+            "labels": {
+                "en": "Manx", 
+                "fr": "manx; mannois"
+            }, 
+            "type_id": "gv"
+        }, 
+        {
+            "labels": {
+                "en": "Gwich´in", 
+                "fr": "gwich´in"
+            }, 
+            "type_id": "gwi"
+        }, 
+        {
+            "labels": {
+                "en": "Hausa", 
+                "fr": "haoussa"
+            }, 
+            "type_id": "ha"
+        }, 
+        {
+            "labels": {
+                "en": "Haida", 
+                "fr": "haida"
+            }, 
+            "type_id": "hai"
+        }, 
+        {
+            "labels": {
+                "en": "Hawaiian", 
+                "fr": "hawaïen"
+            }, 
+            "type_id": "haw"
+        }, 
+        {
+            "labels": {
+                "en": "Hindi", 
+                "fr": "hindi"
+            }, 
+            "type_id": "hi"
+        }, 
+        {
+            "labels": {
+                "en": "Hiligaynon", 
+                "fr": "hiligaynon"
+            }, 
+            "type_id": "hil"
+        }, 
+        {
+            "labels": {
+                "en": "Himachali", 
+                "fr": "himachali"
+            }, 
+            "type_id": "him"
+        }, 
+        {
+            "labels": {
+                "en": "Hittite", 
+                "fr": "hittite"
+            }, 
+            "type_id": "hit"
+        }, 
+        {
+            "labels": {
+                "en": "Hmong", 
+                "fr": "hmong"
+            }, 
+            "type_id": "hmn"
+        }, 
+        {
+            "labels": {
+                "en": "Hiri Motu", 
+                "fr": "hiri motu"
+            }, 
+            "type_id": "ho"
+        }, 
+        {
+            "labels": {
+                "en": "Croatian", 
+                "fr": "croate"
+            }, 
+            "type_id": "hr"
+        }, 
+        {
+            "labels": {
+                "en": "Upper Sorbian", 
+                "fr": "haut-sorabe"
+            }, 
+            "type_id": "hsb"
+        }, 
+        {
+            "labels": {
+                "en": "Haitian; Haitian Creole", 
+                "fr": "haïtien; créole haïtien"
+            }, 
+            "type_id": "ht"
+        }, 
+        {
+            "labels": {
+                "en": "Hupa", 
+                "fr": "hupa"
+            }, 
+            "type_id": "hup"
+        }, 
+        {
+            "labels": {
+                "en": "Armenian", 
+                "fr": "arménien"
+            }, 
+            "type_id": "hy"
+        }, 
+        {
+            "labels": {
+                "en": "Herero", 
+                "fr": "herero"
+            }, 
+            "type_id": "hz"
+        }, 
+        {
+            "labels": {
+                "en": "Interlingua (International Auxiliary Language Association)", 
+                "fr": "interlingua (langue auxiliaire internationale)"
+            }, 
+            "type_id": "ia"
+        }, 
+        {
+            "labels": {
+                "en": "Iban", 
+                "fr": "iban"
+            }, 
+            "type_id": "iba"
+        }, 
+        {
+            "labels": {
+                "en": "Indonesian", 
+                "fr": "indonésien"
+            }, 
+            "type_id": "id"
+        }, 
+        {
+            "labels": {
+                "en": "Interlingue", 
+                "fr": "interlingue"
+            }, 
+            "type_id": "ie"
+        }, 
+        {
+            "labels": {
+                "en": "Igbo", 
+                "fr": "igbo"
+            }, 
+            "type_id": "ig"
+        }, 
+        {
+            "labels": {
+                "en": "Sichuan Yi", 
+                "fr": "yi de Sichuan"
+            }, 
+            "type_id": "ii"
+        }, 
+        {
+            "labels": {
+                "en": "Ijo languages", 
+                "fr": "ijo, langues"
+            }, 
+            "type_id": "ijo"
+        }, 
+        {
+            "labels": {
+                "en": "Inupiaq", 
+                "fr": "inupiaq"
+            }, 
+            "type_id": "ik"
+        }, 
+        {
+            "labels": {
+                "en": "Iloko", 
+                "fr": "ilocano"
+            }, 
+            "type_id": "ilo"
+        }, 
+        {
+            "labels": {
+                "en": "Indic (Other)", 
+                "fr": "indo-aryennes, autres langues"
+            }, 
+            "type_id": "inc"
+        }, 
+        {
+            "labels": {
+                "en": "Indo-European (Other)", 
+                "fr": "indo-européennes, autres langues"
+            }, 
+            "type_id": "ine"
+        }, 
+        {
+            "labels": {
+                "en": "Ingush", 
+                "fr": "ingouche"
+            }, 
+            "type_id": "inh"
+        }, 
+        {
+            "labels": {
+                "en": "Ido", 
+                "fr": "ido"
+            }, 
+            "type_id": "io"
+        }, 
+        {
+            "labels": {
+                "en": "Iranian (Other)", 
+                "fr": "iraniennes, autres langues"
+            }, 
+            "type_id": "ira"
+        }, 
+        {
+            "labels": {
+                "en": "Iroquoian languages", 
+                "fr": "iroquoises, langues (famille)"
+            }, 
+            "type_id": "iro"
+        }, 
+        {
+            "labels": {
+                "en": "Icelandic", 
+                "fr": "islandais"
+            }, 
+            "type_id": "is"
+        }, 
+        {
+            "labels": {
+                "en": "Inuktitut", 
+                "fr": "inuktitut"
+            }, 
+            "type_id": "iu"
+        }, 
+        {
+            "labels": {
+                "en": "Lojban", 
+                "fr": "lojban"
+            }, 
+            "type_id": "jbo"
+        }, 
+        {
+            "labels": {
+                "en": "Judeo-Persian", 
+                "fr": "judéo-persan"
+            }, 
+            "type_id": "jpr"
+        }, 
+        {
+            "labels": {
+                "en": "Judeo-Arabic", 
+                "fr": "judéo-arabe"
+            }, 
+            "type_id": "jrb"
+        }, 
+        {
+            "labels": {
+                "en": "Javanese", 
+                "fr": "javanais"
+            }, 
+            "type_id": "jv"
+        }, 
+        {
+            "labels": {
+                "en": "Georgian", 
+                "fr": "géorgien"
+            }, 
+            "type_id": "ka"
+        }, 
+        {
+            "labels": {
+                "en": "Kara-Kalpak", 
+                "fr": "karakalpak"
+            }, 
+            "type_id": "kaa"
+        }, 
+        {
+            "labels": {
+                "en": "Kabyle", 
+                "fr": "kabyle"
+            }, 
+            "type_id": "kab"
+        }, 
+        {
+            "labels": {
+                "en": "Kachin; Jingpho", 
+                "fr": "kachin; jingpho"
+            }, 
+            "type_id": "kac"
+        }, 
+        {
+            "labels": {
+                "en": "Kamba", 
+                "fr": "kamba"
+            }, 
+            "type_id": "kam"
+        }, 
+        {
+            "labels": {
+                "en": "Karen languages", 
+                "fr": "karen, langues"
+            }, 
+            "type_id": "kar"
+        }, 
+        {
+            "labels": {
+                "en": "Kawi", 
+                "fr": "kawi"
+            }, 
+            "type_id": "kaw"
+        }, 
+        {
+            "labels": {
+                "en": "Kabardian", 
+                "fr": "kabardien"
+            }, 
+            "type_id": "kbd"
+        }, 
+        {
+            "labels": {
+                "en": "Kongo", 
+                "fr": "kongo"
+            }, 
+            "type_id": "kg"
+        }, 
+        {
+            "labels": {
+                "en": "Khasi", 
+                "fr": "khasi"
+            }, 
+            "type_id": "kha"
+        }, 
+        {
+            "labels": {
+                "en": "Khoisan (Other)", 
+                "fr": "khoisan, autres langues"
+            }, 
+            "type_id": "khi"
+        }, 
+        {
+            "labels": {
+                "en": "Khotanese", 
+                "fr": "khotanais"
+            }, 
+            "type_id": "kho"
+        }, 
+        {
+            "labels": {
+                "en": "Kikuyu; Gikuyu", 
+                "fr": "kikuyu"
+            }, 
+            "type_id": "ki"
+        }, 
+        {
+            "labels": {
+                "en": "Kuanyama; Kwanyama", 
+                "fr": "kuanyama; kwanyama"
+            }, 
+            "type_id": "kj"
+        }, 
+        {
+            "labels": {
+                "en": "Kazakh", 
+                "fr": "kazakh"
+            }, 
+            "type_id": "kk"
+        }, 
+        {
+            "labels": {
+                "en": "Kalaallisut; Greenlandic", 
+                "fr": "groenlandais"
+            }, 
+            "type_id": "kl"
+        }, 
+        {
+            "labels": {
+                "en": "Central Khmer", 
+                "fr": "khmer central"
+            }, 
+            "type_id": "km"
+        }, 
+        {
+            "labels": {
+                "en": "Kimbundu", 
+                "fr": "kimbundu"
+            }, 
+            "type_id": "kmb"
+        }, 
+        {
+            "labels": {
+                "en": "Kannada", 
+                "fr": "kannada"
+            }, 
+            "type_id": "kn"
+        }, 
+        {
+            "labels": {
+                "en": "Konkani", 
+                "fr": "konkani"
+            }, 
+            "type_id": "kok"
+        }, 
+        {
+            "labels": {
+                "en": "Kosraean", 
+                "fr": "kosrae"
+            }, 
+            "type_id": "kos"
+        }, 
+        {
+            "labels": {
+                "en": "Kpelle", 
+                "fr": "kpellé"
+            }, 
+            "type_id": "kpe"
+        }, 
+        {
+            "labels": {
+                "en": "Kanuri", 
+                "fr": "kanouri"
+            }, 
+            "type_id": "kr"
+        }, 
+        {
+            "labels": {
+                "en": "Karachay-Balkar", 
+                "fr": "karatchai balkar"
+            }, 
+            "type_id": "krc"
+        }, 
+        {
+            "labels": {
+                "en": "Kru languages", 
+                "fr": "krou, langues"
+            }, 
+            "type_id": "kro"
+        }, 
+        {
+            "labels": {
+                "en": "Kurukh", 
+                "fr": "kurukh"
+            }, 
+            "type_id": "kru"
+        }, 
+        {
+            "labels": {
+                "en": "Kashmiri", 
+                "fr": "kashmiri"
+            }, 
+            "type_id": "ks"
+        }, 
+        {
+            "labels": {
+                "en": "Kurdish", 
+                "fr": "kurde"
+            }, 
+            "type_id": "ku"
+        }, 
+        {
+            "labels": {
+                "en": "Kumyk", 
+                "fr": "koumyk"
+            }, 
+            "type_id": "kum"
+        }, 
+        {
+            "labels": {
+                "en": "Kutenai", 
+                "fr": "kutenai"
+            }, 
+            "type_id": "kut"
+        }, 
+        {
+            "labels": {
+                "en": "Komi", 
+                "fr": "kom"
+            }, 
+            "type_id": "kv"
+        }, 
+        {
+            "labels": {
+                "en": "Cornish", 
+                "fr": "cornique"
+            }, 
+            "type_id": "kw"
+        }, 
+        {
+            "labels": {
+                "en": "Kirghiz; Kyrgyz", 
+                "fr": "kirghiz"
+            }, 
+            "type_id": "ky"
+        }, 
+        {
+            "labels": {
+                "en": "Latin", 
+                "fr": "latin"
+            }, 
+            "type_id": "la"
+        }, 
+        {
+            "labels": {
+                "en": "Ladino", 
+                "fr": "judéo-espagnol"
+            }, 
+            "type_id": "lad"
+        }, 
+        {
+            "labels": {
+                "en": "Lahnda", 
+                "fr": "lahnda"
+            }, 
+            "type_id": "lah"
+        }, 
+        {
+            "labels": {
+                "en": "Lamba", 
+                "fr": "lamba"
+            }, 
+            "type_id": "lam"
+        }, 
+        {
+            "labels": {
+                "en": "Luxembourgish; Letzeburgesch", 
+                "fr": "luxembourgeois"
+            }, 
+            "type_id": "lb"
+        }, 
+        {
+            "labels": {
+                "en": "Lezghian", 
+                "fr": "lezghien"
+            }, 
+            "type_id": "lez"
+        }, 
+        {
+            "labels": {
+                "en": "Ganda", 
+                "fr": "ganda"
+            }, 
+            "type_id": "lg"
+        }, 
+        {
+            "labels": {
+                "en": "Limburgan; Limburger; Limburgish", 
+                "fr": "limbourgeois"
+            }, 
+            "type_id": "li"
+        }, 
+        {
+            "labels": {
+                "en": "Lingala", 
+                "fr": "lingala"
+            }, 
+            "type_id": "ln"
+        }, 
+        {
+            "labels": {
+                "en": "Lao", 
+                "fr": "lao"
+            }, 
+            "type_id": "lo"
+        }, 
+        {
+            "labels": {
+                "en": "Mongo", 
+                "fr": "mongo"
+            }, 
+            "type_id": "lol"
+        }, 
+        {
+            "labels": {
+                "en": "Lozi", 
+                "fr": "lozi"
+            }, 
+            "type_id": "loz"
+        }, 
+        {
+            "labels": {
+                "en": "Lithuanian", 
+                "fr": "lituanien"
+            }, 
+            "type_id": "lt"
+        }, 
+        {
+            "labels": {
+                "en": "Luba-Katanga", 
+                "fr": "luba-katanga"
+            }, 
+            "type_id": "lu"
+        }, 
+        {
+            "labels": {
+                "en": "Luba-Lulua", 
+                "fr": "luba-lulua"
+            }, 
+            "type_id": "lua"
+        }, 
+        {
+            "labels": {
+                "en": "Luiseno", 
+                "fr": "luiseno"
+            }, 
+            "type_id": "lui"
+        }, 
+        {
+            "labels": {
+                "en": "Lunda", 
+                "fr": "lunda"
+            }, 
+            "type_id": "lun"
+        }, 
+        {
+            "labels": {
+                "en": "Luo (Kenya and Tanzania)", 
+                "fr": "luo (Kenya et Tanzanie)"
+            }, 
+            "type_id": "luo"
+        }, 
+        {
+            "labels": {
+                "en": "Lushai", 
+                "fr": "lushai"
+            }, 
+            "type_id": "lus"
+        }, 
+        {
+            "labels": {
+                "en": "Latvian", 
+                "fr": "letton"
+            }, 
+            "type_id": "lv"
+        }, 
+        {
+            "labels": {
+                "en": "Madurese", 
+                "fr": "madourais"
+            }, 
+            "type_id": "mad"
+        }, 
+        {
+            "labels": {
+                "en": "Magahi", 
+                "fr": "magahi"
+            }, 
+            "type_id": "mag"
+        }, 
+        {
+            "labels": {
+                "en": "Maithili", 
+                "fr": "maithili"
+            }, 
+            "type_id": "mai"
+        }, 
+        {
+            "labels": {
+                "en": "Makasar", 
+                "fr": "makassar"
+            }, 
+            "type_id": "mak"
+        }, 
+        {
+            "labels": {
+                "en": "Mandingo", 
+                "fr": "mandingue"
+            }, 
+            "type_id": "man"
+        }, 
+        {
+            "labels": {
+                "en": "Austronesian (Other)", 
+                "fr": "malayo-polynésiennes, autres langues"
+            }, 
+            "type_id": "map"
+        }, 
+        {
+            "labels": {
+                "en": "Masai", 
+                "fr": "massaï"
+            }, 
+            "type_id": "mas"
+        }, 
+        {
+            "labels": {
+                "en": "Moksha", 
+                "fr": "moksa"
+            }, 
+            "type_id": "mdf"
+        }, 
+        {
+            "labels": {
+                "en": "Mandar", 
+                "fr": "mandar"
+            }, 
+            "type_id": "mdr"
+        }, 
+        {
+            "labels": {
+                "en": "Mende", 
+                "fr": "mendé"
+            }, 
+            "type_id": "men"
+        }, 
+        {
+            "labels": {
+                "en": "Malagasy", 
+                "fr": "malgache"
+            }, 
+            "type_id": "mg"
+        }, 
+        {
+            "labels": {
+                "en": "Irish, Middle (900-1200)", 
+                "fr": "irlandais moyen (900-1200)"
+            }, 
+            "type_id": "mga"
+        }, 
+        {
+            "labels": {
+                "en": "Marshallese", 
+                "fr": "marshall"
+            }, 
+            "type_id": "mh"
+        }, 
+        {
+            "labels": {
+                "en": "Maori", 
+                "fr": "maori"
+            }, 
+            "type_id": "mi"
+        }, 
+        {
+            "labels": {
+                "en": "Mi'kmaq; Micmac", 
+                "fr": "mi'kmaq; micmac"
+            }, 
+            "type_id": "mic"
+        }, 
+        {
+            "labels": {
+                "en": "Minangkabau", 
+                "fr": "minangkabau"
+            }, 
+            "type_id": "min"
+        }, 
+        {
+            "labels": {
+                "en": "Uncoded languages", 
+                "fr": "diverses, langues"
+            }, 
+            "type_id": "mis"
+        }, 
+        {
+            "labels": {
+                "en": "Macedonian", 
+                "fr": "macédonien"
+            }, 
+            "type_id": "mk"
+        }, 
+        {
+            "labels": {
+                "en": "Mon-Khmer (Other)", 
+                "fr": "môn-khmer, autres langues"
+            }, 
+            "type_id": "mkh"
+        }, 
+        {
+            "labels": {
+                "en": "Malayalam", 
+                "fr": "malayalam"
+            }, 
+            "type_id": "ml"
+        }, 
+        {
+            "labels": {
+                "en": "Mongolian", 
+                "fr": "mongol"
+            }, 
+            "type_id": "mn"
+        }, 
+        {
+            "labels": {
+                "en": "Manchu", 
+                "fr": "mandchou"
+            }, 
+            "type_id": "mnc"
+        }, 
+        {
+            "labels": {
+                "en": "Manipuri", 
+                "fr": "manipuri"
+            }, 
+            "type_id": "mni"
+        }, 
+        {
+            "labels": {
+                "en": "Manobo languages", 
+                "fr": "manobo, langues"
+            }, 
+            "type_id": "mno"
+        }, 
+        {
+            "labels": {
+                "en": "Moldavian", 
+                "fr": "moldave"
+            }, 
+            "type_id": "mo"
+        }, 
+        {
+            "labels": {
+                "en": "Mohawk", 
+                "fr": "mohawk"
+            }, 
+            "type_id": "moh"
+        }, 
+        {
+            "labels": {
+                "en": "Mossi", 
+                "fr": "moré"
+            }, 
+            "type_id": "mos"
+        }, 
+        {
+            "labels": {
+                "en": "Marathi", 
+                "fr": "marathe"
+            }, 
+            "type_id": "mr"
+        }, 
+        {
+            "labels": {
+                "en": "Malay", 
+                "fr": "malais"
+            }, 
+            "type_id": "ms"
+        }, 
+        {
+            "labels": {
+                "en": "Maltese", 
+                "fr": "maltais"
+            }, 
+            "type_id": "mt"
+        }, 
+        {
+            "labels": {
+                "en": "Multiple languages", 
+                "fr": "multilingue"
+            }, 
+            "type_id": "mul"
+        }, 
+        {
+            "labels": {
+                "en": "Munda languages", 
+                "fr": "mounda, langues"
+            }, 
+            "type_id": "mun"
+        }, 
+        {
+            "labels": {
+                "en": "Creek", 
+                "fr": "muskogee"
+            }, 
+            "type_id": "mus"
+        }, 
+        {
+            "labels": {
+                "en": "Mirandese", 
+                "fr": "mirandais"
+            }, 
+            "type_id": "mwl"
+        }, 
+        {
+            "labels": {
+                "en": "Marwari", 
+                "fr": "marvari"
+            }, 
+            "type_id": "mwr"
+        }, 
+        {
+            "labels": {
+                "en": "Burmese", 
+                "fr": "birman"
+            }, 
+            "type_id": "my"
+        }, 
+        {
+            "labels": {
+                "en": "Mayan languages", 
+                "fr": "maya, langues"
+            }, 
+            "type_id": "myn"
+        }, 
+        {
+            "labels": {
+                "en": "Erzya", 
+                "fr": "erza"
+            }, 
+            "type_id": "myv"
+        }, 
+        {
+            "labels": {
+                "en": "Nauru", 
+                "fr": "nauruan"
+            }, 
+            "type_id": "na"
+        }, 
+        {
+            "labels": {
+                "en": "Nahuatl languages", 
+                "fr": "nahuatl, langues"
+            }, 
+            "type_id": "nah"
+        }, 
+        {
+            "labels": {
+                "en": "North American Indian", 
+                "fr": "indiennes d'Amérique du Nord, autres langues"
+            }, 
+            "type_id": "nai"
+        }, 
+        {
+            "labels": {
+                "en": "Neapolitan", 
+                "fr": "napolitain"
+            }, 
+            "type_id": "nap"
+        }, 
+        {
+            "labels": {
+                "en": "Norwegian Bokmål; Bokmål, Norwegian;", 
+                "fr": "norvégien bokmål"
+            }, 
+            "type_id": "nb"
+        }, 
+        {
+            "labels": {
+                "en": "Ndebele, North; North Ndebele", 
+                "fr": "ndébélé du Nord"
+            }, 
+            "type_id": "nd"
+        }, 
+        {
+            "labels": {
+                "en": "German, Low; Low German; Saxon, Low; Low Saxon", 
+                "fr": "allemand, bas; bas allemand; saxon, bas; bas saxon"
+            }, 
+            "type_id": "nds"
+        }, 
+        {
+            "labels": {
+                "en": "Nepali", 
+                "fr": "népalais"
+            }, 
+            "type_id": "ne"
+        }, 
+        {
+            "labels": {
+                "en": "Nepal Bhasa; Newari", 
+                "fr": "nepal bhasa; newari"
+            }, 
+            "type_id": "new"
+        }, 
+        {
+            "labels": {
+                "en": "Ndonga", 
+                "fr": "ndonga"
+            }, 
+            "type_id": "ng"
+        }, 
+        {
+            "labels": {
+                "en": "Nias", 
+                "fr": "nias"
+            }, 
+            "type_id": "nia"
+        }, 
+        {
+            "labels": {
+                "en": "Niger-Kordofanian (Other)", 
+                "fr": "nigéro-congolaises, autres langues"
+            }, 
+            "type_id": "nic"
+        }, 
+        {
+            "labels": {
+                "en": "Niuean", 
+                "fr": "niué"
+            }, 
+            "type_id": "niu"
+        }, 
+        {
+            "labels": {
+                "en": "Norwegian Nynorsk; Nynorsk, Norwegian", 
+                "fr": "norvégien nynorsk"
+            }, 
+            "type_id": "nn"
+        }, 
+        {
+            "labels": {
+                "en": "Norwegian", 
+                "fr": "norvégien"
+            }, 
+            "type_id": "no"
+        }, 
+        {
+            "labels": {
+                "en": "Nogai", 
+                "fr": "nogaï; nogay"
+            }, 
+            "type_id": "nog"
+        }, 
+        {
+            "labels": {
+                "en": "Norse, Old", 
+                "fr": "norrois, vieux"
+            }, 
+            "type_id": "non"
+        }, 
+        {
+            "labels": {
+                "en": "N'Ko", 
+                "fr": "n'ko"
+            }, 
+            "type_id": "nqo"
+        }, 
+        {
+            "labels": {
+                "en": "Ndebele, South; South Ndebele", 
+                "fr": "ndébélé du Sud"
+            }, 
+            "type_id": "nr"
+        }, 
+        {
+            "labels": {
+                "en": "Pedi; Sepedi; Northern Sotho", 
+                "fr": "pedi; sepedi; sotho du Nord"
+            }, 
+            "type_id": "nso"
+        }, 
+        {
+            "labels": {
+                "en": "Nubian languages", 
+                "fr": "nubiennes, langues"
+            }, 
+            "type_id": "nub"
+        }, 
+        {
+            "labels": {
+                "en": "Navajo; Navaho", 
+                "fr": "navaho"
+            }, 
+            "type_id": "nv"
+        }, 
+        {
+            "labels": {
+                "en": "Classical Newari; Old Newari; Classical Nepal Bhasa", 
+                "fr": "newari classique"
+            }, 
+            "type_id": "nwc"
+        }, 
+        {
+            "labels": {
+                "en": "Chichewa; Chewa; Nyanja", 
+                "fr": "chichewa; chewa; nyanja"
+            }, 
+            "type_id": "ny"
+        }, 
+        {
+            "labels": {
+                "en": "Nyamwezi", 
+                "fr": "nyamwezi"
+            }, 
+            "type_id": "nym"
+        }, 
+        {
+            "labels": {
+                "en": "Nyankole", 
+                "fr": "nyankolé"
+            }, 
+            "type_id": "nyn"
+        }, 
+        {
+            "labels": {
+                "en": "Nyoro", 
+                "fr": "nyoro"
+            }, 
+            "type_id": "nyo"
+        }, 
+        {
+            "labels": {
+                "en": "Nzima", 
+                "fr": "nzema"
+            }, 
+            "type_id": "nzi"
+        }, 
+        {
+            "labels": {
+                "en": "Occitan (post 1500); Provençal", 
+                "fr": "occitan (après 1500); provençal"
+            }, 
+            "type_id": "oc"
+        }, 
+        {
+            "labels": {
+                "en": "Ojibwa", 
+                "fr": "ojibwa"
+            }, 
+            "type_id": "oj"
+        }, 
+        {
+            "labels": {
+                "en": "Oromo", 
+                "fr": "galla"
+            }, 
+            "type_id": "om"
+        }, 
+        {
+            "labels": {
+                "en": "Oriya", 
+                "fr": "oriya"
+            }, 
+            "type_id": "or"
+        }, 
+        {
+            "labels": {
+                "en": "Ossetian; Ossetic", 
+                "fr": "ossète"
+            }, 
+            "type_id": "os"
+        }, 
+        {
+            "labels": {
+                "en": "Osage", 
+                "fr": "osage"
+            }, 
+            "type_id": "osa"
+        }, 
+        {
+            "labels": {
+                "en": "Turkish, Ottoman (1500-1928)", 
+                "fr": "turc ottoman (1500-1928)"
+            }, 
+            "type_id": "ota"
+        }, 
+        {
+            "labels": {
+                "en": "Otomian languages", 
+                "fr": "otomangue, langues"
+            }, 
+            "type_id": "oto"
+        }, 
+        {
+            "labels": {
+                "en": "Panjabi; Punjabi", 
+                "fr": "pendjabi"
+            }, 
+            "type_id": "pa"
+        }, 
+        {
+            "labels": {
+                "en": "Papuan (Other)", 
+                "fr": "papoues, autres langues"
+            }, 
+            "type_id": "paa"
+        }, 
+        {
+            "labels": {
+                "en": "Pangasinan", 
+                "fr": "pangasinan"
+            }, 
+            "type_id": "pag"
+        }, 
+        {
+            "labels": {
+                "en": "Pahlavi", 
+                "fr": "pahlavi"
+            }, 
+            "type_id": "pal"
+        }, 
+        {
+            "labels": {
+                "en": "Pampanga", 
+                "fr": "pampangan"
+            }, 
+            "type_id": "pam"
+        }, 
+        {
+            "labels": {
+                "en": "Papiamento", 
+                "fr": "papiamento"
+            }, 
+            "type_id": "pap"
+        }, 
+        {
+            "labels": {
+                "en": "Palauan", 
+                "fr": "palau"
+            }, 
+            "type_id": "pau"
+        }, 
+        {
+            "labels": {
+                "en": "Persian, Old (ca.600-400 B.C.)", 
+                "fr": "perse, vieux (ca. 600-400 av. J.-C.)"
+            }, 
+            "type_id": "peo"
+        }, 
+        {
+            "labels": {
+                "en": "Philippine (Other)", 
+                "fr": "philippines, autres langues"
+            }, 
+            "type_id": "phi"
+        }, 
+        {
+            "labels": {
+                "en": "Phoenician", 
+                "fr": "phénicien"
+            }, 
+            "type_id": "phn"
+        }, 
+        {
+            "labels": {
+                "en": "Pali", 
+                "fr": "pali"
+            }, 
+            "type_id": "pi"
+        }, 
+        {
+            "labels": {
+                "en": "Pohnpeian", 
+                "fr": "pohnpei"
+            }, 
+            "type_id": "pon"
+        }, 
+        {
+            "labels": {
+                "en": "Prakrit languages", 
+                "fr": "prâkrit"
+            }, 
+            "type_id": "pra"
+        }, 
+        {
+            "labels": {
+                "en": "Provençal, Old (to 1500)", 
+                "fr": "provençal ancien (jusqu'à 1500)"
+            }, 
+            "type_id": "pro"
+        }, 
+        {
+            "labels": {
+                "en": "Pushto", 
+                "fr": "pachto"
+            }, 
+            "type_id": "ps"
+        }, 
+        {
+            "labels": {
+                "en": "Quechua", 
+                "fr": "quechua"
+            }, 
+            "type_id": "qu"
+        }, 
+        {
+            "labels": {
+                "en": "Rajasthani", 
+                "fr": "rajasthani"
+            }, 
+            "type_id": "raj"
+        }, 
+        {
+            "labels": {
+                "en": "Rapanui", 
+                "fr": "rapanui"
+            }, 
+            "type_id": "rap"
+        }, 
+        {
+            "labels": {
+                "en": "Rarotongan; Cook Islands Maori", 
+                "fr": "rarotonga; maori des îles Cook"
+            }, 
+            "type_id": "rar"
+        }, 
+        {
+            "labels": {
+                "en": "Romansh", 
+                "fr": "romanche"
+            }, 
+            "type_id": "rm"
+        }, 
+        {
+            "labels": {
+                "en": "Rundi", 
+                "fr": "rundi"
+            }, 
+            "type_id": "rn"
+        }, 
+        {
+            "labels": {
+                "en": "Romance (Other)", 
+                "fr": "romanes, autres langues"
+            }, 
+            "type_id": "roa"
+        }, 
+        {
+            "labels": {
+                "en": "Romany", 
+                "fr": "tsigane"
+            }, 
+            "type_id": "rom"
+        }, 
+        {
+            "labels": {
+                "en": "Aromanian; Arumanian; Macedo-Romanian", 
+                "fr": "aroumain; macédo-roumain"
+            }, 
+            "type_id": "rup"
+        }, 
+        {
+            "labels": {
+                "en": "Kinyarwanda", 
+                "fr": "rwanda"
+            }, 
+            "type_id": "rw"
+        }, 
+        {
+            "labels": {
+                "en": "Sanskrit", 
+                "fr": "sanskrit"
+            }, 
+            "type_id": "sa"
+        }, 
+        {
+            "labels": {
+                "en": "Sandawe", 
+                "fr": "sandawe"
+            }, 
+            "type_id": "sad"
+        }, 
+        {
+            "labels": {
+                "en": "Yakut", 
+                "fr": "iakoute"
+            }, 
+            "type_id": "sah"
+        }, 
+        {
+            "labels": {
+                "en": "South American Indian (Other)", 
+                "fr": "indiennes d'Amérique du Sud, autres langues"
+            }, 
+            "type_id": "sai"
+        }, 
+        {
+            "labels": {
+                "en": "Salishan languages", 
+                "fr": "salish, langues"
+            }, 
+            "type_id": "sal"
+        }, 
+        {
+            "labels": {
+                "en": "Samaritan Aramaic", 
+                "fr": "samaritain"
+            }, 
+            "type_id": "sam"
+        }, 
+        {
+            "labels": {
+                "en": "Sasak", 
+                "fr": "sasak"
+            }, 
+            "type_id": "sas"
+        }, 
+        {
+            "labels": {
+                "en": "Santali", 
+                "fr": "santal"
+            }, 
+            "type_id": "sat"
+        }, 
+        {
+            "labels": {
+                "en": "Sardinian", 
+                "fr": "sarde"
+            }, 
+            "type_id": "sc"
+        }, 
+        {
+            "labels": {
+                "en": "Sicilian", 
+                "fr": "sicilien"
+            }, 
+            "type_id": "scn"
+        }, 
+        {
+            "labels": {
+                "en": "Scots", 
+                "fr": "écossais"
+            }, 
+            "type_id": "sco"
+        }, 
+        {
+            "labels": {
+                "en": "Sindhi", 
+                "fr": "sindhi"
+            }, 
+            "type_id": "sd"
+        }, 
+        {
+            "labels": {
+                "en": "Northern Sami", 
+                "fr": "sami du Nord"
+            }, 
+            "type_id": "se"
+        }, 
+        {
+            "labels": {
+                "en": "Selkup", 
+                "fr": "selkoupe"
+            }, 
+            "type_id": "sel"
+        }, 
+        {
+            "labels": {
+                "en": "Semitic (Other)", 
+                "fr": "sémitiques, autres langues"
+            }, 
+            "type_id": "sem"
+        }, 
+        {
+            "labels": {
+                "en": "Sango", 
+                "fr": "sango"
+            }, 
+            "type_id": "sg"
+        }, 
+        {
+            "labels": {
+                "en": "Irish, Old (to 900)", 
+                "fr": "irlandais ancien (jusqu'à 900)"
+            }, 
+            "type_id": "sga"
+        }, 
+        {
+            "labels": {
+                "en": "Sign Languages", 
+                "fr": "langues des signes"
+            }, 
+            "type_id": "sgn"
+        }, 
+        {
+            "labels": {
+                "en": "Shan", 
+                "fr": "chan"
+            }, 
+            "type_id": "shn"
+        }, 
+        {
+            "labels": {
+                "en": "Sinhala; Sinhalese", 
+                "fr": "singhalais"
+            }, 
+            "type_id": "si"
+        }, 
+        {
+            "labels": {
+                "en": "Sidamo", 
+                "fr": "sidamo"
+            }, 
+            "type_id": "sid"
+        }, 
+        {
+            "labels": {
+                "en": "Siouan languages", 
+                "fr": "sioux, langues"
+            }, 
+            "type_id": "sio"
+        }, 
+        {
+            "labels": {
+                "en": "Sino-Tibetan (Other)", 
+                "fr": "sino-tibétaines, autres langues"
+            }, 
+            "type_id": "sit"
+        }, 
+        {
+            "labels": {
+                "en": "Slovak", 
+                "fr": "slovaque"
+            }, 
+            "type_id": "sk"
+        }, 
+        {
+            "labels": {
+                "en": "Slovenian", 
+                "fr": "slovène"
+            }, 
+            "type_id": "sl"
+        }, 
+        {
+            "labels": {
+                "en": "Slavic (Other)", 
+                "fr": "slaves, autres langues"
+            }, 
+            "type_id": "sla"
+        }, 
+        {
+            "labels": {
+                "en": "Samoan", 
+                "fr": "samoan"
+            }, 
+            "type_id": "sm"
+        }, 
+        {
+            "labels": {
+                "en": "Southern Sami", 
+                "fr": "sami du Sud"
+            }, 
+            "type_id": "sma"
+        }, 
+        {
+            "labels": {
+                "en": "Sami languages (Other)", 
+                "fr": "sami, autres langues"
+            }, 
+            "type_id": "smi"
+        }, 
+        {
+            "labels": {
+                "en": "Lule Sami", 
+                "fr": "sami de Lule"
+            }, 
+            "type_id": "smj"
+        }, 
+        {
+            "labels": {
+                "en": "Inari Sami", 
+                "fr": "sami d'Inari"
+            }, 
+            "type_id": "smn"
+        }, 
+        {
+            "labels": {
+                "en": "Skolt Sami", 
+                "fr": "sami skolt"
+            }, 
+            "type_id": "sms"
+        }, 
+        {
+            "labels": {
+                "en": "Shona", 
+                "fr": "shona"
+            }, 
+            "type_id": "sn"
+        }, 
+        {
+            "labels": {
+                "en": "Soninke", 
+                "fr": "soninké"
+            }, 
+            "type_id": "snk"
+        }, 
+        {
+            "labels": {
+                "en": "Somali", 
+                "fr": "somali"
+            }, 
+            "type_id": "so"
+        }, 
+        {
+            "labels": {
+                "en": "Sogdian", 
+                "fr": "sogdien"
+            }, 
+            "type_id": "sog"
+        }, 
+        {
+            "labels": {
+                "en": "Songhai languages", 
+                "fr": "songhai, langues"
+            }, 
+            "type_id": "son"
+        }, 
+        {
+            "labels": {
+                "en": "Albanian", 
+                "fr": "albanais"
+            }, 
+            "type_id": "sq"
+        }, 
+        {
+            "labels": {
+                "en": "Serbian", 
+                "fr": "serbe"
+            }, 
+            "type_id": "sr"
+        }, 
+        {
+            "labels": {
+                "en": "Sranan Tongo", 
+                "fr": "sranan tongo"
+            }, 
+            "type_id": "srn"
+        }, 
+        {
+            "labels": {
+                "en": "Serer", 
+                "fr": "sérère"
+            }, 
+            "type_id": "srr"
+        }, 
+        {
+            "labels": {
+                "en": "Swati", 
+                "fr": "swati"
+            }, 
+            "type_id": "ss"
+        }, 
+        {
+            "labels": {
+                "en": "Nilo-Saharan (Other)", 
+                "fr": "nilo-sahariennes, autres langues"
+            }, 
+            "type_id": "ssa"
+        }, 
+        {
+            "labels": {
+                "en": "Sotho, Southern", 
+                "fr": "sotho du Sud"
+            }, 
+            "type_id": "st"
+        }, 
+        {
+            "labels": {
+                "en": "Sundanese", 
+                "fr": "soundanais"
+            }, 
+            "type_id": "su"
+        }, 
+        {
+            "labels": {
+                "en": "Sukuma", 
+                "fr": "sukuma"
+            }, 
+            "type_id": "suk"
+        }, 
+        {
+            "labels": {
+                "en": "Susu", 
+                "fr": "soussou"
+            }, 
+            "type_id": "sus"
+        }, 
+        {
+            "labels": {
+                "en": "Sumerian", 
+                "fr": "sumérien"
+            }, 
+            "type_id": "sux"
+        }, 
+        {
+            "labels": {
+                "en": "Swahili", 
+                "fr": "swahili"
+            }, 
+            "type_id": "sw"
+        }, 
+        {
+            "labels": {
+                "en": "Classical Syriac"
+            }, 
+            "type_id": "syc"
+        }, 
+        {
+            "labels": {
+                "en": "Syriac", 
+                "fr": "syriaque"
+            }, 
+            "type_id": "syr"
+        }, 
+        {
+            "labels": {
+                "en": "Tamil", 
+                "fr": "tamoul"
+            }, 
+            "type_id": "ta"
+        }, 
+        {
+            "labels": {
+                "en": "Tai (Other)", 
+                "fr": "thaïes, autres langues"
+            }, 
+            "type_id": "tai"
+        }, 
+        {
+            "labels": {
+                "en": "Telugu", 
+                "fr": "télougou"
+            }, 
+            "type_id": "te"
+        }, 
+        {
+            "labels": {
+                "en": "Timne", 
+                "fr": "temne"
+            }, 
+            "type_id": "tem"
+        }, 
+        {
+            "labels": {
+                "en": "Tereno", 
+                "fr": "tereno"
+            }, 
+            "type_id": "ter"
+        }, 
+        {
+            "labels": {
+                "en": "Tetum", 
+                "fr": "tetum"
+            }, 
+            "type_id": "tet"
+        }, 
+        {
+            "labels": {
+                "en": "Tajik", 
+                "fr": "tadjik"
+            }, 
+            "type_id": "tg"
+        }, 
+        {
+            "labels": {
+                "en": "Thai", 
+                "fr": "thaï"
+            }, 
+            "type_id": "th"
+        }, 
+        {
+            "labels": {
+                "en": "Tigrinya", 
+                "fr": "tigrigna"
+            }, 
+            "type_id": "ti"
+        }, 
+        {
+            "labels": {
+                "en": "Tigre", 
+                "fr": "tigré"
+            }, 
+            "type_id": "tig"
+        }, 
+        {
+            "labels": {
+                "en": "Tiv", 
+                "fr": "tiv"
+            }, 
+            "type_id": "tiv"
+        }, 
+        {
+            "labels": {
+                "en": "Turkmen", 
+                "fr": "turkmène"
+            }, 
+            "type_id": "tk"
+        }, 
+        {
+            "labels": {
+                "en": "Tokelau", 
+                "fr": "tokelau"
+            }, 
+            "type_id": "tkl"
+        }, 
+        {
+            "labels": {
+                "en": "Tagalog", 
+                "fr": "tagalog"
+            }, 
+            "type_id": "tl"
+        }, 
+        {
+            "labels": {
+                "en": "Klingon; tlhIngan-Hol", 
+                "fr": "klingon"
+            }, 
+            "type_id": "tlh"
+        }, 
+        {
+            "labels": {
+                "en": "Tlingit", 
+                "fr": "tlingit"
+            }, 
+            "type_id": "tli"
+        }, 
+        {
+            "labels": {
+                "en": "Tamashek", 
+                "fr": "tamacheq"
+            }, 
+            "type_id": "tmh"
+        }, 
+        {
+            "labels": {
+                "en": "Tswana", 
+                "fr": "tswana"
+            }, 
+            "type_id": "tn"
+        }, 
+        {
+            "labels": {
+                "en": "Tonga (Tonga Islands)", 
+                "fr": "tongan (Îles Tonga)"
+            }, 
+            "type_id": "to"
+        }, 
+        {
+            "labels": {
+                "en": "Tonga (Nyasa)", 
+                "fr": "tonga (Nyasa)"
+            }, 
+            "type_id": "tog"
+        }, 
+        {
+            "labels": {
+                "en": "Tok Pisin", 
+                "fr": "tok pisin"
+            }, 
+            "type_id": "tpi"
+        }, 
+        {
+            "labels": {
+                "en": "Tsonga", 
+                "fr": "tsonga"
+            }, 
+            "type_id": "ts"
+        }, 
+        {
+            "labels": {
+                "en": "Tsimshian", 
+                "fr": "tsimshian"
+            }, 
+            "type_id": "tsi"
+        }, 
+        {
+            "labels": {
+                "en": "Tatar", 
+                "fr": "tatar"
+            }, 
+            "type_id": "tt"
+        }, 
+        {
+            "labels": {
+                "en": "Tumbuka", 
+                "fr": "tumbuka"
+            }, 
+            "type_id": "tum"
+        }, 
+        {
+            "labels": {
+                "en": "Tupi languages", 
+                "fr": "tupi, langues"
+            }, 
+            "type_id": "tup"
+        }, 
+        {
+            "labels": {
+                "en": "Altaic (Other)", 
+                "fr": "altaïques, autres langues"
+            }, 
+            "type_id": "tut"
+        }, 
+        {
+            "labels": {
+                "en": "Tuvalu", 
+                "fr": "tuvalu"
+            }, 
+            "type_id": "tvl"
+        }, 
+        {
+            "labels": {
+                "en": "Twi", 
+                "fr": "twi"
+            }, 
+            "type_id": "tw"
+        }, 
+        {
+            "labels": {
+                "en": "Tahitian", 
+                "fr": "tahitien"
+            }, 
+            "type_id": "ty"
+        }, 
+        {
+            "labels": {
+                "en": "Tuvinian", 
+                "fr": "touva"
+            }, 
+            "type_id": "tyv"
+        }, 
+        {
+            "labels": {
+                "en": "Udmurt", 
+                "fr": "oudmourte"
+            }, 
+            "type_id": "udm"
+        }, 
+        {
+            "labels": {
+                "en": "Uighur; Uyghur", 
+                "fr": "ouïgour"
+            }, 
+            "type_id": "ug"
+        }, 
+        {
+            "labels": {
+                "en": "Ugaritic", 
+                "fr": "ougaritique"
+            }, 
+            "type_id": "uga"
+        }, 
+        {
+            "labels": {
+                "en": "Ukrainian", 
+                "fr": "ukrainien"
+            }, 
+            "type_id": "uk"
+        }, 
+        {
+            "labels": {
+                "en": "Umbundu", 
+                "fr": "umbundu"
+            }, 
+            "type_id": "umb"
+        }, 
+        {
+            "labels": {
+                "en": "Undetermined", 
+                "fr": "indéterminée"
+            }, 
+            "type_id": "und"
+        }, 
+        {
+            "labels": {
+                "en": "Urdu", 
+                "fr": "ourdou"
+            }, 
+            "type_id": "ur"
+        }, 
+        {
+            "labels": {
+                "en": "Uzbek", 
+                "fr": "ouszbek"
+            }, 
+            "type_id": "uz"
+        }, 
+        {
+            "labels": {
+                "en": "Vai", 
+                "fr": "vaï"
+            }, 
+            "type_id": "vai"
+        }, 
+        {
+            "labels": {
+                "en": "Venda", 
+                "fr": "venda"
+            }, 
+            "type_id": "ve"
+        }, 
+        {
+            "labels": {
+                "en": "Vietnamese", 
+                "fr": "vietnamien"
+            }, 
+            "type_id": "vi"
+        }, 
+        {
+            "labels": {
+                "en": "Volapük", 
+                "fr": "volapük"
+            }, 
+            "type_id": "vo"
+        }, 
+        {
+            "labels": {
+                "en": "Votic", 
+                "fr": "vote"
+            }, 
+            "type_id": "vot"
+        }, 
+        {
+            "labels": {
+                "en": "Walloon", 
+                "fr": "wallon"
+            }, 
+            "type_id": "wa"
+        }, 
+        {
+            "labels": {
+                "en": "Wakashan languages", 
+                "fr": "wakashennes, langues"
+            }, 
+            "type_id": "wak"
+        }, 
+        {
+            "labels": {
+                "en": "Walamo", 
+                "fr": "walamo"
+            }, 
+            "type_id": "wal"
+        }, 
+        {
+            "labels": {
+                "en": "Waray", 
+                "fr": "waray"
+            }, 
+            "type_id": "war"
+        }, 
+        {
+            "labels": {
+                "en": "Washo", 
+                "fr": "washo"
+            }, 
+            "type_id": "was"
+        }, 
+        {
+            "labels": {
+                "en": "Sorbian languages", 
+                "fr": "sorabes, langues"
+            }, 
+            "type_id": "wen"
+        }, 
+        {
+            "labels": {
+                "en": "Wolof", 
+                "fr": "wolof"
+            }, 
+            "type_id": "wo"
+        }, 
+        {
+            "labels": {
+                "en": "Kalmyk; Oirat", 
+                "fr": "kalmouk; oïrat"
+            }, 
+            "type_id": "xal"
+        }, 
+        {
+            "labels": {
+                "en": "Xhosa", 
+                "fr": "xhosa"
+            }, 
+            "type_id": "xh"
+        }, 
+        {
+            "labels": {
+                "en": "Yao", 
+                "fr": "yao"
+            }, 
+            "type_id": "yao"
+        }, 
+        {
+            "labels": {
+                "en": "Yapese", 
+                "fr": "yapois"
+            }, 
+            "type_id": "yap"
+        }, 
+        {
+            "labels": {
+                "en": "Yiddish", 
+                "fr": "yiddish"
+            }, 
+            "type_id": "yi"
+        }, 
+        {
+            "labels": {
+                "en": "Yoruba", 
+                "fr": "yoruba"
+            }, 
+            "type_id": "yo"
+        }, 
+        {
+            "labels": {
+                "en": "Yupik languages", 
+                "fr": "yupik, langues"
+            }, 
+            "type_id": "ypk"
+        }, 
+        {
+            "labels": {
+                "en": "Zhuang; Chuang", 
+                "fr": "zhuang; chuang"
+            }, 
+            "type_id": "za"
+        }, 
+        {
+            "labels": {
+                "en": "Zapotec", 
+                "fr": "zapotèque"
+            }, 
+            "type_id": "zap"
+        }, 
+        {
+            "labels": {
+                "en": "Zenaga", 
+                "fr": "zenaga"
+            }, 
+            "type_id": "zen"
+        }, 
+        {
+            "labels": {
+                "en": "Zande languages", 
+                "fr": "zandé, langues"
+            }, 
+            "type_id": "znd"
+        }, 
+        {
+            "labels": {
+                "en": "Zulu", 
+                "fr": "zoulou"
+            }, 
+            "type_id": "zu"
+        }, 
+        {
+            "labels": {
+                "en": "Zuni", 
+                "fr": "zuni"
+            }, 
+            "type_id": "zun"
+        }, 
+        {
+            "labels": {
+                "en": "No linguistic content", 
+                "fr": "pas de contenu linguistique"
+            }, 
+            "type_id": "zxx"
+        }, 
+        {
+            "labels": {
+                "en": "Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki", 
+                "fr": "zaza; dimili; dimli; kirdki; kirmanjki; zazaki"
+            }, 
+            "type_id": "zza"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "language"
+}

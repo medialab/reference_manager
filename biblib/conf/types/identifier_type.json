@@ -97,7 +97,7 @@
                 "en": "ISAM : International Standard Audiovisual Number", 
                 "fr": "ISAM : International Standard Audiovisual Number"
             }, 
-            "type_id": "isam"
+            "type_id": "isan"
         }, 
         {
             "labels": {

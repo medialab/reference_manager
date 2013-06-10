@@ -1,0 +1,26 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "type_id": "iso639-1"
+        }, 
+        {
+            "type_id": "iso639-2b"
+        }, 
+        {
+            "type_id": "iso639-3"
+        }, 
+        {
+            "type_id": "rfc3066"
+        }, 
+        {
+            "type_id": "rfc4646"
+        }, 
+        {
+            "type_id": "rfc5646"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "language_authority"
+}
