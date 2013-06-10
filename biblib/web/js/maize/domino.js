@@ -22,7 +22,7 @@
 
 		Note: Require jsonRPC lib
 		Thanks to:
-		https://raw.github.com/datagraph/jquery-jsonrpc/master/jquery.jsonrpc.js
+		https://rawgithub.com/datagraph/jquery-jsonrpc/master/jquery.jsonrpc.js
 
 	*/
 	maize.domino.JsonRPCBuilder = function( model, ns ){
