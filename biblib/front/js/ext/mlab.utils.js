@@ -68,5 +68,21 @@
       res[obj[key]] = obj;
       return res
     }, {});
-  }
+  };
+
+  /**
+   * The package mlab.rpc contains some recurring functions and constants to
+   * facilitate RPC management with domino.js:
+   */
+  mlab.pkg('mlab.rpc');
+  mlab.rpc.type = 'POST';
+  mlab.rpc.contentType = 'application/x-www-form-urlencoded';
+  mlab.rpc.expect = function(data) {
+    return data !== null &&
+      typeof data === 'object' &&
+      !('error' in data);
+  };
+  mlab.rpc.error = function(data) {
+    this.log('An error occurred... \n' + data);
+  };
 })();

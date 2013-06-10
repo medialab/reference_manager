@@ -26,6 +26,7 @@ $(document).ready(function() {
 
   // Domino global settings:
   domino.settings({
+    shortcutPrefix: '::',
     displayTime: true,
     verbose: true,
     strict: true
@@ -192,6 +193,28 @@ $(document).ready(function() {
         setter: 'creatorRoles',
         path: 'children',
         description: 'Loads the list of the available creator roles.'
+      },
+      {
+        id: 'echo',
+        url: 'http://localhost\:8080',
+        description: 'Just a test service to check if RPC works.',
+        type: mlab.rpc.type,
+        error: mlab.rpc.error,
+        expect: mlab.rpc.expect,
+        contentType: mlab.rpc.contentType,
+        data: function(input) {
+          return JSON.stringify({
+            id: 1,
+            jsonrpc: '2.0',
+            method: 'echo',
+            params: [
+              input.message
+            ]
+          });
+        },
+        success: function(data) {
+          this.log('ECHO FROM RPC', data.result);
+        },
       }
     ]
   });
