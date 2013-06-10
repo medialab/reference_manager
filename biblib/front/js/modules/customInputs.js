@@ -31,6 +31,7 @@
 
     _dom = $(
       '<fieldset class="CreatorField">' +
+        '<div class="message"></div>' +
         '<label>' + obj.labels[blf.assets.lang] + ' :</label>' +
         '<div class="creators-container">' +
           '<ul class="creators-list"></ul>' +
@@ -98,7 +99,14 @@
      * @return {string} Returns true if the content id valid, and false else.
      */
     function _validate() {
-      // TODO: Check empty lines and required.
+      var data = _getData();
+
+      if (obj.required && (!data || !data.length)) {
+        $('.message', this.dom).text('At least one creator has to be specified.');
+        return false;
+      }
+
+      $('.message', this.dom).empty();
       return true;
     }
 
@@ -139,7 +147,7 @@
      *
      * @return {*} The data.
      */
-    function _get() {
+    function _getData() {
       var creators = [];
 
       // Parse line and form data:
@@ -169,7 +177,7 @@
       return {
         dom: _dom,
         fill: _fill,
-        getData: _get,
+        getData: _getData,
         validate: _validate,
         propertyObject: obj,
         property: obj.property
@@ -205,6 +213,7 @@
 
     _dom = $(
       '<fieldset class="LanguageValueField">' +
+        '<div class="message"></div>' +
         '<label>' + obj.labels[blf.assets.lang] + ' :</label>' +
         '<div class="languages-container">' +
           '<ul class="languages-list"></ul>' +
@@ -293,7 +302,14 @@
      * @return {string} Returns true if the content id valid, and false else.
      */
     function _validate() {
-      // TODO: Check empty lines and required.
+      var data = _getData();
+
+      if (obj.required && (!data || !data.length)) {
+        $('.message', this.dom).text('At least one language has to be added.');
+        return false;
+      }
+
+      $('.message', this.dom).empty();
       return true;
     }
 
@@ -312,15 +328,26 @@
      *
      * @return {*} The data.
      */
-    function _get() {
-      // TODO
+    function _getData() {
+      var languages = [];
+
+      // Parse line and form data:
+      $('ul.languages-list > li', _dom).each(function() {
+        var li = $(this);
+
+        languages.push({
+          // TODO
+        });
+      });
+
+      return languages.length ? languages : undefined;
     }
 
     this.getComponent = function() {
       return {
         dom: _dom,
         fill: _fill,
-        getData: _get,
+        getData: _getData,
         validate: _validate,
         propertyObject: obj,
         property: obj.property

@@ -66,6 +66,7 @@
                 property: obj.property,
                 dom: $(
                   '<fieldset class="CharField">' +
+                    '<div class="message"></div>' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
                     '<input class="col-6" name="' + obj.property + '" type="text" />' +
                   '</fieldset>'
@@ -78,6 +79,7 @@
                 property: obj.property,
                 dom: $(
                   '<fieldset class="DateField">' +
+                    '<div class="message"></div>' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
                     '<input class="col-6" name="' + obj.property + '" type="date" />' +
                   '</fieldset>'
@@ -90,6 +92,7 @@
                 property: obj.property,
                 dom: $(
                   '<fieldset class="IntegerField">' +
+                    '<div class="message"></div>' +
                     '<label for="' + obj.property + '"">' + obj.labels[blf.assets.lang] + ' :</label>' +
                     '<input class="col-6" name="' + obj.property + '" type="number" />' +
                   '</fieldset>'
@@ -110,20 +113,35 @@
         return o.dom;
       }));
 
-      $('<button class="validate-button">Validate</button>').click(function() {
-        // TODO: Deal with both case.
-        if (_components.some(function(comp) {
-          return comp.validate ? !comp.validate() : !_defaultMethods.validate.call(comp);
-        }))
-          console.log('not valid');
-        else
-          console.log('Data:', getData());
-      }).appendTo($('.create-form', _html));
+      $('<button class="validate-button">Validate</button>').click(validate).appendTo($('.create-form', _html));
     }
 
     function restart() {
       $('.create-form', _html).empty().attr('hidden', 'true');
       $('.select-field', _html).attr('hidden', null);
+    }
+
+    /**
+     * This method checks if values entered in inputs by the user are valid. If
+     * so, then an event will be dspatched containing the well-formed data.
+     */
+    function validate() {
+      var invalid = 0;
+
+      _components.some(function(comp) {
+        var isValid =
+          comp.validate ?
+            !comp.validate() :
+            !_defaultMethods.validate.call(comp);
+
+        if (!isValid)
+          invalid++;
+      });
+
+      if (invalid === 0)
+        _self.dispatchEvent('validateEntry', {
+          entry: getData()
+        });
     }
 
     /**
@@ -211,6 +229,13 @@
           _defaultMethods.getData.call(this)) !== undefined;
       else
         isValid = true;
+
+      // Display a short message if there is no value and the property is
+      // required:
+      if (!isValid)
+        $('.message', this.dom).text('This field has to be specified.');
+      else
+        $('.message', this.dom).empty();
 
       return isValid;
     }
