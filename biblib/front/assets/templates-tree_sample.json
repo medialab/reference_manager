@@ -1,0 +1,27 @@
+{
+  "name": "",
+  "bundle": true,
+  "children": [
+    {
+      "name": "Text",
+      "bundle": true,
+      "value": 8,
+      "children": [
+        {
+          "name": "Article",
+          "bundle": true,
+          "children": [
+            {
+              "name": "JournalArticle",
+              "bundle": true,
+              "value": 3
+            }
+          ]
+        },
+        {
+          "name": "Book"
+        }
+      ]
+    }
+  ]
+}

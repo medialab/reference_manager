@@ -1,0 +1,106 @@
+<html>
+<head>
+  <title>BibLib Front | Test 1</title>
+  <meta charset="UTF-8" />
+
+  <!-- External JS dependencies -->
+  <script src="js/ext/jquery.min.js"></script>
+  <script src="js/ext/domino.min.js"></script>
+
+  <!-- MédiaLab utils -->
+  <script src="js/ext/mlab.utils.js"></script>
+
+  <!-- BibLib front -->
+  <script src="js/blf.control.js"></script>
+  <script src="js/blf.layout.js"></script>
+  <script src="js/modules/createPanel.js"></script>
+  <script src="js/modules/customInputs.js"></script>
+
+  <!-- BibLib style -->
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 12px;
+    }
+
+    label {
+      width: 200px;
+      display: inline-block;
+      margin: 5px 0;
+    }
+
+    fieldset {
+      border: none;
+      padding: 1px;
+    }
+
+    input {
+      margin: 2px;
+      margin-right: 5px;
+    }
+
+    select {
+      margin: 2px;
+      margin-right: 5px;
+    }
+
+    textarea {
+      width: 180px;
+      height: 120px;
+      resize: vertical;
+      margin: 2px;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+
+    /* 6 column grid */
+    .col-1 {
+      width: 55px;
+    }
+
+    .col-2 {
+      width: 110px;
+    }
+
+    .col-3 {
+      width: 161px;
+    }
+
+    .col-4 {
+      width: 225px;
+    }
+
+    .col-6 {
+      width: 340px;
+    }
+  </style>
+  <link rel="stylesheet" href="css/customInputs.css">
+</head>
+<body>
+  <div id="layout">
+    <div id="nav">
+      <button data-action="create">Add entry</button>
+      <button data-action="search">Search entry</button>
+    </div>
+    <div id="panels">
+      <div data-panel="create" hidden>
+        <div class="create-form">
+          <!-- The form has to be filled with components depending of the
+               field. This will be done in JavaScript, from external data. -->
+        </div>
+        <div class="select-field">
+          <!-- Here will be represented the tree of the different fields. It
+               will also be done in JavaScript, from external data. -->
+        </div>
+      </div>
+      <div data-panel="search" hidden>
+        <div class="search-form">
+          <input type="search" placeholder="Type something to search...">
+          <button class="validate">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
