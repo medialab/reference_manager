@@ -127,10 +127,10 @@ def cite(document, format):
     if part_page_end or part_page_end:
         result += ". "
 
-    # medium of publication, date_last_accessed, remote_url
+    # medium of publication, date_last_accessed, url
     medium_of_publication = None
     date_last_accessed = None
-    remote_url = None
+    url = None
     if "medium" in document:
         medium_of_publication = document["medium"]
 
@@ -138,9 +138,9 @@ def cite(document, format):
         medium_of_publication = document["rec_type_description"]
 
     if "resources" in document and len(document["resources"]) > 0:
-        if "remote_url" in document["resources"][0]:
-            remote_url = document["resources"][0]["remote_url"]
-        if not medium_of_publication and remote_url:
+        if "url" in document["resources"][0]:
+            url = document["resources"][0]["url"]
+        if not medium_of_publication and url:
             medium_of_publication = "Web"
         if "date_last_accessed" in document["resources"][0]:
             date_last_accessed = format_date_last_accessed(document["resources"][0]["date_last_accessed"])
@@ -152,8 +152,8 @@ def cite(document, format):
         result += u"<span class=\"date_last_accessed\">{0}</span>".format(date_last_accessed)
         result += ". "
 
-    if remote_url:
-        result += u"<span class=\"remote_url\">{0}</span>".format(format_url(remote_url))
+    if url:
+        result += u"<span class=\"url\">{0}</span>".format(format_url(url))
 
     print result
     return result

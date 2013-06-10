@@ -51,7 +51,7 @@ Nous avons défini le détournement d'EndNote suivant afin d'enregistrer les don
 - EDITEUR : Publisher : /publisher/style : publisher
 - LIEU DE PUBLICATION : Place Published : /pub-location/style : publisher_place
 - véritable archive bruno latour : Data Base provider : /remote-database-provider/style
-- ADRESSE SITE WEB : URL : /urls/related-urls/url/style : resource/remote_url
+- ADRESSE SITE WEB : URL : /urls/related-urls/url/style : resource/url
 - DATE D'ACCES AU SITE : Access Date : /access-date/style : resource/date_last_accessed
 - COPYRIGHT : Name of Database : /remote-database-name/style : rights/copyright_holder
 

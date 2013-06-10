@@ -152,7 +152,6 @@ EndNote XML File:206: No entity in creator
 EndNote XML File:509: No entity in creator
 EndNote XML File:509: No entity in creator
 EndNote XML File:126: No entity in creator
-EndNote XML File:126: Empty title in is_part_of
 EndNote XML File:363: No entity in creator
 EndNote XML File:224: No entity in creator
 EndNote XML File:19: No entity in creator
@@ -389,7 +388,6 @@ EndNote XML File:729: No entity in creator
 EndNote XML File:193: No entity in creator
 EndNote XML File:595: No entity in creator
 EndNote XML File:595: No entity in creator
-EndNote XML File:517: Empty date_issued
 EndNote XML File:517: No entity in creator
 EndNote XML File:98: No entity in creator
 EndNote XML File:182: No entity in creator
@@ -935,6 +933,7 @@ EndNote XML File:537: No entity in creator
 EndNote XML File:376: No entity in creator
 EndNote XML File:424: No entity in creator
 EndNote XML File:424: No entity in creator
+EndNote XML File:736: No entity in creator
 EndNote XML File:386: No entity in creator
 EndNote XML File:386: No entity in creator
 EndNote XML File:386: No entity in creator
@@ -1024,7 +1023,6 @@ EndNote XML File:365: No entity in creator
 EndNote XML File:197: No entity in creator
 EndNote XML File:197: No entity in creator
 EndNote XML File:127: No entity in creator
-EndNote XML File:127: Empty title in is_part_of
 EndNote XML File:300: No entity in creator
 EndNote XML File:300: No entity in creator
 EndNote XML File:300: No entity in creator

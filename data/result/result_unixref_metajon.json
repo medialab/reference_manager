@@ -40,7 +40,7 @@
           {
             "rec_class": "Resource", 
             "rec_metajson": 1, 
-            "remote_url": "http://www.sciencemag.org/cgi/doi/10.1126/science.275.5304.1320"
+            "url": "http://www.sciencemag.org/cgi/doi/10.1126/science.275.5304.1320"
           }
         ], 
         "title": "Isolation of a Common Receptor for Coxsackie B Viruses and Adenoviruses 2 and 5"
@@ -86,7 +86,7 @@
           {
             "rec_class": "Resource", 
             "rec_metajson": 1, 
-            "remote_url": "http://journals.ametsoc.org/doi/abs/10.1175/1520-0485%282002%29032%3C0870%3ACT%3E2.0.CO%3B2"
+            "url": "http://journals.ametsoc.org/doi/abs/10.1175/1520-0485%282002%29032%3C0870%3ACT%3E2.0.CO%3B2"
           }
         ], 
         "title": "Chaotic Tides*"
