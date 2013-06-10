@@ -705,20 +705,6 @@
             "children": [
                 {
                     "labels": {
-                        "en": "Audio book",
-                        "fr": "Livre audio"
-                    },
-                    "type_id": "AudioBook"
-                },
-                {
-                    "labels": {
-                        "en": "Audio broadcast",
-                        "fr": "Emission de radio"
-                    },
-                    "type_id": "AudioBroadcast"
-                },
-                {
-                    "labels": {
                         "en": "Audio recording",
                         "fr": "Enregistrement sonore"
                     },
@@ -730,6 +716,19 @@
                         "fr": "Enregistrement musical"
                     },
                     "type_id": "MusicRecording"
+                },
+                {
+                    "labels": {
+                        "en": "Audio broadcast",
+                        "fr": "Emission de radio"
+                    },
+                    "type_id": "AudioBroadcast"
+                },                {
+                    "labels": {
+                        "en": "Audio book",
+                        "fr": "Livre audio"
+                    },
+                    "type_id": "AudioBook"
                 }
             ],
             "labels": {
@@ -743,6 +742,13 @@
             "children": [
                 {
                     "labels": {
+                        "en": "Video recording",
+                        "fr": "Images anim\u00e9es"
+                    },
+                    "type_id": "VideoRecording"
+                },
+                {
+                    "labels": {
                         "en": "Film",
                         "fr": "Film"
                     },
@@ -754,13 +760,6 @@
                         "fr": "Emission de t\u00e9l\u00e9vision"
                     },
                     "type_id": "VideoBroadcast"
-                },
-                {
-                    "labels": {
-                        "en": "Video recording",
-                        "fr": "Images anim\u00e9es"
-                    },
-                    "type_id": "VideoRecording"
                 }
             ],
             "labels": {

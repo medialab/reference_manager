@@ -62,12 +62,12 @@
                         }
                     });
                 });
-                $("input#types_button").click(function() {
-                    $.jsonRPC.request("types", {
+                $("input#type_button").click(function() {
+                    $.jsonRPC.request("type", {
                         //params : ["identifier_type","fr"],
-                        params : [$("input#types_input").val(),"fr"],
+                        params : [$("input#type_input").val(),"fr"],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("p#types_result"));
+                            $("<p />").text(data.result).appendTo($("p#type_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -156,20 +156,20 @@
         <p>Results :</p>
         <pre id="citation_result"></pre>
 
-        <h2>Method types</h2>
-        <p><label for="types_input">Type identifier (type_id)</label> : 
-            <input type="text" name="types_input" id="types_input">
+        <h2>Method type</h2>
+        <p><label for="type_input">Type identifier (type_id)</label> : 
+            <input type="text" name="type_input" id="type_input">
             example : identifier_type
         </p>
         <p>
-            <input name="types_button" id="types_button" value="Send types request" type="button" />
+            <input name="type_button" id="type_button" value="Send type request" type="button" />
         </p>
         <p>Results :</p>
-        <p id="types_result"></p>
+        <p id="type_result"></p>
 
         <h2>Method uifields</h2>
         <p><label for="uifields_input">Document type (rec_type)</label> : 
-            <input type="text" name="types_input" id="uifields_input">
+            <input type="text" name="type_input" id="uifields_input">
             example : Book
         </p>
         <p>
@@ -180,7 +180,7 @@
 
         <h2>Method search</h2>
         <p><label for="search_input">MongoDB query</label> : 
-            <input type="text" name="types_input" id="search_input">
+            <input type="text" name="type_input" id="search_input">
             example : {"rec_type": "Book"}
         </p>
         <p>

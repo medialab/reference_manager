@@ -120,15 +120,36 @@ class References_repository(jsonrpc.JSONRPC):
         #json_query = json.loads(query)
         return self.format_bson(repository_service.search_documents(None, query))
 
-    def jsonrpc_types(self, type_id, language):
-        """ search for one or more types from the repository
+    def jsonrpc_type(self, type_id, language):
+        """ search for one types from the repository
             params:
-                - type_id: types list identifier
+                - type_id: type identifier
                 - language: language for label and description
-            return the asked types (in JSON)
+            return the asked type (in JSON)
         """
         # todo filter LanguageValue by language, send only children
-        return self.format_bson(repository_service.get_type(None, type_id))
+        type_dict = repository_service.get_type(None, type_id)
+        self.type_language_adaptation(type_dict, language)
+        return self.format_bson(type_dict)
+
+    def type_language_adaptation(self, type_dict, language):
+        if type_dict and language:
+            self.key_language_adaptation(type_dict, "labels", "label", language)
+            self.key_language_adaptation(type_dict, "descriptions", "description", language)
+            if "children" in type_dict:
+                for child in type_dict["children"]:
+                    self.type_language_adaptation(child, language)
+
+    def key_language_adaptation(self, type_dict, key_old, key_new, language):
+        if key_old and key_new:
+            if key_old in type_dict:
+                result = ""
+                if language in type_dict[key_old]:
+                    result = type_dict[key_old][language]
+                else:
+                    result = type_dict[key_old]["en"]
+                del type_dict[key_old]
+                type_dict[key_new] = result
 
     def jsonrpc_uifields(self, rec_type, language):
         """ search for one or more uifields for user interface
