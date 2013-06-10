@@ -169,6 +169,7 @@ $(document).ready(function() {
       }
     ],
     services: [
+      // Test services (on static JSONS)
       {
         id: 'loadField',
         description: 'Loads the template of a specified field.',
@@ -194,6 +195,8 @@ $(document).ready(function() {
         path: 'children',
         description: 'Loads the list of the available creator roles.'
       },
+
+      // RPC services
       {
         id: 'echo',
         url: 'http://localhost\:8080',
@@ -214,7 +217,29 @@ $(document).ready(function() {
         },
         success: function(data) {
           this.log('ECHO FROM RPC', data.result);
+        }
+      },
+      {
+        id: 'search',
+        url: 'http://localhost\:8080',
+        description: 'A service to search on existing entries.',
+        type: mlab.rpc.type,
+        error: mlab.rpc.error,
+        expect: mlab.rpc.expect,
+        contentType: mlab.rpc.contentType,
+        data: function(input) {
+          return JSON.stringify({
+            id: 1,
+            jsonrpc: '2.0',
+            method: 'echo',
+            params: [
+              input.query
+            ]
+          });
         },
+        success: function(data) {
+          this.log('SEARCH FROM RPC', data.result);
+        }
       }
     ]
   });

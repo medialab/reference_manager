@@ -25,6 +25,11 @@
       [ $('[data-panel="create"]', _panels) ]
     ));
 
+    _modules.push(blf.control.addModule(
+      blf.modules.searchPanel,
+      [ $('[data-panel="search"]', _panels) ]
+    ));
+
     // Listen to the controller:
     this.triggers.events.modeUpdated = function(d) {
       var mode = d.get('mode');
