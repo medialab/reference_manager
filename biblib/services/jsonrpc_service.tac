@@ -120,18 +120,6 @@ class References_repository(jsonrpc.JSONRPC):
         #json_query = json.loads(query)
         return self.format_bson(repository_service.search_documents(None, query))
 
-    def jsonrpc_type(self, type_id, language):
-        """ search for one types from the repository
-            params:
-                - type_id: type identifier
-                - language: language for label and description
-            return the asked type (in JSON)
-        """
-        # todo filter LanguageValue by language, send only children
-        type_dict = repository_service.get_type(None, type_id)
-        self.type_language_adaptation(type_dict, language)
-        return self.format_bson(type_dict)
-
     def type_language_adaptation(self, type_dict, language):
         if type_dict and language:
             self.key_language_adaptation(type_dict, "labels", "label", language)
@@ -151,6 +139,17 @@ class References_repository(jsonrpc.JSONRPC):
                 del type_dict[key_old]
                 type_dict[key_new] = result
 
+    def jsonrpc_type(self, type_id, language):
+        """ search for one types from the repository
+            params:
+                - type_id: type identifier
+                - language: language for label and description
+            return the asked type (in JSON)
+        """
+        type_dict = repository_service.get_type(None, type_id)
+        self.type_language_adaptation(type_dict, language)
+        return self.format_bson(type_dict)
+
     def jsonrpc_uifields(self, rec_type, language):
         """ search for one or more uifields for user interface
             from the repository
@@ -159,8 +158,9 @@ class References_repository(jsonrpc.JSONRPC):
                 - language: language for label and description
             return the asked uifields for user interface (in JSON)
         """
-        # todo filter LanguageValue by language
-        return self.format_bson(repository_service.get_uifield(None, rec_type))
+        uifield_dict = repository_service.get_uifield(None, rec_type)
+        self.type_language_adaptation(uifield_dict, language)
+        return self.format_bson(uifield_dict)
 
 
 application = service.Application("References repository web service")

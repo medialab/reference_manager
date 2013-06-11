@@ -1,7 +1,4 @@
 {
-    "rec_metajson": 1,
-    "rec_class": "Field",
-    "rec_type": "Book",
     "children": [
         {
             "labels": {
@@ -26,7 +23,7 @@
         {
             "labels": {
                 "en": "Creators",
-                "fr": "Créateurs"
+                "fr": "Cr\u00e9ateurs"
             },
             "multiple": true,
             "property": "creators",
@@ -57,7 +54,7 @@
         {
             "labels": {
                 "en": "Abstracts",
-                "fr": "Resumés"
+                "fr": "Resum\u00e9s"
             },
             "multiple": true,
             "property": "descriptions",
@@ -68,7 +65,7 @@
         {
             "labels": {
                 "en": "Keywords",
-                "fr": "Mots-clés"
+                "fr": "Mots-cl\u00e9s"
             },
             "multiple": true,
             "property": "keywords",
@@ -113,10 +110,18 @@
                 "en": "ISBN",
                 "fr": "ISBN"
             },
-            "property": "identifier_isbn",
+            "multiple": true,
+            "property": "identifiers",
             "required": false,
+            "template": {
+                "id_type": "issn",
+                "value": "$"
+            },
             "type_data": "text",
             "type_ui": "CharField"
         }
-    ]
+    ],
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "Book"
 }
