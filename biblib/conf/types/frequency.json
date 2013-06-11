@@ -1,0 +1,145 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "Annual", 
+                "fr": "Annuel"
+            }, 
+            "major": true, 
+            "type_id": "Annual"
+        }, 
+        {
+            "labels": {
+                "en": "Bimonthly", 
+                "fr": "Bimensuel"
+            }, 
+            "major": true, 
+            "type_id": "Bimonthly"
+        }, 
+        {
+            "labels": {
+                "en": "Semiweekly", 
+                "fr": "Semi-hebdomadaire"
+            }, 
+            "major": true, 
+            "type_id": "Semiweekly"
+        }, 
+        {
+            "labels": {
+                "en": "Daily", 
+                "fr": "Journalier"
+            }, 
+            "major": true, 
+            "type_id": "Daily"
+        }, 
+        {
+            "labels": {
+                "en": "Biweekly", 
+                "fr": "Bihebdomadaire"
+            }, 
+            "major": true, 
+            "type_id": "Biweekly"
+        }, 
+        {
+            "labels": {
+                "en": "Semiannual", 
+                "fr": "Semi-annuel"
+            }, 
+            "major": true, 
+            "type_id": "Semiannual"
+        }, 
+        {
+            "labels": {
+                "en": "Biennial", 
+                "fr": "Biennal"
+            }, 
+            "major": true, 
+            "type_id": "Biennial"
+        }, 
+        {
+            "labels": {
+                "en": "Triennial", 
+                "fr": "Triennale"
+            }, 
+            "major": true, 
+            "type_id": "Triennial"
+        }, 
+        {
+            "labels": {
+                "en": "Three times a week", 
+                "fr": "Trois fois par semaine"
+            }, 
+            "major": true, 
+            "type_id": "Three times a week"
+        }, 
+        {
+            "labels": {
+                "en": "Three times a month", 
+                "fr": "Trois fois par mois"
+            }, 
+            "major": true, 
+            "type_id": "Three times a month"
+        }, 
+        {
+            "labels": {
+                "en": "Continuously updated", 
+                "fr": "Continuellement mis à jour"
+            }, 
+            "major": true, 
+            "type_id": "Continuously updated"
+        }, 
+        {
+            "labels": {
+                "en": "Monthly", 
+                "fr": "Mensuel"
+            }, 
+            "major": true, 
+            "type_id": "Monthly"
+        }, 
+        {
+            "default": true, 
+            "labels": {
+                "en": "Quarterly", 
+                "fr": "Trimestriel"
+            }, 
+            "major": true, 
+            "type_id": "Quarterly"
+        }, 
+        {
+            "labels": {
+                "en": "Semimonthly", 
+                "fr": "Semi-mensuel"
+            }, 
+            "major": true, 
+            "type_id": "Semimonthly"
+        }, 
+        {
+            "labels": {
+                "en": "Three times a year", 
+                "fr": "Trois fois par an"
+            }, 
+            "major": true, 
+            "type_id": "Three times a year"
+        }, 
+        {
+            "labels": {
+                "en": "Weekly", 
+                "fr": "Hebdomadaire"
+            }, 
+            "major": true, 
+            "type_id": "Weekly"
+        }, 
+        {
+            "labels": {
+                "en": "Completely irregular", 
+                "fr": "Complétement irrégulier"
+            }, 
+            "major": true, 
+            "type_id": "Completely irregular"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "frequency"
+}
