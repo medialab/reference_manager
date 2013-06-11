@@ -20,6 +20,7 @@
                 "en": "Author of afterword, colophon, etc.", 
                 "fr": "Postface"
             }, 
+            "major": true, 
             "type_id": "aft"
         }, 
         {
@@ -111,6 +112,7 @@
                 "en": "Author of introduction, etc.", 
                 "fr": "Préface"
             }, 
+            "major": true, 
             "type_id": "aui"
         }, 
         {
@@ -121,10 +123,12 @@
             "type_id": "aus"
         }, 
         {
+            "default": true, 
             "labels": {
                 "en": "Author", 
                 "fr": "Auteur"
             }, 
+            "major": true, 
             "type_id": "aut"
         }, 
         {
@@ -223,6 +227,7 @@
                 "en": "Commentator", 
                 "fr": "Commentateur"
             }, 
+            "major": true, 
             "type_id": "cmm"
         }, 
         {
@@ -342,6 +347,7 @@
                 "en": "Corrector", 
                 "fr": "Correcteur imprimés"
             }, 
+            "major": true, 
             "type_id": "crr"
         }, 
         {
@@ -370,6 +376,7 @@
                 "en": "Contributor", 
                 "fr": "Collaborateur"
             }, 
+            "major": true, 
             "type_id": "ctb"
         }, 
         {
@@ -384,6 +391,7 @@
                 "en": "Cartographer", 
                 "fr": "Cartographe"
             }, 
+            "major": true, 
             "type_id": "ctg"
         }, 
         {
@@ -531,6 +539,7 @@
                 "en": "Dubious author", 
                 "fr": "Auteur incertain/supposé"
             }, 
+            "major": true, 
             "type_id": "dub"
         }, 
         {
@@ -538,6 +547,7 @@
                 "en": "Editor", 
                 "fr": "Éditeur scientifique"
             }, 
+            "major": true, 
             "type_id": "edt"
         }, 
         {
@@ -636,6 +646,7 @@
                 "en": "Illustrator", 
                 "fr": "Illustrateur"
             }, 
+            "major": true, 
             "type_id": "ill"
         }, 
         {
@@ -678,6 +689,7 @@
                 "en": "Interviewee", 
                 "fr": "Personne interviewée"
             }, 
+            "major": true, 
             "type_id": "ive"
         }, 
         {
@@ -685,6 +697,7 @@
                 "en": "Interviewer", 
                 "fr": "Intervieweur"
             }, 
+            "major": true, 
             "type_id": "ivr"
         }, 
         {
@@ -839,6 +852,7 @@
                 "en": "Organizer of meeting", 
                 "fr": "Organisateur d'une réunion"
             }, 
+            "major": true, 
             "type_id": "orm"
         }, 
         {
@@ -846,6 +860,7 @@
                 "en": "Other", 
                 "fr": "Autre"
             }, 
+            "major": true, 
             "type_id": "oth"
         }, 
         {
@@ -867,6 +882,7 @@
                 "en": "Publishing director", 
                 "fr": "Directeur de publication ou de collection"
             }, 
+            "major": true, 
             "type_id": "pbd"
         }, 
         {
@@ -1035,6 +1051,7 @@
                 "en": "Reviewer", 
                 "fr": "Critique / Membre du comité de lecture"
             }, 
+            "major": true, 
             "type_id": "rev"
         }, 
         {
@@ -1063,6 +1080,7 @@
                 "en": "Research team head", 
                 "fr": "Directeur d'équipe de recherche"
             }, 
+            "major": true, 
             "type_id": "rth"
         }, 
         {
@@ -1070,6 +1088,7 @@
                 "en": "Research team member", 
                 "fr": "Membre d'équipe de recherche"
             }, 
+            "major": true, 
             "type_id": "rtm"
         }, 
         {
@@ -1126,6 +1145,7 @@
                 "en": "Speaker", 
                 "fr": "Conférencier"
             }, 
+            "major": true, 
             "type_id": "spk"
         }, 
         {
@@ -1133,6 +1153,7 @@
                 "en": "Sponsor", 
                 "fr": "Commanditaire"
             }, 
+            "major": true, 
             "type_id": "spn"
         }, 
         {
@@ -1161,6 +1182,7 @@
                 "en": "Thesis advisor", 
                 "fr": "Directeur de thèse ou de mémoire"
             }, 
+            "major": true, 
             "type_id": "ths"
         }, 
         {
@@ -1175,6 +1197,7 @@
                 "en": "Translator", 
                 "fr": "Traducteur"
             }, 
+            "major": true, 
             "type_id": "trl"
         }, 
         {

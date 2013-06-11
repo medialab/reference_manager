@@ -538,6 +538,7 @@
                 "en": "Bengali", 
                 "fr": "bengali"
             }, 
+            "major": true, 
             "type_id": "bn"
         }, 
         {
@@ -1294,6 +1295,7 @@
                 "en": "Hindi", 
                 "fr": "hindi"
             }, 
+            "major": true, 
             "type_id": "hi"
         }, 
         {
@@ -1518,6 +1520,7 @@
                 "en": "Javanese", 
                 "fr": "javanais"
             }, 
+            "major": true, 
             "type_id": "jv"
         }, 
         {
@@ -3232,6 +3235,7 @@
                 "en": "Vietnamese", 
                 "fr": "vietnamien"
             }, 
+            "major": true, 
             "type_id": "vi"
         }, 
         {

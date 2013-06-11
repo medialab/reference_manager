@@ -9,20 +9,6 @@
                     "children": [
                         {
                             "labels": {
-                                "en": "Note to a legal judgment",
-                                "fr": "Commentaire d'arr\u00eat"
-                            },
-                            "type_id": "Annotation"
-                        },
-                        {
-                            "labels": {
-                                "en": "Interview",
-                                "fr": "Entretien"
-                            },
-                            "type_id": "InterviewArticle"
-                        },
-                        {
-                            "labels": {
                                 "en": "Journal Article",
                                 "fr": "Article de revue"
                             },
@@ -44,12 +30,27 @@
                         },
                         {
                             "labels": {
-                                "en": "Periodical issue",
-                                "fr": "Num\u00e9ro de p\u00e9riodique"
+                                "en": "Note to a legal judgment",
+                                "fr": "Commentaire d'arr\u00eat"
                             },
-                            "type_id": "PeriodicalIssue"
+                            "type_id": "Annotation"
                         },
                         {
+                            "labels": {
+                                "en": "Interview",
+                                "fr": "Entretien"
+                            },
+                            "type_id": "InterviewArticle"
+                        },
+                        {
+                            "labels": {
+                                "en": "Book review",
+                                "fr": "Compte-rendu d\u2019ouvrage"
+                            },
+                            "type_id": "BookReview"
+                        },
+                        {
+                            "deprecated": true,
                             "labels": {
                                 "en": "Article review",
                                 "fr": "Compte-rendu d\u2019article"
@@ -58,10 +59,10 @@
                         },
                         {
                             "labels": {
-                                "en": "Book review",
-                                "fr": "Compte-rendu d\u2019ouvrage"
+                                "en": "Periodical issue",
+                                "fr": "Num\u00e9ro de p\u00e9riodique"
                             },
-                            "type_id": "BookReview"
+                            "type_id": "PeriodicalIssue"
                         }
                     ],
                     "labels": {
@@ -118,7 +119,7 @@
                     ],
                     "labels": {
                         "en": "Book",
-                        "fr": "Book"
+                        "fr": "Livre"
                     },
                     "type_id": "BookBundle"
                 },
@@ -131,6 +132,20 @@
                                 "fr": "Partie ou chapitre de livre"
                             },
                             "type_id": "BookPart"
+                        },
+                        {
+                            "labels": {
+                                "en": "Off-print",
+                                "fr": "Tir\u00e9 \u00e0 part"
+                            },
+                            "type_id": "OffPrint"
+                        },
+                        {
+                            "labels": {
+                                "en": "Excerpt",
+                                "fr": "Extrait"
+                            },
+                            "type_id": "Excerpt"
                         },
                         {
                             "labels": {
@@ -152,20 +167,6 @@
                                 "fr": "Article d'encyclop\u00e9die"
                             },
                             "type_id": "EncyclopediaArticle"
-                        },
-                        {
-                            "labels": {
-                                "en": "Excerpt",
-                                "fr": "Extrait"
-                            },
-                            "type_id": "Excerpt"
-                        },
-                        {
-                            "labels": {
-                                "en": "Off-print?",
-                                "fr": "Tir\u00e9 \u00e0 part"
-                            },
-                            "type_id": "OffPrint"
                         }
                     ],
                     "labels": {
@@ -179,17 +180,17 @@
                     "children": [
                         {
                             "labels": {
-                                "en": "Doctoral Thesis",
-                                "fr": "Th\u00e8se de doctorat"
-                            },
-                            "type_id": "DoctoralThesis"
-                        },
-                        {
-                            "labels": {
                                 "en": "Master thesis",
                                 "fr": "M\u00e9moire universitaire"
                             },
                             "type_id": "MasterThesis"
+                        },
+                        {
+                            "labels": {
+                                "en": "Doctoral Thesis",
+                                "fr": "Th\u00e8se de doctorat"
+                            },
+                            "type_id": "DoctoralThesis"
                         },
                         {
                             "labels": {
@@ -210,27 +211,10 @@
                     "children": [
                         {
                             "labels": {
-                                "en": "Web entity",
-                                "fr": "Entit\u00e9 Web"
+                                "en": "Web cluster",
+                                "fr": "Regroupement de sites"
                             },
-                            "type_id": "WebEntity"
-                        },
-                        {
-                            "labels": {
-                                "en": "Web page",
-                                "fr": "Page web"
-                            },
-                            "type_id": "WebPage"
-                        },
-                        {
                             "type_id": "WebCluster"
-                        },
-                        {
-                            "labels": {
-                                "en": "Web Section",
-                                "fr": "Partie d'un site web"
-                            },
-                            "type_id": "WebSection"
                         },
                         {
                             "labels": {
@@ -241,6 +225,20 @@
                         },
                         {
                             "labels": {
+                                "en": "Web Section",
+                                "fr": "Partie d'un site web"
+                            },
+                            "type_id": "WebSection"
+                        },
+                        {
+                            "labels": {
+                                "en": "Web page",
+                                "fr": "Page web"
+                            },
+                            "type_id": "WebPage"
+                        },
+                        {
+                            "labels": {
                                 "en": "Post",
                                 "fr": "Post"
                             },
@@ -248,8 +246,8 @@
                         }
                     ],
                     "labels": {
-                        "en": "Web entity",
-                        "fr": "Entit\u00e9 Web"
+                        "en": "Web entities",
+                        "fr": "Entit\u00e9s Web"
                     },
                     "type_id": "WebEntityBundle"
                 },
@@ -260,17 +258,10 @@
                             "children": [
                                 {
                                     "labels": {
-                                        "en": "Conference contribution",
-                                        "fr": "Communication non publi\u00e9e"
+                                        "en": "Speech",
+                                        "fr": "Discours"
                                     },
-                                    "type_id": "ConferenceContribution"
-                                },
-                                {
-                                    "labels": {
-                                        "en": "Conference proceedings",
-                                        "fr": "Actes de colloque"
-                                    },
-                                    "type_id": "ConferenceProceedings"
+                                    "type_id": "Speech"
                                 },
                                 {
                                     "labels": {
@@ -281,10 +272,10 @@
                                 },
                                 {
                                     "labels": {
-                                        "en": "Speech",
-                                        "fr": "Discours"
+                                        "en": "Conference contribution",
+                                        "fr": "Communication non publi\u00e9e"
                                     },
-                                    "type_id": "Speech"
+                                    "type_id": "ConferenceContribution"
                                 },
                                 {
                                     "labels": {
@@ -292,8 +283,16 @@
                                         "fr": "Communication dans des actes de colloque publi\u00e9s"
                                     },
                                     "type_id": "ConferencePaper"
+                                },
+                                {
+                                    "labels": {
+                                        "en": "Conference proceedings",
+                                        "fr": "Actes de colloque"
+                                    },
+                                    "type_id": "ConferenceProceedings"
                                 }
                             ],
+                            "bundle": true,
                             "labels": {
                                 "en": "Conference",
                                 "fr": "Conf\u00e9rence"
@@ -333,23 +332,11 @@
                     "children": [
                         {
                             "labels": {
-                                "en": "A work that is printed and bound, but without a named publisher or sponsoring institution"
-                            },
-                            "type_id": "Booklet"
-                        },
-                        {
-                            "labels": {
                                 "en": "Curriculum Vitae",
                                 "fr": "Curriculum Vitae"
                             },
-                            "type_id": "CurriculumVitae"
-                        },
-                        {
-                            "labels": {
-                                "en": "Manual",
-                                "fr": "Manuel"
-                            },
-                            "type_id": "Manuel"
+                            "type_id": "CurriculumVitae",
+                            "deprecated": true
                         },
                         {
                             "labels": {
@@ -360,13 +347,6 @@
                         },
                         {
                             "labels": {
-                                "en": "Note",
-                                "fr": "Note"
-                            },
-                            "type_id": "Note"
-                        },
-                        {
-                            "labels": {
                                 "en": "Preprint",
                                 "fr": "Preprint"
                             },
@@ -374,10 +354,17 @@
                         },
                         {
                             "labels": {
-                                "en": "Report",
-                                "fr": "Rapport"
+                                "en": "Working paper",
+                                "fr": "Working paper"
                             },
-                            "type_id": "Report"
+                            "type_id": "WorkingPaper"
+                        },
+                        {
+                            "labels": {
+                                "en": "Note",
+                                "fr": "Note"
+                            },
+                            "type_id": "Note"
                         },
                         {
                             "labels": {
@@ -388,6 +375,13 @@
                         },
                         {
                             "labels": {
+                                "en": "Report",
+                                "fr": "Rapport"
+                            },
+                            "type_id": "Report"
+                        },
+                        {
+                            "labels": {
                                 "en": "Technical report",
                                 "fr": "Rapport technique"
                             },
@@ -395,17 +389,17 @@
                         },
                         {
                             "labels": {
+                                "en": "Manual",
+                                "fr": "Manuel"
+                            },
+                            "type_id": "Manuel"
+                        },
+                        {
+                            "labels": {
                                 "en": "Unpublished document",
                                 "fr": "Document non publi\u00e9"
                             },
                             "type_id": "UnpublishedDocument"
-                        },
-                        {
-                            "labels": {
-                                "en": "Working paper",
-                                "fr": "Working paper"
-                            },
-                            "type_id": "WorkingPaper"
                         }
                     ],
                     "labels": {
@@ -557,6 +551,13 @@
                             "children": [
                                 {
                                     "labels": {
+                                        "en": "Letter",
+                                        "fr": "Lettre"
+                                    },
+                                    "type_id": "Letter"
+                                },
+                                {
+                                    "labels": {
                                         "en": "Email",
                                         "fr": "Email"
                                     },
@@ -568,13 +569,6 @@
                                         "fr": "Messagerie instantan\u00e9e"
                                     },
                                     "type_id": "InstantMessage"
-                                },
-                                {
-                                    "labels": {
-                                        "en": "Letter",
-                                        "fr": "Lettre"
-                                    },
-                                    "type_id": "Letter"
                                 }
                             ],
                             "labels": {
@@ -614,6 +608,7 @@
                             "type_id": "Newspaper"
                         }
                     ],
+                    "bundle": true,
                     "labels": {
                         "en": "Periodical",
                         "fr": "P\u00e9riodique"
@@ -632,10 +627,10 @@
             "children": [
                 {
                     "labels": {
-                        "en": "Artwork",
-                        "fr": "Oeuvre d'art"
+                        "en": "Image",
+                        "fr": "Image"
                     },
-                    "type_id": "Artwork"
+                    "type_id": "Image"
                 },
                 {
                     "labels": {
@@ -653,24 +648,17 @@
                 },
                 {
                     "labels": {
-                        "en": "Engrave",
-                        "fr": "Gravure"
-                    },
-                    "type_id": "Engrave"
-                },
-                {
-                    "labels": {
-                        "en": "Image",
-                        "fr": "Image"
-                    },
-                    "type_id": "Image"
-                },
-                {
-                    "labels": {
                         "en": "Map",
                         "fr": "Carte ou plan"
                     },
                     "type_id": "Map"
+                },
+                {
+                    "labels": {
+                        "en": "Poster",
+                        "fr": "Affiche"
+                    },
+                    "type_id": "Poster"
                 },
                 {
                     "labels": {
@@ -681,6 +669,13 @@
                 },
                 {
                     "labels": {
+                        "en": "Engrave",
+                        "fr": "Gravure"
+                    },
+                    "type_id": "Engrave"
+                },
+                {
+                    "labels": {
                         "en": "Photograph",
                         "fr": "Photographie"
                     },
@@ -688,10 +683,10 @@
                 },
                 {
                     "labels": {
-                        "en": "Poster",
-                        "fr": "Affiche"
+                        "en": "Artwork",
+                        "fr": "Oeuvre d'art"
                     },
-                    "type_id": "Poster"
+                    "type_id": "Artwork"
                 }
             ],
             "labels": {
@@ -723,7 +718,8 @@
                         "fr": "Emission de radio"
                     },
                     "type_id": "AudioBroadcast"
-                },                {
+                },
+                {
                     "labels": {
                         "en": "Audio book",
                         "fr": "Livre audio"
