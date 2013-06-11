@@ -413,5 +413,5 @@
         property: obj.property
       };
     };
-  });
+  };
 })();

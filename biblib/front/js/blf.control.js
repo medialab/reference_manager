@@ -60,9 +60,10 @@ $(document).ready(function() {
         multiple: '?boolean',
         property: 'string',
         required: 'boolean',
-        type_data: 'string',
+        type_data: '?string',
         type_ui: 'string',
-        labels: '?blf.Dict'
+        labels: '?blf.Dict',
+        label: '?string'
       }
     });
 
