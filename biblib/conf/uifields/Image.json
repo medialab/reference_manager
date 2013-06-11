@@ -30,6 +30,37 @@
         },
         {
             "labels": {
+                "en": "Archive",
+                "fr": "Archive"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "archives",
+            "type_fields": [
+                "Archive"
+            ],
+            "type_ui": "DocumentField"
+        },
+        {
+            "labels": {
+                "en": "Volume",
+                "fr": "Volume"
+            },
+            "property": "part_volume",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Issue",
+                "fr": "Issue"
+            },
+            "property": "part_issue",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
                 "en": "Date issued",
                 "fr": "Date de publication"
             },
@@ -39,25 +70,33 @@
         },
         {
             "labels": {
-                "en": "Number of pages",
-                "fr": "Nombre de pages"
+                "en": "Start page",
+                "fr": "Page de d\u00e9but"
             },
-            "property": "extent_pages",
+            "property": "part_page_start",
             "required": false,
-            "type_ui": "IntegerField"
+            "type_ui": "CharField"
         },
         {
             "labels": {
-                "en": "Series",
-                "fr": "Collection"
+                "en": "End page",
+                "fr": "Page de fin"
             },
-            "only_one": true,
-            "property": "seriess",
+            "property": "part_page_end",
             "required": false,
-            "type_fields": [
-                "Series"
-            ],
-            "type_ui": "DocumentField"
+            "type_ui": "CharField"
+        },
+        {
+            "id_type": "doi",
+            "labels": {
+                "en": "DOI",
+                "fr": "DOI"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
         },
         {
             "labels": {
@@ -69,58 +108,6 @@
             "required": false,
             "type_source": "language",
             "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Publisher",
-                "fr": "Editeurs"
-            },
-            "multiple": true,
-            "property": "publishers",
-            "required": true,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Publication place",
-                "fr": "Lieu de publication"
-            },
-            "multiple": true,
-            "property": "publication_places",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Publication country",
-                "fr": "Pays de publication"
-            },
-            "multiple": true,
-            "property": "publication_countries",
-            "required": false,
-            "type_source": "country",
-            "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Edition",
-                "fr": "Edition"
-            },
-            "property": "edition",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "id_type": "isbn",
-            "labels": {
-                "en": "ISBN",
-                "fr": "ISBN"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "identifiers",
-            "required": false,
-            "type_ui": "IdentifierField"
         },
         {
             "labels": {
@@ -145,5 +132,5 @@
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "Book"
+    "rec_type": "Image"
 }

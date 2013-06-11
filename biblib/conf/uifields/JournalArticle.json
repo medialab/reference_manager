@@ -39,7 +39,7 @@
             "type_fields": [
                 "Journal"
             ],
-            "type_ui": "IsPartOfField"
+            "type_ui": "DocumentField"
         },
         {
             "labels": {
