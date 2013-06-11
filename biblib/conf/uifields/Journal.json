@@ -52,13 +52,13 @@
             "type_ui": "TypeField"
         },
         {
-            "id_type": "frequency",
             "labels": {
                 "en": "Frequency",
-                "fr": "Périodicité"
+                "fr": "P\u00e9riodicit\u00e9"
             },
             "property": "frequency",
             "required": false,
+            "type_source": "frequency",
             "type_ui": "TypeField"
         },
         {
