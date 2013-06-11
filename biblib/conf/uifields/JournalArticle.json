@@ -1,0 +1,83 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Subtitle",
+                "fr": "Sous-titre"
+            },
+            "property": "title_sub",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Creators",
+                "fr": "Cr\u00e9ateurs"
+            },
+            "multiple": true,
+            "property": "creators",
+            "required": true,
+            "type_ui": "CreatorField"
+        },
+        {
+            "property": "is_part_ofs",
+            "multiple": true,
+            "only_one": true,
+            "type_ui": "IsPartOfField",
+            "type_fields": ["Journal"]
+        },
+        {
+            "id_type": "doi",
+            "labels": {
+                "en": "DOI",
+                "fr": "DOI"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        }
+        {
+            "labels": {
+                "en": "Number of pages",
+                "fr": "Nombre de pages"
+            },
+            "property": "extent_pages",
+            "required": false,
+            "type_ui": "IntegerField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Keywords",
+                "fr": "Mots-cl\u00e9s"
+            },
+            "multiple": true,
+            "property": "keywords",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+    ],
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "JournalArticle"
+}
