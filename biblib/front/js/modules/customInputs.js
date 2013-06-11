@@ -389,7 +389,84 @@
    *
    *  > // TODO
    */
-  blf.modules.customInputs.IsPartOfField = function(obj) {
+  blf.modules.customInputs.DocumentField = function(obj) {
+    domino.module.call(this);
+
+    var _dom,
+        _self = this;
+
+    function _fill() {
+      // TODO
+    }
+
+    function _getData() {
+      // TODO
+    }
+
+    function _validate() {
+      // TODO
+    }
+
+    this.getComponent = function() {
+      return {
+        dom: _dom,
+        fill: _fill,
+        getData: _getData,
+        validate: _validate,
+        propertyObject: obj,
+        property: obj.property
+      };
+    };
+  };
+
+  /**
+   * This custom input is used to represent identifier-like properties.
+   *
+   * Data sample:
+   * ************
+   *
+   *  > // TODO
+   */
+  blf.modules.customInputs.IdentifierField = function(obj) {
+    domino.module.call(this);
+
+    var _dom,
+        _self = this;
+
+    function _fill() {
+      // TODO
+    }
+
+    function _getData() {
+      // TODO
+    }
+
+    function _validate() {
+      // TODO
+    }
+
+    this.getComponent = function() {
+      return {
+        dom: _dom,
+        fill: _fill,
+        getData: _getData,
+        validate: _validate,
+        propertyObject: obj,
+        property: obj.property
+      };
+    };
+  };
+
+  /**
+   * This custom input is basically a combo, whose options are dynamically
+   * loaded.
+   *
+   * Data sample:
+   * ************
+   *
+   *  > // TODO
+   */
+  blf.modules.customInputs.TypeField = function(obj) {
     domino.module.call(this);
 
     var _dom,
