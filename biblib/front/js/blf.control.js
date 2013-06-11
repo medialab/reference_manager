@@ -106,7 +106,8 @@ $(document).ready(function() {
       {
         value: {},
         id: 'fields',
-        type: 'blf.FieldsIndex',
+        // type: 'blf.FieldsIndex',
+        type: 'object', // TODO: Restore scheme validation
         dispatch: 'fieldsUpdated',
         description: 'The field templates.'
       },

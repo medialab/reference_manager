@@ -32,7 +32,9 @@
     _dom = $(
       '<fieldset class="CreatorField">' +
         '<div class="message"></div>' +
-        '<label>' + obj.labels[blf.assets.lang] + ' :</label>' +
+        '<label>' +
+          (obj.label || obj.labels[blf.assets.lang]) + ' :' +
+        '</label>' +
         '<div class="creators-container">' +
           '<ul class="creators-list"></ul>' +
           '<button class="add-creator">+</button>' +
@@ -57,7 +59,7 @@
           '<select class="col-2" class="select-role">' +
             // Find the roles through the global controler:
             _creatorRoles.map(function(o) {
-              return '<option value="' + o.type_id + '">' + o.labels[blf.assets.lang] + '</option>';
+              return '<option value="' + o.type_id + '">' + (o.label || o.labels[blf.assets.lang]) + '</option>';
             }).join() +
           '</select>' +
           '<button class="remove-creator">-</button>' +
@@ -100,7 +102,7 @@
 
       $('select.select-role', dom).html(
         _creatorRoles.map(function(o) {
-          return '<option value="' + o.type_id + '">' + o.labels[blf.assets.lang] + '</option>';
+          return '<option value="' + o.type_id + '">' + (o.label || o.labels[blf.assets.lang]) + '</option>';
         }).join()
       );
     };
@@ -209,7 +211,9 @@
     _dom = $(
       '<fieldset class="LanguageValueField">' +
         '<div class="message"></div>' +
-        '<label>' + obj.labels[blf.assets.lang] + ' :</label>' +
+        '<label>' +
+          (obj.label || obj.labels[blf.assets.lang]) + ' :' +
+        '</label>' +
         '<div class="languages-container">' +
           '<ul class="languages-list"></ul>' +
           '<button class="add-language">+</button>' +
@@ -245,7 +249,7 @@
             _languages.map(function(o) {
               return (
                 '<option value="' + o.id + '">' +
-                  o.labels[blf.assets.lang] +
+                  (o.label || o.labels[blf.assets.lang]) +
                 '</option>'
               );
             }).join() +
