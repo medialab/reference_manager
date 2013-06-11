@@ -209,7 +209,7 @@ $(document).ready(function() {
       // RPC services:
       {
         id: 'echo',
-        url: 'http://localhost\:8080',
+        url: 'http://localhost:8080',
         description: 'Just a test service to check if RPC works.',
         type: mlab.rpc.type,
         error: mlab.rpc.error,
@@ -231,7 +231,7 @@ $(document).ready(function() {
       },
       {
         id: 'search',
-        url: 'http://localhost\:8080',
+        url: 'http://localhost:8080',
         description: 'A service to search on existing entries.',
         type: mlab.rpc.type,
         error: mlab.rpc.error,
@@ -250,14 +250,12 @@ $(document).ready(function() {
         },
         success: function(data) {
           var results = JSON.parse(data.result);
-          this.log('SEARCH FROM RPC', results);
-
           this.update('resultsList', results);
         }
       },
       {
         id: 'type',
-        url: 'http://localhost\:8080',
+        url: 'http://localhost:8080',
         description: 'Loads the dependance tree of the fields.',
         type: mlab.rpc.type,
         error: mlab.rpc.error,
@@ -279,7 +277,7 @@ $(document).ready(function() {
       },
       {
         id: 'field',
-        url: 'http://localhost\:8080',
+        url: 'http://localhost:8080',
         description: 'Loads one field specification.',
         type: mlab.rpc.type,
         error: mlab.rpc.error,
@@ -301,7 +299,7 @@ $(document).ready(function() {
               fields = this.get('fields');
 
           fields[result.rec_type] = result;
-          this.update('fields', fields)
+          this.update('fields', fields);
         }
       }
     ]
