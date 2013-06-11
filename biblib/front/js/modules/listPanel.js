@@ -24,7 +24,8 @@
       _list.forEach(function(o) {
         ul.append(
           '<li data-id="' + o._id.$oid + '">' +
-            '[' + o.rec_type + '] ' + o.title +
+            '<span class="entry-type">' + o.rec_type + '</span> - ' +
+            '<span class="entry-title">' + o.title + '</span>' +
           '</li>'
         );
       });

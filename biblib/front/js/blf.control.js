@@ -60,9 +60,10 @@ $(document).ready(function() {
         multiple: '?boolean',
         property: 'string',
         required: 'boolean',
-        type_data: 'string',
+        type_data: '?string',
         type_ui: 'string',
-        labels: '?blf.Dict'
+        labels: '?blf.Dict',
+        label: '?string'
       }
     });
 
@@ -70,8 +71,10 @@ $(document).ready(function() {
     domino.struct.add({
       id: 'blf.Field',
       struct: {
-        rec_class: 'string',
+        _id: 'object',
         rec_type: 'string',
+        rec_class: 'string',
+        rec_metajson: 'number',
         children: [ 'blf.Property' ]
       }
     });
@@ -160,7 +163,7 @@ $(document).ready(function() {
         triggers: 'loadField',
         description: 'Loading the template of a specific field.',
         method: function(e) {
-          this.request('loadField', {
+          this.request('field', {
             field: e.data.field
           });
         }
@@ -197,18 +200,6 @@ $(document).ready(function() {
     services: [
       // Test services (on static JSONS):
       {
-        id: 'loadField',
-        description: 'Loads the template of a specified field.',
-        url: function(input) {
-          return 'templates/' + input.field + '.json';
-        },
-        success: function(data) {
-          var fields = this.get('fields');
-          fields[data.rec_type] = data;
-          this.update('fields', fields)
-        }
-      },
-      {
         id: 'loadCreatorRoles',
         url: 'assets/creator-roles.json',
         setter: 'creatorRoles',
@@ -219,7 +210,7 @@ $(document).ready(function() {
       // RPC services:
       {
         id: 'echo',
-        url: 'http://localhost\:8080',
+        url: 'http://localhost:8080',
         description: 'Just a test service to check if RPC works.',
         type: mlab.rpc.type,
         error: mlab.rpc.error,
@@ -241,7 +232,7 @@ $(document).ready(function() {
       },
       {
         id: 'search',
-        url: 'http://localhost\:8080',
+        url: 'http://localhost:8080',
         description: 'A service to search on existing entries.',
         type: mlab.rpc.type,
         error: mlab.rpc.error,
@@ -260,14 +251,12 @@ $(document).ready(function() {
         },
         success: function(data) {
           var results = JSON.parse(data.result);
-          this.log('SEARCH FROM RPC', results);
-
           this.update('resultsList', results);
         }
       },
       {
         id: 'type',
-        url: 'http://localhost\:8080',
+        url: 'http://localhost:8080',
         description: 'Loads the dependance tree of the fields.',
         type: mlab.rpc.type,
         error: mlab.rpc.error,
@@ -285,6 +274,33 @@ $(document).ready(function() {
         success: function(data) {
           var results = JSON.parse(data.result);
           this.update('fieldsTree', results);
+        }
+      },
+      {
+        id: 'field',
+        url: 'http://localhost:8080',
+        description: 'Loads one field specification.',
+        type: mlab.rpc.type,
+        error: mlab.rpc.error,
+        expect: mlab.rpc.expect,
+        contentType: mlab.rpc.contentType,
+        data: function(input) {
+          return JSON.stringify({
+            id: 1,
+            jsonrpc: '2.0',
+            method: 'uifields',
+            params: [
+              input.field,
+              'fr'
+            ]
+          });
+        },
+        success: function(data) {
+          var result = JSON.parse(data.result),
+              fields = this.get('fields');
+
+          fields[result.rec_type] = result;
+          this.update('fields', fields);
         }
       }
     ]
