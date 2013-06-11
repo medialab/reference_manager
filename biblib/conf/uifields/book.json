@@ -48,23 +48,16 @@
         },
         {
             "labels": {
-                "en": "Abstracts",
-                "fr": "Resum\u00e9s"
+                "en": "Series",
+                "fr": "Collection"
             },
-            "multiple": true,
-            "property": "descriptions",
+            "only_one": true,
+            "property": "is_part_ofs",
             "required": false,
-            "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
-                "en": "Keywords",
-                "fr": "Mots-cl\u00e9s"
-            },
-            "multiple": true,
-            "property": "keywords",
-            "required": false,
-            "type_ui": "LanguageValueField"
+            "type_fields": [
+                "Series"
+            ],
+            "type_ui": "Seriess"
         },
         {
             "labels": {
@@ -128,6 +121,26 @@
             "property": "identifiers",
             "required": false,
             "type_ui": "IdentifierField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Keywords",
+                "fr": "Mots-cl\u00e9s"
+            },
+            "multiple": true,
+            "property": "keywords",
+            "required": false,
+            "type_ui": "LanguageValueField"
         }
     ],
     "rec_class": "Field",
