@@ -100,6 +100,17 @@
         },
         {
             "labels": {
+                "en": "Languages",
+                "fr": "Langues"
+            },
+            "multiple": true,
+            "property": "languages",
+            "required": false,
+            "type_source": "language",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
                 "en": "Abstracts",
                 "fr": "Resum\u00e9s"
             },
