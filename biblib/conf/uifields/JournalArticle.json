@@ -29,11 +29,62 @@
             "type_ui": "CreatorField"
         },
         {
-            "property": "is_part_ofs",
+            "labels": {
+                "en": "Journal",
+                "fr": "Revue"
+            },
             "multiple": true,
             "only_one": true,
-            "type_ui": "IsPartOfField",
-            "type_fields": ["Journal"]
+            "property": "is_part_ofs",
+            "type_fields": [
+                "Journal"
+            ],
+            "type_ui": "IsPartOfField"
+        },
+        {
+            "labels": {
+                "en": "Volume",
+                "fr": "Volume"
+            },
+            "property": "part_volume",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Issue",
+                "fr": "Issue"
+            },
+            "property": "part_issue",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Date issued",
+                "fr": "Date de publication"
+            },
+            "property": "date_issued",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Start page",
+                "fr": "Page de d\u00e9but"
+            },
+            "property": "part_page_start",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "End page",
+                "fr": "Page de fin"
+            },
+            "property": "part_page_end",
+            "required": false,
+            "type_ui": "CharField"
         },
         {
             "id_type": "doi",
@@ -46,15 +97,6 @@
             "property": "identifiers",
             "required": false,
             "type_ui": "IdentifierField"
-        }
-        {
-            "labels": {
-                "en": "Number of pages",
-                "fr": "Nombre de pages"
-            },
-            "property": "extent_pages",
-            "required": false,
-            "type_ui": "IntegerField"
         },
         {
             "labels": {
@@ -75,7 +117,7 @@
             "property": "keywords",
             "required": false,
             "type_ui": "LanguageValueField"
-        },
+        }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
