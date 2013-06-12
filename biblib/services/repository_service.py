@@ -7,6 +7,7 @@
 import uuid
 import pymongo
 from bson.objectid import ObjectId
+from biblib.metajson import SearchResponse
 from biblib.services import config_service
 from biblib.services import metajson_service
 
@@ -96,18 +97,18 @@ def get_documents_count(corpus):
 def search(corpus, search_query):
     if not corpus:
         corpus = default_corpus
-    # todo vonvert the search_query dict to mongo_query
+    # todo convert the search_query dict to mongo_query
     mongo_query = {"rec_metajson": 1}
 
-    # todo search mongodb
     records = metajson_service.load_dict_list(mongodb[corpus][DOCUMENTS].find(mongo_query))
     records_total_count = len(records)
-    search_response = {}
-    search_response["search_query"] = search_query
-    search_response["result_offset"] = 0
-    search_response["result_batch_size"] = 100
+
+    search_response = SearchResponse()
     search_response["records"] = records
     search_response["records_total_count"] = records_total_count
+    search_response["result_batch_size"] = records_total_count
+    search_response["result_offset"] = 0
+    search_response["search_query"] = search_query
     return search_response
 
 
