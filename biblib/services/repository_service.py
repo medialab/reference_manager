@@ -93,7 +93,25 @@ def get_documents_count(corpus):
     return mongodb[corpus][DOCUMENTS].count()
 
 
-def search_documents(corpus, query):
+def search(corpus, search_query):
+    if not corpus:
+        corpus = default_corpus
+    # todo vonvert the search_query dict to mongo_query
+    mongo_query = {"rec_metajson": 1}
+
+    # todo search mongodb
+    records = metajson_service.load_dict_list(mongodb[corpus][DOCUMENTS].find(mongo_query))
+    records_total_count = len(records)
+    search_response = {}
+    search_response["search_query"] = search_query
+    search_response["result_offset"] = 0
+    search_response["result_batch_size"] = 100
+    search_response["records"] = records
+    search_response["records_total_count"] = records_total_count
+    return search_response
+
+
+def search_mongo(corpus, mongo_query):
     if not corpus:
         corpus = default_corpus
     # {"_id": {"$in": mongo_object_ids}}
@@ -106,7 +124,7 @@ def search_documents(corpus, query):
     # {"creators.agent.name_family":"Latour"}
     # {"is_part_ofs.creators.agent.name_family":"Latour"}
     # {"is_part_ofs.creators.agent.name_family":"Latour", "is_part_of.creators.agent.name_given":"Bruno"}
-    return metajson_service.load_dict_list(mongodb[corpus][DOCUMENTS].find(query))
+    return metajson_service.load_dict_list(mongodb[corpus][DOCUMENTS].find(mongo_query))
 
 
 def save_document(corpus, document):

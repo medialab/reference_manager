@@ -111,14 +111,23 @@ class References_repository(jsonrpc.JSONRPC):
                 results.append(result)
             return self.format_bson(results)
 
-    def jsonrpc_search(self, query):
+    def jsonrpc_search(self, search_query):
         """ search for one or more data from the repository
             params:
-                - mongoquery: search query must respect the mongoquery syntax
+                - search_query: a custom SearchQuery object with the query params
+        """
+        search_response = repository_service.search(None, search_query)
+        # todo response_time
+        search_response["response_time"] = 1234
+        return self.format_bson(search_response)
+
+    def jsonrpc_search_mongo(self, mongo_query):
+        """ search for one or more data from the repository
+            params:
+                - mongo_query: search query must respect the mongo query syntax
             return the asked data (in JSON)
         """
-        #json_query = json.loads(query)
-        return self.format_bson(repository_service.search_documents(None, query))
+        return self.format_bson(repository_service.search_mongo(None, mongo_query))
 
     def type_language_adaptation(self, type_dict, language):
         if type_dict and language:

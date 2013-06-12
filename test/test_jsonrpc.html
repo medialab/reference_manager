@@ -87,7 +87,7 @@
                     });
                 });
                 $("input#search_button").click(function() {
-                    $.jsonRPC.request("search", {
+                    $.jsonRPC.request("search_mongo", {
                         params : [JSON.parse($("input#search_input").val())],
                         success : function(data) {
                             $("<p />").text(data.result).appendTo($("p#search_result"));

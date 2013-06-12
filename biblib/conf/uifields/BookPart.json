@@ -30,57 +30,14 @@
         },
         {
             "labels": {
-                "en": "Date issued",
-                "fr": "Date de publication"
+                "en": "Languages",
+                "fr": "Langues"
             },
-            "property": "date_issued",
+            "multiple": true,
+            "property": "languages",
             "required": false,
-            "type_ui": "DateField"
-        },
-        {
-            "labels": {
-                "en": "Medium",
-                "fr": "Medium"
-            },
-            "property": "medium",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Dimensions",
-                "fr": "Dimensions"
-            },
-            "property": "extent_dimension",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Projection",
-                "fr": "Projection"
-            },
-            "property": "cartographic_projection",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Scale",
-                "fr": "Echelle"
-            },
-            "property": "cartographics_scale",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Coordinates",
-                "fr": "Coordonn\u00e9es"
-            },
-            "property": "cartographic_coordinates",
-            "required": false,
-            "type_ui": "CharField"
+            "type_source": "language",
+            "type_ui": "TypeField"
         },
         {
             "labels": {
@@ -104,33 +61,26 @@
         },
         {
             "labels": {
-                "en": "Archive",
-                "fr": "Archive"
+                "en": "Book",
+                "fr": "Livre"
             },
             "multiple": true,
             "only_one": true,
-            "property": "archives",
-            "required": false,
+            "property": "is_part_ofs",
+            "required": true,
             "type_fields": [
-                "Archive"
+                "Book"
             ],
             "type_ui": "DocumentField"
         },
         {
             "labels": {
-                "en": "Is part of",
-                "fr": "Fait partie de"
+                "en": "Chapter number",
+                "fr": "Numéro du chapitre"
             },
-            "multiple": true,
-            "only_one": true,
-            "property": "is_part_ofs",
+            "property": "part_chapter_number",
             "required": false,
-            "type_fields": [
-                "Book",
-                "BookPart",
-                "JournalArticle"
-            ],
-            "type_ui": "DocumentField"
+            "type_ui": "CharField"
         },
         {
             "labels": {
@@ -149,9 +99,21 @@
             "property": "part_page_end",
             "required": false,
             "type_ui": "CharField"
+        },
+        {
+            "id_type": "doi",
+            "labels": {
+                "en": "DOI",
+                "fr": "DOI"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "Image"
+    "rec_type": "BookPart"
 }

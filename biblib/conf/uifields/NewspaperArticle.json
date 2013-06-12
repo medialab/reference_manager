@@ -38,7 +38,7 @@
             "property": "is_part_ofs",
             "required": true,
             "type_fields": [
-                "Journal"
+                "Newspaper"
             ],
             "type_ui": "DocumentField"
         },
@@ -88,18 +88,6 @@
             "type_ui": "CharField"
         },
         {
-            "id_type": "doi",
-            "labels": {
-                "en": "DOI",
-                "fr": "DOI"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "identifiers",
-            "required": false,
-            "type_ui": "IdentifierField"
-        },
-        {
             "labels": {
                 "en": "Languages",
                 "fr": "Langues"
@@ -133,5 +121,5 @@
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "JournalArticle"
+    "rec_type": "NewspaperArticle"
 }

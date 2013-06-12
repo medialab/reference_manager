@@ -34,7 +34,7 @@
                 "fr": "Date de publication"
             },
             "property": "date_issued",
-            "required": false,
+            "required": true,
             "type_ui": "DateField"
         },
         {
@@ -48,39 +48,35 @@
         },
         {
             "labels": {
-                "en": "Dimensions",
-                "fr": "Dimensions"
+                "en": "Duration",
+                "fr": "Dur\u00e9e"
             },
-            "property": "extent_dimension",
+            "property": "extent_duration",
             "required": false,
             "type_ui": "CharField"
         },
         {
+            "id_type": "isan",
             "labels": {
-                "en": "Projection",
-                "fr": "Projection"
+                "en": "ISAN",
+                "fr": "ISAN"
             },
-            "property": "cartographic_projection",
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
             "required": false,
-            "type_ui": "CharField"
+            "type_ui": "IdentifierField"
         },
         {
             "labels": {
-                "en": "Scale",
-                "fr": "Echelle"
+                "en": "Languages",
+                "fr": "Langues"
             },
-            "property": "cartographics_scale",
+            "multiple": true,
+            "property": "languages",
             "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Coordinates",
-                "fr": "Coordonn\u00e9es"
-            },
-            "property": "cartographic_coordinates",
-            "required": false,
-            "type_ui": "CharField"
+            "type_source": "language",
+            "type_ui": "TypeField"
         },
         {
             "labels": {
@@ -101,57 +97,9 @@
             "property": "keywords",
             "required": false,
             "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
-                "en": "Archive",
-                "fr": "Archive"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "archives",
-            "required": false,
-            "type_fields": [
-                "Archive"
-            ],
-            "type_ui": "DocumentField"
-        },
-        {
-            "labels": {
-                "en": "Is part of",
-                "fr": "Fait partie de"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "is_part_ofs",
-            "required": false,
-            "type_fields": [
-                "Book",
-                "BookPart",
-                "JournalArticle"
-            ],
-            "type_ui": "DocumentField"
-        },
-        {
-            "labels": {
-                "en": "Start page",
-                "fr": "Page de d\u00e9but"
-            },
-            "property": "part_page_start",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "End page",
-                "fr": "Page de fin"
-            },
-            "property": "part_page_end",
-            "required": false,
-            "type_ui": "CharField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "Image"
+    "rec_type": "VideoRecording"
 }
