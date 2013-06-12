@@ -395,6 +395,19 @@
     var _dom,
         _self = this;
 
+    _dom = $(
+      '<fieldset class="DocumentField">' +
+        '<div class="message"></div>' +
+        '<label>' +
+          (obj.label || obj.labels[blf.assets.lang]) + ' :' +
+        '</label>' +
+        '<div class="creators-container">' +
+          '<ul class="creators-list"></ul>' +
+          '<button class="add-creator">+</button>' +
+        '</div>' +
+      '</fieldset>'
+    );
+
     function _fill() {
       // TODO
     }
@@ -432,6 +445,19 @@
 
     var _dom,
         _self = this;
+
+    _dom = $(
+      '<fieldset class="IdentifierField">' +
+        '<div class="message"></div>' +
+        '<label>' +
+          (obj.label || obj.labels[blf.assets.lang]) + ' :' +
+        '</label>' +
+        '<div class="creators-container">' +
+          '<ul class="creators-list"></ul>' +
+          '<button class="add-creator">+</button>' +
+        '</div>' +
+      '</fieldset>'
+    );
 
     function _fill() {
       // TODO
@@ -471,6 +497,19 @@
 
     var _dom,
         _self = this;
+
+    _dom = $(
+      '<fieldset class="TypeField">' +
+        '<div class="message"></div>' +
+        '<label>' +
+          (obj.label || obj.labels[blf.assets.lang]) + ' :' +
+        '</label>' +
+        '<div class="creators-container">' +
+          '<ul class="creators-list"></ul>' +
+          '<button class="add-creator">+</button>' +
+        '</div>' +
+      '</fieldset>'
+    );
 
     function _fill() {
       // TODO

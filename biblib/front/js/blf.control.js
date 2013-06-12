@@ -47,6 +47,7 @@ $(document).ready(function() {
   if (!domino.struct.isValid('blf.Dict'))
     domino.struct.add({
       id: 'blf.Dict',
+      includes: true,
       struct: {
         fr: '?string',
         en: '?string'
@@ -56,6 +57,7 @@ $(document).ready(function() {
   if (!domino.struct.isValid('blf.Property'))
     domino.struct.add({
       id: 'blf.Property',
+      includes: true,
       struct: {
         multiple: '?boolean',
         property: 'string',
@@ -70,6 +72,7 @@ $(document).ready(function() {
   if (!domino.struct.isValid('blf.Field'))
     domino.struct.add({
       id: 'blf.Field',
+      includes: true,
       struct: {
         _id: 'object',
         rec_type: 'string',
@@ -82,6 +85,7 @@ $(document).ready(function() {
   if (!domino.struct.isValid('blf.FieldsIndex'))
     domino.struct.add({
       id: 'blf.FieldsIndex',
+      includes: true,
       struct: function(o) {
         var k, test;
 
@@ -106,8 +110,7 @@ $(document).ready(function() {
       {
         value: {},
         id: 'fields',
-        // type: 'blf.FieldsIndex',
-        type: 'object', // TODO: Restore scheme validation
+        type: 'blf.FieldsIndex',
         dispatch: 'fieldsUpdated',
         description: 'The field templates.'
       },
@@ -245,14 +248,13 @@ $(document).ready(function() {
             jsonrpc: '2.0',
             method: 'search',
             params: [
-              //input.query
-              { rec_type: 'Book'} // /!\ HARD-CODED
+              input.query
             ]
           });
         },
         success: function(data) {
           var results = JSON.parse(data.result);
-          this.update('resultsList', results);
+          this.update('resultsList', results.records || []);
         }
       },
       {
