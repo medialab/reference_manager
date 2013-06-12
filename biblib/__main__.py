@@ -7,6 +7,7 @@ import os
 from biblib.services import export_service
 from biblib.services import import_service
 from biblib.services import repository_service
+from biblib.services import config_service
 from biblib.util import chrono
 from biblib.util import console
 from biblib import init_corpus
@@ -59,5 +60,6 @@ def import_references(corpus):
     chrono.chrono_trace("json", date_citations, date_json, len(metajson_list))
 
 
-init_corpus.init("aime")
-import_references("aime")
+default_corpus = config_service.config["mongodb"]["default_corpus"]
+init_corpus.init(default_corpus)
+import_references(default_corpus)
