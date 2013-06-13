@@ -54,7 +54,7 @@
    *  > //   }
    *  > // }
    *
-   * @param  {array} arr   The array to index.
+   * @param  {array}   arr The array to index.
    * @param  {?string} key The key that will be used as index. If not
    *                       specified,
    * @return {object} Returns the object index.
@@ -83,6 +83,6 @@
       !('error' in data);
   };
   mlab.rpc.error = function(data) {
-    this.log('An error occurred... \n' + data);
+    this.log('Error:' + data);
   };
 })();

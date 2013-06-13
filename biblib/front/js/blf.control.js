@@ -136,6 +136,14 @@ $(document).ready(function() {
         dispatch: 'resultsListUpdated',
         description: 'The results list.'
       },
+      {
+        value: {},
+        id: 'lists',
+        type: 'object',
+        triggers: 'updateLists',
+        dispatch: 'listsUpdated',
+        description: 'The miscellaneous lists.'
+      },
 
       // INTERFACE related properties
       {
@@ -199,6 +207,15 @@ $(document).ready(function() {
             mode: 'list'
           });
         }
+      },
+      {
+        triggers: ['loadList'],
+        description: 'Loads a specific list.',
+        method: function(e) {
+          this.request('type', {
+            typeName: e.data.list
+          });
+        }
       }
     ],
     services: [
@@ -260,22 +277,34 @@ $(document).ready(function() {
       {
         id: 'type',
         url: 'http://localhost:8080',
-        description: 'Loads the dependance tree of the fields.',
+        description: 'Loads the list of specified type.',
         type: mlab.rpc.type,
         error: mlab.rpc.error,
         expect: mlab.rpc.expect,
         contentType: mlab.rpc.contentType,
-        data: JSON.stringify({
-          id: 1,
-          jsonrpc: '2.0',
-          method: 'type',
-          params: [
-            'document_type',
-            'fr'
-          ]
-        }),
-        success: function(data) {
+        data: function(input) {
+          return JSON.stringify({
+            id: 1,
+            jsonrpc: '2.0',
+            method: 'type',
+            params: [
+              input.typeName,
+              'fr'
+            ]
+          });
+        },
+        success: function(data, input) {
           var results = JSON.parse(data.result);
+          switch (input) {
+            case 'document_type':
+              this.update('fieldsTree', results)
+              break;
+            default:
+              var lists = this.get('lists');
+              lists[input.typeName] = results;
+              this.update('lists', lists);
+              break;
+          }
           this.update('fieldsTree', results);
         }
       },
@@ -313,5 +342,8 @@ $(document).ready(function() {
   blf.layout = blf.control.addModule(blf.modules.layout);
 
   // Data initialization:
-  blf.control.request(['type', 'loadCreatorRoles']);
+  blf.control.request([{
+    service: 'type',
+    typeName: 'document_type'
+  }, 'loadCreatorRoles']);
 });

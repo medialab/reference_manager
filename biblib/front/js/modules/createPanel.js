@@ -19,8 +19,8 @@
     $('.select-field', _html).click(function(e) {
       var dom = $(e.target);
 
-      // Check if it is a field button:
-      if (dom.is('button[data-field]')) {
+      // Check if it is a field anchor:
+      if (dom.is('a[data-field]')) {
         var field = dom.attr('data-field');
 
         if (_fields[field]) {
@@ -32,6 +32,9 @@
             field: _waitingField
           });
         }
+
+        e.stopPropagation();
+        return false;
       }
     });
 
@@ -274,10 +277,10 @@
       // Generate the HTML to select which field to use:
       dom = (function recursiveParse(node, depth) {
         var header =
-          (node.label && !node.bundle) ?
-            '<button data-field="' + node.type_id + '">' +
+          (node.label && !node.bundle && !node.deprecated) ?
+            '<a href="#" data-field="' + node.type_id + '">' +
               node.label +
-            '</button>' :
+            '</a>' :
             node.label ?
               '<span>' + node.label + '</span>' :
               '';

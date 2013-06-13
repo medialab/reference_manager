@@ -48,7 +48,7 @@
       data = data || {};
       var li = $(
         '<li>' +
-          '<select class="col-1" class="select-type">' +
+          '<select class="select-type">' +
             // TODO:
             // Set this in assets, find it automatically as well.
             '<option value="person">Person</option>' +
@@ -438,7 +438,15 @@
    * Data sample:
    * ************
    *
-   *  > // TODO
+   *  > {
+   *  >   id_type: "isbn",
+   *  >   label: "ISBN",
+   *  >   multiple: true,
+   *  >   only_one: true,
+   *  >   property: "identifiers",
+   *  >   required: false,
+   *  >   type_ui: "IdentifierField"
+   *  > }
    */
   blf.modules.customInputs.IdentifierField = function(obj) {
     domino.module.call(this);
@@ -452,9 +460,9 @@
         '<label>' +
           (obj.label || obj.labels[blf.assets.lang]) + ' :' +
         '</label>' +
-        '<div class="creators-container">' +
-          '<ul class="creators-list"></ul>' +
-          '<button class="add-creator">+</button>' +
+        '<div class="identifier-container">' +
+          '<ul class="identifiers-list"></ul>' +
+          '<button class="add-identifier">+</button>' +
         '</div>' +
       '</fieldset>'
     );
@@ -464,11 +472,24 @@
     }
 
     function _getData() {
-      // TODO
+      if (obj.multiple)
+        return ;
+      else
+        return ;
     }
 
     function _validate() {
-      // TODO
+      var data = _getData();
+
+      // Check multiple && required:
+      if (obj.multiple && obj.required && data.length < 1)
+        return false;
+
+      // Check !multiple && required:
+      if (!obj.multiple && obj.required && !data)
+        return false;
+
+      return true;
     }
 
     this.getComponent = function() {
@@ -490,13 +511,32 @@
    * Data sample:
    * ************
    *
-   *  > // TODO
+   *  > {
+   *  >   label: "Pays de publication",
+   *  >   multiple: true,
+   *  >   property: "publication_countries",
+   *  >   required: false,
+   *  >   type_source: "country",
+   *  >   type_ui: "TypeField"
+   *  > }
    */
   blf.modules.customInputs.TypeField = function(obj) {
     domino.module.call(this);
 
     var _dom,
+        _values = blf.control.get('lists')[obj.type_source],
         _self = this;
+
+    // Try to get the list:
+    // AAARGH: How I am supposed to do when I add a module that needs to
+    //         dispatch an event when bindings are actually not existing yet?
+    //         So... here is the dirty solution:
+    window.setTimeout(function() {
+      if (!_values)
+        _self.dispatchEvent('loadList', {
+          list: obj.type_source
+        });
+    }, 0);
 
     _dom = $(
       '<fieldset class="TypeField">' +
@@ -504,12 +544,46 @@
         '<label>' +
           (obj.label || obj.labels[blf.assets.lang]) + ' :' +
         '</label>' +
-        '<div class="creators-container">' +
-          '<ul class="creators-list"></ul>' +
-          '<button class="add-creator">+</button>' +
+        '<div class="types-container">' +
+          '<ul class="values-list"></ul>' +
+          '<button class="add-value">+</button>' +
         '</div>' +
       '</fieldset>'
     );
+
+    // Bind events:
+    $('button.add-value', _dom).click(function() {
+      addLine();
+    });
+
+    _dom.click(function(e) {
+      var target = $(e.target),
+          li = target.parents('ul.values-list > li');
+
+      // Check if it is a field button:
+      if (li.length && target.is('button.remove-value')) {
+        li.remove();
+      }
+    });
+
+    function getLineContent(value) {
+      return _values.map(function(o) {
+        return '<option value="' + o.type_id + '">' + o.label + '</option>';
+      }).join();
+    }
+
+    function addLine(o) {
+      var li = $(
+        '<li>' +
+          '<select class="select-in-type">' +
+            getLineContent() +
+          '</select>' +
+          '<button class="remove-value">-</button>' +
+        '</li>'
+      );
+
+      $('ul.values-list', _dom).append(li);
+    }
 
     function _fill() {
       // TODO
@@ -522,6 +596,15 @@
     function _validate() {
       // TODO
     }
+
+    this.triggers.events.listsUpdated = function(d) {
+      var list = (d.get('lists')[obj.type_source] || {}).children || [];
+
+      if (!(_values || []).length && list.length) {
+        _values = list;
+        $('select.select-in-type', _dom).empty().append(getLineContent());
+      }
+    };
 
     this.getComponent = function() {
       return {
