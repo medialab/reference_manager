@@ -77,7 +77,6 @@
 
     // Check that all values are not added yet:
     function checkValuesCount() {
-      console.log($('ul.values-list > li', _dom).length, _majorValues.length);
       if ($('ul.values-list > li', _dom).length >= _majorValues.length)
         $('button.add-value', _dom).attr('hidden', 'true');
       else
