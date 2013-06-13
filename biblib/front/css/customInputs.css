@@ -1,23 +1,24 @@
-/* CreatorField style */
-.CreatorField ul.creators-list li button {
-  visibility: hidden;
-}
-
-.CreatorField ul.creators-list li:hover button {
-  visibility: visible;
-}
-
-.CreatorField div.creators-container {
+/* Basic custom inputs stuff */
+.customInput div.container {
   display: inline-block;
   vertical-align: top;
 }
 
-.CreatorField ul.creators-list {
-  list-style-type: none;
+.customInput ul {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.customInput ul li button {
+  visibility: hidden;
+}
+
+.customInput ul li:hover button {
+  visibility: visible;
+}
+
+/* CreatorField style */
 
 .CreatorField ul.creators-list li:first-child button.moveup-creator,
 .CreatorField ul.creators-list li:last-child button.movedown-creator {
@@ -29,26 +30,6 @@
 }
 
 /* LanguageValueField style */
-.LanguageValueField ul.languages-list li button {
-  visibility: hidden;
-}
-
-.LanguageValueField ul.languages-list li:hover button {
-  visibility: visible;
-}
-
-.LanguageValueField div.languages-container {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.LanguageValueField ul.languages-list {
-  list-style-type: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .LanguageValueField ul.languages-list li textarea {
   display: block;
 }
