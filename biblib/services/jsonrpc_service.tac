@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import datetime
 import json
 
 from bson import json_util
@@ -116,9 +117,12 @@ class References_repository(jsonrpc.JSONRPC):
             params:
                 - search_query: a custom SearchQuery object with the query params
         """
+        date_start = datetime.datetime.now()
         search_response = repository_service.search(None, search_query)
-        # todo response_time
-        search_response["response_time"] = 1234
+        date_end = datetime.datetime.now()
+        interval = date_end - date_start
+        response_time = "{0:.3f}".format(interval.total_seconds() * 1000)
+        search_response["response_time"] = response_time
         return self.format_bson(search_response)
 
     def jsonrpc_search_mongo(self, mongo_query):
