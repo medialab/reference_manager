@@ -297,11 +297,11 @@ $(document).ready(function() {
           var results = JSON.parse(data.result);
           switch (input) {
             case 'document_type':
-              this.update('fieldsTree', results)
+              this.update('fieldsTree', results);
               break;
             default:
               var lists = this.get('lists');
-              lists[input.typeName] = results;
+              lists[input.typeName] = results.children || [];
               this.update('lists', lists);
               break;
           }
@@ -342,8 +342,9 @@ $(document).ready(function() {
   blf.layout = blf.control.addModule(blf.modules.layout);
 
   // Data initialization:
-  blf.control.request([{
-    service: 'type',
+  blf.control.request('type', {
+    typeName: 'creator_role'
+  }).request('type', {
     typeName: 'document_type'
-  }, 'loadCreatorRoles']);
+  });
 });
