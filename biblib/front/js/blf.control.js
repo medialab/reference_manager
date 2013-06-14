@@ -154,6 +154,14 @@ $(document).ready(function() {
 
       // INTERFACE related properties
       {
+        value: null,
+        type: '?object',
+        id: 'waitingEntry',
+        triggers: 'updateWaitingEntry',
+        dispatch: 'waitingEntryUpdated',
+        description: 'An entry to edit, waiting for the field specifications to be loaded.'
+      },
+      {
         value: 'home',
         id: 'mode',
         force: true,
@@ -216,6 +224,45 @@ $(document).ready(function() {
           this.request('type', {
             typeName: e.data.list
           });
+        }
+      },
+      {
+        triggers: 'editEntry',
+        description: 'Loads the good field definition if needed and opens the edition panel for the related entry.',
+        method: function(e) {
+          var entry = e.data.entry,
+              fields = this.get('fields');
+
+          if (fields[entry.rec_type])
+            this.dispatchEvent('displayEntry', {
+              entry: entry,
+              field: entry.rec_type
+            }).update('mode', 'create');
+          else
+            this.request('field', {
+              field: entry.rec_type
+            }).update('waitingEntry', entry);
+        }
+      },
+      {
+        triggers: 'fieldsUpdated',
+        description: 'Check if there is a waiting entry when a field is loaded, and display it is the related field is loaded.',
+        method: function(e) {
+          var entry = this.get('waitingEntry'),
+              fields = this.get('fields');
+
+          if (entry && fields[entry.rec_type])
+            this.dispatchEvent('displayEntry', {
+              entry: entry,
+              field: entry.rec_type
+            }).update('mode', 'create');
+        }
+      },
+      {
+        triggers: 'deleteEntry',
+        description: 'Deletes the related entry.',
+        method: function(e) {
+          // TODO
         }
       }
     ],

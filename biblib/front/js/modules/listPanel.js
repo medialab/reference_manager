@@ -10,16 +10,31 @@
     domino.module.call(this);
 
     var _list,
+        _listIndex,
         _self = this,
         _html = html;
 
     _html.click(function(e) {
-      var target = $(e.target),
+      var entryId,
+          target = $(e.target),
           li = target.parents('ul > li');
 
-      // Check if it is an openable post:
-      if (li.length && target.is('a.entry-title')) {
-        console.log('clicked openable result');
+      if (li.length && target.is('.delete-entry')) {
+        entryId = li.attr('data-id');
+
+        _self.dispatchEvent('deleteEntry', {
+          entryId: entryId,
+          entry: _listIndex[entryId]
+        });
+        e.stopPropagation();
+        return false;
+      } else if (li.length && target.is('.edit-entry')) {
+        entryId = li.attr('data-id');
+
+        _self.dispatchEvent('editEntry', {
+          entryId: entryId,
+          entry: _listIndex[entryId]
+        });
         e.stopPropagation();
         return false;
       }
@@ -39,11 +54,13 @@
         var editable = fields[o.rec_type];
 
         ul.append(
-          '<li data-id="' + o._id.$oid + '">' +
-            '<span class="entry-type">' + o.rec_type + '</span> - ' +
-            (editable ? '<a href="#" class="entry-title">' : '<span class="entry-title">') +
-              o.title +
-            (editable ? '</a>' : '</span>') +
+          '<li data-id="' + o.rec_id + '">' +
+            '<div class="buttons-container">' +
+              '<button class="delete-entry">-</button>' +
+              (editable ? '<button class="edit-entry">edit</button>' : '') +
+            '</div>' +
+            '<span class="entry-type">(' + o.rec_type + ')</span> ' +
+            '<span class="entry-title" title="' + o.title + '">' + o.title + '</span>' +
           '</li>'
         );
       });
@@ -62,6 +79,7 @@
     // Display a list of abstracts:
     this.triggers.events.resultsListUpdated = function(d) {
       _list = d.get('resultsList');
+      _listIndex = mlab.array.index(_list, 'rec_id');
       fill(d);
     };
   };

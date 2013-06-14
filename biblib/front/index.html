@@ -77,6 +77,38 @@
       margin: auto;
     }
 
+    /* Results list display */
+    ul.entries-list > li {
+      position: relative;
+      height: 28px;
+      line-height: 28px;
+      white-space: nowrap;
+    }
+
+    ul.entries-list > li .buttons-container {
+      position: absolute;
+      padding-right: 15px;
+      right: 100%;
+      width: 100px;
+    }
+
+    ul.entries-list > li .buttons-container > button {
+      float: right;
+      visibility: hidden;
+    }
+
+    ul.entries-list > li:hover .buttons-container > button {
+      visibility: visible;
+    }
+
+    ul.entries-list > li .entry-title {
+      display: inline-block;
+      max-width: 600px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
     /* 6 column grid - 340px width */
     .col-1 {
       width: 55px;
