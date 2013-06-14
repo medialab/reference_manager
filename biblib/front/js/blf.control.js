@@ -112,7 +112,14 @@ $(document).ready(function() {
         id: 'fields',
         type: 'blf.FieldsIndex',
         dispatch: 'fieldsUpdated',
-        description: 'The field templates.'
+        description: 'The list of fields that are already loaded.'
+      },
+      {
+        value: {},
+        id: 'availableFields',
+        type: 'object',
+        dispatch: 'availableFieldsUpdated',
+        description: 'The list of existing and editable fields.'
       },
       {
         value: {},
@@ -194,7 +201,7 @@ $(document).ready(function() {
         }
       },
       {
-        triggers: ['resultsListUpdated'],
+        triggers: 'resultsListUpdated',
         description: 'Updates the mode to "list" when results are loaded.',
         method: function(e) {
           this.dispatchEvent('updateMode', {
@@ -203,7 +210,7 @@ $(document).ready(function() {
         }
       },
       {
-        triggers: ['loadList'],
+        triggers: 'loadList',
         description: 'Loads a specific list.',
         method: function(e) {
           this.request('type', {
@@ -291,7 +298,21 @@ $(document).ready(function() {
           var results = JSON.parse(data.result);
           switch (input.typeName) {
             case 'document_type':
-              this.update('fieldsTree', results);
+              // Find the list of available fields as well:
+              var availableFields = {};
+              (function recursiveParse(node, depth) {
+                if (!node.bundle && !node.deprecated)
+                  availableFields[node.type_id] = 1;
+
+                if ((node.children || []).length)
+                  node.children.forEach(recursiveParse);
+              })(results);
+
+              // Update:
+              this.update({
+                fieldsTree: results,
+                availableFields: availableFields
+              });
               break;
             default:
               var lists = this.get('lists');

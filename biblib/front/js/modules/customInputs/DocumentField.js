@@ -23,9 +23,10 @@
         '<label>' +
           (obj.label || obj.labels[blf.assets.lang]) + ' :' +
         '</label>' +
-        '<div class="creators-container container">' +
-          '<ul class="creators-list"></ul>' +
-          '<button class="add-creator">+</button>' +
+        '<div class="documents-container container">' +
+          '<span>(component not working yet)</span>' +
+          // '<ul class="documents-list"></ul>' +
+          // '<button class="add-document">+</button>' +
         '</div>' +
       '</fieldset>'
     );

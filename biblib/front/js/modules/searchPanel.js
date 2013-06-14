@@ -22,6 +22,10 @@
       }
     });
 
+    // TODO: Fix / remove this:
+    $('input.advanced-search', _html).hide();
+    $('label[for="use-advanced-search"]', _html).hide();
+
     $('button.validate', _html).click(search);
 
     function restart() {
