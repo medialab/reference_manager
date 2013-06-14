@@ -295,7 +295,7 @@ $(document).ready(function() {
         },
         success: function(data, input) {
           var results = JSON.parse(data.result);
-          switch (input) {
+          switch (input.typeName) {
             case 'document_type':
               this.update('fieldsTree', results);
               break;
@@ -305,7 +305,6 @@ $(document).ready(function() {
               this.update('lists', lists);
               break;
           }
-          this.update('fieldsTree', results);
         }
       },
       {
@@ -342,9 +341,14 @@ $(document).ready(function() {
   blf.layout = blf.control.addModule(blf.modules.layout);
 
   // Data initialization:
-  blf.control.request('type', {
-    typeName: 'creator_role'
-  }).request('type', {
-    typeName: 'document_type'
-  });
+  blf.control.request([
+    {
+      service: 'type',
+      typeName: 'creator_role'
+    },
+    {
+      service: 'type',
+      typeName: 'document_type'
+    }
+  ]);
 });
