@@ -80,7 +80,10 @@
 
     // Check that all values are not added yet:
     function checkValuesCount() {
-      if ($('ul.values-list > li', _dom).length >= _majorValues.length)
+      if (
+        (!obj.multiple && $('ul.values-list > li', _dom).length) ||
+        ($('ul.values-list > li', _dom).length >= _majorValues.length)
+      )
         $('button.add-value', _dom).attr('hidden', 'true');
       else
         $('button.add-value', _dom).attr('hidden', null);
@@ -132,18 +135,74 @@
       checkValuesDups();
     }
 
-    function _fill() {
-      // TODO
+    /**
+     * Fill the component with existing data.
+     *
+     * @param  {object} data The data to display in the component.
+     * @param  {object} full The full entry (sometimes might be needed).
+     */
+    function _fill(data) {
+      $('ul.values-list', _dom).empty();
+      if (domino.struct.check('array', data))
+        data.map(addLine);
+      else
+        addLine(data);
     }
 
+    /**
+     * Returns the well-formed data described by the component.
+     *
+     * @return {*} The data.
+     */
     function _getData() {
-      // TODO
+      var dom,
+          res;
+
+      if (obj.multiple) {
+        res = [];
+        $('ul.values-list > li > select', _dom).each(function() {
+          res.push($(this).val());
+        });
+
+      } else {
+        dom = $('ul.values-list > li > select', _dom);
+
+        if (dom.length)
+          res = dom.first().val();
+      }
+
+      return res;
     }
 
     function _validate() {
-      // TODO
+      var data = _getData();
+
+      if (obj.required && (!data || !data.length)) {
+        $('.message', this.dom).text('At least one language has to be added.');
+        return false;
+      }
+
+      $('.message', this.dom).empty();
+      return true;
     }
 
+    /**
+     * This method returns the component object.
+     *
+     * @return {object} The component object.
+     */
+    this.getComponent = function() {
+      return {
+        dom: _dom,
+        fill: _fill,
+        getData: _getData,
+        validate: _validate,
+        propertyObject: obj,
+        property: obj.property
+      };
+    };
+
+    // Domino bindings:
     this.triggers.events.listsUpdated = function(d) {
       var list = d.get('lists')[obj.type_source] || [];
 
@@ -158,17 +217,6 @@
 
         $('select.select-in-type', _dom).empty().append(getLineContent());
       }
-    };
-
-    this.getComponent = function() {
-      return {
-        dom: _dom,
-        fill: _fill,
-        getData: _getData,
-        validate: _validate,
-        propertyObject: obj,
-        property: obj.property
-      };
     };
   };
 })();

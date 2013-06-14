@@ -37,6 +37,10 @@
       '</fieldset>'
     );
 
+    function _addLine(value) {
+      // TODO
+    }
+
     function _fill() {
       // TODO
     }
@@ -52,13 +56,18 @@
       var data = _getData();
 
       // Check multiple && required:
-      if (obj.multiple && obj.required && data.length < 1)
+      if (obj.multiple && obj.required && data.length < 1) {
+        $('.message', this.dom).text('At least one identifier has to be added.');
         return false;
+      }
 
       // Check !multiple && required:
-      if (!obj.multiple && obj.required && !data)
+      if (!obj.multiple && obj.required && !data) {
+        $('.message', this.dom).text('Exactly one identifier has to be added.');
         return false;
+      }
 
+      $('.message', this.dom).empty();
       return true;
     }
 

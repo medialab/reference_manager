@@ -151,6 +151,8 @@ $(document).ready(function() {
         id: 'mode',
         force: true,
         type: 'string',
+        triggers: 'updateMode',
+        dispatch: 'modeUpdated',
         description: 'The layout mode (home, search, create).'
       }
     ],
@@ -161,14 +163,6 @@ $(document).ready(function() {
         triggers: ['log', 'warn', 'die'],
         method: function(e) {
           this[e.type]((e.data || {}).message);
-        }
-      },
-      {
-        triggers: 'updateMode',
-        description: 'Update the mode. Hack necessary because of domino.js issue #27.',
-        method: function(e) {
-          this.update('mode', e.data.mode);
-          this.dispatchEvent('modeUpdated');
         }
       },
       {

@@ -145,6 +145,9 @@
 
         if (!isValid)
           invalid++;
+
+        if (!isValid)
+          console.log(comp.property);
       });
 
       if (invalid === 0)

@@ -70,7 +70,7 @@
       // TODO:
       // Fill every inputs
       if (data.role)
-        $('> select', li).val(data.role);
+        $('> select.select-role', li).val(data.role);
 
       $('ul.creators-list', _dom).append(li);
     }
@@ -167,7 +167,7 @@
     /**
      * This method returns the component object.
      *
-     * @return {objext} The component object.
+     * @return {object} The component object.
      */
     this.getComponent = function() {
       return {

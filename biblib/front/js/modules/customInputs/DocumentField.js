@@ -39,7 +39,7 @@
     }
 
     function _validate() {
-      // TODO
+      return true;
     }
 
     this.getComponent = function() {
