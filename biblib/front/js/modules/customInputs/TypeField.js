@@ -28,6 +28,9 @@
         }),
         _self = this;
 
+    // If the "major" flag is not used:
+    _majorValues = _majorValues.length ? _majorValues : _values;
+
     // Try to get the list:
     // AAARGH: How am I supposed to do when I add a module that needs to
     //         dispatch an event when bindings are actually not existing yet?
@@ -94,16 +97,9 @@
       });
 
       // Disable selected values:
-      list.each(function() {
-        var val = $(this).val();
-        $(this).find('option').each(function() {
-          var opt = $(this);
-          if (opt.is(':selected') || !_selected[opt.val()])
-            opt.attr('disabled', null);
-          else
-            opt.attr('disabled', 'true');
-        });
-      });
+      $('option', _dom).attr('disabled', null);
+      for (var k in _selected)
+        $('option[value="' + k + '"]:not(:selected)', _dom).attr('disabled', 'true');
     }
 
     function addLine(s) {
@@ -156,6 +152,10 @@
         _majorValues = _values.filter(function(o) {
           return o.major;
         });
+
+        // If the "major" flag is not used:
+        _majorValues = _majorValues.length ? _majorValues : _values;
+
         $('select.select-in-type', _dom).empty().append(getLineContent());
       }
     };
