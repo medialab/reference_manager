@@ -15,29 +15,6 @@
         _fields = {},
         _defaultMethods = {};
 
-    // Bind DOM events:
-    $('.select-field', _html).click(function(e) {
-      var dom = $(e.target);
-
-      // Check if it is a field anchor:
-      if (dom.is('a[data-field]')) {
-        var field = dom.attr('data-field');
-
-        if (_fields[field]) {
-          _field = _fields[field]
-          generateForm();
-        } else {
-          _waitingField = field;
-          _self.dispatchEvent('loadField', {
-            field: _waitingField
-          });
-        }
-
-        e.stopPropagation();
-        return false;
-      }
-    });
-
     // The following method generates the form:
     function generateForm() {
       var i,
@@ -117,17 +94,11 @@
         }
       }
 
-      $('.select-field', _html).attr('hidden', 'true');
       $('.create-form', _html).empty().attr('hidden', null).append(_components.map(function(o) {
         return o.dom;
       }));
 
       $('<button class="validate-button">Validate</button>').click(validate).appendTo($('.create-form', _html));
-    }
-
-    function restart() {
-      $('.create-form', _html).empty().attr('hidden', 'true');
-      $('.select-field', _html).attr('hidden', null);
     }
 
     /**
@@ -193,14 +164,16 @@
       for (i = 0, l = _components.length; i < l; i++) {
         component = _components[i];
 
-        if (component.fill)
-          component.fill(entry[component.property], entry);
-        else
-          _defaultMethods.fill.call(
-            component,
-            entry[component.property],
-            entry
-          );
+        if (entry) {
+          if (component.fill)
+            component.fill(entry[component.property], entry);
+          else
+            _defaultMethods.fill.call(
+              component,
+              entry[component.property],
+              entry
+            );
+        }
       }
     }
 
@@ -258,63 +231,15 @@
      * DOMINO BINDINGS:
      * ****************
      */
-    // Listen to the controller:
-    this.triggers.events.modeUpdated = function(d) {
-      if (d.get('mode') === 'create')
-        restart();
-    };
-
-    this.triggers.events.displayEntry = function(d, e) {
+    this.triggers.events.displayForm = function(d, e) {
       var entry = e.data.entry;
 
+      _fields = d.get('fields');
       _field = _fields[e.data.field];
 
-      restart();
+      $('.create-form', _html).empty()
       generateForm();
       fill(entry);
-    };
-
-    this.triggers.events.fieldsTreeUpdated = function(d) {
-      var dom,
-          tree = d.get('fieldsTree');
-
-      // Generate the HTML to select which field to use:
-      dom = (function recursiveParse(node, depth) {
-        var header =
-          (node.label && !node.bundle && !node.deprecated) ?
-            '<a href="#" data-field="' + node.type_id + '">' +
-              node.label +
-            '</a>' :
-            node.label ?
-              '<span>' + node.label + '</span>' :
-              '';
-
-        return header +
-          ((node.children || []).length ?
-            '<ul class="tree-depth-' + depth + '">' +
-              node.children.map(function(obj) {
-                return(
-                  '<li>' +
-                    recursiveParse(obj, depth + 1) +
-                  '</li>'
-                );
-              }).join('') +
-            '</ul>' :
-            '');
-      })(tree, 0);
-
-      // Add the HTML to the DOM:
-      $('.select-field', _html).empty().append(dom);
-    };
-
-    this.triggers.events.fieldsUpdated = function(d) {
-      _fields = d.get('fields');
-
-      if (_waitingField && _fields[_waitingField]) {
-        _field = _fields[_waitingField];
-        generateForm();
-        _waitingField = null;
-      }
     };
   };
 })();

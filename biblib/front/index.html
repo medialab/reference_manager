@@ -11,16 +11,19 @@
   <script src="js/ext/mlab.utils.js"></script>
 
   <!-- BibLib front -->
-  <script src="js/blf.control.js"></script>
   <script src="js/blf.layout.js"></script>
-  <script src="js/modules/createPanel.js"></script>
-  <script src="js/modules/searchPanel.js"></script>
+  <script src="js/blf.control.js"></script>
+
   <script src="js/modules/listPanel.js"></script>
+  <script src="js/modules/createPanel.js"></script>
+  <script src="js/modules/fieldsPanel.js"></script>
+  <script src="js/modules/searchPanel.js"></script>
+
+  <script src="js/modules/customInputs/TypeField.js"></script>
   <script src="js/modules/customInputs/CreatorField.js"></script>
-  <script src="js/modules/customInputs/LanguageValueField.js"></script>
   <script src="js/modules/customInputs/DocumentField.js"></script>
   <script src="js/modules/customInputs/IdentifierField.js"></script>
-  <script src="js/modules/customInputs/TypeField.js"></script>
+  <script src="js/modules/customInputs/LanguageValueField.js"></script>
 
   <!-- BibLib style -->
   <style>
@@ -140,7 +143,7 @@
 <body>
   <div id="layout">
     <div id="nav" class="container">
-      <button data-action="create">Add entry</button>
+      <button data-action="fields">Add entry</button>
       <button data-action="search">Search entry</button>
     </div>
     <hr />
@@ -150,6 +153,8 @@
           <!-- The form has to be filled with components depending of the
                field. This will be done in JavaScript, from external data. -->
         </div>
+      </div>
+      <div data-panel="fields" hidden>
         <div class="select-field">
           <!-- Here will be represented the tree of the different fields. It
                will also be done in JavaScript, from external data. -->

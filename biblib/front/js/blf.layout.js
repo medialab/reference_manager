@@ -21,6 +21,11 @@
 
     // Initialize other modules:
     _modules.push(blf.control.addModule(
+      blf.modules.fieldsPanel,
+      [ $('[data-panel="fields"]', _panels) ]
+    ));
+
+    _modules.push(blf.control.addModule(
       blf.modules.createPanel,
       [ $('[data-panel="create"]', _panels) ]
     ));

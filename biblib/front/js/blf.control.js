@@ -155,16 +155,23 @@ $(document).ready(function() {
       // INTERFACE related properties
       {
         value: null,
-        type: '?object',
         id: 'waitingEntry',
+        type: '?object',
         triggers: 'updateWaitingEntry',
         dispatch: 'waitingEntryUpdated',
         description: 'An entry to edit, waiting for the field specifications to be loaded.'
       },
       {
+        value: null,
+        id: 'waitingField',
+        type: '?string',
+        triggers: 'updateWaitingField',
+        dispatch: 'waitingFieldUpdated',
+        description: 'A field that is being loaded.'
+      },
+      {
         value: 'home',
         id: 'mode',
-        force: true,
         type: 'string',
         triggers: 'updateMode',
         dispatch: 'modeUpdated',
@@ -181,19 +188,10 @@ $(document).ready(function() {
         }
       },
       {
-        triggers: 'loadField',
-        description: 'Loading the template of a specific field.',
-        method: function(e) {
-          this.request('field', {
-            field: e.data.field
-          });
-        }
-      },
-      {
         triggers: 'validateEntry',
         description: 'What happens when an entry is validated from the form.',
         method: function(e) {
-          this.dispatchEvent('displayEntry', {
+          this.dispatchEvent('displayForm', {
             entry: e.data.entry,
             field: 'Book'
           });
@@ -234,7 +232,7 @@ $(document).ready(function() {
               fields = this.get('fields');
 
           if (fields[entry.rec_type])
-            this.dispatchEvent('displayEntry', {
+            this.dispatchEvent('displayForm', {
               entry: entry,
               field: entry.rec_type
             }).update('mode', 'create');
@@ -249,13 +247,24 @@ $(document).ready(function() {
         description: 'Check if there is a waiting entry when a field is loaded, and display it is the related field is loaded.',
         method: function(e) {
           var entry = this.get('waitingEntry'),
+              field = this.get('waitingField'),
               fields = this.get('fields');
 
           if (entry && fields[entry.rec_type])
-            this.dispatchEvent('displayEntry', {
+            this.dispatchEvent('displayForm', {
               entry: entry,
               field: entry.rec_type
-            }).update('mode', 'create');
+            }).update({
+              mode: 'create',
+              waitingEntry: null
+            });
+          else if (field && fields[field])
+            this.dispatchEvent('displayForm', {
+              field: field
+            }).update({
+              mode: 'create',
+              waitingField: null
+            });
         }
       },
       {
@@ -263,6 +272,26 @@ $(document).ready(function() {
         description: 'Deletes the related entry.',
         method: function(e) {
           // TODO
+        }
+      },
+      {
+        triggers: 'clickField',
+        description: 'Display the panel to create a new entry, with the related field.',
+        method: function(e) {
+          var field = e.data.field,
+              fields = this.get('fields');
+
+          this.update('mode', 'create');
+          if (fields[field])
+            this.dispatchEvent('displayForm', {
+              field: field
+            });
+          else {
+            this.update('waitingField', e.data.field);
+            this.request('field', {
+              field: e.data.field
+            });
+          }
         }
       }
     ],
