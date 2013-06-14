@@ -137,6 +137,7 @@
     function validate() {
       var invalid = 0;
 
+      console.log('Form validation:');
       _components.some(function(comp) {
         var isValid =
           comp.validate ?
@@ -147,7 +148,7 @@
           invalid++;
 
         if (!isValid)
-          console.log(comp.property);
+          console.log('  - Invalid component:', comp.property);
       });
 
       if (invalid === 0)

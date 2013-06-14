@@ -47,7 +47,7 @@
       data = data || {};
       var li = $(
         '<li>' +
-          '<select class="select-type">' +
+          '<select class="col-1 select-type">' +
             // TODO:
             // Set this in assets, find it automatically as well.
             '<option value="person">Person</option>' +
@@ -55,7 +55,7 @@
             '<option value="event">Event</option>' +
           '</select>' +
           '<input class="col-3" type="text" placeholder="Type something..." />' +
-          '<select class="col-2" class="select-role">' +
+          '<select class="col-2 select-role">' +
             // Find the roles through the global controler:
             _creatorRoles.map(function(o) {
               return '<option value="' + o.type_id + '">' + (o.label || o.labels[blf.assets.lang]) + '</option>';
