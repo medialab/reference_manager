@@ -180,14 +180,6 @@ $(document).ready(function() {
     ],
     hacks: [
       {
-        // This hack is just useful to make the modules able to log, warn and
-        // die trough domino:
-        triggers: ['log', 'warn', 'die'],
-        method: function(e) {
-          this[e.type]((e.data || {}).message);
-        }
-      },
-      {
         triggers: 'validateEntry',
         description: 'What happens when an entry is validated from the form.',
         method: function(e) {
@@ -221,6 +213,15 @@ $(document).ready(function() {
         method: function(e) {
           this.request('type', {
             typeName: e.data.list
+          });
+        }
+      },
+      {
+        triggers: 'loadField',
+        description: 'Loads a specific field.',
+        method: function(e) {
+          this.request('type', {
+            typeName: e.data.field
           });
         }
       },

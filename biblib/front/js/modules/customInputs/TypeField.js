@@ -34,7 +34,9 @@
     // Try to get the list:
     // AAARGH: How am I supposed to do when I add a module that needs to
     //         dispatch an event when bindings are actually not existing yet?
-    //         So... here is one dirty solution:
+    //         So... here is one dirty solution, waiting for something cleaner:
+    //
+    //         => https://github.com/jacomyal/domino.js/issues/35
     window.setTimeout(function() {
       if (!_values.length)
         _self.dispatchEvent('loadList', {

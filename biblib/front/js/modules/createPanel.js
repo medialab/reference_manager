@@ -10,96 +10,9 @@
         _html = html,
         _waitingField,
         _field,
-        _modules = [],
         _components = [],
         _fields = {},
         _defaultMethods = {};
-
-    // The following method generates the form:
-    function generateForm() {
-      var i,
-          l,
-          obj,
-          module,
-          component;
-
-      _modules = [];
-      _components = [];
-
-      // Parse children:
-      for (i = 0, l = _field.children.length; i < l; i++) {
-        obj = _field.children[i];
-        module = blf.modules.customInputs[obj.type_ui];
-
-        // If a custom component is found:
-        if (typeof module === 'function') {
-          module = blf.control.addModule(module, [obj]);
-          _modules.push(module);
-          _components.push(module.getComponent());
-
-        // Else, if a basic component is recognized:
-        } else {
-          switch (obj.type_ui) {
-            case 'CharField':
-              _components.push({
-                propertyObject: obj,
-                property: obj.property,
-                dom: $(
-                  '<fieldset class="CharField">' +
-                    '<div class="message"></div>' +
-                    '<label for="' + obj.property + '"">' +
-                      (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-                    '</label>' +
-                    '<input class="col-6" name="' + obj.property + '" type="text" />' +
-                  '</fieldset>'
-                )
-              });
-              break;
-            case 'DateField':
-              _components.push({
-                propertyObject: obj,
-                property: obj.property,
-                dom: $(
-                  '<fieldset class="DateField">' +
-                    '<div class="message"></div>' +
-                    '<label for="' + obj.property + '"">' +
-                      (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-                    '</label>' +
-                    '<input class="col-6" name="' + obj.property + '" type="year" />' +
-                  '</fieldset>'
-                )
-              });
-              break;
-            case 'IntegerField':
-              _components.push({
-                propertyObject: obj,
-                property: obj.property,
-                dom: $(
-                  '<fieldset class="IntegerField">' +
-                    '<div class="message"></div>' +
-                    '<label for="' + obj.property + '"">' +
-                      (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-                    '</label>' +
-                    '<input class="col-6" name="' + obj.property + '" type="number" />' +
-                  '</fieldset>'
-                )
-              });
-              break;
-            default:
-              _self.dispatchEvent('warn', {
-                message: 'Data type "' + obj.type_ui + '" not recognized.'
-              });
-              break;
-          }
-        }
-      }
-
-      $('.create-form', _html).empty().attr('hidden', null).append(_components.map(function(o) {
-        return o.dom;
-      }));
-
-      $('<button class="validate-button">Validate</button>').click(validate).appendTo($('.create-form', _html));
-    }
 
     /**
      * This method checks if values entered in inputs by the user are valid. If
@@ -193,7 +106,7 @@
         value = undefined;
 
       return value;
-    }
+    };
 
     /**
      * The default "fill" method.
@@ -201,7 +114,7 @@
      */
     _defaultMethods.fill = function(value) {
       $('input', this.dom).val(value);
-    }
+    };
 
     /**
      * The default "validate" method.
@@ -225,7 +138,7 @@
         $('.message', this.dom).empty();
 
       return isValid;
-    }
+    };
 
     /**
      * DOMINO BINDINGS:
@@ -237,9 +150,90 @@
       _fields = d.get('fields');
       _field = _fields[e.data.field];
 
-      $('.create-form', _html).empty()
-      generateForm();
+      _components = blf.modules.createPanel.generateForm(blf.control, _field);
+      $('.create-form', _html).empty().append(_components.map(function(o) {
+        return o.dom;
+      }));
+
+      $('<button class="validate-button">Validate</button>').click(validate).appendTo($('.create-form', _html));
+
       fill(entry);
     };
+  };
+
+  blf.modules.createPanel.generateForm = function(d, field) {
+    var i,
+        l,
+        obj,
+        module,
+        component,
+        components = [];
+
+    // Parse children:
+    for (i = 0, l = field.children.length; i < l; i++) {
+      obj = field.children[i];
+      module = blf.modules.customInputs[obj.type_ui];
+
+      // If a custom component is found:
+      if (typeof module === 'function') {
+        module = d.addModule(module, [obj]);
+        components.push(module.getComponent());
+
+      // Else, if a basic component is recognized:
+      } else {
+        switch (obj.type_ui) {
+          case 'CharField':
+            components.push({
+              propertyObject: obj,
+              property: obj.property,
+              dom: $(
+                '<fieldset class="CharField">' +
+                  '<div class="message"></div>' +
+                  '<label for="' + obj.property + '"">' +
+                    (obj.label || obj.labels[blf.assets.lang]) + ' :' +
+                  '</label>' +
+                  '<input class="col-6" name="' + obj.property + '" type="text" />' +
+                '</fieldset>'
+              )
+            });
+            break;
+          case 'DateField':
+            components.push({
+              propertyObject: obj,
+              property: obj.property,
+              dom: $(
+                '<fieldset class="DateField">' +
+                  '<div class="message"></div>' +
+                  '<label for="' + obj.property + '"">' +
+                    (obj.label || obj.labels[blf.assets.lang]) + ' :' +
+                  '</label>' +
+                  '<input class="col-6" name="' + obj.property + '" type="year" />' +
+                '</fieldset>'
+              )
+            });
+            break;
+          case 'IntegerField':
+            components.push({
+              propertyObject: obj,
+              property: obj.property,
+              dom: $(
+                '<fieldset class="IntegerField">' +
+                  '<div class="message"></div>' +
+                  '<label for="' + obj.property + '"">' +
+                    (obj.label || obj.labels[blf.assets.lang]) + ' :' +
+                  '</label>' +
+                  '<input class="col-6" name="' + obj.property + '" type="number" />' +
+                '</fieldset>'
+              )
+            });
+            break;
+          default:
+            d.warn('Data type "' + obj.type_ui + '" not recognized.');
+            break;
+        }
+      }
+    }
+
+    return components;
   };
 })();
