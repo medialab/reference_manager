@@ -26,6 +26,9 @@
     domino.module.call(this);
 
     var _dom,
+        _lineID = 1,
+        _linesHash = {},
+        _classTemplates,
         _creatorRoles = d.get('lists').creator_role || [];
 
     _dom = $(
@@ -45,44 +48,201 @@
     // not specified.
     function addCreator(data) {
       data = data || {};
-      var li = $(
-        '<li>' +
-          '<select class="col-1 select-type">' +
-            // TODO:
-            // Set this in assets, find it automatically as well.
-            '<option value="person">Person</option>' +
-            '<option value="orgunit">Orgunit</option>' +
-            '<option value="event">Event</option>' +
-          '</select>' +
-          '<input class="col-3" type="text" placeholder="Type something..." />' +
-          '<select class="col-2 select-role">' +
-            // Find the roles through the global controler:
-            _creatorRoles.map(function(o) {
-              return '<option value="' + o.type_id + '">' + (o.label || o.labels[blf.assets.lang]) + '</option>';
-            }).join() +
-          '</select>' +
-          '<button class="remove-creator">-</button>' +
-          '<button class="moveup-creator">↑</button>' +
-          '<button class="movedown-creator">↓</button>' +
-        '</li>'
-      );
+      var id = _lineID++,
+          li = $(
+            '<li data-id="' + id + '">' +
+              '<select class="col-3 select-type">' +
+                // TODO:
+                // Set this in assets, find it automatically as well.
+                '<option value="Person">Person</option>' +
+                '<option value="Orgunit">Orgunit</option>' +
+                '<option value="Event">Event</option>' +
+              '</select>' +
+              '<select class="col-3 select-role">' +
+                // Find the roles through the global controler:
+                _creatorRoles.map(function(o) {
+                  return '<option value="' + o.type_id + '">' + (o.label || o.labels[blf.assets.lang]) + '</option>';
+                }).join() +
+              '</select>' +
+              '<button class="remove-creator">-</button>' +
+              '<button class="moveup-creator">↑</button>' +
+              '<button class="movedown-creator">↓</button>' +
+              '<div class="col-6 custom-container">' +
+              '</div>' +
+            '</li>'
+          );
 
-      // TODO:
-      // Fill every inputs
+      var agent = data.agent || {};
       if (data.role)
         $('> select.select-role', li).val(data.role);
+
+      _linesHash[id] = _classTemplates(agent.rec_class || 'Person');
+      $('.custom-container', li).append(_linesHash[id].dom);
+
+      if (agent.rec_class) {
+        $('> select.select-type', li).val(agent.rec_class);
+        _linesHash[id].fill(data, _linesHash[id]);
+      }
 
       $('ul.creators-list', _dom).append(li);
     }
 
+    // Class templates:
+    _classTemplates = function(c) {
+      var o = {
+        Person: {
+          dom: $(
+            '<fieldset>' +
+              '<label class="col-3">Nom :</label>' +
+              '<input data-attribute="name_family" class="col-3" type="text" />' +
+            '</fieldset>' +
+            '<fieldset>' +
+              '<label class="col-3">Prénom :</label>' +
+              '<input data-attribute="name_given" class="col-3" type="text" />' +
+            '</fieldset>' +
+            '<fieldset>' +
+              '<label class="col-3">Année de naissance :</label>' +
+              '<input data-attribute="date_birth" class="col-3" type="year" />' +
+            '</fieldset>' +
+            '<fieldset>' +
+              '<label class="col-3">Année de décès :</label>' +
+              '<input data-attribute="date_death" class="col-3" type="year" />' +
+            '</fieldset>' +
+            '<fieldset>' +
+              '<label class="col-3">Affiliation :</label>' +
+              '<input data-attribute="affiliation" class="col-3" type="text" />' +
+            '</fieldset>'
+          ),
+          fill: function(data, obj) {
+            $('input[data-attribute="name_family"]', obj.dom).val(data.agent.name_family);
+            $('input[data-attribute="name_given"]', obj.dom).val(data.agent.name_given);
+            $('input[data-attribute="date_birth"]', obj.dom).val(data.agent.date_birth);
+            $('input[data-attribute="date_death"]', obj.dom).val(data.agent.date_death);
+
+            $('input[data-attribute="affiliation"]', obj.dom).val((data.affiliation || {}).name);
+            return this;
+          },
+          getData: function(data, obj) {
+            data.agent = data.agent || {
+              rec_class: 'Person',
+              rec_metajson: 1
+            };
+
+            data.agent.name_family = $('input[data-attribute="name_family"]', obj.dom).val();
+            data.agent.name_given = $('input[data-attribute="name_given"]', obj.dom).val();
+            data.agent.date_birth = $('input[data-attribute="date_birth"]', obj.dom).val();
+            data.agent.date_death = $('input[data-attribute="date_death"]', obj.dom).val();
+
+            var aff = $('input[data-attribute="affiliation"]', obj.dom).val();
+            if (aff)
+              data.affiliation = {
+                rec_class: 'Orgunit',
+                rec_metajson: 1,
+                name: aff
+              };
+
+            return data;
+          }
+        },
+        Orgunit: {
+          dom: $(
+            '<fieldset>' +
+              '<label class="col-3">Nom :</label>' +
+              '<input data-attribute="name" class="col-3" type="text" />' +
+            '</fieldset>'
+          ),
+          fill: function(data, obj) {
+            $('input[data-attribute="name"]', obj.dom).val(data.agent.name);
+            return this;
+          },
+          getData: function(data, obj) {
+            data.agent = data.agent || {
+              rec_class: 'Orgunit',
+              rec_metajson: 1
+            };
+
+            data.agent.name = $('input[data-attribute="name"]', obj.dom).val();
+
+            return data;
+          }
+        },
+        Event: {
+          dom: $(
+            '<fieldset>' +
+              '<label class="col-3">Titre :</label>' +
+              '<input data-attribute="title" class="col-3" type="text" />' +
+            '</fieldset>' +
+            '<fieldset>' +
+              '<label class="col-3">Numéro :</label>' +
+              '<input data-attribute="number" class="col-3" type="number" />' +
+            '</fieldset>' +
+            '<fieldset>' +
+              '<label class="col-3">International :</label>' +
+              '<input data-attribute="international" class="col-3" type="checkbox" />' +
+            '</fieldset>' +
+            '<fieldset>' +
+              '<label class="col-3">Ville :</label>' +
+              '<input data-attribute="place" class="col-3" type="text" />' +
+            '</fieldset>' +
+            '<fieldset>' +
+              '<label class="col-3">Pays :</label>' +
+              '<input data-attribute="country" class="col-3" type="text" />' +
+            '</fieldset>' +
+            '<fieldset>' +
+              '<label class="col-3">Date de début :</label>' +
+              '<input data-attribute="date_start" class="col-3" type="date" />' +
+            '</fieldset>' +
+            '<fieldset>' +
+              '<label class="col-3">Date de fin :</label>' +
+              '<input data-attribute="date_end" class="col-3" type="date" />' +
+            '</fieldset>'
+          ),
+          fill: function(data, obj) {
+             ('input[data-attribute="title"]', obj.dom).val(data.agent.title);
+             ('input[data-attribute="number"]', obj.dom).val(data.agent.number);
+             ('input[data-attribute="place"]', obj.dom).val(data.agent.place);
+             ('input[data-attribute="country"]', obj.dom).val(data.agent.country);
+             ('input[data-attribute="date_start"]', obj.dom).val(data.agent.date_start);
+             ('input[data-attribute="date_end"]', obj.dom).val(data.agent.date_end);
+             ('input[data-attribute="international"]', obj.dom).attr('checked', data.agent.international ? 'checked' : null);
+             return this;
+          },
+          getData: function(data, obj) {
+            data.agent = data.agent || {
+              rec_class: 'Event',
+              rec_metajson: 1
+            };
+
+            data.agent.title = $('input[data-attribute="title"]', obj.dom).val();
+            data.agent.number = $('input[data-attribute="number"]', obj.dom).val();
+            data.agent.place = $('input[data-attribute="place"]', obj.dom).val();
+            data.agent.country = $('input[data-attribute="country"]', obj.dom).val();
+            data.agent.date_start = $('input[data-attribute="date_start"]', obj.dom).val();
+            data.agent.date_end = $('input[data-attribute="date_end"]', obj.dom).val();
+            data.agent.international = !!$('input[data-attribute="international"]', obj.dom).is(':checked');
+
+            return data;
+          }
+        }
+      };
+
+      return o[c];
+    };
+
     // Bind events:
+    $('button.add-creator', _dom).click(function() {
+      addCreator();
+    });
+
     _dom.click(function(e) {
       var target = $(e.target),
           li = target.parents('ul.creators-list > li');
 
       // Check if it is a field button:
       if (li.length && target.is('button.remove-creator')) {
+        var id = li.data('id');
         li.remove();
+        delete _linesHash[id];
       } else if (li.length && target.is('button.moveup-creator')) {
         if (!li.is(':first-child'))
           li.prev().before(li);
@@ -90,21 +250,20 @@
         if (!li.is(':last-child'))
           li.next().after(li);
       }
+    }).change(function(e) {
+      var target = $(e.target),
+          li = target.parents('ul.creators-list > li');
+
+      // Check which select it is:
+      if (li.length && target.is('select.select-type')) {
+        var id = li.data('id'),
+            value = target.val(),
+            container = $('.custom-container', li);
+
+        _linesHash[id] = _classTemplates(value);
+        container.empty().append(_linesHash[id].dom);
+      }
     });
-
-    $('button.add-creator', _dom).click(function() {
-      addCreator();
-    });
-
-    this.triggers.events.creatorRolesUpdated = function(d) {
-      _creatorRoles = d.get('creatorRoles') || [];
-
-      $('select.select-role', dom).html(
-        _creatorRoles.map(function(o) {
-          return '<option value="' + o.type_id + '">' + (o.label || o.labels[blf.assets.lang]) + '</option>';
-        }).join()
-      );
-    };
 
     /**
      *  Check if the content of the component is valid. Returns true if valid,
@@ -148,17 +307,13 @@
 
       // Parse line and form data:
       $('ul.creators-list > li', _dom).each(function() {
-        var li = $(this);
+        var li = $(this),
+            id = li.data('id');
 
-        creators.push({
+        creators.push(_linesHash[id].getData({
           role: $('> select', li).val(),
-          agents: {
-            name_family: 'Power',   // TODO
-            name_given: 'Michael',  // TODO
-            rec_class: 'Person',    // TODO
-            rec_metajson: 1
-          }
-        });
+          agents: {}
+        }), _linesHash[id]);
       });
 
       return creators.length ? creators : undefined;
@@ -178,6 +333,17 @@
         propertyObject: obj,
         property: obj.property
       };
+    };
+
+    // Domino bindings:
+    this.triggers.events.creatorRolesUpdated = function(d) {
+      _creatorRoles = d.get('creatorRoles') || [];
+
+      $('select.select-role', dom).html(
+        _creatorRoles.map(function(o) {
+          return '<option value="' + o.type_id + '">' + (o.label || o.labels[blf.assets.lang]) + '</option>';
+        }).join()
+      );
     };
   };
 })();

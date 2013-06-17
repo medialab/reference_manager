@@ -66,8 +66,35 @@
 
     return arr.reduce(function(res, obj) {
       res[obj[key]] = obj;
-      return res
+      return res;
     }, {});
+  };
+
+  /**
+   * Returns a copy of the original array, but with only unique values, with
+   * their last position in the original array.
+   *
+   * Use case:
+   * *********
+   *
+   *  > var a = mlab.array.unique([0, 1, 1, 2, 3, 1]);
+   *  > // will return the following array:
+   *  > // [0, 2, 3, 1]
+   *
+   * @param  {array} arr The original array.
+   * @return {array} Returns the new array.
+   */
+  mlab.array.unique = function(arr) {
+    arr = arr || [];
+    var i,
+        l = arr.length,
+        res = [];
+
+    for (i = 0; i < l; i++)
+      if (arr.lastIndexOf(arr[i]) === i)
+        res.push(arr[i]);
+
+    return res;
   };
 
   /**

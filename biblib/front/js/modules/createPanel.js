@@ -65,7 +65,7 @@
                     '<label for="' + obj.property + '"">' +
                       (obj.label || obj.labels[blf.assets.lang]) + ' :' +
                     '</label>' +
-                    '<input class="col-6" name="' + obj.property + '" type="date" />' +
+                    '<input class="col-6" name="' + obj.property + '" type="year" />' +
                   '</fieldset>'
                 )
               });
