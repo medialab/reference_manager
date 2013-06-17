@@ -313,7 +313,7 @@
         creators.push(_linesHash[id].getData({
           role: $('> select', li).val(),
           agents: {}
-        }), _linesHash[id]);
+        }, _linesHash[id]));
       });
 
       return creators.length ? creators : undefined;

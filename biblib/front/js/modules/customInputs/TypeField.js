@@ -131,6 +131,7 @@
 
       $('select', li).change(checkValuesDups);
       $('ul.values-list', _dom).append(li);
+
       checkValuesCount();
       checkValuesDups();
     }
@@ -145,7 +146,7 @@
       $('ul.values-list', _dom).empty();
       if (domino.struct.check('array', data))
         data.map(addLine);
-      else
+      else if (data)
         addLine(data);
     }
 
