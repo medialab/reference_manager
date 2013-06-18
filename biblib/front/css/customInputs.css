@@ -4,17 +4,17 @@
   vertical-align: top;
 }
 
-.customInput ul {
+.customInput > div > ul {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.customInput ul li button {
+.customInput li > button {
   visibility: hidden;
 }
 
-.customInput ul li:hover button {
+.customInput li:hover > button {
   visibility: visible;
 }
 

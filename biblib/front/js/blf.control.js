@@ -220,8 +220,8 @@ $(document).ready(function() {
         triggers: 'loadField',
         description: 'Loads a specific field.',
         method: function(e) {
-          this.request('type', {
-            typeName: e.data.field
+          this.request('field', {
+            field: e.data.field
           });
         }
       },

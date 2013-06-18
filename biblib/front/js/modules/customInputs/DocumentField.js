@@ -23,8 +23,19 @@
   blf.modules.customInputs.DocumentField = function(obj, d) {
     domino.module.call(this);
 
-    var _dom,
-        _fields,
+    var _dom = $(
+          '<fieldset class="customInput DocumentField">' +
+            '<div class="message"></div>' +
+            '<label>' +
+              (obj.label || obj.labels[blf.assets.lang]) + ' :' +
+            '</label>' +
+            '<div class="documents-container container">' +
+              '<ul class="documents-list"></ul>' +
+              '<button class="add-document">+</button>' +
+            '</div>' +
+          '</fieldset>'
+        ),
+        _ul = $('> div > ul', _dom),
         _lineID = 1,
         _self = this,
         _linesHash = {},
@@ -33,19 +44,6 @@
 
     // HARD-CODED
     obj.type_fields = ['Book'];
-
-    _dom = $(
-      '<fieldset class="customInput DocumentField">' +
-        '<div class="message"></div>' +
-        '<label>' +
-          (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-        '</label>' +
-        '<div class="documents-container container">' +
-          '<ul class="documents-list"></ul>' +
-          '<button class="add-document">+</button>' +
-        '</div>' +
-      '</fieldset>'
-    );
 
     // Try to get the list:
     // AAARGH: How am I supposed to do when I add a module that needs to
@@ -95,10 +93,10 @@
         _linesHash[id].fill(data, _linesHash[id]);
       }
 
-      $('ul.documents-list', _dom).append(li);
+      _ul.append(li);
 
       // Check count:
-      if (obj.only_one && $('ul li', _dom).length >= 1)
+      if (obj.only_one && $('> li', _ul).length >= 1)
         $('.add-document', _dom).attr('hidden', 'true');
       else
         $('.add-document', _dom).attr('hidden', null);
@@ -115,7 +113,7 @@
 
     _dom.click(function(e) {
       var target = $(e.target),
-          li = target.parents('ul.documents-list > li');
+          li = target.parents('ul.documents-list > li').first();
 
       // Check if it is a field button:
       if (li.length && target.is('button.remove-document')) {
@@ -128,17 +126,17 @@
           $('> select.select-field', li).change();
 
         // Check count:
-        if (obj.only_one && $('ul li', _dom).length >= 1)
+        if (obj.only_one && $('> div > ul > li', _dom).length >= 1)
           $('.add-document', _dom).attr('hidden', 'true');
         else
           $('.add-document', _dom).attr('hidden', null);
       }
     }).change(function(e) {
       var target = $(e.target),
-          li = target.parents('ul.documents-list > li');
+          li = target.parents('ul.documents-list > li').first();
 
       // Check which select it is:
-      if (li.length && target.is('select.select-field')) {
+      if (li.length && target.is($('> div > ul > li > select.select-field', _dom))) {
         var id = li.data('id'),
             value = target.val(),
             container = $('.custom-container', li);
@@ -175,8 +173,8 @@
      * @param  {object} full The full entry (sometimes might be needed).
      */
     function _fill(data) {
-      var li,
-          ul = $('ul.documents-list', _dom).empty();
+      var li;
+      _ul.empty();
 
       // Parse data and create lines:
       (data || []).forEach(addDocument);
@@ -191,7 +189,7 @@
       var documents = [];
 
       // Parse line and form data:
-      $('ul.documents-list > li', _dom).each(function() {
+      $('> li', _ul).each(function() {
         var li = $(this),
             id = li.data('id');
 
@@ -224,9 +222,12 @@
     this.triggers.events.fieldsUpdated = function(d) {
       _fields = d.get('fields') || [];
 
-      $('select.select-field', dom).html(
-        _fields.map(function(o) {
-          return '<option value="' + o.type_id + '">' + (o.label || o.labels[blf.assets.lang]) + '</option>';
+      $('> li > select.select-field', _ul).html(
+        obj.type_fields.filter(function(s) {
+          return _fields[s];
+        }).map(function(s) {
+          var o = _fields[s];
+          return '<option value="' + o.rec_type + '">' + o.rec_type + '</option>';
         }).join()
       );
     };
