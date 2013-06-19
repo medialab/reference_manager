@@ -1,6 +1,7 @@
 ;(function() {
   'use strict';
   mlab.pkg('blf.modules.customInputs');
+
   /**
    * This custom input is basically a combo, whose options are dynamically
    * loaded.

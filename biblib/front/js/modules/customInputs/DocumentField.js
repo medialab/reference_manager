@@ -78,19 +78,24 @@
             '</li>'
           );
 
-      var agent = data.agent || {};
       if (data.rec_type) {
         $('> select.select-field', li).val(data.rec_type);
 
         _linesHash[id] = blf.modules.createPanel.generateForm(blf.control, _fields[data.rec_type]);
-        $('.custom-container', _html).empty().append(_linesHash[id].map(function(o) {
+        $('> .custom-container', li).empty().append(_linesHash[id].map(function(o) {
           return o.dom;
         }));
-      }
 
-      if (agent.rec_class) {
-        $('> select.select-field', li).val(agent.rec_class);
-        _linesHash[id].fill(data, _linesHash[id]);
+        _linesHash[id].forEach(function(comp) {
+          if (comp.fill)
+            comp.fill(data.document[comp.property], data.document);
+          else
+            blf.modules.createPanel.defaultMethods.fill.call(
+              comp,
+              data.document[comp.property],
+              data.document
+            );
+        });
       }
 
       _ul.append(li);
@@ -102,7 +107,7 @@
         $('.add-document', _dom).attr('hidden', null);
 
       // Trigger event if only one type available:
-      if (obj.type_fields.length <= 1)
+      if (!data.rec_type && obj.type_fields.length <= 1)
         $('> select.select-field', li).change();
     }
 
@@ -139,7 +144,7 @@
       if (li.length && target.is($('> div > ul > li > select.select-field', _dom))) {
         var id = li.data('id'),
             value = target.val(),
-            container = $('.custom-container', li);
+            container = $('> .custom-container', li);
 
         _linesHash[id] = blf.modules.createPanel.generateForm(blf.control, _fields[value]);
           container.empty().append(_linesHash[id].map(function(o) {
@@ -155,15 +160,28 @@
      * @return {string} Returns true if the content id valid, and false else.
      */
     function _validate() {
-      var data = _getData();
+      var k,
+          invalid = 0;
+
+      $('.message', _dom).empty();
 
       if (obj.required && (!data || !data.length)) {
-        $('.message', this.dom).text('At least one document has to be specified.');
+        $('.message', _dom).text('At least one document has to be specified.');
         return false;
       }
 
-      $('.message', this.dom).empty();
-      return true;
+      for (k in _linesHash)
+        _linesHash[k].forEach(function(comp) {
+          var isValid =
+            comp.validate ?
+              comp.validate() :
+              blf.modules.createPanel.defaultMethods.validate.call(comp);
+
+          if (!isValid)
+            invalid++;
+        });
+
+      return invalid === 0;
     }
 
     /**
@@ -173,11 +191,10 @@
      * @param  {object} full The full entry (sometimes might be needed).
      */
     function _fill(data) {
-      var li;
       _ul.empty();
 
       // Parse data and create lines:
-      (data || []).forEach(addDocument);
+      ((data || {}).children || []).forEach(addDocument);
     }
 
     /**
@@ -190,16 +207,26 @@
 
       // Parse line and form data:
       $('> li', _ul).each(function() {
-        var li = $(this),
+        var value,
+            li = $(this),
             id = li.data('id');
 
-        documents.push(_linesHash[id].getData({
-          rec_type: $('> select', li).val(),
-          agents: {}
-        }, _linesHash[id]));
+        documents.push({
+          rec_type: $('> select.select-field', li).val(),
+          document: _linesHash[id].reduce(function(res, comp) {
+            value = comp.getData ?
+              comp.getData() :
+              blf.modules.createPanel.defaultMethods.getData.call(comp);
+
+            res[comp.property] = value;
+            return res;
+          }, {})
+        });
       });
 
-      return documents.length ? documents : undefined;
+      return documents.length ? {
+        children: documents
+      } : undefined;
     }
 
     /**

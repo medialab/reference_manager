@@ -11,8 +11,7 @@
         _waitingField,
         _field,
         _components = [],
-        _fields = {},
-        _defaultMethods = {};
+        _fields = {};
 
     /**
      * This method checks if values entered in inputs by the user are valid. If
@@ -22,11 +21,11 @@
       var invalid = 0;
 
       console.log('Form validation:');
-      _components.some(function(comp) {
+      _components.forEach(function(comp) {
         var isValid =
           comp.validate ?
             comp.validate() :
-            _defaultMethods.validate.call(comp);
+            blf.modules.createPanel.defaultMethods.validate.call(comp);
 
         if (!isValid)
           invalid++;
@@ -35,10 +34,13 @@
           console.log('  - Invalid component:', comp.property);
       });
 
-      if (invalid === 0)
+      if (invalid === 0) {
+        var data = getData();
+        console.log('Data:', domino.utils.clone(data));
         _self.dispatchEvent('validateEntry', {
-          entry: getData()
+          entry: data
         });
+      }
     }
 
     /**
@@ -57,7 +59,7 @@
         component = _components[i];
         value = component.getData ?
           component.getData() :
-          _defaultMethods.getData.call(component);
+          blf.modules.createPanel.defaultMethods.getData.call(component);
 
         if (value !== undefined)
         data[component.property] = value;
@@ -81,7 +83,7 @@
           if (component.fill)
             component.fill(entry[component.property], entry);
           else
-            _defaultMethods.fill.call(
+            blf.modules.createPanel.defaultMethods.fill.call(
               component,
               entry[component.property],
               entry
@@ -89,56 +91,6 @@
         }
       }
     }
-
-    /**
-     * DEFAULT INPUT METHODS:
-     * **********************
-     */
-    /**
-     * The default "getData" method.
-     * @return {*} The data to insert in the new entry.
-     */
-    _defaultMethods.getData = function() {
-      var value = $('input', this.dom).val();
-
-      // Check empty strings:
-      if (value === '')
-        value = undefined;
-
-      return value;
-    };
-
-    /**
-     * The default "fill" method.
-     * @param  {*} value The value to set in the input.
-     */
-    _defaultMethods.fill = function(value) {
-      $('input', this.dom).val(value);
-    };
-
-    /**
-     * The default "validate" method.
-     * @return {boolean} "true" if valid, "false" else.
-     */
-    _defaultMethods.validate = function() {
-      var isValid;
-
-      if (this.propertyObject.required)
-        isValid = (this.getData ?
-          this.getData() :
-          _defaultMethods.getData.call(this)) !== undefined;
-      else
-        isValid = true;
-
-      // Display a short message if there is no value and the property is
-      // required:
-      if (!isValid)
-        $('.message', this.dom).text('This field has to be specified.');
-      else
-        $('.message', this.dom).empty();
-
-      return isValid;
-    };
 
     /**
      * DOMINO BINDINGS:
@@ -161,6 +113,11 @@
     };
   };
 
+  /**
+   * FORM GENERATION STATIC HELPERS:
+   * *******************************
+   */
+  mlab.pkg('blf.modules.createPanel.defaultMethods');
   blf.modules.createPanel.generateForm = function(d, field) {
     var i,
         l,
@@ -235,5 +192,51 @@
     }
 
     return components;
+  };
+
+  /**
+   * The default "getData" method.
+   * @return {*} The data to insert in the new entry.
+   */
+  blf.modules.createPanel.defaultMethods.getData = function() {
+    var value = $('input', this.dom).val();
+
+    // Check empty strings:
+    if (value === '')
+      value = undefined;
+
+    return value;
+  };
+
+  /**
+   * The default "fill" method.
+   * @param  {*} value The value to set in the input.
+   */
+  blf.modules.createPanel.defaultMethods.fill = function(value) {
+    $('input', this.dom).val(value);
+  };
+
+  /**
+   * The default "validate" method.
+   * @return {boolean} "true" if valid, "false" else.
+   */
+  blf.modules.createPanel.defaultMethods.validate = function() {
+    var isValid;
+
+    if (this.propertyObject.required)
+      isValid = (this.getData ?
+        this.getData() :
+        blf.modules.createPanel.defaultMethods.getData.call(this)) !== undefined;
+    else
+      isValid = true;
+
+    // Display a short message if there is no value and the property is
+    // required:
+    if (!isValid)
+      $('.message', this.dom).text('This field has to be specified.');
+    else
+      $('.message', this.dom).empty();
+
+    return isValid;
   };
 })();
