@@ -17,7 +17,7 @@
    *
    * @param  {string} str The path of the namespace, with "." to separe the
    *                      different parts of the path.
-   * @return {object} Returns the related object.
+   * @return {object}     Returns the related object.
    */
   mlab.pkg = function(str) {
     return str.split('.').reduce(function(o, s) {
@@ -57,7 +57,7 @@
    * @param  {array}   arr The array to index.
    * @param  {?string} key The key that will be used as index. If not
    *                       specified,
-   * @return {object} Returns the object index.
+   * @return {object}      Returns the object index.
    */
   mlab.pkg('mlab.array');
   mlab.array.index = function(arr, key) {
@@ -82,7 +82,7 @@
    *  > // [0, 2, 3, 1]
    *
    * @param  {array} arr The original array.
-   * @return {array} Returns the new array.
+   * @return {array}     Returns the new array.
    */
   mlab.array.unique = function(arr) {
     arr = arr || [];
@@ -96,6 +96,84 @@
 
     return res;
   };
+
+  /**
+   * A custom JavaScript date parser, using the custom masks stored in
+   * mlab.date.masks.
+   *
+   * Use cases:
+   * **********
+   *
+   *  > mlab.date('1993-04-30 13:37:00');
+   *  > mlab.date('1993-04-30');
+   *  > mlab.date('19930430');
+   *
+   * @param  {string} s The string date to parse.
+   * @return {date}     The JavaScript date object.
+   */
+  mlab.date = function(s) {
+    var d,
+        match;
+    s = s.toString();
+
+    // Try custom masks:
+    if (
+      mlab.date.masks.some(function(obj){
+        match = s.match(obj.regex);
+        if (match) {
+          d = obj.fn(match);
+          return true;
+        }
+
+        return false;
+      })// ||
+      //(d = new Date(s))
+    ) {
+      if (isNaN(d.valueOf()))
+        throw new Error('Unvalid date: ' + s);
+      else
+        return d;
+    } else
+      throw new Error('Unrecognized date: ' + s);
+  };
+  mlab.date.masks = [
+    {
+      // Example: "1993-04-30 13:37:00"
+      regex: /([0-9]+)-([0-9]+)-([0-9]+) ([0-9]+):([0-9]+):([0-9]+)/,
+      fn: function(match) {
+        return new Date(
+          +match[1],
+          +match[2]-1,
+          +match[3],
+          +match[4],
+          +match[5],
+          +match[6]
+        );
+      }
+    },
+    {
+      // Example: "1993-04-30"
+      regex: /([0-9]+)-([0-9]+)-([0-9]+)/,
+      fn: function(match) {
+        return new Date(
+          +match[1],
+          +match[2]-1,
+          +match[3]
+        );
+      }
+    },
+    {
+      // Example: "19930430"
+      regex: /([0-9]{4})([0-9]{2})([0-9]{2})/,
+      fn: function(match) {
+        return new Date(
+          +match[1],
+          +match[2]-1,
+          +match[3]
+        );
+      }
+    }
+  ];
 
   /**
    * The package mlab.rpc contains some recurring functions and constants to

@@ -1,5 +1,5 @@
 /* Basic custom inputs stuff */
-.customInput div.container {
+.customInput .container {
   display: inline-block;
   vertical-align: top;
 }
@@ -19,17 +19,22 @@
 }
 
 /* CreatorField style */
-
-.CreatorField ul.creators-list li:first-child button.moveup-creator,
-.CreatorField ul.creators-list li:last-child button.movedown-creator {
+.CreatorField .creators-list li:first-child .moveup-creator,
+.CreatorField .creators-list li:last-child .movedown-creator {
   display: none;
 }
 
-.CreatorField div.creators-container select.select-role {
+.CreatorField .creators-container .select-role {
   max-width: 120px;
 }
 
 /* LanguageValueField style */
-.LanguageValueField ul.languages-list li textarea {
+.LanguageValueField .languages-list li textarea {
   display: block;
+}
+
+/* DocumentField style */
+.DocumentField > .documents-container > ul > li .custom-container {
+  left: -150px;
+  position: relative;
 }
