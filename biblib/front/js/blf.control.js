@@ -4,26 +4,6 @@ $(document).ready(function() {
   // Package "blf": BibLib Front
   mlab.pkg('blf');
 
-  // Initialize lang and other global assets:
-  mlab.pkg('blf.assets');
-  blf.assets.lang = 'en';
-  blf.assets.languages = [
-    {
-      id: 'fr',
-      labels: {
-        fr: 'Français',
-        en: 'French'
-      }
-    },
-    {
-      id: 'en',
-      labels: {
-        fr: 'Anglais',
-        en: 'English'
-      }
-    }
-  ];
-
   // Global vars:
   mlab.pkg('blf.global.rpc');
 
@@ -54,6 +34,39 @@ $(document).ready(function() {
     verbose: true,
     strict: true
   });
+
+  // Initialize lang and other global assets:
+  mlab.pkg('blf.assets');
+  blf.assets.lang = 'en';
+  blf.assets.languages = [
+    {
+      id: 'fr',
+      labels: {
+        fr: 'Français',
+        en: 'French'
+      }
+    },
+    {
+      id: 'en',
+      labels: {
+        fr: 'Anglais',
+        en: 'English'
+      }
+    }
+  ];
+
+  // Load dictionary:
+  i18n.init({
+    lng: 'fr',
+    fallbackLng: 'en',
+    ns: {
+      namespaces: ['translation', 'customInputs'],
+      defaultNs: 'translation'
+    }
+  }, function(t) {
+    $('body').i18n();
+  });
+
 
   /**
    * First, let's describe our data here. To add a new type, just use:
@@ -122,6 +135,7 @@ $(document).ready(function() {
         return true;
       }
     });
+
 
   /**
    * Controler:

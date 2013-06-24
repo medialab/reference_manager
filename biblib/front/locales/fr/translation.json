@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "addEntry": "Ajouter une référence",
+    "searchEntry": "Rechercher dans les références"
+  },
+  "searchPanel": {
+    "search": "Rechercher",
+    "advancedSearch": "Recherche avancée",
+    "recordsType": "Type de références :"
+  }
+}
+

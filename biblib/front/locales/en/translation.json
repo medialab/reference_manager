@@ -1,0 +1,11 @@
+{
+  "navigation": {
+    "addEntry": "Add entry",
+    "searchEntry": "Search entry"
+  },
+  "searchPanel": {
+    "search": "Search",
+    "advancedSearch": "Use advanced search options",
+    "recordsType": "Records type :"
+  }
+}

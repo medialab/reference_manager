@@ -2,6 +2,38 @@
   'use strict';
   mlab.pkg('blf.modules.customInputs');
 
+  // Loading Handlebars templates:
+  var _missing,
+      _templates = {
+        main: {
+          path: 'templates/CreatorField.handlebars'
+        },
+        line: {
+          path: 'templates/CreatorField.line.handlebars'
+        },
+        roles: {
+          path: 'templates/CreatorField.roles.handlebars'
+        },
+        person: {
+          path: 'templates/CreatorField.Person.handlebars'
+        },
+        orgunit: {
+          path: 'templates/CreatorField.Orgunit.handlebars'
+        },
+        event: {
+          path: 'templates/CreatorField.Event.handlebars'
+        }
+      };
+
+  (function() {
+    for (var k in _templates)
+      (function(obj) {
+        blf.utils.addTemplate(obj.path, function(data) {
+          obj.template = data;
+        });
+      })(_templates[k]);
+  })();
+
   /**
    * This custom input represents the creators of an entry. It is possible to
    * add several creators. Each creator is categorized by a name (string), a
@@ -31,46 +63,24 @@
         _classTemplates,
         _creatorRoles = d.get('lists').creator_role || [];
 
-    _dom = $(
-      '<fieldset class="customInput CreatorField">' +
-        '<div class="message"></div>' +
-        '<label>' +
-          (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-        '</label>' +
-        '<div class="creators-container container">' +
-          '<ul class="creators-list"></ul>' +
-          '<button class="add-creator">+</button>' +
-        '</div>' +
-      '</fieldset>'
-    );
+    _dom = $(_templates.main.template({
+      label: obj.label || obj.labels[blf.assets.lang]
+    }));
 
     // Add a line. The line is empty (ie to be filled by the user) if data is
     // not specified.
     function addCreator(data) {
       data = data || {};
       var id = _lineID++,
-          li = $(
-            '<li data-id="' + id + '">' +
-              '<select class="col-3 select-type">' +
-                // TODO:
-                // Set this in assets, find it automatically as well.
-                '<option value="Person">Person</option>' +
-                '<option value="Orgunit">Orgunit</option>' +
-                '<option value="Event">Event</option>' +
-              '</select>' +
-              '<select class="col-3 select-role">' +
-                // Find the roles through the global controler:
-                _creatorRoles.map(function(o) {
-                  return '<option value="' + o.type_id + '">' + (o.label || o.labels[blf.assets.lang]) + '</option>';
-                }).join() +
-              '</select>' +
-              '<button class="remove-creator">-</button>' +
-              '<button class="moveup-creator">↑</button>' +
-              '<button class="movedown-creator">↓</button>' +
-              '<div class="col-6 custom-container">' +
-              '</div>' +
-            '</li>'
-          );
+          li = $(_templates.line.template({
+            id: id,
+            creators: _creatorRoles.map(function(o) {
+              return {
+                type_id: o.type_id,
+                label: o.label || o.labels[blf.assets.lang]
+              };
+            })
+          }));
 
       var agent = data.agent || {};
       if (data.role)
@@ -91,28 +101,7 @@
     _classTemplates = function(c) {
       var o = {
         Person: {
-          dom: $(
-            '<fieldset>' +
-              '<label class="col-3">Nom :</label>' +
-              '<input data-attribute="name_family" class="col-3" type="text" />' +
-            '</fieldset>' +
-            '<fieldset>' +
-              '<label class="col-3">Prénom :</label>' +
-              '<input data-attribute="name_given" class="col-3" type="text" />' +
-            '</fieldset>' +
-            '<fieldset>' +
-              '<label class="col-3">Année de naissance :</label>' +
-              '<input data-attribute="date_birth" class="col-3" type="year" />' +
-            '</fieldset>' +
-            '<fieldset>' +
-              '<label class="col-3">Année de décès :</label>' +
-              '<input data-attribute="date_death" class="col-3" type="year" />' +
-            '</fieldset>' +
-            '<fieldset>' +
-              '<label class="col-3">Affiliation :</label>' +
-              '<input data-attribute="affiliation" class="col-3" type="text" />' +
-            '</fieldset>'
-          ),
+          dom: $(_templates.person.template()),
           fill: function(data, obj) {
             $('input[data-attribute="name_family"]', obj.dom).val(data.agent.name_family);
             $('input[data-attribute="name_given"]', obj.dom).val(data.agent.name_given);
@@ -145,12 +134,7 @@
           }
         },
         Orgunit: {
-          dom: $(
-            '<fieldset>' +
-              '<label class="col-3">Nom :</label>' +
-              '<input data-attribute="name" class="col-3" type="text" />' +
-            '</fieldset>'
-          ),
+          dom: $(_templates.orgunit.template()),
           fill: function(data, obj) {
             $('input[data-attribute="name"]', obj.dom).val(data.agent.name);
             return this;
@@ -167,36 +151,7 @@
           }
         },
         Event: {
-          dom: $(
-            '<fieldset>' +
-              '<label class="col-3">Titre :</label>' +
-              '<input data-attribute="title" class="col-3" type="text" />' +
-            '</fieldset>' +
-            '<fieldset>' +
-              '<label class="col-3">Numéro :</label>' +
-              '<input data-attribute="number" class="col-3" type="number" />' +
-            '</fieldset>' +
-            '<fieldset>' +
-              '<label class="col-3">International :</label>' +
-              '<input data-attribute="international" class="col-3" type="checkbox" />' +
-            '</fieldset>' +
-            '<fieldset>' +
-              '<label class="col-3">Ville :</label>' +
-              '<input data-attribute="place" class="col-3" type="text" />' +
-            '</fieldset>' +
-            '<fieldset>' +
-              '<label class="col-3">Pays :</label>' +
-              '<input data-attribute="country" class="col-3" type="text" />' +
-            '</fieldset>' +
-            '<fieldset>' +
-              '<label class="col-3">Date de début :</label>' +
-              '<input data-attribute="date_start" class="col-3" type="date" />' +
-            '</fieldset>' +
-            '<fieldset>' +
-              '<label class="col-3">Date de fin :</label>' +
-              '<input data-attribute="date_end" class="col-3" type="date" />' +
-            '</fieldset>'
-          ),
+          dom: $(_templates.event.template()),
           fill: function(data, obj) {
              $('input[data-attribute="title"]', obj.dom).val(data.agent.title);
              $('input[data-attribute="number"]', obj.dom).val(data.agent.number);
@@ -341,8 +296,11 @@
 
       $('select.select-role', dom).html(
         _creatorRoles.map(function(o) {
-          return '<option value="' + o.type_id + '">' + (o.label || o.labels[blf.assets.lang]) + '</option>';
-        }).join()
+          return _templates.roles.template({
+            type_id: o.type_id,
+            label: o.label
+          });
+        })
       );
     };
   };

@@ -1,0 +1,28 @@
+{
+  "CreatorField": {
+    "line": {
+      "Person": "Person",
+      "Orgunit": "Organization",
+      "Event": "Event"
+    },
+    "person": {
+      "name_family": "Family name :",
+      "name_given": "Name :",
+      "date_birth": "Birth year :",
+      "date_death": "Death year :",
+      "affiliation": "Affiliation :"
+    },
+    "orgunit": {
+      "name": "Name :"
+    },
+    "event": {
+      "title": "Title :",
+      "number": "Number :",
+      "international": "International :",
+      "place": "Place :",
+      "country": "Country :",
+      "date_start": "Start date :",
+      "date_end": "End date :"
+    }
+  }
+}
