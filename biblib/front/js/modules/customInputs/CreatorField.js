@@ -198,13 +198,13 @@
             '</fieldset>'
           ),
           fill: function(data, obj) {
-             ('input[data-attribute="title"]', obj.dom).val(data.agent.title);
-             ('input[data-attribute="number"]', obj.dom).val(data.agent.number);
-             ('input[data-attribute="place"]', obj.dom).val(data.agent.place);
-             ('input[data-attribute="country"]', obj.dom).val(data.agent.country);
-             ('input[data-attribute="date_start"]', obj.dom).val(data.agent.date_start);
-             ('input[data-attribute="date_end"]', obj.dom).val(data.agent.date_end);
-             ('input[data-attribute="international"]', obj.dom).attr('checked', data.agent.international ? 'checked' : null);
+             $('input[data-attribute="title"]', obj.dom).val(data.agent.title);
+             $('input[data-attribute="number"]', obj.dom).val(data.agent.number);
+             $('input[data-attribute="place"]', obj.dom).val(data.agent.place);
+             $('input[data-attribute="country"]', obj.dom).val(data.agent.country);
+             $('input[data-attribute="date_start"]', obj.dom).val(data.agent.date_start);
+             $('input[data-attribute="date_end"]', obj.dom).val(data.agent.date_end);
+             $('input[data-attribute="international"]', obj.dom).attr('checked', data.agent.international ? 'checked' : null);
              return this;
           },
           getData: function(data, obj) {
