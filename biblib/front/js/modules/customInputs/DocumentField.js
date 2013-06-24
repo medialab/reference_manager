@@ -42,9 +42,6 @@
         _classTemplates,
         _fields = d.get('fields');
 
-    // HARD-CODED
-    obj.type_fields = ['Book'];
-
     // Try to get the list:
     // AAARGH: How am I supposed to do when I add a module that needs to
     //         dispatch an event when bindings are actually not existing yet?

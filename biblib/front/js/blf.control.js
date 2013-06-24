@@ -24,6 +24,29 @@ $(document).ready(function() {
     }
   ];
 
+  // Global vars:
+  mlab.pkg('blf.global.rpc');
+
+  blf.global.API_URL = 'http://localhost:8080/';
+  blf.global.rpc.type = 'POST';
+  blf.global.rpc.contentType = 'application/x-www-form-urlencoded';
+  blf.global.rpc.expect = function(data) {
+    return data !== null &&
+      typeof data === 'object' &&
+      !('error' in data);
+  };
+  blf.global.rpc.error = function(data) {
+    this.log('Error:' + data);
+  };
+  blf.global.rpc.buildData = function(method, params) {
+    return JSON.stringify({
+      id: 1,
+      jsonrpc: '2.0',
+      method: method,
+      params: params
+    });
+  };
+
   // Domino global settings:
   domino.settings({
     shortcutPrefix: '::',
@@ -309,21 +332,14 @@ $(document).ready(function() {
       // RPC services:
       {
         id: 'echo',
-        url: 'http://localhost:8080',
+        url: blf.global.API_URL,
         description: 'Just a test service to check if RPC works.',
-        type: mlab.rpc.type,
-        error: mlab.rpc.error,
-        expect: mlab.rpc.expect,
-        contentType: mlab.rpc.contentType,
+        type: blf.global.rpc.type,
+        error: blf.global.rpc.error,
+        expect: blf.global.rpc.expect,
+        contentType: blf.global.rpc.contentType,
         data: function(input) {
-          return JSON.stringify({
-            id: 1,
-            jsonrpc: '2.0',
-            method: 'echo',
-            params: [
-              input.message
-            ]
-          });
+          return blf.global.rpc.buildData('echo', [ input.message ]);
         },
         success: function(data) {
           this.log('ECHO FROM RPC', data.result);
@@ -331,21 +347,14 @@ $(document).ready(function() {
       },
       {
         id: 'search',
-        url: 'http://localhost:8080',
+        url: blf.global.API_URL,
         description: 'A service to search on existing entries.',
-        type: mlab.rpc.type,
-        error: mlab.rpc.error,
-        expect: mlab.rpc.expect,
-        contentType: mlab.rpc.contentType,
+        type: blf.global.rpc.type,
+        error: blf.global.rpc.error,
+        expect: blf.global.rpc.expect,
+        contentType: blf.global.rpc.contentType,
         data: function(input) {
-          return JSON.stringify({
-            id: 1,
-            jsonrpc: '2.0',
-            method: 'search',
-            params: [
-              input.query
-            ]
-          });
+          return blf.global.rpc.buildData('search', [ input.query ]);
         },
         success: function(data) {
           var results = JSON.parse(data.result);
@@ -354,22 +363,14 @@ $(document).ready(function() {
       },
       {
         id: 'type',
-        url: 'http://localhost:8080',
+        url: blf.global.API_URL,
         description: 'Loads the list of specified type.',
-        type: mlab.rpc.type,
-        error: mlab.rpc.error,
-        expect: mlab.rpc.expect,
-        contentType: mlab.rpc.contentType,
+        type: blf.global.rpc.type,
+        error: blf.global.rpc.error,
+        expect: blf.global.rpc.expect,
+        contentType: blf.global.rpc.contentType,
         data: function(input) {
-          return JSON.stringify({
-            id: 1,
-            jsonrpc: '2.0',
-            method: 'type',
-            params: [
-              input.typeName,
-              'fr'
-            ]
-          });
+          return blf.global.rpc.buildData('type', [ input.typeName, 'fr' ]);
         },
         success: function(data, input) {
           var results = JSON.parse(data.result);
@@ -401,22 +402,14 @@ $(document).ready(function() {
       },
       {
         id: 'field',
-        url: 'http://localhost:8080',
+        url: blf.global.API_URL,
         description: 'Loads one field specification.',
-        type: mlab.rpc.type,
-        error: mlab.rpc.error,
-        expect: mlab.rpc.expect,
-        contentType: mlab.rpc.contentType,
+        type: blf.global.rpc.type,
+        error: blf.global.rpc.error,
+        expect: blf.global.rpc.expect,
+        contentType: blf.global.rpc.contentType,
         data: function(input) {
-          return JSON.stringify({
-            id: 1,
-            jsonrpc: '2.0',
-            method: 'uifields',
-            params: [
-              input.field,
-              'fr'
-            ]
-          });
+          return blf.global.rpc.buildData('uifields', [ input.field, 'fr' ]);
         },
         success: function(data) {
           var result = JSON.parse(data.result),
