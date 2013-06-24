@@ -192,6 +192,21 @@ def mods_xmletree_to_metajson(mods, source):
         document["identifiers"] = identifiers
         document["rec_id"] = identifiers[0]["value"]
 
+    # relatedItems
+    related_items = mods.findall(prefixtag("mods", "relatedItem"))
+    related_item_host = None
+    related_item_original = None
+    related_item_series = None
+    if related_items:
+        for related_item in related_items:
+            # host -> is_part_of
+            if related_item.get("type") == "host":
+                related_item_host = related_item
+            elif related_item.get("type") == "original":
+                related_item_original = related_item
+            elif related_item.get("type") == "series":
+                related_item_series = related_item
+
     # title
     document.update(convert_mods_titleinfos(mods.findall(prefixtag("mods", "titleInfo"))))
 
@@ -200,6 +215,17 @@ def mods_xmletree_to_metajson(mods, source):
     if creators:
         #print creators
         document["creators"] = creators
+
+    # root originInfo dates
+    root_dates = extract_dates_from_origininfo(mods.find(prefixtag("mods", "originInfo")))
+    if root_dates:
+        document.update(root_dates)
+
+    # relatedItem host originInfo dates
+    if related_item_host is not None and rec_type in ["Article", "JournalArticle", "MagazineArticle", "NewspaperArticle", "Annotation", "Interview", "BookReview", "PeriodicalIssue"]:
+        is_part_of_dates = extract_dates_from_origininfo(related_item_host.find(prefixtag("mods", "originInfo")))
+        if is_part_of_dates:
+            document.update(is_part_of_dates)
 
     return document
 
@@ -289,15 +315,15 @@ def convert_mods_titleinfo(mods_titleinfo):
         title_dict = {}
         title_dict["type"] = mods_titleinfo.get("type")
         if mods_titleinfo.find(prefixtag("mods", "title")) is not None:
-            title_dict["title"] = mods_titleinfo.find(prefixtag("mods", "title")).text
+            title_dict["title"] = mods_titleinfo.find(prefixtag("mods", "title")).text.strip()
         if mods_titleinfo.find(prefixtag("mods", "nonSort")) is not None:
-            title_dict["title_non_sort"] = mods_titleinfo.find(prefixtag("mods", "nonSort")).text
+            title_dict["title_non_sort"] = mods_titleinfo.find(prefixtag("mods", "nonSort")).text.strip()
         if mods_titleinfo.find(prefixtag("mods", "subTitle")) is not None:
-            title_dict["title_sub"] = mods_titleinfo.find(prefixtag("mods", "subTitle")).text
+            title_dict["title_sub"] = mods_titleinfo.find(prefixtag("mods", "subTitle")).text.strip()
         if mods_titleinfo.find(prefixtag("mods", "partNumber")) is not None:
-            title_dict["part_number"] = mods_titleinfo.find(prefixtag("mods", "partNumber")).text
+            title_dict["part_number"] = mods_titleinfo.find(prefixtag("mods", "partNumber")).text.strip()
         if mods_titleinfo.find(prefixtag("mods", "partName")) is not None:
-            title_dict["part_name"] = mods_titleinfo.find(prefixtag("mods", "partName")).text
+            title_dict["part_name"] = mods_titleinfo.find(prefixtag("mods", "partName")).text.strip()
 
         #print title_dict
         return title_dict
@@ -348,7 +374,7 @@ def convert_mods_name_to_creator(mods_name, dai_dict):
         affiliation = None
         if name_affiliations:
             affiliation = Orgunit()
-            affiliation["name"] = name_affiliations[0].text
+            affiliation["name"] = name_affiliations[0].text.strip()
 
         #agent_rec_id, agent_identifiers, affiliation_rec_id
         agent_rec_id = None
@@ -370,6 +396,7 @@ def convert_mods_name_to_creator(mods_name, dai_dict):
                 agent_rec_id = dai_dict[name_id]["value"]
 
         if name_type == "personal":
+            # print "personal"
             person = Person()
 
             if agent_rec_id:
@@ -380,11 +407,11 @@ def convert_mods_name_to_creator(mods_name, dai_dict):
             if name_parts:
                 for name_part in name_parts:
                     if name_part.get("type") == "given":
-                        person["name_given"] = name_part.text
+                        person["name_given"] = name_part.text.strip()
                     elif name_part.get("type") == "family":
-                        person["name_family"] = name_part.text
+                        person["name_family"] = name_part.text.strip()
                     elif name_part.get("type") == "date":
-                        date = name_part.text.replace("(", "").replace(")", "")
+                        date = name_part.text.replace("(", "").replace(")", "").strip()
                         minus_index = date.find("-")
                         if minus_index == -1:
                             person["date_birth"] = date
@@ -397,21 +424,24 @@ def convert_mods_name_to_creator(mods_name, dai_dict):
             creator["agent"] = person
 
         elif name_type == "corporate":
-            print "corporate"
+            # print "corporate"
             orgunit = Orgunit()
             creator["agent"] = orgunit
 
+            if name_parts:
+                orgunit["name"] = name_parts[0].text.strip()
+
         elif name_type == "conference":
-            print "conference"
+            # print "conference"
             event = Event()
             creator["agent"] = event
 
             if name_parts:
                 for name_part in name_parts:
                     if name_part.get("type") is None:
-                        event["title"] = name_part.text
+                        event["title"] = name_part.text.strip()
                     elif name_part.get("type") == "termsOfAddress":
-                        address = name_part.text
+                        address = name_part.text.strip()
                         sep_index = address.find(";")
                         if sep_index == -1:
                             event["place"] = address
@@ -419,7 +449,7 @@ def convert_mods_name_to_creator(mods_name, dai_dict):
                             event["place"] = address[:sep_index]
                             event["country"] = address[sep_index+1:]
                     elif name_part.get("type") == "date":
-                        date = name_part.text
+                        date = name_part.text.strip()
                         slash_index = date.find("/")
                         if slash_index == -1:
                             event["date_start"] = date
@@ -431,16 +461,73 @@ def convert_mods_name_to_creator(mods_name, dai_dict):
             creator["affiliation"] = affiliation
 
         if name_roleterm is not None:
-            creator["role"] = name_roleterm.text
+            creator["role"] = convert_mods_name_roleterm(name_roleterm)
 
         #print name_type, name_id, name_parts, name_affiliations, name_roleterm, name_descriptions
         return creator
 
 
-def convert_mods_name_roleterms(mods_roleterms):
-    if mods_roleterms:
-        for mods_roleterm in mods_roleterms:
-            authority = mods_roleterm.get("authority")
-            term_type = mods_roleterm.get("type")
-            value = mods_roleterm.text
-            #print authority, term_type, value
+def convert_mods_name_roleterm(mods_roleterm):
+    if mods_roleterm is not None:
+        authority = mods_roleterm.get("authority")
+        term_type = mods_roleterm.get("type")
+        value = mods_roleterm.text.strip()
+        # print authority, term_type, value
+        if not value:
+            # default creator role
+            return "cre"
+        else:
+            if authority == "marcrelator":
+                if term_type == "code":
+                    return value
+                elif value in creator_service.role_text_to_role_code:
+                    return creator_service.role_text_to_role_code[value]
+                else:
+                    return "cre"
+            elif authority == "unimarc" and value in creator_service.role_unimarc_to_role_code:
+                return creator_service.role_unimarc_to_role_code[value]
+            else:
+                return "cre"
+    else:
+        return "cre"
+
+
+def extract_dates_from_origininfo(origininfo):
+    if origininfo is not None:
+        result = {}
+        date_issued = convert_date(origininfo.find(prefixtag("mods", "dateIssued")))
+        if date_issued:
+            result["date_issued"] = date_issued
+        date_created = convert_date(origininfo.find(prefixtag("mods", "dateCreated")))
+        if date_created:
+            result["date_created"] = date_created
+        date_captured = convert_date(origininfo.find(prefixtag("mods", "dateCaptured")))
+        if date_captured:
+            result["date_captured"] = date_captured
+        date_valid = convert_date(origininfo.find(prefixtag("mods", "dateValid")))
+        if date_valid:
+            result["date_valid"] = date_valid
+        date_modified = convert_date(origininfo.find(prefixtag("mods", "dateModified")))
+        if date_modified:
+            result["date_modified"] = date_modified
+        date_copyrighted = convert_date(origininfo.find(prefixtag("mods", "copyrightDate")))
+        if date_copyrighted:
+            result["date_copyrighted"] = date_copyrighted
+        date_other = convert_date(origininfo.find(prefixtag("mods", "dateOther")))
+        if date_other:
+            result["date_other"] = date_other
+        return result
+
+
+def convert_date(mods_date):
+    if mods_date is not None:
+        encoding = mods_date.get("encoding")
+        #point = mods_date.get("point")
+        #key_date = mods_date.get("keyDate")
+        #qualifier = mods_date.get("qualifier")
+        value = mods_date.text.strip()
+        if encoding == "iso8601":
+            return value
+        else:
+            # todo
+            return value
