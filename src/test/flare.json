@@ -3,7 +3,6 @@
   "children":[
     {
       "name": "Text",
-      "value":8,
       "children":[
         {
           "name": "Article",
@@ -100,7 +99,6 @@
         },
         {
           "name": "TechnicalText",
-          "value":8,
           "children":[
             {
               "name": "Patent",
@@ -237,35 +235,35 @@
       "children":[
         {
           "name": "Artwork",
-          "value": 8
+          "value": 0.125
         },
         {
           "name": "Map",
-          "value": 8
+          "value": 0.125
         },
         {
           "name": "Chart",
-          "value": 8
+          "value": 0.125
         },
         {
           "name": "Drawing",
-          "value": 8
+          "value": 0.125
         },
         {
           "name": "Engrave",
-          "value": 8
+          "value": 0.125
         },
         {
           "name": "Painting",
-          "value": 8
+          "value": 0.125
         },
         {
           "name": "Photograph",
-          "value": 8
+          "value": 0.125
         },
         {
           "name": "Poster",
-          "value": 8
+          "value": 0.125
         }
       ]
     },
@@ -274,19 +272,19 @@
       "children":[
         {
           "name": "AudioRecording",
-          "value": 16
+          "value": 0.25
         },
         {
           "name": "AudioBook",
-          "value": 16
+          "value": 0.25
         },
         {
           "name": "AudioBroadcast",
-          "value": 16
+          "value": 0.25
         },
         {
           "name": "MusicRecording",
-          "value": 16
+          "value": 0.25
         }
       ]
     },
@@ -295,15 +293,15 @@
       "children":[
         {
           "name": "VideoRecording",
-          "value": 24
+          "value": 0.3333
         },
         {
           "name": "VideoBroadcast",
-          "value": 24
+          "value": 0.3333
         },
         {
           "name": "Film",
-          "value": 24
+          "value": 0.3333
         }
       ]
     }
