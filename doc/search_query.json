@@ -3,7 +3,7 @@
     "filter_date_end": "2010-12-31",
     "filter_date_start": "2010-01-01",
     "filter_favorite": true,
-    "filter_langues": [
+    "filter_languages": [
         "en",
         "fr"
     ],
