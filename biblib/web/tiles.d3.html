@@ -165,11 +165,18 @@ d3.json("flare.json", function(root) {
 
   // Aggregate the values for internal nodes. This is normally done by the
   // treemap layout, but not here because of our custom implementation.
-  function accumulate(d) {
+  function _accumulate(d) {
+    maize.log( d.name, d.children? d.children: 1 )
     return d.children
-        ? d.value = d.children.reduce(function(p, v) { return p + accumulate(v); }, 0)
+        ? d.value = d.children.reduce(function(p, v) { maize.log("reduce", p, v ); return p + accumulate(v); }, 0)
         : d.value;
   }
+  function accumulate(d) {
+    return d.children
+        ? d.value = d.children.reduce(function(p, v) { return 1/ (p + accumulate(v)); }, 0)
+        : 1;
+  }
+ 
 
   // Compute the treemap layout recursively such that each group of siblings
   // uses the same size (1×1) rather than the dimensions of the parent cell.

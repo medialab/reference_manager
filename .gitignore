@@ -49,3 +49,8 @@ nosetests.xml
 
 # protect the config credentials
 config.json
+
+# mongodb ignore
+mongodb/local.*
+mongodb/refmanager.*
+mongodb/remanager.*

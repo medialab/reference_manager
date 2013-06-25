@@ -61,9 +61,9 @@ class References_repository(jsonrpc.JSONRPC):
         """ insert or update a reference in the repository
             return object id if ok or error
         """
-        json_doc = json.loads(document)
-        print json.dumps(json_doc, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
-        return self.format_bson(repository_service.save_document(None, json_doc))
+        #json_doc = json.loads(document)
+        #print json.dumps(json_doc, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
+        return self.format_bson(repository_service.save_document(None, document))
 
     def jsonrpc_metadata_by_rec_ids(self, rec_ids, format="metajson"):
         """ get metadata of a list of references
