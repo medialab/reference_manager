@@ -2,6 +2,25 @@
   'use strict';
   mlab.pkg('blf.modules.customInputs');
 
+  // Loading Handlebars templates:
+  var _templates = {
+        main: {
+          path: 'templates/LanguageValueField.handlebars'
+        },
+        line: {
+          path: 'templates/LanguageValueField.line.handlebars'
+        }
+      };
+
+  (function() {
+    for (var k in _templates)
+      (function(obj) {
+        blf.utils.addTemplate(obj.path, function(data) {
+          obj.template = data;
+        });
+      })(_templates[k]);
+  })();
+
   /**
    * This custom input can be used to add several entries for different
    * languages.
@@ -28,18 +47,9 @@
         _selected = {},
         _languages = blf.assets.languages;
 
-    _dom = $(
-      '<fieldset class="customInput LanguageValueField">' +
-        '<div class="message"></div>' +
-        '<label>' +
-          (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-        '</label>' +
-        '<div class="languages-container container">' +
-          '<ul class="languages-list"></ul>' +
-          '<button class="add-language">+</button>' +
-        '</div>' +
-      '</fieldset>'
-    );
+    _dom = $(_templates.main.template({
+      label: obj.label || obj.labels[blf.assets.lang]
+    }));
 
     // Bind events:
     $('button.add-language', _dom).click(function() {
@@ -49,7 +59,7 @@
     // Bind events:
     _dom.click(function(e) {
       var target = $(e.target),
-          li = target.parents('ul.languages-list > li');
+          li = target.parents('li');
 
       // Check if it is a field button:
       if (li.length && target.is('button.remove-language')) {
@@ -63,41 +73,31 @@
     // not specified.
     function addLanguage(data) {
       data = data || {};
-      var li = $(
-        '<li>' +
-          '<select class="select-language">' +
-            _languages.map(function(o) {
-              return (
-                '<option value="' + o.id + '">' +
-                  (o.label || o.labels[blf.assets.lang]) +
-                '</option>'
-              );
-            }).join() +
-          '</select>' +
-          '<button class="remove-language">-</button>' +
-          '<textarea class="col-6"></textarea>' +
-        '</li>'
-      );
+      var li = $(_templates.line.template({
+        languages: _languages.map(function(o) {
+          return {
+            id: o.id,
+            label: o.label || o.labels[blf.assets.lang]
+          };
+        })
+      }));
 
       if (data.language)
-        $('> select', li).val(data.language);
+        $('select.select-language', li).val(data.language);
 
       // If the language is not specified, we use the first language that is
       // not used yet:
       else
-        $('> select', li).val(_languages.reduce(function(res, lang) {
-          return res !== null ?
-            res :
-            !$('select.select-language > option[value="' + lang.id + '"]:selected', _dom).length ?
-              lang.id :
-              null;
-        }, null));
+        _languages.some(function(lang) {
+          if (!$('option[value="' + lang.id + '"]:selected', _dom).length)
+            return $('select.select-language', li).val(lang.id);
+        }, null);
 
 
       if (data.value)
-        $('> textarea', li).val(data.value);
+        $('textarea', li).val(data.value);
 
-      $('select', li).change(checkLanguagesDups);
+      $('select.select-language', li).change(checkLanguagesDups);
       $('ul.languages-list', _dom).append(li);
       checkLanguagesCount();
       checkLanguagesDups();
@@ -105,7 +105,7 @@
 
     // Check that all languages are not added yet:
     function checkLanguagesCount() {
-      if ($('ul.languages-list > li', _dom).length >= _languages.length)
+      if ($('li', _dom).length >= _languages.length)
         $('button.add-language', _dom).attr('hidden', 'true');
       else
         $('button.add-language', _dom).attr('hidden', null);
@@ -113,7 +113,7 @@
 
     // Deal with languages deduplication:
     function checkLanguagesDups() {
-      var list = $('ul.languages-list > li > select', _dom);
+      var list = $('select.select-language', _dom);
 
       // Find selected languages:
       _selected = {};
@@ -144,7 +144,7 @@
       var data = _getData();
 
       if (obj.required && (!data || !data.length)) {
-        $('.message', this.dom).text('At least one language has to be added.');
+        $('.message', this.dom).text(i18n.t('customInputs:LanguageValueField.errors.at_least_one'));
         return false;
       }
 

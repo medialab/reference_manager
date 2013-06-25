@@ -2,6 +2,25 @@
   'use strict';
   mlab.pkg('blf.modules.customInputs');
 
+  // Loading Handlebars templates:
+  var _templates = {
+        main: {
+          path: 'templates/IdentifierField.handlebars'
+        },
+        line: {
+          path: 'templates/IdentifierField.line.handlebars'
+        }
+      };
+
+  (function() {
+    for (var k in _templates)
+      (function(obj) {
+        blf.utils.addTemplate(obj.path, function(data) {
+          obj.template = data;
+        });
+      })(_templates[k]);
+  })();
+
   /**
    * This custom input is used to represent identifier-like properties.
    *
@@ -24,18 +43,9 @@
     var _dom,
         _self = this;
 
-    _dom = $(
-      '<fieldset class="customInput IdentifierField">' +
-        '<div class="message"></div>' +
-        '<label>' +
-          (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-        '</label>' +
-        '<div class="identifier-container container">' +
-          '<ul class="identifiers-list"></ul>' +
-          '<button class="add-identifier">+</button>' +
-        '</div>' +
-      '</fieldset>'
-    );
+    _dom = $(_templates.main.template({
+      label: obj.label || obj.labels[blf.assets.lang]
+    }));
 
     // Bind events:
     $('button.add-identifier', _dom).click(function() {
@@ -44,7 +54,7 @@
 
     _dom.click(function(e) {
       var target = $(e.target),
-          li = target.parents('ul.identifiers-list > li');
+          li = target.closest('li');
 
       // Check if it is a field button:
       if (li.length && target.is('button.remove-identifier')) {
@@ -56,24 +66,21 @@
     // Init:
     if (obj.required) {
       $('button.add-identifier', _dom).click();
-      $('ul.identifiers-list > li:first-child button.remove-identifier', _dom).attr('hidden', true);
+      $('li:first-child button.remove-identifier', _dom).attr('hidden', true);
     }
 
     // Check that all values are not added yet:
     function checkValuesCount() {
-      if (obj.multiple && obj.only_one && $('ul.identifiers-list > li', _dom).length)
+      if (obj.multiple && obj.only_one && $('li', _dom).length)
         $('button.add-identifier', _dom).attr('hidden', 'true');
       else
         $('button.add-identifier', _dom).attr('hidden', null);
     }
 
     function addLine(o) {
-      var li = $(
-        '<li>' +
-          '<input type="text" class="col-4" value="' + (o ? o.value : '') + '" />' +
-          '<button class="remove-identifier">-</button>' +
-        '</li>'
-      );
+      var li = $(_templates.line.template({
+            value: (o || {}).value || ''
+          }));
 
       checkValuesCount();
       $('ul.identifiers-list', _dom).append(li);
@@ -86,7 +93,7 @@
     }
 
     function _getData() {
-      var lis = $('ul.identifiers-list > li', _dom),
+      var lis = $('li', _dom),
           res;
 
       if (obj.multiple) {
@@ -101,7 +108,7 @@
         res = lis.length ?
           {
             type: obj.id_type,
-            value: $('ul.identifiers-list > li:first-child > input', _dom).val()
+            value: $('li:first-child input', _dom).val()
           } :
           null;
       }
@@ -117,13 +124,13 @@
         (!obj.multiple && obj.required && !data) ||
         (obj.multiple && obj.required && obj.only_one && !data)
       ) {
-        $('.message', this.dom).text('Exactly one identifier has to be added.');
+        $('.message', this.dom).text(i18n.t('customInputs:IdentifierField.errors.exactly_one'));
         return false;
       }
 
       // Check multiple && required:
       if (obj.multiple && obj.required && data.length < 1) {
-        $('.message', this.dom).text('At least one identifier has to be added.');
+        $('.message', this.dom).text(i18n.t('customInputs:IdentifierField.errors.at_least_one'));
         return false;
       }
 

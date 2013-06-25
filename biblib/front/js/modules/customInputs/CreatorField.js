@@ -3,8 +3,7 @@
   mlab.pkg('blf.modules.customInputs');
 
   // Loading Handlebars templates:
-  var _missing,
-      _templates = {
+  var _templates = {
         main: {
           path: 'templates/CreatorField.handlebars'
         },
@@ -230,7 +229,7 @@
       var data = _getData();
 
       if (obj.required && (!data || !data.length)) {
-        $('.message', this.dom).text('At least one creator has to be specified.');
+        $('.message', this.dom).text(i18n.t('customInputs:CreatorField.errors.at_least_one'));
         return false;
       }
 

@@ -1,5 +1,8 @@
 {
   "CreatorField": {
+    "errors": {
+      "at_least_one": "Vous devez spécifier au moins un créateur."
+    },
     "line": {
       "Person": "Personne",
       "Orgunit": "Organisation",
@@ -23,6 +26,17 @@
       "country": "Pays :",
       "date_start": "Date de début :",
       "date_end": "Date de fin :"
+    }
+  },
+  "IndentifierField": {
+    "errors": {
+      "exactly_one": "Il doit y avoir exactement un identifieur.",
+      "at_least_one": "Vous devez ajouter au moins un identifieur."
+    }
+  },
+  "LanguageValueField": {
+    "errors": {
+      "at_least_one": "Vous devez ajouter au moins une entrée."
     }
   }
 }
