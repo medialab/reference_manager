@@ -1,8 +1,28 @@
 ;(function() {
   'use strict';
-
   mlab.pkg('blf.modules.customInputs');
 
+  // Loading Handlebars templates:
+  var _templates = {
+        CharField: {
+          path: 'templates/CharField.handlebars'
+        },
+        DateField: {
+          path: 'templates/DateField.handlebars'
+        },
+        IntegerField: {
+          path: 'templates/IntegerField.handlebars'
+        }
+      };
+
+  for (var k in _templates)
+    (function(obj) {
+      blf.utils.addTemplate(obj.path, function(data) {
+        obj.template = data;
+      });
+    })(_templates[k]);
+
+  // Module constructor:
   blf.modules.createPanel = function(html) {
     domino.module.call(this);
 
@@ -137,58 +157,19 @@
         components.push(module.getComponent());
 
       // Else, if a basic component is recognized:
-      } else {
-        switch (obj.type_ui) {
-          case 'CharField':
-            components.push({
-              propertyObject: obj,
-              property: obj.property,
-              dom: $(
-                '<fieldset class="CharField">' +
-                  '<div class="message"></div>' +
-                  '<label for="' + obj.property + '"">' +
-                    (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-                  '</label>' +
-                  '<input class="col-6" name="' + obj.property + '" type="text" />' +
-                '</fieldset>'
-              )
-            });
-            break;
-          case 'DateField':
-            components.push({
-              propertyObject: obj,
-              property: obj.property,
-              dom: $(
-                '<fieldset class="DateField">' +
-                  '<div class="message"></div>' +
-                  '<label for="' + obj.property + '"">' +
-                    (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-                  '</label>' +
-                  '<input class="col-6" name="' + obj.property + '" type="year" />' +
-                '</fieldset>'
-              )
-            });
-            break;
-          case 'IntegerField':
-            components.push({
-              propertyObject: obj,
-              property: obj.property,
-              dom: $(
-                '<fieldset class="IntegerField">' +
-                  '<div class="message"></div>' +
-                  '<label for="' + obj.property + '"">' +
-                    (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-                  '</label>' +
-                  '<input class="col-6" name="' + obj.property + '" type="number" />' +
-                '</fieldset>'
-              )
-            });
-            break;
-          default:
-            d.warn('Data type "' + obj.type_ui + '" not recognized.');
-            break;
-        }
-      }
+      } else if (_templates[obj.type_ui])
+        components.push({
+          propertyObject: obj,
+          property: obj.property,
+          dom: $(_templates[obj.type_ui].template({
+            label: obj.label || obj.labels[blf.assets.lang],
+            property: obj.property
+          }))
+        });
+
+      // If not recognized at all:
+      else
+        d.warn('Data type "' + obj.type_ui + '" not recognized.');
     }
 
     return components;
@@ -233,7 +214,7 @@
     // Display a short message if there is no value and the property is
     // required:
     if (!isValid)
-      $('.message', this.dom).text('This field has to be specified.');
+      $('.message', this.dom).text(i18n.t('customInputs:TypeField.errors.at_least_one'));
     else
       $('.message', this.dom).empty();
 

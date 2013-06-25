@@ -2,6 +2,23 @@
   'use strict';
   mlab.pkg('blf.modules.customInputs');
 
+  // Loading Handlebars templates:
+  var _templates = {
+        main: {
+          path: 'templates/TypeField.handlebars'
+        },
+        line: {
+          path: 'templates/TypeField.line.handlebars'
+        }
+      };
+
+  for (var k in _templates)
+    (function(obj) {
+      blf.utils.addTemplate(obj.path, function(data) {
+        obj.template = data;
+      });
+    })(_templates[k]);
+
   /**
    * This custom input is basically a combo, whose options are dynamically
    * loaded.
@@ -45,18 +62,10 @@
         });
     }, 0);
 
-    _dom = $(
-      '<fieldset class="customInput TypeField">' +
-        '<div class="message"></div>' +
-        '<label>' +
-          (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-        '</label>' +
-        '<div class="types-container container">' +
-          '<ul class="values-list"></ul>' +
-          (obj.only_one ? '' : '<button class="add-value">+</button>') +
-        '</div>' +
-      '</fieldset>'
-    );
+    _dom = $(_templates.main.template({
+      label: obj.label || obj.labels[blf.assets.lang],
+      multi: !obj.only_one
+    }));
 
     // Bind events:
     $('button.add-value', _dom).click(function() {
@@ -84,8 +93,8 @@
     // Check that all values are not added yet:
     function checkValuesCount() {
       if (
-        (!obj.multiple && $('ul.values-list > li', _dom).length) ||
-        ($('ul.values-list > li', _dom).length >= _majorValues.length)
+        (!obj.multiple && $('li', _dom).length) ||
+        ($('li', _dom).length >= _majorValues.length)
       )
         $('button.add-value', _dom).attr('hidden', 'true');
       else
@@ -109,14 +118,9 @@
     }
 
     function addLine(s) {
-      var li = $(
-        '<li>' +
-          '<select class="select-in-type col-3">' +
-            getLineContent() +
-          '</select>' +
-          '<button class="remove-value">-</button>' +
-        '</li>'
-      );
+      var li = $(_templates.line.template({
+        content: getLineContent()
+      }));
 
       if (s)
         $('> select', li).val(s);
@@ -127,7 +131,7 @@
         $('> select', li).val(_values.reduce(function(res, v) {
           return res !== null ?
             res :
-            !$('select.select-in-type > option[value="' + v.type_id + '"]:selected', _dom).length ?
+            !$('option[value="' + v.type_id + '"]:selected', _dom).length ?
               v.type_id :
               null;
         }, null));
@@ -164,12 +168,12 @@
 
       if (obj.multiple) {
         res = [];
-        $('ul.values-list > li > select', _dom).each(function() {
+        $('select', _dom).each(function() {
           res.push($(this).val());
         });
 
       } else {
-        dom = $('ul.values-list > li > select', _dom);
+        dom = $('select', _dom);
 
         if (dom.length)
           res = dom.first().val();
@@ -182,7 +186,7 @@
       var data = _getData();
 
       if (obj.required && (!data || !data.length)) {
-        $('.message', this.dom).text('At least one language has to be added.');
+        $('.message', this.dom).text(i18n.t('customInputs:TypeField.errors.at_least_one'));
         return false;
       }
 

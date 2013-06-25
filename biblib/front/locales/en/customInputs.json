@@ -1,4 +1,10 @@
 {
+  "default": {
+    "errors": {
+      "exactly_one": "Exactly one entry has to be added.",
+      "at_least_one": "At least one entry has to be added."
+    }
+  },
   "CreatorField": {
     "errors": {
       "at_least_one": "At least one creator has to be specified."
@@ -37,6 +43,11 @@
   "LanguageValueField": {
     "errors": {
       "at_least_one": "At least one language has to be specified."
+    }
+  },
+  "TypeField": {
+    "errors": {
+      "at_least_one": "At least one entry has to be added."
     }
   }
 }

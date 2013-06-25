@@ -24,14 +24,12 @@
         }
       };
 
-  (function() {
-    for (var k in _templates)
-      (function(obj) {
-        blf.utils.addTemplate(obj.path, function(data) {
-          obj.template = data;
-        });
-      })(_templates[k]);
-  })();
+  for (var k in _templates)
+    (function(obj) {
+      blf.utils.addTemplate(obj.path, function(data) {
+        obj.template = data;
+      });
+    })(_templates[k]);
 
   /**
    * This custom input represents the creators of an entry. It is possible to

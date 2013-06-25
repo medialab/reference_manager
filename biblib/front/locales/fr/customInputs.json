@@ -1,4 +1,10 @@
 {
+  "default": {
+    "errors": {
+      "exactly_one": "Il doit y avoir exactement une entrée.",
+      "at_least_one": "Vous devez ajouter au moins une entrée."
+    }
+  },
   "CreatorField": {
     "errors": {
       "at_least_one": "Vous devez spécifier au moins un créateur."
@@ -35,6 +41,11 @@
     }
   },
   "LanguageValueField": {
+    "errors": {
+      "at_least_one": "Vous devez ajouter au moins une entrée."
+    }
+  },
+  "TypeField": {
     "errors": {
       "at_least_one": "Vous devez ajouter au moins une entrée."
     }
