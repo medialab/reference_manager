@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<!DOCTYPE codeBook
+  SYSTEM 'http://www.icpsr.umich.edu/DDI/Version2-1.dtd'>
+<codeBook>
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>Four-County Study of Chinese Local Government and Political Economy, 1990</titl>
+        <IDNo>6805</IDNo>
+      </titlStmt>
+      <prodStmt>
+        <producer abbr="ICPSR">
+          <ExtLink URI="http://www.icpsr.umich.edu/images/icpsr-logo.gif" role="image" title="ICPSR Logo"/>Inter-university Consortium for Political and Social Research
+                        
+                    
+          <ExtLink URI="http://www.icpsr.umich.edu/" title="URL of ICPSR Web Site"/></producer>
+      </prodStmt>
+      <verStmt>
+        <version date="2007-12-14"/>
+      </verStmt>
+      <holdings URI="/cocoon/ABSTRACTS/06805.xml"/>
+    </citation>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>Four-County Study of Chinese Local Government and Political Economy, 1990</titl>
+        <IDNo agency="ICPSR">6805</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="Unknown">Eldersveld, Samuel J.</AuthEnty>
+        <AuthEnty affiliation="Unknown">Jackson, John E.</AuthEnty>
+        <AuthEnty affiliation="Unknown">Jennings, M. Kent</AuthEnty>
+        <AuthEnty affiliation="Unknown">Lieberthal, Kenneth</AuthEnty>
+        <AuthEnty affiliation="Unknown">Manion, Melanie</AuthEnty>
+        <AuthEnty affiliation="Unknown">Oksenberg, Michael</AuthEnty>
+        <AuthEnty affiliation="Unknown">Chen, Zhefu</AuthEnty>
+        <AuthEnty affiliation="Unknown">He, Hefeng</AuthEnty>
+        <AuthEnty affiliation="Unknown">Shen, Mingming</AuthEnty>
+        <AuthEnty affiliation="Unknown">Xie, Qingkui</AuthEnty>
+        <AuthEnty affiliation="Unknown">Yang, Fengchun</AuthEnty>
+        <AuthEnty affiliation="Unknown">Yang, Ming</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <prodDate>Please see full citation.</prodDate>
+        <fundAg>Luce Foundation</fundAg>
+        <fundAg>National Science Foundation</fundAg>
+        <fundAg>Chinese State Education Commission</fundAg>
+        <grantNo>INT-8913601 (NSF)</grantNo>
+      </prodStmt>
+      <distStmt>
+        <distrbtr URI="http://www.icpsr.umich.edu" abbr="ICPSR" affiliation="Institute for Social Research, University of Michigan">
+          <ExtLink URI="http://www.icpsr.umich.edu/images/icpsr-logo.gif" title="Logo"/>Inter-university Consortium for Political and Social Research
+                        
+                    
+          <ExtLink URI="http://www.icpsr.umich.edu/" title="URL"/></distrbtr>
+        <distDate date="1996-11-21">1996-11-21</distDate>
+      </distStmt>
+      <verStmt>
+        <version date="2007-11-13">2007-11-13</version>
+      </verStmt>
+      <verStmt>
+        <version date="2007-11-13">2007-11-13</version>
+        <notes>Value labels were added to the data
+file. Stata setup files, and SAS and Stata supplemental files have
+been added to this data collection. Value labels for unknown codes
+were added, and several values in variables M2084, M3111, M3121, and
+M3131 were recoded. The CASEID variable was created for use with
+online analysis. The codebook is being released in Portable Document
+Format (PDF) and includes question text. The data collection
+instrument was made into its own file.</notes>
+      </verStmt>
+      <biblCit>Eldersveld, Samuel J., John E. Jackson, M. Kent Jennings,
+Kenneth Lieberthal, Melanie Manion, Michael Oksenberg, Zhefu Chen,
+Hefeng He, Mingming Shen, Qingkui Xie, Ming Yang, and Fengchun
+Yang. FOUR-COUNTY STUDY OF CHINESE LOCAL GOVERNMENT AND POLITICAL
+ECONOMY, 1990 [Computer file]. ICPSR06805-v2. Ann Arbor, MI:
+University of Michigan/Beijing, China: Beijing University [producers],
+1994. Ann Arbor, MI: Inter-university Consortium for Political and
+Social Research [distributor], 2007-11-13.</biblCit>
+      <notes>LRECL with SAS, SPSS, and Stata setup files, SAS
+transport (CPORT) file, SPSS system file, Stata system file, and
+tab-delimited ASCII data file</notes>
+    </citation>
+    <stdyInfo>
+      <subject>
+        <keyword vocab="thesaurus">attitudes</keyword>
+        <keyword vocab="thesaurus">consumer attitudes</keyword>
+        <keyword vocab="thesaurus">economic conditions</keyword>
+        <keyword vocab="thesaurus">economic reform</keyword>
+        <keyword vocab="thesaurus">government</keyword>
+        <keyword vocab="thesaurus">government corruption</keyword>
+        <keyword vocab="thesaurus">household income</keyword>
+        <keyword vocab="thesaurus">income distribution</keyword>
+        <keyword vocab="thesaurus">life satisfaction</keyword>
+        <keyword vocab="thesaurus">media use</keyword>
+        <keyword vocab="thesaurus">party leaders</keyword>
+        <keyword vocab="thesaurus">political attitudes</keyword>
+        <keyword vocab="thesaurus">political efficacy</keyword>
+        <keyword vocab="thesaurus">political participation</keyword>
+        <keyword vocab="thesaurus">political persecution</keyword>
+        <keyword vocab="thesaurus">political reform</keyword>
+        <keyword vocab="thesaurus">private ownership</keyword>
+        <keyword vocab="thesaurus">public opinion</keyword>
+        <keyword vocab="thesaurus">shopping</keyword>
+        <keyword vocab="thesaurus">standard of living</keyword>
+        <keyword vocab="thesaurus">social issues</keyword>
+        <keyword vocab="thesaurus">social justice</keyword>
+        <topcClas source="archive" vocab="Template ICPSR subject classifications">XIV. MASS POLITICAL BEHAVIOR AND ATTITUDES</topcClas>
+        <topcClas source="archive" vocab="Template ICPSR subject classifications">C. Public Opinion on Political Matters</topcClas>
+        <topcClas source="archive" vocab="Template ICPSR subject classifications">2. Nations Other Than the United States</topcClas>
+        <topcClas source="archive" vocab="Oracle ICPSR subject classifications">ICPSR XIV.C.2.</topcClas>
+        <topcClas source="archive" vocab="Oracle ICPSR subject classifications">ICPSR XIVC2</topcClas>
+        <topcClas source="archive" vocab="Oracle IDRC subject classifications">IDRC II</topcClas>
+        <topcClas source="archive" vocab="Oracle IDRC subject classifications">IDRC III</topcClas>
+        <topcClas source="archive" vocab="Oracle IDRC subject classifications">IDRC VI</topcClas>
+        <topcClas source="archive" vocab="Template IDRC subject classifications">IDRC VII. Public Opinion Data</topcClas>
+      </subject>
+      <abstract>This survey focuses on the views and behaviors of the mass
+public in China with respect to economic and governmental factors at
+the local countryside level in the post-Mao era. The data were
+collected approximately eight months after the June 1989 conflict in
+Tiananmen Square, Beijing. Face-to-face interviews were conducted in
+the household by advanced students from Beijing University. Major
+topics addressed include perceived seriousness of problems such as
+health care, pricing, public order, industrial development, economic
+well-being, consumer behavior, personal problems and how to overcome
+them, perceived local problems, views about leaders and important
+groups, political interest, media behavior, civic competence and
+political reform, and perceptions of injustice. Demographic variables
+include sex, age, ethnicity, education level, occupation, marital
+status, military service, household income, political party
+affiliation, age and number of children, and the number of people in
+the household.</abstract>
+      <sumDscr>
+        <timePrd cycle="P1" date="1990" event="single"/>
+        <collDate cycle="P1" date="1990-02" event="start"/>
+        <collDate cycle="P1" date="1990-03" event="end"/>
+        <nation>Please see geographic coverage.</nation>
+        <geogCover>China (Peoples Republic)</geogCover>
+        <geogCover>Global</geogCover>
+        <anlyUnit>individual</anlyUnit>
+        <universe>Adult population aged 18 and older residing in four
+counties in the People's Republic of China in 1990 who were physically
+and mentally able to take part.</universe>
+        <dataKind>survey data</dataKind>
+      </sumDscr>
+    </stdyInfo>
+    <method>
+      <dataColl>
+        <sampProc>The sampling went through four stages. Four counties were
+selected using nonprobability techniques. Probability procedures were
+used for subsequent sampling. Five townships were initially selected
+in each county and then three villages within each township. These
+units were selected with probability proportionate to size (pps) with
+stratification by income level being introduced at the township
+stage. In addition, each county seat was selected as a
+self-representing area. Within each village, individual respondents
+were drawn from household listings, using interval sampling.
+Approximately the same number of respondents were targeted in each
+village, and roughly equal numbers of respondents were targeted from
+each county as well.</sampProc>
+        <collMode>face-to-face interview</collMode>
+        <weight>The data contain a weight variable (M0011) that should be
+used in analyzing the data. The study design called for approximately
+equal sized samples within each county, which varied in population
+size. The weight variable takes into account the resultant unequal
+selection probabilities across the four counties. Each respondent
+within a given county has the same weight. Use of this weight variable
+is appropriate when making descriptive statements about the sample as
+a whole.</weight>
+        <cleanOps>CDBK.ICPSR/ DDEF.ICPSR/ FREQ.ICPSR/ REFORM.DATA/
+REFORM.DOC</cleanOps>
+      </dataColl>
+      <notes>(1) The data available for download are not weighted,
+and users will need to weight the data prior to analysis. (2) To
+protect respondent confidentiality, codes in variables M7002 and M7003
+were blanked by the principal investigator, and the names of the
+counties, townships, and villages corresponding to codes in variables
+M0003, M0004, and M0005 were intentionally omitted. (3) Value labels
+for unknown codes were added in several variables. (4) Several values
+in variables M2084, M3111, M3121, and M3131 were recoded in order to
+conform to the valid values listed in the original documentation. (5)
+The CASEID variable was created for use with online analysis.</notes>
+    </method>
+    <dataAccs>
+      <setAvail media="online">
+        <accsPlac URI="http://www.icpsr.umich.edu">Ann Arbor, Mi.:  Inter-university Consortium for Political and Social Research</accsPlac>
+        <collSize>1 data file + machine-readable documentation (PDF) +
+SAS setup file + SPSS setup file + Stata setup file + SAS supplemental
+syntax file + Stata supplemental syntax file + data collection
+instrument</collSize>
+        <notes>Stata system file(s), sav Data file(s), stc Data file(s), tsv Data file(s), Data file(s), and electronic documentation.</notes>
+      </setAvail>
+      <useStmt>
+        <specPerm>Additional special permissions, where applicable, are described in the restrictions field.</specPerm>
+        <conditions>
+          <p>The terms of use for this study can be found at http://www.icpsr.umich.edu/cocoon/ICPSR/TERMS/06805.xml</p>
+          <p>AVAILABLE.  This study is freely available to ICPSR member institutions.</p>
+        </conditions>
+        <disclaimer>The original collector of the data, ICPSR,
+                and the relevant funding agency bear no responsibility
+                for use of the data or for interpretations or inferences
+                based upon such uses.  </disclaimer>
+      </useStmt>
+    </dataAccs>
+    <othrStdyMat>
+      <othRefs>
+        <citation>
+          <titlStmt>
+            <titl>Four-County Study of Chinese Local Government and Political Economy, 1990</titl>
+          </titlStmt>
+          <holdings>SDA Component</holdings>
+        </citation>
+      </othRefs>
+    </othrStdyMat>
+  </stdyDscr>
+  <fileDscr ID="F1">
+    <fileTxt ID="Part1">
+      <fileStrc type="rectangular"/>
+      <dimensns>
+        <caseQnty>1,270</caseQnty>
+        <varQnty>279</varQnty>
+        <logRecL>452</logRecL>
+        <recPrCas>1</recPrCas>
+      </dimensns>
+    </fileTxt>
+  </fileDscr>
+</codeBook>

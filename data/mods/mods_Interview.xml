@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:title>Vers une révolution bureaucratique ?</mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__53r60a8s3kup1vc9k0sklgecj_-__-__-_53r60a8s3kup1vc9k0skmec90" type="personal">
+    <mods:namePart type="family">Epstein</mods:namePart>
+    <mods:namePart type="given">Renaud</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">ivr</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i789685q58ub0_-_2441__9labe9r4se65i789685q58ub0_-_2441__9labe9r4se65i789685q384oh_-_eo6779thqgm5r489m8gpj28oo" type="personal">
+    <mods:namePart type="given">Patrick</mods:namePart>
+    <mods:namePart type="family">Le Galès</mods:namePart>
+    <mods:affiliation>Centre d'études européennes de Sciences Po (CEE)</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">ive</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/interview</mods:genre>
+  <mods:genre authority="marcgt">interview</mods:genre>
+  <mods:originInfo>
+    <mods:dateIssued encoding="iso8601">2007-11</mods:dateIssued>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">fre</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">fr</mods:languageTerm>
+  </mods:language>
+  <mods:abstract lang="fr">Précurseur et emblème de la dérive néo-libérale de la social-démocratie européenne pour une large partie de la gauche française, Tony Blair fait désormais partie des figures de référence de la majorité sarkozyste. Mais connaît-on vraiment le blairisme ? Le bilan des réformes conduites au cours des dix dernières années en Grande-Bretagne que propose Patrick Le Galès, sociologue et politiste, permet de mieux en comprendre la nature et les effets. Il invite à s’interroger, par un jeu d’aller-retour transmanche, sur les transformations de la droite française et sur ce qu’elles annoncent pour l’État et la société.</mods:abstract>
+  <mods:relatedItem type="host">
+    <mods:titleInfo>
+      <mods:title>Mouvements</mods:title>
+    </mods:titleInfo>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre authority="marcgt">journal</mods:genre>
+    <mods:originInfo>
+      <mods:place>
+        <mods:placeTerm authority="iso3166" type="code">FR</mods:placeTerm>
+      </mods:place>
+      <mods:publisher>La Découverte</mods:publisher>
+      <mods:dateIssued encoding="iso8601" point="start">1998</mods:dateIssued>
+      <mods:issuance>continuing</mods:issuance>
+      <mods:frequency>Bimestriel</mods:frequency>
+    </mods:originInfo>
+    <mods:language>
+      <mods:languageTerm authority="iso639-2b" type="code">fre</mods:languageTerm>
+      <mods:languageTerm authority="rfc3066" type="code">fr</mods:languageTerm>
+    </mods:language>
+    <mods:classification authority="ddc">320.5</mods:classification>
+    <mods:identifier type="issn">12916412</mods:identifier>
+    <mods:part>
+      <mods:detail type="issue">
+        <mods:number>52</mods:number>
+      </mods:detail>
+      <mods:extent unit="page">
+        <mods:start>115</mods:start>
+        <mods:end>131</mods:end>
+      </mods:extent>
+    </mods:part>
+  </mods:relatedItem>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__9labe9r4se65i789685q58ub0_-_2441__9labe9r4se65i789685q58ub0_-_2441__9labe9r4se65i789685q384oh_-_53r60a8s3kup1vc9k0sklidc0" authority="http://spire.sciences-po.fr/hdl:">2441/9labe9r4se65i789685q58ub0</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

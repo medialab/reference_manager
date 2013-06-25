@@ -1,0 +1,44 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Archive title",
+                "fr": "Titre de l'archive"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Country",
+                "fr": "Pays"
+            },
+            "property": "country",
+            "required": false,
+            "type_source": "country",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Place (city)",
+                "fr": "Lieu (ville)"
+            },
+            "property": "place",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Location inside the archive",
+                "fr": "Localisation dans l'archive"
+            },
+            "property": "location",
+            "required": false,
+            "type_ui": "CharField"
+        }
+    ],
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "Archive"
+}

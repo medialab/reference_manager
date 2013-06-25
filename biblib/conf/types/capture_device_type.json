@@ -1,0 +1,20 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "type_id": "transmission scanner"
+        }, 
+        {
+            "type_id": "reflection print scanner"
+        }, 
+        {
+            "type_id": "digital still camera"
+        }, 
+        {
+            "type_id": "still from video"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "capture_device_type"
+}

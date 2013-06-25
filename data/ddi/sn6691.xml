@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<codeBook>
+	<docDscr>
+		<citation>
+			<titlStmt>
+				<titl>XML codeBook for SN:6691</titl>
+			</titlStmt>
+			<prodStmt>
+				<prodDate date="2013-04-08">8 April 2013 </prodDate>
+			</prodStmt>
+		</citation>
+	</docDscr>
+	<stdyDscr>
+		<citation>
+			<titlStmt>
+				<titl>Social Participation and Identity, 2007-2010: Combining Quantitative Longitudinal Data with a Qualitative Investigation of a Sub-Sample of the 1958 National Child Development Study</titl>
+				<altTitl>NCDS</altTitl>
+				<IDNo agency="UKDA">6691</IDNo>
+				<altTitl/>
+				<IDNo agency="ESDS">33004</IDNo>
+			</titlStmt>
+			<rspStmt>
+				<AuthEnty affiliation="University of London. Institute of Education. Centre for Longitudinal Studies">Elliott,J.</AuthEnty>
+				<AuthEnty affiliation="University of Manchester. ESRC Centre for Research on Socio-Cultural Change">Savage, M.</AuthEnty>
+				<AuthEnty affiliation="University of London. Institute of Education. Centre for Longitudinal Studies">Parsons, S.</AuthEnty>
+				<AuthEnty affiliation="University of Manchester. ESRC Centre for Research on Socio-Cultural Change">Miles, A.</AuthEnty>
+				<othId role="Other">
+					<p>Additional funding to conduct the 50 Welsh interviews came from the Welsh Assembly, via WISERD.&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Notes for Users:&lt;/b&gt;&lt;br&gt;
+Users of this data collection should note the following: &lt;ul&gt;&lt;li&gt;The user guide covers all 220 interviews conducted with respondents in England, Scotland and Wales. &lt;/li&gt;&lt;li&gt;The longitudinal matched quantitative data file included with the first edition covers all 220 cases. The interviews can be matched to cases in the quantitative file using the Ã¢ÂÂProject' variable and the Ã¢ÂÂInterview/Participant ID' column in the Data List (file 6691ulist.xls) which will provide the relevant interview and diagram filenames.&lt;/li&gt;&lt;li&gt;The personal community maps referred to in the documentation are not currently available as part of this data collection, for confidentiality reasons.&lt;/li&gt;&lt;li&gt;The Participant IDs used in the study are not directly linked to the participant IDs of the longitudinal data of the NCDS quantitative material. If users would like to have access to the linked data, they will need to contact the Centre for Longitudinal Studies, who will be able to advise further.&lt;/li&gt;&lt;/ul&gt;</p>
+				</othId>
+			</rspStmt>
+			<prodStmt>
+				<copyright>Copyright Centre for Longitudinal Studies</copyright>
+				<fundAg>Economic and Social Research Council</fundAg>
+				<fundAg>Welsh Assembly Government</fundAg>
+				<grantNo>ESRC RES-503-25-0001</grantNo>
+			</prodStmt>
+			<distStmt>
+				<distrbtr affiliation="University of Essex. UK Data Archive">ESDS Qualidata</distrbtr>
+				<depositr>University of London. Institute of Education. Centre for Longitudinal Studies</depositr>
+				<depDate date="2011-02-01">01 February 2011</depDate>
+				<distDate date="2011-11-01">01 November 2011</distDate>
+			</distStmt>
+			<serStmt>
+				<serName>(National Child Development Study)</serName>
+			</serStmt>
+			<verStmt>
+				<version>09 February 2012 ( 2nd Edition )</version>
+			</verStmt>
+		</citation>
+		<stdyInfo>
+			<subject>
+				<keyword vocab="Y">2007-2010</keyword>
+				<keyword vocab="G">WALES</keyword>
+				<keyword vocab="S">COMMUNITY PARTICIPATION</keyword>
+				<keyword vocab="S">LEISURE TIME</keyword>
+				<keyword vocab="S">COMMUNITIES</keyword>
+				<keyword vocab="S">COLLEAGUE RELATIONSHIPS</keyword>
+				<keyword vocab="S">FAMILY LIFE</keyword>
+				<keyword vocab="S">EMPLOYMENT</keyword>
+				<keyword vocab="S">IDENTITY</keyword>
+				<keyword vocab="S">SOCIAL CLASS</keyword>
+				<keyword vocab="S">GENERATIONS (AGE)</keyword>
+				<keyword vocab="S">GENERATION GAP</keyword>
+				<keyword vocab="S">LIFE HISTORIES</keyword>
+				<keyword vocab="S">GENDER ROLE</keyword>
+				<keyword vocab="S">CULTURAL IDENTITY</keyword>
+				<keyword vocab="S">NATIONAL IDENTITY</keyword>
+				<keyword vocab="S">PERSONAL IDENTITY</keyword>
+				<keyword vocab="S">REGIONAL IDENTITY</keyword>
+				<keyword vocab="S">SEXUAL IDENTITY</keyword>
+				<keyword vocab="S">SOCIAL IDENTITY</keyword>
+				<keyword vocab="S">SOCIAL PARTICIPATION</keyword>
+				<keyword vocab="S">DOMESTIC RESPONSIBILITIES</keyword>
+				<keyword vocab="S">VOLUNTARY WORK</keyword>
+				<keyword vocab="S">CAREER DEVELOPMENT</keyword>
+				<keyword vocab="S">EMOTIONAL DEVELOPMENT</keyword>
+				<keyword vocab="S">SOCIAL LIFE</keyword>
+				<keyword vocab="S">FRIENDSHIP</keyword>
+				<keyword vocab="S">SOCIAL SUPPORT</keyword>
+				<keyword vocab="G">ENGLAND</keyword>
+				<keyword vocab="G">SCOTLAND</keyword>
+				<topcClas vocab="I\F">National Child Development Study - Major studies</topcClas>
+				<topcClas vocab="X\A">General - Employment and labour</topcClas>
+				<topcClas vocab="XXXI\D">Community and urban studies - Society and culture</topcClas>
+				<topcClas vocab="XXXII\A">Child development and child rearing - Social stratification and groupings</topcClas>
+				<topcClas vocab="XXXII\C">Social and occupational mobility - Social stratification and groupings</topcClas>
+				<keyword vocab="Y">2007</keyword>
+				<keyword vocab="Y">2008</keyword>
+				<keyword vocab="Y">2009</keyword>
+				<keyword vocab="Y">2010</keyword>
+			</subject>
+			<abstract>The &lt;i&gt;National Child Development Study&lt;/i&gt; (NCDS) is a continuing longitudinal study that seeks to follow the lives of all those living in Great Britain who were born in one particular week in 1958. The aim of the study is to improve understanding of the factors affecting human development over the whole lifespan.&lt;br&gt;
+&lt;br&gt;
+The &lt;i&gt;Social Participation and Identity&lt;/i&gt; study combined quantitative  longitudinal  data  with  a  qualitative investigation of a sub-sample of the NCDS cohort when they were aged 50, presented here as a mixed-methods data collection containing both qualitative and quantitative data. This was the first attempt to interview members of a national, longitudinal cohort study in depth, with the possibility of linking such biographical narratives to structured survey data collected throughout the life course. Interviews were conducted with a sub-sample of 220 NCDS cohort members resident in Great Britain (England, Scotland and Wales). The interviews were organised into six main sections focussing on: 1) Neighbourhood and belonging; 2) Leisure activities and social participation; 3) Personal communities; 4) Life histories; 5) Identity; 6) Reflections on being part of the NCDS.&lt;br&gt;
+&lt;br&gt;
+The second edition of this data collection (released February 2012) includes interview transcripts, interviewer observation summaries, gender identity diagrams and life trajectory diagrams of 50 Welsh, 115 English and 55 Scottish participants. &lt;br&gt;
+&lt;br&gt;
+Further information:&lt;ul&gt;&lt;li&gt;details of the qualitative NCDS project can be found on the &lt;a href=&quot;http://www.cls.ioe.ac.uk/page.aspx?&amp;sitesectionid=331&quot; title=&quot;Social Participation and Identity&quot;&gt;Social Participation and Identity&lt;/a&gt; project page and &lt;a href=&quot;http://www.esrc.ac.uk/my-esrc/grants/RES-503-25-0001/read&quot; title=&quot;Social Participation&quot;&gt;Social Participation and Identity&lt;/a&gt; ESRC award webpage.&lt;/li&gt;&lt;li&gt;Further information about the complete NCDS series can be found on the CLS &lt;a href=&quot;http://cls.ioe.ac.uk/page.aspx?&amp;sitesectionid=724&quot; title=&quot;Centre for Longitudinal Studies: National Child Development Study&quot;&gt;NCDS&lt;/a&gt; web pages.&lt;/li&gt;&lt;li&gt;A list of the UK Data Archive's NCDS holdings, both quantitative and qualitative, can be found on the &lt;a href=&quot;http://www.esds.ac.uk/findingData/ncds.asp&quot; title=&quot;NCDS data&quot;&gt;NCDS data&lt;/a&gt; page.&lt;/li&gt;&lt;/ul&gt;</abstract>
+			<abstract>&lt;B&gt;Main Topics&lt;/B&gt;:&lt;br&gt;Neighbourhood and belonging; Social participation and Leisure activities; Friendships; Life stories and trajectories; Identities (nationality, gender, personality); Experience of NCDS (childhood memories, impact of study on life and development).&lt;br&gt;</abstract>
+			<sumDscr>
+				<timePrd date="2007-00-00" event="start">2007</timePrd>
+				<timePrd date="2010-00-00" event="end">2010</timePrd>
+				<collDate date="2007-00-00" event="start">2007</collDate>
+				<collDate date="2010-00-00" event="end">2010</collDate>
+				<nation>England; Scotland; Wales</nation>
+				<geogCover>East Anglia; North East England; North Wales; North West England; South East England; South Wales; South West England; Southern England</geogCover>
+				<geogUnit>Countries</geogUnit>
+				<anlyUnit>Individuals</anlyUnit>
+				<universe level="study">Location of units of observation:</universe>
+				<universe level="study">Subnational</universe>
+				<universe level="study">Population:</universe>
+				<universe level="study">A sub-sample of members of the 1958 NCDS Cohort Study resident in Wales, England and Scotland in 2009-2010</universe>
+				<dataKind>Textual data; Numeric data; Individual (micro) level</dataKind>
+				<dataKind>Semi-structured interview transcripts; Observation field notes; Elicitation Diagrams</dataKind>
+			</sumDscr>
+		</stdyInfo>
+		<method>
+			<dataColl>
+				<timeMeth>Longitudinal/panel/cohort</timeMeth>
+				<timeMeth>Longitudinal/panel/cohort</timeMeth>
+				<sampProc>Multi-stage stratified random sample</sampProc>
+				<deviat>220</deviat>
+				<collMode>Face-to-face interview</collMode>
+				<weight>Not applicable</weight>
+				<cleanOps/>
+				<cleanOps>A</cleanOps>
+			</dataColl>
+		</method>
+		<dataAccs>
+			<setAvail>
+				<accsPlac>UK Data Service</accsPlac>
+			</setAvail>
+			<useStmt>
+				<specPerm>2003A(S)</specPerm>
+				<restrctn>The depositor has specified that registration is required and standard conditions of use apply. The depositor may be informed about usage.&lt;br/&gt;Additional special conditions of use also apply. See &lt;a href=http://ukdataservice.ac.uk/get-data/how-to-access/conditions.aspx#/tab-special-conditions&gt;terms and conditions of access&lt;/a&gt; for further information.</restrctn>
+				<contact>&lt;a href=http://www.ukdataservice.ac.uk/help/get-in-touch.aspx&gt;Get in touch&lt;/a&gt;</contact>
+			</useStmt>
+		</dataAccs>
+		<othrStdyMat>
+			<relStdy/>
+			<relStdy>Social Consequences of Unemployment, 1964-1971</relStdy>
+			<relStdy>Warnock Study of Handicapped School Leavers, 1976</relStdy>
+			<relStdy>National Child Development Study: Sweep 4 Feasibility Study and Tobacco Research Council Study, 1978</relStdy>
+			<relStdy>National Child Development Study: Teaching Sets, 1958-1981</relStdy>
+			<relStdy>National Child Development Study: Sweep 5 Parent Migration Dataset, 1991</relStdy>
+			<relStdy>National Child Development Study: 37-Year Sample Survey, 1995</relStdy>
+			<relStdy>National Child Development Study: Sweeps 5-6 Partnership Histories, 1974-2000</relStdy>
+			<relStdy>National Child Development Study Response and Deaths Dataset, 1958-2009</relStdy>
+			<relStdy>National Child Development Study: Childhood Data, Sweeps 0-3, 1958-1974</relStdy>
+			<relStdy>National Child Development Study: Sweep 4, 1981, and Public Examination Results, 1978</relStdy>
+			<relStdy>National Child Development Study: Sweep 5, 1991</relStdy>
+			<relStdy>National Child Development Study: Sweep 6, 1999-2000</relStdy>
+			<relStdy>National Child Development Study: Sweep 7, 2004-2005</relStdy>
+			<relStdy>National Child Development Study: Employment Histories, 1974-2000</relStdy>
+			<relStdy>National Child Development Study:  Sample of Essays (Sweep 2, Age 11), 1969</relStdy>
+			<relStdy>National Child Development Study: Sweep 8, 2008-2009</relStdy>
+			<relStdy>Social Participation and Identity, 2007-2010: Combining Quantitative Longitudinal Data with a Qualitative Investigation of a Sub-Sample of the 1958 National Child Development Study</relStdy>
+			<relStdy>National Child Development Study: Understanding Individual Behaviour, 2010</relStdy>
+			<relStdy>National Child Development Study: Partnership Histories, 1974-2008</relStdy>
+			<relStdy>National Child Development Study: Activity Histories, 1974-2008</relStdy>
+			<relStdy>National Child Development Study: Sweep 8, 2008-2009: Imagine You are 60</relStdy>
+			<relStdy/>
+			<relStdy/>
+			<relStdy>Perinatal Mortality Survey, 1958</relStdy>
+			<relStdy>Permanent Parental Income Dataset, 1958-1974</relStdy>
+			<relStdy>Multilevel Event History Analysis Training Datasets, 2003-2005</relStdy>
+			<relStdy>Misreported Schooling and Returns to Education, 1958-1991</relStdy>
+			<relStdy>British Cohort Studies Teaching Dataset for Higher Education, 1958-2000</relStdy>
+			<relStdy>Exploring Data, Second Edition: Teaching Datasets, 1958-2005</relStdy>
+			<relStdy>National Child Development Study: Sweeps 1-6, 1958-2000, Self-Reported Measures</relStdy>
+			<relStdy>Occupational Coding for the National Child Development Study (1969, 1991-2008) and the 1970 British Cohort Study (1980, 2000-2008)</relStdy>
+			<relStdy>1970 British Cohort Study (BCS70)</relStdy>
+			<relStdy>Millennium Cohort Study, 2001-</relStdy>
+			<relStdy>Millennium Cohort Study: Special Licence Access</relStdy>
+			<relStdy>National Child Development Study: Special Licence Access</relStdy>
+			<relStdy>Millennium Cohort Study, 2001- : Secure Access</relStdy>
+			<relPubl>By Principal Investigator(s):</relPubl>
+			<relPubl>A searchable bibliography may be found on the Publications page of the &lt;a href=&quot;http://www.cls.ioe.ac.uk/&quot; title=&quot;Centre for Longitudinal Studies&quot;&gt;Centre for Longitudinal Studies&lt;/a&gt; website.&lt;br&gt;
+&lt;br&gt;
+Kallis, C. (2005) &lt;i&gt;CLS Cohort Studies Data Note 5: partnership histories in NCDS5 and NCDS6&lt;/i&gt;, Centre for Multilevel Modelling, Bedford Group for Lifecourse and Statistical Studies, Institute of Education, University of London.&lt;br&gt;
+&lt;br&gt;
+Steele, F. et al. (2005) 'The relationship between childbearing and transitions from marriage and cohabitation in Britain', &lt;i&gt;Demography&lt;/i&gt;,42.&lt;br&gt;
+&lt;br&gt;
+Steele, F. et al. (2005) 'Changes in the relationship between the outcomes of cohabiting partnerships and fertility among young British women: evidence from the 1958 and 1970 Birth Cohort Studies', paper presented at the &lt;i&gt;Annual Meeting of the Population Association of America, Philadelphia, 2005&lt;/i&gt;.</relPubl>
+			<relPubl>Resulting from Secondary Analysis:</relPubl>
+			<relPubl>Shepherd, P. (1985) &lt;i&gt;The National Child Development Study: an introduction to the origins of the study and the methods of data collection&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series, No. 1, October.&lt;br&gt;
+&lt;br&gt;
+ National Child Development Study User Support Group  (1985) &lt;i&gt;Publications arising from the National Child Development Study&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 2, October.&lt;br&gt;
+&lt;br&gt;
+ Fogelman, K. (1985) &lt;i&gt;After school: the education and training experiences of the 1958 cohort&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 3, December. &lt;br&gt;
+&lt;br&gt;
+ Power, G. (1985) &lt;i&gt;A longitudinal study of alcohol consumption amongst young adults in Britain I: alcohol consumption and associated factors in young adults in Britain&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 4, December. &lt;br&gt;
+&lt;br&gt;
+ Ghodsian, M. and Power, G. (1985) &lt;i&gt;A longitudinal study of alcohol consumption amongst young adults in Britain II: a national longitudinal study of alcohol consumption between the ages of 16 and 23&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 5, December. &lt;br&gt;
+&lt;br&gt;
+ Ghodsian, M. (1985) &lt;i&gt;A longitudinal study of alcohol consumption amongst young adults in Britain III: childhood and adolescent characteristics associated with drinking behaviour in early adulthood&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 6, December. &lt;br&gt;
+&lt;br&gt;
+ Anderson, H.R., et al. (1986) `The natural history of asthma in childhood', &lt;i&gt;Journal of Epidemiology and Community Health&lt;/i&gt;, 40, pp.121-129. &lt;br&gt;
+&lt;br&gt;
+ Blaxter, M. (1986) &lt;i&gt;Report on the longitudinal exploitation of the National Child Development Study in areas of interest to the DHSS&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 7, April. &lt;br&gt;
+&lt;br&gt;
+ Power, C., Fogelman, K. and Fox, A.J. (1986) &lt;i&gt;Health and social mobility during the early years of life&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 8, May. &lt;br&gt;
+&lt;br&gt;
+ Kerckhoff, A.C. (1986) &lt;i&gt;Effects of ability grouping in secondary schools in Great Britain&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 9, June. &lt;br&gt;
+&lt;br&gt;
+ Jones, G. (1986) &lt;i&gt;Leaving the parental home : an analysis of early housing careers&lt;/i&gt;,  National Child Development Study User Support Group Working Paper Series: No. 10, July. &lt;br&gt;
+&lt;br&gt;
+ Jones, G. (1986) &lt;i&gt;Stratification in youth&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 11, July. &lt;br&gt;
+&lt;br&gt;
+ Power, C. and Moynihan, C. (1986) &lt;i&gt;Social class changes in weight-for-height between childhood and early adulthood&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 12, July. &lt;br&gt;
+&lt;br&gt;
+ Hutchinson, D. (1986) &lt;i&gt;Response to a national longitudinal study: policy and academic implications for the study of change&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 13, August. &lt;br&gt;
+&lt;br&gt;
+ Hutchinson, D. (1986) &lt;i&gt;Drop out from apprenticeship: an application of survival methods to grouped data&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 14, August. &lt;br&gt;
+&lt;br&gt;
+ Hutchinson, D. (1986) &lt;i&gt;Event history and survival analysis in the social sciences: review paper and introduction&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 15, August. &lt;br&gt;
+&lt;br&gt;
+ Kiernan, K. (1986) &lt;i&gt;Transitions into young adulthood&lt;/i&gt;,  National Child Development Study User Support Group Working Paper Series: No. 16, October. &lt;br&gt;
+&lt;br&gt;
+ Shepherd, P. (1986) &lt;i&gt;The NCDS5 development programme&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 17, October. &lt;br&gt;
+&lt;br&gt;
+ Micklewright, J. (1986) &lt;i&gt;A note on household income data in NCDS 3&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 18, December. &lt;br&gt;
+&lt;br&gt;
+ Payne, J. (1986) &lt;i&gt;Unemployment, apprenticeships and training: does it pay to stay on at school?&lt;/i&gt;, National Child Development Study User Support Group Working Paper Series: No. 19, December. &lt;br&gt;
+&lt;br&gt;
+ Strachan, D.P. et al (1988) `Asthma as a link between chest illness in childhood and chronic cough and phlegm in young adults', &lt;i&gt;British Medical Journal&lt;/i&gt;, 296, pp.890-893. &lt;br&gt;
+&lt;br&gt;
+ Strachan, D.P. `Hay fever, hygiene and household size', &lt;i&gt;British Medical Journal&lt;/i&gt;, 299, pp.1259-1260. &lt;br&gt;
+&lt;br&gt;
+ Robertson, D. and Symons, J. (1990) `The occupational choice of British children', &lt;i&gt;The Economic Journal&lt;/i&gt; 100, September, pp.828-841. &lt;br&gt;
+&lt;br&gt;
+ Strachan, D.P., Golding, J. and Anderson, H.R. (1990) `Regional variations in wheezing illness in British children: effect of migration during early childhood', &lt;i&gt;Journal of Epidemiology and Community Health&lt;/i&gt; 44 (3) September, pp.231-236. &lt;br&gt;
+&lt;br&gt;
+ Anderson, H.R., Pottier, A.C. and Strachan, D.P. (1992) `Asthma from birth to age 23: incidence and relation to prior and concurrent atopic disease', &lt;i&gt;Thorax&lt;/i&gt; 47 (7) July, pp.537-542. &lt;br&gt;
+&lt;br&gt;
+ Blanchflower, D. and Lynch, L. (1992) &lt;i&gt;Training at work: a comparison of U.S. and British youths&lt;/i&gt;, CEP Discussion Paper No. 78, June. &lt;br&gt;
+&lt;br&gt;
+ Blanchflower, D.G. and Oswald, A.J. (1992) &lt;i&gt;What makes an entrepreneur?&lt;/i&gt; NBER Working Paper No. 3252 (rev. version), July. &lt;br&gt;
+&lt;br&gt;
+ Blanchflower, D.G. and Oswald, A.J. (1992) &lt;i&gt;Entrepreneurship, happiness and supernormal returns: evidence from Britain and the US&lt;/i&gt;, NBER Working Paper Series, No. 4228, December. &lt;br&gt;
+&lt;br&gt;
+ Blanchflower, D.G. and Oswald, A.J. (1992) &lt;i&gt;Does access to capital help make an entrepeneur?&lt;/i&gt;, NBER Working Paper No. 3252 (rev. version), July. &lt;br&gt;
+&lt;br&gt;
+ Williams, H.C., Pottier, A. and Strachan, D. (1993) `The descriptive epidemiology of warts in British schoolchildren', &lt;i&gt;British Journal of Dermatology&lt;/i&gt; 128, pp.504-511.&lt;br&gt;
+&lt;br&gt;
+ Gitter, R.J. (1993) &lt;i&gt;A comparative look at apprenticeship training in the United States and Great Britain&lt;/i&gt;, Paper presented at the Midwest Economics Association Annual Meeting, Indianapolis, April. &lt;br&gt;
+&lt;br&gt;
+ Waldfogel, J. (1993) &lt;i&gt;Women working for less: a longitudinal analysis of the family gap&lt;/i&gt;, Welfare State Programme Discussion Paper WSP/93, September, London School of Economics. &lt;br&gt;
+&lt;br&gt;
+ Williams, H., Pottier, A. and Strachan, D. (1993) `Are viral warts seen more commonly in children with eczema?', &lt;i&gt;Arch. Dermatol.&lt;/i&gt; 129, pp.717-721. &lt;br&gt;
+&lt;br&gt;
+ ALBSU (1993) &lt;i&gt;Parents and their children : the intergenerational effect of poor basic skills&lt;/i&gt;, London: Adult Literacy and Basic Skills Unit. Williams, H.C., Strachan, D.P. and Hay, R.J. (1994) `Childhood eczema : disease of the advantaged?', &lt;i&gt;British Medical Journal&lt;/i&gt;, 308, pp.1132-1135. &lt;br&gt;
+&lt;br&gt;
+ Blanchflower, D.G. and Oswald, A.J. (1994) &lt;i&gt;What makes an entrepreneur?&lt;/i&gt;, Applied Economics Discussion Paper Series: No. 125, October. &lt;br&gt;
+&lt;br&gt;
+ Gitter, R.J. (1994) `Apprenticeship-trained workers: United States and Great Britain', &lt;i&gt;Monthly Labor Review&lt;/i&gt;, April. &lt;br&gt;
+&lt;br&gt;
+ Laybourn, A. (1994) &lt;i&gt;The only child: myths and reality&lt;/i&gt;, Edinburgh: HMSO. &lt;br&gt;
+&lt;br&gt;
+ Dearden, L., Machin, S., and Reed, H. &lt;i&gt;Intergenerational mobility in Britain&lt;/i&gt;, IFS Working Paper Series No. W95/20, Institute for Fiscal Studies. &lt;br&gt;
+&lt;br&gt;
+ Glover, J., Smeaton, D. and Fielding, J. (1995) &lt;i&gt;Gender and Science, engineering and technology (SET) project&lt;/i&gt;, memorandum submitted to the House of Lords Select Committee on Science and Technology. &lt;br&gt;
+&lt;br&gt;
+ Scarlett, J.F. et al (1995) `Effect of ambient levels of smoke and sulphur dioxide on the health of a national sample of 23 year olds in 1981', &lt;i&gt;Thorax&lt;/i&gt;, 50, pp.764-768. &lt;br&gt;
+ Strachan, D.P., (1995) `Epidemiology of hay fever: towards a community diagnosis', &lt;i&gt;Clinical and Experimental Allergy&lt;/i&gt; 25, pp.296-303. &lt;br&gt;
+&lt;br&gt;
+ Strachan, D.P., `Epidemiology', IN M. Silverman, (ed) (1995) &lt;i&gt;Childhood asthma and other wheezing disorders&lt;/i&gt;, London: Chapman and Hall. &lt;br&gt;
+&lt;br&gt;
+ Kiernan, K., (1995) `Social backgrounds and post-birth experiences of young parents', &lt;i&gt;Findings (Social Policy Research 80)&lt;/i&gt;. &lt;br&gt;
+&lt;br&gt;
+ Kiernan, K., (1995) &lt;i&gt;Transition to parenthood: young mothers, young fathers - associated factors and later life experiences&lt;/i&gt;, Welfare State Programme Discussion Paper WSP/113, July, London School of Economics. &lt;br&gt;
+&lt;br&gt;
+ Van Bourgognie, F., (1995) &lt;i&gt;Childhood adversities and tendency towards adult depression&lt;/i&gt;, Report for MSc Medical Demography, London School of Hygiene and Tropical Medicine, University of London, September. &lt;br&gt;
+&lt;br&gt;
+ Mudari, M. J. C., (1995) &lt;i&gt;The impact of marital disruptions and children's living arrangements on health at age 33: a study using the NCDS cohort population&lt;/i&gt;, Report for MSc Medical Demography, London School of Hygiene and Tropical Medicine, University of London, September. &lt;br&gt;
+&lt;br&gt;
+ Joshi, H., Dale, A., Ward, C., and Davies, H. (1995) &lt;i&gt;Dependence and independence in the finances of women aged 33&lt;/i&gt;, Family and Parenthood Policy and Practice series, London: Policy Studies Centre. ISBN 0-907051-89-8. &lt;br&gt;
+&lt;br&gt;
+ Dustmann, C., Micklewright, J. and Rajah, N. (1995) &lt;i&gt;Intra-household  transfers and the part-time work of children&lt;/i&gt; Working Paper Series W96/3, London: Institute for Fiscal Studies. &lt;br&gt;
+&lt;br&gt;
+ Blundell, R., Dearden, L. and Meghir, C., (1996) &lt;i&gt;The Determinants and Effects of Work Related Training in Britain&lt;/i&gt;,  London: KKS Printing.&lt;br&gt;
+ &lt;br&gt;
+ Strachan, D. P., Butland, B. K. and Anderson, H. R. (1996) `Incidence and prognosis of asthma and wheezing illness from early childhood to age 33 in a national British cohort', &lt;i&gt;British Medical Journal&lt;/i&gt; 312, pp.1195-99. &lt;br&gt;
+&lt;br&gt;
+ Lewis, S. et al (1996) `Study of the aetiology of wheezing illness at age 16 in two national British birth cohorts', &lt;i&gt;Thorax&lt;/i&gt;, 51, pp.670-676. &lt;br&gt;
+&lt;br&gt;
+ Joshi, H., Paci, P., and Waldfogel, J. (1996) &lt;i&gt;The wages of motherhood: better or worse?&lt;/i&gt; Welfare State Programme (WSP) Discussion  Paper WSP/122, July, The Toyota Centre: London School of Economics. &lt;br&gt;
+&lt;br&gt;
+  Johnson, P., and Reed, H., (1996) &lt;i&gt; Two nations? The inheritance of poverty and affluence&lt;/i&gt;, IFS Commentary No. 53, London: Institute for Fiscal Studies. ISBN 1-873357-53-2. &lt;br&gt;
+&lt;br&gt;
+ Strachan, D.P. et al (1996) `Ventilatory function in British adults after asthma and wheezing illness at ages 0-35', &lt;i&gt;American Journal of Respiratory Critical Care Medicine&lt;/i&gt;, 154, pp.1629-1635. &lt;br&gt;
+&lt;br&gt;
+ Comings, D. (1996) &lt;i&gt;The gene bomb : does higher education and advanced technology accelerate the selection of genes for learning disorders, ADHD, addictive and disruptive behavior?&lt;/i&gt;, Duarte, California: Hope Press (chapters 32-35). &lt;br&gt;
+&lt;br&gt;
+ Dale, A. et al (1997) &lt;i&gt;Highly educated women : evidence from the National Child Development Study&lt;/i&gt;, DfEE Research Studies No.RS25, London: The Stationery Office. &lt;br&gt;
+&lt;br&gt;
+ Egerton, M. (1997) 'Occupational inheritance : the role of cultural  capital and gender', &lt;i&gt;Work, Employment and Society&lt;/i&gt;, 11(2), pp.263-282. &lt;br&gt;
+&lt;br&gt;
+ Savage, M. and Egerton, M. (1997) 'Social mobility, individual ability  and the inheritance of class inequality', &lt;i&gt;Sociology&lt;/i&gt;, 31(4), pp.645-672. &lt;br&gt;
+&lt;br&gt;
+ Strachan, D.P. et al (1997) `Childhood antecedents of allergic sensitization in young British adults', &lt;i&gt;Journal of Allergy and Clinical Immunology&lt;/i&gt;, 99(1), part 1, pp.6-12. &lt;br&gt;
+&lt;br&gt;
+ Butland, B.K. et al (1997) `An investigation of the increase in hay fever and eczema at age 16 observed between the 1958 and 1970 British birth cohorts', &lt;i&gt;British Medical Journal&lt;/i&gt;, 315, pp.171-721. &lt;br&gt;
+&lt;br&gt;
+ Dustmann, C., Rajah, N. and Smith, S. (1997) &lt;i&gt;Teenage truancy, part-time working and wages&lt;/i&gt;, IFS Working Paper No.W97/13, Institute for Fiscal Studies, August. &lt;br&gt;
+&lt;br&gt;
+ Dearden, L., Ferri, J. and Meghir, C. (1997) &lt;i&gt;The effect of school quality on educational attainment and wages&lt;/i&gt;, IFS Working Paper No. W98/3, Institute for Fiscal Studies, October. &lt;br&gt;
+&lt;br&gt;
+ Kiernan, K. (1997) &lt;i&gt;The legacy of parental divorce : social, economic and demographic experiences in adulthood&lt;/i&gt;, CASEpaper CASE 1, Centre for Analysis of Social Exclusion, London School of Economics. &lt;br&gt;
+&lt;br&gt;
+ Power, C. and Matthews, S. (1997) 'Origins of health inequalities in a national population sample', &lt;i&gt;Lancet&lt;/i&gt;, 350, pp.1584-1589.   &lt;br&gt;
+&lt;br&gt;
+ Burke, A., Nolan, M. and Fitzroy, F. (1997?) &lt;i&gt; Entrepreneurial choice and performance: a re-appraisal of liquidity and human capital constraints&lt;/i&gt;,  University of St.Andrews Dept. of Economics and CRIEFF Discussion Paper No. 9723. ISSN 1364-453X. &lt;br&gt;
+&lt;br&gt;
+ Waldfogel, J., Higuchi, Y. and Abe, M. (1998) &lt;i&gt;Maternity leave policies and women's employment after childbirth : evidence from the United States, Britain and Japan&lt;/i&gt;, CASEpaper CASE/3, Centre for Analysis of Social Exclusion, London School of Economics, January. &lt;br&gt;
+&lt;br&gt;
+ Atkinson, A. and Hills, J. (eds.) (1998) &lt;i&gt;Exclusion, employment and opportunity&lt;/i&gt;, CASEpaper CASE/4, Centre for Analysis of Social Exclusion, London School of Economics, January. &lt;br&gt;
+&lt;br&gt;
+ Dearden, L. (1998) &lt;i&gt;Ability, families, education and earnings in Britain&lt;/i&gt;, IFS Working Paper Series no. W98/14, Institute for Fiscal Studies, June. &lt;br&gt;
+&lt;br&gt;
+ Johnston, I.D.A., Strachan, D.P. and Anderson H.R. (1998) `Longitudinal study of the effect of pneumonia and whooping cough in childhood on adult lung function', &lt;i&gt;New England Journal of Medicine&lt;/i&gt;, 338, pp.581-587. &lt;br&gt;
+&lt;br&gt;
+ Cheung, Y.B. (1998) `Can marital selection explain the differences in health between married and divorced people? From a longitudinal study of a British birth cohort', &lt;i&gt;Public Health&lt;/i&gt;, 112, pp.113-117. &lt;br&gt;
+&lt;br&gt;
+ Kiernan, K. and Mueller, G. (1998) &lt;i&gt;The divorced and who divorces?&lt;/i&gt;, CASEpaper CASE/7, Centre for Analysis of Social Exclusion, London School of Economics, May. &lt;br&gt;
+&lt;br&gt;
+ Fitzpatrick, S. (1998) &lt;i&gt;Childhood and early adulthood determinants of overweight status at age 33&lt;/i&gt;, report for MSc. Medical Statistics, London School of Hygiene and Tropical Medicine, University of London. &lt;br&gt;
+&lt;br&gt;
+ Cheung, Y.B. (1998) 'Health and adverse selection into marriage : evidence from a study of the 1958 British Birth Cohort', &lt;i&gt;Public Health&lt;/i&gt;, 112, pp.309-311. &lt;br&gt;
+&lt;br&gt;
+ Cheung, Y.B. (1998) 'Accidents, assaults and marital status', &lt;i&gt;Social Science and Medicine&lt;/i&gt;, 47(9), pp.1325-1329. &lt;br&gt;
+&lt;br&gt;
+ Papasolomontos, C. and Christie, T. (1998) 'Using national surveys : a review of secondary analyses with special reference to education', &lt;i&gt;Educational Research&lt;/i&gt;, 40(3), Winter, pp.295-309. &lt;br&gt;
+&lt;br&gt;
+ Matthews, S. et al (1998) 'Gender, work roles and psychosocial work characteristics: as determinants of health?', &lt;i&gt;Social Science and Medicine&lt;/i&gt;, 46(11), pp.1417-1424. &lt;br&gt;
+&lt;br&gt;
+ Power, C. and Matthews, S. (1998) 'Accumulation of health risks across social groups', IN S.S. Strickland and P.S. Shetty (eds) &lt;i&gt;Human biology and social inequality&lt;/i&gt;, Cambridge: Cambridge University Press. &lt;br&gt;
+&lt;br&gt;
+ Power, C., Matthews, S. and Manor, O. (1998) 'Inequalities in self-rated health: explanations from different stages of life', &lt;i&gt;Lancet&lt;/i&gt;, 352(9105), pp.1009-1014. &lt;br&gt;
+ Goodwin, J. (1999) &lt;i&gt;Men's work and male lives : men and work in Britain&lt;/i&gt;, Aldershot: Ashgate. ISBN 1-84014-577-3. &lt;br&gt;
+&lt;br&gt;
+ Dearden, L. (1999) &lt;i&gt;Qualifications and earnings in Britain : how reliable are conventional OLS estimates of the returns to education?&lt;/i&gt;, IFS Working Paper Series No.W99/7, Institute for Fiscal Studies. &lt;br&gt;
+&lt;br&gt;
+ Butland, B.K., Strachan, D.P. and Anderson, H.R. (1999) 'Fresh fruit intake and asthma symptoms in young British adults : confounding or effect modification by smoking?', &lt;i&gt;European Respiratory Journal&lt;/i&gt;, 13, pp.744-750. &lt;br&gt;
+&lt;br&gt;
+ Butland, B.K. and Strachan, D. (1999) 'Age-specific relative odds of appendicectomy by mother's and child's smoking', (letter) &lt;i&gt;The Lancet&lt;/i&gt;, 353, May 15, p.1712. &lt;br&gt;
+&lt;br&gt;
+ Hobcraft, J. and Kiernan, K. (1999) &lt;i&gt;Childhood poverty, early motherhood and adult social exclusion&lt;/i&gt;, CASEpaper CASE/28, Centre for Analysis of Social Exclusion, London School of Economics, July. &lt;br&gt;
+&lt;br&gt;
+ Power, C., Manor, O. and Matthews, S. (1999) 'The duration and timing of exposure: effects of socio-economic environment on adult health', &lt;i&gt;American Journal of Public Health&lt;/i&gt;, 89(7), pp.1059-1065. &lt;br&gt;
+&lt;br&gt;
+ Matthews, S., Stansfeld, S. and Power, C. (1999) 'Social Support in young adults: the influence of gender, employment status and social class', &lt;i&gt;Social Science and Medicine&lt;/i&gt;, 49(1), pp.133-142. &lt;br&gt;
+&lt;br&gt;
+ Matthews, S., Manor, O. and Power, C. (1999) 'Socio-economic inequalities in health: are there gender differences?', &lt;i&gt;Social Science and Medicine&lt;/i&gt;, 48(1), pp.49-60. &lt;br&gt;
+&lt;br&gt;
+ Glover, J. and Fielding, J. (1999) 'Women and the sciences in Britain: getting in?', &lt;i&gt;Journal of Education and Work&lt;/i&gt;, 12(1), pp.57-73. &lt;br&gt;
+&lt;br&gt;
+ Glover, J. and Fielding, J. (1999) 'Women science graduates in Britain: the value of secondary analysis of large scale data sets', &lt;i&gt;Work, Employment and Society&lt;/i&gt;, 13(2), pp.353-367. &lt;br&gt;
+&lt;br&gt;
+ Dolton, P. and Vignoles, A. (1999) &lt;i&gt;The economic case for reforming A Levels&lt;/i&gt;, Discussion Paper 422, Centre for Economic Performance, London School of Economics and Political Science. ISBN 0753012723. &lt;br&gt;
+&lt;br&gt;
+ Green, F., McIntosh, S. and Vignoles, A. (1999) &lt;i&gt;'Overeducation' and skills - clarifying the concepts&lt;/i&gt;, Discussion Paper 435, Centre for Economic Performance, London School of Economics and Political Science. ISBN 0753013061. &lt;br&gt;
+&lt;br&gt;
+ Powell, M.A. &lt;i&gt;Comparing the long-term effects of parental work hours and family structure on educational attainment in Britain and the United States&lt;/i&gt;, paper presented to the Society for the Advancement of Socio-economics, London School of Economics, July 7-10, 2000. &lt;br&gt;
+&lt;br&gt;
+ Powell, M.A. (2000) &lt;i&gt;Effect of sibsize on educational attainment over the life course: Great Britain and the United States compared&lt;/i&gt;, Department of Sociology and Anthropology, University of Nebraska at Omaha. &lt;br&gt;
+&lt;br&gt;
+ Sigurdsson, E., van Os, J. and Fombonne, E. (2002) 'Are impaired childhood motor skills a risk factor for adolescent anxiety? Results from the 1958 U.K. Birth Cohort and the National Child Development Study', &lt;i&gt;American Journal of Psychiatry&lt;/i&gt;, 159(6), pp.1044-1045. &lt;br&gt;
+&lt;br&gt;
+ Cheung, Y.B. et al (2002) 'Association between psychological symptoms and growth in early life: longitudinal follow-up study', &lt;i&gt;British Medical Journal&lt;/i&gt;, 325, pp.749-751. &lt;br&gt;
+&lt;br&gt;
+Chevalier, A. and Lanot, G. (2002) 'The relative effect of family characteristics and financial situation on educational achievement', &lt;i&gt;Education Economics&lt;/i&gt;, 10(2), pp.165-182.&lt;br&gt;
+&lt;br&gt;
+Chevalier, A. and Viitanen, T. 'The long-run labour market consequences of teenage motherhood', &lt;i&gt;Journal of Population Economics&lt;/i&gt;, 16(2), pp.323-343.&lt;br&gt;
+&lt;br&gt;
+Kiernan, K. (2003) &lt;i&gt;Cohabitation and divorce across nations and  generations&lt;/i&gt;, CASEpaper 65, Centre for Analysis of Social Exclusion, London School of Economics, March. &lt;br&gt;
+&lt;br&gt;
+ Hobcraft, J. (2003) &lt;i&gt;Continuity and change in pathways to young adult disadvantage: results from a British birth cohort&lt;/i&gt;, CASEpaper 66, Centre for Analysis of Social Exclusion, London School of Economics, April.  &lt;br&gt;
+&lt;br&gt;
+ Grawe, N.D. (2004) 'Intergenerational mobility for whom? The experience of high- and low-earnings sons in internatinoal persective', IN Miles Corak, (ed.) &lt;i&gt;Generational income mobility in North American and Europe&lt;/i&gt;, Cambridge: Cambridge University Press. &lt;br&gt;
+&lt;br&gt;
+ Grawe, N.D. (2004) 'The 3-day week of 1974 and earnings data reliability in the Family Expenditure Survey and the National Child Development Study', &lt;i&gt;Bulletin of Economics and Statistics&lt;/i&gt;, 66(4), pp.567-579.  &lt;br&gt;
+&lt;br&gt;
+ Case, A., Fertig, A. and Paxson, C. (2005) &lt;i&gt;The lasting impact of childhood health and circumstance&lt;/i&gt;,  Journal of Health Economics,  24, pp.365-389.  &lt;br&gt;
+&lt;br&gt;
+ Hobcraft, J. and Sigle-Rushton, W. (2005) &lt;i&gt;An exploration of childhood antecedents of female adult malaise in two British birth cohorts: combining Bayesian model averaging and recursive partitioning&lt;/i&gt;, CASEpaper 95, Centre for Analysis of Social Exclusion, London School of Economics, March.  &lt;br&gt;
+&lt;br&gt;
+Leask, S.J. and Crow, T.J. (2005) 'Lateralization of Verbal Ability in Pre-Psychotic Children', &lt;i&gt;Psychiatry Research&lt;/i&gt;, 136(1), pp.35-42.  &lt;br&gt;
+&lt;br&gt;
+Hango, D. (2005) &lt;i&gt;Parental investment in childhood and later adult well-being: can more involved parents offset the effects of socio-economic disadvantage?&lt;/i&gt;, CASEpaper 98, Centre for Analysis of Social Exclusion, London School of Economics.&lt;br&gt;
+&lt;br&gt;
+Lynn, R. and Longley, D. (2006) 'On the high intelligence and cognitive achievements of Jews in Britain', &lt;i&gt;Intelligence&lt;/i&gt;, May.&lt;br&gt;
+&lt;br&gt;
+Chevalier, J. and Feinstein, L. (2006) 'Sheepskin or Prozac: the causal effect of education on depression, IZA, DP 2231.&lt;br&gt;
+&lt;br&gt;
+Chevalier, J. and O'Sullivan, V. (2007) 'Mother's education and birth weight', IZA, DP 2640.&lt;br&gt;
+&lt;br&gt;
+Ecob, R. et al. (2008) 'Is the relation of social class to change in hearing threshold levels from childhood to middle age explained by noise, smoking, and drinking behaviour?', &lt;i&gt;International Journal of Audiology&lt;/i&gt;, 47(3), pp.100-108.&lt;br&gt;
+&lt;br&gt;
+Leuze, K. (2007) 'What makes for a good start? Occupation-specific higher education and graduate career mobility', &lt;i&gt;International Journal of Sociology&lt;/i&gt;, 37(2), pp.29-53.&lt;br&gt;
+&lt;br&gt;
+Leuze, K. and Allmendinger, J. (2008) 'Ungleiche Karrierepfade? Ã¢ÂÂ Die Bedeutung institutioneller Differenzierung fÃ¼r stratifizierte ArbeitsmarktertrÃ¤ge von Hochschulabsolventen', in B. Kehm (ed.)&lt;i&gt;Hochschule im Wandel&lt;/i&gt;, Frankfurt: Die UniversitÃ¤t als Forschungsgegenstand.&lt;br&gt;
+&lt;br&gt;
+Cartwright, R. (2011) 'The socioeconomic associations of female urinary incontinence: results from the UK 1958 Birth Cohort', paper presented at the &lt;i&gt;International Urogynecological Association Annual Meeting&lt;/i&gt;, June 30th, Lisbon. &lt;br&gt;
+&lt;br&gt;
+Cartwright, R. (2011) 'The impact of premature ovarian failure on quality of life: results from the UK 1958 Birth Cohort', paper presented at the &lt;i&gt;European Society of Human Reproduction and Embryology Annual Meeting&lt;/i&gt;, 4th July, Stockholm.&lt;br&gt;
+&lt;br&gt;
+McKnight, A. (2011) &lt;i&gt;Estimates of the asset-effect: the search for a casual effect of assets on adult health and employment outcomes&lt;/i&gt;, CASEpaper 149, Centre for the Analysis of Social Exclusion, LSE (http://sticerd.lse.ac.uk/case/).&lt;br&gt;
+&lt;br&gt;
+Koerselmann, K. (2011) &lt;i&gt;Bias from the use of mean-based methods on test scores&lt;/i&gt;, University of Stockholm, Swedish Institute for Social Research, ISSN 0283-8222; 1/2011. Retrieved 29 July 2011 from &lt;a href=&quot;http://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-51720&quot; title=&quot;Bias from the use of mean-based methods on test scores&quot;&gt;http://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-51720&lt;/a&gt;.&lt;br&gt;
+&lt;br&gt;
+Koerselmann, K. (2011) &lt;i&gt;Incentives from curriculum tracking: cross-national and UK evidence&lt;/i&gt;, University of Stockholm, Swedish Institute for Social Research, ISSN 0283-8222; 3/2011. Retrieved 29 July 2011 from &lt;a href=&quot;http://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-54779&quot; title=&quot;Incentives from curriculum tracking: cross-national and UK evidence&quot;&gt;http://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-54779&lt;/a&gt;.&lt;br&gt;
+&lt;br&gt;
+Calvin, C.M., Batty, G.D., Lowe, G.D., Deary, I.J. (2011) 'Childhood intelligence and midlife inflammatory and hemostatic biomarkers: The National Child Intelligence Study (1958) cohort', &lt;i&gt;Health Psychology&lt;/i&gt;, epub ahead of print.&lt;br&gt;
+&lt;br&gt;
+Waynforth, D. (2011) 'Grandparental investment and reproductive decisions in the longitudinal 1970 British cohort study', &lt;i&gt;Proc. R. Soc. B&lt;/i&gt;, published online before print September 14, 2011, doi:10.1098/rspb.2011.1424&lt;br&gt;
+&lt;br&gt;
+Gale, C.R., Deary, I.J., Cooper, C. and Batty, G.D. (2012) 'Intelligence in childhood and chronic widespread pain in middle age: the National Child Development Survey', &lt;i&gt;Pain&lt;/i&gt;.&lt;br&gt;
+&lt;br&gt;
+Daly, M. and Delaney, L. (2013) 'The scarring effect of unemployment throughout adulthood on psychological distress at age 50: estimates controlling for early adulthood distress and childhood psychological factors', &lt;i&gt;Social Science and Medicine&lt;/i&gt;, 80, pp.19-23. &lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+The &lt;a href=&quot;http://www.ias.org.uk/index.html&quot; title=&quot;Institute of Alcohol Studies&quot;&gt;Institute of Alcohol Studies&lt;/a&gt; (IAS) has produced a 'Data Dictionary' covering summary information on UK-based survey series (including NCDS) that include any data on alcohol use. Further information and links to the dictionary documents may be found on the &lt;a href=&quot;http://www.ias.org.uk/resources/data-dictionary/contents.html&quot; title=&quot;IAS Data Dictionary - Table of Contents&quot;&gt;IAS Data Dictionary - Table of Contents&lt;/a&gt; web page.&lt;br&gt;</relPubl>
+			<othRefs>Study Description: English</othRefs>
+			<othRefs>Study Documentation: English</othRefs>
+			<othRefs>Study Documentation: Welsh</othRefs>
+		</othrStdyMat>
+	</stdyDscr>
+</codeBook>

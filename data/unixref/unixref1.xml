@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doi_records>
+  <doi_record key="555-555" owner="10.1126" timestamp="2011-08-22 10:20:04">
+    <crossref>
+      <journal>
+        <journal_metadata>
+          <full_title>Science</full_title>
+          <issn media_type="print">00368075</issn>
+          <issn media_type="electronic">10959203</issn>
+        </journal_metadata>
+        <journal_issue>
+          <journal_volume>
+            <volume>275</volume>
+          </journal_volume>
+          <issue>5304</issue>
+        </journal_issue>
+        <journal_article publication_type="full_text">
+          <titles>
+            <title>Isolation of a Common Receptor for Coxsackie B Viruses and Adenoviruses 2 and 5</title>
+          </titles>
+          <contributors>
+            <person_name sequence="first" contributor_role="author">
+              <given_name>J. M.</given_name>
+              <surname>Bergelson</surname>
+            </person_name>
+          </contributors>
+          <publication_date media_type="print">
+            <month>2</month>
+            <day>28</day>
+            <year>1997</year>
+          </publication_date>
+          <pages>
+            <first_page>1320</first_page>
+            <last_page>1323</last_page>
+          </pages>
+          <doi_data>
+            <doi>10.1126/science.275.5304.1320</doi>
+            <timestamp>200009151355</timestamp>
+            <resource>http://www.sciencemag.org/cgi/doi/10.1126/science.275.5304.1320</resource>
+          </doi_data>
+        </journal_article>
+      </journal>
+    </crossref>
+  </doi_record>
+</doi_records>

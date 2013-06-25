@@ -1,0 +1,50 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "adolescent", 
+                "fr": "adolescent"
+            }, 
+            "type_id": "adolescent"
+        }, 
+        {
+            "labels": {
+                "en": "adult", 
+                "fr": "adulte"
+            }, 
+            "type_id": "adult"
+        }, 
+        {
+            "labels": {
+                "en": "general", 
+                "fr": "general"
+            }, 
+            "type_id": "general"
+        }, 
+        {
+            "labels": {
+                "en": "juvenile", 
+                "fr": "juvenile"
+            }, 
+            "type_id": "juvenile"
+        }, 
+        {
+            "labels": {
+                "en": "preschool", 
+                "fr": "preschool"
+            }, 
+            "type_id": "preschool"
+        }, 
+        {
+            "labels": {
+                "en": "specialized", 
+                "fr": "specialized"
+            }, 
+            "type_id": "specialized"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "target_audience"
+}

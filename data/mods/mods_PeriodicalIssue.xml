@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:title>Clientélisme en situation. Échanges politiques, politisation et conflits moraux</mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__eu4vqp9ompqllr09hga9pgk39_-_2441__eu4vqp9ompqllr09hga9pgk39_-_2441__9labe9r4se65i789685q380gh_-_eo6779thqgm5r489m8kcn81ki" type="personal">
+    <mods:namePart type="given">Hélène</mods:namePart>
+    <mods:namePart type="family">Combes</mods:namePart>
+    <mods:affiliation>Centre d'études et de recherches internationales</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre authority="marcgt">issue</mods:genre>
+  <mods:originInfo>
+    <mods:dateIssued encoding="iso8601">2012-12</mods:dateIssued>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">fre</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">fr</mods:languageTerm>
+  </mods:language>
+  <mods:physicalDescription>
+    <mods:extent>163</mods:extent>
+  </mods:physicalDescription>
+  <mods:abstract lang="fr">Les articles qui constituent ce dossier portent sur les formes de domination et les échanges politiques, sur la politisation des classes populaires et sur les liens entre ces groupes, les partis, les mouvements sociaux et l’État. Ces travaux privilégient, ici, une approche empirique évitant à la fois des formes d’étiquetage normatives trop rapides et des définitions simplificatrices des rapports politiques. Ils décrivent ainsi les modes de fonctionnement et des dispositifs politiques autour desquels s’organise la politique territoriale.</mods:abstract>
+  <mods:relatedItem type="host">
+    <mods:titleInfo>
+      <mods:title>Cahiers des Amériques latines</mods:title>
+    </mods:titleInfo>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre authority="marcgt">journal</mods:genre>
+    <mods:originInfo>
+      <mods:place>
+        <mods:placeTerm type="text">Paris</mods:placeTerm>
+      </mods:place>
+      <mods:issuance>continuing</mods:issuance>
+      <mods:frequency>3 n°s par an</mods:frequency>
+    </mods:originInfo>
+    <mods:language>
+      <mods:languageTerm authority="iso639-2b" type="code">fre</mods:languageTerm>
+      <mods:languageTerm authority="rfc3066" type="code">fr</mods:languageTerm>
+    </mods:language>
+    <mods:classification authority="peer-review">yes</mods:classification>
+    <mods:classification authority="ddc">980</mods:classification>
+    <mods:identifier type="issn">11417161</mods:identifier>
+    <mods:part>
+      <mods:detail type="volume">
+        <mods:number>2012/1</mods:number>
+      </mods:detail>
+      <mods:detail type="issue">
+        <mods:number>69</mods:number>
+      </mods:detail>
+    </mods:part>
+  </mods:relatedItem>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__eu4vqp9ompqllr09hga9pgk39_-_2441__eu4vqp9ompqllr09hga9pgk39_-_2441__9labe9r4se65i789685q380gh_-_eo6779thqgm5r489m6ocif6cp" authority="http://spire.sciences-po.fr/hdl:">2441/eu4vqp9ompqllr09hga9pgk39</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

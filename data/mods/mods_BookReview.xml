@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:nonSort>The </mods:nonSort>
+    <mods:title>Europeanization of Cities: Policies, Urban Change and Urban Networks</mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__53r60a8s3kup1vc9kc4942gk9_-_2441__53r60a8s3kup1vc9kc4942gk9_-_2441__9labe9r4se65i789685q384oh_-_dambferfb7dfprc9m2h2og6c5" type="personal">
+    <mods:namePart type="given">Charlotte</mods:namePart>
+    <mods:namePart type="family">Halpern</mods:namePart>
+    <mods:affiliation>Centre d'études européennes de Sciences Po</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/bookReview</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/BookReview</mods:genre>
+  <mods:genre authority="marcgt">survey of literature</mods:genre>
+  <mods:originInfo>
+    <mods:dateIssued encoding="iso8601">2012-05</mods:dateIssued>
+    <mods:dateCreated encoding="iso8601">2011-05</mods:dateCreated>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+  </mods:language>
+  <mods:physicalDescription>
+    <mods:extent>637639</mods:extent>
+  </mods:physicalDescription>
+  <mods:abstract lang="en">Europeanization of cities provides a timely assessment of the complex interplay between Europe and cities, as well as it raises many unanswered questions. By exploring the extent to which the European Union and cities alter one another, this collective endeavour contributes to current debates on Europeanization and domestic change.</mods:abstract>
+  <mods:note type="additional physical form">Note de lecture</mods:note>
+  <mods:subject lang="en">
+    <mods:topic>Europeanization</mods:topic>
+  </mods:subject>
+  <mods:subject lang="en">
+    <mods:topic>Urban policies</mods:topic>
+  </mods:subject>
+  <mods:subject lang="en">
+    <mods:topic>cities</mods:topic>
+  </mods:subject>
+  <mods:relatedItem type="host">
+    <mods:titleInfo>
+      <mods:title>International Journal of Urban and Regional Research</mods:title>
+    </mods:titleInfo>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre authority="marcgt">journal</mods:genre>
+    <mods:originInfo>
+      <mods:publisher>Wiley-Blackwell </mods:publisher>
+      <mods:issuance>continuing</mods:issuance>
+    </mods:originInfo>
+    <mods:language>
+      <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+      <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+    </mods:language>
+    <mods:classification authority="peer-review">yes</mods:classification>
+    <mods:classification authority="citation-databases">scopus</mods:classification>
+    <mods:classification authority="citation-databases">wos</mods:classification>
+    <mods:classification authority="expert-committee">aeres</mods:classification>
+    <mods:identifier type="issn">03091317</mods:identifier>
+    <mods:part>
+      <mods:detail type="volume">
+        <mods:number>36</mods:number>
+      </mods:detail>
+      <mods:detail type="issue">
+        <mods:number>3</mods:number>
+      </mods:detail>
+    </mods:part>
+  </mods:relatedItem>
+  <mods:relatedItem type="original">
+    <mods:titleInfo>
+      <mods:title>Europeanization of Cities: Policies, Urban Change and Urban Networks</mods:title>
+    </mods:titleInfo>
+    <mods:name ID="_-_spire_-_2441__dambferfb7dfprc9m2h2pat0k_-__-__-_dambferfb7dfprc9m2h3laka5" type="personal">
+      <mods:namePart type="family">Hamedinger</mods:namePart>
+      <mods:namePart type="given">Alexander</mods:namePart>
+      <mods:role>
+        <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:name ID="_-_spire_-_2441__dambferfb7dfprc9m2h2pi026_-__-__-_dambferfb7dfprc9m2h3laka7" type="personal">
+      <mods:namePart type="family">Wolffhardt</mods:namePart>
+      <mods:namePart type="given">Alexander</mods:namePart>
+      <mods:role>
+        <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre>info:eu-repo/semantics/other</mods:genre>
+    <mods:genre>http://purl.org/eprint/type/ScholarlyText</mods:genre>
+    <mods:genre authority="marcgt">unspecified</mods:genre>
+    <mods:originInfo>
+      <mods:publisher>Techne Press</mods:publisher>
+      <mods:dateIssued encoding="iso8601">2010</mods:dateIssued>
+    </mods:originInfo>
+    <mods:language>
+      <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+      <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+    </mods:language>
+    <mods:identifier type="isbn">9789085940272</mods:identifier>
+    <mods:extension>
+      <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd"/>
+    </mods:extension>
+  </mods:relatedItem>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__53r60a8s3kup1vc9kc4942gk9_-_2441__53r60a8s3kup1vc9kc4942gk9_-_2441__9labe9r4se65i789685q384oh_-_dambferfb7dfprc9m2h2og6c5" authority="http://spire.sciences-po.fr/hdl:">2441/53r60a8s3kup1vc9kc4942gk9</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

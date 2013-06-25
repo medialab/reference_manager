@@ -1,0 +1,22 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "is part of", 
+                "fr": "fait partie de"
+            }, 
+            "type_id": "isPartOf"
+        }, 
+        {
+            "labels": {
+                "en": "partner", 
+                "fr": "partenaire"
+            }, 
+            "type_id": "partner"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "affiliation_relation_orgunit_orgunit"
+}

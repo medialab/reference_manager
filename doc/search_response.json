@@ -1,0 +1,124 @@
+{
+    "errors": [
+        {
+            "code": 42,
+            "error_type": "error",
+            "labels": {
+                "en": "Database error",
+                "fr": "Erreur d'acc\u00e8s \u00e0 la base de donn\u00e9es"
+            }
+        }
+    ],
+    "rec_class": "SearchResponse",
+    "rec_metajson": 1,
+    "records": [],
+    "records_total_count": 1234,
+    "response_time": 12,
+    "result_batch_size": 100,
+    "result_offset": 0,
+    "search_query": {
+        "filter_class": "Document",
+        "filter_date_end": "2010-12-31",
+        "filter_date_start": "2010-01-01",
+        "filter_favorite": true,
+        "filter_langues": [
+            "en",
+            "fr"
+        ],
+        "filter_peer_review": true,
+        "filter_types": [
+            "Book",
+            "BookPart"
+        ],
+        "filter_with_full_text": true,
+        "rec_class": "SearchQuery",
+        "rec_metajson": 1,
+        "result_batch_size": 100,
+        "result_bibliographic_styles": [
+            "mla"
+        ],
+        "result_offset": 0,
+        "result_sorts": [
+            {
+                "field": "rec_type",
+                "order": "asc"
+            },
+            {
+                "field": "date_issued",
+                "order": "desc"
+            }
+        ],
+        "search_terms": [
+            {
+                "index": "all",
+                "operator": "or",
+                "value": "politique"
+            },
+            {
+                "index": "identifier",
+                "operator": "or",
+                "value": "2441/9labe9r4sezdpjj123da"
+            },
+            {
+                "index": "title",
+                "operator": "and",
+                "value": "discours"
+            },
+            {
+                "index": "is_part_of",
+                "operator": "not",
+                "value": "politique"
+            },
+            {
+                "index": "creator",
+                "operator": "or",
+                "value": "Algan, Yann"
+            },
+            {
+                "index": "creator_id",
+                "operator": "or",
+                "value": "2441/9labe9r4se65i789685q54oi3"
+            },
+            {
+                "index": "affiliation",
+                "operator": "or",
+                "value": "CERI"
+            },
+            {
+                "index": "affiliation_id",
+                "operator": "or",
+                "value": "2441/dambferfb7dfprc9m26c8c8o3"
+            },
+            {
+                "index": "publisher",
+                "operator": "or",
+                "value": "politique"
+            },
+            {
+                "index": "keyword",
+                "operator": "or",
+                "value": "politique"
+            },
+            {
+                "index": "classification",
+                "operator": "or",
+                "value": "J12"
+            },
+            {
+                "index": "research_area",
+                "operator": "or",
+                "value": "CERI:SECURITY_AND_RISKS:CONFLICTS_VIOLENCE_AND_PACIFICATION"
+            },
+            {
+                "index": "subject",
+                "operator": "or",
+                "value": "rame haut"
+            },
+            {
+                "index": "set",
+                "operator": "or",
+                "value": "SHS:SOCIO"
+            }
+        ]
+    }
+}

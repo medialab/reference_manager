@@ -1,0 +1,329 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>BibLib - simple jsonrpc test</title>
+        <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="https://rawgithub.com/datagraph/jquery-jsonrpc/master/jquery.jsonrpc.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $.jsonRPC.setup({
+                    endPoint : 'http://localhost:8080',
+                    //endPoint : 'http://aime.medialab.sciences-po.fr:8090',
+                    //endPoint : 'http://modesofexistence.org/biblio_manager',
+                    namespace : ''
+                });
+                $("input#echo_button").click(function() {
+                    $.jsonRPC.request("echo", {
+                        params : [$("input#echo_input").val()],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#echo_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#metadata_by_rec_ids_button").click(function() {
+                    var my_list = $("input#metadata_by_rec_ids_input").val().split(",")
+                    $.jsonRPC.request("metadata_by_rec_ids", {
+                        //params : [["296","579","697"],"metajson"],
+                        params : [my_list,"metajson"],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#metadata_by_rec_ids_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#metadata_by_mongo_ids_button").click(function() {
+                    var my_list = $("input#metadata_by_mongo_ids_input").val().split(",")
+                    $.jsonRPC.request("metadata_by_mongo_ids", {
+                        //params : [["516c07483b71f34764274feb","516c08f63b71f34a8a77b908","516c0b963b71f34a8a77b909"],"metajson"],
+                        params : [my_list,"metajson"],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#metadata_by_mongo_ids_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#citation_button").click(function() {
+                    var my_list = $("input#citation_input").val().split(",")
+                    $.jsonRPC.request("citation_by_rec_ids", {
+                        //params : [["296","579","697"],"mla","html"],
+                        params : [my_list,"mla","html"],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#citation_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#type_button").click(function() {
+                    $.jsonRPC.request("type", {
+                        //params : ["identifier_type","fr"],
+                        params : [$("input#type_input").val(),"fr"],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#type_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#uifields_button").click(function() {
+                    $.jsonRPC.request("uifields", {
+                        //params : ["Book","fr"],
+                        params : [$("input#uifields_input").val(),"fr"],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#uifields_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#search_mongo_button").click(function() {
+                    $.jsonRPC.request("search_mongo", {
+                        params : [JSON.parse($("input#search_mongo_input").val())],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#search_mongo_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#search_button").click(function() {
+                    $.jsonRPC.request("search", {
+                        params : [JSON.parse($("textarea#search_input").val())],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#search_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#save_button").click(function() {
+                    $.jsonRPC.request("save", {
+                        params : [$("textarea#save_input").val()],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#save_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>BibLib - simple JSON-RPC test</h1>
+        <h2>Method echo</h2>
+        <p><label for="echo_input">Value</label> : 
+            <input type="text" name="echo_input" id="echo_input">
+        </p>
+        <p>
+            <input name="echo_button" id="echo_button" value="Send echo request" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="echo_result"></pre>
+
+        <h2>Method metadata_by_rec_ids</h2>
+        <p><label for="metadata_by_rec_ids_input">List of ref ids</label> : 
+            <input type="text" name="metadata_by_rec_ids_input" id="metadata_by_rec_ids_input">
+            example : 296,579,697
+        </p>
+        <p>
+            <input name="metadata_by_rec_ids_button" id="metadata_by_rec_ids_button" value="Send metadata by rec ids request" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="metadata_by_rec_ids_result"></pre>
+
+        <h2>Method metadata_by_mongo_ids</h2>
+        <p><label for="metadata_by_mongo_ids_input">List of ref ids</label> : 
+            <input type="text" name="metadata_by_mongo_ids_input" id="metadata_by_mongo_ids_input">
+            example : 516c07483b71f34764274feb,516c08f63b71f34a8a77b908,516c0b963b71f34a8a77b909
+        </p>
+        <p>
+            <input name="metadata_by_mongo_ids_button" id="metadata_by_mongo_ids_button" value="Send metadata by mongo ids request" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="metadata_by_mongo_ids_result"></pre>
+
+        <h2>Method citation_by_rec_ids</h2>
+        <p><label for="citation_input">List of ref ids</label> : 
+            <input type="text" name="citation_input" id="citation_input">
+            example : 296,579,697
+        </p>
+        <p>
+            <input name="citation_button" id="citation_button" value="Send citation request" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="citation_result"></pre>
+
+        <h2>Method type</h2>
+        <p><label for="type_input">Type identifier (type_id)</label> : 
+            <input type="text" name="type_input" id="type_input">
+            example : identifier_type
+        </p>
+        <p>
+            <input name="type_button" id="type_button" value="Send type request" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="type_result"></pre>
+
+        <h2>Method uifields</h2>
+        <p><label for="uifields_input">Document type (rec_type)</label> : 
+            <input type="text" name="type_input" id="uifields_input">
+            example : Book
+        </p>
+        <p>
+            <input name="uifields_button" id="uifields_button" value="Send uifields request" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="uifields_result"></pre>
+
+        <h2>Method search_mongo</h2>
+        <p><label for="search_mongo_input">MongoDB query</label> : 
+            <input type="text" name="type_input" id="search_mongo_input">
+            example : {"rec_type": "Book"}
+        </p>
+        <p>
+            <input name="search_mongo_button" id="search_mongo_button" value="Send mongo search request" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="search_mongo_result"></pre>
+
+        <h2>Method search</h2>
+        <p><label for="search_input">SearchQuery</label> : 
+            <textarea name="search_input" id="search_input" rows="10" cols="30"></textarea>
+            example : <pre>{
+    "filter_class": "Document",
+    "filter_date_end": "2010-12-31",
+    "filter_date_start": "2010-01-01",
+    "filter_favorite": true,
+    "filter_langues": [
+        "en",
+        "fr"
+    ],
+    "filter_peer_review": true,
+    "filter_types": [
+        "Book",
+        "BookPart"
+    ],
+    "filter_with_full_text": true,
+    "rec_class": "SearchQuery",
+    "rec_metajson": 1,
+    "result_batch_size": 100,
+    "result_bibliographic_styles": [
+        "mla"
+    ],
+    "result_offset": 0,
+    "result_sorts": [
+        {
+            "field": "rec_type",
+            "order": "asc"
+        },
+        {
+            "field": "date_issued",
+            "order": "desc"
+        }
+    ],
+    "search_terms": [
+        {
+            "index": "all",
+            "operator": "or",
+            "value": "politique"
+        },
+        {
+            "index": "identifier",
+            "operator": "or",
+            "value": "2441/9labe9r4sezdpjj123da"
+        },
+        {
+            "index": "title",
+            "operator": "and",
+            "value": "discours"
+        },
+        {
+            "index": "is_part_of",
+            "operator": "not",
+            "value": "politique"
+        },
+        {
+            "index": "creator",
+            "operator": "or",
+            "value": "Algan, Yann"
+        },
+        {
+            "index": "creator_id",
+            "operator": "or",
+            "value": "2441/9labe9r4se65i789685q54oi3"
+        },
+        {
+            "index": "affiliation",
+            "operator": "or",
+            "value": "CERI"
+        },
+        {
+            "index": "affiliation_id",
+            "operator": "or",
+            "value": "2441/dambferfb7dfprc9m26c8c8o3"
+        },
+        {
+            "index": "publisher",
+            "operator": "or",
+            "value": "politique"
+        },
+        {
+            "index": "keyword",
+            "operator": "or",
+            "value": "politique"
+        },
+        {
+            "index": "classification",
+            "operator": "or",
+            "value": "J12"
+        },
+        {
+            "index": "research_area",
+            "operator": "or",
+            "value": "CERI:SECURITY_AND_RISKS:CONFLICTS_VIOLENCE_AND_PACIFICATION"
+        },
+        {
+            "index": "subject",
+            "operator": "or",
+            "value": "rame haut"
+        },
+        {
+            "index": "set",
+            "operator": "or",
+            "value": "SHS:SOCIO"
+        }
+    ]
+}</pre>
+        </p>
+        <p>
+            <input name="search_button" id="search_button" value="Send search request" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="search_result"></pre>
+
+        <h2>Method save</h2>
+        <p><label for="save_input">JSON to save</label> : 
+            <textarea name="save_input" id="save_input" rows="10" cols="30"></textarea>
+        </p>
+        <p>
+            <input name="save_button" id="save_button" value="Save metadata in JSON" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="save_result"></pre>
+
+    </body>
+</html>

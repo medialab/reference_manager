@@ -1,0 +1,11 @@
+.. biblib news
+
+News
+====
+
+0.1
+---
+
+*Release date: 30-Apr-2013*
+
+* Alpha release

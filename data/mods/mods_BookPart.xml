@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:title>Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy</mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__eo6779thqgm5r489makgk11ai_-__-__-_eo6779thqgm5r489makgoai87" type="personal">
+    <mods:namePart type="family">Membretti</mods:namePart>
+    <mods:namePart type="given">Andrea</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__5k7940uimfdf9c8990p8ph108_-_2441__5k7940uimfdf9c8990p8ph108_-_2441__9labe9r4se65i789685q384oh_-_eo6779thqgm5r489makgk2p48" type="personal">
+    <mods:namePart type="given">Tommaso</mods:namePart>
+    <mods:namePart type="family">Vitale</mods:namePart>
+    <mods:affiliation>Centre d'études européennes de Sciences Po</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/bookPart</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/BookItem</mods:genre>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+  </mods:language>
+  <mods:abstract lang="en">This chapter concerns how social innovation relates to the social production of space. Usually, the scholarly literature on local welfare, social work, and ‘social cohesion’ at the urban level mostly fails to consider the relevance of space. The spatial dimension of a socially creative strategy is constituted in physical and symbolic boundaries, in the built environment, in situated objects and relationships. Space can significantly contribute to stigma and exclusion, notably in segregated places. In fact, space performs: it has social effects on people’s opportunities and on their self-esteem . Nonetheless the space is itself a social product; it is the object of strategies. Most social innovators invest in space, trying to shape it, to modify it, to make it more inclusive. They aim to use it as a lever for social innovation. Some such innovations use art as a tool to produce change in the spatial configuration for deprived groups. In this chapter we observe a case of a socially creative strategy in which a par- ticularly difficult housing problem was solved thanks to a holistic approach to the production of space. More specifically, we observed how a network of NGOs was able to manage a situation of housing exclusion for some highly stigmatized roma families. Yet the true character of this social innovation lay precisely at the level of the production of space. The main problem that the network sought to address was the issue of segregation that housing for roma usually reproduces. Welfare provisions for roma in Italy are traditionally part of the problem they are supposed to solve: they maintain segregation and fail to support roma inclusion in broader urban life. This network therefore decided to design a project and implement it in a very collab- orative way. They did not provide a specialized shelter for evicted roma people, or for roma housing emergencies; rather, they invented a participative path within the Turin metropolitan area to produce a space that could also, but not exclusively, welcome Roma families, without labelling them and without separating them from the wider local community.</mods:abstract>
+  <mods:subject lang="fr">
+    <mods:topic>Roma</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Urban Sociology</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Social Innovation</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Space</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Housing</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Art</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Urban Governance</mods:topic>
+  </mods:subject>
+  <mods:subject lang="fr">
+    <mods:topic>Urban Conflicts</mods:topic>
+  </mods:subject>
+  <mods:relatedItem type="host">
+    <mods:titleInfo>
+      <mods:title>The International Handbook on Social Innovation: Collective Action, Social Learning and Transdisciplinary Research</mods:title>
+    </mods:titleInfo>
+    <mods:name ID="_-_spire_-_2441__eo6779thqgm5r489makgmgk26_-__-__-_eo6779thqgm5r489makgoai8g" type="personal">
+      <mods:namePart type="family">Maccallum</mods:namePart>
+      <mods:namePart type="given">Diana</mods:namePart>
+      <mods:role>
+        <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:name ID="_-_spire_-_2441__eo6779thqgm5r489makgn240p_-__-__-_eo6779thqgm5r489makgoai8i" type="personal">
+      <mods:namePart type="family">Mehmood</mods:namePart>
+      <mods:namePart type="given">Abid</mods:namePart>
+      <mods:role>
+        <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:name ID="_-_spire_-_2441__3cr7jj61bs68cvg99a9b1e21k_-__-_2441__d7a7evb2ctdg4i89gesb1epb9_-_eo6779thqgm5r489makgmakho" type="personal">
+      <mods:namePart type="given">Frank</mods:namePart>
+      <mods:namePart type="family">Moulaert</mods:namePart>
+      <mods:affiliation>APL/GURU</mods:affiliation>
+      <mods:role>
+        <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:name ID="_-_spire_-_2441__eo6779thqgm5r489makgnal26_-__-__-_eo6779thqgm5r489makgoai8k" type="personal">
+      <mods:namePart type="family">Hamdouch</mods:namePart>
+      <mods:namePart type="given">Abdel</mods:namePart>
+      <mods:role>
+        <mods:roleTerm authority="marcrelator" type="code">pbd</mods:roleTerm>
+      </mods:role>
+    </mods:name>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre>info:eu-repo/semantics/book</mods:genre>
+    <mods:genre>http://purl.org/eprint/type/Book</mods:genre>
+    <mods:genre authority="marcgt">book</mods:genre>
+    <mods:originInfo>
+      <mods:place>
+        <mods:placeTerm type="text">Cheltenham</mods:placeTerm>
+      </mods:place>
+      <mods:publisher>Edward Elgar Publishing Ltd</mods:publisher>
+      <mods:dateIssued encoding="iso8601">2013-05</mods:dateIssued>
+    </mods:originInfo>
+    <mods:identifier type="isbn">9781849809986</mods:identifier>
+    <mods:part>
+      <mods:extent unit="page">
+        <mods:start>186</mods:start>
+        <mods:end>196</mods:end>
+      </mods:extent>
+    </mods:part>
+    <mods:extension>
+      <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd"/>
+    </mods:extension>
+  </mods:relatedItem>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__5k7940uimfdf9c8990p8ph108_-_2441__5k7940uimfdf9c8990p8ph108_-_2441__9labe9r4se65i789685q384oh_-_eo6779thqgm5r489makgk2p48" authority="http://spire.sciences-po.fr/hdl:">2441/5k7940uimfdf9c8990p8ph108</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

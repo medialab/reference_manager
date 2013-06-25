@@ -1,0 +1,15 @@
+pymongo
+zope.interface
+Twisted
+txJSON-RPC
+nose
+coverage
+httplib2
+pybtex
+beautifulsoup4
+phpserialize
+pyoai
+google-api-python-client
+gdata
+gspreadsheet
+python-ldap

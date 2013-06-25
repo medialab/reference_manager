@@ -1,0 +1,141 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "Is part of", 
+                "fr": "Fait partie de"
+            }, 
+            "type_id": "isPartOf"
+        }, 
+        {
+            "labels": {
+                "en": "Original", 
+                "fr": "Original"
+            }, 
+            "type_id": "original"
+        }, 
+        {
+            "labels": {
+                "en": "Review of", 
+                "fr": "Critique"
+            }, 
+            "type_id": "reviewOf"
+        }, 
+        {
+            "labels": {
+                "en": "Series", 
+                "fr": "Collection"
+            }, 
+            "type_id": "series"
+        }, 
+        {
+            "labels": {
+                "en": "Archive", 
+                "fr": "Archive"
+            }, 
+            "type_id": "archive"
+        }, 
+        {
+            "labels": {
+                "en": "Conforms to", 
+                "fr": "Conforme à"
+            }, 
+            "type_id": "conformsTo"
+        }, 
+        {
+            "labels": {
+                "en": "Has part", 
+                "fr": "A pour partie"
+            }, 
+            "type_id": "hasPart"
+        }, 
+        {
+            "labels": {
+                "en": "Is Referenced by", 
+                "fr": "Est référencé par"
+            }, 
+            "type_id": "isReferencedBy"
+        }, 
+        {
+            "labels": {
+                "en": "Is replaced by", 
+                "fr": "Est remplacé par"
+            }, 
+            "type_id": "isReplacedBy"
+        }, 
+        {
+            "labels": {
+                "en": "Is required by", 
+                "fr": "Est requis par"
+            }, 
+            "type_id": "isRequiredBy"
+        }, 
+        {
+            "labels": {
+                "en": "Other format", 
+                "fr": "Autre format"
+            }, 
+            "type_id": "otherFormat"
+        }, 
+        {
+            "labels": {
+                "en": "Other format", 
+                "fr": "Autre format"
+            }, 
+            "type_id": "otherFormat"
+        }, 
+        {
+            "labels": {
+                "en": "Other version", 
+                "fr": "Autre version"
+            }, 
+            "type_id": "otherVersion"
+        }, 
+        {
+            "labels": {
+                "en": "Other version", 
+                "fr": "Autre version"
+            }, 
+            "type_id": "otherVersion"
+        }, 
+        {
+            "labels": {
+                "en": "Preceding", 
+                "fr": "Est précédé par"
+            }, 
+            "type_id": "preceding"
+        }, 
+        {
+            "labels": {
+                "en": "References", 
+                "fr": "Références"
+            }, 
+            "type_id": "references"
+        }, 
+        {
+            "labels": {
+                "en": "Replaces", 
+                "fr": "Remplace"
+            }, 
+            "type_id": "replaces"
+        }, 
+        {
+            "labels": {
+                "en": "Requires", 
+                "fr": "Nécessite"
+            }, 
+            "type_id": "requires"
+        }, 
+        {
+            "labels": {
+                "en": "Succeeding", 
+                "fr": "Est succédé par"
+            }, 
+            "type_id": "succeeding"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "related_item_type"
+}

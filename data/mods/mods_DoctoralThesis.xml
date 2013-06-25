@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:title>Peace Laboratories in Colombia: the European Approach to Peace-building</mods:title>
+  </mods:titleInfo>
+  <mods:titleInfo type="translated">
+    <mods:title>Les Laboratoires de paix en Colombie: L'approche européenne de la construction de la paix</mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__3fm4jv3k2s99lms9jb5i1ag8p_-_2441__3fm4jv3k2s99lms9jb5i1ag8p_-__-_53r60a8s3kup1vc9k708jgmb2" type="personal">
+    <mods:namePart type="given">Dorly</mods:namePart>
+    <mods:namePart type="family">Castañeda Lefèvre</mods:namePart>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i789685q568qo_-_2441__9labe9r4se65i789685q568qo_-_2441__9labe9r4se65i789685q380gh_-_53r60a8s3kup1vc9l0d32etik" type="personal">
+    <mods:namePart type="given">Guillaume</mods:namePart>
+    <mods:namePart type="family">Devin</mods:namePart>
+    <mods:affiliation>Centre d'études et de recherches internationales</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">ths</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/doctoralThesis</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/Thesis</mods:genre>
+  <mods:genre authority="marcgt">thesis</mods:genre>
+  <mods:originInfo>
+    <mods:place>
+      <mods:placeTerm type="text">Paris</mods:placeTerm>
+    </mods:place>
+    <mods:publisher>Institut d'Etudes Politiques de Paris</mods:publisher>
+    <mods:dateIssued encoding="iso8601">2012-02</mods:dateIssued>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+  </mods:language>
+  <mods:physicalDescription>
+    <mods:extent>428</mods:extent>
+  </mods:physicalDescription>
+  <mods:abstract lang="en">This dissertation is about the way an international actor, the EU, has supported local peace initiatives in the midst of war, the dilemmas it faces, and the achievements and limits of its approach to building peace. The central question is, is the EU proposing an original approach to peace-building in Colombia, or are the Peace Laboratories just another development program in a conflict-affected country? I argue that the EU is willing and able to propose an original approach to peace-building. The Peace Laboratories show how the EU followed a learning process leading to the definition of a peace-building program for Colombia, based on civil society organizations, and whose scope was determined by the openness to peace of the Colombian government. Thus, this study may contribute to the general reflection on the EU’s international action, as well as on the civil society organizations’ and recipient states’ roles in building peace in armed conflict situations. I propose a definition of peace-building like the intersection of three dimensions, security, development and democracy. Based on this I analyze both sides of the cooperation programs. Part I studies the EU as an international actor, part II analyses the main Colombian recipients of European official development aid (Colombian government and civil society organizations in conflict regions), and part III seizes the learning process of the EU and the scope of the Peace Laboratories as an approach to peace-building.</mods:abstract>
+  <mods:abstract lang="fr">La thèse analyse  comment un acteur international, l’Union Européenne (UE), soutient des initiatives de paix au milieu de la guerre en Colombie, les dilemmes auxquels il est confronté,  les limites et succès de son approche à la construction de la paix. Elle pose la question:  l’UE propose-t-elle une approche originale de la construction de la paix en Colombie au travers de ses programmes de coopération  appelés « Laboratoires de Paix », ou bien s’agit-il d’un programme de développement classique dans un pays en conflit ? La thèse affirme que l’UE s’est montrée soucieuse et capable de  développer son propre approche de la construction de la paix. Les Laboratoires de Paix reflètent un processus d’apprentissage de l’UE dans ses interactions avec l’Etat Central Colombien et les organisations de la société civile dans les zones en conflit armé (OSC). L’approche se base sur l’action des OSC et developpe des moyens de les rapprocher de l’Etat colombien. La thèse s’appuie sur une définition du « peace-building » comme l’intersection de trois dimensions - la sécurité, le développement et la démocratie -  pour l’analyse du donateur et des récepteurs de l’aide. La partie I étudie l’UE comme un acteur international en construction. La partie II  analyse les perspectives de paix des acteurs colombiens, tandis que la  partie III  étudie le processus d’apprentissage de l’UE et l’étendue des Laboratoires de paix en tant qu’approche à la construction de la paix.
+Cette recherche  contribue à deux débats d’intérêt pour les relations internationales : 1) l’UE acteur international et, 2) le rôle des OSC et des Etats  dans les programmes de construction de la paix en contexte de conflit armé.    </mods:abstract>
+  <mods:subject lang="fr">
+    <mods:topic>Peace-building, Construction de la paix, Organizations de la societé civile, Colombie, Union Européenne, poltique étrangère, Union Européenne acteur international, Aide Publique au Développpement, Etat en Amérique Latine, Pays en conflit</mods:topic>
+  </mods:subject>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__9labe9r4se65i789685q568qo_-_2441__9labe9r4se65i789685q568qo_-_2441__9labe9r4se65i789685q021gm_-_3fm4jv3k2s99lms9jb5i40d12" authority="http://spire.sciences-po.fr/hdl:">2441/9labe9r4se65i789685q568qo</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>

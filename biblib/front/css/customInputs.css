@@ -1,0 +1,40 @@
+/* Basic custom inputs stuff */
+.customInput .container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.customInput > div > ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.customInput li > button {
+  visibility: hidden;
+}
+
+.customInput li:hover > button {
+  visibility: visible;
+}
+
+/* CreatorField style */
+.CreatorField .creators-list li:first-child .moveup-creator,
+.CreatorField .creators-list li:last-child .movedown-creator {
+  display: none;
+}
+
+.CreatorField .creators-container .select-role {
+  max-width: 120px;
+}
+
+/* LanguageValueField style */
+.LanguageValueField .languages-list li textarea {
+  display: block;
+}
+
+/* DocumentField style */
+.DocumentField > .documents-container > ul > li .custom-container {
+  left: -150px;
+  position: relative;
+}

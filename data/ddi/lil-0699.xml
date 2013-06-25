@@ -1,0 +1,426 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href='codebook_lasmas1.xsl' type='text/xsl'?>
+<?cocoon-process type='xslt'?>
+<!DOCTYPE codeBook
+  SYSTEM 'http://www.icpsr.umich.edu/DDI/Version2-0.dtd'>
+<codeBook version="">
+  <docDscr>
+    <citation MARCURI="">
+      <titlStmt>
+        <titl>RSA 2011</titl>
+        <subTitl/>
+        <altTitl/>
+        <parTitl/>
+        <IDNo agency="" level="">lil-0699</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="">JLE</AuthEnty>
+        <othId affiliation="" role="" type=""/>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="" affiliation="" role=""/>
+        <copyright/>
+        <prodDate date="">2012-04-25</prodDate>
+        <prodPlac/>
+        <software date="" version=""/>
+        <fundAg abbr="" role=""/>
+        <grantNo agency="" role=""/>
+      </prodStmt>
+      <distStmt>
+        <distrbtr URI="" abbr="" affiliation=""/>
+        <contact URI="" affiliation="" email=""/>
+        <depositr abbr="" affiliation=""/>
+        <depDate date=""/>
+        <distDate date=""/>
+      </distStmt>
+      <serStmt URI="">
+        <serName abbr=""/>
+        <serInfo/>
+      </serStmt>
+      <verStmt>
+        <version date="" type=""/>
+        <verResp affiliation=""/>
+        <notes level="" resp="" sdatrefs="" subject="" type=""/>
+      </verStmt>
+      <biblCit format=""/>
+      <holdings URI="http://www.cmh.ens.fr/greco/enquetes/XML/lil-0699.xml" callno="" location="" media=""/>
+      <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    </citation>
+    <guide/>
+    <docStatus/>
+    <docSrc MARCURI="">
+      <titlStmt>
+        <titl/>
+        <subTitl/>
+        <altTitl/>
+        <parTitl/>
+        <IDNo agency="" level=""/>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation=""/>
+        <othId affiliation="" role="" type=""/>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="" affiliation="" role=""/>
+        <copyright/>
+        <prodDate date=""/>
+        <prodPlac/>
+        <software date="" version=""/>
+        <fundAg abbr="" role=""/>
+        <grantNo agency="" role=""/>
+      </prodStmt>
+      <distStmt>
+        <distrbtr URI="" abbr="" affiliation=""/>
+        <contact URI="" affiliation="" email=""/>
+        <depositr abbr="" affiliation=""/>
+        <depDate date=""/>
+        <distDate date=""/>
+      </distStmt>
+      <serStmt>
+        <serName abbr=""/>
+        <serInfo/>
+      </serStmt>
+      <verStmt>
+        <version date="" type=""/>
+        <verResp affiliation=""/>
+        <notes level="" resp="" sdatrefs="" subject="" type=""/>
+      </verStmt>
+      <biblCit format=""/>
+      <holdings URI="" callno="" location="" media=""/>
+      <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    </docSrc>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+  </docDscr>
+  <stdyDscr access="">
+    <citation MARCURI="">
+      <titlStmt>
+        <titl>Enquête quantitative sur le revenu de solidarité active (RSA) - France métropolitaine - 2011 </titl>
+        <subTitl/>
+        <altTitl/>
+        <parTitl/>
+        <IDNo agency="" level="">lil-0699</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="">Ministère du travail, des relations sociales et de la solidarité, DARES</AuthEnty>
+        <othId affiliation="" role="" type=""/>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="" affiliation="" role="">Ministère du travail, des relations sociales et de la solidarité, DARES</producer>
+        <copyright/>
+        <prodDate date="">2011</prodDate>
+        <prodPlac/>
+        <software date="" version=""/>
+        <fundAg abbr="" role=""/>
+        <grantNo agency="" role=""/>
+      </prodStmt>
+      <distStmt>
+        <distrbtr URI="" abbr="CMH" affiliation=""/>
+        <contact URI="" affiliation="" email=""/>
+        <depositr abbr="" affiliation=""/>
+        <depDate date=""/>
+        <distDate date=""/>
+      </distStmt>
+      <serStmt URI="">
+        <serName abbr=""/>
+        <serInfo/>
+      </serStmt>
+      <verStmt>
+        <version date="" type=""/>
+        <verResp affiliation=""/>
+        <notes level="" resp="" sdatrefs="" subject="" type=""/>
+      </verStmt>
+      <biblCit format="">Enquête sur le RSA 2011, DARES [producteur], Centre Maurice Halbwachs (CMH) [diffuseur]</biblCit>
+      <holdings URI="" callno="" location="" media=""/>
+      <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    </citation>
+    <stdyInfo>
+      <subject>
+        <keyword vocab="" vocabURI="">RSA, Prestation sociale, Allocation subsidiaire, Aide à l'emploi, Politique d'insertion, Pauvreté, Opinion</keyword>
+        <topcClas vocab="" vocabURI="">Santé, protection sociale | Salaire, revenu</topcClas>
+      </subject>
+      <abstract date="">L'enquête quantitative sur le RSA, réalisée par la DARES est l'une des composantes du dispositif d'observation mis en place, pour suivre et évaluer la mise en oeuvre et l'impact du Revenu de Solidarité active, notamment ses effets sur le marché du travail, en comparant la situation de foyers dont l'offre de travail est susceptible d'être modifiée par l'instauration du RSA à celle de foyers dont l'offre de travail ne devrait pas être impactée car disposant de revenus trop élevés pour bénéficier du RSA.
+L'enquête permet de décrire la situation des bénéficiaires, notamment en termes d'accompagnement, leur connaissance et leur opinion sur le dispositif ainsi que de quantifier le phénomène de non-recours (personnes éligibles qui ne perçoivent pas le RSA).
+L'enquête aborde les thèmes suivants : situation professionnelle et revenus au moment de l'enquête (fin 2010) ; situation professionnelle et revenus en mai 2009 (avant la mise en place du RSA) ; trajectoires professionnelles entre janvier 2010 et fin 2010 ; non-recours au RSA et raisons ; accompagnement par Pôle Emploi, les CAF et MSA ; les autres aides perçues ; la connaissance du dispositif, des incitations financières et son impact perçu ; l'opinion sur le RSA ; les conditions de vie et la pauvreté ressentie des foyers enquêtés.
+Les résultats de cette enquête ont alimenté le rapport final du Comité d'évaluation du RSA remis au Parlement fin 2011.
+L'enquête s'est déroulée en 2 phases : une première phase d'interrogation par téléphone auprès de 15 006 foyers fin 2010 et une seconde phase en face à face auprès de 3 340 personnes début 2011.</abstract>
+      <sumDscr>
+        <timePrd cycle="" date="" event="">De janvier 2009 à fin 2010</timePrd>
+        <collDate cycle="" date="" event="">Du 17 novembre au 23 décembre 2010 pour la première phase d'interrogation par téléphone et du 2 février au 2 avril 2011 pour les entretiens en face à face.</collDate>
+        <nation abbr=""/>
+        <geogCover geoRef="" geoVocab="" geotype="">France métropolitaine</geogCover>
+        <geogUnit/>
+        <geoBndBox>
+          <westBl/>
+          <eastBl/>
+          <southBl/>
+          <northBl/>
+        </geoBndBox>
+        <boundPoly>
+          <polygon>
+            <point>
+              <gringLat/>
+              <gringLon/>
+            </point>
+          </polygon>
+        </boundPoly>
+        <anlyUnit unit="">Foyer fiscaux</anlyUnit>
+        <universe clusion="" level="">Ensemble des foyers éligibles au RSA et des foyers ayant des revenus légèrement supérieurs au point de sortie du RSA en juin 2009.</universe>
+        <dataKind>Données individuelles</dataKind>
+      </sumDscr>
+      <notes level="" resp="" sdatrefs="" subject="" type="">L'enquête ne couvre pas les personnes de moins de 25 ans, ayant travaillé au moins 2 années, éligibles au RSA depuis septembre 2010 et les foyers non assujettis à la taxe d'habitation (sans domicile fixe par ex.)
+L'extension du champ d'observation au delà des seuls bénéficiaires du RSA permet d'identifier les personnes dont le revenus les rendent éligibles au RSA mais qui ne le demandent pas ainsi que les raisons de ce non recours. </notes>
+    </stdyInfo>
+    <method>
+      <dataColl>
+        <timeMeth method=""/>
+        <dataCollector abbr="" affiliation="">Institut GfK-ISL</dataCollector>
+        <frequenc freq=""/>
+        <sampProc>Pour la 1ère phase de l'enquête, tirage aléatoire d'un échantillon d'environ 52 000 foyers fiscaux enregistrés dans les fichiers de déclaration fiscale des revenus et de la taxe d'habitation de 2008 collectés par la Direction Générale des Finances Publiques (DGFiP)  au sein de 250 communes rurales ou urbaines, elles mêmes tirées au sein de 50 départements de façon à être représentatif des foyers d'intérêts.
+Pour la 2ème phase, tirage d'un échantillon de 4 500 foyers parmi les répondants de la 1ère phase.</sampProc>
+        <deviat/>
+        <collMode>Entretien par téléphone et Entretien en face à face</collMode>
+        <resInstru type="">Questionnaire directif</resInstru>
+        <sources>
+          <dataSrc/>
+          <srcOrig/>
+          <srcChar/>
+          <srcDocu/>
+          <sources/>
+        </sources>
+        <collSitu>La durée moyenne de l'entretien pour la 1ère phase téléphonique est de 17 minutes. Pour la 2ème phase en face à face, la durée de l'entretien est de 40 minutes.
+La collecte a été confiée à un institut de sondage privé.</collSitu>
+        <actMin/>
+        <ConOps agency=""/>
+        <weight/>
+        <cleanOps agency=""/>
+      </dataColl>
+      <notes level="" resp="" sdatrefs="" subject="" type=""/>
+      <anlyInfo>
+        <respRate/>
+        <EstSmpErr/>
+        <dataAppr/>
+      </anlyInfo>
+      <stdyClas type="STD"/>
+    </method>
+    <dataAccs>
+      <setAvail callno="" label="" media="" type="">
+        <accsPlac URI=""/>
+        <origArch/>
+        <avlStatus>Les données sont disponibles en format SAS, SPSS, STATA</avlStatus>
+        <collSize/>
+        <complete/>
+        <fileQnty>2 fichiers de données</fileQnty>
+        <notes level="" resp="" sdatrefs="" subject="" type=""/>
+      </setAvail>
+      <useStmt>
+        <confDec URI="" formNo="" required="">Pour obtenir les données, un engagement de confidentialité doit être signé</confDec>
+        <specPerm URI="" formNo="" required=""/>
+        <restrctn>Les données ne peuvent être utilisées qu'à des fins de recherche. Toute utilisation commerciale est strictement interdite.</restrctn>
+        <contact URI="" affiliation="" email="diffusion.adisp@ens.fr">Equipe de diffusion</contact>
+        <citReq>La source des données doit apparaître dans les publications issues de l'utilisation des données (notes de bas de page, référence bibliographiques, légendes de tableaux)</citReq>
+        <deposReq>Afin de fournir aux organismes producteurs l'information essentielle concernant l'utilisation des ressources archivées, les utilisateurs des données sont tenus d'envoyer au CMH/ADISP, si possible sous forme électronique, la référence bibliographique, un résumé ou un tiré à part de leur(s) publication(s) en indiquant dans une lettre d'accompagnement quelles enquêtes ont été utilisées. </deposReq>
+        <conditions/>
+        <disclaimer>Le producteur des données n'est pas responsable des interprétations ou déductions faites à partir de l'utilisation des données</disclaimer>
+      </useStmt>
+      <notes level="" resp="" sdatrefs="" subject="" type="">http://www.reseau-quetelet.cnrs.fr/quetelet/</notes>
+    </dataAccs>
+    <othrStdyMat>
+      <relMat callno="" label="" media="" type="">
+        <citation MARCURI=""/>
+      </relMat>
+      <relStdy>
+        <citation MARCURI=""/>
+      </relStdy>
+      <relPubl>
+        <citation MARCURI=""/>
+      </relPubl>
+      <othRefs>
+        <citation MARCURI=""/>
+      </othRefs>
+    </othrStdyMat>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+  </stdyDscr>
+  <fileDscr URI="" access="" methrefs="" pubrefs="" sdatrefs="">
+    <fileTxt>
+      <fileName/>
+      <fileCont/>
+      <dimensns>
+        <caseQnty/>
+        <varQnty/>
+        <logRecL/>
+        <recPrCas/>
+        <recNumTot/>
+      </dimensns>
+      <fileType charset=""/>
+      <format/>
+      <filePlac/>
+      <dataChck/>
+      <ProcStat/>
+      <dataMsng/>
+      <software date="" version=""/>
+      <verStmt>
+        <version date="" type=""/>
+        <verResp affiliation=""/>
+        <notes level="" resp="" sdatrefs="" subject="" type=""/>
+      </verStmt>
+    </fileTxt>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+  </fileDscr>
+  <fileDscr URI="" access="" methrefs="" pubrefs="" sdatrefs="">
+    <fileTxt>
+      <fileName/>
+      <fileCont/>
+      <dimensns>
+        <caseQnty/>
+        <varQnty/>
+        <logRecL/>
+        <recPrCas/>
+        <recNumTot/>
+      </dimensns>
+      <fileType charset=""/>
+      <format/>
+      <filePlac/>
+      <dataChck/>
+      <ProcStat/>
+      <dataMsng/>
+      <software date="" version=""/>
+      <verStmt>
+        <version date="" type=""/>
+        <verResp affiliation=""/>
+        <notes level="" resp="" sdatrefs="" subject="" type=""/>
+      </verStmt>
+    </fileTxt>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+  </fileDscr>
+  <fileDscr URI="" access="" methrefs="" pubrefs="" sdatrefs="">
+    <fileTxt>
+      <fileName/>
+      <fileCont/>
+      <dimensns>
+        <caseQnty/>
+        <varQnty/>
+        <logRecL/>
+        <recPrCas/>
+        <recNumTot/>
+      </dimensns>
+      <fileType charset=""/>
+      <format/>
+      <filePlac/>
+      <dataChck/>
+      <ProcStat/>
+      <dataMsng/>
+      <software date="" version=""/>
+      <verStmt>
+        <version date="" type=""/>
+        <verResp affiliation=""/>
+        <notes level="" resp="" sdatrefs="" subject="" type=""/>
+      </verStmt>
+    </fileTxt>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+  </fileDscr>
+  <otherMat URI="../../questionnaires/RSA/lil-0699q_tel.pdf" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor="">lil-0699q_tel</labl>
+    <txt level="" sdatrefs="">Questionnaire de la phase téléphonique (intégrant les instructions aux enquêteurs)</txt>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="../../questionnaires/RSA/lil-0699q_faf.pdf" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor="">lil-0699q_faf</labl>
+    <txt level="" sdatrefs="">Questionnaire de la phase en face à face (intégrant les instructions aux enquêteurs)</txt>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="../../documents/RSA/lil-0699dvar_tel.pdf" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor="">lil-0699dvar_tel</labl>
+    <txt level="" sdatrefs="">Dictionnaire des variables de la phase téléphonique (entretien + varialbes créées)</txt>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="../../documents/RSA/lil-0699dvar_faf.pdf" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor="">lil-0699dvar_faf</labl>
+    <txt level="" sdatrefs="">Dictionnaire des variables de la phase en face à face</txt>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor=""/>
+    <txt level="" sdatrefs=""/>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor=""/>
+    <txt level="" sdatrefs=""/>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor=""/>
+    <txt level="" sdatrefs=""/>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor=""/>
+    <txt level="" sdatrefs=""/>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor=""/>
+    <txt level="" sdatrefs=""/>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor=""/>
+    <txt level="" sdatrefs=""/>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor=""/>
+    <txt level="" sdatrefs=""/>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor=""/>
+    <txt level="" sdatrefs=""/>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor=""/>
+    <txt level="" sdatrefs=""/>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor=""/>
+    <txt level="" sdatrefs=""/>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+  <otherMat URI="" level="" type="">
+    <labl country="" level="" sdatrefs="" vendor=""/>
+    <txt level="" sdatrefs=""/>
+    <notes level="" resp="" sdatrefs="" subject="" type=""/>
+    <table/>
+    <citation MARCURI=""/>
+  </otherMat>
+</codeBook>

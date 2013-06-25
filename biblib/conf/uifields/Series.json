@@ -1,0 +1,25 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Series",
+                "fr": "Collection"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Collection item number",
+                "fr": "Num\u00e9ro dans la collection"
+            },
+            "property": "part_number",
+            "required": false,
+            "type_ui": "CharField"
+        }
+    ],
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "Series"
+}

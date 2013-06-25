@@ -1,5 +1,0 @@
-pymongo
-Twisted
-txJSON-RPC
-nose
-httplib2

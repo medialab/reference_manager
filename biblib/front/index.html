@@ -1,0 +1,189 @@
+<html>
+<head>
+  <title>BibLib Front | Test 1</title>
+  <meta charset="UTF-8" />
+
+  <!-- BibLib style -->
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 12px;
+    }
+
+    label {
+      width: 200px;
+      display: inline-block;
+      margin: 5px 0;
+    }
+
+    fieldset {
+      border: none;
+      padding: 1px;
+      white-space: nowrap;
+    }
+
+    input {
+      margin: 2px;
+      margin-right: 5px;
+    }
+
+    input[type="checkbox"] {
+      width: auto;
+    }
+
+    select {
+      margin: 2px;
+      margin-right: 5px;
+    }
+
+    textarea {
+      width: 180px;
+      height: 120px;
+      resize: vertical;
+      margin: 2px;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 5px;
+    }
+
+    ul ul {
+      padding-left: 40px;
+    }
+
+    .container {
+      width: 550px;
+      margin: auto;
+    }
+
+    /* Results list display */
+    ul.entries-list > li {
+      position: relative;
+      height: 28px;
+      line-height: 28px;
+      white-space: nowrap;
+    }
+
+    ul.entries-list > li .buttons-container {
+      position: absolute;
+      padding-right: 15px;
+      right: 100%;
+      width: 100px;
+    }
+
+    ul.entries-list > li .buttons-container > button {
+      float: right;
+      visibility: hidden;
+    }
+
+    ul.entries-list > li:hover .buttons-container > button {
+      visibility: visible;
+    }
+
+    ul.entries-list > li .entry-title {
+      display: inline-block;
+      max-width: 600px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    /* 6 column grid - 340px width */
+    .col-1 {
+      width: 55px;
+    }
+
+    .col-2 {
+      width: 110px;
+    }
+
+    .col-3 {
+      width: 161px;
+    }
+
+    .col-4 {
+      width: 225px;
+    }
+
+    .col-6 {
+      width: 340px;
+    }
+
+    /* Some useful classes */
+    .message {
+      color: #c00;
+    }
+  </style>
+  <link rel="stylesheet" href="css/customInputs.css">
+</head>
+<body>
+  <div id="layout">
+    <div id="nav" class="container">
+      <button data-action="fields">Add entry</button>
+      <button data-action="search">Search entry</button>
+    </div>
+    <hr />
+    <div id="panels" class="container">
+      <div data-panel="create" hidden>
+        <div class="create-form">
+          <!-- The form has to be filled with components depending of the
+               field. This will be done in JavaScript, from external data. -->
+        </div>
+      </div>
+      <div data-panel="fields" hidden>
+        <div class="select-field">
+          <!-- Here will be represented the tree of the different fields. It
+               will also be done in JavaScript, from external data. -->
+        </div>
+      </div>
+      <div data-panel="search" hidden>
+        <div class="search-form">
+          <button class="validate">Search</button>
+          <input type="search" class="normal-search col-4" placeholder="Type something to search...">
+          <input type="checkbox" class="advanced-search" name="use-advanced-search" />
+          <label for="use-advanced-search">Use advanced search options</label>
+          <div class="advanced-search-panel" hidden>
+            <hr>
+            <fieldset>
+              <label for="rec_type-search">Records type :</label>
+              <input type="text" class="col-6" name="rec_type-search" />
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div data-panel="list" hidden>
+        <ul class="entries-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- External JS dependencies -->
+  <script src="js/ext/jquery.min.js"></script>
+  <script src="js/ext/domino.min.js"></script>
+  <script src="js/ext/handlebars.min.js"></script>
+
+  <!-- MédiaLab utils -->
+  <script src="js/ext/mlab.utils.js"></script>
+
+  <!-- BibLib front -->
+  <script src="js/blf.layout.js"></script>
+  <script src="js/blf.control.js"></script>
+
+  <script src="js/modules/listPanel.js"></script>
+  <script src="js/modules/createPanel.js"></script>
+  <script src="js/modules/fieldsPanel.js"></script>
+  <script src="js/modules/searchPanel.js"></script>
+
+  <script src="js/modules/customInputs/TypeField.js"></script>
+  <script src="js/modules/customInputs/CreatorField.js"></script>
+  <script src="js/modules/customInputs/DocumentField.js"></script>
+  <script src="js/modules/customInputs/IdentifierField.js"></script>
+  <script src="js/modules/customInputs/LanguageValueField.js"></script>
+</body>
+</html>

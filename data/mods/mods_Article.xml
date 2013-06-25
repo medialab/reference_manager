@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+  <mods:titleInfo>
+    <mods:title>Varieties and the transfer problem </mods:title>
+  </mods:titleInfo>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i789685q5apa2_-_2441__9labe9r4se65i789685q5apa2_-_2441__9labe9r4se65i789685q385c7_-_f4rshpf3v1umfa09lb0jngq9g" type="personal">
+    <mods:namePart type="given">Philippe</mods:namePart>
+    <mods:namePart type="family">Martin</mods:namePart>
+    <mods:affiliation>Département d'économie</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i7896860lchjn_-__-_2441__d7a7evb2ctdg4i89ges9micbn_-_f4rshpf3v1umfa09lb0jnikao" type="personal">
+    <mods:namePart type="given">Giancarlo</mods:namePart>
+    <mods:namePart type="family">Corsetti</mods:namePart>
+    <mods:affiliation>University of Rome</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:name ID="_-_spire_-_2441__9labe9r4se65i7896860lci21_-__-_2441__d7a7evb2ctdg4i89ges9mikg3_-_f4rshpf3v1umfa09lb0jo0ab4" type="personal">
+    <mods:namePart type="given">Paolo</mods:namePart>
+    <mods:namePart type="family">Pesenti</mods:namePart>
+    <mods:affiliation>International Research</mods:affiliation>
+    <mods:role>
+      <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+  <mods:typeOfResource>text</mods:typeOfResource>
+  <mods:genre>info:eu-repo/semantics/article</mods:genre>
+  <mods:genre>http://purl.org/eprint/type/JournalArticle</mods:genre>
+  <mods:genre authority="marcgt">article</mods:genre>
+  <mods:originInfo>
+    <mods:dateIssued encoding="iso8601">2013-01</mods:dateIssued>
+  </mods:originInfo>
+  <mods:language>
+    <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+    <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+  </mods:language>
+  <mods:abstract lang="en">We revisit the classic transfer problem, accounting for two channels of adjustment: increased trade in existing goods and services (the intensive margin) and net creation and destruction of product varieties (the extensive margin). Over the medium term, the latter reduces the scope for real exchange rate and terms of trade variability in response to cross-border flows. We embed our transfer analysis in popular models of current account adjustment, where initial imbalances are driven by domestic demand for — or foreign supply of — net saving, possibly associated with over-optimistic expectations. Simulation exercises based on 2006 data suggest that a transfer of the size of the pre-crisis U.S. current account deficit may require only moderate trend depreciation in real terms, and that the aggregate welfare impact of the transfer is disconnected from the size of the relative price correction.</mods:abstract>
+  <mods:subject lang="fr">
+    <mods:topic>Transfer problem; Current account imbalances; Extensive margin</mods:topic>
+  </mods:subject>
+  <mods:classification authority="info:eu-repo/authority/jel" lang="fr">F32</mods:classification>
+  <mods:classification authority="info:eu-repo/authority/jel" lang="fr">F41</mods:classification>
+  <mods:relatedItem type="host">
+    <mods:titleInfo>
+      <mods:title>Journal of International Economics</mods:title>
+    </mods:titleInfo>
+    <mods:typeOfResource>text</mods:typeOfResource>
+    <mods:genre authority="marcgt">journal</mods:genre>
+    <mods:originInfo>
+      <mods:issuance>continuing</mods:issuance>
+    </mods:originInfo>
+    <mods:language>
+      <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+      <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+    </mods:language>
+    <mods:classification authority="peer-review">yes</mods:classification>
+    <mods:identifier type="issn">00221996</mods:identifier>
+    <mods:part>
+      <mods:detail type="volume">
+        <mods:number>89</mods:number>
+      </mods:detail>
+      <mods:detail type="issue">
+        <mods:number>1</mods:number>
+      </mods:detail>
+      <mods:extent unit="page">
+        <mods:start>1</mods:start>
+        <mods:end>12</mods:end>
+      </mods:extent>
+    </mods:part>
+  </mods:relatedItem>
+  <mods:identifier type="doi">10.1016/j.jinteco.2012.05.011</mods:identifier>
+  <mods:extension>
+    <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+      <dai:identifier IDref="_-_spire_-_2441__9labe9r4se65i789685q5apa2_-_2441__9labe9r4se65i789685q5apa2_-_2441__9labe9r4se65i789685q385c7_-_f4rshpf3v1umfa09lb0jngq9g" authority="http://spire.sciences-po.fr/hdl:">2441/9labe9r4se65i789685q5apa2</dai:identifier>
+    </dai:daiList>
+  </mods:extension>
+</mods:mods>
