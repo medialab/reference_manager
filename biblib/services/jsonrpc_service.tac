@@ -4,6 +4,7 @@
 
 import datetime
 import json
+import locale
 
 from bson import json_util
 from txjsonrpc.web import jsonrpc
@@ -11,12 +12,14 @@ from txjsonrpc import jsonrpclib
 from twisted.web import server
 from twisted.application import service
 from twisted.application import internet
+from operator import itemgetter
 
 from biblib.citations import citations_manager
 from biblib.crosswalks import metajsonui_crosswalk
 from biblib.services import config_service
 from biblib.services import crosswalks_service
 from biblib.services import repository_service
+from biblib.util import console
 
 # usage with log in the console
 # twistd -noy jsonrpc_service.tac -l -
@@ -28,6 +31,8 @@ from biblib.services import repository_service
 # twistd -noy jsonrpc_service.tac -l server.log &
 
 port = config_service.config["jsonrpc"]["port"]
+
+console.setup_console()
 
 
 class References_repository(jsonrpc.JSONRPC):
@@ -64,6 +69,12 @@ class References_repository(jsonrpc.JSONRPC):
         #json_doc = json.loads(document)
         #print json.dumps(json_doc, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
         return self.format_bson(repository_service.save_document(None, document))
+
+    def jsonrpc_delete(self, rec_id):
+        """ delete a reference in the repository
+            return object id if ok or error
+        """
+        return self.format_bson(repository_service.delete_document(None, rec_id))
 
     def jsonrpc_metadata_by_rec_ids(self, rec_ids, format="metajson"):
         """ get metadata of a list of references
@@ -133,15 +144,24 @@ class References_repository(jsonrpc.JSONRPC):
         """
         return self.format_bson(repository_service.search_mongo(None, mongo_query))
 
-    def type_language_adaptation(self, type_dict, language):
+    def locale_keyfunc(self, keyfunc):
+        def locale_wrapper(obj):
+            return locale.strxfrm(keyfunc(obj))
+        return locale_wrapper
+
+    def type_adaptation(self, type_dict, language, sort):
+        # language simplification
         if type_dict and language:
-            self.key_language_adaptation(type_dict, "labels", "label", language)
-            self.key_language_adaptation(type_dict, "descriptions", "description", language)
+            self.key_language_simplification(type_dict, "labels", "label", language)
+            self.key_language_simplification(type_dict, "descriptions", "description", language)
             if "children" in type_dict:
                 for child in type_dict["children"]:
-                    self.type_language_adaptation(child, language)
+                    self.type_adaptation(child, language, sort)
+                if sort:
+                    #locale.setlocale(locale.LC_ALL, "fr_FR.UTF-8")
+                    type_dict["children"] = sorted(type_dict["children"], key=self.locale_keyfunc(itemgetter('label')))
 
-    def key_language_adaptation(self, type_dict, key_old, key_new, language):
+    def key_language_simplification(self, type_dict, key_old, key_new, language):
         if key_old and key_new:
             if key_old in type_dict:
                 result = ""
@@ -160,7 +180,7 @@ class References_repository(jsonrpc.JSONRPC):
             return the asked type (in JSON)
         """
         type_dict = repository_service.get_type(None, type_id)
-        self.type_language_adaptation(type_dict, language)
+        self.type_adaptation(type_dict, language, True)
         return self.format_bson(type_dict)
 
     def jsonrpc_uifields(self, rec_type, language):
@@ -172,7 +192,7 @@ class References_repository(jsonrpc.JSONRPC):
             return the asked uifields for user interface (in JSON)
         """
         uifield_dict = repository_service.get_uifield(None, rec_type)
-        self.type_language_adaptation(uifield_dict, language)
+        self.type_adaptation(uifield_dict, language, False)
         return self.format_bson(uifield_dict)
 
 

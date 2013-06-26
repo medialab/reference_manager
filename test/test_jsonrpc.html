@@ -119,6 +119,17 @@
                         }
                     });
                 });
+                $("input#delete_button").click(function() {
+                    $.jsonRPC.request("delete", {
+                        params : [$("input#delete_input").val()],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#delete_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
             });
         </script>
     </head>
@@ -324,6 +335,16 @@
         </p>
         <p>Results :</p>
         <pre id="save_result"></pre>
+
+        <h2>Method delete</h2>
+        <p><label for="delete_input">rec_id to delete</label> : 
+            <input type="text" name="delete_input" id="delete_input"/>
+        </p>
+        <p>
+            <input name="delete_button" id="delete_button" value="Delete document" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="delete_result"></pre>
 
     </body>
 </html>
