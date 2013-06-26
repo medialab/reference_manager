@@ -49,5 +49,11 @@
     "errors": {
       "at_least_one": "At least one entry has to be added."
     }
+  },
+  "DocumentField": {
+    "errors": {
+      "exactly_one": "Exactly one entry has to be added.",
+      "at_least_one": "At least one entry has to be added."
+    }
   }
 }

@@ -2,9 +2,33 @@
   'use strict';
   mlab.pkg('blf.modules.customInputs');
 
+  // Loading Handlebars templates:
+  var _templates = {
+        main: {
+          path: 'templates/DocumentField.handlebars'
+        },
+        line: {
+          path: 'templates/DocumentField.line.handlebars'
+        }
+      };
+
+  for (var k in _templates)
+    (function(obj) {
+      blf.utils.addTemplate(obj.path, function(data) {
+        obj.template = data;
+      });
+    })(_templates[k]);
+
   /**
    * This custom input can be used to add parents entries. It can of course
    * a bit of madness when recursive parenting are used...
+   *
+   * Warning
+   * *******
+   *
+   * Since this component includes other components (even eventually a similar
+   * one), jQuery selectors are kind of strict, and you have to be very careful
+   * if you modify them - or any related template.
    *
    * Data sample:
    * ************
@@ -23,19 +47,10 @@
   blf.modules.customInputs.DocumentField = function(obj, d) {
     domino.module.call(this);
 
-    var _dom = $(
-          '<fieldset class="customInput DocumentField">' +
-            '<div class="message"></div>' +
-            '<label>' +
-              (obj.label || obj.labels[blf.assets.lang]) + ' :' +
-            '</label>' +
-            '<div class="documents-container container">' +
-              '<ul class="documents-list"></ul>' +
-              '<button class="add-document">+</button>' +
-            '</div>' +
-          '</fieldset>'
-        ),
-        _ul = $('> div > ul', _dom),
+    var _dom = $(_templates.main.template({
+          label: obj.label || obj.labels[blf.assets.lang]
+        })),
+        _ul = $('ul', _dom).first(),
         _lineID = 1,
         _self = this,
         _linesHash = {},
@@ -61,25 +76,16 @@
     function addDocument(data) {
       data = data || {};
       var id = _lineID++,
-          li = $(
-            '<li data-id="' + id + '">' +
-              '<select class="col-3 select-field">' +
-                // Find the field through the global controler:
-                obj.type_fields.map(function(o) {
-                  return '<option value="' + o + '">' + o + '</option>';
-                }).join() +
-              '</select>' +
-              '<button class="remove-document">-</button>' +
-              '<div class="col-6 custom-container">' +
-              '</div>' +
-            '</li>'
-          );
+          li = $(_templates.line.template({
+            id: id,
+            type_fields: obj.type_fields
+          }));
 
       if (data.rec_type) {
-        $('> select.select-field', li).val(data.rec_type);
+        $('select.select-field', li).first().val(data.rec_type);
 
         _linesHash[id] = blf.modules.createPanel.generateForm(blf.control, _fields[data.rec_type]);
-        $('> .custom-container', li).empty().append(_linesHash[id].map(function(o) {
+        $('.custom-container', li).first().empty().append(_linesHash[id].map(function(o) {
           return o.dom;
         }));
 
@@ -98,14 +104,14 @@
       _ul.append(li);
 
       // Check count:
-      if (obj.only_one && $('> li', _ul).length >= 1)
+      if (obj.only_one && _ul.children('li').length >= 1)
         $('.add-document', _dom).attr('hidden', 'true');
       else
         $('.add-document', _dom).attr('hidden', null);
 
       // Trigger event if only one type available:
       if (!data.rec_type && obj.type_fields.length <= 1)
-        $('> select.select-field', li).change();
+        $('select.select-field', li).first().change();
     }
 
     // Bind events:
@@ -115,7 +121,7 @@
 
     _dom.click(function(e) {
       var target = $(e.target),
-          li = target.parents('ul.documents-list > li').first();
+          li = target.closest('li').first();
 
       // Check if it is a field button:
       if (li.length && target.is('button.remove-document')) {
@@ -125,26 +131,26 @@
 
         // Trigger event if only one type available:
         if (obj.type_fields.length <= 1)
-          $('> select.select-field', li).change();
+          $('select.select-field', li).first().change();
 
         // Check count:
-        if (obj.only_one && $('> div > ul > li', _dom).length >= 1)
+        if (obj.only_one && _ul.children('li').length >= 1)
           $('.add-document', _dom).attr('hidden', 'true');
         else
           $('.add-document', _dom).attr('hidden', null);
       }
     }).change(function(e) {
       var target = $(e.target),
-          li = target.parents('ul.documents-list > li').first();
+          li = target.closest('li');
 
       // Check which select it is:
-      if (li.length && target.is($('> div > ul > li > select.select-field', _dom))) {
+      if (li.length && target.is(_ul.children('li').children('select.select-field'))) {
         var id = li.data('id'),
             value = target.val(),
-            container = $('> .custom-container', li);
+            container = $('.custom-container', li).first();
 
         _linesHash[id] = blf.modules.createPanel.generateForm(blf.control, _fields[value]);
-          container.empty().append(_linesHash[id].map(function(o) {
+        container.empty().append(_linesHash[id].map(function(o) {
           return o.dom;
         }));
       }
@@ -160,10 +166,10 @@
       var k,
           invalid = 0;
 
-      $('.message', _dom).empty();
+      $('.message', _dom).first().empty();
 
       if (obj.required && (!data || !data.length)) {
-        $('.message', _dom).text('At least one document has to be specified.');
+        $('.message', _dom).first().text(i18n.t('customInputs:IdentifierField.errors.exactly_one'));
         return false;
       }
 
@@ -203,13 +209,13 @@
       var documents = [];
 
       // Parse line and form data:
-      $('> li', _ul).each(function() {
+      _ul.children('li').each(function() {
         var value,
             li = $(this),
             id = li.data('id');
 
         documents.push({
-          rec_type: $('> select.select-field', li).val(),
+          rec_type: $('select.select-field', li).first().val(),
           document: _linesHash[id].reduce(function(res, comp) {
             value = comp.getData ?
               comp.getData() :
@@ -244,16 +250,25 @@
 
     // Domino bindings:
     this.triggers.events.fieldsUpdated = function(d) {
-      _fields = d.get('fields') || [];
+      // If each related field has already been loaded, do nothing:
+      if (obj.type_fields.every(function(o) {
+        return _fields[o];
+      }))
+        return;
 
-      $('> li > select.select-field', _ul).html(
-        obj.type_fields.filter(function(s) {
-          return _fields[s];
-        }).map(function(s) {
-          var o = _fields[s];
-          return '<option value="' + o.rec_type + '">' + o.rec_type + '</option>';
-        }).join()
-      );
+      // Else, let's regenerate the <select> contents:
+      _fields = d.get('fields');
+
+      _ul.children('li').each(function() {
+        $(this).find('select.select-field').first().html(
+          obj.type_fields.filter(function(s) {
+            return _fields[s];
+          }).map(function(s) {
+            var o = _fields[s];
+            return '<option value="' + o.rec_type + '">' + o.rec_type + '</option>';
+          }).join()
+        );
+      });
     };
   };
 })();

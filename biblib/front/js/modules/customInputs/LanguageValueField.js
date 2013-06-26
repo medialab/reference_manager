@@ -142,11 +142,11 @@
       var data = _getData();
 
       if (obj.required && (!data || !data.length)) {
-        $('.message', this.dom).text(i18n.t('customInputs:LanguageValueField.errors.at_least_one'));
+        $('.message', _dom).text(i18n.t('customInputs:LanguageValueField.errors.at_least_one'));
         return false;
       }
 
-      $('.message', this.dom).empty();
+      $('.message', _dom).empty();
       return true;
     }
 

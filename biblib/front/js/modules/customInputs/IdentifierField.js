@@ -122,17 +122,17 @@
         (!obj.multiple && obj.required && !data) ||
         (obj.multiple && obj.required && obj.only_one && !data)
       ) {
-        $('.message', this.dom).text(i18n.t('customInputs:IdentifierField.errors.exactly_one'));
+        $('.message', _dom).text(i18n.t('customInputs:IdentifierField.errors.exactly_one'));
         return false;
       }
 
       // Check multiple && required:
       if (obj.multiple && obj.required && data.length < 1) {
-        $('.message', this.dom).text(i18n.t('customInputs:IdentifierField.errors.at_least_one'));
+        $('.message', _dom).text(i18n.t('customInputs:IdentifierField.errors.at_least_one'));
         return false;
       }
 
-      $('.message', this.dom).empty();
+      $('.message', _dom).empty();
       return true;
     }
 
