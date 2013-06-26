@@ -30,6 +30,18 @@
         _html = html,
         _waitingField,
         _field,
+        _toKeep = [
+          'rec_source',
+          'rec_type',
+          'rec_id',
+          'nonce',
+          '_id'
+        ],
+        _currentToKeep = {},
+        _propertiesToAdd = {
+          rec_class: 'Document',
+          rec_metajson: 1
+        },
         _components = [],
         _fields = {};
 
@@ -40,7 +52,7 @@
     function validate() {
       var invalid = 0;
 
-      console.log('Form validation:');
+      blf.control.log('Form validation:');
       _components.forEach(function(comp) {
         var isValid =
           comp.validate ?
@@ -51,12 +63,12 @@
           invalid++;
 
         if (!isValid)
-          console.log('  - Invalid component:', comp.property);
+          blf.control.log('  - Invalid component:', comp.property);
       });
 
       if (invalid === 0) {
         var data = getData();
-        console.log('Data:', domino.utils.clone(data));
+        blf.control.log('Everything is valid - data:', domino.utils.clone(data));
         _self.dispatchEvent('validateEntry', {
           entry: data
         });
@@ -71,9 +83,13 @@
     function getData() {
       var i,
           l,
+          k,
           component,
           value,
-          data = {};
+          data = domino.utils.clone(_currentToKeep);
+
+      for (k in _propertiesToAdd)
+        data[k] = _propertiesToAdd[k];
 
       for (i = 0, l = _components.length; i < l; i++) {
         component = _components[i];
@@ -94,10 +110,23 @@
     function fill(entry) {
       var i,
           l,
-          component;
+          component,
+          parsed = {};
 
+      // Store data to keep:
+      _currentToKeep = _toKeep.reduce(function(o, k) {
+        o[k] = domino.utils.clone(entry[k]);
+        return o;
+      }, {});
+
+      // Parse components
       for (i = 0, l = _components.length; i < l; i++) {
         component = _components[i];
+
+        if (parsed[component.property])
+          blf.control.log('Hum, the property "' + component.property + '" has already been given to a component...');
+
+        parsed[component.property] = 1;
 
         if (entry) {
           if (component.fill)
@@ -110,6 +139,10 @@
             );
         }
       }
+
+      for (i in entry)
+        if (!parsed[i])
+          blf.control.log('Property not parsed:', i, 'value:', entry[i]);
     }
 
     /**
@@ -129,7 +162,7 @@
 
       $('<button class="validate-button">Validate</button>').click(validate).appendTo($('.create-form', _html));
 
-      fill(entry);
+      fill(entry || { rec_type: e.data.field });
     };
   };
 
@@ -185,6 +218,9 @@
     // Check empty strings:
     if (value === '')
       value = undefined;
+
+    if (this.propertyObject.multiple)
+      value = [value];
 
     return value;
   };

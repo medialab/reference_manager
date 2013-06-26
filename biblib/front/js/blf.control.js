@@ -222,7 +222,7 @@ $(document).ready(function() {
         method: function(e) {
           this.dispatchEvent('displayForm', {
             entry: e.data.entry,
-            field: 'Book'
+            field: e.data.entry.rec_type
           });
         }
       },
@@ -334,31 +334,7 @@ $(document).ready(function() {
       }
     ],
     services: [
-      // Test services (on static JSONS):
-      {
-        id: 'loadCreatorRoles',
-        url: 'assets/creator-roles.json',
-        setter: 'creatorRoles',
-        path: 'children',
-        description: 'Loads the list of the available creator roles.'
-      },
-
       // RPC services:
-      {
-        id: 'echo',
-        url: blf.global.API_URL,
-        description: 'Just a test service to check if RPC works.',
-        type: blf.global.rpc.type,
-        error: blf.global.rpc.error,
-        expect: blf.global.rpc.expect,
-        contentType: blf.global.rpc.contentType,
-        data: function(input) {
-          return blf.global.rpc.buildData('echo', [ input.message ]);
-        },
-        success: function(data) {
-          this.log('ECHO FROM RPC', data.result);
-        }
-      },
       {
         id: 'search',
         url: blf.global.API_URL,
@@ -424,6 +400,25 @@ $(document).ready(function() {
         contentType: blf.global.rpc.contentType,
         data: function(input) {
           return blf.global.rpc.buildData('uifields', [ input.field, 'fr' ]);
+        },
+        success: function(data) {
+          var result = JSON.parse(data.result),
+              fields = this.get('fields');
+
+          fields[result.rec_type] = result;
+          this.update('fields', fields);
+        }
+      },
+      {
+        id: 'save',
+        url: blf.global.API_URL,
+        description: 'Loads one field specification.',
+        type: blf.global.rpc.type,
+        error: blf.global.rpc.error,
+        expect: blf.global.rpc.expect,
+        contentType: blf.global.rpc.contentType,
+        data: function(input) {
+          return blf.global.rpc.buildData('save', [ input.field, 'fr' ]);
         },
         success: function(data) {
           var result = JSON.parse(data.result),

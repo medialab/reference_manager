@@ -81,13 +81,13 @@
 
       var agent = data.agent || {};
       if (data.role)
-        $('> select.select-role', li).val(data.role);
+        $('select.select-role', li).val(data.role);
 
       _linesHash[id] = _classTemplates(agent.rec_class || 'Person');
       $('.custom-container', li).append(_linesHash[id].dom);
 
       if (agent.rec_class) {
-        $('> select.select-type', li).val(agent.rec_class);
+        $('select.select-type', li).val(agent.rec_class);
         _linesHash[id].fill(data, _linesHash[id]);
       }
 
@@ -100,6 +100,8 @@
         Person: {
           dom: $(_templates.person.template()),
           fill: function(data, obj) {
+            obj.dom.data('id', data.agent.rec_id || null);
+
             $('input[data-attribute="name_family"]', obj.dom).val(data.agent.name_family);
             $('input[data-attribute="name_given"]', obj.dom).val(data.agent.name_given);
             $('input[data-attribute="date_birth"]', obj.dom).val(data.agent.date_birth);
@@ -114,10 +116,13 @@
               rec_metajson: 1
             };
 
-            data.agent.name_family = $('input[data-attribute="name_family"]', obj.dom).val();
-            data.agent.name_given = $('input[data-attribute="name_given"]', obj.dom).val();
-            data.agent.date_birth = $('input[data-attribute="date_birth"]', obj.dom).val();
-            data.agent.date_death = $('input[data-attribute="date_death"]', obj.dom).val();
+            if (obj.dom.data('id'))
+              data.agent.rec_id = obj.dom.data('id');
+
+            data.agent.name_family = $('input[data-attribute="name_family"]', obj.dom).val() || undefined;
+            data.agent.name_given = $('input[data-attribute="name_given"]', obj.dom).val() || undefined;
+            data.agent.date_birth = $('input[data-attribute="date_birth"]', obj.dom).val() || undefined;
+            data.agent.date_death = $('input[data-attribute="date_death"]', obj.dom).val() || undefined;
 
             var aff = $('input[data-attribute="affiliation"]', obj.dom).val();
             if (aff)
@@ -127,12 +132,18 @@
                 name: aff
               };
 
+            for (var k in data.agent)
+              if (data.agent[k] === undefined)
+                delete data.agent[k];
+
             return data;
           }
         },
         Orgunit: {
           dom: $(_templates.orgunit.template()),
           fill: function(data, obj) {
+            obj.dom.data('id', data.agent.rec_id || null);
+
             $('input[data-attribute="name"]', obj.dom).val(data.agent.name);
             return this;
           },
@@ -142,7 +153,14 @@
               rec_metajson: 1
             };
 
-            data.agent.name = $('input[data-attribute="name"]', obj.dom).val();
+            if (obj.dom.data('id'))
+              data.agent.rec_id = obj.dom.data('id');
+
+            data.agent.name = $('input[data-attribute="name"]', obj.dom).val() || undefined;
+
+            for (var k in data.agent)
+              if (data.agent[k] === undefined)
+                delete data.agent[k];
 
             return data;
           }
@@ -150,14 +168,16 @@
         Event: {
           dom: $(_templates.event.template()),
           fill: function(data, obj) {
-             $('input[data-attribute="title"]', obj.dom).val(data.agent.title);
-             $('input[data-attribute="number"]', obj.dom).val(data.agent.number);
-             $('input[data-attribute="place"]', obj.dom).val(data.agent.place);
-             $('input[data-attribute="country"]', obj.dom).val(data.agent.country);
-             $('input[data-attribute="date_start"]', obj.dom).val(data.agent.date_start);
-             $('input[data-attribute="date_end"]', obj.dom).val(data.agent.date_end);
-             $('input[data-attribute="international"]', obj.dom).attr('checked', data.agent.international ? 'checked' : null);
-             return this;
+            obj.dom.data('id', data.agent.rec_id || null);
+
+            $('input[data-attribute="title"]', obj.dom).val(data.agent.title);
+            $('input[data-attribute="number"]', obj.dom).val(data.agent.number);
+            $('input[data-attribute="place"]', obj.dom).val(data.agent.place);
+            $('input[data-attribute="country"]', obj.dom).val(data.agent.country);
+            $('input[data-attribute="date_start"]', obj.dom).val(data.agent.date_start);
+            $('input[data-attribute="date_end"]', obj.dom).val(data.agent.date_end);
+            $('input[data-attribute="international"]', obj.dom).attr('checked', data.agent.international ? 'checked' : null);
+            return this;
           },
           getData: function(data, obj) {
             data.agent = data.agent || {
@@ -165,13 +185,20 @@
               rec_metajson: 1
             };
 
-            data.agent.title = $('input[data-attribute="title"]', obj.dom).val();
-            data.agent.number = $('input[data-attribute="number"]', obj.dom).val();
-            data.agent.place = $('input[data-attribute="place"]', obj.dom).val();
-            data.agent.country = $('input[data-attribute="country"]', obj.dom).val();
-            data.agent.date_start = $('input[data-attribute="date_start"]', obj.dom).val();
-            data.agent.date_end = $('input[data-attribute="date_end"]', obj.dom).val();
+            if (obj.dom.data('id'))
+              data.agent.rec_id = obj.dom.data('id');
+
+            data.agent.title = $('input[data-attribute="title"]', obj.dom).val() || undefined;
+            data.agent.number = $('input[data-attribute="number"]', obj.dom).val() || undefined;
+            data.agent.place = $('input[data-attribute="place"]', obj.dom).val() || undefined;
+            data.agent.country = $('input[data-attribute="country"]', obj.dom).val() || undefined;
+            data.agent.date_start = $('input[data-attribute="date_start"]', obj.dom).val() || undefined;
+            data.agent.date_end = $('input[data-attribute="date_end"]', obj.dom).val() || undefined;
             data.agent.international = !!$('input[data-attribute="international"]', obj.dom).is(':checked');
+
+            for (var k in data.agent)
+              if (data.agent[k] === undefined)
+                delete data.agent[k];
 
             return data;
           }
@@ -263,8 +290,7 @@
             id = li.data('id');
 
         creators.push(_linesHash[id].getData({
-          role: $('> select', li).val(),
-          agents: {}
+          role: $('select.select-role', li).val()
         }, _linesHash[id]));
       });
 
