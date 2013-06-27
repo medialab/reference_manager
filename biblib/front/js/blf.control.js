@@ -1,5 +1,7 @@
-$(document).ready(function() {
+window.blf = window.blf || {};
+blf.init = function(config) {
   'use strict';
+  config = config || {};
 
   // Package "blf": BibLib Front
   mlab.pkg('blf');
@@ -7,7 +9,7 @@ $(document).ready(function() {
   // Global vars:
   mlab.pkg('blf.global.rpc');
 
-  blf.global.API_URL = 'http://localhost:8080/';
+  blf.global.API_URL = config.BASE_URL;
   blf.global.rpc.type = 'POST';
   blf.global.rpc.contentType = 'application/x-www-form-urlencoded';
   blf.global.rpc.expect = function(data) {
@@ -220,9 +222,17 @@ $(document).ready(function() {
         triggers: 'validateEntry',
         description: 'What happens when an entry is validated from the form.',
         method: function(e) {
-          this.dispatchEvent('displayForm', {
-            entry: e.data.entry,
-            field: e.data.entry.rec_type
+          // This is for testing:
+          // ********************
+          // this.dispatchEvent('displayForm', {
+          //   entry: e.data.entry,
+          //   field: e.data.entry.rec_type
+          // });
+
+          // This is the good code:
+          // **********************
+          this.request('save', {
+            entry: e.data.entry
           });
         }
       },
@@ -230,8 +240,19 @@ $(document).ready(function() {
         triggers: 'search',
         description: 'Search for entries matching the specified query.',
         method: function(e) {
+          var data = domino.utils.clone(e.data);
+
+          if (!data.rec_class)
+            data.rec_class = 'SearchQuery';
+
+          if (!data.rec_metajson)
+            data.rec_metajson = 1;
+
+          if (!data.filter_class)
+            data.filter_class = 'Document';
+
           this.request('search', {
-            query: e.data.query
+            query: data
           });
         }
       },
@@ -412,20 +433,17 @@ $(document).ready(function() {
       {
         id: 'save',
         url: blf.global.API_URL,
-        description: 'Loads one field specification.',
+        description: 'Saves an entry.',
         type: blf.global.rpc.type,
         error: blf.global.rpc.error,
         expect: blf.global.rpc.expect,
         contentType: blf.global.rpc.contentType,
         data: function(input) {
-          return blf.global.rpc.buildData('save', [ input.field, 'fr' ]);
+          return blf.global.rpc.buildData('save', [ input.entry, 'fr' ]);
         },
         success: function(data) {
-          var result = JSON.parse(data.result),
-              fields = this.get('fields');
-
-          fields[result.rec_type] = result;
-          this.update('fields', fields);
+          var result = JSON.parse(data.result);
+          console.log(result);
         }
       }
     ]
@@ -445,4 +463,4 @@ $(document).ready(function() {
       typeName: 'document_type'
     }
   ]);
-});
+};
