@@ -23,8 +23,7 @@
         entryId = li.attr('data-id');
 
         _self.dispatchEvent('deleteEntry', {
-          entryId: entryId,
-          entry: _listIndex[entryId]
+          rec_id: entryId
         });
         e.stopPropagation();
         return false;

@@ -214,7 +214,7 @@ blf.init = function(config) {
         type: 'string',
         triggers: 'updateMode',
         dispatch: 'modeUpdated',
-        description: 'The layout mode (home, search, create).'
+        description: 'The layout mode (home, create, fields, search, list).'
       }
     ],
     hacks: [
@@ -330,7 +330,9 @@ blf.init = function(config) {
         triggers: 'deleteEntry',
         description: 'Deletes the related entry.',
         method: function(e) {
-          // TODO
+          this.request('delete', {
+            rec_id: e.data.rec_id
+          });
         }
       },
       {
@@ -439,11 +441,32 @@ blf.init = function(config) {
         expect: blf.global.rpc.expect,
         contentType: blf.global.rpc.contentType,
         data: function(input) {
-          return blf.global.rpc.buildData('save', [ input.entry, 'fr' ]);
+          return blf.global.rpc.buildData('save', [ input.entry ]);
         },
         success: function(data) {
+          this.log('Log from server after saving an entry:', result);
           var result = JSON.parse(data.result);
-          console.log(result);
+          this.update('mode', 'home');
+        }
+      },
+      {
+        id: 'delete',
+        url: blf.global.API_URL,
+        description: 'Deletes an entry.',
+        type: blf.global.rpc.type,
+        error: blf.global.rpc.error,
+        expect: blf.global.rpc.expect,
+        contentType: blf.global.rpc.contentType,
+        data: function(input) {
+          return blf.global.rpc.buildData('delete', [ input.rec_id ]);
+        },
+        success: function(data, input) {
+          var result = JSON.parse(data.result);
+          this.log('Log from server after deleting an entry:', result);
+
+          this.update('resultsList', this.get('resultsList').filter(function(res) {
+            return res.rec_id !== input.rec_id;
+          }));
         }
       }
     ]
