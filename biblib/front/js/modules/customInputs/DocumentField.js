@@ -105,9 +105,9 @@
 
       // Check count:
       if (obj.only_one && _ul.children('li').length >= 1)
-        $('.add-document', _dom).attr('hidden', 'true');
+        $('.add-document', _dom).css('display', 'none');
       else
-        $('.add-document', _dom).attr('hidden', null);
+        $('.add-document', _dom).css('display', '');
 
       // Trigger event if only one type available:
       if (!data.rec_type && obj.type_fields.length <= 1)
@@ -135,9 +135,9 @@
 
         // Check count:
         if (obj.only_one && _ul.children('li').length >= 1)
-          $('.add-document', _dom).attr('hidden', 'true');
+          $('.add-document', _dom).css('display', 'none');
         else
-          $('.add-document', _dom).attr('hidden', null);
+          $('.add-document', _dom).css('display', '');
       }
     }).change(function(e) {
       var target = $(e.target),

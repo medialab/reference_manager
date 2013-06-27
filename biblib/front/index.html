@@ -15,25 +15,25 @@
     </div>
     <hr />
     <div id="panels" class="container">
-      <div data-panel="create" hidden>
+      <div data-panel="create" style="display:none;">
         <div class="create-form">
           <!-- The form has to be filled with components depending of the
                field. This will be done in JavaScript, from external data. -->
         </div>
       </div>
-      <div data-panel="fields" hidden>
+      <div data-panel="fields" style="display:none;">
         <div class="select-field">
           <!-- Here will be represented the tree of the different fields. It
                will also be done in JavaScript, from external data. -->
         </div>
       </div>
-      <div data-panel="search" hidden>
+      <div data-panel="search" style="display:none;">
         <div class="search-form">
           <button class="validate" data-i18n="searchPanel.search"></button>
           <input type="search" class="normal-search col-4" placeholder="Type something to search...">
           <input type="checkbox" class="advanced-search" name="use-advanced-search" />
           <label for="use-advanced-search" data-i18n="searchPanel.advancedSearch"></label>
-          <div class="advanced-search-panel" hidden>
+          <div class="advanced-search-panel" style="display:none;">
             <hr>
             <fieldset>
               <label for="rec_type-search" data-i18n="searchPanel.recordsType"></label>
@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <div data-panel="list" hidden>
+      <div data-panel="list" style="display:none;">
         <ul class="entries-list"></ul>
       </div>
     </div>

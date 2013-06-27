@@ -14,10 +14,10 @@
 
     $('input.advanced-search', _html).change(function() {
       if ($(this).is(':checked')) {
-        $('.advanced-search-panel', _html).attr('hidden', null);
+        $('.advanced-search-panel', _html).css('display', '');
         $('.normal-search', _html).attr('disabled', 'true');
       } else {
-        $('.advanced-search-panel', _html).attr('hidden', 'true');
+        $('.advanced-search-panel', _html).css('display', 'none');
         $('.normal-search', _html).attr('disabled', null);
       }
     });

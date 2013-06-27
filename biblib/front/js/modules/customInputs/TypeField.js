@@ -96,9 +96,9 @@
         (!obj.multiple && $('li', _dom).length) ||
         ($('li', _dom).length >= _majorValues.length)
       )
-        $('button.add-value', _dom).attr('hidden', 'true');
+        $('button.add-value', _dom).css('display', 'none');
       else
-        $('button.add-value', _dom).attr('hidden', null);
+        $('button.add-value', _dom).css('display', '');
     }
 
     // Deal with values deduplication:

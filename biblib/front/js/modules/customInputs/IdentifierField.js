@@ -64,15 +64,15 @@
     // Init:
     if (obj.required) {
       $('button.add-identifier', _dom).click();
-      $('li:first-child button.remove-identifier', _dom).attr('hidden', true);
+      $('li:first-child button.remove-identifier', _dom).css('display', 'none');
     }
 
     // Check that all values are not added yet:
     function checkValuesCount() {
       if (obj.multiple && obj.only_one && $('li', _dom).length)
-        $('button.add-identifier', _dom).attr('hidden', 'true');
+        $('button.add-identifier', _dom).css('display', 'none');
       else
-        $('button.add-identifier', _dom).attr('hidden', null);
+        $('button.add-identifier', _dom).css('display', '');
     }
 
     function addLine(o) {

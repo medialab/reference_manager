@@ -104,9 +104,9 @@
     // Check that all languages are not added yet:
     function checkLanguagesCount() {
       if ($('li', _dom).length >= _languages.length)
-        $('button.add-language', _dom).attr('hidden', 'true');
+        $('button.add-language', _dom).css('display', 'none');
       else
-        $('button.add-language', _dom).attr('hidden', null);
+        $('button.add-language', _dom).css('display', '');
     }
 
     // Deal with languages deduplication:

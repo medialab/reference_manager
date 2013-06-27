@@ -43,8 +43,8 @@
     // Listen to the controller:
     this.triggers.events.modeUpdated = function(d) {
       var mode = d.get('mode');
-      $('[data-panel]:not([data-panel="' + mode + '"])', _panels).attr('hidden', 'true');
-      $('[data-panel="' + mode + '"]', _panels).attr('hidden', null);
+      $('[data-panel]:not([data-panel="' + mode + '"])', _panels).css('display', 'none');
+      $('[data-panel="' + mode + '"]', _panels).css('display', '');
     };
   };
 })();
