@@ -128,7 +128,7 @@
       // If the value is not specified, we use the first value that is
       // not used yet:
       else
-        $('> select', li).val(_values.reduce(function(res, v) {
+        $('> select', li).val(_majorValues.reduce(function(res, v) {
           return res !== null ?
             res :
             !$('option[value="' + v.type_id + '"]:selected', _dom).length ?
