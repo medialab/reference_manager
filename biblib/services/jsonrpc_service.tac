@@ -82,21 +82,15 @@ class References_repository(jsonrpc.JSONRPC):
             return object id if ok or error
         """
         # convert JSON to BSON
-        print "coucou1"
         doc_json_string = json.dumps(document, ensure_ascii=False, encoding="utf-8")
-        print doc_json_string
-        print "coucou2"
         doc_bson = json_util.loads(doc_json_string)
-        print doc_bson
-        print "coucou3"
+
         #bson_doc = json_util.loads(document)
         #bson_doc = self.json_to_bson(document)
         #bson_doc = json_util._json_convert(document)
         #json_doc = json.loads(document)
         #print json.dumps(json_doc, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
-        result = repository_service.save_document(None, doc_bson)
-        print result
-        return self.format_bson(result)
+        return self.format_bson(repository_service.save_document(None, doc_bson))
 
     def jsonrpc_delete(self, rec_id):
         """ delete a reference in the repository
