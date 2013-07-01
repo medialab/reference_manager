@@ -1,0 +1,57 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "Title", 
+                "fr": "Titre"
+            }, 
+            "type_id": "title"
+        }, 
+        {
+            "labels": {
+                "en": "Author", 
+                "fr": "Auteur"
+            }, 
+            "type_id": "creator"
+        }, 
+        {
+            "labels": {
+                "en": "Keyword", 
+                "fr": "Mot-clef"
+            }, 
+            "type_id": "keyword"
+        }, 
+        {
+            "labels": {
+                "en": "In", 
+                "fr": "In"
+            }, 
+            "type_id": "is_part_of"
+        }, 
+        {
+            "labels": {
+                "en": "Publisher", 
+                "fr": "Publisher"
+            }, 
+            "type_id": "publisher"
+        }, 
+        {
+            "labels": {
+                "en": "Identifiant", 
+                "fr": "Identifier"
+            }, 
+            "type_id": "identifier"
+        }, 
+        {
+            "labels": {
+                "en": "All", 
+                "fr": "Tout"
+            }, 
+            "type_id": "all"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "search_index"
+}
