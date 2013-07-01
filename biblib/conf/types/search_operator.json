@@ -1,0 +1,29 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "And", 
+                "fr": "Et"
+            }, 
+            "type_id": "and"
+        }, 
+        {
+            "labels": {
+                "en": "Or", 
+                "fr": "Ou"
+            }, 
+            "type_id": "or"
+        }, 
+        {
+            "labels": {
+                "en": "Not", 
+                "fr": "Sauf"
+            }, 
+            "type_id": "not"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "search_operator"
+}

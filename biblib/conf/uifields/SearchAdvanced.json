@@ -1,0 +1,40 @@
+{
+    "children": [
+        {
+            "property_source_index": "search_index",
+            "property_source_operator": "search_operator",
+            "type_ui": "SearchIndexField"
+        },
+        {
+            "labels": {
+                "en": "Year",
+                "fr": "Année"
+            },
+            "property_start": "filter_date_start",
+            "property_end": "filter_date_end",
+            "type_ui": "YearRangeField"
+        },
+        {
+            "labels": {
+                "en": "Document types",
+                "fr": "Types de document"
+            },
+            "multiple": true,
+            "property": "filter_types",
+            "type_source": "document_type",
+            "type_ui": "CheckboxField"
+        },
+        {
+            "labels": {
+                "en": "Languages",
+                "fr": "Langues"
+            },
+            "multiple": true,
+            "property": "filter_languages",
+            "type_source": "language",
+            "type_ui": "CheckboxField"
+        }
+    ],
+    "rec_class": "SearchAdvanced",
+    "rec_metajson": 1
+}

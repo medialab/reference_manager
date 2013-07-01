@@ -155,7 +155,11 @@ def cite(document, format):
     if url:
         result += u"<span class=\"url\">{0}</span>".format(format_url(url))
 
-    print result
+    #print result 
+    #this print fires an encoding error when result contains non ascii characters
+    #if print is needed :
+    #   1- use python log command not print
+    #   2- for encoding a result.ecnode("utf8") might solve the prb    
     return result
 
 
