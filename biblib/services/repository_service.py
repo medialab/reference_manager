@@ -6,6 +6,7 @@
 
 import uuid
 import pymongo
+import json
 from bson.objectid import ObjectId
 from biblib.metajson import SearchResponse
 from biblib.services import config_service
@@ -148,9 +149,11 @@ def search(corpus, search_query):
     # other filters
     filter_query = []
     if "filter_date_end" in search_query:
-        filter_query.append({"date_issued": {"$lte": search_query["filter_date_end"]}})
+        pass
+        #filter_query.append({"date_issued": {"$lte": search_query["filter_date_end"]}})
     if "filter_date_start" in search_query:
-        filter_query.append({"date_issued": {"$gte": search_query["filter_date_start"]}})
+        pass
+        #filter_query.append({"date_issued": {"$gte": search_query["filter_date_start"]}})
     if "filter_languages" in search_query:
         filter_query.append({"languages": {"$in": search_query["filter_languages"]}})
     if "filter_types" in search_query:
@@ -168,9 +171,11 @@ def search(corpus, search_query):
             if "index" not in search_term:
                 search_response["errors"] = [ERROR_100]
             elif search_term["index"] == "all":
-                pass
+                # todo
+                search_indexes.append({"title": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "identifier":
-                pass
+                # todo
+                search_indexes.append({"rec_id": search_term["value"]})
             elif search_term["index"] == "title":
                 search_indexes.append({"title": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "is_part_of":
@@ -205,8 +210,9 @@ def search(corpus, search_query):
                     pass
 
     # result_sorts
-
-    mongo_query = {"rec_metajson": 1}
+    mongo_query = {"$and": search_indexes}
+    print "mongo_query:"
+    print json.dumps(mongo_query, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
 
     records = metajson_service.load_dict_list(mongodb[corpus][collection].find(mongo_query))
     records_total_count = len(records)
