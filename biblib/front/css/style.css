@@ -112,3 +112,7 @@ ul.entries-list > li .entry-title {
 .message {
   color: #c00;
 }
+
+.right {
+  float: right;
+}
