@@ -8,14 +8,23 @@
 
     var _self = this,
         _html = $('#layout'),
-        _buttons = $('#nav', _html),
+        _nav = $('#nav', _html),
         _panels = $('#panels', _html),
         _modules = [];
 
-    // Bind actions:
-    $('button[data-action]', _buttons).click(function() {
+    // Bind search:
+    $('button[data-action="search"]', _nav).click(function() {
+      _self.dispatchEvent('search', {
+        query: {
+          'creators.agent.title': $('#simple-entries-search', _nav).val()
+        }
+      });
+    });
+
+    // Bind navigation:
+    $('button[data-mode]', _nav).click(function() {
       _self.dispatchEvent('updateMode', {
-        mode: $(this).data('action')
+        mode: $(this).data('mode')
       });
     });
 
@@ -31,13 +40,13 @@
     ));
 
     _modules.push(blf.control.addModule(
-      blf.modules.searchPanel,
-      [ $('[data-panel="search"]', _panels) ]
+      blf.modules.listPanel,
+      [ $('[data-panel="list"]', _panels) ]
     ));
 
     _modules.push(blf.control.addModule(
-      blf.modules.listPanel,
-      [ $('[data-panel="list"]', _panels) ]
+      blf.modules.advancedSearchPanel,
+      [ $('[data-panel="advanced-search"]', _panels) ]
     ));
 
     // Listen to the controller:

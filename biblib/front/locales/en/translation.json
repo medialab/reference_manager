@@ -3,8 +3,10 @@
     "validate": "Validate"
   },
   "navigation": {
+    "search": "Go",
     "addEntry": "Add entry",
-    "searchEntry": "Search entry"
+    "advancedSearch": "Advanced search",
+    "searchPlaceholder": "Search..."
   },
   "searchPanel": {
     "search": "Search",
