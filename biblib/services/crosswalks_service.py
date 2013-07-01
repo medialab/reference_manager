@@ -12,7 +12,6 @@ from biblib.crosswalks import bibtex_crosswalk
 from biblib.crosswalks import ddi_crosswalk
 from biblib.crosswalks import didl_crosswalk
 from biblib.crosswalks import endnotexml_crosswalk
-from biblib.crosswalks import metajsonui_crosswalk
 from biblib.crosswalks import mets_crosswalk
 from biblib.crosswalks import mods_crosswalk
 from biblib.crosswalks import openurl_crosswalk
@@ -131,8 +130,6 @@ def convert_json(jsondict, input_format, output_format, source, only_first_recor
                 metajson_list = summonjson_crosswalk.summonjson_to_metajson_list(jsondict, source, only_first_record)
             elif input_format == constants.FORMAT_BIBJSON:
                 metajson_list = bibjson_crosswalk.bibjson_to_metajson_list(jsondict, source, only_first_record)
-            elif input_format == constants.FORMAT_METAJSONUI:
-                metajson_list = metajsonui_crosswalk.metajsonui_to_metajson_list(jsondict, source, only_first_record)
             else:
                 print "Error: {} input_format not managed".format(input_format)
 

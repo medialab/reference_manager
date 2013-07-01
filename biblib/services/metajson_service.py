@@ -8,7 +8,6 @@ from biblib.metajson import Common
 from biblib.metajson import Collection
 from biblib.metajson import Field
 from biblib.metajson import Document
-from biblib.metajson import DocumentUi
 from biblib.metajson import Event
 from biblib.metajson import Family
 from biblib.metajson import Orgunit
@@ -26,8 +25,6 @@ def load_dict(meta_dict):
         return Common(meta_dict)
     elif meta_dict["rec_class"] == "Document":
         return Document(meta_dict)
-    elif meta_dict["rec_class"] == "DocumentUi":
-        return DocumentUi(meta_dict)
     elif meta_dict["rec_class"] == "Person":
         return Person(meta_dict)
     elif meta_dict["rec_class"] == "Orgunit":

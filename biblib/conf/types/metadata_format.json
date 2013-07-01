@@ -1,0 +1,32 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "BibTeX",
+                "fr": "BibTeX"
+            },
+            "major": true,
+            "type_id": "bibtex"
+        },
+        {
+            "labels": {
+                "en": "MODS",
+                "fr": "MODS"
+            },
+            "major": true,
+            "type_id": "mods"
+        },
+        {
+            "labels": {
+                "en": "EndNote XML",
+                "fr": "EndNote XML"
+            },
+            "major": true,
+            "type_id": "endnotexml"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "metadata_format"
+}

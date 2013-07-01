@@ -30,8 +30,8 @@
         },
         {
             "labels": {
-                "en": "Journal",
-                "fr": "Revue"
+                "en": "Newspaper",
+                "fr": "Journal"
             },
             "multiple": true,
             "only_one": true,

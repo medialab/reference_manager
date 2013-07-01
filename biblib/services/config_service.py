@@ -32,7 +32,6 @@ def load_config():
             with open(config_location, 'r') as config_file:
                 return json.load(config_file)
         except IOError as e:
-            print 'Warning: Could not open config.json file. Will search it in another place. ', e
             pass
         except ValueError as e:
             print 'ERROR: Config file is not valid JSON', e
@@ -49,7 +48,6 @@ def load_metajson_title_non_sort():
             with open(metajson_title_non_sort_location, 'r') as metajson_title_non_sort_file:
                 return json.load(metajson_title_non_sort_file)
         except IOError as e:
-            print 'Warning: Could not open title_non_sort.json file. Will search it in another place. ', e
             pass
         except ValueError as e:
             print 'ERROR: title_non_sort.json file is not valid JSON', e

@@ -30,15 +30,15 @@
         },
         {
             "labels": {
-                "en": "Journal",
-                "fr": "Revue"
+                "en": "Magazine",
+                "fr": "Magazine"
             },
             "multiple": true,
             "only_one": true,
             "property": "is_part_ofs",
             "required": true,
             "type_fields": [
-                "Newspaper"
+                "Magazine"
             ],
             "type_ui": "DocumentField"
         },
