@@ -8,45 +8,7 @@
   <link rel="stylesheet" href="css/customInputs.css">
 </head>
 <body>
-  <div id="layout">
-    <div id="nav" class="container">
-      <button data-action="fields" data-i18n="navigation.addEntry"></button>
-      <button data-action="search" data-i18n="navigation.searchEntry"></button>
-    </div>
-    <hr />
-    <div id="panels" class="container">
-      <div data-panel="create" style="display:none;">
-        <div class="create-form">
-          <!-- The form has to be filled with components depending of the
-               field. This will be done in JavaScript, from external data. -->
-        </div>
-      </div>
-      <div data-panel="fields" style="display:none;">
-        <div class="select-field">
-          <!-- Here will be represented the tree of the different fields. It
-               will also be done in JavaScript, from external data. -->
-        </div>
-      </div>
-      <div data-panel="search" style="display:none;">
-        <div class="search-form">
-          <button class="validate" data-i18n="searchPanel.search"></button>
-          <input type="search" class="normal-search col-4" placeholder="Type something to search...">
-          <input type="checkbox" class="advanced-search" name="use-advanced-search" />
-          <label for="use-advanced-search" data-i18n="searchPanel.advancedSearch"></label>
-          <div class="advanced-search-panel" style="display:none;">
-            <hr>
-            <fieldset>
-              <label for="rec_type-search" data-i18n="searchPanel.recordsType"></label>
-              <input type="text" class="col-6" name="rec_type-search" />
-            </fieldset>
-          </div>
-        </div>
-      </div>
-      <div data-panel="list" style="display:none;">
-        <ul class="entries-list"></ul>
-      </div>
-    </div>
-  </div>
+  <div id="layout"></div>
 
   <!-- External JS dependencies -->
   <script src="js/ext/jquery.min.js"></script>
@@ -65,7 +27,7 @@
   <script src="js/modules/listPanel.js"></script>
   <script src="js/modules/createPanel.js"></script>
   <script src="js/modules/fieldsPanel.js"></script>
-  <script src="js/modules/searchPanel.js"></script>
+  <script src="js/modules/advancedSearchPanel.js"></script>
 
   <script src="js/modules/customInputs/TypeField.js"></script>
   <script src="js/modules/customInputs/CreatorField.js"></script>
@@ -77,7 +39,8 @@
     $(function() {
       // We start everything from here:
       blf.init({
-        BASE_URL: 'http://localhost:8080'
+        BASE_URL: 'http://localhost:8080',
+        BASE_DOM: $('#layout')
       });
     });
   </script>

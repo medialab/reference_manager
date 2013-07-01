@@ -1,7 +1,12 @@
 {
+  "actions": {
+    "validate": "Valider"
+  },
   "navigation": {
+    "search": "Go",
     "addEntry": "Ajouter une référence",
-    "searchEntry": "Rechercher dans les références"
+    "advancedSearch": "Recherche avancée",
+    "searchPlaceholder": "Rechercher..."
   },
   "searchPanel": {
     "search": "Rechercher",
