@@ -14,13 +14,7 @@ from biblib.metajson import Orgunit
 from biblib.metajson import Event
 from biblib.services import creator_service
 from biblib.services import language_service
-
-
-xmlns_map = {
-    "mods": "http://www.loc.gov/mods/v3",
-    "dai": "info:eu-repo/dai",
-    "researcherml": "http://bibliotheque.sciences-po.fr/standards/researcherml/v1"
-}
+from biblib.util import constants
 
 mods_genre_eurepo_to_metajson_document_type = {
     # info:eu-repo/semantics
@@ -153,14 +147,14 @@ mods_genre_marcgt_to_metajson_document_type = {
 
 
 def register_namespaces():
-    for key in xmlns_map:
-        ET.register_namespace(key, xmlns_map[key])
+    for key in constants.xmlns_map:
+        ET.register_namespace(key, constants.xmlns_map[key])
 
 
 def prefixtag(ns_prefix, tagname):
     if tagname:
-        if ns_prefix and ns_prefix in xmlns_map:
-            return str(QName(xmlns_map[ns_prefix], tagname))
+        if ns_prefix and ns_prefix in constants.xmlns_map:
+            return str(QName(constants.xmlns_map[ns_prefix], tagname))
         else:
             return tagname
 

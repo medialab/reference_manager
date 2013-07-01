@@ -10,11 +10,13 @@ from pybtex.database.input import bibtex
 from biblib.crosswalks import bibjson_crosswalk
 from biblib.crosswalks import bibtex_crosswalk
 from biblib.crosswalks import ddi_crosswalk
+from biblib.crosswalks import didl_crosswalk
 from biblib.crosswalks import endnotexml_crosswalk
 from biblib.crosswalks import metajsonui_crosswalk
 from biblib.crosswalks import mets_crosswalk
 from biblib.crosswalks import mods_crosswalk
 from biblib.crosswalks import openurl_crosswalk
+from biblib.crosswalks import repec_crosswalk
 from biblib.crosswalks import summonjson_crosswalk
 from biblib.crosswalks import unixref_crosswalk
 from biblib.util import constants
@@ -153,6 +155,8 @@ def convert_xmletree(xmletree, input_format, output_format, source, only_first_r
                 metajson_list = endnotexml_crosswalk.endnotexml_xmletree_to_metajson_list(xmletree, source, only_first_record)
             elif input_format == constants.FORMAT_MODS:
                 metajson_list = mods_crosswalk.mods_xmletree_to_metajson_list(xmletree, source, only_first_record)
+            elif input_format == constants.FORMAT_DIDL:
+                metajson_list = didl_crosswalk.didl_xmletree_to_metajson_list(xmletree, source, only_first_record)
             elif input_format == constants.FORMAT_DDI:
                 metajson_list = ddi_crosswalk.ddi_xmletree_to_metajson_list(xmletree, source, only_first_record)
             elif input_format == constants.FORMAT_UNIXREF:
@@ -182,6 +186,8 @@ def convert_metajson(metajson, output_format):
         return openurl_crosswalk.metajson_to_openurl(metajson)
     elif output_format == constants.FORMAT_OPENURLCOINS:
         return openurl_crosswalk.metajson_to_openurlcoins(metajson)
+    elif output_format == constants.FORMAT_REPEC:
+        return repec_crosswalk.metajson_to_repec(metajson)
     elif output_format == constants.FORMAT_BIBTEX:
         return None
 

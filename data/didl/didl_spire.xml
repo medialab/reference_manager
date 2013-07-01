@@ -1,0 +1,199 @@
+<didl:DIDL DIDLDocumentId="info:hdl:2441/dambferfb7dfprc9m2l36952j#didl" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:didl="urn:mpeg:mpeg21:2002:02-DIDL-NS" xmlns:dii="urn:mpeg:mpeg21:2002:01-DII-NS" xmlns:dip="urn:mpeg:mpeg21:2005:01-DIP-NS" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:mpeg21:2002:02-DIDL-NS http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-21_schema_files/did/didl.xsd urn:mpeg:mpeg21:2002:01-DII-NS http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-21_schema_files/dii/dii.xsd urn:mpeg:mpeg21:2005:01-DIP-NS http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-21_schema_files/dip/dip.xsd">
+  <didl:Item>
+    <didl:Descriptor>
+      <didl:Statement mimeType="application/xml">
+        <dii:Identifier>info:hdl:2441/dambferfb7dfprc9m2l36952j#didl</dii:Identifier>
+      </didl:Statement>
+    </didl:Descriptor>
+    <didl:Descriptor>
+      <didl:Statement mimeType="application/xml">
+        <dcterms:modified>2013-04-05T00:09:49Z</dcterms:modified>
+      </didl:Statement>
+    </didl:Descriptor>
+    <didl:Item>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <rdf:type>info:eu-repo/semantics/descriptiveMetadata</rdf:type>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dip:ObjectType>info:eu-repo/semantics/descriptiveMetadata</dip:ObjectType>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dii:Identifier>info:hdl:2441/dambferfb7dfprc9m2l36952j#oai_dc</dii:Identifier>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dcterms:modified>2013-04-05T00:09:49Z</dcterms:modified>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Component>
+        <didl:Resource mimeType="application/xml">
+          <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+            <dc:creator>Ramel, Frédéric</dc:creator>
+            <dc:date>2010-01</dc:date>
+            <dc:description>In this first paper of the Grand Strategy Project series, French expert Frédéric Ramel describes the EU as being a third party more than a strategic actor. In a world that is unstable due to its oligopolar structure and its heterogeneous nature, he argues, the EU needs a “complete strategy” in order to reconcile maximum variety and diversity with maximum unity and integration; set up coordination with other actors; and develop strategic agility and strategic expectancy. (Présentation de l'éditeur)</dc:description>
+            <dc:identifier>http://spire.sciences-po.fr/hdl:/2441/dambferfb7dfprc9m2l36952j</dc:identifier>
+            <dc:identifier>info:hdl/2441/dambferfb7dfprc9m2l36952j</dc:identifier>
+            <dc:identifier>http://www.egmontinstitute.be/papers/10/sec-gov/SPB-4_Ramel-strategy-for-EU_third-party.pdf</dc:identifier>
+            <dc:identifier>&amp;ctx_id=D5596F76DEB3B5F9DB1361547133813&amp;ctx_tim=2013-02-22T15%3A30%3A01Z&amp;ctx_ver=Z39.88-2004&amp;rft.issue=4&amp;rft.jtitle=Security+Policy+Brief&amp;rft.atitle=European+Union+in+the+Post-Cold+War+International+System+%3A+a+Third-party&amp;rft.date=2010-01&amp;rft.epage=6&amp;rft.genre=article&amp;rft.spage=1&amp;rft.aufirst=Fr%C3%A9d%C3%A9ric&amp;rft.aulast=Ramel&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal</dc:identifier>
+            <dc:language>eng</dc:language>
+            <dc:publisher>Egmont (Royal Institute of International Relations)</dc:publisher>
+            <dc:rights>info:eu-repo/semantics/restrictedAccess</dc:rights>
+            <dc:source>Security Policy Brief, (4), 1-6 (2010-01)</dc:source>
+            <dc:title>The European Union in the Post-Cold War International System : a Third-party</dc:title>
+            <dc:type>Text</dc:type>
+            <dc:type>article</dc:type>
+            <dc:type>info:eu-repo/semantics/article</dc:type>
+          </oai_dc:dc>
+        </didl:Resource>
+      </didl:Component>
+    </didl:Item>
+    <didl:Item>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <rdf:type>info:eu-repo/semantics/descriptiveMetadata</rdf:type>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dip:ObjectType>info:eu-repo/semantics/descriptiveMetadata</dip:ObjectType>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dii:Identifier>info:hdl:2441/dambferfb7dfprc9m2l36952j#mods</dii:Identifier>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dcterms:modified>2013-04-05T00:09:49Z</dcterms:modified>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Component>
+        <didl:Resource mimeType="application/xml">
+          <mods:mods version="3.2" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-2.xsd">
+            <mods:titleInfo>
+              <mods:nonSort>The </mods:nonSort>
+              <mods:title>European Union in the Post-Cold War International System : a Third-party</mods:title>
+            </mods:titleInfo>
+            <mods:name ID="_-_spire_-_2441__53r60a8s3kup1vc9kc499cq2k_-_2441__53r60a8s3kup1vc9kc499cq2k_-_2441__9labe9r4se65i789685q380gh_-_eo6779thqgm5r489ma4g70pj7" type="personal">
+              <mods:namePart type="given">Frédéric</mods:namePart>
+              <mods:namePart type="family">Ramel</mods:namePart>
+              <mods:affiliation>Centre d'études et de recherches internationales</mods:affiliation>
+              <mods:role>
+                <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+              </mods:role>
+            </mods:name>
+            <mods:typeOfResource>text</mods:typeOfResource>
+            <mods:genre>info:eu-repo/semantics/article</mods:genre>
+            <mods:genre>http://purl.org/eprint/type/JournalArticle</mods:genre>
+            <mods:genre authority="marcgt">article</mods:genre>
+            <mods:originInfo>
+              <mods:publisher>Egmont (Royal Institute of International Relations)</mods:publisher>
+              <mods:dateIssued encoding="iso8601">2010-01</mods:dateIssued>
+            </mods:originInfo>
+            <mods:language>
+              <mods:languageTerm authority="iso639-2b" type="code">eng</mods:languageTerm>
+              <mods:languageTerm authority="rfc3066" type="code">en</mods:languageTerm>
+            </mods:language>
+            <mods:abstract lang="en">In this first paper of the Grand Strategy Project series, French expert Frédéric Ramel describes the EU as being a third party more than a strategic actor. In a world that is unstable due to its oligopolar structure and its heterogeneous nature, he argues, the EU needs a “complete strategy” in order to reconcile maximum variety and diversity with maximum unity and integration; set up coordination with other actors; and develop strategic agility and strategic expectancy. (Présentation de l'éditeur)</mods:abstract>
+            <mods:relatedItem type="host">
+              <mods:titleInfo>
+                <mods:title>Security Policy Brief</mods:title>
+              </mods:titleInfo>
+              <mods:typeOfResource>text</mods:typeOfResource>
+              <mods:genre authority="marcgt">journal</mods:genre>
+              <mods:originInfo>
+                <mods:issuance>continuing</mods:issuance>
+              </mods:originInfo>
+              <mods:language>
+                <mods:languageTerm authority="iso639-2b" type="code">fre</mods:languageTerm>
+                <mods:languageTerm authority="rfc3066" type="code">fr</mods:languageTerm>
+              </mods:language>
+              <mods:part>
+                <mods:detail type="issue">
+                  <mods:number>4</mods:number>
+                </mods:detail>
+                <mods:extent unit="page">
+                  <mods:start>1</mods:start>
+                  <mods:end>6</mods:end>
+                </mods:extent>
+              </mods:part>
+            </mods:relatedItem>
+            <mods:location>
+              <mods:url dateLastAccessed="22/02/2013">http://www.egmontinstitute.be/papers/10/sec-gov/SPB-4_Ramel-strategy-for-EU_third-party.pdf</mods:url>
+            </mods:location>
+            <mods:extension>
+              <dai:daiList xmlns:dai="info:eu-repo/dai" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd">
+                <dai:identifier IDref="_-_spire_-_2441__53r60a8s3kup1vc9kc499cq2k_-_2441__53r60a8s3kup1vc9kc499cq2k_-_2441__9labe9r4se65i789685q380gh_-_dambferfb7dfprc9m2l2ogtah" authority="http://spire.sciences-po.fr/hdl:">2441/53r60a8s3kup1vc9kc499cq2k</dai:identifier>
+              </dai:daiList>
+            </mods:extension>
+          </mods:mods>
+        </didl:Resource>
+      </didl:Component>
+    </didl:Item>
+    <didl:Item>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <rdf:type>info:eu-repo/semantics/objectFile</rdf:type>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dip:ObjectType>info:eu-repo/semantics/objectFile</dip:ObjectType>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <rdf:type>info:eu-repo/semantics/publishedVersion</rdf:type>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dii:Identifier>905a6d18-d18a-4e06-8b45-18f486bbedbd</dii:Identifier>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dcterms:modified>2013-02-22T15:21:57Z</dcterms:modified>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Component>
+        <didl:Resource mimeType="application/pdf" ref="http://spire.sciences-po.fr/hdl:/2441/dambferfb7dfprc9m2l36952j/resources/spb-4-ramel-strategy-for-eu-third-party.pdf"/>
+      </didl:Component>
+    </didl:Item>
+    <didl:Item>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <rdf:type>info:eu-repo/semantics/humanStartPage</rdf:type>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dip:ObjectType>info:eu-repo/semantics/humanStartPage</dip:ObjectType>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dii:Identifier>info:hdl:2441/dambferfb7dfprc9m2l36952j#humanStartPage</dii:Identifier>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Descriptor>
+        <didl:Statement mimeType="application/xml">
+          <dcterms:modified>2013-04-05T00:09:49Z</dcterms:modified>
+        </didl:Statement>
+      </didl:Descriptor>
+      <didl:Component>
+        <didl:Resource mimeType="text/html" ref="http://hdl.handle.net/2441/dambferfb7dfprc9m2l36952j#humanStartPage"/>
+      </didl:Component>
+    </didl:Item>
+    <didl:Component>
+      <didl:Resource mimeType="application/xml" ref="http://spire.sciences-po.fr/dissemination/oaipmh2-publications.xml?verb=GetRecord&amp;amp;metadataPrefix=didl&amp;amp;identifier=oai%3Aspire.sciences-po.fr%3A2441/dambferfb7dfprc9m2l36952j"/>
+    </didl:Component>
+  </didl:Item>
+</didl:DIDL>

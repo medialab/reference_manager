@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ********************************************************************************
+
+    This XML document was originally developed in the course of development of the ISO/IEC
+    21000 standard (MPEG-21). This XML document contains either a part of the MPEG-21 schema
+    implementation for one or more MPEG-21 tools as specified by the MPEG-21 Requirements or
+    MPEG-21 examples conformant to the MPEG-21 schemas.
+
+    ISO/IEC gives users of MPEG-21 free license to this XML document or modifications thereof
+    for use in hardware or software products claiming conformance to MPEG-21.
+
+    Those intending to use this XML document in hardware or software products are advised that
+    its use may infringe existing patents. The original developers of this XML document and his/her
+    company, the subsequent editors and their companies, and ISO/IEC have no liability for use of
+    this XML document or modifications thereof in an implementation.
+
+    Copyright is not released for non MPEG-21 conforming products. The organizations who
+    contributed to this XML document retain the full right to use the code for their own purpose,
+    assign or donate their contribution to a third party and inhibit third parties from using their
+    contribution for non MPEG-21 conforming products.
+
+    Copyright (c) 2005 ISO/IEC. 
+
+    This XML document is provided for informative purposes only. If any parts of this XML
+    document contradict the normative part of the corresponding standard document then the
+    normative part should be used as the definitive specification.
+
+    This notice must be included in all copies or derivative works.
+************************************************************************************ -->
+<!--
+#############################################################################
+# ISO/IEC 21000-10                                                          #
+#   Information technology                                                  #
+#   - Multimedia framework (MPEG-21)                                        #
+#     - Part 10: Digital Item Processing                                    #
+#                                                                           #
+# FDIS (N7280) Schema definition, 24 July 2005                              #
+#############################################################################
+
+-->
+<schema
+    targetNamespace="urn:mpeg:mpeg21:2005:01-DIP-NS"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:dip="urn:mpeg:mpeg21:2005:01-DIP-NS"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <!--
+    
+    ################################################
+    #  Definition of MethodInfo                    #
+    ################################################
+    -->
+    <element name="MethodInfo" type="dip:MethodInfoType"/>
+    <complexType name="MethodInfoType">
+        <sequence>
+            <element name="Argument" type="anyURI" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="autoRun" type="boolean" use="optional"
+                    default="false"/>
+        <attribute name="profileCompliance"
+                    type="dip:ProfileComplianceType" use="optional"/>
+    </complexType>
+    <!--
+    
+    ################################################
+    # Definition of ProfileComplianceType           #
+    ################################################
+    -->
+    <simpleType name="ProfileComplianceType">
+      <list itemType="QName"/>
+    </simpleType>
+    <!--
+    
+    ################################################
+    # Definition of Label                          #
+    ################################################
+    -->
+    <element name="Label" type="dip:LabelType"/>
+    <complexType name="LabelType">
+        <simpleContent>
+            <extension base="anyURI"/>
+        </simpleContent>
+    </complexType>
+    <!--
+    
+    ################################################
+    # Definition of ObjectType                     #
+    ################################################
+    -->
+    <element name="ObjectType" type="dip:ObjectTypeType"/>
+    <complexType name="ObjectTypeType">
+        <simpleContent>
+            <extension base="anyURI"/>
+        </simpleContent>
+    </complexType>
+    <!--
+    
+    ################################################
+    # Definition of JDIXOClasses                   #
+    ################################################
+    -->
+    <element name="JDIXOClasses" type="dip:JDIXOClassesType"/>
+    <complexType name="JDIXOClassesType">
+        <sequence>
+            <element name="Class" type="string" minOccurs="0"
+                        maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <!-- 
+    -->
+</schema>

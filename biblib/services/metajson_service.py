@@ -72,6 +72,7 @@ def dump_metajson(metajson):
 def enhance_metajson(metajson):
     # title_non_sort
     manage_title_non_sort(metajson)
+    return metajson
 
 
 def manage_title_non_sort(metajson):

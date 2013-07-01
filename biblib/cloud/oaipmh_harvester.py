@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import json
 from lxml import etree
+
 from oaipmh.client import Client
 from oaipmh.metadata import MetadataReader
 from oaipmh.metadata import MetadataRegistry
@@ -149,19 +151,33 @@ def convert_header(header):
         result['datestamp'] = header.datestamp().isoformat()
         result['setspecs'] = header.setSpec()
         result['deleted'] = header.isDeleted()
-    return result
+        json.dumps(result, ensure_ascii=False, indent=2, encoding="utf-8", sort_keys=True)
+        return result
 
 
-def convert_record(record, metadata_prefix_orig, source):
-    result = {}
-    result.update(convert_header(record[0]))
-    result['meta_orig_prefix'] = metadata_prefix_orig
-    meta_orig_value = record[1].getField("orig")
-    result['meta_orig_value'] = meta_orig_value.encode('utf-8')
-    metajson_list = crosswalks_service.convert_string(result['meta_orig_value'], result['meta_orig_prefix'], constants.FORMAT_METAJSON, source, False)
+def convert_record(record, meta_orig_prefix, source):
+    header = convert_header(record[0])
+    meta_orig_value = record[1].getField("orig").encode('utf-8')
+    metajson_list = crosswalks_service.convert_string(meta_orig_value, meta_orig_prefix, constants.FORMAT_METAJSON, source, False)
+    metajson = None
     if metajson_list:
-        result['metajson'] = metajson_list.next()
-    return result
+        metajson = metajson_list.next()
+    if metajson:
+        # header identifier
+        if "identifiers" not in metajson:
+            metajson["identifiers"] = []
+        metajson["identifiers"].append({"oai": header["identifier"]})
+        metajson["rec_id"] = header["identifier"].replace("oai:spire.sciences-po.fr:", "")
+        # header datestamp
+        metajson["rec_modified_date"] = header["datestamp"]
+        # header setspecs
+        metajson["sets"] = header["setspecs"]
+        # header deleted
+        if header['deleted']:
+            metajson["rec_status"] = "deleted"
+        else:
+            metajson["rec_status"] = "published"
+    return metajson
 
 
 def identifiy(target):
@@ -232,9 +248,6 @@ def list_records(target, date_from, date_until, setspec):
         elif date_from is None and date_until is None and setspec is None:
             records = client.listRecords(metadataPrefix=target['metadata_prefix'])
 
-        results = []
         if records is not None:
-            results = []
             for record in records:
-                results.append(convert_record(record, target['metadata_prefix'], target['title']))
-        return results
+                yield convert_record(record, target['metadata_prefix'], target['title'])

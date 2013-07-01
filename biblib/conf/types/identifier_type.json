@@ -153,6 +153,13 @@
         }, 
         {
             "labels": {
+                "en": "OAI-PMH", 
+                "fr": "OAI-PMH"
+            }, 
+            "type_id": "oai"
+        }, 
+        {
+            "labels": {
                 "en": "OCLC", 
                 "fr": "OCLC"
             }, 

@@ -1,0 +1,99 @@
+Template-Type: ReDIF-Paper 1.0
+Title: L’Enquête et ses méthodes : l’entretien collectif
+File-URL: http://spire.sciences-po.fr/hdl:/2441/7467/resources/sd-haegel-entretiens-collectifs-ouv.-2004intro-et-conclusion.pdf
+File-Format: application/pdf
+Handle: 2441/7467
+
+Template-Type: ReDIF-Paper 1.0
+Title: Décrire et compter. Du bricolage à l'innovation : questions de méthodes
+Handle: 2441/eu4vqp9ompqllr09iig9of18l
+
+Template-Type: ReDIF-Paper 1.0
+Title: niveau des voix aux effets de seuil : comment se produisent en France les majorités électorales au scrutin majoritaire à deux tours
+Handle: 2441/9lk2v3v0pebejmo97cq880da4
+
+Template-Type: ReDIF-Paper 1.0
+Title: Panel électoral français 2002 : le dispositif méthodologique
+Handle: 2441/53r60a8s3kup1vc9l21k82t9p
+
+Template-Type: ReDIF-Paper 1.0
+Title: Annexes statistiques
+Handle: 2441/3cr7jj61bs68cvg99cpo5gob4
+
+Template-Type: ReDIF-Paper 1.0
+Title: favoritisme à la corruption : les définitions concurrentes de la probité publique
+Handle: 2441/3cr7jj61bs68cvg998cj1i43p
+
+Template-Type: ReDIF-Paper 1.0
+Title: L’espace politique des électeurs français à la fin des années 1990 : nouveaux et anciens clivages, hétérogénéité des électorats
+File-URL: http://www.persee.fr/web/revues/home/prescript/article/rfsp_0035-2950_2000_num_50_3_395484
+Handle: 2441/f0uohitsgqh8dhk97j0a76i2o
+
+Template-Type: ReDIF-Paper 1.0
+Title: favoritisme à la corruption : les représentations sociales des Français en matière d’atteintes à la probité publique
+Handle: 2441/f0uohitsgqh8dhk97ip0kb5h6
+
+Template-Type: ReDIF-Paper 1.0
+Title: « Effet patrimoine » : 30 ans après, le retour ?
+Handle: 2441/5k7940uimfdf9c89935s60a3p
+
+Template-Type: ReDIF-Paper 1.0
+Title: l’usage des perspectives interactionnistes en recherche
+Handle: 2441/c6t1fl36hv9s7q89j6si044k5
+
+Template-Type: ReDIF-Paper 1.0
+Title: L’entretien biographique et la saisie des interactions avec autrui
+Handle: 2441/c6t1fl36hv9s7q89j81i2b416
+
+Template-Type: ReDIF-Paper 1.0
+Title: Introduction : "De l’usage des perspectives interactionnistes en recherche"
+Handle: 2441/c6t1fl36hv9s7q89j81ho6cpg
+
+Template-Type: ReDIF-Paper 1.0
+Title: Ethnographie de terrain et relation d’enquête. Observer les "communautés" de logiciels libres
+Handle: 2441/c6t1fl36hv9s7q89j81hi5490
+
+Template-Type: ReDIF-Paper 1.0
+Title: Distant observation and in-depth ethnography in the study of free software 'communities'
+Handle: 2441/c6t1fl36hv9s7q89j6sj5j5rh
+
+Template-Type: ReDIF-Paper 1.0
+Title: Présentation : Méthodes d’analyse des discours
+Handle: 2441/c6t1fl36hv9s7q89j6sjpip2m
+
+Template-Type: ReDIF-Paper 1.0
+Title: qualité des enquêtes politiques
+Handle: 2441/3cr7jj61bs68cvg998cjh6a82
+
+Template-Type: ReDIF-Paper 1.0
+Title: Annexes : résultats et cartes
+Handle: 2441/3cr7jj61bs68cvg99cpo348hn
+
+Template-Type: ReDIF-Paper 1.0
+Title: L’espace politique français à la veille de la séquence électorale 2007 : opinions, attitudes et électorats potentiels
+Handle: 2441/3cr7jj61bs68cvg998co201ig
+
+Template-Type: ReDIF-Paper 1.0
+Title: Political Space of the French Electorate on the Eve of the Presidential Elections 2007: Geometric Data Analysis Applied to the Baromètre politique français
+Handle: 2441/3cr7jj61bs68cvg998e9n6tql
+
+Template-Type: ReDIF-Paper 1.0
+Title: Annales de mathématiques 2000
+Handle: 2441/f0uohitsgqh8dhk982mcka495
+
+Template-Type: ReDIF-Paper 1.0
+Title: Annales de mathématiques 2001
+Handle: 2441/f0uohitsgqh8dhk982mci2ta8
+
+Template-Type: ReDIF-Paper 1.0
+Title: L’espace politique français à la veille de l’élection présidentielle, 2007 : analyse géométrique des données
+Handle: 2441/3cr7jj61bs68cvg998cj52588
+
+Template-Type: ReDIF-Paper 1.0
+Title: Forecasting the 2007 French Elections
+Handle: 2441/3cr7jj61bs68cvg998e9l8h3g
+
+Template-Type: ReDIF-Paper 1.0
+Title: Political Space of the French Electorate in 2007: Geometric Data Analysis Applied on the Presidential Election
+Handle: 2441/3cr7jj61bs68cvg998e9ja227
+

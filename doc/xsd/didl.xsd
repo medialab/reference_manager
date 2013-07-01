@@ -1,0 +1,474 @@
+<?xml version="1.0"?>
+<!-- ********************************************************************************
+
+    This XML document was originally developed in the course of development of the ISO/IEC
+    21000 standard (MPEG-21). This XML document contains either a part of the MPEG-21 schema
+    implementation for one or more MPEG-21 tools as specified by the MPEG-21 Requirements or
+    MPEG-21 examples conformant to the MPEG-21 schemas.
+
+    ISO/IEC gives users of MPEG-21 free license to this XML document or modifications thereof
+    for use in hardware or software products claiming conformance to MPEG-21.
+
+    Those intending to use this XML document in hardware or software products are advised that
+    its use may infringe existing patents. The original developers of this XML document and his/her
+    company, the subsequent editors and their companies, and ISO/IEC have no liability for use of
+    this XML document or modifications thereof in an implementation.
+
+    Copyright is not released for non MPEG-21 conforming products. The organizations who
+    contributed to this XML document retain the full right to use the code for their own purpose,
+    assign or donate their contribution to a third party and inhibit third parties from using their
+    contribution for non MPEG-21 conforming products.
+
+    Copyright (c) 2001-2005 ISO/IEC. 
+
+    This XML document is provided for informative purposes only. If any parts of this XML
+    document contradict the normative part of the corresponding standard document then the
+    normative part should be used as the definitive specification.
+
+    This notice must be included in all copies or derivative works.
+************************************************************************************ -->
+<!--=======================================
+####################################################################
+# ISO/IEC 21000-2:2005                                             #
+#   Information technology                                         #
+#   - Multimedia framework (MPEG-21)                               #
+#     - Part 2: Digital Item Declaration                           #
+#                                                                  #
+# Schema for Derived DIDL Types                                    #
+#                                                                  #
+####################################################################
+ =======================================-->
+<schema targetNamespace="urn:mpeg:mpeg21:2002:02-DIDL-NS"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:didl="urn:mpeg:mpeg21:2002:02-DIDL-NS"
+  xmlns:didmodel="urn:mpeg:mpeg21:2002:02-DIDMODEL-NS"
+  elementFormDefault="qualified" attributeFormDefault="unqualified"
+  version="0.01">
+  <!--============================================================
+
+	 Import abstract types representing DID model entities:
+
+	============================================================-->
+  <import namespace="urn:mpeg:mpeg21:2002:02-DIDMODEL-NS"
+    schemaLocation="didmodel.xsd"/>
+  <!--=========================================================-->
+  <attributeGroup name="ID_ATTRS">
+    <attribute name="id" type="ID" use="optional"/>
+  </attributeGroup>
+  <!--============================================================
+
+	 Container element may contain any number of Container elements
+	 followed by any number of Items.
+
+	============================================================-->
+  <element name="Container" type="didl:ContainerType" substitutionGroup="didmodel:Container"/>
+  <complexType name="ContainerType">
+    <complexContent>
+      <extension base="didmodel:ContainerType">
+        <sequence>
+          <element ref="didmodel:Descriptor" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Container" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Item" minOccurs="0"
+            maxOccurs="unbounded"/>
+        </sequence>
+        <attributeGroup ref="didl:ID_ATTRS"/>
+        <anyAttribute namespace="##other" processContents="lax"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 Item element contains any number Choice elements,
+	 followed by at least one Item or Component element.
+	 An Item may be conditional.
+
+	============================================================-->
+  <element name="Item" type="didl:ItemType"
+    substitutionGroup="didmodel:Item"/>
+  <complexType name="ItemType">
+    <complexContent>
+      <extension base="didmodel:ItemType">
+        <sequence>
+          <element ref="didmodel:Condition" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Descriptor" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Choice" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <choice minOccurs="0" maxOccurs="unbounded">
+            <element ref="didmodel:Item"/>
+            <element ref="didmodel:Component"/>
+          </choice>
+          <element ref="didmodel:Annotation" minOccurs="0"
+            maxOccurs="unbounded"/>
+        </sequence>
+        <attributeGroup ref="didl:ID_ATTRS"/>
+        <anyAttribute namespace="##other" processContents="lax"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 A Descriptor contains descriptive data about its parent
+	 element.
+
+	 The Descriptor may be resource-based (comprised of a single 
+	 Component), or text-based (comprised of a single Statement).
+	 A Descriptor may be conditional.
+	
+	============================================================-->
+  <element name="Descriptor" type="didl:DescriptorType"
+    substitutionGroup="didmodel:Descriptor"/>
+  <complexType name="DescriptorType">
+    <complexContent>
+      <extension base="didmodel:DescriptorType">
+        <sequence>
+          <element ref="didmodel:Condition" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Descriptor" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <choice>
+            <element ref="didmodel:Component"/>
+            <element ref="didmodel:Statement"/>
+          </choice>
+        </sequence>
+        <attributeGroup ref="didl:ID_ATTRS"/>
+        <anyAttribute namespace="##other" processContents="lax"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 A Statement contains textual descriptive data within a 
+	 Descriptor. 
+
+	 Attribs: 
+	 MimeType  - A string identifying the type of metadata
+
+	============================================================-->
+  <element name="Statement" type="didl:StatementType"
+    substitutionGroup="didmodel:Statement"/>
+  <complexType name="StatementType" mixed="true">
+    <complexContent mixed="true">
+      <extension base="didmodel:StatementType">
+        <sequence>
+          <any namespace="##any" processContents="lax" minOccurs="0"/>
+        </sequence>
+        <attribute name="mimeType" type="string" use="required"/>
+        <attribute name="ref" type="anyURI"/>
+        <attribute name="encoding" type="string"/>
+        <attribute name="contentEncoding" type="NMTOKENS"/>
+        <anyAttribute namespace="##other" processContents="lax"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 Component element contains one or more Resource elements, followed by any 
+	 number of Anchor elements.
+	 A Component may be conditional.
+
+	============================================================-->
+  <element name="Component" type="didl:ComponentType"
+    substitutionGroup="didmodel:Component"/>
+  <complexType name="ComponentType">
+    <complexContent>
+      <extension base="didmodel:ComponentType">
+        <sequence>
+          <element ref="didmodel:Condition" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Descriptor" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Resource" maxOccurs="unbounded"/>
+          <element ref="didmodel:Anchor" minOccurs="0"
+            maxOccurs="unbounded"/>
+        </sequence>
+        <attributeGroup ref="didl:ID_ATTRS"/>
+        <anyAttribute namespace="##other" processContents="lax"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 An Anchor element indicates a point of interest in the
+	 resource of the parent Component.
+	 An Anchor may be conditional.
+	
+	 Attribs:
+	 precedence  - An unsigned integer value indicating the position
+	         that this start point should occupy relative to the 
+	         other start points in this title.  The highest
+	         precedence anchor is the default entry 
+	         point.
+
+	============================================================-->
+  <element name="Anchor" type="didl:AnchorType"
+    substitutionGroup="didmodel:Anchor"/>
+  <complexType name="AnchorType">
+    <complexContent>
+      <extension base="didmodel:AnchorType">
+        <sequence>
+          <element ref="didmodel:Condition" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Descriptor" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Fragment" minOccurs="0"/>
+        </sequence>
+        <attribute name="precedence" type="unsignedInt"/>
+        <attributeGroup ref="didl:ID_ATTRS"/>
+        <anyAttribute namespace="##other" processContents="lax"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 A Fragment element indicates a part of interest in a
+	 resource.
+	
+	 Attribs:
+	 fragmentId  - A fragment identifier that may locate the part
+	         of interest within the resource. This string,
+	         when appended to the URI of the resource, plus
+	         a '#', becomes the full URI for the part of
+	.        interest.
+
+	============================================================-->
+  <element name="Fragment" type="didl:FragmentType"
+    substitutionGroup="didmodel:Fragment"/>
+  <complexType name="FragmentType">
+    <complexContent>
+      <extension base="didmodel:FragmentType">
+        <sequence>
+          <any namespace="##any" processContents="lax" minOccurs="0"/>
+        </sequence>
+        <attribute name="fragmentId" type="string"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 Condition element contains no children.  It indicates a
+	 selection condition for the parent file.  Multiple Condition
+	 tags indicate an 'OR' relationship, in that only one Condition
+	 needs to be satisfied for the parent element to be retrieved,
+	 included, etc.  The individual IDs in the require attribute of
+	 a Condition tag have an 'AND' relationship in that selection
+	 of all of the IDs referenced are required to satisfy that
+	 Condition.
+
+	 Attribs:
+	 require   - Indicates the Selection(s) required to be affirmed 
+	       for this Condition to be "satisfied".
+
+	 except  - Indicates the Selection(s) required to be denied 
+	       for this Condition to be "satisfied".
+
+	============================================================-->
+  <element name="Condition" type="didl:ConditionType"
+    substitutionGroup="didmodel:Condition"/>
+  <complexType name="ConditionType">
+    <complexContent>
+      <extension base="didmodel:ConditionType">
+        <attribute name="require" type="IDREFS"/>
+        <attribute name="except" type="IDREFS"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 Choice element contains one or more Selections.  
+	 A Choice may be conditional.
+	 
+	 Attribs:
+
+	 MinSelections   - Minimum number of Selections that are required be made.
+	           If not present, there is no minimum.
+
+	 MaxSelections   - Maximum number of Selections that are allowed to be made.
+	           If not present, there is no maximum.
+
+	 default   - Indicates one or more default selections to use in the absence
+	       of info to make a more specific decision.  Shall conform to the
+	       requirements of the minSelections and/or maxSelections
+	       attributes if present.
+
+	 choice_id   - Serves as a target for Assertion elements.
+
+	============================================================-->
+  <element name="Choice" type="didl:ChoiceType"
+    substitutionGroup="didmodel:Choice"/>
+  <complexType name="ChoiceType">
+    <complexContent>
+      <extension base="didmodel:ChoiceType">
+        <sequence>
+          <element ref="didmodel:Condition" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Descriptor" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Selection" maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="minSelections" type="nonNegativeInteger"/>
+        <attribute name="maxSelections" type="positiveInteger"/>
+        <attribute name="default" type="IDREFS"/>
+        <attribute name="choice_id" type="ID"/>
+        <anyAttribute namespace="##other" processContents="lax"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 Selection element contains no children.
+	 A Selection may be conditional.
+
+	 Attrib: select_id - Uniquely identifies the Selection
+
+	============================================================-->
+  <element name="Selection" type="didl:SelectionType"
+    substitutionGroup="didmodel:Selection"/>
+  <complexType name="SelectionType">
+    <complexContent>
+      <extension base="didmodel:SelectionType">
+        <sequence>
+          <element ref="didmodel:Condition" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Descriptor" minOccurs="0"
+            maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="select_id" type="ID" use="required"/>
+        <anyAttribute namespace="##other" processContents="lax"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 Resource element contains or points to binary data. The
+	 contained data may be binary or any valid XML element.
+
+	 Attribs: 
+	 mimeType  - An identifier of a recognized scheme indicating the type
+	       of the resource.
+	 ref  - A URI from which the resource data can be obtained
+
+	============================================================-->
+  <element name="Resource" type="didl:ResourceType"
+    substitutionGroup="didmodel:Resource"/>
+  <complexType name="ResourceType" mixed="true">
+    <complexContent mixed="true">
+      <extension base="didmodel:ResourceType">
+        <sequence>
+          <any namespace="##any" processContents="lax" minOccurs="0"/>
+        </sequence>
+        <attribute name="mimeType" type="string" use="required"/>
+        <attribute name="ref" type="anyURI"/>
+        <attribute name="encoding" type="string"/>
+        <attribute name="contentEncoding" type="NMTOKENS"/>
+        <anyAttribute namespace="##other" processContents="lax"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 Annotation contains any number of Assertions followed by 
+	 any number of Descriptors followed by any number of Anchors			
+
+	 Attrib: target - Points to the element being annotated
+
+	 Restrictions: 
+		1. The target shall reference an element within the
+		   parent Item, or may reference the parent Item itself.
+		2. The contents of an Annotation shall conform with the 
+		   content model of the targeted element. For example,
+		   Anchors may be included only if the target references
+		   a Component.
+
+	============================================================-->
+  <element name="Annotation" type="didl:AnnotationType"
+    substitutionGroup="didmodel:Annotation"/>
+  <complexType name="AnnotationType">
+    <complexContent>
+      <extension base="didmodel:AnnotationType">
+        <sequence>
+          <element ref="didmodel:Assertion" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Descriptor" minOccurs="0"
+            maxOccurs="unbounded"/>
+          <element ref="didmodel:Anchor" minOccurs="0"
+            maxOccurs="unbounded"/>
+        </sequence>
+        <attribute name="target" type="anyURI" use="required"/>
+        <attributeGroup ref="didl:ID_ATTRS"/>
+        <anyAttribute namespace="##other" processContents="lax"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!--============================================================
+
+	 Assertion contains no child elements
+
+	 Attribs: 
+
+		true   - The set of selection IDs which are asserted as true
+		false  - The set of selection IDs which are asserted as false
+
+	============================================================-->
+  <element name="Assertion" type="didl:AssertionType"
+    substitutionGroup="didmodel:Assertion"/>
+  <complexType name="AssertionType">
+    <complexContent>
+      <extension base="didmodel:AssertionType">
+        <attribute name="target" type="anyURI" use="required"/>
+        <attribute name="true" type="NMTOKENS" use="optional"/>
+        <attribute name="false" type="NMTOKENS" use="optional"/>
+      </extension>
+    </complexContent>
+  </complexType>
+  <!-- elements from here onward are unique to the DIDL representation-->
+  <!--============================================================
+
+	 DIDL element may contain exactly one Container or Item.
+
+	============================================================-->
+  <element name="DIDL" type="didl:DIDLType"/>
+  <complexType name="DIDLType">
+    <sequence>
+      <element ref="didl:DIDLInfo" minOccurs="0" maxOccurs="unbounded"/>
+      <element ref="didl:Declarations" minOccurs="0"/>
+      <choice>
+        <element ref="didmodel:Container"/>
+        <element ref="didmodel:Item"/>
+      </choice>
+    </sequence>
+    <attribute name="DIDLDocumentId" type="anyURI"/>
+    <anyAttribute namespace="##other" processContents="lax"/>
+  </complexType>
+  <!--============================================================
+
+   A DIDLInfo element may contain information only applicable to 
+   the DIDL document and not the Digital Item represented.
+
+  ============================================================-->
+  <element name="DIDLInfo" type="didl:DIDLInfoType"/>
+  <complexType name="DIDLInfoType">
+    <sequence>
+      <any namespace="##any" processContents="lax"/>
+    </sequence>
+  </complexType>
+  <!--============================================================
+
+	 A Declarations element contains any number of Items, Descriptors,
+	 Components, and Anchors, in any order.
+
+	============================================================-->
+  <element name="Declarations" type="didl:DeclarationsType"/>
+  <complexType name="DeclarationsType">
+    <choice maxOccurs="unbounded">
+      <element ref="didmodel:Item"/>
+      <element ref="didmodel:Descriptor"/>
+      <element ref="didmodel:Component"/>
+      <element ref="didmodel:Annotation"/>
+      <element ref="didmodel:Anchor"/>
+    </choice>
+  </complexType>
+</schema>

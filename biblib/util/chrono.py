@@ -2,13 +2,10 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import sys
-import codecs
-import locale
-
 
 def chrono_trace(name, before_date, after_date, count):
     time = after_date - before_date
-    print "# {}: total: {} milliseconds: {} microseconds".format(name, str(time.microseconds / 1000), str(time.microseconds))
+    microseconds = time.days * 3600 * 24 * 1000000 + time.seconds * 1000000 + time.microseconds
+    print "# {}: {} milliseconds ({} days, {} seconds, {} microseconds)".format(name, str(microseconds / 1000), str(time.days), str(time.seconds), str(time.microseconds))
     if count:
-        print "# {}: per reference: {} microseconds".format(name, str(time.microseconds / count))
+        print "# {}: for {} items : {} microseconds per item".format(name, count, str(microseconds / count))

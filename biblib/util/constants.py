@@ -13,6 +13,7 @@ FORMAT_ALTO = 'alto'
 FORMAT_BIBJSON = 'bibjson'
 FORMAT_BIBTEX = 'bibtex'
 FORMAT_DDI = 'ddi'
+FORMAT_DIDL = 'didl'
 FORMAT_EAD = 'ead'
 FORMAT_ENDNOTEXML = 'endnotexml'
 FORMAT_LOM = 'lom'
@@ -25,7 +26,9 @@ FORMAT_OAIDC = 'oai_dc'
 FORMAT_OPENURL = 'openurl'
 FORMAT_OPENURLCOINS = 'openurlcoins'
 FORMAT_PREMIS = 'premis'
+FORMAT_REPEC = 'repec'
 FORMAT_RESEARCHERML = 'researcherml'
+FORMAT_RIS = 'ris'
 FORMAT_SUMMONJSON = 'summonjson'
 FORMAT_UNIXREF = 'unixref'
 
@@ -47,23 +50,25 @@ type_to_file_extension = {
 }
 
 input_format_to_type = {
-    'alto': FILE_TYPE_BIBTEX,
-    'bibjson': FILE_TYPE_JSON,
-    'bibtex': FILE_TYPE_BIBTEX,
+    FORMAT_ALTO: FILE_TYPE_XMLETREE,
+    FORMAT_BIBJSON: FILE_TYPE_JSON,
+    FORMAT_BIBTEX: FILE_TYPE_BIBTEX,
     'dc': FILE_TYPE_XMLETREE,
-    'ddi': FILE_TYPE_XMLETREE,
-    'endnotexml': FILE_TYPE_XMLETREE,
-    'metajson': FILE_TYPE_JSON,
-    'mets': FILE_TYPE_XMLETREE,
-    'mix': FILE_TYPE_XMLETREE,
-    'mods': FILE_TYPE_XMLETREE,
-    'oai_dc': FILE_TYPE_XMLETREE,
-    'premis': FILE_TYPE_XMLETREE,
-    'repec': FILE_TYPE_TXT,
-    'ris': FILE_TYPE_TXT,
-    'researcherml': FILE_TYPE_XMLETREE,
-    'summonjson': FILE_TYPE_JSON,
-    'unixref': FILE_TYPE_XMLETREE
+    FORMAT_DDI: FILE_TYPE_XMLETREE,
+    FORMAT_DIDL: FILE_TYPE_XMLETREE,
+    FORMAT_EAD: FILE_TYPE_XMLETREE,
+    FORMAT_ENDNOTEXML: FILE_TYPE_XMLETREE,
+    FORMAT_METAJSON: FILE_TYPE_JSON,
+    FORMAT_METS: FILE_TYPE_XMLETREE,
+    FORMAT_MIX: FILE_TYPE_XMLETREE,
+    FORMAT_MODS: FILE_TYPE_XMLETREE,
+    FORMAT_OAIDC: FILE_TYPE_XMLETREE,
+    FORMAT_PREMIS: FILE_TYPE_XMLETREE,
+    FORMAT_REPEC: FILE_TYPE_TXT,
+    FORMAT_RESEARCHERML: FILE_TYPE_XMLETREE,
+    FORMAT_RIS: FILE_TYPE_TXT,
+    FORMAT_SUMMONJSON: FILE_TYPE_JSON,
+    FORMAT_UNIXREF: FILE_TYPE_XMLETREE
 }
 
 xmlns_map = {
@@ -75,6 +80,8 @@ xmlns_map = {
     'dcmitype': "http://purl.org/dc/dcmitype/",
     'dcterms': "http://purl.org/dc/terms/",
     'didl': "urn:mpeg:mpeg21:2002:02-DIDL-NS",
+    'dii': "urn:mpeg:mpeg21:2002:01-DII-NS",
+    'dip': "urn:mpeg:mpeg21:2005:01-DIP-NS",
     'ddi': "http://www.icpsr.umich.edu/DDI",
     'gd': "http://schemas.google.com/g/2005",
     'gdocs': "http://schemas.google.com/docs/2007",
@@ -88,6 +95,7 @@ xmlns_map = {
     'opensearchrss': "http://a9.com/-/spec/opensearchrss/1.0/",
     'premis': "info:lc/xmlns/premis-v2",
     'qualifieddc': "",
+    'rdf': "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     'researcherml': "http://bibliotheque.sciences-po.fr/standards/researcherml/v1",
     'simpledc': "",
     'yt': "http://gdata.youtube.com/schemas/2007"
@@ -97,6 +105,7 @@ xmlns_to_input_format = {
     'http://schema.ccs-gmbh.com/ALTO': FORMAT_ALTO,
     'http://purl.org/dc/elements/1.1/': 'dc',
     'http://www.openarchives.org/OAI/2.0/oai_dc/': FORMAT_OAIDC,
+    'urn:mpeg:mpeg21:2002:02-DIDL-NS': FORMAT_DIDL,
     'http://www.icpsr.umich.edu/DDI': FORMAT_DDI,
     'http://www.loc.gov/METS/': FORMAT_METS,
     'http://www.loc.gov/mix/v20': FORMAT_MIX,
@@ -109,6 +118,7 @@ xmltag_to_input_format = {
     'alto': FORMAT_ALTO,
     'dc': FORMAT_OAIDC,
     'codeBook': FORMAT_DDI,
+    'DIDL': FORMAT_DIDL,
     'mets': FORMAT_METS,
     'mix': FORMAT_MIX,
     'mods': FORMAT_MODS,
