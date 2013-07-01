@@ -78,6 +78,8 @@ def init_corpus_indexes(corpus):
     index_name_family = ('name_given', pymongo.ASCENDING)
 
     mongodb[corpus][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
+
+    mongodb[corpus][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
     mongodb[corpus][AGENTS].ensure_index([index_id, index_rec_id, index_name, index_name_family], safe=True)
     mongodb[corpus][TYPES].ensure_index([index_id], safe=True)
     mongodb[corpus][DATAFIELDS].ensure_index([index_id], safe=True)
@@ -158,6 +160,10 @@ def search(corpus, search_query):
     search_indexes = []
     if "search_terms" in search_query:
         for search_term in search_query["search_terms"]:
+            # value
+            if "value" not in search_term or search_term["value"] is None:
+                # useless
+                break
             # index
             if "index" not in search_term:
                 search_response["errors"] = [ERROR_100]
@@ -166,30 +172,29 @@ def search(corpus, search_query):
             elif search_term["index"] == "identifier":
                 pass
             elif search_term["index"] == "title":
-                search_indexes.append({"title": {"$in": search_query["filter_types"]}})
-                pass
+                search_indexes.append({"title": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "is_part_of":
-                pass
+                search_indexes.append({"is_part_ofs.title": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "creator":
-                pass
+                search_indexes.append({"creators.agent.name_family": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "creator_id":
-                pass
+                search_indexes.append({"creators.agent.rec_id": search_term["value"]})
             elif search_term["index"] == "affiliation":
-                pass
+                search_indexes.append({"creators.agent.affiliation.name": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "affiliation_id":
-                pass
+                search_indexes.append({"creators.agent.affiliation.rec_id": search_term["value"]})
             elif search_term["index"] == "publisher":
-                pass
+                search_indexes.append({"publishers": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "keyword":
-                pass
+                search_indexes.append({"keywords.value": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "classification":
-                pass
+                search_indexes.append({"classifications.value": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "research_area":
-                pass
+                search_indexes.append({"research_areas.value": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "subject":
-                pass
+                search_indexes.append({"subjects.value": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "set":
-                pass
+                search_indexes.append({"sets.value": {"$regex": search_term["value"], "$options": 'i'}})
             # operator
             if "operator" in search_term:
                 if search_term["operator"] == "or":
@@ -235,7 +240,7 @@ def save_document(corpus, document):
         corpus = default_corpus
     if "rec_id" not in document:
         document["rec_id"] = str(uuid.uuid1())
-    return mongodb[corpus][DOCUMENTS].insert(document)
+    return mongodb[corpus][DOCUMENTS].save(document)
 
 
 def delete_document(corpus, rec_id):

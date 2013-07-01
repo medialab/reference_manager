@@ -7,6 +7,7 @@ import json
 import locale
 
 from bson import json_util
+from bson.py3compat import PY3, binary_type, string_types
 from txjsonrpc.web import jsonrpc
 from txjsonrpc import jsonrpclib
 from twisted.web import server
@@ -58,17 +59,34 @@ class References_repository(jsonrpc.JSONRPC):
     def format_bson(self, bson_data):
         return json_util.dumps(bson_data, ensure_ascii=False, indent=4, encoding="utf-8", sort_keys=True)
 
+    def json_to_bson(self, obj):
+        """Recursive helper method that converts BSON types so they can be
+        converted into json.
+        """
+        #https://github.com/mongodb/mongo-python-driver/blob/master/bson/json_util.py
+        if hasattr(obj, 'iteritems') or hasattr(obj, 'items'):  # PY3 support
+            return dict(((k, json_util.object_hook(v)) for k, v in obj.iteritems()))
+        elif hasattr(obj, '__iter__') and not isinstance(obj, string_types):
+            return list((json_util.object_hook(v) for v in obj))
+        try:
+            return json_util.object_hook(obj)
+        except TypeError:
+            return obj
+
     def jsonrpc_echo(self, x):
-        """Return all passed args."""
-        return x
+            """Return all passed args."""
+            return x
 
     def jsonrpc_save(self, document):
         """ insert or update a reference in the repository
             return object id if ok or error
         """
+        #bson_doc = json_util.loads(document)
+        #bson_doc = self.json_to_bson(document)
+        bson_doc = json_util._json_convert(document)
         #json_doc = json.loads(document)
         #print json.dumps(json_doc, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
-        return self.format_bson(repository_service.save_document(None, document))
+        return self.format_bson(repository_service.save_document(None, bson_doc))
 
     def jsonrpc_delete(self, rec_id):
         """ delete a reference in the repository
