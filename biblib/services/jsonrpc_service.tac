@@ -65,11 +65,11 @@ class References_repository(jsonrpc.JSONRPC):
         """
         #https://github.com/mongodb/mongo-python-driver/blob/master/bson/json_util.py
         if hasattr(obj, 'iteritems') or hasattr(obj, 'items'):  # PY3 support
-            return dict(((k, json_util.object_hook(v)) for k, v in obj.iteritems()))
+            return dict(((k, self.json_to_bson(v)) for k, v in obj.iteritems()))
         elif hasattr(obj, '__iter__') and not isinstance(obj, string_types):
-            return list((json_util.object_hook(v) for v in obj))
+            return list((self.json_to_bson(v) for v in obj))
         try:
-            return json_util.object_hook(obj)
+            return json_util.default(obj)
         except TypeError:
             return obj
 
@@ -81,12 +81,22 @@ class References_repository(jsonrpc.JSONRPC):
         """ insert or update a reference in the repository
             return object id if ok or error
         """
+        # convert JSON to BSON
+        print "coucou1"
+        doc_json_string = json.dumps(document, ensure_ascii=False, encoding="utf-8")
+        print doc_json_string
+        print "coucou2"
+        doc_bson = json_util.loads(doc_json_string)
+        print doc_bson
+        print "coucou3"
         #bson_doc = json_util.loads(document)
         #bson_doc = self.json_to_bson(document)
-        bson_doc = json_util._json_convert(document)
+        #bson_doc = json_util._json_convert(document)
         #json_doc = json.loads(document)
         #print json.dumps(json_doc, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
-        return self.format_bson(repository_service.save_document(None, bson_doc))
+        result = repository_service.save_document(None, doc_bson)
+        print result
+        return self.format_bson(result)
 
     def jsonrpc_delete(self, rec_id):
         """ delete a reference in the repository
