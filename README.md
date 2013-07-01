@@ -1,7 +1,7 @@
 # BibLib
 
 ## Install dependencies on Mac OS X
-### Intall Apple Xcode and Command Line Tools
+### Install Apple Xcode and Command Line Tools
 …
 ### Install Homebrew
 
@@ -39,7 +39,7 @@ If the port is blocked by the firewall:
     
     nmap -p 11371 keyserver.ubuntu.com
 
-You have to do this manualy:
+You have to do this manually:
 
     keydir="/var/tmp/10gen-key"
     mkdir -p $keydir
@@ -74,7 +74,7 @@ Starting MongoDB:
 
     sudo service mongodb start
     
-You can verify that mongod has started successfully by checking the contents of the log file at /var/log/mongodb/mongodb.log.
+You can verify that mongodb has started successfully by checking the contents of the log file at /var/log/mongodb/mongodb.log.
 
 Stopping MongoDB:
 
