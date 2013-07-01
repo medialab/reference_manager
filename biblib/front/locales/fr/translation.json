@@ -1,4 +1,7 @@
 {
+  "actions": {
+    "validate": "Valider"
+  },
   "navigation": {
     "addEntry": "Ajouter une référence",
     "searchEntry": "Rechercher dans les références"

@@ -12,6 +12,9 @@
         },
         IntegerField: {
           path: 'templates/IntegerField.handlebars'
+        },
+        validate: {
+          path: 'templates/createPanel.validate.handlebars'
         }
       };
 
@@ -160,7 +163,7 @@
         return o.dom;
       }));
 
-      $('<button class="validate-button">Validate</button>').click(validate).appendTo($('.create-form', _html));
+      $(_templates.validate.template()).click(validate).appendTo($('.create-form', _html));
 
       fill(entry || { rec_type: e.data.field });
     };
