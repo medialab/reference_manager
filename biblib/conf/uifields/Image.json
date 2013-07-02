@@ -128,7 +128,9 @@
             "type_fields": [
                 "Book",
                 "BookPart",
-                "JournalArticle"
+                "JournalArticle",
+                "MagazineArticle",
+                "NewspaperArticle"
             ],
             "type_ui": "DocumentField"
         },

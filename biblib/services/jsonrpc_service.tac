@@ -16,7 +16,6 @@ from twisted.application import internet
 from operator import itemgetter
 
 from biblib.citations import citations_manager
-from biblib.crosswalks import metajsonui_crosswalk
 from biblib.services import config_service
 from biblib.services import crosswalks_service
 from biblib.services import repository_service
@@ -59,20 +58,6 @@ class References_repository(jsonrpc.JSONRPC):
     def format_bson(self, bson_data):
         return json_util.dumps(bson_data, ensure_ascii=False, indent=4, encoding="utf-8", sort_keys=True)
 
-    def json_to_bson(self, obj):
-        """Recursive helper method that converts BSON types so they can be
-        converted into json.
-        """
-        #https://github.com/mongodb/mongo-python-driver/blob/master/bson/json_util.py
-        if hasattr(obj, 'iteritems') or hasattr(obj, 'items'):  # PY3 support
-            return dict(((k, self.json_to_bson(v)) for k, v in obj.iteritems()))
-        elif hasattr(obj, '__iter__') and not isinstance(obj, string_types):
-            return list((self.json_to_bson(v) for v in obj))
-        try:
-            return json_util.default(obj)
-        except TypeError:
-            return obj
-
     def jsonrpc_echo(self, x):
             """Return all passed args."""
             return x
@@ -82,14 +67,10 @@ class References_repository(jsonrpc.JSONRPC):
             return object id if ok or error
         """
         # convert JSON to BSON
+        # TODO : try to convert directly JSON to BSON...
         doc_json_string = json.dumps(document, ensure_ascii=False, encoding="utf-8")
         doc_bson = json_util.loads(doc_json_string)
 
-        #bson_doc = json_util.loads(document)
-        #bson_doc = self.json_to_bson(document)
-        #bson_doc = json_util._json_convert(document)
-        #json_doc = json.loads(document)
-        #print json.dumps(json_doc, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
         return self.format_bson(repository_service.save_document(None, doc_bson))
 
     def jsonrpc_delete(self, rec_id):
@@ -122,8 +103,6 @@ class References_repository(jsonrpc.JSONRPC):
         metajson_document = repository_service.get_documents_by_mongo_ids(None, mongo_ids)
         if format == "metajson":
             return self.format_bson(metajson_document)
-        elif format == "metajsonui":
-            return self.format_bson(metajsonui_crosswalk.metajson_to_metajsonui(metajson_document))
         else:
             return crosswalks_service.convert_document(metajson_document, "metajson", format)
 
