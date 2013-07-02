@@ -97,10 +97,10 @@
       for (i = 0, l = _components.length; i < l; i++) {
         component = _components[i];
         value = component.getData ?
-          component.getData() :
+          component.getData(data) :
           blf.modules.createPanel.defaultMethods.getData.call(component);
 
-        if (value !== undefined)
+        if (value !== undefined && component.property !== undefined)
         data[component.property] = value;
       }
 
@@ -133,7 +133,7 @@
 
         if (entry) {
           if (component.fill)
-            component.fill(entry[component.property], entry);
+            component.fill(component.property ? entry[component.property] : null, entry);
           else
             blf.modules.createPanel.defaultMethods.fill.call(
               component,
@@ -165,7 +165,7 @@
 
       $(_templates.validate.template()).click(validate).appendTo($('.create-form', _html));
 
-      fill(entry || { rec_type: e.data.field });
+      fill(entry || { rec_type: e.data.field.children });
     };
   };
 
@@ -174,7 +174,7 @@
    * *******************************
    */
   mlab.pkg('blf.modules.createPanel.defaultMethods');
-  blf.modules.createPanel.generateForm = function(d, field) {
+  blf.modules.createPanel.generateForm = function(d, config) {
     var i,
         l,
         obj,
@@ -183,32 +183,41 @@
         components = [];
 
     // Parse children:
-    for (i = 0, l = field.children.length; i < l; i++) {
-      obj = field.children[i];
-      module = blf.modules.customInputs[obj.type_ui];
-
-      // If a custom component is found:
-      if (typeof module === 'function') {
-        module = d.addModule(module, [obj]);
-        components.push(module.getComponent());
-
-      // Else, if a basic component is recognized:
-      } else if (_templates[obj.type_ui])
-        components.push({
-          propertyObject: obj,
-          property: obj.property,
-          dom: $(_templates[obj.type_ui].template({
-            label: obj.label || obj.labels[blf.assets.lang],
-            property: obj.property
-          }))
-        });
-
-      // If not recognized at all:
-      else
-        d.warn('Data type "' + obj.type_ui + '" not recognized.');
-    }
+    for (i = 0, l = config.length; i < l; i++)
+      components.push(blf.modules.createPanel.getComponent(d, config[i]));
 
     return components;
+  };
+
+  /**
+   * Instanciates and returns the good component.
+   * @return {*} The component instance.
+   */
+  blf.modules.createPanel.getComponent = function(d, obj) {
+    var component,
+        module = blf.modules.customInputs[obj.type_ui];
+
+    // If a custom component is found:
+    if (typeof module === 'function') {
+      module = d.addModule(module, [obj]);
+      component = module.getComponent();
+
+    // Else, if a basic component is recognized:
+    } else if (_templates[obj.type_ui])
+      component = {
+        propertyObject: obj,
+        property: obj.property,
+        dom: $(_templates[obj.type_ui].template({
+          label: obj.label || obj.labels[blf.assets.lang],
+          property: obj.property
+        }))
+      };
+
+    // If not recognized at all:
+    else
+      console.log(obj),d.warn('Data type "' + obj.type_ui + '" not recognized.');
+
+    return component;
   };
 
   /**

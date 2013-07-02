@@ -56,16 +56,17 @@
    *
    * @param  {array}   arr The array to index.
    * @param  {?string} key The key that will be used as index. If not
-   *                       specified,
+   *                       specified, 'id' is used instead. If null, then the
+   *                       full objects is used as key (useful if the array is
+   *                       made of strings or numbers).
    * @return {object}      Returns the object index.
    */
   mlab.pkg('mlab.array');
   mlab.array.index = function(arr, key) {
     arr = arr || [];
-    key = key || 'id';
 
-    return arr.reduce(function(res, obj) {
-      res[obj[key]] = obj;
+    return arr.reduce(function(res, v) {
+      res[key !== null ? v[key || 'id'] : v] = v;
       return res;
     }, {});
   };
@@ -174,4 +175,11 @@
       }
     }
   ];
+
+  /**
+   * Just some useful functions for functional programming:
+   */
+  mlab.pkg('mlab.fn');
+  mlab.fn.id = function(v) { return v; };
+  mlab.fn.nil = function() {};
 })();

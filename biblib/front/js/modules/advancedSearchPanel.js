@@ -5,6 +5,9 @@
 
   // Loading Handlebars templates:
   var _templates = {
+        main: {
+          path: 'templates/advancedSearchPanel.handlebars'
+        },
         index: {
           path: 'templates/advancedSearchPanel.index.handlebars'
         },
@@ -29,7 +32,10 @@
     var _self = this,
         _html = html,
         _index,
-        _filter;
+        _filter,
+        _filtersComponents;
+
+    _html.append($(_templates.main.template()));
 
     // Try to get the list:
     // AAARGH: How am I supposed to do when I add a module that needs to
@@ -56,13 +62,13 @@
         query: '',
         operator: _index.default_operator
       });
-      generate();
+      generateIndex();
     }).on('click', '.remove-index', function(e) {
       _index.indexesArray.splice(
         $(e.target).closest('.index').index(),
         1
       );
-      generate();
+      generateIndex();
     });
 
     reset();
@@ -81,16 +87,12 @@
       return res;
     }
 
-    // Generate DOM:
-    function generate() {
-      _html.empty();
+    // Generate index DOM:
+    function generateIndex() {
+      var dom = $('.index-container', _html).empty();
 
       if (_index)
-        _html.append($(_templates.index.template(_index)));
-
-      // if (_filters) {
-      //   _html.append($(_templates.filters.template(_filters)));
-      // }
+        dom.append($(_templates.index.template(_index)));
     }
 
     // Regenerate everything blabla:
@@ -111,7 +113,19 @@
       });
       _filter = config.filters;
 
-      generate();
+      if (_filtersComponents) {
+        // TODO
+        // Kill existing modules
+      }
+      _filtersComponents = blf.modules.createPanel.generateForm(
+        blf.control,
+        _filter
+      );
+      $('.filter-container', _html).empty().append(_filtersComponents.map(function(o) {
+        return o.dom;
+      }));
+
+      generateIndex();
     }
 
     this.triggers.events.listsUpdated = function(controller) {
@@ -121,12 +135,12 @@
 
         if (!_index.indexes && indexes) {
           _index.indexes = indexes;
-          generate();
+          generateIndex();
         }
 
         if (!_index.operators && operators) {
           _index.operators = operators;
-          generate();
+          generateIndex();
         }
       }
     };

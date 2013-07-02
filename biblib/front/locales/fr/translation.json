@@ -1,6 +1,9 @@
 {
   "commons": {
-    "ellipsis": "..."
+    "ellipsis": "...",
+    "between": "entre",
+    "and": "et",
+    "or": "ou"
   },
   "actions": {
     "validate": "Valider"
