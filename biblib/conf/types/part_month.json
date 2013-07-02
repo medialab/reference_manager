@@ -1,0 +1,93 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "January",
+                "fr": "Janvier"
+            },
+            "type_id": "1"
+        },
+        {
+            "labels": {
+                "en": "February",
+                "fr": "Février"
+            },
+            "type_id": "2"
+        },
+        {
+            "labels": {
+                "en": "March",
+                "fr": "Mars"
+            },
+            "type_id": "3"
+        },
+        {
+            "labels": {
+                "en": "April",
+                "fr": "Avril"
+            },
+            "type_id": "4"
+        },
+        {
+            "labels": {
+                "en": "May",
+                "fr": "Mai"
+            },
+            "type_id": "5"
+        },
+        {
+            "labels": {
+                "en": "June",
+                "fr": "Juin"
+            },
+            "type_id": "6"
+        },
+        {
+            "labels": {
+                "en": "July",
+                "fr": "Juillet"
+            },
+            "type_id": "7"
+        },
+        {
+            "labels": {
+                "en": "August",
+                "fr": "Août"
+            },
+            "type_id": "8"
+        },
+        {
+            "labels": {
+                "en": "September",
+                "fr": "Septembre"
+            },
+            "type_id": "9"
+        },
+        {
+            "labels": {
+                "en": "October",
+                "fr": "Octobre"
+            },
+            "type_id": "10"
+        },
+        {
+            "labels": {
+                "en": "November",
+                "fr": "Novembre"
+            },
+            "type_id": "11"
+        },
+        {
+            "labels": {
+                "en": "December",
+                "fr": "Décembre"
+            },
+            "type_id": "12"
+        }
+    ],
+    "sort": false,
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "part_month"
+}

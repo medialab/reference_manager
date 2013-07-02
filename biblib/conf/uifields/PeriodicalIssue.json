@@ -25,68 +25,100 @@
             },
             "multiple": true,
             "property": "creators",
-            "required": true,
+            "required": false,
             "type_ui": "CreatorField"
         },
         {
             "labels": {
-                "en": "Date created",
-                "fr": "Date de création"
-            },
-            "property": "date_created",
-            "required": true,
-            "type_ui": "DateField"
-        },
-        {
-            "labels": {
-                "en": "Duration",
-                "fr": "Dur\u00e9e"
-            },
-            "property": "extent_duration",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "id_type": "isan",
-            "labels": {
-                "en": "ISAN",
-                "fr": "ISAN"
+                "en": "Periodical",
+                "fr": "Périodique"
             },
             "multiple": true,
             "only_one": true,
-            "property": "identifiers",
-            "required": false,
-            "type_ui": "IdentifierField"
+            "property": "is_part_ofs",
+            "required": true,
+            "type_fields": [
+                "Journal",
+                "Magazine",
+                "Newspaper"
+            ],
+            "type_ui": "DocumentField"
         },
         {
             "labels": {
-                "en": "Languages",
-                "fr": "Langues"
+                "en": "Year",
+                "fr": "Année"
             },
-            "multiple": true,
-            "property": "languages",
+            "property": "part_year",
             "required": false,
-            "type_source": "language",
-            "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Subtitles languages",
-                "fr": "Langues des sous-titres"
-            },
-            "multiple": true,
-            "property": "languages_subtitles",
-            "required": false,
-            "type_source": "language",
-            "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Is peer reviewed ?",
-                "fr": "Comité de lecture ?"
-            },
-            "property": "peer_review",
             "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Season",
+                "fr": "Saison"
+            },
+            "property": "part_season",
+            "required": false,
+            "type_source": "part_season",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Quarter",
+                "fr": "Trimestre"
+            },
+            "property": "part_quarter",
+            "required": false,
+            "type_source": "part_quarter",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Month",
+                "fr": "Mois"
+            },
+            "property": "part_month",
+            "required": false,
+            "type_source": "part_month",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Week",
+                "fr": "Semaine"
+            },
+            "property": "part_week",
+            "required": false,
+            "type_source": "part_week",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Volume",
+                "fr": "Volume"
+            },
+            "property": "part_volume",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Issue",
+                "fr": "Issue"
+            },
+            "property": "part_issue",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Date issued",
+                "fr": "Date de publication"
+            },
+            "property": "date_issued",
+            "required": true,
+            "type_ui": "DateField"
         },
         {
             "labels": {
@@ -107,17 +139,9 @@
             "property": "keywords",
             "required": false,
             "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
-                "en": "To archive ?",
-                "fr": "A archiver ?"
-            },
-            "property": "for_archiving",
-            "type_ui": "CharField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "VideoRecording"
+    "rec_type": "PeriodicalIssue"
 }

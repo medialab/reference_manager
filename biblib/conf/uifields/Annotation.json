@@ -30,27 +30,68 @@
         },
         {
             "labels": {
-                "en": "Date created",
-                "fr": "Date de création"
+                "en": "Journal",
+                "fr": "Revue"
             },
-            "property": "date_created",
+            "multiple": true,
+            "only_one": true,
+            "property": "is_part_ofs",
+            "required": true,
+            "type_fields": [
+                "Journal"
+            ],
+            "type_ui": "DocumentField"
+        },
+        {
+            "labels": {
+                "en": "Volume",
+                "fr": "Volume"
+            },
+            "property": "part_volume",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Issue",
+                "fr": "Issue"
+            },
+            "property": "part_issue",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Date issued",
+                "fr": "Date de publication"
+            },
+            "property": "date_issued",
             "required": true,
             "type_ui": "DateField"
         },
         {
             "labels": {
-                "en": "Duration",
-                "fr": "Dur\u00e9e"
+                "en": "Start page",
+                "fr": "Page de d\u00e9but"
             },
-            "property": "extent_duration",
+            "property": "part_page_start",
             "required": false,
             "type_ui": "CharField"
         },
         {
-            "id_type": "isan",
             "labels": {
-                "en": "ISAN",
-                "fr": "ISAN"
+                "en": "End page",
+                "fr": "Page de fin"
+            },
+            "property": "part_page_end",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "id_type": "doi",
+            "labels": {
+                "en": "DOI",
+                "fr": "DOI"
             },
             "multiple": true,
             "only_one": true,
@@ -71,25 +112,6 @@
         },
         {
             "labels": {
-                "en": "Subtitles languages",
-                "fr": "Langues des sous-titres"
-            },
-            "multiple": true,
-            "property": "languages_subtitles",
-            "required": false,
-            "type_source": "language",
-            "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Is peer reviewed ?",
-                "fr": "Comité de lecture ?"
-            },
-            "property": "peer_review",
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
                 "en": "Abstracts",
                 "fr": "Resum\u00e9s"
             },
@@ -107,17 +129,9 @@
             "property": "keywords",
             "required": false,
             "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
-                "en": "To archive ?",
-                "fr": "A archiver ?"
-            },
-            "property": "for_archiving",
-            "type_ui": "CharField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "VideoRecording"
+    "rec_type": "Annotation"
 }

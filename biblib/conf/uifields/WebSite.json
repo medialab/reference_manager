@@ -39,27 +39,6 @@
         },
         {
             "labels": {
-                "en": "Duration",
-                "fr": "Dur\u00e9e"
-            },
-            "property": "extent_duration",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "id_type": "isan",
-            "labels": {
-                "en": "ISAN",
-                "fr": "ISAN"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "identifiers",
-            "required": false,
-            "type_ui": "IdentifierField"
-        },
-        {
-            "labels": {
                 "en": "Languages",
                 "fr": "Langues"
             },
@@ -71,13 +50,24 @@
         },
         {
             "labels": {
-                "en": "Subtitles languages",
-                "fr": "Langues des sous-titres"
+                "en": "Publication country",
+                "fr": "Pays de publication"
             },
             "multiple": true,
-            "property": "languages_subtitles",
+            "property": "publication_countries",
             "required": false,
-            "type_source": "language",
+            "type_source": "country",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Genre",
+                "fr": "Genre"
+            },
+            "multiple": true,
+            "property": "genre",
+            "required": false,
+            "type_source": "genre",
             "type_ui": "TypeField"
         },
         {
@@ -119,5 +109,5 @@
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "VideoRecording"
+    "rec_type": "WebSite"
 }

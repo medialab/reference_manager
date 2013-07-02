@@ -1,0 +1,373 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "1",
+                "fr": "1"
+            },
+            "type_id": "1"
+        },
+        {
+            "labels": {
+                "en": "2",
+                "fr": "2"
+            },
+            "type_id": "2"
+        },
+        {
+            "labels": {
+                "en": "3",
+                "fr": "3"
+            },
+            "type_id": "3"
+        },
+        {
+            "labels": {
+                "en": "4",
+                "fr": "4"
+            },
+            "type_id": "4"
+        },
+        {
+            "labels": {
+                "en": "5",
+                "fr": "5"
+            },
+            "type_id": "5"
+        },
+        {
+            "labels": {
+                "en": "6",
+                "fr": "6"
+            },
+            "type_id": "6"
+        },
+        {
+            "labels": {
+                "en": "7",
+                "fr": "7"
+            },
+            "type_id": "7"
+        },
+        {
+            "labels": {
+                "en": "8",
+                "fr": "8"
+            },
+            "type_id": "8"
+        },
+        {
+            "labels": {
+                "en": "9",
+                "fr": "9"
+            },
+            "type_id": "9"
+        },
+        {
+            "labels": {
+                "en": "10",
+                "fr": "10"
+            },
+            "type_id": "10"
+        },
+        {
+            "labels": {
+                "en": "11",
+                "fr": "11"
+            },
+            "type_id": "11"
+        },
+        {
+            "labels": {
+                "en": "12",
+                "fr": "12"
+            },
+            "type_id": "12"
+        },
+        {
+            "labels": {
+                "en": "13",
+                "fr": "13"
+            },
+            "type_id": "13"
+        },
+        {
+            "labels": {
+                "en": "14",
+                "fr": "14"
+            },
+            "type_id": "14"
+        },
+        {
+            "labels": {
+                "en": "15",
+                "fr": "15"
+            },
+            "type_id": "15"
+        },
+        {
+            "labels": {
+                "en": "16",
+                "fr": "16"
+            },
+            "type_id": "16"
+        },
+        {
+            "labels": {
+                "en": "17",
+                "fr": "17"
+            },
+            "type_id": "17"
+        },
+        {
+            "labels": {
+                "en": "18",
+                "fr": "18"
+            },
+            "type_id": "18"
+        },
+        {
+            "labels": {
+                "en": "19",
+                "fr": "19"
+            },
+            "type_id": "19"
+        },
+        {
+            "labels": {
+                "en": "20",
+                "fr": "20"
+            },
+            "type_id": "20"
+        },
+        {
+            "labels": {
+                "en": "21",
+                "fr": "21"
+            },
+            "type_id": "21"
+        },
+        {
+            "labels": {
+                "en": "22",
+                "fr": "22"
+            },
+            "type_id": "22"
+        },
+        {
+            "labels": {
+                "en": "23",
+                "fr": "23"
+            },
+            "type_id": "23"
+        },
+        {
+            "labels": {
+                "en": "24",
+                "fr": "24"
+            },
+            "type_id": "24"
+        },
+        {
+            "labels": {
+                "en": "25",
+                "fr": "25"
+            },
+            "type_id": "25"
+        },
+        {
+            "labels": {
+                "en": "26",
+                "fr": "26"
+            },
+            "type_id": "26"
+        },
+        {
+            "labels": {
+                "en": "27",
+                "fr": "27"
+            },
+            "type_id": "27"
+        },
+        {
+            "labels": {
+                "en": "28",
+                "fr": "28"
+            },
+            "type_id": "28"
+        },
+        {
+            "labels": {
+                "en": "29",
+                "fr": "29"
+            },
+            "type_id": "29"
+        },
+        {
+            "labels": {
+                "en": "30",
+                "fr": "30"
+            },
+            "type_id": "30"
+        },
+        {
+            "labels": {
+                "en": "31",
+                "fr": "31"
+            },
+            "type_id": "31"
+        },
+        {
+            "labels": {
+                "en": "32",
+                "fr": "32"
+            },
+            "type_id": "32"
+        },
+        {
+            "labels": {
+                "en": "33",
+                "fr": "33"
+            },
+            "type_id": "33"
+        },
+        {
+            "labels": {
+                "en": "34",
+                "fr": "34"
+            },
+            "type_id": "34"
+        },
+        {
+            "labels": {
+                "en": "35",
+                "fr": "35"
+            },
+            "type_id": "35"
+        },
+        {
+            "labels": {
+                "en": "36",
+                "fr": "36"
+            },
+            "type_id": "36"
+        },
+        {
+            "labels": {
+                "en": "37",
+                "fr": "37"
+            },
+            "type_id": "37"
+        },
+        {
+            "labels": {
+                "en": "38",
+                "fr": "38"
+            },
+            "type_id": "38"
+        },
+        {
+            "labels": {
+                "en": "39",
+                "fr": "39"
+            },
+            "type_id": "39"
+        },
+        {
+            "labels": {
+                "en": "40",
+                "fr": "40"
+            },
+            "type_id": "40"
+        },
+        {
+            "labels": {
+                "en": "41",
+                "fr": "41"
+            },
+            "type_id": "41"
+        },
+        {
+            "labels": {
+                "en": "42",
+                "fr": "42"
+            },
+            "type_id": "42"
+        },
+        {
+            "labels": {
+                "en": "43",
+                "fr": "43"
+            },
+            "type_id": "43"
+        },
+        {
+            "labels": {
+                "en": "44",
+                "fr": "44"
+            },
+            "type_id": "44"
+        },
+        {
+            "labels": {
+                "en": "45",
+                "fr": "45"
+            },
+            "type_id": "45"
+        },
+        {
+            "labels": {
+                "en": "46",
+                "fr": "46"
+            },
+            "type_id": "46"
+        },
+        {
+            "labels": {
+                "en": "47",
+                "fr": "47"
+            },
+            "type_id": "47"
+        },
+        {
+            "labels": {
+                "en": "48",
+                "fr": "48"
+            },
+            "type_id": "48"
+        },
+        {
+            "labels": {
+                "en": "49",
+                "fr": "49"
+            },
+            "type_id": "49"
+        },
+        {
+            "labels": {
+                "en": "50",
+                "fr": "50"
+            },
+            "type_id": "50"
+        },
+        {
+            "labels": {
+                "en": "51",
+                "fr": "51"
+            },
+            "type_id": "51"
+        },
+        {
+            "labels": {
+                "en": "52",
+                "fr": "52"
+            },
+            "type_id": "52"
+        }
+    ],
+    "sort": false,
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "part_week"
+}

@@ -153,6 +153,8 @@ class References_repository(jsonrpc.JSONRPC):
     def type_adaptation(self, type_dict, language, sort):
         # language simplification
         if type_dict and language:
+            if "sort" in type_dict:
+                sort = type_dict["sort"]
             self.key_language_simplification(type_dict, "labels", "label", language)
             self.key_language_simplification(type_dict, "descriptions", "description", language)
             if "children" in type_dict:

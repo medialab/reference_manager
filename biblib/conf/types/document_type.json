@@ -29,7 +29,7 @@
                             "type_id": "NewspaperArticle"
                         },
                         {
-                            "deprecated": true,
+                            "deprecated": false,
                             "labels": {
                                 "en": "Note to a legal judgment",
                                 "fr": "Commentaire d'arr\u00eat"
@@ -37,7 +37,7 @@
                             "type_id": "Annotation"
                         },
                         {
-                            "deprecated": true,
+                            "deprecated": false,
                             "labels": {
                                 "en": "Interview",
                                 "fr": "Entretien"
@@ -52,7 +52,7 @@
                             "type_id": "BookReview"
                         },
                         {
-                            "deprecated": true,
+                            "deprecated": false,
                             "labels": {
                                 "en": "Article review",
                                 "fr": "Compte-rendu d\u2019article"
@@ -60,7 +60,6 @@
                             "type_id": "ArticleReview"
                         },
                         {
-                            "deprecated": true,
                             "labels": {
                                 "en": "Periodical issue",
                                 "fr": "Num\u00e9ro de p\u00e9riodique"
@@ -83,14 +82,6 @@
                                 "fr": "Livre"
                             },
                             "type_id": "Book"
-                        },
-                        {
-                            "deprecated": true,
-                            "labels": {
-                                "en": "Edited book",
-                                "fr": "Direction d'ouvrage"
-                            },
-                            "type_id": "EditedBook"
                         },
                         {
                             "labels": {
@@ -564,14 +555,6 @@
                     "bundle": true,
                     "children": [
                         {
-                            "deprecated": true,
-                            "labels": {
-                                "en": "Data set",
-                                "fr": "Jeux de donn\u00e9es"
-                            },
-                            "type_id": "Dataset"
-                        },
-                        {
                             "labels": {
                                 "en": "Computer program",
                                 "fr": "Logiciel"
@@ -756,6 +739,30 @@
             "bundle": true,
             "children": [
                 {
+                    "labels": {
+                        "en": "Quantitative dataset",
+                        "fr": "Données quantitatives"
+                    },
+                    "type_id": "DatasetQuanti"
+                },
+                {
+                    "labels": {
+                        "en": "Qualitative dataset",
+                        "fr": "Données qualitatives"
+                    },
+                    "type_id": "DatasetQuali"
+                }
+            ],
+            "labels": {
+                "en": "Data set",
+                "fr": "Jeux de donn\u00e9es"
+            },
+            "type_id": "Dataset"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
                     "deprecated": true,
                     "labels": {
                         "en": "Audio recording",
@@ -830,5 +837,6 @@
     ],
     "rec_class": "Type",
     "rec_metajson": 1,
+    "sort": false,
     "type_id": "document_type"
 }
