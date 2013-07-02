@@ -46,7 +46,7 @@
 
     _modules.push(blf.control.addModule(
       blf.modules.advancedSearchPanel,
-      [ $('[data-panel="advanced-search"]', _panels) ]
+      [ $('[data-panel="advancedSearch"]', _panels) ]
     ));
 
     // Listen to the controller:

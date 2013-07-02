@@ -1,15 +1,15 @@
 window.blf = window.blf || {};
 blf.init = function(config) {
   'use strict';
-  config = config || {};
 
   // Package "blf": BibLib Front
   mlab.pkg('blf');
+  blf.config = config || {};
 
   // Global vars:
   mlab.pkg('blf.global.rpc');
 
-  blf.global.API_URL = config.BASE_URL;
+  blf.global.API_URL = blf.config.baseURL;
   blf.global.rpc.type = 'POST';
   blf.global.rpc.contentType = 'application/x-www-form-urlencoded';
   blf.global.rpc.expect = function(data) {
@@ -59,7 +59,7 @@ blf.init = function(config) {
 
   // Load dictionary:
   i18n.init({
-    lng: 'fr',
+    lng: blf.config.lang,
     fallbackLng: 'en',
     ns: {
       namespaces: ['translation', 'customInputs'],
@@ -71,7 +71,7 @@ blf.init = function(config) {
 
   // Load main template:
   blf.utils.addTemplate('templates/main.handlebars', function(template) {
-    config.BASE_DOM.append(template());
+    blf.config.baseDOM.append(template());
     start();
   });
 
@@ -89,6 +89,12 @@ blf.init = function(config) {
      *  >     }
      *  >   });
      */
+    if (!domino.struct.isValid('blf.Config'))
+      domino.struct.add({
+        id: 'blf.Config',
+        struct: 'object'
+      });
+
     if (!domino.struct.isValid('blf.Dict'))
       domino.struct.add({
         id: 'blf.Dict',
@@ -199,6 +205,12 @@ blf.init = function(config) {
         },
 
         // INTERFACE related properties
+        {
+          value: blf.config,
+          id: 'config',
+          type: 'blf.Config',
+          description: 'The configuration object of the interface.'
+        },
         {
           value: null,
           id: 'waitingEntry',

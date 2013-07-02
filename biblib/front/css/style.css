@@ -43,7 +43,7 @@ ul {
   list-style-type: none;
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 5px;
+  padding-left: 0;
 }
 
 ul ul {
@@ -53,6 +53,36 @@ ul ul {
 .container {
   width: 550px;
   margin: auto;
+}
+
+/* 6 column grid - 340px width */
+.col-1 {
+  width: 55px;
+}
+
+.col-2 {
+  width: 110px;
+}
+
+.col-3 {
+  width: 161px;
+}
+
+.col-4 {
+  width: 225px;
+}
+
+.col-6 {
+  width: 340px;
+}
+
+/* Some useful classes */
+.message {
+  color: #c00;
+}
+
+.right {
+  float: right;
 }
 
 /* Results list display */
@@ -87,32 +117,20 @@ ul.entries-list > li .entry-title {
   text-overflow: ellipsis;
 }
 
-/* 6 column grid - 340px width */
-.col-1 {
-  width: 55px;
+/* Advanced search panel */
+ul.indexes-list li:first-child select[data-type="operator"] {
+  visibility: hidden;
 }
 
-.col-2 {
-  width: 110px;
+ul.indexes-list li .remove-index {
+  visibility: hidden;
 }
 
-.col-3 {
-  width: 161px;
+ul.indexes-list li:hover .remove-index {
+  visibility: visible;
 }
 
-.col-4 {
-  width: 225px;
-}
-
-.col-6 {
-  width: 340px;
-}
-
-/* Some useful classes */
-.message {
-  color: #c00;
-}
-
-.right {
-  float: right;
+ul.indexes-list li select,
+ul.indexes-list li input  {
+  width: 174px;
 }

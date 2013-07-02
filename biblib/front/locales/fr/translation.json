@@ -1,4 +1,7 @@
 {
+  "commons": {
+    "ellipsis": "..."
+  },
   "actions": {
     "validate": "Valider"
   },
