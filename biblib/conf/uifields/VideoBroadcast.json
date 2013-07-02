@@ -30,10 +30,24 @@
         },
         {
             "labels": {
-                "en": "Date created",
-                "fr": "Date de cr\u00e9ation"
+                "en": "Broadcast",
+                "fr": "Emission"
             },
-            "property": "date_created",
+            "multiple": true,
+            "only_one": true,
+            "property": "is_part_ofs",
+            "required": true,
+            "type_fields": [
+                "Broadcast"
+            ],
+            "type_ui": "DocumentField"
+        },
+        {
+            "labels": {
+                "en": "Date broadcast",
+                "fr": "Date de diffusion"
+            },
+            "property": "date_issued",
             "required": true,
             "type_ui": "DateField"
         },
@@ -71,25 +85,6 @@
         },
         {
             "labels": {
-                "en": "Subtitles languages",
-                "fr": "Langues des sous-titres"
-            },
-            "multiple": true,
-            "property": "languages_subtitles",
-            "required": false,
-            "type_source": "language",
-            "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Is peer reviewed ?",
-                "fr": "Comit\u00e9 de lecture ?"
-            },
-            "property": "peer_review",
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
                 "en": "Abstracts",
                 "fr": "Resum\u00e9s"
             },
@@ -107,17 +102,9 @@
             "property": "keywords",
             "required": false,
             "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
-                "en": "To archive ?",
-                "fr": "A archiver ?"
-            },
-            "property": "for_archiving",
-            "type_ui": "CharField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "VideoRecording"
+    "rec_type": "VideoBroadcast"
 }

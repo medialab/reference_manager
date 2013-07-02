@@ -11,15 +11,6 @@
         },
         {
             "labels": {
-                "en": "Subtitle",
-                "fr": "Sous-titre"
-            },
-            "property": "title_sub",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
                 "en": "Creators",
                 "fr": "Cr\u00e9ateurs"
             },
@@ -31,32 +22,11 @@
         {
             "labels": {
                 "en": "Date created",
-                "fr": "Date de cr\u00e9ation"
+                "fr": "Date de création"
             },
             "property": "date_created",
             "required": true,
             "type_ui": "DateField"
-        },
-        {
-            "labels": {
-                "en": "Duration",
-                "fr": "Dur\u00e9e"
-            },
-            "property": "extent_duration",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "id_type": "isan",
-            "labels": {
-                "en": "ISAN",
-                "fr": "ISAN"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "identifiers",
-            "required": false,
-            "type_ui": "IdentifierField"
         },
         {
             "labels": {
@@ -68,25 +38,6 @@
             "required": false,
             "type_source": "language",
             "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Subtitles languages",
-                "fr": "Langues des sous-titres"
-            },
-            "multiple": true,
-            "property": "languages_subtitles",
-            "required": false,
-            "type_source": "language",
-            "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Is peer reviewed ?",
-                "fr": "Comit\u00e9 de lecture ?"
-            },
-            "property": "peer_review",
-            "type_ui": "CharField"
         },
         {
             "labels": {
@@ -110,14 +61,20 @@
         },
         {
             "labels": {
-                "en": "To archive ?",
-                "fr": "A archiver ?"
+                "en": "Web site",
+                "fr": "Site web"
             },
-            "property": "for_archiving",
-            "type_ui": "CharField"
+            "multiple": true,
+            "only_one": true,
+            "property": "is_part_ofs",
+            "required": true,
+            "type_fields": [
+                "WebSite"
+            ],
+            "type_ui": "DocumentField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "VideoRecording"
+    "rec_type": "WebPage"
 }

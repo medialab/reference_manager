@@ -23,13 +23,13 @@ locations = [
 
 
 def load_config():
-    print("config_service.load_config")
+    #print("config_service.load_config")
     for location in locations:
         try:
-            print("location: {}".format(location))
+            #print("location: {}".format(location))
             config_location = os.path.join(location, "conf", "config.json")
-            print("config_location: {}".format(config_location))
             with open(config_location, 'r') as config_file:
+                print("config_location: {}".format(config_location))
                 return json.load(config_file)
         except IOError as e:
             pass
@@ -39,13 +39,13 @@ def load_config():
 
 
 def load_metajson_title_non_sort():
-    print("config_service.load_metajson_title_non_sort")
+    #print("config_service.load_metajson_title_non_sort")
     for location in locations:
         try:
-            print("location: {}".format(location))
+            #print("location: {}".format(location))
             metajson_title_non_sort_location = os.path.join(location, "conf", "metajson", "title_non_sort.json")
-            print("metajson_title_non_sort_location: {}".format(metajson_title_non_sort_location))
             with open(metajson_title_non_sort_location, 'r') as metajson_title_non_sort_file:
+                print("metajson_title_non_sort_location: {}".format(metajson_title_non_sort_location))
                 return json.load(metajson_title_non_sort_file)
         except IOError as e:
             pass

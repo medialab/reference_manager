@@ -30,10 +30,10 @@
         },
         {
             "labels": {
-                "en": "Date created",
-                "fr": "Date de cr\u00e9ation"
+                "en": "Date issued",
+                "fr": "Date de publication"
             },
-            "property": "date_created",
+            "property": "date_issued",
             "required": true,
             "type_ui": "DateField"
         },
@@ -47,16 +47,18 @@
             "type_ui": "CharField"
         },
         {
-            "id_type": "isan",
             "labels": {
-                "en": "ISAN",
-                "fr": "ISAN"
+                "en": "Series",
+                "fr": "Collection"
             },
             "multiple": true,
             "only_one": true,
-            "property": "identifiers",
+            "property": "seriess",
             "required": false,
-            "type_ui": "IdentifierField"
+            "type_fields": [
+                "Series"
+            ],
+            "type_ui": "DocumentField"
         },
         {
             "labels": {
@@ -71,22 +73,55 @@
         },
         {
             "labels": {
-                "en": "Subtitles languages",
-                "fr": "Langues des sous-titres"
+                "en": "Publisher",
+                "fr": "Editeurs"
             },
             "multiple": true,
-            "property": "languages_subtitles",
+            "property": "publishers",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Publication place",
+                "fr": "Lieu de publication"
+            },
+            "multiple": true,
+            "property": "publication_places",
             "required": false,
-            "type_source": "language",
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Publication country",
+                "fr": "Pays de publication"
+            },
+            "multiple": true,
+            "property": "publication_countries",
+            "required": false,
+            "type_source": "country",
             "type_ui": "TypeField"
         },
         {
             "labels": {
-                "en": "Is peer reviewed ?",
-                "fr": "Comit\u00e9 de lecture ?"
+                "en": "Edition",
+                "fr": "Edition"
             },
-            "property": "peer_review",
+            "property": "edition",
+            "required": false,
             "type_ui": "CharField"
+        },
+        {
+            "id_type": "isbn",
+            "labels": {
+                "en": "ISBN",
+                "fr": "ISBN"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
         },
         {
             "labels": {
@@ -107,17 +142,9 @@
             "property": "keywords",
             "required": false,
             "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
-                "en": "To archive ?",
-                "fr": "A archiver ?"
-            },
-            "property": "for_archiving",
-            "type_ui": "CharField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "VideoRecording"
+    "rec_type": "AudioBook"
 }

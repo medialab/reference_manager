@@ -1,0 +1,36 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Closed",
+                "fr": "Ferm\u00e9"
+            },
+            "type_id": "Closed"
+        },
+        {
+            "labels": {
+                "en": "Passive",
+                "fr": "Passif"
+            },
+            "type_id": "Passive"
+        },
+        {
+            "labels": {
+                "en": "Active",
+                "fr": "Actif"
+            },
+            "type_id": "Active"
+        },
+        {
+            "labels": {
+                "en": "Partial",
+                "fr": "Partiel"
+            },
+            "type_id": "Partial"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "accrual_policy"
+}

@@ -30,33 +30,12 @@
         },
         {
             "labels": {
-                "en": "Date created",
-                "fr": "Date de cr\u00e9ation"
+                "en": "Date issued",
+                "fr": "Date de publication"
             },
-            "property": "date_created",
+            "property": "date_issued",
             "required": true,
             "type_ui": "DateField"
-        },
-        {
-            "labels": {
-                "en": "Duration",
-                "fr": "Dur\u00e9e"
-            },
-            "property": "extent_duration",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "id_type": "isan",
-            "labels": {
-                "en": "ISAN",
-                "fr": "ISAN"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "identifiers",
-            "required": false,
-            "type_ui": "IdentifierField"
         },
         {
             "labels": {
@@ -71,21 +50,20 @@
         },
         {
             "labels": {
-                "en": "Subtitles languages",
-                "fr": "Langues des sous-titres"
+                "en": "Version",
+                "fr": "Version"
             },
-            "multiple": true,
-            "property": "languages_subtitles",
+            "property": "version",
             "required": false,
-            "type_source": "language",
-            "type_ui": "TypeField"
+            "type_ui": "CharField"
         },
         {
             "labels": {
-                "en": "Is peer reviewed ?",
-                "fr": "Comit\u00e9 de lecture ?"
+                "en": "Programming languages",
+                "fr": "Langages de programmation"
             },
-            "property": "peer_review",
+            "property": "programming_languages",
+            "required": false,
             "type_ui": "CharField"
         },
         {
@@ -107,17 +85,9 @@
             "property": "keywords",
             "required": false,
             "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
-                "en": "To archive ?",
-                "fr": "A archiver ?"
-            },
-            "property": "for_archiving",
-            "type_ui": "CharField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "VideoRecording"
+    "rec_type": "Software"
 }

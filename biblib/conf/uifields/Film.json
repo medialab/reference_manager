@@ -30,10 +30,10 @@
         },
         {
             "labels": {
-                "en": "Date created",
-                "fr": "Date de cr\u00e9ation"
+                "en": "Date issued",
+                "fr": "Date de publication"
             },
-            "property": "date_created",
+            "property": "date_issued",
             "required": true,
             "type_ui": "DateField"
         },
@@ -82,14 +82,6 @@
         },
         {
             "labels": {
-                "en": "Is peer reviewed ?",
-                "fr": "Comit\u00e9 de lecture ?"
-            },
-            "property": "peer_review",
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
                 "en": "Abstracts",
                 "fr": "Resum\u00e9s"
             },
@@ -107,17 +99,9 @@
             "property": "keywords",
             "required": false,
             "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
-                "en": "To archive ?",
-                "fr": "A archiver ?"
-            },
-            "property": "for_archiving",
-            "type_ui": "CharField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "VideoRecording"
+    "rec_type": "Film"
 }

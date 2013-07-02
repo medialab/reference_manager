@@ -1,1150 +1,1149 @@
 {
-    "bundle": true, 
+    "bundle": true,
     "children": [
         {
             "labels": {
-                "en": "Cuneiform, Sumero-Akkadian", 
-                "fr": "cunéiforme suméro-akkadien"
-            }, 
-            "type_id": "Xsux"
-        }, 
-        {
-            "labels": {
-                "en": "Old Persian", 
-                "fr": "cunéiforme persépolitain"
-            }, 
-            "type_id": "Xpeo"
-        }, 
-        {
-            "labels": {
-                "en": "Ugaritic", 
-                "fr": "ougaritique"
-            }, 
-            "type_id": "Ugar"
-        }, 
-        {
-            "labels": {
-                "en": "Egyptian hieroglyphs", 
-                "fr": "hiéroglyphes égyptiens"
-            }, 
-            "type_id": "Egyp"
-        }, 
-        {
-            "labels": {
-                "en": "Egyptian hieratic", 
-                "fr": "hiératique égyptien"
-            }, 
-            "type_id": "Egyh"
-        }, 
-        {
-            "labels": {
-                "en": "Egyptian demotic", 
-                "fr": "démotique égyptien"
-            }, 
-            "type_id": "Egyd"
-        }, 
-        {
-            "labels": {
-                "en": "Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs)", 
-                "fr": "hiéroglyphes anatoliens (hiéroglyphes louvites, hiéroglyphes hittites)"
-            }, 
-            "type_id": "Hluw"
-        }, 
-        {
-            "labels": {
-                "en": "Mayan hieroglyphs", 
-                "fr": "hiéroglyphes mayas"
-            }, 
-            "type_id": "Maya"
-        }, 
-        {
-            "labels": {
-                "en": "SignWriting", 
-                "fr": "SignÉcriture, SignWriting"
-            }, 
-            "type_id": "Sgnw"
-        }, 
-        {
-            "labels": {
-                "en": "Meroitic Hieroglyphs", 
-                "fr": "hiéroglyphes méroïtiques"
-            }, 
-            "type_id": "Mero"
-        }, 
-        {
-            "labels": {
-                "en": "Meroitic Cursive", 
-                "fr": "cursif méroïtique"
-            }, 
-            "type_id": "Merc"
-        }, 
-        {
-            "labels": {
-                "en": "Old South Arabian", 
-                "fr": "sud-arabique, himyarite"
-            }, 
-            "type_id": "Sarb"
-        }, 
-        {
-            "labels": {
-                "en": "Old North Arabian (Ancient North Arabian)", 
-                "fr": "nord-arabique"
-            }, 
-            "type_id": "Narb"
-        }, 
-        {
-            "labels": {
-                "en": "Phoenician", 
-                "fr": "phénicien"
-            }, 
-            "type_id": "Phnx"
-        }, 
-        {
-            "labels": {
-                "en": "Lydian", 
-                "fr": "lydien"
-            }, 
-            "type_id": "Lydi"
-        }, 
-        {
-            "labels": {
-                "en": "Tifinagh (Berber)", 
-                "fr": "tifinagh (berbère)"
-            }, 
-            "type_id": "Tfng"
-        }, 
-        {
-            "labels": {
-                "en": "Samaritan", 
-                "fr": "samaritain"
-            }, 
-            "type_id": "Samr"
-        }, 
-        {
-            "labels": {
-                "en": "Imperial Aramaic", 
-                "fr": "araméen impérial"
-            }, 
-            "type_id": "Armi"
-        }, 
-        {
-            "labels": {
-                "en": "Hebrew", 
-                "fr": "hébreu"
-            }, 
-            "type_id": "Hebr"
-        }, 
-        {
-            "labels": {
-                "en": "Palmyrene", 
-                "fr": "palmyrénien"
-            }, 
-            "type_id": "Palm"
-        }, 
-        {
-            "labels": {
-                "en": "Inscriptional Parthian", 
-                "fr": "parthe des inscriptions"
-            }, 
-            "type_id": "Prti"
-        }, 
-        {
-            "labels": {
-                "en": "Inscriptional Pahlavi", 
-                "fr": "pehlevi des inscriptions"
-            }, 
-            "type_id": "Phli"
-        }, 
-        {
-            "labels": {
-                "en": "Psalter Pahlavi", 
-                "fr": "pehlevi des psautiers"
-            }, 
-            "type_id": "Phlp"
-        }, 
-        {
-            "labels": {
-                "en": "Book Pahlavi", 
-                "fr": "pehlevi des livres"
-            }, 
-            "type_id": "Phlv"
-        }, 
-        {
-            "labels": {
-                "en": "Avestan", 
-                "fr": "avestique"
-            }, 
-            "type_id": "Avst"
-        }, 
-        {
-            "labels": {
-                "en": "Syriac", 
-                "fr": "syriaque"
-            }, 
-            "type_id": "Syrc"
-        }, 
-        {
-            "labels": {
-                "en": "Syriac (Eastern variant)", 
-                "fr": "syriaque (variante orientale)"
-            }, 
-            "type_id": "Syrn"
-        }, 
-        {
-            "labels": {
-                "en": "Syriac (Western variant)", 
-                "fr": "syriaque (variante occidentale)"
-            }, 
-            "type_id": "Syrj"
-        }, 
-        {
-            "labels": {
-                "en": "Syriac (Estrangelo variant)", 
-                "fr": "syriaque (variante estranghélo)"
-            }, 
-            "type_id": "Syre"
-        }, 
-        {
-            "labels": {
-                "en": "Manichaean", 
-                "fr": "manichéen"
-            }, 
-            "type_id": "Mani"
-        }, 
-        {
-            "labels": {
-                "en": "Mandaic, Mandaean", 
-                "fr": "mandéen"
-            }, 
-            "type_id": "Mand"
-        }, 
-        {
-            "labels": {
-                "en": "Mongolian", 
-                "fr": "mongol"
-            }, 
-            "type_id": "Mong"
-        }, 
-        {
-            "labels": {
-                "en": "Nabataean", 
-                "fr": "nabatéen"
-            }, 
-            "type_id": "Nbat"
-        }, 
-        {
-            "labels": {
-                "en": "Arabic", 
-                "fr": "arabe"
-            }, 
-            "type_id": "Arab"
-        }, 
-        {
-            "labels": {
-                "en": "N’Ko", 
-                "fr": "n’ko"
-            }, 
-            "type_id": "Nkoo"
-        }, 
-        {
-            "labels": {
-                "en": "Thaana", 
-                "fr": "thâna"
-            }, 
-            "type_id": "Thaa"
-        }, 
-        {
-            "labels": {
-                "en": "Old Turkic, Orkhon Runic", 
-                "fr": "orkhon"
-            }, 
-            "type_id": "Orkh"
-        }, 
-        {
-            "labels": {
-                "en": "Old Hungarian (Hungarian Runic)", 
-                "fr": "runes hongroises (ancien hongrois)"
-            }, 
-            "type_id": "Hung"
-        }, 
-        {
-            "labels": {
-                "en": "Mro, Mru", 
-                "fr": "mro"
-            }, 
-            "type_id": "Mroo"
-        }, 
-        {
-            "labels": {
-                "en": "Greek", 
-                "fr": "grec"
-            }, 
-            "type_id": "Grek"
-        }, 
-        {
-            "labels": {
-                "en": "Carian", 
-                "fr": "carien"
-            }, 
-            "type_id": "Cari"
-        }, 
-        {
-            "labels": {
-                "en": "Lycian", 
-                "fr": "lycien"
-            }, 
-            "type_id": "Lyci"
-        }, 
-        {
-            "labels": {
-                "en": "Coptic", 
-                "fr": "copte"
-            }, 
-            "type_id": "Copt"
-        }, 
-        {
-            "labels": {
-                "en": "Gothic", 
-                "fr": "gotique"
-            }, 
-            "type_id": "Goth"
-        }, 
-        {
-            "labels": {
-                "en": "Old Italic (Etruscan, Oscan, etc.)", 
-                "fr": "ancien italique (étrusque, osque, etc.)"
-            }, 
-            "type_id": "Ital"
-        }, 
-        {
-            "labels": {
-                "en": "Runic", 
-                "fr": "runique"
-            }, 
-            "type_id": "Runr"
-        }, 
-        {
-            "labels": {
-                "en": "Ogham", 
-                "fr": "ogam"
-            }, 
-            "type_id": "Ogam"
-        }, 
-        {
-            "labels": {
-                "en": "Latin", 
-                "fr": "latin"
-            }, 
-            "type_id": "Latn"
-        }, 
-        {
-            "labels": {
-                "en": "Latin (Gaelic variant)", 
-                "fr": "latin (variante gaélique)"
-            }, 
-            "type_id": "Latg"
-        }, 
-        {
-            "labels": {
-                "en": "Latin (Fraktur variant)", 
-                "fr": "latin (variante brisée)"
-            }, 
-            "type_id": "Latf"
-        }, 
-        {
-            "labels": {
-                "en": "Moon (Moon code, Moon script, Moon type)", 
-                "fr": "écriture Moon"
-            }, 
-            "type_id": "Moon"
-        }, 
-        {
-            "labels": {
-                "en": "Cyrillic", 
-                "fr": "cyrillique"
-            }, 
-            "type_id": "Cyrl"
-        }, 
-        {
-            "labels": {
-                "en": "Cyrillic (Old Church Slavonic variant)", 
-                "fr": "cyrillique (variante slavonne)"
-            }, 
-            "type_id": "Cyrs"
-        }, 
-        {
-            "labels": {
-                "en": "Glagolitic", 
-                "fr": "glagolitique"
-            }, 
-            "type_id": "Glag"
-        }, 
-        {
-            "labels": {
-                "en": "Elbasan", 
-                "fr": "elbasan"
-            }, 
-            "type_id": "Elba"
-        }, 
-        {
-            "labels": {
-                "en": "Old Permic", 
-                "fr": "ancien permien"
-            }, 
-            "type_id": "Perm"
-        }, 
-        {
-            "labels": {
-                "en": "Armenian", 
-                "fr": "arménien"
-            }, 
-            "type_id": "Armn"
-        }, 
-        {
-            "labels": {
-                "en": "Caucasian Albanian", 
-                "fr": "aghbanien"
-            }, 
-            "type_id": "Aghb"
-        }, 
-        {
-            "labels": {
-                "en": "Georgian (Mkhedruli)", 
-                "fr": "géorgien (mkhédrouli)"
-            }, 
-            "type_id": "Geor"
-        }, 
-        {
-            "labels": {
-                "en": "Khutsuri (Asomtavruli and Nuskhuri)", 
-                "fr": "khoutsouri (assomtavrouli et nouskhouri)"
-            }, 
-            "type_id": "Geok"
-        }, 
-        {
-            "labels": {
-                "en": "Deseret (Mormon)", 
-                "fr": "déseret (mormon)"
-            }, 
-            "type_id": "Dsrt"
-        }, 
-        {
-            "labels": {
-                "en": "Bassa Vah", 
-                "fr": "bassa"
-            }, 
-            "type_id": "Bass"
-        }, 
-        {
-            "labels": {
-                "en": "Osmanya", 
-                "fr": "osmanais"
-            }, 
-            "type_id": "Osma"
-        }, 
-        {
-            "labels": {
-                "en": "Ol Chiki (Ol Cemet’, Ol, Santali)", 
-                "fr": "ol tchiki"
-            }, 
-            "type_id": "Olck"
-        }, 
-        {
-            "labels": {
-                "en": "Warang Citi (Varang Kshiti)", 
-                "fr": "warang citi"
-            }, 
-            "type_id": "Wara"
-        }, 
-        {
-            "labels": {
-                "en": "Visible Speech", 
-                "fr": "parole visible"
-            }, 
-            "type_id": "Visp"
-        }, 
-        {
-            "labels": {
-                "en": "Shavian (Shaw)", 
-                "fr": "shavien (Shaw)"
-            }, 
-            "type_id": "Shaw"
-        }, 
-        {
-            "labels": {
-                "en": "Miao (Pollard)", 
-                "fr": "miao (Pollard)"
-            }, 
-            "type_id": "Plrd"
-        }, 
-        {
-            "labels": {
-                "en": "Bopomofo", 
-                "fr": "bopomofo"
-            }, 
-            "type_id": "Bopo"
-        }, 
-        {
-            "labels": {
-                "en": "Hangul (Hangŭl, Hangeul)", 
-                "fr": "hangûl (hangŭl, hangeul)"
-            }, 
-            "type_id": "Hang"
-        }, 
-        {
-            "labels": {
-                "en": "Korean (alias for Hangul + Han)", 
-                "fr": "coréen (alias pour hangûl + han)"
-            }, 
-            "type_id": "Kore"
-        }, 
-        {
-            "labels": {
-                "en": "Tengwar", 
-                "fr": "tengwar"
-            }, 
-            "type_id": "Teng"
-        }, 
-        {
-            "labels": {
-                "en": "Cirth", 
-                "fr": "cirth"
-            }, 
-            "type_id": "Cirt"
-        }, 
-        {
-            "labels": {
-                "en": "Sarati", 
-                "fr": "sarati"
-            }, 
-            "type_id": "Sara"
-        }, 
-        {
-            "labels": {
-                "en": "Brahmi", 
-                "fr": "brahma"
-            }, 
-            "type_id": "Brah"
-        }, 
-        {
-            "labels": {
-                "en": "Kharoshthi", 
-                "fr": "kharochthî"
-            }, 
-            "type_id": "Khar"
-        }, 
-        {
-            "labels": {
-                "en": "Gurmukhi", 
-                "fr": "gourmoukhî"
-            }, 
-            "type_id": "Guru"
-        }, 
-        {
-            "labels": {
-                "en": "Mahajani", 
-                "fr": "mahâjanî"
-            }, 
-            "type_id": "Mahj"
-        }, 
-        {
-            "labels": {
-                "en": "Devanagari (Nagari)", 
-                "fr": "dévanâgarî"
-            }, 
-            "type_id": "Deva"
-        }, 
-        {
-            "labels": {
-                "en": "Syloti Nagri", 
-                "fr": "sylotî nâgrî"
-            }, 
-            "type_id": "Sylo"
-        }, 
-        {
-            "labels": {
-                "en": "Kaithi", 
-                "fr": "kaithî"
-            }, 
-            "type_id": "Kthi"
-        }, 
-        {
-            "labels": {
-                "en": "Khudawadi, Sindhi", 
-                "fr": "khoudawadî, sindhî"
-            }, 
-            "type_id": "Sind"
-        }, 
-        {
-            "labels": {
-                "en": "Sharada, Śāradā", 
-                "fr": "charada, shard"
-            }, 
-            "type_id": "Shrd"
-        }, 
-        {
-            "labels": {
-                "en": "Gujarati", 
-                "fr": "goudjarâtî (gujrâtî)"
-            }, 
-            "type_id": "Gujr"
-        }, 
-        {
-            "labels": {
-                "en": "Takri, Ṭākrī, Ṭāṅkrī", 
-                "fr": "tâkrî"
-            }, 
-            "type_id": "Takr"
-        }, 
-        {
-            "labels": {
-                "en": "Khojki", 
-                "fr": "khojkî"
-            }, 
-            "type_id": "Khoj"
-        }, 
-        {
-            "labels": {
-                "en": "Bengali", 
-                "fr": "bengalî"
-            }, 
-            "type_id": "Beng"
-        }, 
-        {
-            "labels": {
-                "en": "Tirhuta", 
-                "fr": "tirhouta"
-            }, 
-            "type_id": "Tirh"
-        }, 
-        {
-            "labels": {
-                "en": "Oriya", 
-                "fr": "oriyâ"
-            }, 
-            "type_id": "Orya"
-        }, 
-        {
-            "labels": {
-                "en": "Tibetan", 
-                "fr": "tibétain"
-            }, 
-            "type_id": "Tibt"
-        }, 
-        {
-            "labels": {
-                "en": "Phags-pa", 
-                "fr": "’phags pa"
-            }, 
-            "type_id": "Phag"
-        }, 
-        {
-            "labels": {
-                "en": "Lepcha (Róng)", 
-                "fr": "lepcha (róng)"
-            }, 
-            "type_id": "Lepc"
-        }, 
-        {
-            "labels": {
-                "en": "Limbu", 
-                "fr": "limbou"
-            }, 
-            "type_id": "Limb"
-        }, 
-        {
-            "labels": {
-                "en": "Meitei Mayek (Meithei, Meetei)", 
-                "fr": "meitei mayek"
-            }, 
-            "type_id": "Mtei"
-        }, 
-        {
-            "labels": {
-                "en": "Telugu", 
-                "fr": "télougou"
-            }, 
-            "type_id": "Telu"
-        }, 
-        {
-            "labels": {
-                "en": "Grantha", 
-                "fr": "grantha"
-            }, 
-            "type_id": "Gran"
-        }, 
-        {
-            "labels": {
-                "en": "Saurashtra", 
-                "fr": "saurachtra"
-            }, 
-            "type_id": "Saur"
-        }, 
-        {
-            "labels": {
-                "en": "Kannada", 
-                "fr": "kannara (canara)"
-            }, 
-            "type_id": "Knda"
-        }, 
-        {
-            "labels": {
-                "en": "Tamil", 
-                "fr": "tamoul"
-            }, 
-            "type_id": "Taml"
-        }, 
-        {
-            "labels": {
-                "en": "Malayalam", 
-                "fr": "malayâlam"
-            }, 
-            "type_id": "Mlym"
-        }, 
-        {
-            "labels": {
-                "en": "Sinhala", 
-                "fr": "singhalais"
-            }, 
-            "type_id": "Sinh"
-        }, 
-        {
-            "labels": {
-                "en": "Chakma", 
-                "fr": "chakma"
-            }, 
-            "type_id": "Cakm"
-        }, 
-        {
-            "labels": {
-                "en": "Myanmar (Burmese)", 
-                "fr": "birman"
-            }, 
-            "type_id": "Mymr"
-        }, 
-        {
-            "labels": {
-                "en": "Tai Tham (Lanna)", 
-                "fr": "taï tham (lanna)"
-            }, 
-            "type_id": "Lana"
-        }, 
-        {
-            "labels": {
-                "en": "Thai", 
-                "fr": "thaï"
-            }, 
-            "type_id": "Thai"
-        }, 
-        {
-            "labels": {
-                "en": "Tai Le", 
-                "fr": "taï-le"
-            }, 
-            "type_id": "Tale"
-        }, 
-        {
-            "labels": {
-                "en": "New Tai Lue", 
-                "fr": "nouveau taï-lue"
-            }, 
-            "type_id": "Talu"
-        }, 
-        {
-            "labels": {
-                "en": "Khmer", 
-                "fr": "khmer"
-            }, 
-            "type_id": "Khmr"
-        }, 
-        {
-            "labels": {
-                "en": "Lao", 
-                "fr": "laotien"
-            }, 
-            "type_id": "Laoo"
-        }, 
-        {
-            "labels": {
-                "en": "Kayah Li", 
-                "fr": "kayah li"
-            }, 
-            "type_id": "Kali"
-        }, 
-        {
-            "labels": {
-                "en": "Cham", 
-                "fr": "cham (čam, tcham)"
-            }, 
-            "type_id": "Cham"
-        }, 
-        {
-            "labels": {
-                "en": "Tai Viet", 
-                "fr": "taï viêt"
-            }, 
-            "type_id": "Tavt"
-        }, 
-        {
-            "labels": {
-                "en": "Balinese", 
-                "fr": "balinais"
-            }, 
-            "type_id": "Bali"
-        }, 
-        {
-            "labels": {
-                "en": "Javanese", 
-                "fr": "javanais"
-            }, 
-            "type_id": "Java"
-        }, 
-        {
-            "labels": {
-                "en": "Sundanese", 
-                "fr": "sundanais"
-            }, 
-            "type_id": "Sund"
-        }, 
-        {
-            "labels": {
-                "en": "Rejang (Redjang, Kaganga)", 
-                "fr": "redjang (kaganga)"
-            }, 
-            "type_id": "Rjng"
-        }, 
-        {
-            "labels": {
-                "en": "Batak", 
-                "fr": "batik"
-            }, 
-            "type_id": "Batk"
-        }, 
-        {
-            "labels": {
-                "en": "Buginese", 
-                "fr": "bouguis"
-            }, 
-            "type_id": "Bugi"
-        }, 
-        {
-            "labels": {
-                "en": "Tagalog (Baybayin, Alibata)", 
-                "fr": "tagal (baybayin, alibata)"
-            }, 
-            "type_id": "Tglg"
-        }, 
-        {
-            "labels": {
-                "en": "Hanunoo (Hanunóo)", 
-                "fr": "hanounóo"
-            }, 
-            "type_id": "Hano"
-        }, 
-        {
-            "labels": {
-                "en": "Buhid", 
-                "fr": "bouhide"
-            }, 
-            "type_id": "Buhd"
-        }, 
-        {
-            "labels": {
-                "en": "Tagbanwa", 
-                "fr": "tagbanoua"
-            }, 
-            "type_id": "Tagb"
-        }, 
-        {
-            "labels": {
-                "en": "Sora Sompeng", 
-                "fr": "sora sompeng"
-            }, 
-            "type_id": "Sora"
-        }, 
-        {
-            "labels": {
-                "en": "Lisu (Fraser)", 
-                "fr": "lisu (Fraser)"
-            }, 
-            "type_id": "Lisu"
-        }, 
-        {
-            "labels": {
-                "en": "Linear A", 
-                "fr": "linéaire A"
-            }, 
-            "type_id": "Lina"
-        }, 
-        {
-            "labels": {
-                "en": "Linear B", 
-                "fr": "linéaire B"
-            }, 
-            "type_id": "Linb"
-        }, 
-        {
-            "labels": {
-                "en": "Cypriot", 
-                "fr": "syllabaire chypriote"
-            }, 
-            "type_id": "Cprt"
-        }, 
-        {
-            "labels": {
-                "en": "Hiragana", 
-                "fr": "hiragana"
-            }, 
-            "type_id": "Hira"
-        }, 
-        {
-            "labels": {
-                "en": "Katakana", 
-                "fr": "katakana"
-            }, 
-            "type_id": "Kana"
-        }, 
-        {
-            "labels": {
-                "en": "Japanese syllabaries (alias for Hiragana + Katakana)", 
-                "fr": "syllabaires japonais (alias pour hiragana + katakana)"
-            }, 
-            "type_id": "Hrkt"
-        }, 
-        {
-            "labels": {
-                "en": "Japanese (alias for Han + Hiragana + Katakana)", 
-                "fr": "japonais (alias pour han + hiragana + katakana)"
-            }, 
-            "type_id": "Jpan"
-        }, 
-        {
-            "labels": {
-                "en": "Nakhi Geba ('Na-'Khi ²Ggŏ-¹baw, Naxi Geba)", 
-                "fr": "nakhi géba"
-            }, 
-            "type_id": "Nkgb"
-        }, 
-        {
-            "labels": {
-                "en": "Ethiopic (Geʻez)", 
-                "fr": "éthiopien (geʻez, guèze)"
-            }, 
-            "type_id": "Ethi"
-        }, 
-        {
-            "labels": {
-                "en": "Bamum", 
-                "fr": "bamoum"
-            }, 
-            "type_id": "Bamu"
-        }, 
-        {
-            "labels": {
-                "en": "Kpelle", 
-                "fr": "kpèllé"
-            }, 
-            "type_id": "Kpel"
-        }, 
-        {
-            "labels": {
-                "en": "Loma", 
-                "fr": "loma"
-            }, 
-            "type_id": "Loma"
-        }, 
-        {
-            "labels": {
-                "en": "Mende", 
-                "fr": "mendé"
-            }, 
-            "type_id": "Mend"
-        }, 
-        {
-            "labels": {
-                "en": "Afaka", 
+                "en": "Afaka",
                 "fr": "afaka"
-            }, 
+            },
             "type_id": "Afak"
-        }, 
+        },
         {
             "labels": {
-                "en": "Unified Canadian Aboriginal Syllabics", 
-                "fr": "syllabaire autochtone canadien unifié"
-            }, 
-            "type_id": "Cans"
-        }, 
+                "en": "Caucasian Albanian",
+                "fr": "aghbanien"
+            },
+            "type_id": "Aghb"
+        },
         {
             "labels": {
-                "en": "Cherokee", 
-                "fr": "tchérokî"
-            }, 
-            "type_id": "Cher"
-        }, 
+                "en": "Arabic",
+                "fr": "arabe"
+            },
+            "type_id": "Arab"
+        },
         {
             "labels": {
-                "en": "Pahawh Hmong", 
-                "fr": "pahawh hmong"
-            }, 
-            "type_id": "Hmng"
-        }, 
+                "en": "Imperial Aramaic",
+                "fr": "aram\u00e9en imp\u00e9rial"
+            },
+            "type_id": "Armi"
+        },
         {
             "labels": {
-                "en": "Yi", 
-                "fr": "yi"
-            }, 
-            "type_id": "Yiii"
-        }, 
+                "en": "Armenian",
+                "fr": "arm\u00e9nien"
+            },
+            "type_id": "Armn"
+        },
         {
             "labels": {
-                "en": "Vai", 
-                "fr": "vaï"
-            }, 
-            "type_id": "Vaii"
-        }, 
+                "en": "Avestan",
+                "fr": "avestique"
+            },
+            "type_id": "Avst"
+        },
         {
             "labels": {
-                "en": "Woleai", 
-                "fr": "woléaï"
-            }, 
-            "type_id": "Wole"
-        }, 
+                "en": "Balinese",
+                "fr": "balinais"
+            },
+            "type_id": "Bali"
+        },
         {
             "labels": {
-                "en": "Nüshu", 
-                "fr": "nüshu"
-            }, 
-            "type_id": "Nshu"
-        }, 
+                "en": "Bamum",
+                "fr": "bamoum"
+            },
+            "type_id": "Bamu"
+        },
         {
             "labels": {
-                "en": "Han (Hanzi, Kanji, Hanja)", 
-                "fr": "idéogrammes han (sinogrammes)"
-            }, 
-            "type_id": "Hani"
-        }, 
+                "en": "Bassa Vah",
+                "fr": "bassa"
+            },
+            "type_id": "Bass"
+        },
         {
             "labels": {
-                "en": "Han (Simplified variant)", 
-                "fr": "idéogrammes han (variante simplifiée)"
-            }, 
-            "type_id": "Hans"
-        }, 
+                "en": "Batak",
+                "fr": "batik"
+            },
+            "type_id": "Batk"
+        },
         {
             "labels": {
-                "en": "Han (Traditional variant)", 
-                "fr": "idéogrammes han (variante traditionnelle)"
-            }, 
-            "type_id": "Hant"
-        }, 
+                "en": "Bengali",
+                "fr": "bengal\u00ee"
+            },
+            "type_id": "Beng"
+        },
         {
             "labels": {
-                "en": "Jurchen", 
-                "fr": "jurchen"
-            }, 
-            "type_id": "Jurc"
-        }, 
-        {
-            "labels": {
-                "en": "Tangut", 
-                "fr": "tangoute"
-            }, 
-            "type_id": "Tang"
-        }, 
-        {
-            "labels": {
-                "en": "Blissymbols", 
+                "en": "Blissymbols",
                 "fr": "symboles Bliss"
-            }, 
+            },
             "type_id": "Blis"
-        }, 
+        },
         {
             "labels": {
-                "en": "Braille", 
+                "en": "Bopomofo",
+                "fr": "bopomofo"
+            },
+            "type_id": "Bopo"
+        },
+        {
+            "labels": {
+                "en": "Brahmi",
+                "fr": "brahma"
+            },
+            "type_id": "Brah"
+        },
+        {
+            "labels": {
+                "en": "Braille",
                 "fr": "braille"
-            }, 
+            },
             "type_id": "Brai"
-        }, 
+        },
         {
             "labels": {
-                "en": "Indus (Harappan)", 
-                "fr": "indus"
-            }, 
-            "type_id": "Inds"
-        }, 
+                "en": "Buginese",
+                "fr": "bouguis"
+            },
+            "type_id": "Bugi"
+        },
         {
             "labels": {
-                "en": "Rongorongo", 
-                "fr": "rongorongo"
-            }, 
-            "type_id": "Roro"
-        }, 
+                "en": "Buhid",
+                "fr": "bouhide"
+            },
+            "type_id": "Buhd"
+        },
         {
             "labels": {
-                "en": "Duployan shorthand, Duployan stenography", 
-                "fr": "sténographie Duployé"
-            }, 
+                "en": "Chakma",
+                "fr": "chakma"
+            },
+            "type_id": "Cakm"
+        },
+        {
+            "labels": {
+                "en": "Unified Canadian Aboriginal Syllabics",
+                "fr": "syllabaire autochtone canadien unifi\u00e9"
+            },
+            "type_id": "Cans"
+        },
+        {
+            "labels": {
+                "en": "Carian",
+                "fr": "carien"
+            },
+            "type_id": "Cari"
+        },
+        {
+            "labels": {
+                "en": "Cham",
+                "fr": "cham (\u010dam, tcham)"
+            },
+            "type_id": "Cham"
+        },
+        {
+            "labels": {
+                "en": "Cherokee",
+                "fr": "tch\u00e9rok\u00ee"
+            },
+            "type_id": "Cher"
+        },
+        {
+            "labels": {
+                "en": "Cirth",
+                "fr": "cirth"
+            },
+            "type_id": "Cirt"
+        },
+        {
+            "labels": {
+                "en": "Coptic",
+                "fr": "copte"
+            },
+            "type_id": "Copt"
+        },
+        {
+            "labels": {
+                "en": "Cypriot",
+                "fr": "syllabaire chypriote"
+            },
+            "type_id": "Cprt"
+        },
+        {
+            "labels": {
+                "en": "Cyrillic",
+                "fr": "cyrillique"
+            },
+            "type_id": "Cyrl"
+        },
+        {
+            "labels": {
+                "en": "Cyrillic (Old Church Slavonic variant)",
+                "fr": "cyrillique (variante slavonne)"
+            },
+            "type_id": "Cyrs"
+        },
+        {
+            "labels": {
+                "en": "Devanagari (Nagari)",
+                "fr": "d\u00e9van\u00e2gar\u00ee"
+            },
+            "type_id": "Deva"
+        },
+        {
+            "labels": {
+                "en": "Deseret (Mormon)",
+                "fr": "d\u00e9seret (mormon)"
+            },
+            "type_id": "Dsrt"
+        },
+        {
+            "labels": {
+                "en": "Duployan shorthand, Duployan stenography",
+                "fr": "st\u00e9nographie Duploy\u00e9"
+            },
             "type_id": "Dupl"
-        }, 
+        },
         {
             "labels": {
-                "en": "Reserved for private use (start)", 
-                "fr": "réservé à l’usage privé (début)"
-            }, 
+                "en": "Egyptian demotic",
+                "fr": "d\u00e9motique \u00e9gyptien"
+            },
+            "type_id": "Egyd"
+        },
+        {
+            "labels": {
+                "en": "Egyptian hieratic",
+                "fr": "hi\u00e9ratique \u00e9gyptien"
+            },
+            "type_id": "Egyh"
+        },
+        {
+            "labels": {
+                "en": "Egyptian hieroglyphs",
+                "fr": "hi\u00e9roglyphes \u00e9gyptiens"
+            },
+            "type_id": "Egyp"
+        },
+        {
+            "labels": {
+                "en": "Elbasan",
+                "fr": "elbasan"
+            },
+            "type_id": "Elba"
+        },
+        {
+            "labels": {
+                "en": "Ethiopic (Ge\u02bbez)",
+                "fr": "\u00e9thiopien (ge\u02bbez, gu\u00e8ze)"
+            },
+            "type_id": "Ethi"
+        },
+        {
+            "labels": {
+                "en": "Khutsuri (Asomtavruli and Nuskhuri)",
+                "fr": "khoutsouri (assomtavrouli et nouskhouri)"
+            },
+            "type_id": "Geok"
+        },
+        {
+            "labels": {
+                "en": "Georgian (Mkhedruli)",
+                "fr": "g\u00e9orgien (mkh\u00e9drouli)"
+            },
+            "type_id": "Geor"
+        },
+        {
+            "labels": {
+                "en": "Glagolitic",
+                "fr": "glagolitique"
+            },
+            "type_id": "Glag"
+        },
+        {
+            "labels": {
+                "en": "Gothic",
+                "fr": "gotique"
+            },
+            "type_id": "Goth"
+        },
+        {
+            "labels": {
+                "en": "Grantha",
+                "fr": "grantha"
+            },
+            "type_id": "Gran"
+        },
+        {
+            "labels": {
+                "en": "Greek",
+                "fr": "grec"
+            },
+            "type_id": "Grek"
+        },
+        {
+            "labels": {
+                "en": "Gujarati",
+                "fr": "goudjar\u00e2t\u00ee (gujr\u00e2t\u00ee)"
+            },
+            "type_id": "Gujr"
+        },
+        {
+            "labels": {
+                "en": "Gurmukhi",
+                "fr": "gourmoukh\u00ee"
+            },
+            "type_id": "Guru"
+        },
+        {
+            "labels": {
+                "en": "Hangul (Hang\u016dl, Hangeul)",
+                "fr": "hang\u00fbl (hang\u016dl, hangeul)"
+            },
+            "type_id": "Hang"
+        },
+        {
+            "labels": {
+                "en": "Han (Hanzi, Kanji, Hanja)",
+                "fr": "id\u00e9ogrammes han (sinogrammes)"
+            },
+            "type_id": "Hani"
+        },
+        {
+            "labels": {
+                "en": "Hanunoo (Hanun\u00f3o)",
+                "fr": "hanoun\u00f3o"
+            },
+            "type_id": "Hano"
+        },
+        {
+            "labels": {
+                "en": "Han (Simplified variant)",
+                "fr": "id\u00e9ogrammes han (variante simplifi\u00e9e)"
+            },
+            "type_id": "Hans"
+        },
+        {
+            "labels": {
+                "en": "Han (Traditional variant)",
+                "fr": "id\u00e9ogrammes han (variante traditionnelle)"
+            },
+            "type_id": "Hant"
+        },
+        {
+            "labels": {
+                "en": "Hebrew",
+                "fr": "h\u00e9breu"
+            },
+            "type_id": "Hebr"
+        },
+        {
+            "labels": {
+                "en": "Hiragana",
+                "fr": "hiragana"
+            },
+            "type_id": "Hira"
+        },
+        {
+            "labels": {
+                "en": "Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs)",
+                "fr": "hi\u00e9roglyphes anatoliens (hi\u00e9roglyphes louvites, hi\u00e9roglyphes hittites)"
+            },
+            "type_id": "Hluw"
+        },
+        {
+            "labels": {
+                "en": "Pahawh Hmong",
+                "fr": "pahawh hmong"
+            },
+            "type_id": "Hmng"
+        },
+        {
+            "labels": {
+                "en": "Japanese syllabaries (alias for Hiragana + Katakana)",
+                "fr": "syllabaires japonais (alias pour hiragana + katakana)"
+            },
+            "type_id": "Hrkt"
+        },
+        {
+            "labels": {
+                "en": "Old Hungarian (Hungarian Runic)",
+                "fr": "runes hongroises (ancien hongrois)"
+            },
+            "type_id": "Hung"
+        },
+        {
+            "labels": {
+                "en": "Indus (Harappan)",
+                "fr": "indus"
+            },
+            "type_id": "Inds"
+        },
+        {
+            "labels": {
+                "en": "Old Italic (Etruscan, Oscan, etc.)",
+                "fr": "ancien italique (\u00e9trusque, osque, etc.)"
+            },
+            "type_id": "Ital"
+        },
+        {
+            "labels": {
+                "en": "Javanese",
+                "fr": "javanais"
+            },
+            "type_id": "Java"
+        },
+        {
+            "labels": {
+                "en": "Japanese (alias for Han + Hiragana + Katakana)",
+                "fr": "japonais (alias pour han + hiragana + katakana)"
+            },
+            "type_id": "Jpan"
+        },
+        {
+            "labels": {
+                "en": "Jurchen",
+                "fr": "jurchen"
+            },
+            "type_id": "Jurc"
+        },
+        {
+            "labels": {
+                "en": "Kayah Li",
+                "fr": "kayah li"
+            },
+            "type_id": "Kali"
+        },
+        {
+            "labels": {
+                "en": "Katakana",
+                "fr": "katakana"
+            },
+            "type_id": "Kana"
+        },
+        {
+            "labels": {
+                "en": "Kharoshthi",
+                "fr": "kharochth\u00ee"
+            },
+            "type_id": "Khar"
+        },
+        {
+            "labels": {
+                "en": "Khmer",
+                "fr": "khmer"
+            },
+            "type_id": "Khmr"
+        },
+        {
+            "labels": {
+                "en": "Khojki",
+                "fr": "khojk\u00ee"
+            },
+            "type_id": "Khoj"
+        },
+        {
+            "labels": {
+                "en": "Kannada",
+                "fr": "kannara (canara)"
+            },
+            "type_id": "Knda"
+        },
+        {
+            "labels": {
+                "en": "Korean (alias for Hangul + Han)",
+                "fr": "cor\u00e9en (alias pour hang\u00fbl + han)"
+            },
+            "type_id": "Kore"
+        },
+        {
+            "labels": {
+                "en": "Kpelle",
+                "fr": "kp\u00e8ll\u00e9"
+            },
+            "type_id": "Kpel"
+        },
+        {
+            "labels": {
+                "en": "Kaithi",
+                "fr": "kaith\u00ee"
+            },
+            "type_id": "Kthi"
+        },
+        {
+            "labels": {
+                "en": "Tai Tham (Lanna)",
+                "fr": "ta\u00ef tham (lanna)"
+            },
+            "type_id": "Lana"
+        },
+        {
+            "labels": {
+                "en": "Lao",
+                "fr": "laotien"
+            },
+            "type_id": "Laoo"
+        },
+        {
+            "labels": {
+                "en": "Latin (Fraktur variant)",
+                "fr": "latin (variante bris\u00e9e)"
+            },
+            "type_id": "Latf"
+        },
+        {
+            "labels": {
+                "en": "Latin (Gaelic variant)",
+                "fr": "latin (variante ga\u00e9lique)"
+            },
+            "type_id": "Latg"
+        },
+        {
+            "labels": {
+                "en": "Latin",
+                "fr": "latin"
+            },
+            "type_id": "Latn"
+        },
+        {
+            "labels": {
+                "en": "Lepcha (R\u00f3ng)",
+                "fr": "lepcha (r\u00f3ng)"
+            },
+            "type_id": "Lepc"
+        },
+        {
+            "labels": {
+                "en": "Limbu",
+                "fr": "limbou"
+            },
+            "type_id": "Limb"
+        },
+        {
+            "labels": {
+                "en": "Linear A",
+                "fr": "lin\u00e9aire A"
+            },
+            "type_id": "Lina"
+        },
+        {
+            "labels": {
+                "en": "Linear B",
+                "fr": "lin\u00e9aire B"
+            },
+            "type_id": "Linb"
+        },
+        {
+            "labels": {
+                "en": "Lisu (Fraser)",
+                "fr": "lisu (Fraser)"
+            },
+            "type_id": "Lisu"
+        },
+        {
+            "labels": {
+                "en": "Loma",
+                "fr": "loma"
+            },
+            "type_id": "Loma"
+        },
+        {
+            "labels": {
+                "en": "Lycian",
+                "fr": "lycien"
+            },
+            "type_id": "Lyci"
+        },
+        {
+            "labels": {
+                "en": "Lydian",
+                "fr": "lydien"
+            },
+            "type_id": "Lydi"
+        },
+        {
+            "labels": {
+                "en": "Mahajani",
+                "fr": "mah\u00e2jan\u00ee"
+            },
+            "type_id": "Mahj"
+        },
+        {
+            "labels": {
+                "en": "Mandaic, Mandaean",
+                "fr": "mand\u00e9en"
+            },
+            "type_id": "Mand"
+        },
+        {
+            "labels": {
+                "en": "Manichaean",
+                "fr": "manich\u00e9en"
+            },
+            "type_id": "Mani"
+        },
+        {
+            "labels": {
+                "en": "Mayan hieroglyphs",
+                "fr": "hi\u00e9roglyphes mayas"
+            },
+            "type_id": "Maya"
+        },
+        {
+            "labels": {
+                "en": "Mende",
+                "fr": "mend\u00e9"
+            },
+            "type_id": "Mend"
+        },
+        {
+            "labels": {
+                "en": "Meroitic Cursive",
+                "fr": "cursif m\u00e9ro\u00eftique"
+            },
+            "type_id": "Merc"
+        },
+        {
+            "labels": {
+                "en": "Meroitic Hieroglyphs",
+                "fr": "hi\u00e9roglyphes m\u00e9ro\u00eftiques"
+            },
+            "type_id": "Mero"
+        },
+        {
+            "labels": {
+                "en": "Malayalam",
+                "fr": "malay\u00e2lam"
+            },
+            "type_id": "Mlym"
+        },
+        {
+            "labels": {
+                "en": "Mongolian",
+                "fr": "mongol"
+            },
+            "type_id": "Mong"
+        },
+        {
+            "labels": {
+                "en": "Moon (Moon code, Moon script, Moon type)",
+                "fr": "\u00e9criture Moon"
+            },
+            "type_id": "Moon"
+        },
+        {
+            "labels": {
+                "en": "Mro, Mru",
+                "fr": "mro"
+            },
+            "type_id": "Mroo"
+        },
+        {
+            "labels": {
+                "en": "Meitei Mayek (Meithei, Meetei)",
+                "fr": "meitei mayek"
+            },
+            "type_id": "Mtei"
+        },
+        {
+            "labels": {
+                "en": "Myanmar (Burmese)",
+                "fr": "birman"
+            },
+            "type_id": "Mymr"
+        },
+        {
+            "labels": {
+                "en": "Old North Arabian (Ancient North Arabian)",
+                "fr": "nord-arabique"
+            },
+            "type_id": "Narb"
+        },
+        {
+            "labels": {
+                "en": "Nabataean",
+                "fr": "nabat\u00e9en"
+            },
+            "type_id": "Nbat"
+        },
+        {
+            "labels": {
+                "en": "Nakhi Geba ('Na-'Khi \u00b2Gg\u014f-\u00b9baw, Naxi Geba)",
+                "fr": "nakhi g\u00e9ba"
+            },
+            "type_id": "Nkgb"
+        },
+        {
+            "labels": {
+                "en": "N\u2019Ko",
+                "fr": "n\u2019ko"
+            },
+            "type_id": "Nkoo"
+        },
+        {
+            "labels": {
+                "en": "N\u00fcshu",
+                "fr": "n\u00fcshu"
+            },
+            "type_id": "Nshu"
+        },
+        {
+            "labels": {
+                "en": "Ogham",
+                "fr": "ogam"
+            },
+            "type_id": "Ogam"
+        },
+        {
+            "labels": {
+                "en": "Ol Chiki (Ol Cemet\u2019, Ol, Santali)",
+                "fr": "ol tchiki"
+            },
+            "type_id": "Olck"
+        },
+        {
+            "labels": {
+                "en": "Old Turkic, Orkhon Runic",
+                "fr": "orkhon"
+            },
+            "type_id": "Orkh"
+        },
+        {
+            "labels": {
+                "en": "Oriya",
+                "fr": "oriy\u00e2"
+            },
+            "type_id": "Orya"
+        },
+        {
+            "labels": {
+                "en": "Osmanya",
+                "fr": "osmanais"
+            },
+            "type_id": "Osma"
+        },
+        {
+            "labels": {
+                "en": "Palmyrene",
+                "fr": "palmyr\u00e9nien"
+            },
+            "type_id": "Palm"
+        },
+        {
+            "labels": {
+                "en": "Old Permic",
+                "fr": "ancien permien"
+            },
+            "type_id": "Perm"
+        },
+        {
+            "labels": {
+                "en": "Phags-pa",
+                "fr": "\u2019phags pa"
+            },
+            "type_id": "Phag"
+        },
+        {
+            "labels": {
+                "en": "Inscriptional Pahlavi",
+                "fr": "pehlevi des inscriptions"
+            },
+            "type_id": "Phli"
+        },
+        {
+            "labels": {
+                "en": "Psalter Pahlavi",
+                "fr": "pehlevi des psautiers"
+            },
+            "type_id": "Phlp"
+        },
+        {
+            "labels": {
+                "en": "Book Pahlavi",
+                "fr": "pehlevi des livres"
+            },
+            "type_id": "Phlv"
+        },
+        {
+            "labels": {
+                "en": "Phoenician",
+                "fr": "ph\u00e9nicien"
+            },
+            "type_id": "Phnx"
+        },
+        {
+            "labels": {
+                "en": "Miao (Pollard)",
+                "fr": "miao (Pollard)"
+            },
+            "type_id": "Plrd"
+        },
+        {
+            "labels": {
+                "en": "Inscriptional Parthian",
+                "fr": "parthe des inscriptions"
+            },
+            "type_id": "Prti"
+        },
+        {
+            "labels": {
+                "en": "Reserved for private use (start)",
+                "fr": "r\u00e9serv\u00e9 \u00e0 l\u2019usage priv\u00e9 (d\u00e9but)"
+            },
             "type_id": "Qaaa"
-        }, 
+        },
         {
             "labels": {
-                "en": "(Private use)", 
-                "fr": "réservé à l’usage privé (fin)"
-            }, 
-            "type_id": "Qaai"
-        }, 
-        {
-            "labels": {
-                "en": "Reserved for private use (end)"
-            }, 
+                "en": "Reserved for private use (end)",
+                "fr": "r\u00e9serv\u00e9 \u00e0 l\u2019usage priv\u00e9 (fin)"
+            },
             "type_id": "Qabx"
-        }, 
+        },
         {
             "labels": {
-                "en": "Code for inherited script", 
-                "fr": "codet pour écriture héritée"
-            }, 
+                "en": "Rejang (Redjang, Kaganga)",
+                "fr": "redjang (kaganga)"
+            },
+            "type_id": "Rjng"
+        },
+        {
+            "labels": {
+                "en": "Rongorongo",
+                "fr": "rongorongo"
+            },
+            "type_id": "Roro"
+        },
+        {
+            "labels": {
+                "en": "Runic",
+                "fr": "runique"
+            },
+            "type_id": "Runr"
+        },
+        {
+            "labels": {
+                "en": "Samaritan",
+                "fr": "samaritain"
+            },
+            "type_id": "Samr"
+        },
+        {
+            "labels": {
+                "en": "Sarati",
+                "fr": "sarati"
+            },
+            "type_id": "Sara"
+        },
+        {
+            "labels": {
+                "en": "Old South Arabian",
+                "fr": "sud-arabique, himyarite"
+            },
+            "type_id": "Sarb"
+        },
+        {
+            "labels": {
+                "en": "Saurashtra",
+                "fr": "saurachtra"
+            },
+            "type_id": "Saur"
+        },
+        {
+            "labels": {
+                "en": "SignWriting",
+                "fr": "Sign\u00c9criture, SignWriting"
+            },
+            "type_id": "Sgnw"
+        },
+        {
+            "labels": {
+                "en": "Shavian (Shaw)",
+                "fr": "shavien (Shaw)"
+            },
+            "type_id": "Shaw"
+        },
+        {
+            "labels": {
+                "en": "Sharada, \u015a\u0101rad\u0101",
+                "fr": "charada, shard"
+            },
+            "type_id": "Shrd"
+        },
+        {
+            "labels": {
+                "en": "Khudawadi, Sindhi",
+                "fr": "khoudawad\u00ee, sindh\u00ee"
+            },
+            "type_id": "Sind"
+        },
+        {
+            "labels": {
+                "en": "Sinhala",
+                "fr": "singhalais"
+            },
+            "type_id": "Sinh"
+        },
+        {
+            "labels": {
+                "en": "Sora Sompeng",
+                "fr": "sora sompeng"
+            },
+            "type_id": "Sora"
+        },
+        {
+            "labels": {
+                "en": "Sundanese",
+                "fr": "sundanais"
+            },
+            "type_id": "Sund"
+        },
+        {
+            "labels": {
+                "en": "Syloti Nagri",
+                "fr": "sylot\u00ee n\u00e2gr\u00ee"
+            },
+            "type_id": "Sylo"
+        },
+        {
+            "labels": {
+                "en": "Syriac",
+                "fr": "syriaque"
+            },
+            "type_id": "Syrc"
+        },
+        {
+            "labels": {
+                "en": "Syriac (Estrangelo variant)",
+                "fr": "syriaque (variante estrangh\u00e9lo)"
+            },
+            "type_id": "Syre"
+        },
+        {
+            "labels": {
+                "en": "Syriac (Western variant)",
+                "fr": "syriaque (variante occidentale)"
+            },
+            "type_id": "Syrj"
+        },
+        {
+            "labels": {
+                "en": "Syriac (Eastern variant)",
+                "fr": "syriaque (variante orientale)"
+            },
+            "type_id": "Syrn"
+        },
+        {
+            "labels": {
+                "en": "Tagbanwa",
+                "fr": "tagbanoua"
+            },
+            "type_id": "Tagb"
+        },
+        {
+            "labels": {
+                "en": "Takri, \u1e6c\u0101kr\u012b, \u1e6c\u0101\u1e45kr\u012b",
+                "fr": "t\u00e2kr\u00ee"
+            },
+            "type_id": "Takr"
+        },
+        {
+            "labels": {
+                "en": "Tai Le",
+                "fr": "ta\u00ef-le"
+            },
+            "type_id": "Tale"
+        },
+        {
+            "labels": {
+                "en": "New Tai Lue",
+                "fr": "nouveau ta\u00ef-lue"
+            },
+            "type_id": "Talu"
+        },
+        {
+            "labels": {
+                "en": "Tamil",
+                "fr": "tamoul"
+            },
+            "type_id": "Taml"
+        },
+        {
+            "labels": {
+                "en": "Tangut",
+                "fr": "tangoute"
+            },
+            "type_id": "Tang"
+        },
+        {
+            "labels": {
+                "en": "Tai Viet",
+                "fr": "ta\u00ef vi\u00eat"
+            },
+            "type_id": "Tavt"
+        },
+        {
+            "labels": {
+                "en": "Telugu",
+                "fr": "t\u00e9lougou"
+            },
+            "type_id": "Telu"
+        },
+        {
+            "labels": {
+                "en": "Tengwar",
+                "fr": "tengwar"
+            },
+            "type_id": "Teng"
+        },
+        {
+            "labels": {
+                "en": "Tifinagh (Berber)",
+                "fr": "tifinagh (berb\u00e8re)"
+            },
+            "type_id": "Tfng"
+        },
+        {
+            "labels": {
+                "en": "Tagalog (Baybayin, Alibata)",
+                "fr": "tagal (baybayin, alibata)"
+            },
+            "type_id": "Tglg"
+        },
+        {
+            "labels": {
+                "en": "Thaana",
+                "fr": "th\u00e2na"
+            },
+            "type_id": "Thaa"
+        },
+        {
+            "labels": {
+                "en": "Thai",
+                "fr": "tha\u00ef"
+            },
+            "type_id": "Thai"
+        },
+        {
+            "labels": {
+                "en": "Tibetan",
+                "fr": "tib\u00e9tain"
+            },
+            "type_id": "Tibt"
+        },
+        {
+            "labels": {
+                "en": "Tirhuta",
+                "fr": "tirhouta"
+            },
+            "type_id": "Tirh"
+        },
+        {
+            "labels": {
+                "en": "Ugaritic",
+                "fr": "ougaritique"
+            },
+            "type_id": "Ugar"
+        },
+        {
+            "labels": {
+                "en": "Vai",
+                "fr": "va\u00ef"
+            },
+            "type_id": "Vaii"
+        },
+        {
+            "labels": {
+                "en": "Visible Speech",
+                "fr": "parole visible"
+            },
+            "type_id": "Visp"
+        },
+        {
+            "labels": {
+                "en": "Warang Citi (Varang Kshiti)",
+                "fr": "warang citi"
+            },
+            "type_id": "Wara"
+        },
+        {
+            "labels": {
+                "en": "Woleai",
+                "fr": "wol\u00e9a\u00ef"
+            },
+            "type_id": "Wole"
+        },
+        {
+            "labels": {
+                "en": "Old Persian",
+                "fr": "cun\u00e9iforme pers\u00e9politain"
+            },
+            "type_id": "Xpeo"
+        },
+        {
+            "labels": {
+                "en": "Cuneiform, Sumero-Akkadian",
+                "fr": "cun\u00e9iforme sum\u00e9ro-akkadien"
+            },
+            "type_id": "Xsux"
+        },
+        {
+            "labels": {
+                "en": "Yi",
+                "fr": "yi"
+            },
+            "type_id": "Yiii"
+        },
+        {
+            "labels": {
+                "en": "Code for inherited script",
+                "fr": "codet pour \u00e9criture h\u00e9rit\u00e9e"
+            },
             "type_id": "Zinh"
-        }, 
+        },
         {
             "labels": {
-                "en": "Mathematical notation"
-            }, 
+                "en": "Mathematical notation",
+                "fr": "notation math\u00e9matique"
+            },
             "type_id": "Zmth"
-        }, 
+        },
         {
             "labels": {
-                "en": "Symbols"
-            }, 
+                "en": "Symbols",
+                "fr": "symboles"
+            },
             "type_id": "Zsym"
-        }, 
+        },
         {
             "labels": {
-                "en": "Code for unwritten documents"
-            }, 
+                "en": "Code for unwritten documents",
+                "fr": "codet pour les documents non \u00e9crits"
+            },
             "type_id": "Zxxx"
-        }, 
+        },
         {
             "labels": {
-                "en": "Code for undetermined script"
-            }, 
+                "en": "Code for undetermined script",
+                "fr": "codet pour \u00e9criture ind\u00e9termin\u00e9e"
+            },
             "type_id": "Zyyy"
-        }, 
+        },
         {
             "labels": {
-                "en": "Code for uncoded script"
-            }, 
+                "en": "Code for uncoded script",
+                "fr": "codet pour \u00e9criture non cod\u00e9e"
+            },
             "type_id": "Zzzz"
         }
-    ], 
-    "rec_class": "Type", 
-    "rec_metajson": 1, 
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
     "type_id": "script"
 }
