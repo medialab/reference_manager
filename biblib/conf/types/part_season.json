@@ -1,0 +1,37 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Spring",
+                "fr": "Printemps"
+            },
+            "type_id": "spring"
+        },
+        {
+            "labels": {
+                "en": "Summer",
+                "fr": "Été"
+            },
+            "type_id": "summer"
+        },
+        {
+            "labels": {
+                "en": "Fall",
+                "fr": "Automne"
+            },
+            "type_id": "fall"
+        },
+        {
+            "labels": {
+                "en": "Winter",
+                "fr": "Hiver"
+            },
+            "type_id": "winter"
+        }
+    ],
+    "sort": false,
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "part_season"
+}

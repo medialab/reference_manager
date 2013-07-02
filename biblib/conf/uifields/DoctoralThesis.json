@@ -30,33 +30,21 @@
         },
         {
             "labels": {
-                "en": "Date created",
-                "fr": "Date de création"
+                "en": "Date issued",
+                "fr": "Date de publication"
             },
-            "property": "date_created",
+            "property": "date_issued",
             "required": true,
             "type_ui": "DateField"
         },
         {
             "labels": {
-                "en": "Duration",
-                "fr": "Dur\u00e9e"
+                "en": "Number of pages",
+                "fr": "Nombre de pages"
             },
-            "property": "extent_duration",
+            "property": "extent_pages",
             "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "id_type": "isan",
-            "labels": {
-                "en": "ISAN",
-                "fr": "ISAN"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "identifiers",
-            "required": false,
-            "type_ui": "IdentifierField"
+            "type_ui": "IntegerField"
         },
         {
             "labels": {
@@ -71,22 +59,48 @@
         },
         {
             "labels": {
-                "en": "Subtitles languages",
-                "fr": "Langues des sous-titres"
+                "en": "Publication place",
+                "fr": "Lieu de publication"
             },
             "multiple": true,
-            "property": "languages_subtitles",
+            "property": "publication_places",
             "required": false,
-            "type_source": "language",
-            "type_ui": "TypeField"
+            "type_ui": "CharField"
         },
         {
             "labels": {
-                "en": "Is peer reviewed ?",
-                "fr": "Comité de lecture ?"
+                "en": "Publication country",
+                "fr": "Pays de publication"
             },
-            "property": "peer_review",
-            "type_ui": "CharField"
+            "multiple": true,
+            "property": "publication_countries",
+            "required": false,
+            "type_source": "country",
+            "type_ui": "TypeField"
+        },
+        {
+            "id_type": "isbn",
+            "labels": {
+                "en": "ISBN",
+                "fr": "ISBN"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        },
+        {
+            "id_type": "doi",
+            "labels": {
+                "en": "DOI",
+                "fr": "DOI"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
         },
         {
             "labels": {
@@ -107,17 +121,9 @@
             "property": "keywords",
             "required": false,
             "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
-                "en": "To archive ?",
-                "fr": "A archiver ?"
-            },
-            "property": "for_archiving",
-            "type_ui": "CharField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "VideoRecording"
+    "rec_type": "DoctoralThesis"
 }

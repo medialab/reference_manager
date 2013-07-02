@@ -1,0 +1,17 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "default": true,
+            "labels": {
+                "en": "What a mess", 
+                "fr": "Un beau bazar"
+            }, 
+            "major": true, 
+            "type_id": "just_the_begining"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "genre"
+}
