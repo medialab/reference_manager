@@ -39,27 +39,6 @@
         },
         {
             "labels": {
-                "en": "Duration",
-                "fr": "Dur\u00e9e"
-            },
-            "property": "extent_duration",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "id_type": "isan",
-            "labels": {
-                "en": "ISAN",
-                "fr": "ISAN"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "identifiers",
-            "required": false,
-            "type_ui": "IdentifierField"
-        },
-        {
-            "labels": {
                 "en": "Languages",
                 "fr": "Langues"
             },
@@ -68,25 +47,6 @@
             "required": false,
             "type_source": "language",
             "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Subtitles languages",
-                "fr": "Langues des sous-titres"
-            },
-            "multiple": true,
-            "property": "languages_subtitles",
-            "required": false,
-            "type_source": "language",
-            "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Is peer reviewed ?",
-                "fr": "Comit\u00e9 de lecture ?"
-            },
-            "property": "peer_review",
-            "type_ui": "CharField"
         },
         {
             "labels": {
@@ -107,17 +67,9 @@
             "property": "keywords",
             "required": false,
             "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
-                "en": "To archive ?",
-                "fr": "A archiver ?"
-            },
-            "property": "for_archiving",
-            "type_ui": "CharField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "VideoRecording"
+    "rec_type": "ConferenceContribution"
 }

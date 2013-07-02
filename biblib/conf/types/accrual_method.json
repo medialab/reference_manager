@@ -1,0 +1,50 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "Deposit", 
+                "fr": "Dépôt"
+            }, 
+            "type_id": "http://purl.org/cld/accmeth/deposit"
+        }, 
+        {
+            "labels": {
+                "en": "Donation", 
+                "fr": "Don"
+            }, 
+            "type_id": "http://purl.org/cld/accmeth/donation"
+        }, 
+        {
+            "labels": {
+                "en": "Purchase", 
+                "fr": "Achat"
+            }, 
+            "type_id": "http://purl.org/cld/accmeth/purchase"
+        }, 
+        {
+            "labels": {
+                "en": "Loan", 
+                "fr": "Prêt"
+            }, 
+            "type_id": "http://purl.org/cld/accmeth/loan"
+        }, 
+        {
+            "labels": {
+                "en": "License", 
+                "fr": "Licence"
+            }, 
+            "type_id": "http://purl.org/cld/accmeth/license"
+        }, 
+        {
+            "labels": {
+                "en": "Item Creation", 
+                "fr": "Création"
+            }, 
+            "type_id": "http://purl.org/cld/accmeth/itemcreation"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "accrual_method"
+}

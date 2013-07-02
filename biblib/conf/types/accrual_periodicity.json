@@ -1,0 +1,128 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Annual",
+                "fr": "Annuel"
+            },
+            "type_id": "Annual"
+        },
+        {
+            "labels": {
+                "en": "Bimonthly",
+                "fr": "Bimensuel"
+            },
+            "type_id": "Bimonthly"
+        },
+        {
+            "labels": {
+                "en": "Semiweekly",
+                "fr": "Semi hebdomadaire"
+            },
+            "type_id": "Semiweekly"
+        },
+        {
+            "labels": {
+                "en": "Daily",
+                "fr": "Journalier"
+            },
+            "type_id": "Daily"
+        },
+        {
+            "labels": {
+                "en": "Biweekly",
+                "fr": "Bihebdomadaire"
+            },
+            "type_id": "Biweekly"
+        },
+        {
+            "labels": {
+                "en": "Semiannual",
+                "fr": "Semestriel"
+            },
+            "type_id": "Semiannual"
+        },
+        {
+            "labels": {
+                "en": "Biennial",
+                "fr": "Biannuel"
+            },
+            "type_id": "Biennial"
+        },
+        {
+            "labels": {
+                "en": "Triennial",
+                "fr": "Triennal"
+            },
+            "type_id": "Triennial"
+        },
+        {
+            "labels": {
+                "en": "Three times a week",
+                "fr": "Trois fois par semaine"
+            },
+            "type_id": "Three times a week"
+        },
+        {
+            "labels": {
+                "en": "Three times a month",
+                "fr": "Trois fois par mois"
+            },
+            "type_id": "Three times a month"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "Continuously updated",
+                "fr": "Continuellement mis \u00e0 jour"
+            },
+            "type_id": "Continuously updated"
+        },
+        {
+            "labels": {
+                "en": "Monthly",
+                "fr": "Mensuel"
+            },
+            "type_id": "Monthly"
+        },
+        {
+            "labels": {
+                "en": "Quarterly",
+                "fr": "Trimestriel"
+            },
+            "type_id": "Quarterly"
+        },
+        {
+            "labels": {
+                "en": "Semimonthly",
+                "fr": "Semi mensuel"
+            },
+            "type_id": "Semimonthly"
+        },
+        {
+            "labels": {
+                "en": "Three times a year",
+                "fr": "Trois fois par an"
+            },
+            "type_id": "Three times a year"
+        },
+        {
+            "labels": {
+                "en": "Weekly",
+                "fr": "Hebdomadaire"
+            },
+            "type_id": "Weekly"
+        },
+        {
+            "labels": {
+                "en": "Completely irregular",
+                "fr": "Compl\u00e8tement irr\u00e9gulier"
+            },
+            "type_id": "Completely irregular"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "accrual_periodicity"
+}

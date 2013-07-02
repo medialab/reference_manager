@@ -36,6 +36,46 @@
             "property": "location",
             "required": false,
             "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Accrual policy",
+                "fr": "Politique d'accroissement"
+            },
+            "property": "accrual_policy",
+            "required": false,
+            "type_source": "accrual_policy",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Accrual method",
+                "fr": "Méthode d'accroissement"
+            },
+            "property": "accrual_method",
+            "required": false,
+            "type_source": "accrual_method",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Accrual policy",
+                "fr": "Politique d'accroissement"
+            },
+            "property": "accrual_periodicity",
+            "required": false,
+            "type_source": "accrual_periodicity",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": false,
+            "type_ui": "LanguageValueField"
         }
     ],
     "rec_class": "Field",

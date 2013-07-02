@@ -1,0 +1,1938 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ADF"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ADP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "AED"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "AFA"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "AFN"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ALK"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ALL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "AMD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ANG"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "AOA"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "AON"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "AOR"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ARA"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ARP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ARS"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ARY"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ATS"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "AUD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "AWG"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "AZM"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BAM"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BBD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BDT"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BEC"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BEF"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BEL"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BGJ"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BGK"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BGL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BGN"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BHD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BIF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BMD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BND"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BOB"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BOP"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BOV"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BRB"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BRC"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BRE"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BRL"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BRN"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BRR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BSD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BTN"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BWP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BYR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "BZD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CAD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CDF"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CHE"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CHF"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CHW"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CLF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CLP"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CNX"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CNY"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "COP"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "COU"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CRC"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CSD"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CSJ"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CSK"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CUC"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CUP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CVE"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CYP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "CZK"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "DDM"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "DEM"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "DJF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "DKK"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "DOP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "DZD"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ECS"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ECV"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "EEK"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "EGP"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "EQE"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ERN"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ESA"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ESB"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ESP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ETB"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "EUR"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "FIM"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "FJD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "FKP"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "FRF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "GBP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "GEL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "GHC"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "GIP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "GMD"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "GNE"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "GNF"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "GRD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "GTQ"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "GWP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "GYD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "HKD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "HNL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "HRK"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "HTG"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "HUF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "IDR"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "IEP"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ILP"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ILR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ILS"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "INR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "IQD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "IRR"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ISJ"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ISK"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ITL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "JMD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "JOD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "JPY"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "KES"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "KGS"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "KHR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "KMF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "KPW"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "KRW"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "KWD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "KYD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "KZT"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "LAJ"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "LAK"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "LBP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "LKR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "LRD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "LSL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "LTL"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "LUF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "LVL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "LYD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MAD"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MAF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MDL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MGA"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MGF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MKD"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MKN"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MMK"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MNT"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MOP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MRO"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MTL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MUR"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MVQ"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MVR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MWK"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MXN"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MXP"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MXV"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MYR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "MZM"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "NAD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "NGN"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "NIC"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "NIO"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "NLG"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "NOK"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "NPR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "NZD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "OMR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PAB"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PEH"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PEI"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PEN"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PES"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PGK"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PHP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PKR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PLN"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PLZ"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PTE"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "PYG"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "QAR"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ROK"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ROL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "RON"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "RUB"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "RUR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "RWF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SAR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SBD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SCR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SDD"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SDP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SEK"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SGD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SHP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SIT"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SKK"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SLL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SOS"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SRD"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SRG"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "STD"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SUR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SVC"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SYP"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "SZL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "THB"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "TJS"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "TMM"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "TND"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "TOP"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "TPE"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "TRL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "TRY"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "TTD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "TWD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "TZS"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "UAH"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "UGW"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "UGX"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "USD"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "USN"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "USS"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "UYF"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "UYN"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "UYU"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "UZS"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "VAL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "VEB"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "VNC"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "VND"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "VUV"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "WST"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XAF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XAG"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XAU"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XBA"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XBB"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XBC"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XBD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XCD"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XDR"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XEU"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XFO"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XFU"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XOF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XPD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XPF"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XPT"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XTS"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "XXX"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "YDD"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "YER"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "YUD"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "YUM"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ZAL"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ZAR"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ZMK"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ZRN"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ZRZ"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ZWC"
+        },
+        {
+            "labels": {
+                "en": "",
+                "fr": ""
+            },
+            "type_id": "ZWD"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "currency"
+}

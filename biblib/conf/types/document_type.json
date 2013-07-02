@@ -763,7 +763,6 @@
             "bundle": true,
             "children": [
                 {
-                    "deprecated": true,
                     "labels": {
                         "en": "Audio recording",
                         "fr": "Enregistrement sonore"
@@ -771,7 +770,6 @@
                     "type_id": "AudioRecording"
                 },
                 {
-                    "deprecated": true,
                     "labels": {
                         "en": "Music Recording",
                         "fr": "Enregistrement musical"
@@ -779,7 +777,6 @@
                     "type_id": "MusicRecording"
                 },
                 {
-                    "deprecated": true,
                     "labels": {
                         "en": "Audio broadcast",
                         "fr": "Emission de radio"
@@ -787,7 +784,6 @@
                     "type_id": "AudioBroadcast"
                 },
                 {
-                    "deprecated": true,
                     "labels": {
                         "en": "Audio book",
                         "fr": "Livre audio"
@@ -812,7 +808,6 @@
                     "type_id": "VideoRecording"
                 },
                 {
-                    "deprecated": true,
                     "labels": {
                         "en": "Film",
                         "fr": "Film"
@@ -820,7 +815,6 @@
                     "type_id": "Film"
                 },
                 {
-                    "deprecated": true,
                     "labels": {
                         "en": "Video broadcast",
                         "fr": "Emission de t\u00e9l\u00e9vision"
