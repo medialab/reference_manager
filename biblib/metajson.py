@@ -112,10 +112,8 @@ class Document(Common):
             self["projects"] = [Project(x) for x in self["projects"]]
         if "references" in self:
             self["references"] = [Document(x) for x in self["references"]]
-        if "resources" in self:
-            self["resources"] = [Resource(x) for x in self["resources"]]
         if "requires" in self:
-            self["requires"] = [Resource(x) for x in self["requires"]]
+            self["requires"] = [Document(x) for x in self["requires"]]
         if "resources" in self:
             self["resources"] = [Resource(x) for x in self["resources"]]
         if "review_ofs" in self:
@@ -252,16 +250,6 @@ class Document(Common):
             for item in my_list:
                 if my_property in item and item[my_property]:
                     return item[my_property]
-
-
-# DocumentUi
-class DocumentUi(Common):
-    def __init__(self, *args, **kwargs):
-        Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
-        if "rec_class" not in self:
-            self["rec_class"] = "DocumentUi"
 
 
 # Event

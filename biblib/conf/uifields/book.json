@@ -51,6 +51,7 @@
                 "en": "Series",
                 "fr": "Collection"
             },
+            "multiple": true,
             "only_one": true,
             "property": "seriess",
             "required": false,
@@ -115,6 +116,18 @@
             "labels": {
                 "en": "ISBN",
                 "fr": "ISBN"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        },
+        {
+            "id_type": "doi",
+            "labels": {
+                "en": "DOI",
+                "fr": "DOI"
             },
             "multiple": true,
             "only_one": true,
