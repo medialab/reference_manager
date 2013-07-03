@@ -11,40 +11,13 @@ from bson.objectid import ObjectId
 from biblib.metajson import SearchResponse
 from biblib.services import config_service
 from biblib.services import metajson_service
+from biblib.util import exceptions
 
 DOCUMENTS = "documents"
 AGENTS = "agents"
 TYPES = "types"
 DATAFIELDS = "datafields"
 UIFIELDS = "uifields"
-
-ERROR_0 = {
-    "code": 0,
-    "error_type": "error",
-    "labels": {
-        "en": "Empty request",
-        "fr": "Requête vide"
-    }
-}
-
-ERROR_40 = {
-    "code": 40,
-    "error_type": "error",
-    "labels": {
-        "en": "Stupid request",
-        "fr": "Requête stupide"
-    }
-}
-
-ERROR_100 = {
-    "code": 100,
-    "error_type": "error",
-    "labels": {
-        "en": "Invalid request",
-        "fr": "Requête invalide"
-    }
-}
-
 
 config = config_service.config["mongodb"]
 default_corpus = config["default_corpus"]
@@ -133,14 +106,12 @@ def search(corpus, search_query):
 
     # empty search_query
     if search_query is None:
-        search_response["errors"] = [ERROR_0]
-        return search_response
+        raise exceptions.search_error("0")
 
     # filter_class -> collection
     collection = None
     if "filter_class" not in search_query or search_query["filter_class"] not in ["Document", "Agent", "Person", "OrgUnit", "Event", "Family"]:
-        search_response["errors"] = [ERROR_100]
-        return search_response
+        raise exceptions.search_error("100")
     elif search_query["filter_class"] == "Document":
         collection = DOCUMENTS
     elif search_query["filter_class"] in ["Agent", "Person", "OrgUnit", "Event", "Family"]:
@@ -150,10 +121,10 @@ def search(corpus, search_query):
     filter_query = []
     if "filter_date_end" in search_query:
         pass
-        #filter_query.append({"date_issued": {"$lte": search_query["filter_date_end"]}})
+        #filter_query.append({"date_sort": {"$lte": search_query["filter_date_end"]}})
     if "filter_date_start" in search_query:
         pass
-        #filter_query.append({"date_issued": {"$gte": search_query["filter_date_start"]}})
+        #filter_query.append({"date_sort": {"$gte": search_query["filter_date_start"]}})
     if "filter_languages" in search_query:
         filter_query.append({"languages": {"$in": search_query["filter_languages"]}})
     if "filter_types" in search_query:
@@ -169,7 +140,7 @@ def search(corpus, search_query):
                 break
             # index
             if "index" not in search_term:
-                search_response["errors"] = [ERROR_100]
+                raise exceptions.search_error("100")
             elif search_term["index"] == "all":
                 # todo
                 search_indexes.append({"title": {"$regex": search_term["value"], "$options": 'i'}})
@@ -209,8 +180,12 @@ def search(corpus, search_query):
                 elif search_term["operator"] == "not":
                     pass
 
-    # result_sorts
-    mongo_query = {"$and": search_indexes}
+    # result_sorts : how to with this index ? ...
+
+    if filter_query or search_indexes:
+        mongo_query = {"$and": search_indexes}
+    else:
+        mongo_query = {}
     print "mongo_query:"
     print json.dumps(mongo_query, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
 
