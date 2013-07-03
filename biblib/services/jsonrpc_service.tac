@@ -7,7 +7,6 @@ import json
 import locale
 
 from bson import json_util
-from bson.py3compat import PY3, binary_type, string_types
 from txjsonrpc.web import jsonrpc
 from txjsonrpc import jsonrpclib
 from twisted.web import server
@@ -20,6 +19,7 @@ from biblib.services import config_service
 from biblib.services import crosswalks_service
 from biblib.services import repository_service
 from biblib.util import console
+from biblib.util import exceptions
 
 # usage with log in the console
 # twistd -noy jsonrpc_service.tac -l -
@@ -129,13 +129,18 @@ class References_repository(jsonrpc.JSONRPC):
             params:
                 - search_query: a custom SearchQuery object with the query params
         """
-        date_start = datetime.datetime.now()
-        search_response = repository_service.search(None, search_query)
-        date_end = datetime.datetime.now()
-        interval = date_end - date_start
-        response_time = "{0:.3f}".format(interval.total_seconds() * 1000)
-        search_response["response_time"] = response_time
-        return self.format_bson(search_response)
+        try:
+            date_start = datetime.datetime.now()
+            search_response = repository_service.search(None, search_query)
+            date_end = datetime.datetime.now()
+            interval = date_end - date_start
+            response_time = "{0:.3f}".format(interval.total_seconds() * 1000)
+            search_response["response_time"] = response_time
+            return self.format_bson(search_response)
+        except exceptions.search_error, ex:
+            code = int(str(ex))
+            message = exceptions.search_error_message[code]
+            return jsonrpclib.Fault(code, message)
 
     def jsonrpc_search_mongo(self, mongo_query):
         """ search for one or more data from the repository

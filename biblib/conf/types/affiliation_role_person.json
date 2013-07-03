@@ -6,21 +6,21 @@
                 "en": "Professor/Researcher", 
                 "fr": "Enseignant/Chercheur"
             }, 
-            "type_id": "academic-staff"
+            "type_id": "academic_staff"
         }, 
         {
             "labels": {
                 "en": "Administrative staff", 
                 "fr": "Personnel administratif"
             }, 
-            "type_id": "administrative-staff"
+            "type_id": "administrative_staff"
         }, 
         {
             "labels": {
                 "en": "Associate researcher", 
                 "fr": "Chercheur associé"
             }, 
-            "type_id": "associate-researcher"
+            "type_id": "associate_researcher"
         }, 
         {
             "labels": {
@@ -34,28 +34,28 @@
                 "en": "Doctoral researcher", 
                 "fr": "Chercheur doctorant"
             }, 
-            "type_id": "doctoral-researcher"
+            "type_id": "doctoral_researcher"
         }, 
         {
             "labels": {
                 "en": "Guest researcher", 
                 "fr": "Chercheur invité"
             }, 
-            "type_id": "guest-researcher"
+            "type_id": "guest_researcher"
         }, 
         {
             "labels": {
                 "en": "Permanent researcher", 
                 "fr": "Chercheur permanent"
             }, 
-            "type_id": "permanent-researcher"
+            "type_id": "permanent_researcher"
         }, 
         {
             "labels": {
                 "en": "Post doctoral researcher", 
                 "fr": "Chercheur post-doctoral"
             }, 
-            "type_id": "post-doctoral-researcher"
+            "type_id": "post_doctoral_researcher"
         }, 
         {
             "labels": {
@@ -76,14 +76,14 @@
                 "en": "Research assistant", 
                 "fr": "Assistant de recherche"
             }, 
-            "type_id": "research-assistant"
+            "type_id": "research_assistant"
         }, 
         {
             "labels": {
                 "en": "Secretary general", 
                 "fr": "Secrétaire général"
             }, 
-            "type_id": "secretary-general"
+            "type_id": "secretary_general"
         }, 
         {
             "labels": {
@@ -97,7 +97,7 @@
                 "en": "Technical staff", 
                 "fr": "Personnel technique"
             }, 
-            "type_id": "technical-staff"
+            "type_id": "technical_staff"
         }, 
         {
             "labels": {
@@ -109,5 +109,5 @@
     ], 
     "rec_class": "Type", 
     "rec_metajson": 1, 
-    "type_id": "affiliation_relation_person_orgunit"
+    "type_id": "affiliation_role_person"
 }

@@ -172,6 +172,7 @@ def mods_xmletree_to_metajson_list(mods_root, source, only_first_record):
 
 def mods_xmletree_to_metajson(mods, source):
     document = Document()
+    is_part_of = None
 
     # source
     document["rec_source"] = source
@@ -196,10 +197,15 @@ def mods_xmletree_to_metajson(mods, source):
             # host -> is_part_of
             if related_item.get("type") == "host":
                 related_item_host = related_item
-            elif related_item.get("type") == "original":
+            elif related_item.get("type") == "original" or related_item.get("type") == "reviewOf":
                 related_item_original = related_item
             elif related_item.get("type") == "series":
                 related_item_series = related_item
+
+    if related_item_host is not None:
+        is_part_of = Document()
+    if related_item_original is not None:
+        review_of = Document()
 
     # title
     document.update(convert_mods_titleinfos(mods.findall(prefixtag("mods", "titleInfo"))))
@@ -216,7 +222,7 @@ def mods_xmletree_to_metajson(mods, source):
         document.update(root_dates)
 
     # relatedItem host originInfo dates
-    if related_item_host is not None and rec_type in ["Article", "JournalArticle", "MagazineArticle", "NewspaperArticle", "Annotation", "Interview", "BookReview", "PeriodicalIssue"]:
+    if related_item_host is not None and rec_type in ["Article", "JournalArticle", "MagazineArticle", "NewspaperArticle", "Annotation", "InterviewArticle", "BookReview", "ArticleReview", "PeriodicalIssue"]:
         is_part_of_dates = extract_dates_from_origininfo(related_item_host.find(prefixtag("mods", "originInfo")))
         if is_part_of_dates:
             document.update(is_part_of_dates)

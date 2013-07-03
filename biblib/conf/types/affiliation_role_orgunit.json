@@ -6,7 +6,7 @@
                 "en": "is part of", 
                 "fr": "fait partie de"
             }, 
-            "type_id": "isPartOf"
+            "type_id": "is_part_of"
         }, 
         {
             "labels": {
@@ -18,5 +18,5 @@
     ], 
     "rec_class": "Type", 
     "rec_metajson": 1, 
-    "type_id": "affiliation_relation_orgunit_orgunit"
+    "type_id": "affiliation_role_orgunit"
 }
