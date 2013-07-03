@@ -26,8 +26,7 @@
     }
   });
 
-  // Some specific utils:
-  mlab.pkg('blf.utils');
+  // Templates management:
   mlab.pkg('blf.templates');
   (function() {
     var _templates = {};
@@ -44,7 +43,7 @@
         });
       else if (callback)
         callback(_templates[path]);
-    };
+    }
 
     blf.templates.require = function(v, callback) {
       if (typeof v === 'string')
@@ -55,10 +54,15 @@
     };
 
     blf.templates.get = function(path) {
-      return _templates[path];
+      if (_templates[path])
+        return _templates[path];
+      else
+        blf.templates.require(path);
     };
   })();
 
+  // Some specific utils:
+  mlab.pkg('blf.utils');
   blf.utils.translateLabels = function(obj) {
     var k,
         i,
