@@ -35,8 +35,13 @@
 
     var _dom,
         _values = controller.get('lists')[obj.type_source] || [],
+        _majorValues = _values.filter(function(o) {
+          return o.major;
+        }),
         _self = this;
 
+    if (_majorValues.length)
+      _values = _majorValues;
     generate();
 
     // Try to get the list:
@@ -99,6 +104,13 @@
     this.triggers.events.listsUpdated = function(controller) {
       if (!_values.length && controller.get('lists')[obj.type_source]) {
         _values = controller.get('lists')[obj.type_source];
+        _majorValues = _values.filter(function(o) {
+          return o.major;
+        });
+
+        if (_majorValues.length)
+          _values = _majorValues;
+
         generate();
       }
     };
