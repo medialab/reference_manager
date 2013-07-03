@@ -6,7 +6,8 @@
     "or": "or"
   },
   "actions": {
-    "validate": "Validate"
+    "validate": "Validate",
+    "search": "Search"
   },
   "navigation": {
     "search": "Go",

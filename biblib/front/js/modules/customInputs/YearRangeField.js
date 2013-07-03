@@ -50,8 +50,10 @@
     }
 
     function _getData(data) {
-      data[obj.property_start] = $('.date-from', _dom).val();
-      data[obj.property_end] = $('.date-to', _dom).val();
+      if ($('.date-from', _dom).val())
+        data[obj.property_start] = $('.date-from', _dom).val();
+      if ($('.date-to', _dom).val())
+        data[obj.property_end] = $('.date-to', _dom).val();
     }
 
     function _validate() {

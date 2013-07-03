@@ -96,7 +96,7 @@
         value = blf.modules.createPanel.getData(component, data);
 
         if (value !== undefined && component.property !== undefined)
-        data[component.property] = value;
+          data[component.property] = value;
       }
 
       return data;

@@ -241,15 +241,6 @@ blf.init = function(config) {
           triggers: 'validateEntry',
           description: 'What happens when an entry is validated from the form.',
           method: function(e) {
-            // This is for testing:
-            // ********************
-            // this.dispatchEvent('displayForm', {
-            //   entry: e.data.entry,
-            //   field: e.data.entry.rec_type
-            // });
-
-            // This is the good code:
-            // **********************
             this.request('save', {
               entry: e.data.entry
             });
@@ -259,7 +250,17 @@ blf.init = function(config) {
           triggers: 'search',
           description: 'Search for entries matching the specified query.',
           method: function(e) {
-            var data = domino.utils.clone(e.data);
+            var data = typeof e.data.query === 'object' ?
+              domino.utils.clone(e.data.query) :
+              {
+                search_terms: [
+                  {
+                    index: 'all',
+                    operator: 'and',
+                    value: e.data.query
+                  }
+                ]
+              };
 
             if (!data.rec_class)
               data.rec_class = 'SearchQuery';

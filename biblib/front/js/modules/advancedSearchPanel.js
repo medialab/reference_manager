@@ -59,7 +59,7 @@
     _html.on('click', '.add-index', function() {
       _index.indexesArray = getIndexesArray().concat({
         index: _index.indexes[0].type_id,
-        query: '',
+        value: '',
         operator: _index.default_operator
       });
       generateIndex();
@@ -69,9 +69,13 @@
         1
       );
       generateIndex();
+    }).on('click', '.validate-advanced-search', function(e) {
+      _self.dispatchEvent('search', {
+        query: getQuery()
+      });
     });
 
-    reset();
+    restart();
 
     function getIndexesArray() {
       var res = [];
@@ -79,12 +83,37 @@
         var self = $(this);
         res.push({
           index: $('[data-type="index"]', self).val(),
-          query: $('[data-type="query"]', self).val(),
+          value: $('[data-type="value"]', self).val(),
           operator: $('[data-type="operator"]', self).val()
         });
       });
 
       return res;
+    }
+
+    function getQuery() {
+      var i,
+          l,
+          k,
+          value,
+          component,
+          query = {};
+
+      // Index:
+      query.search_terms = getIndexesArray().filter(function(o) {
+        return o.value;
+      });
+
+      // Filter:
+      for (i = 0, l = _filtersComponents.length; i < l; i++) {
+        component = _filtersComponents[i];
+        value = blf.modules.createPanel.getData(component, query);
+
+        if (value !== undefined && component.property !== undefined)
+          query[component.property] = value;
+      }
+
+      return query;
     }
 
     // Generate index DOM:
@@ -96,7 +125,7 @@
     }
 
     // Regenerate everything blabla:
-    function reset() {
+    function restart() {
       var config = blf.utils.translateLabels(
         controller.get('config').advancedSearchPanel || {}
       );
@@ -106,17 +135,13 @@
         return typeof v === 'string' ?
           {
             index: v,
-            query: '',
+            value: '',
             operator: _index.default_operator
           } :
           v;
       });
       _filter = config.filters;
 
-      if (_filtersComponents) {
-        // TODO
-        // Kill existing modules
-      }
       _filtersComponents = blf.modules.createPanel.generateForm(
         blf.control,
         _filter
@@ -143,6 +168,10 @@
           generateIndex();
         }
       }
+    };
+    this.triggers.events.modeUpdated = function(d) {
+      if (d.get('mode') !== 'advancedSearch')
+        restart();
     };
   };
 })();

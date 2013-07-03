@@ -73,9 +73,11 @@
     }
 
     function _getData() {
-      return Array.prototype.map.call($('[type="checkbox"]:checked', _dom), function() {
+      var result = Array.prototype.map.call($('[type="checkbox"]:checked', _dom), function() {
         return $(this).attr('id');
       });
+
+      return result.length ? result : undefined;
     }
 
     function _validate() {

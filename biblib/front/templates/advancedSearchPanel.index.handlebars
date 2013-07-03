@@ -7,7 +7,7 @@
         <option value="{{ type_id }}"{{#ifCond type_id '==' ../operator}} selected{{/ifCond}}>{{ label }}</option>
       {{/each}}
       </select>
-      <input data-type="query" type="text" placeholder="{{t "commons.ellipsis" }}" value="{{ query }}" />
+      <input data-type="value" type="text" placeholder="{{t "commons.ellipsis" }}" value="{{ value }}" />
       <select data-type="index">
       {{#each ../indexes}}
         <option value="{{ type_id }}"{{#ifCond type_id '==' ../index}} selected{{/ifCond}}>{{ label }}</option>

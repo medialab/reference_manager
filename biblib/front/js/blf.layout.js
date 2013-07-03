@@ -13,12 +13,16 @@
         _modules = [];
 
     // Bind search:
-    $('button[data-action="search"]', _nav).click(function() {
+    function simpleSearch() {
       _self.dispatchEvent('search', {
-        query: {
-          'creators.agent.title': $('#simple-entries-search', _nav).val()
-        }
+        query: $('#simple-entries-search', _nav).val()
       });
+    }
+
+    $('button[data-action="search"]', _nav).click(simpleSearch);
+    $('#simple-entries-search', _nav).keypress(function(e) {
+      if (e.which === 13)
+        simpleSearch();
     });
 
     // Bind navigation:
