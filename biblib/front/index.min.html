@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>BibLib Front | Minified test</title>
+  <meta charset="UTF-8" />
+
+  <!-- BibLib style -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/customInputs.css">
+</head>
+<body>
+  <div id="layout"></div>
+
+  <!-- External JS dependencies -->
+  <script src="build/blf.min.js"></script>
+
+  <script>
+    $(function() {
+      // We start everything from here:
+      blf.init({
+        lang: 'fr',
+        baseURL: 'http://localhost:8080',
+        baseDOM: $('#layout'),
+        advancedSearchPanel: {
+          index: {
+            property_source_index: 'search_index',
+            property_source_operator: 'search_operator',
+            default_operator: 'and',
+            default_index: [
+              'title',
+              'author',
+              'keyword'
+            ]
+          },
+          filters: [
+            {
+              labels: {
+                en: 'Publication year',
+                fr: 'Année de publication'
+              },
+              property_start: 'filter_date_start',
+              property_end: 'filter_date_end',
+              type_ui: 'YearRangeField'
+            },
+            {
+              labels: {
+                en: 'Document types',
+                fr: 'Types de document'
+              },
+              multiple: true,
+              property: 'filter_types',
+              type_source: 'document_type',
+              type_ui: 'CheckboxField'
+            },
+            {
+              labels: {
+                en: 'Languages',
+                fr: 'Langues'
+              },
+              multiple: true,
+              property: 'filter_languages',
+              type_source: 'language',
+              type_ui: 'CheckboxField'
+            }
+          ]
+        }
+      });
+    });
+  </script>
+</body>
+</html>

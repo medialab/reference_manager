@@ -41,7 +41,7 @@ nosetests.xml
 
 #
 # other extensions
-# 
+#
 .DS_Store
 *.lock
 *.pid
@@ -54,3 +54,7 @@ config.json
 mongodb/local.*
 mongodb/refmanager.*
 mongodb/remanager.*
+
+# about front-end:
+biblib/front/build
+biblib/front/node_modules

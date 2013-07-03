@@ -1,6 +1,5 @@
 ;(function() {
   'use strict';
-
   mlab.pkg('blf.modules');
 
   // Loading Handlebars templates:
