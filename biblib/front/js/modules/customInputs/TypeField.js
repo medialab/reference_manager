@@ -3,21 +3,10 @@
   mlab.pkg('blf.modules.customInputs');
 
   // Loading Handlebars templates:
-  var _templates = {
-        main: {
-          path: 'templates/TypeField.handlebars'
-        },
-        line: {
-          path: 'templates/TypeField.line.handlebars'
-        }
-      };
-
-  for (var k in _templates)
-    (function(obj) {
-      blf.utils.addTemplate(obj.path, function(data) {
-        obj.template = data;
-      });
-    })(_templates[k]);
+  blf.templates.require([
+    'TypeField',
+    'TypeField.line'
+  ]);
 
   /**
    * This custom input is basically a combo, whose options are dynamically
@@ -62,7 +51,7 @@
         });
     }, 0);
 
-    _dom = $(_templates.main.template({
+    _dom = $(blf.templates.get('TypeField')({
       label: obj.label || obj.labels[blf.assets.lang],
       multi: !obj.only_one
     }));
@@ -118,7 +107,7 @@
     }
 
     function addLine(s) {
-      var li = $(_templates.line.template({
+      var li = $(blf.templates.get('TypeField.line')({
         content: getLineContent()
       }));
 

@@ -3,21 +3,10 @@
   mlab.pkg('blf.modules.customInputs');
 
   // Loading Handlebars templates:
-  var _templates = {
-        main: {
-          path: 'templates/IdentifierField.handlebars'
-        },
-        line: {
-          path: 'templates/IdentifierField.line.handlebars'
-        }
-      };
-
-  for (var k in _templates)
-    (function(obj) {
-      blf.utils.addTemplate(obj.path, function(data) {
-        obj.template = data;
-      });
-    })(_templates[k]);
+  blf.templates.require([
+    'IdentifierField',
+    'IdentifierField.line'
+  ]);
 
   /**
    * This custom input is used to represent identifier-like properties.
@@ -41,7 +30,7 @@
     var _dom,
         _self = this;
 
-    _dom = $(_templates.main.template({
+    _dom = $(blf.templates.get('IdentifierField')({
       label: obj.label || obj.labels[blf.assets.lang]
     }));
 
@@ -76,7 +65,7 @@
     }
 
     function addLine(o) {
-      var li = $(_templates.line.template({
+      var li = $(blf.templates.get('IdentifierField.line')({
             value: (o || {}).value || ''
           }));
 

@@ -3,18 +3,7 @@
   mlab.pkg('blf.modules.customInputs');
 
   // Loading Handlebars templates:
-  var _templates = {
-        main: {
-          path: 'templates/YearRangeField.handlebars'
-        }
-      };
-
-  for (var k in _templates)
-    (function(obj) {
-      blf.utils.addTemplate(obj.path, function(data) {
-        obj.template = data;
-      });
-    })(_templates[k]);
+  blf.templates.require('YearRangeField');
 
   /**
    * This custom input is used to represent a multiply selectable list.
@@ -39,7 +28,7 @@
     generate();
 
     function generate() {
-      _dom = $(_templates.main.template({
+      _dom = $(blf.templates.get('YearRangeField')({
         label: obj.label
       }));
     }

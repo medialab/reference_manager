@@ -3,18 +3,7 @@
   mlab.pkg('blf.modules.customInputs');
 
   // Loading Handlebars templates:
-  var _templates = {
-        main: {
-          path: 'templates/CheckboxField.handlebars'
-        }
-      };
-
-  for (var k in _templates)
-    (function(obj) {
-      blf.utils.addTemplate(obj.path, function(data) {
-        obj.template = data;
-      });
-    })(_templates[k]);
+  blf.templates.require('CheckboxField');
 
   /**
    * This custom input is used to represent a multiply selectable list.
@@ -58,7 +47,7 @@
     }, 0);
 
     function generate() {
-      var dom = $(_templates.main.template({
+      var dom = $(blf.templates.get('CheckboxField')({
             label: obj.label,
             values: _values
           }));

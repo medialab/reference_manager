@@ -4,24 +4,10 @@
   mlab.pkg('blf.modules');
 
   // Loading Handlebars templates:
-  var _templates = {
-        main: {
-          path: 'templates/advancedSearchPanel.handlebars'
-        },
-        index: {
-          path: 'templates/advancedSearchPanel.index.handlebars'
-        },
-        filter: {
-          path: 'templates/advancedSearchPanel.filter.handlebars'
-        }
-      };
-
-  for (var k in _templates)
-    (function(obj) {
-      blf.utils.addTemplate(obj.path, function(data) {
-        obj.template = data;
-      });
-    })(_templates[k]);
+  blf.templates.require([
+    'advancedSearchPanel',
+    'advancedSearchPanel.index'
+  ]);
 
   /**
    * The advanced search panel.
@@ -38,7 +24,7 @@
         _filter = _config.filters,
         _filtersComponents;
 
-    _html.append($(_templates.main.template()));
+    _html.append($(blf.templates.get('advancedSearchPanel')()));
 
     // Try to get the list:
     // AAARGH: How am I supposed to do when I add a module that needs to
@@ -124,7 +110,7 @@
       var dom = $('.index-container', _html).empty();
 
       if (_index)
-        dom.append($(_templates.index.template(_index)));
+        dom.append($(blf.templates.get('advancedSearchPanel.index')(_index)));
     }
 
     // Regenerate everything blabla:

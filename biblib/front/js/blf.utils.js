@@ -28,14 +28,36 @@
 
   // Some specific utils:
   mlab.pkg('blf.utils');
-  blf.utils.addTemplate = function(path, callback) {
-    $.ajax({
-      url: path,
-      success: function(data) {
-        callback(Handlebars.compile(data));
-      }
-    });
-  };
+  mlab.pkg('blf.templates');
+  (function() {
+    var _templates = {};
+
+    function loadTemplate(path, callback) {
+      if (!_templates[path])
+        $.ajax({
+          url: 'templates/' + path + '.handlebars',
+          success: function(data) {
+            _templates[path] = Handlebars.compile(data);
+            if (callback)
+              callback(_templates[path]);
+          }
+        });
+      else if (callback)
+        callback(_templates[path]);
+    };
+
+    blf.templates.require = function(v, callback) {
+      if (typeof v === 'string')
+        loadTemplate(v, callback);
+      else
+        for (var k in v)
+          loadTemplate(v[k]);
+    };
+
+    blf.templates.get = function(path) {
+      return _templates[path];
+    };
+  })();
 
   blf.utils.translateLabels = function(obj) {
     var k,

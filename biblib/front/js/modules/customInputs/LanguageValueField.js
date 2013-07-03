@@ -3,21 +3,10 @@
   mlab.pkg('blf.modules.customInputs');
 
   // Loading Handlebars templates:
-  var _templates = {
-        main: {
-          path: 'templates/LanguageValueField.handlebars'
-        },
-        line: {
-          path: 'templates/LanguageValueField.line.handlebars'
-        }
-      };
-
-  for (var k in _templates)
-    (function(obj) {
-      blf.utils.addTemplate(obj.path, function(data) {
-        obj.template = data;
-      });
-    })(_templates[k]);
+  blf.templates.require([
+    'LanguageValueField',
+    'LanguageValueField.line'
+  ]);
 
   /**
    * This custom input can be used to add several entries for different
@@ -45,7 +34,7 @@
         _selected = {},
         _languages = blf.assets.languages;
 
-    _dom = $(_templates.main.template({
+    _dom = $(blf.templates.get('LanguageValueField')({
       label: obj.label || obj.labels[blf.assets.lang]
     }));
 
@@ -71,7 +60,7 @@
     // not specified.
     function addLanguage(data) {
       data = data || {};
-      var li = $(_templates.line.template({
+      var li = $(blf.templates.get('LanguageValueField.line')({
         languages: _languages.map(function(o) {
           return {
             id: o.id,

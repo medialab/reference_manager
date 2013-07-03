@@ -3,33 +3,14 @@
   mlab.pkg('blf.modules.customInputs');
 
   // Loading Handlebars templates:
-  var _templates = {
-        main: {
-          path: 'templates/CreatorField.handlebars'
-        },
-        line: {
-          path: 'templates/CreatorField.line.handlebars'
-        },
-        roles: {
-          path: 'templates/CreatorField.roles.handlebars'
-        },
-        person: {
-          path: 'templates/CreatorField.Person.handlebars'
-        },
-        orgunit: {
-          path: 'templates/CreatorField.Orgunit.handlebars'
-        },
-        event: {
-          path: 'templates/CreatorField.Event.handlebars'
-        }
-      };
-
-  for (var k in _templates)
-    (function(obj) {
-      blf.utils.addTemplate(obj.path, function(data) {
-        obj.template = data;
-      });
-    })(_templates[k]);
+  blf.templates.require([
+    'CreatorField',
+    'CreatorField.line',
+    'CreatorField.roles',
+    'CreatorField.Person',
+    'CreatorField.Orgunit',
+    'CreatorField.Event'
+  ]);
 
   /**
    * This custom input represents the creators of an entry. It is possible to
@@ -60,7 +41,7 @@
         _classTemplates,
         _creatorRoles = d.get('lists').creator_role || [];
 
-    _dom = $(_templates.main.template({
+    _dom = $(blf.templates.get('CreatorField')({
       label: obj.label || obj.labels[blf.assets.lang]
     }));
 
@@ -69,7 +50,7 @@
     function addCreator(data) {
       data = data || {};
       var id = _lineID++,
-          li = $(_templates.line.template({
+          li = $(blf.templates.get('CreatorField.line')({
             id: id,
             creators: _creatorRoles.map(function(o) {
               return {
@@ -98,7 +79,7 @@
     _classTemplates = function(c) {
       var o = {
         Person: {
-          dom: $(_templates.person.template()),
+          dom: $(blf.templates.get('CreatorField.Person')()),
           fill: function(data, obj) {
             obj.dom.data('id', data.agent.rec_id || null);
 
@@ -140,7 +121,7 @@
           }
         },
         Orgunit: {
-          dom: $(_templates.orgunit.template()),
+          dom: $(blf.templates.get('CreatorField.Orgunit')()),
           fill: function(data, obj) {
             obj.dom.data('id', data.agent.rec_id || null);
 
@@ -166,7 +147,7 @@
           }
         },
         Event: {
-          dom: $(_templates.event.template()),
+          dom: $(blf.templates.get('CreatorField.Event')()),
           fill: function(data, obj) {
             obj.dom.data('id', data.agent.rec_id || null);
 
@@ -319,7 +300,7 @@
 
       $('select.select-role', dom).html(
         _creatorRoles.map(function(o) {
-          return _templates.roles.template({
+          return blf.templates.get('CreatorField.roles')({
             type_id: o.type_id,
             label: o.label
           });

@@ -3,27 +3,12 @@
   mlab.pkg('blf.modules.customInputs');
 
   // Loading Handlebars templates:
-  var _templates = {
-        CharField: {
-          path: 'templates/CharField.handlebars'
-        },
-        DateField: {
-          path: 'templates/DateField.handlebars'
-        },
-        IntegerField: {
-          path: 'templates/IntegerField.handlebars'
-        },
-        validate: {
-          path: 'templates/createPanel.validate.handlebars'
-        }
-      };
-
-  for (var k in _templates)
-    (function(obj) {
-      blf.utils.addTemplate(obj.path, function(data) {
-        obj.template = data;
-      });
-    })(_templates[k]);
+  blf.templates.require([
+    'CharField',
+    'DateField',
+    'IntegerField',
+    'createPanel.validate'
+  ]);
 
   // Module constructor:
   blf.modules.createPanel = function(html) {
@@ -150,7 +135,7 @@
         return o.dom;
       }));
 
-      $(_templates.validate.template()).click(validate).appendTo($('.create-form', _html));
+      $(blf.templates.get('createPanel.validate')()).click(validate).appendTo($('.create-form', _html));
 
       fill(entry || { rec_type: e.data.field.children });
     };
@@ -182,6 +167,7 @@
    */
   blf.modules.createPanel.getComponent = function(d, obj) {
     var component,
+        template,
         module = blf.modules.customInputs[obj.type_ui];
 
     // If a custom component is found:
@@ -190,11 +176,11 @@
       component = module.getComponent();
 
     // Else, if a basic component is recognized:
-    } else if (_templates[obj.type_ui])
+    } else if (template = blf.templates.get(obj.type_ui))
       component = {
         propertyObject: obj,
         property: obj.property,
-        dom: $(_templates[obj.type_ui].template({
+        dom: $(template({
           label: obj.label || obj.labels[blf.assets.lang],
           property: obj.property
         }))

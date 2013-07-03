@@ -70,7 +70,7 @@ blf.init = function(config) {
   });
 
   // Load main template:
-  blf.utils.addTemplate('templates/main.handlebars', function(template) {
+  blf.templates.require('main', function(template) {
     blf.config.baseDOM.append(template());
     start();
   });

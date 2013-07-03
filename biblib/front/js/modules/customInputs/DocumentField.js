@@ -3,21 +3,10 @@
   mlab.pkg('blf.modules.customInputs');
 
   // Loading Handlebars templates:
-  var _templates = {
-        main: {
-          path: 'templates/DocumentField.handlebars'
-        },
-        line: {
-          path: 'templates/DocumentField.line.handlebars'
-        }
-      };
-
-  for (var k in _templates)
-    (function(obj) {
-      blf.utils.addTemplate(obj.path, function(data) {
-        obj.template = data;
-      });
-    })(_templates[k]);
+  blf.templates.require([
+    'DocumentField',
+    'DocumentField.line'
+  ]);
 
   /**
    * This custom input can be used to add parents entries. It can of course
@@ -47,7 +36,7 @@
   blf.modules.customInputs.DocumentField = function(obj, d) {
     domino.module.call(this);
 
-    var _dom = $(_templates.main.template({
+    var _dom = $(blf.templates.get('DocumentField')({
           label: obj.label || obj.labels[blf.assets.lang]
         })),
         _ul = $('ul', _dom).first(),
@@ -76,7 +65,7 @@
     function addDocument(data) {
       data = data || {};
       var id = _lineID++,
-          li = $(_templates.line.template({
+          li = $(blf.templates.get('DocumentField.line')({
             id: id,
             type_fields: obj.type_fields
           }));
