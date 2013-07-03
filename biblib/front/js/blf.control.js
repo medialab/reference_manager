@@ -406,14 +406,22 @@ blf.init = function(config) {
             return blf.global.rpc.buildData('type', [ input.typeName, 'fr' ]);
           },
           success: function(data, input) {
-            var results = JSON.parse(data.result);
+            var availableFields,
+                flatList,
+                results = JSON.parse(data.result),
+                lists = this.get('lists');
+
             switch (input.typeName) {
               case 'document_type':
                 // Find the list of available fields as well:
-                var availableFields = {};
+                availableFields = {};
+                flatList = [];
+
                 (function recursiveParse(node, depth) {
-                  if (!node.bundle && !node.deprecated)
+                  if (!node.bundle && !node.deprecated) {
                     availableFields[node.type_id] = 1;
+                    flatList.push(node);
+                  }
 
                   if ((node.children || []).length)
                     node.children.forEach(recursiveParse);
@@ -424,8 +432,12 @@ blf.init = function(config) {
                   fieldsTree: results,
                   availableFields: availableFields
                 });
+
+                // Add it also in the basic lists:
+                lists[input.typeName] = flatList;
+                this.update('lists', lists);
+                break;
               default:
-                var lists = this.get('lists');
                 lists[input.typeName] = results.children || [];
                 this.update('lists', lists);
                 break;

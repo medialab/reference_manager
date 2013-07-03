@@ -31,8 +31,11 @@
 
     var _self = this,
         _html = html,
-        _index,
-        _filter,
+        _config = blf.utils.translateLabels(
+          controller.get('config').advancedSearchPanel || {}
+        ),
+        _index = _config.index,
+        _filter = _config.filters,
         _filtersComponents;
 
     _html.append($(_templates.main.template()));
@@ -126,11 +129,6 @@
 
     // Regenerate everything blabla:
     function restart() {
-      var config = blf.utils.translateLabels(
-        controller.get('config').advancedSearchPanel || {}
-      );
-
-      _index = config.index;
       _index.indexesArray = _index.default_index.map(function(v) {
         return typeof v === 'string' ?
           {
@@ -140,7 +138,6 @@
           } :
           v;
       });
-      _filter = config.filters;
 
       _filtersComponents = blf.modules.createPanel.generateForm(
         blf.control,
@@ -173,5 +170,8 @@
       if (d.get('mode') !== 'advancedSearch')
         restart();
     };
+
+    // Initialize lists:
+    this.triggers.events.listsUpdated(controller);
   };
 })();
