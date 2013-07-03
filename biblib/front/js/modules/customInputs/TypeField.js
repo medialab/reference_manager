@@ -211,8 +211,8 @@
     };
 
     // Domino bindings:
-    this.triggers.events.listsUpdated = function(d) {
-      var list = d.get('lists')[obj.type_source] || [];
+    this.triggers.events.listsUpdated = function(controller) {
+      var list = controller.get('lists')[obj.type_source] || [];
 
       if (!(_values || []).length && list.length) {
         _values = list;

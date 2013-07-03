@@ -56,17 +56,14 @@
       var invalid = 0;
 
       blf.control.log('Form validation:');
-      _components.forEach(function(comp) {
-        var isValid =
-          comp.validate ?
-            comp.validate() :
-            blf.modules.createPanel.defaultMethods.validate.call(comp);
+      _components.forEach(function(component) {
+        var isValid = blf.modules.createPanel.validate(component);
 
         if (!isValid)
           invalid++;
 
         if (!isValid)
-          blf.control.log('  - Invalid component:', comp.property);
+          blf.control.log('  - Invalid component:', component.property);
       });
 
       if (invalid === 0) {
@@ -96,9 +93,7 @@
 
       for (i = 0, l = _components.length; i < l; i++) {
         component = _components[i];
-        value = component.getData ?
-          component.getData(data) :
-          blf.modules.createPanel.defaultMethods.getData.call(component);
+        value = blf.modules.createPanel.getData(component, data);
 
         if (value !== undefined && component.property !== undefined)
         data[component.property] = value;
@@ -131,16 +126,8 @@
 
         parsed[component.property] = 1;
 
-        if (entry) {
-          if (component.fill)
-            component.fill(component.property ? entry[component.property] : null, entry);
-          else
-            blf.modules.createPanel.defaultMethods.fill.call(
-              component,
-              entry[component.property],
-              entry
-            );
-        }
+        if (entry)
+          blf.modules.createPanel.fill(component, entry);
       }
 
       for (i in entry)
@@ -158,7 +145,7 @@
       _fields = d.get('fields');
       _field = _fields[e.data.field];
 
-      _components = blf.modules.createPanel.generateForm(blf.control, _field);
+      _components = blf.modules.createPanel.generateForm(blf.control, _field.children);
       $('.create-form', _html).empty().append(_components.map(function(o) {
         return o.dom;
       }));
@@ -215,9 +202,35 @@
 
     // If not recognized at all:
     else
-      console.log(obj),d.warn('Data type "' + obj.type_ui + '" not recognized.');
+      d.warn('Data type "' + obj.type_ui + '" not recognized.');
 
     return component;
+  };
+
+  /**
+   * Methods that work on every components:
+   */
+  blf.modules.createPanel.getData = function(component, data) {
+    return component.getData ?
+      component.getData(data) :
+      blf.modules.createPanel.defaultMethods.getData.call(component);
+  };
+
+  blf.modules.createPanel.fill = function(component, entry) {
+    if (component.fill)
+      component.fill(component.property ? entry[component.property] : null, entry);
+    else
+      blf.modules.createPanel.defaultMethods.fill.call(
+        component,
+        entry[component.property],
+        entry
+      );
+  };
+
+  blf.modules.createPanel.validate = function(component) {
+    return component.validate ?
+      component.validate() :
+      blf.modules.createPanel.defaultMethods.validate.call(component);
   };
 
   /**

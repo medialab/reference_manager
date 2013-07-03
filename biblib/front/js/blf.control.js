@@ -423,7 +423,6 @@ blf.init = function(config) {
                   fieldsTree: results,
                   availableFields: availableFields
                 });
-                break;
               default:
                 var lists = this.get('lists');
                 lists[input.typeName] = results.children || [];

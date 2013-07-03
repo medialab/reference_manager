@@ -38,3 +38,27 @@
   left: -150px;
   position: relative;
 }
+
+/* CheckboxField style */
+.CheckboxField,
+.CheckboxField fieldset.custom-container {
+  width: 100%;
+  white-space: inherit;
+}
+
+.CheckboxField .checkbox-container {
+  display: inline-block;
+  width: 30%;
+}
+
+.CheckboxField label {
+  width: auto;
+  max-width: 140px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* YearRangeField style */
+.YearRangeField input {
+  margin: 5px;
+}
