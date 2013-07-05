@@ -1,45 +1,34 @@
 <html>
 <head>
-  <title>BibLib Front | Test 1</title>
+  <title>BibLib Front | Minified test</title>
   <meta charset="UTF-8" />
 
-  <!-- BibLib style -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/customInputs.css">
+  <!-- BibLib CSS bundle -->
+  <link rel="stylesheet" href="build/style.min.css">
 </head>
 <body>
+  <!-- The div where blf will be instanciated -->
   <div id="layout"></div>
 
-  <!-- External JS dependencies -->
-  <script src="js/ext/jquery.min.js"></script>
-  <script src="js/ext/domino.min.js"></script>
-  <script src="js/ext/i18next.min.js"></script>
-  <script src="js/ext/handlebars.js"></script>
+  <!-- JS bundle (including dependencies + templates + localization) -->
+  <script src="build/blf.min.js"></script>
 
-  <!-- MédiaLab utils -->
-  <script src="js/ext/mlab.utils.js"></script>
-  <script src="js/blf.utils.js"></script>
-
-  <!-- BibLib front -->
-  <script src="js/blf.layout.js"></script>
-  <script src="js/blf.control.js"></script>
-
-  <script src="js/modules/listPanel.js"></script>
-  <script src="js/modules/createPanel.js"></script>
-  <script src="js/modules/fieldsPanel.js"></script>
-  <script src="js/modules/advancedSearchPanel.js"></script>
-
-  <script src="js/modules/customInputs/TypeField.js"></script>
-  <script src="js/modules/customInputs/CreatorField.js"></script>
-  <script src="js/modules/customInputs/CheckboxField.js"></script>
-  <script src="js/modules/customInputs/DocumentField.js"></script>
-  <script src="js/modules/customInputs/YearRangeField.js"></script>
-  <script src="js/modules/customInputs/IdentifierField.js"></script>
-  <script src="js/modules/customInputs/LanguageValueField.js"></script>
+  <script id="override-advancedSearchPanel" type="text/x-handlebars-template">
+    <div style="background:#fcc;height:20px;width:100%;text-align:center;line-height:20px;">C... c... c... Customized!</div>
+    <div class="index-container"></div>
+    <div class="filter-container"></div>
+    <button class="validate-advanced-search">{{t "actions.search" }}</button>
+  </script>
 
   <script>
     $(function() {
-      // We start everything from here:
+      // We initialize first our custom override-advancedSearchPanel template:
+      blf.templates.override(
+        'advancedSearchPanel',
+        Handlebars.compile($('#override-advancedSearchPanel').html())
+      );
+
+      // Then we initialize the controller:
       blf.init({
         lang: 'fr',
         baseURL: 'http://localhost:8080',

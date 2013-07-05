@@ -60,21 +60,20 @@ blf.init = function(config) {
   // Load dictionary:
   i18n.init({
     lng: blf.config.lang,
-    fallbackLng: 'en',
+    fallbackLng: blf.config.lang,
     ns: {
       namespaces: ['translation', 'customInputs'],
       defaultNs: 'translation'
     }
   }, function(t) {
-    $('body').i18n();
+    // Load main template:
+    blf.templates.require('main', function(template) {
+      blf.config.baseDOM.append(template());
+      $.t('navigation.addEntry');
+      $('body').i18n();
+      start();
+    });
   });
-
-  // Load main template:
-  blf.templates.require('main', function(template) {
-    blf.config.baseDOM.append(template());
-    start();
-  });
-
 
   function start() {
     /**

@@ -27,14 +27,18 @@
   });
 
   // Templates management:
-  mlab.pkg('blf.templates');
+  mlab.pkg('blf.config');
+  mlab.pkg('blf.templates.preloaded');
   (function() {
-    var _templates = {};
+    var _templates = {},
+        _override = {},
+        _prefix = 'templates/',
+        _suffix = '.handlebars';
 
     function loadTemplate(path, callback) {
-      if (!_templates[path])
+      if (!blf.templates.get(path))
         $.ajax({
-          url: 'templates/' + path + '.handlebars',
+          url: _prefix + path + _suffix,
           success: function(data) {
             _templates[path] = Handlebars.compile(data);
             if (callback)
@@ -42,7 +46,7 @@
           }
         });
       else if (callback)
-        callback(_templates[path]);
+        callback(blf.templates.get(path));
     }
 
     blf.templates.require = function(v, callback) {
@@ -54,10 +58,18 @@
     };
 
     blf.templates.get = function(path) {
-      if (_templates[path])
-        return _templates[path];
-      else
-        blf.templates.require(path);
+      return(
+        // First, check overrides:
+        _override[path] ||
+        // Then, check preloaded templates:
+        blf.templates.preloaded[_prefix + path + _suffix] ||
+        // If nothing has been found, check dynamic templates:
+        _templates[path]
+      );
+    };
+
+    blf.templates.override = function(name, template) {
+      _override[name] = template;
     };
   })();
 
