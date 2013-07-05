@@ -16,7 +16,7 @@
 
       // Check if it is a field anchor:
       if (dom.is('a[data-field]')) {
-        _self.dispatchEvent('clickField', {
+        _self.dispatchEvent('openField', {
           field: dom.attr('data-field')
         });
 

@@ -355,7 +355,7 @@ blf.init = function(config) {
           }
         },
         {
-          triggers: 'clickField',
+          triggers: 'openField',
           description: 'Display the panel to create a new entry, with the related field.',
           method: function(e) {
             var field = e.data.field,
@@ -516,5 +516,12 @@ blf.init = function(config) {
         typeName: 'document_type'
       }
     ]);
+
+    // Due to issue #25, binding a success to a multi-request does not work.
+    // Sooooooooo... Here is the hack:
+    window.setTimeout(function() {
+      if (typeof blf.config.onComplete === 'function')
+        blf.config.onComplete();
+    }, 300);
   }
 };

@@ -33,6 +33,9 @@
         lang: 'fr',
         baseURL: 'http://localhost:8080',
         baseDOM: $('#layout'),
+        onComplete: function() {
+          blf.control.dispatchEvent('openField', { field: 'Book' });
+        },
         advancedSearchPanel: {
           index: {
             property_source_index: 'search_index',
