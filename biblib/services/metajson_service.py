@@ -4,6 +4,7 @@
 
 from bson import json_util
 
+from biblib import metajson
 from biblib.metajson import Common
 from biblib.metajson import Collection
 from biblib.metajson import Field
@@ -15,9 +16,6 @@ from biblib.metajson import Person
 from biblib.metajson import Resource
 from biblib.metajson import Target
 from biblib.metajson import Type
-from biblib.services import config_service
-
-metajson_title_non_sort = config_service.metajson_title_non_sort
 
 
 def load_dict(meta_dict):
@@ -80,8 +78,8 @@ def manage_title_non_sort(metajson):
         if "languages" in metajson:
             language = metajson["languages"][0]
             print("language: {}".format(language))
-            if language and language in metajson_title_non_sort:
-                non_sorts = metajson_title_non_sort[language]
+            if language and language in metajson.TITLE_NON_SORT:
+                non_sorts = metajson.TITLE_NON_SORT[language]
                 title_words = title.split()
                 if len(title_words) > 1:
                     first_title_word = title_words[0]

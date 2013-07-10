@@ -6,52 +6,40 @@ import os
 import json
 
 from gspreadsheet import GSpreadsheet
-from bson import json_util
 
 from biblib.metajson import Type
-from biblib.util import console
-
-locations = [
-    os.path.abspath(os.path.join(os.getcwd(), 'biblib')),
-    os.path.abspath(os.getcwd()),
-    os.path.abspath(os.path.join(os.getcwd(), os.pardir)),
-    os.path.abspath(os.path.join(os.getcwd(), os.pardir, os.pardir)),
-    os.path.expanduser("~"),
-    "/etc/biblib",
-    os.environ.get("BIBLIB_CONF")
-]
+from biblib.util import jsonbon
 
 
-def load_config():
-    #print("config_service.load_config")
+def find_config_path():
+    locations = [
+        os.path.abspath(os.path.join(os.getcwd(), 'biblib')),
+        os.path.abspath(os.getcwd()),
+        os.path.abspath(os.path.join(os.getcwd(), os.pardir)),
+        os.path.abspath(os.path.join(os.getcwd(), os.pardir, os.pardir)),
+        os.path.expanduser("~"),
+        "/etc/biblib",
+        os.environ.get("BIBLIB_CONF")
+    ]
     for location in locations:
-        try:
-            #print("location: {}".format(location))
-            config_location = os.path.join(location, "conf", "config.json")
-            with open(config_location, 'r') as config_file:
-                print("config_location: {}".format(config_location))
-                return json.load(config_file)
-        except IOError as e:
-            pass
-        except ValueError as e:
-            print 'ERROR: Config file is not valid JSON', e
-            return False
+        #print("location: {}".format(location))
+        config_location = os.path.join(location, "conf", "config.json")
+        if os.path.exists(config_location):
+            return os.path.join(location, "conf")
 
 
-def load_metajson_title_non_sort():
-    #print("config_service.load_metajson_title_non_sort")
-    for location in locations:
-        try:
-            #print("location: {}".format(location))
-            metajson_title_non_sort_location = os.path.join(location, "conf", "metajson", "title_non_sort.json")
-            with open(metajson_title_non_sort_location, 'r') as metajson_title_non_sort_file:
-                print("metajson_title_non_sort_location: {}".format(metajson_title_non_sort_location))
-                return json.load(metajson_title_non_sort_file)
-        except IOError as e:
-            pass
-        except ValueError as e:
-            print 'ERROR: title_non_sort.json file is not valid JSON', e
-            return False
+def load_config_json():
+    #print("config_service.load_config_json")
+    try:
+        config_location = os.path.join(config_path, "config.json")
+        with open(config_location, 'r') as config_file:
+            print("config_location: {}".format(config_location))
+            return json.load(config_file)
+    except IOError as e:
+        print "ERROR: Can' open config.json file", e
+    except ValueError as e:
+        print "ERROR: Config file is not valid JSON", e
+        return False
 
 
 def retrieve_google_types(app):
@@ -63,12 +51,12 @@ def retrieve_google_types(app):
         worksheet = GSpreadsheet(worksheet=ws_id, key=config["google"]["conf_key"], email=config["google"]["email"], password=config["google"]["password"])
         type_bundle = google_worksheet_to_type(ws_name, worksheet, app, keys)
         type_bundle_id = type_bundle["type_id"]
-        type_bundle_dump = dump_metajson(type_bundle)
+        type_bundle_dump = jsonbon.dump_metajson(type_bundle)
         type_bundle_path = os.path.abspath(os.path.join(os.getcwd(), 'biblib', 'conf', 'types', type_bundle_id + ".json"))
         print type_bundle_dump
         with open(type_bundle_path, "w") as type_bundle_file:
             type_bundle_file.write(type_bundle_dump)
-    print dump_metajson(keys)
+    print jsonbon.dump_metajson(keys)
 
 
 def get_google_types_worksheets(spreadsheet):
@@ -155,12 +143,6 @@ def google_worksheet_to_type(ws_name, worksheet, app, keys):
         return type_bundle
 
 
-def dump_metajson(metajson):
-    if metajson:
-        return json_util.dumps(metajson, ensure_ascii=False, indent=4, encoding="utf-8", sort_keys=True)
-
-
-console.setup_console()
-config = load_config()
-metajson_title_non_sort = load_metajson_title_non_sort()
+config_path = find_config_path()
+config = load_config_json()
 #retrieve_google_types("spire")

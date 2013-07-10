@@ -1,0 +1,97 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Schtrphoumf",
+                "fr": "Schtrphoumf"
+            },
+            "multiple": true,
+            "property": "schtrphoumfs",
+            "type_source": "part_season",
+            "required": true,
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Keywords",
+                "fr": "Mots-cl\u00e9s"
+            },
+            "multiple": true,
+            "property": "keywords",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Covered countries",
+                "fr": "Pays couverts"
+            },
+            "multiple": true,
+            "property": "nations",
+            "required": false,
+            "type_source": "country",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Time Period Covered - date start",
+                "fr": "Période couverte - date de début"
+            },
+            "property": "date_period_start",
+            "required": false,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Time Period Covered - date end",
+                "fr": "Période couverte - date de fin"
+            },
+            "property": "date_period_end",
+            "required": false,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Creators",
+                "fr": "Cr\u00e9ateurs"
+            },
+            "multiple": true,
+            "property": "creators",
+            "required": true,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "Languages",
+                "fr": "Langues"
+            },
+            "multiple": true,
+            "property": "languages",
+            "required": false,
+            "type_source": "language",
+            "type_ui": "TypeField"
+        }
+    ],
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "DatasetQuali"
+}

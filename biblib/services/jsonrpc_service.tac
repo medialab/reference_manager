@@ -56,7 +56,10 @@ class References_repository(jsonrpc.JSONRPC):
         return jsonrpc.JSONRPC._cbRender(self, result, request, id, version=2.0)
 
     def format_bson(self, bson_data):
-        return json_util.dumps(bson_data, ensure_ascii=False, indent=4, encoding="utf-8", sort_keys=True)
+        return json_util.dumps(bson_data, ensure_ascii=False, encoding="utf-8")
+
+    def format_json(self, json_data):
+        return json.dumps(json_data, ensure_ascii=False, encoding="utf-8")
 
     def jsonrpc_echo(self, x):
             """Return all passed args."""
@@ -68,7 +71,7 @@ class References_repository(jsonrpc.JSONRPC):
         """
         # convert JSON to BSON
         # TODO : try to convert directly JSON to BSON...
-        doc_json_string = json.dumps(document, ensure_ascii=False, encoding="utf-8")
+        doc_json_string = self.format_json(document)
         doc_bson = json_util.loads(doc_json_string)
 
         return self.format_bson(repository_service.save_document(None, doc_bson))

@@ -10,6 +10,14 @@ from biblib.services import repository_service
 from biblib.util import console
 
 
+def test_search_mongo():
+    mongo_query = {"$or": [{"title": {"$options": "i", "$regex": "Cheyenne"}}, {"title": {"$options": "i", "$regex": "technique"}}]}
+    mongo_query = {"$and": [{"$or": [{"title": {"$options": "i", "$regex": "Cheyenne"}}, {"title": {"$options": "i", "$regex": "technique"}}]}, {"publishers": {"$regex": "press", "$options": 'i'}}]}
+    search_result = repository_service.search_mongo(None, mongo_query)
+    print "search_result:"
+    print json_util.dumps(search_result, ensure_ascii=False, indent=4, encoding="utf-8", sort_keys=True)
+
+
 def test_search():
     search_query = {"filter_class": "Document"}
     search_query["filter_date_end"] = "2000"
@@ -22,7 +30,7 @@ def test_search():
     search_query["result_bibliographic_styles"] = ["mla"]
     search_query["result_offset"] = 0
     search_query["result_sorts"] = [{"field": "rec_type", "order": "asc"}]
-    search_query["search_terms"] = [{"index": "title", "operator": "or", "value": "Cheyenne"}]
+    search_query["search_terms"] = [{"index": "title", "operator": "and", "value": "Cheyenne"}, {"index": "title", "operator": "or", "value": "technique"}]
 
     print "search_query:"
     print json.dumps(search_query, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
@@ -34,6 +42,7 @@ def test_search():
 
 
 def test():
+    #test_search_mongo()
     test_search()
 
 console.setup_console()

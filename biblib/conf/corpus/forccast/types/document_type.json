@@ -1,0 +1,16 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Controversy",
+                "fr": "Controverse"
+            },
+            "type_id": "Controversy"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "sort": false,
+    "type_id": "document_type"
+}

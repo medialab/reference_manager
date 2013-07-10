@@ -6,8 +6,9 @@
 
 import uuid
 import pymongo
-import json
+from bson import json_util
 from bson.objectid import ObjectId
+from bson.errors import InvalidId
 from biblib.metajson import SearchResponse
 from biblib.services import config_service
 from biblib.services import metajson_service
@@ -16,7 +17,6 @@ from biblib.util import exceptions
 DOCUMENTS = "documents"
 AGENTS = "agents"
 TYPES = "types"
-DATAFIELDS = "datafields"
 UIFIELDS = "uifields"
 
 config = config_service.config["mongodb"]
@@ -39,7 +39,6 @@ def empty_corpus(corpus):
     mongodb[corpus][DOCUMENTS].drop()
     mongodb[corpus][AGENTS].drop()
     mongodb[corpus][TYPES].drop()
-    mongodb[corpus][DATAFIELDS].drop()
     mongodb[corpus][UIFIELDS].drop()
 
 
@@ -56,14 +55,17 @@ def init_corpus_indexes(corpus):
     mongodb[corpus][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
     mongodb[corpus][AGENTS].ensure_index([index_id, index_rec_id, index_name, index_name_family], safe=True)
     mongodb[corpus][TYPES].ensure_index([index_id], safe=True)
-    mongodb[corpus][DATAFIELDS].ensure_index([index_id], safe=True)
     mongodb[corpus][UIFIELDS].ensure_index([index_id], safe=True)
 
 
 def get_document_by_mongo_id(corpus, mongo_id):
     if not corpus:
         corpus = default_corpus
-    return metajson_service.load_dict(mongodb[corpus][DOCUMENTS].find_one({'_id': ObjectId(mongo_id)}))
+    result = mongodb[corpus][DOCUMENTS].find_one({'_id': ObjectId(mongo_id)})
+    if result:
+        return metajson_service.load_dict(result)
+    else:
+        return None
 
 
 def get_documents_by_mongo_ids(corpus, mongo_ids):
@@ -72,25 +74,41 @@ def get_documents_by_mongo_ids(corpus, mongo_ids):
     mongo_object_ids = []
     for mongo_id in mongo_ids:
         mongo_object_ids.append(ObjectId(mongo_id))
-    return metajson_service.load_dict_list(mongodb[corpus][DOCUMENTS].find({"_id": {"$in": mongo_object_ids}}))
+    result = mongodb[corpus][DOCUMENTS].find({"_id": {"$in": mongo_object_ids}})
+    if result:
+        return metajson_service.load_dict(result)
+    else:
+        return None
 
 
 def get_document_by_rec_id(corpus, rec_id):
     if not corpus:
         corpus = default_corpus
-    return metajson_service.load_dict(mongodb[corpus][DOCUMENTS].find_one({"rec_id": rec_id}))
+    result = mongodb[corpus][DOCUMENTS].find_one({"rec_id": rec_id})
+    if result:
+        return metajson_service.load_dict(result)
+    else:
+        return None
 
 
 def get_documents_by_rec_ids(corpus, rec_ids):
     if not corpus:
         corpus = default_corpus
-    return metajson_service.load_dict_list(mongodb[corpus][DOCUMENTS].find({"rec_id": {"$in": rec_ids}}))
+    result = mongodb[corpus][DOCUMENTS].find({"rec_id": {"$in": rec_ids}})
+    if result:
+        return metajson_service.load_dict(result)
+    else:
+        return None
 
 
 def get_documents(corpus):
     if not corpus:
         corpus = default_corpus
-    return metajson_service.load_dict_list(mongodb[corpus][DOCUMENTS].find())
+    result = mongodb[corpus][DOCUMENTS].find()
+    if result:
+        return metajson_service.load_dict(result)
+    else:
+        return None
 
 
 def get_documents_count(corpus):
@@ -131,9 +149,18 @@ def search(corpus, search_query):
         filter_query.append({"rec_type": {"$in": search_query["filter_types"]}})
 
     # search_terms
+    # a
+    # and b
+    # or c
+    # -> or(and(a,b),c)
+    # a
+    # or b
+    # and c
+    # -> and(or(a,b),c)
+
     search_indexes = []
     if "search_terms" in search_query:
-        for search_term in search_query["search_terms"]:
+        for idx, search_term in enumerate(search_query["search_terms"]):
             # value
             if "value" not in search_term or search_term["value"] is None:
                 # useless
@@ -144,15 +171,25 @@ def search(corpus, search_query):
             elif search_term["index"] == "all":
                 # todo
                 search_indexes.append({"title": {"$regex": search_term["value"], "$options": 'i'}})
+
             elif search_term["index"] == "identifier":
-                # todo
-                search_indexes.append({"rec_id": search_term["value"]})
+                try:
+                    obid = ObjectId(search_term["index"])
+                    search_indexes.append({"_id": obid})
+                except (InvalidId, TypeError):
+                    search_indexes.append({"or": [{"rec_id": search_term["value"]}, {"identifiers.value": search_term["value"]}]})
             elif search_term["index"] == "title":
                 search_indexes.append({"title": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "is_part_of":
                 search_indexes.append({"is_part_ofs.title": {"$regex": search_term["value"], "$options": 'i'}})
             elif search_term["index"] == "creator":
-                search_indexes.append({"creators.agent.name_family": {"$regex": search_term["value"], "$options": 'i'}})
+                creator_terms = []
+                for value in search_term["value"].replace(",", "").split():
+                    creator_terms.append({"creators.agent.name_family": {"$regex": value, "$options": 'i'}})
+                    creator_terms.append({"creators.agent.name_given": {"$regex": value, "$options": 'i'}})
+                    creator_terms.append({"creators.agent.name": {"$regex": value, "$options": 'i'}})
+                    creator_terms.append({"creators.agent.title": {"$regex": value, "$options": 'i'}})
+                search_indexes.append({"$or": creator_terms})
             elif search_term["index"] == "creator_id":
                 search_indexes.append({"creators.agent.rec_id": search_term["value"]})
             elif search_term["index"] == "affiliation":
@@ -187,7 +224,7 @@ def search(corpus, search_query):
     else:
         mongo_query = {}
     print "mongo_query:"
-    print json.dumps(mongo_query, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
+    print json_util.dumps(mongo_query, indent=4, ensure_ascii=False, encoding="utf-8")
 
     records = metajson_service.load_dict_list(mongodb[corpus][collection].find(mongo_query))
     records_total_count = len(records)
@@ -213,7 +250,11 @@ def search_mongo(corpus, mongo_query):
     # {"creators.agent.name_family":"Latour"}
     # {"is_part_ofs.creators.agent.name_family":"Latour"}
     # {"is_part_ofs.creators.agent.name_family":"Latour", "is_part_of.creators.agent.name_given":"Bruno"}
-    return metajson_service.load_dict_list(mongodb[corpus][DOCUMENTS].find(mongo_query))
+    result = mongodb[corpus][DOCUMENTS].find(mongo_query)
+    if result:
+        return metajson_service.load_dict(result)
+    else:
+        return None
 
 
 def save_document(corpus, document):
@@ -239,37 +280,43 @@ def delete_document(corpus, rec_id):
     return result
 
 
-def get_datafield(corpus, prop):
-    if not corpus:
-        corpus = default_corpus
-    return metajson_service.load_dict(mongodb[corpus][DATAFIELDS].find_one({"property": prop}))
-
-
-def save_datafield(corpus, datafield):
-    if not corpus:
-        corpus = default_corpus
-    return mongodb[corpus][DATAFIELDS].insert(datafield)
-
-
 def get_uifield(corpus, rec_type):
     if not corpus:
         corpus = default_corpus
-    return metajson_service.load_dict(mongodb[corpus][UIFIELDS].find_one({"rec_type": rec_type}))
+    result = mongodb[corpus][UIFIELDS].find_one({"rec_type": rec_type})
+    if result:
+        return metajson_service.load_dict(result)
+    else:
+        return None
 
 
 def save_uifield(corpus, uifield):
     if not corpus:
         corpus = default_corpus
-    return mongodb[corpus][UIFIELDS].insert(uifield)
+    # insert or update ?
+    rec_type = uifield["rec_type"]
+    existing_uifield = get_uifield(corpus, rec_type)
+    if existing_uifield:
+        uifield["_id"] = existing_uifield["_id"]
+    return mongodb[corpus][UIFIELDS].save(uifield)
 
 
 def get_type(corpus, type_id):
     if not corpus:
         corpus = default_corpus
-    return metajson_service.load_dict(mongodb[corpus][TYPES].find_one({"type_id": type_id}))
+    result = mongodb[corpus][TYPES].find_one({"type_id": type_id})
+    if result:
+        return metajson_service.load_dict(result)
+    else:
+        return None
 
 
 def save_type(corpus, metatype):
     if not corpus:
         corpus = default_corpus
-    return mongodb[corpus][TYPES].insert(metatype)
+    # insert or update ?
+    type_id = metatype["type_id"]
+    existing_type = get_type(corpus, type_id)
+    if existing_type:
+        metatype["_id"] = existing_type["_id"]
+    return mongodb[corpus][TYPES].save(metatype)
