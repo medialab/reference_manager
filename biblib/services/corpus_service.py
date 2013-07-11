@@ -37,27 +37,29 @@ def init_corpus(corpus):
 
 def init_types(corpus, folder):
     types_dir = os.path.abspath(os.path.join(config_service.config_path, "corpus", folder, "types"))
-    files = os.listdir(types_dir)
-    if files:
-        for file_name in os.listdir(types_dir):
-            if file_name.endswith(".json"):
-                with open(os.path.join(types_dir, file_name), 'r') as type_file:
-                    try:
-                        json_type = json.load(type_file)
-                        repository_service.save_type(corpus, json_type)
-                    except ValueError as e:
-                        print "ERROR: Type file is not valid JSON", folder, file_name, e
+    if os.path.exists(types_dir):
+        files = os.listdir(types_dir)
+        if files:
+            for file_name in os.listdir(types_dir):
+                if file_name.endswith(".json"):
+                    with open(os.path.join(types_dir, file_name), 'r') as type_file:
+                        try:
+                            json_type = json.load(type_file)
+                            repository_service.save_type(corpus, json_type)
+                        except ValueError as e:
+                            print "ERROR: Type file is not valid JSON", folder, file_name, e
 
 
 def init_uifields(corpus, folder):
     uifields_dir = os.path.abspath(os.path.join(config_service.config_path, "corpus", folder, "uifields"))
-    files = os.listdir(uifields_dir)
-    if files:
-        for file_name in os.listdir(uifields_dir):
-            if file_name.endswith(".json"):
-                with open(os.path.join(uifields_dir, file_name), 'r') as uifield_file:
-                    try:
-                        json_uifield = json.load(uifield_file)
-                        repository_service.save_uifield(corpus, json_uifield)
-                    except ValueError as e:
-                        print "ERROR: UIField file is not valid JSON", folder, file_name, e
+    if os.path.exists(uifields_dir):
+        files = os.listdir(uifields_dir)
+        if files:
+            for file_name in os.listdir(uifields_dir):
+                if file_name.endswith(".json"):
+                    with open(os.path.join(uifields_dir, file_name), 'r') as uifield_file:
+                        try:
+                            json_uifield = json.load(uifield_file)
+                            repository_service.save_uifield(corpus, json_uifield)
+                        except ValueError as e:
+                            print "ERROR: UIField file is not valid JSON", folder, file_name, e
