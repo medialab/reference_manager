@@ -230,7 +230,7 @@
     if (value === '')
       value = undefined;
 
-    if (this.propertyObject.multiple)
+    if (value !== undefined && this.propertyObject.multiple)
       value = [value];
 
     return value;

@@ -168,7 +168,7 @@
           res = dom.first().val();
       }
 
-      return res;
+      return ((domino.struct.get(res) !== 'array') || (res.length)) ? res : undefined;
     }
 
     function _validate() {
