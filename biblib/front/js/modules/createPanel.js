@@ -137,7 +137,7 @@
 
       $(blf.templates.get('createPanel.validate')()).click(validate).appendTo($('.create-form', _html));
 
-      fill(entry || { rec_type: e.data.field.children });
+      fill(entry || { rec_type: e.data.field });
     };
   };
 
