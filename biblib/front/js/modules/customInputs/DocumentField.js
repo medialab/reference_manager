@@ -153,7 +153,8 @@
      */
     function _validate() {
       var k,
-          invalid = 0;
+          invalid = 0,
+          data = _getData();
 
       $('.message', _dom).first().empty();
 
