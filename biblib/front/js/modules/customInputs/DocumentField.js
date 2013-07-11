@@ -72,9 +72,10 @@
 
       if (data.rec_type) {
         $('select.select-field', li).first().val(data.rec_type);
+        _forms[id] = blf.modules.createPanel.generateForm(blf.control, _fields[data.rec_type].children);
 
-        _forms[id] = blf.modules.createPanel.generateForm(blf.control, _fields[data.rec_type]);
         $('.custom-container', li).first().empty().append(_forms[id].components.map(function(o) {
+          console.log('ahah', o);
           return o.dom;
         }));
 
@@ -82,7 +83,6 @@
       }
 
       _ul.append(li);
-
       // Check count:
       if (obj.only_one && _ul.children('li').length >= 1)
         $('.add-document', _dom).css('display', 'none');
@@ -185,9 +185,11 @@
       _ul.children('li').each(function() {
         var value,
             li = $(this),
-            id = li.data('id');
+            id = li.data('id'),
+            data = _forms[id].getData();
 
-        documents.push(_forms[id].getData());
+        data.rec_type = $('select.select-field', li).first().val();
+        documents.push(data);
       });
 
       return documents.length ? documents : undefined;
