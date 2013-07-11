@@ -34,7 +34,7 @@
       "date_end": "End date :"
     }
   },
-  "IndentifierField": {
+  "IdentifierField": {
     "errors": {
       "exactly_one": "Exactly one identifier has to be added.",
       "at_least_one": "At least one creator has to be specified."
