@@ -127,7 +127,7 @@
       _filtersComponents = blf.modules.createPanel.generateForm(
         blf.control,
         _filter
-      );
+      ).components;
       $('.filter-container', _html).empty().append(_filtersComponents.map(function(o) {
         return o.dom;
       }));

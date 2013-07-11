@@ -42,7 +42,7 @@
         _ul = $('ul', _dom).first(),
         _lineID = 1,
         _self = this,
-        _linesHash = {},
+        _forms = {},
         _classTemplates,
         _fields = d.get('fields');
 
@@ -73,21 +73,12 @@
       if (data.rec_type) {
         $('select.select-field', li).first().val(data.rec_type);
 
-        _linesHash[id] = blf.modules.createPanel.generateForm(blf.control, _fields[data.rec_type]);
-        $('.custom-container', li).first().empty().append(_linesHash[id].map(function(o) {
+        _forms[id] = blf.modules.createPanel.generateForm(blf.control, _fields[data.rec_type]);
+        $('.custom-container', li).first().empty().append(_forms[id].components.map(function(o) {
           return o.dom;
         }));
 
-        _linesHash[id].forEach(function(comp) {
-          if (comp.fill)
-            comp.fill(data.document[comp.property], data.document);
-          else
-            blf.modules.createPanel.defaultMethods.fill.call(
-              comp,
-              data.document[comp.property],
-              data.document
-            );
-        });
+        _forms[id].fill(data);
       }
 
       _ul.append(li);
@@ -116,7 +107,7 @@
       if (li.length && target.is('button.remove-document')) {
         var id = li.data('id');
         li.remove();
-        delete _linesHash[id];
+        delete _forms[id];
 
         // Trigger event if only one type available:
         if (obj.type_fields.length <= 1)
@@ -138,8 +129,8 @@
             value = target.val(),
             container = $('.custom-container', li).first();
 
-        _linesHash[id] = blf.modules.createPanel.generateForm(blf.control, _fields[value].children);
-        container.empty().append(_linesHash[id].map(function(o) {
+        _forms[id] = blf.modules.createPanel.generateForm(blf.control, _fields[value].children);
+        container.empty().append(_forms[id].components.map(function(o) {
           return o.dom;
         }));
       }
@@ -158,20 +149,13 @@
 
       $('.message', _dom).first().empty();
       if (obj.required && (!data || !(data.children || []).length)) {
-        $('.message', _dom).first().text(i18n.t('customInputs:IdentifierField.errors.exactly_one'));
+        $('.message', _dom).first().text(i18n.t('customInputs:DocumentField.errors.exactly_one'));
         return false;
       }
 
-      for (k in _linesHash)
-        _linesHash[k].forEach(function(comp) {
-          var isValid =
-            comp.validate ?
-              comp.validate() :
-              blf.modules.createPanel.defaultMethods.validate.call(comp);
-
-          if (!isValid)
-            invalid++;
-        });
+      for (k in _forms)
+        if (!_forms[k].validate())
+          invalid++;
 
       return invalid === 0;
     }
@@ -186,7 +170,7 @@
       _ul.empty();
 
       // Parse data and create lines:
-      ((data || {}).children || []).forEach(addDocument);
+      (data || []).forEach(addDocument);
     }
 
     /**
@@ -203,22 +187,10 @@
             li = $(this),
             id = li.data('id');
 
-        documents.push({
-          rec_type: $('select.select-field', li).first().val(),
-          document: _linesHash[id].reduce(function(res, comp) {
-            value = comp.getData ?
-              comp.getData() :
-              blf.modules.createPanel.defaultMethods.getData.call(comp);
-
-            res[comp.property] = value;
-            return res;
-          }, {})
-        });
+        documents.push(_forms[id].getData());
       });
 
-      return documents.length ? {
-        children: documents
-      } : undefined;
+      return documents.length ? documents : undefined;
     }
 
     /**

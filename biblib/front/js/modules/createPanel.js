@@ -15,9 +15,47 @@
     domino.module.call(this);
 
     var _self = this,
-        _html = html,
-        _waitingField,
-        _field,
+        _html = html;
+
+    /**
+     * DOMINO BINDINGS:
+     * ****************
+     */
+    this.triggers.events.displayForm = function(d, e) {
+      var entry = e.data.entry,
+          field = d.get('fields')[e.data.field],
+          form = blf.modules.createPanel.generateForm(
+            blf.control,
+            d.get('fields')[e.data.field].children
+          );
+
+      $('.create-form', _html).empty().append(form.components.map(function(o) {
+        return o.dom;
+      }));
+
+      $(blf.templates.get('createPanel.validate')()).click(function() {
+        if (form.validate())
+          _self.dispatchEvent('validateEntry', {
+            entry: form.getData()
+          });
+      }).appendTo($('.create-form', _html));
+
+      form.fill(entry || { rec_type: e.data.field });
+    };
+  };
+
+  /**
+   * FORM GENERATION STATIC HELPERS:
+   * *******************************
+   */
+  mlab.pkg('blf.modules.createPanel.defaultMethods');
+  blf.modules.createPanel.generateForm = function(d, config) {
+    // Form private properties:
+    var _currentToKeep = {},
+        _propertiesToAdd = {
+          rec_class: 'Document',
+          rec_metajson: 1
+        },
         _toKeep = [
           'rec_source',
           'rec_type',
@@ -25,51 +63,22 @@
           'nonce',
           '_id'
         ],
-        _currentToKeep = {},
-        _propertiesToAdd = {
-          rec_class: 'Document',
-          rec_metajson: 1
-        },
-        _components = [],
-        _fields = {};
+        _components = [];
 
-    /**
-     * This method checks if values entered in inputs by the user are valid. If
-     * so, then an event will be dspatched containing the well-formed data.
-     */
-    function validate() {
-      var invalid = 0;
+    // Just some local variables:
+    var i,
+        l,
+        obj,
+        module,
+        component;
 
-      blf.control.log('Form validation:');
-      _components.forEach(function(component) {
-        var isValid = blf.modules.createPanel.validate(component);
+    // Parse children:
+    for (i = 0, l = config.length; i < l; i++)
+      _components.push(blf.modules.createPanel.getComponent(d, config[i]));
 
-        if (!isValid)
-          invalid++;
-
-        if (!isValid)
-          blf.control.log('  - Invalid component:', component.property);
-      });
-
-      if (invalid === 0) {
-        var data = getData();
-        blf.control.log('Everything is valid - data:', domino.utils.clone(data));
-        _self.dispatchEvent('validateEntry', {
-          entry: data
-        });
-      }
-    }
-
-    /**
-     * This method returns the entry entered by the user in the form, according
-     * to the scheme described by the "_field" object.
-     * @return {object} The entry.
-     */
+    // Methods:
     function getData() {
-      var i,
-          l,
-          k,
-          component,
+      var k,
           value,
           data = domino.utils.clone(_currentToKeep);
 
@@ -87,13 +96,29 @@
       return data;
     }
 
-    /**
-     * This method fills the inputs in the form to represent an entry.
-     */
+    function validate() {
+      var invalid = 0;
+
+      blf.control.log('Form validation:');
+      _components.forEach(function(component) {
+        var isValid = blf.modules.createPanel.validate(component);
+
+        if (!isValid)
+          invalid++;
+
+        if (!isValid)
+          blf.control.log('  - Invalid component:', component.property);
+      });
+
+      if (invalid === 0) {
+        blf.control.log('  - Everything is valid');
+        return true;
+      } else
+        return false;
+    }
+
     function fill(entry) {
       var i,
-          l,
-          component,
           parsed = {};
 
       // Store data to keep:
@@ -120,45 +145,12 @@
           blf.control.log('Property not parsed:', i, 'value:', entry[i]);
     }
 
-    /**
-     * DOMINO BINDINGS:
-     * ****************
-     */
-    this.triggers.events.displayForm = function(d, e) {
-      var entry = e.data.entry;
-
-      _fields = d.get('fields');
-      _field = _fields[e.data.field];
-
-      _components = blf.modules.createPanel.generateForm(blf.control, _field.children);
-      $('.create-form', _html).empty().append(_components.map(function(o) {
-        return o.dom;
-      }));
-
-      $(blf.templates.get('createPanel.validate')()).click(validate).appendTo($('.create-form', _html));
-
-      fill(entry || { rec_type: e.data.field });
+    return {
+      components: _components,
+      validate: validate,
+      getData: getData,
+      fill: fill
     };
-  };
-
-  /**
-   * FORM GENERATION STATIC HELPERS:
-   * *******************************
-   */
-  mlab.pkg('blf.modules.createPanel.defaultMethods');
-  blf.modules.createPanel.generateForm = function(d, config) {
-    var i,
-        l,
-        obj,
-        module,
-        component,
-        components = [];
-
-    // Parse children:
-    for (i = 0, l = config.length; i < l; i++)
-      components.push(blf.modules.createPanel.getComponent(d, config[i]));
-
-    return components;
   };
 
   /**
