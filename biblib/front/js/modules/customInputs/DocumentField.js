@@ -75,7 +75,6 @@
         _forms[id] = blf.modules.createPanel.generateForm(blf.control, _fields[data.rec_type].children);
 
         $('.custom-container', li).first().empty().append(_forms[id].components.map(function(o) {
-          console.log('ahah', o);
           return o.dom;
         }));
 
