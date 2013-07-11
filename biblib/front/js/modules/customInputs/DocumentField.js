@@ -138,7 +138,7 @@
             value = target.val(),
             container = $('.custom-container', li).first();
 
-        _linesHash[id] = blf.modules.createPanel.generateForm(blf.control, _fields[value]);
+        _linesHash[id] = blf.modules.createPanel.generateForm(blf.control, _fields[value].children);
         container.empty().append(_linesHash[id].map(function(o) {
           return o.dom;
         }));
@@ -157,8 +157,7 @@
           data = _getData();
 
       $('.message', _dom).first().empty();
-
-      if (obj.required && (!data || !data.length)) {
+      if (obj.required && (!data || !(data.children || []).length)) {
         $('.message', _dom).first().text(i18n.t('customInputs:IdentifierField.errors.exactly_one'));
         return false;
       }
