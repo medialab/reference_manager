@@ -244,9 +244,7 @@
     var isValid;
 
     if (this.propertyObject.required)
-      isValid = (this.getData ?
-        this.getData() :
-        blf.modules.createPanel.defaultMethods.getData.call(this)) !== undefined;
+      isValid = (blf.modules.createPanel.getData(this)) !== undefined;
     else
       isValid = true;
 
