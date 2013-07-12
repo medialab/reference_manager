@@ -79,9 +79,11 @@
       (data || []).forEach(addLine);
     }
 
-    function _getData() {
+    function _getData(data) {
       var lis = $('li', _dom),
           res;
+
+      data = data || {};
 
       if (obj.multiple) {
         res = [];
@@ -100,7 +102,11 @@
           null;
       }
 
-      return ((domino.struct.get(res) !== 'array') || (res.length)) ? res : undefined;
+      if (!data[obj.property])
+        data[obj.property] = [];
+
+      if ((domino.struct.get(res) !== 'array') || (res.length))
+        data[obj.property] = (data[obj.property] || []).concat(res);
     }
 
     function _validate() {
