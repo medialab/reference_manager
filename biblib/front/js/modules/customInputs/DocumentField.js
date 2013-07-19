@@ -147,7 +147,7 @@
           data = _getData();
 
       $('.message', _dom).first().empty();
-      if (obj.required && (!data || !(data.children || []).length)) {
+      if (obj.required && !(data || []).length) {
         $('.message', _dom).first().text(i18n.t('customInputs:DocumentField.errors.exactly_one'));
         return false;
       }
