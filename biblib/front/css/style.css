@@ -85,6 +85,10 @@ ul ul {
   float: right;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 /* Results list display */
 ul.entries-list > li {
   position: relative;
