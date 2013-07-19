@@ -34,8 +34,8 @@
     }
 
     function _fill(data, fullData) {
-      $('.date-from', _dom).val(data[obj.property_start]);
-      $('.date-to', _dom).val(data[obj.property_end]);
+      $('.date-from', _dom).val(fullData[obj.property_start]);
+      $('.date-to', _dom).val(fullData[obj.property_end]);
     }
 
     function _getData(data) {
