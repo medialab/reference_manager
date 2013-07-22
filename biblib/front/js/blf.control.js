@@ -111,7 +111,7 @@ blf.init = function(config) {
         struct: {
           multiple: '?boolean',
           property: 'string',
-          required: 'boolean',
+          required: '?boolean',
           type_data: '?string',
           type_ui: 'string',
           labels: '?blf.Dict',
@@ -373,6 +373,55 @@ blf.init = function(config) {
               });
             }
           }
+        },
+        {
+          triggers: 'addTypes',
+          description: 'The clean way to add one or more types.',
+          method: function(e) {
+            var i,
+                l,
+                obj,
+                flatList,
+                availableFields,
+                array = e.data.types || [e.data.type],
+                lists = this.get('lists');
+
+            for (i = 0, l = array.length; i < l; i++) {
+              obj = array[i];
+
+              switch (obj.type_id) {
+                case 'document_type':
+                  // Find the list of available fields as well:
+                  availableFields = {};
+                  flatList = [];
+
+                  (function recursiveParse(node, depth) {
+                    if (!node.bundle && !node.deprecated) {
+                      availableFields[node.type_id] = 1;
+                      flatList.push(node);
+                    }
+
+                    if ((node.children || []).length)
+                      node.children.forEach(recursiveParse);
+                  })(obj);
+
+                  // Update:
+                  this.update({
+                    fieldsTree: obj,
+                    availableFields: availableFields
+                  });
+
+                  // Add it also in the basic lists:
+                  lists[obj.type_id] = flatList;
+                  break;
+                default:
+                  lists[obj.type_id] = obj.children || [];
+                  break;
+              }
+
+              this.update('lists', lists);
+            }
+          }
         }
       ],
       services: [
@@ -389,7 +438,7 @@ blf.init = function(config) {
             return blf.global.rpc.buildData('search', [ input.query ]);
           },
           success: function(data) {
-            var results = JSON.parse(data.result);
+            var results = data.result;
             this.update('resultsList', results.records || []);
           }
         },
@@ -404,43 +453,27 @@ blf.init = function(config) {
           data: function(input) {
             return blf.global.rpc.buildData('type', [ input.typeName, 'fr' ]);
           },
-          success: function(data, input) {
-            var availableFields,
-                flatList,
-                results = JSON.parse(data.result),
-                lists = this.get('lists');
-
-            switch (input.typeName) {
-              case 'document_type':
-                // Find the list of available fields as well:
-                availableFields = {};
-                flatList = [];
-
-                (function recursiveParse(node, depth) {
-                  if (!node.bundle && !node.deprecated) {
-                    availableFields[node.type_id] = 1;
-                    flatList.push(node);
-                  }
-
-                  if ((node.children || []).length)
-                    node.children.forEach(recursiveParse);
-                })(results);
-
-                // Update:
-                this.update({
-                  fieldsTree: results,
-                  availableFields: availableFields
-                });
-
-                // Add it also in the basic lists:
-                lists[input.typeName] = flatList;
-                this.update('lists', lists);
-                break;
-              default:
-                lists[input.typeName] = results.children || [];
-                this.update('lists', lists);
-                break;
-            }
+          success: function(data) {
+            this.dispatchEvent('addTypes', {
+              type: data.result
+            });
+          }
+        },
+        {
+          id: 'types',
+          url: blf.global.API_URL,
+          description: 'Loads every lists.',
+          type: blf.global.rpc.type,
+          error: blf.global.rpc.error,
+          expect: blf.global.rpc.expect,
+          contentType: blf.global.rpc.contentType,
+          data: function(input) {
+            return blf.global.rpc.buildData('types', [ 'fr' ]);
+          },
+          success: function(data) {
+            this.dispatchEvent('addTypes', {
+              types: data.result
+            });
           }
         },
         {
@@ -452,13 +485,36 @@ blf.init = function(config) {
           expect: blf.global.rpc.expect,
           contentType: blf.global.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('uifields', [ input.field, 'fr' ]);
+            return blf.global.rpc.buildData('uifield', [ input.field, 'fr' ]);
           },
           success: function(data) {
-            var result = JSON.parse(data.result),
+            var result = data.result,
                 fields = this.get('fields');
 
             fields[result.rec_type] = result;
+            this.update('fields', fields);
+          }
+        },
+        {
+          id: 'fields',
+          url: blf.global.API_URL,
+          description: 'Loads all fields specifications.',
+          type: blf.global.rpc.type,
+          error: blf.global.rpc.error,
+          expect: blf.global.rpc.expect,
+          contentType: blf.global.rpc.contentType,
+          data: function(input) {
+            return blf.global.rpc.buildData('uifields', [ 'fr' ]);
+          },
+          success: function(data) {
+            var i,
+                l,
+                result = data.result,
+                fields = this.get('fields');
+
+            for (i = 0, l = result.length; i < l; i++)
+              fields[result[i].rec_type] = result[i];
+
             this.update('fields', fields);
           }
         },
@@ -475,7 +531,7 @@ blf.init = function(config) {
           },
           success: function(data) {
             this.log('Log from server after saving an entry:', result);
-            var result = JSON.parse(data.result);
+            var result = data.result;
             this.update('mode', 'home');
           }
         },
@@ -491,7 +547,7 @@ blf.init = function(config) {
             return blf.global.rpc.buildData('delete', [ input.rec_id ]);
           },
           success: function(data, input) {
-            var result = JSON.parse(data.result);
+            var result = data.result;
             this.log('Log from server after deleting an entry:', result);
 
             this.update('resultsList', this.get('resultsList').filter(function(res) {
@@ -506,22 +562,16 @@ blf.init = function(config) {
     blf.layout = blf.control.addModule(blf.modules.layout);
 
     // Data initialization:
-    blf.control.request([
-      {
-        service: 'type',
-        typeName: 'creator_role'
-      },
-      {
-        service: 'type',
-        typeName: 'document_type'
+    blf.control.request(['types', 'fields'], {
+      success: function() {
+        if (typeof blf.config.onComplete === 'function')
+          blf.config.onComplete();
       }
-    ]);
+    });
 
     // Due to issue #25, binding a success to a multi-request does not work.
     // Sooooooooo... Here is the hack:
     window.setTimeout(function() {
-      if (typeof blf.config.onComplete === 'function')
-        blf.config.onComplete();
     }, 300);
   }
 };
