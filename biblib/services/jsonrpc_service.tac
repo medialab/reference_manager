@@ -3,10 +3,8 @@
 # coding=utf-8
 
 import datetime
-import json
 import locale
 
-from bson import json_util
 from txjsonrpc.web import jsonrpc
 from txjsonrpc import jsonrpclib
 from twisted.web import server
@@ -20,6 +18,7 @@ from biblib.services import crosswalks_service
 from biblib.services import repository_service
 from biblib.util import console
 from biblib.util import exceptions
+from biblib.util import jsonbson
 
 # usage with log in the console
 # twistd -noy jsonrpc_service.tac -l -
@@ -55,12 +54,6 @@ class References_repository(jsonrpc.JSONRPC):
         print "RESULT: %s" % jsonrpclib.dumps(result, id=id, version=version)
         return jsonrpc.JSONRPC._cbRender(self, result, request, id, version=2.0)
 
-    def format_bson(self, bson_data):
-        return json_util.dumps(bson_data, ensure_ascii=False, encoding="utf-8")
-
-    def format_json(self, json_data):
-        return json.dumps(json_data, ensure_ascii=False, encoding="utf-8")
-
     def jsonrpc_echo(self, x):
             """Return all passed args."""
             return x
@@ -69,18 +62,15 @@ class References_repository(jsonrpc.JSONRPC):
         """ insert or update a reference in the repository
             return object id if ok or error
         """
-        # convert JSON to BSON
-        # TODO : try to convert directly JSON to BSON...
-        doc_json_string = self.format_json(document)
-        doc_bson = json_util.loads(doc_json_string)
+        doc_bson = jsonbson.json_to_bson(document)
 
-        return self.format_bson(repository_service.save_document(None, doc_bson))
+        return jsonbson.dumps_bson(repository_service.save_document(None, doc_bson))
 
     def jsonrpc_delete(self, rec_id):
         """ delete a reference in the repository
             return object id if ok or error
         """
-        return self.format_bson(repository_service.delete_document(None, rec_id))
+        return jsonbson.dumps_bson(repository_service.delete_document(None, rec_id))
 
     def jsonrpc_metadata_by_rec_ids(self, rec_ids, format="metajson"):
         """ get metadata of a list of references
@@ -91,7 +81,7 @@ class References_repository(jsonrpc.JSONRPC):
         """
         metajson_document = repository_service.get_documents_by_rec_ids(None, rec_ids)
         if format == "metajson":
-            return self.format_bson(metajson_document)
+            return jsonbson.dumps_bson(metajson_document)
         else:
             return crosswalks_service.convert_document(metajson_document, "metajson", format)
 
@@ -105,7 +95,7 @@ class References_repository(jsonrpc.JSONRPC):
         """
         metajson_document = repository_service.get_documents_by_mongo_ids(None, mongo_ids)
         if format == "metajson":
-            return self.format_bson(metajson_document)
+            return jsonbson.dumps_bson(metajson_document)
         else:
             return crosswalks_service.convert_document(metajson_document, "metajson", format)
 
@@ -125,7 +115,7 @@ class References_repository(jsonrpc.JSONRPC):
                 result["rec_id"] = document["rec_id"]
                 result[style] = citations_manager.cite(document, style, format)
                 results.append(result)
-            return self.format_bson(results)
+            return jsonbson.dumps_bson(results)
 
     def jsonrpc_search(self, search_query):
         """ search for one or more data from the repository
@@ -139,7 +129,7 @@ class References_repository(jsonrpc.JSONRPC):
             interval = date_end - date_start
             response_time = "{0:.3f}".format(interval.total_seconds() * 1000)
             search_response["response_time"] = response_time
-            return self.format_bson(search_response)
+            return jsonbson.dumps_bson(search_response)
         except exceptions.search_error, ex:
             code = int(str(ex))
             message = exceptions.search_error_message[code]
@@ -151,7 +141,7 @@ class References_repository(jsonrpc.JSONRPC):
                 - mongo_query: search query must respect the mongo query syntax
             return the asked data (in JSON)
         """
-        return self.format_bson(repository_service.search_mongo(None, mongo_query))
+        return jsonbson.dumps_bson(repository_service.search_mongo(None, mongo_query))
 
     def locale_keyfunc(self, keyfunc):
         def locale_wrapper(obj):
@@ -192,20 +182,50 @@ class References_repository(jsonrpc.JSONRPC):
         """
         type_dict = repository_service.get_type(None, type_id)
         self.type_adaptation(type_dict, language, True)
-        return self.format_bson(type_dict)
+        return jsonbson.dumps_bson(type_dict)
 
-    def jsonrpc_uifields(self, rec_type, language):
-        """ search for one or more uifields for user interface
+    def jsonrpc_types(self, language):
+        """ search for all types from the repository
+            params:
+                - language: language for label and description
+            return the asked type (in JSON)
+        """
+        type_list = repository_service.get_types(None)
+        if type_list:
+            results = []
+            for type_dict in type_list:
+                print type_dict["type_id"]
+                self.type_adaptation(type_dict, language, True)
+                results.append(jsonbson.dumps_bson(type_dict))
+            return results
+
+    def jsonrpc_uifield(self, rec_type, language):
+        """ search for one uifield for user interface
             from the repository
             params:
                 - rec_type: document type
                 - language: language for label and description
-            return the asked uifields for user interface (in JSON)
+            return the asked uifield for user interface (in JSON)
         """
         uifield_dict = repository_service.get_uifield(None, rec_type)
         self.type_adaptation(uifield_dict, language, False)
-        return self.format_bson(uifield_dict)
+        return jsonbson.dumps_bson(uifield_dict)
 
+    def jsonrpc_uifields(self, language):
+        """ search for all uifields for user interface
+            from the repository
+            params:
+                - language: language for label and description
+            return the asked uifields for user interface (in JSON)
+        """
+        uifield_list = repository_service.get_uifields(None)
+        if uifield_list:
+            results = []
+            for uifield_dict in uifield_list:
+                print uifield_dict["rec_type"]
+                self.type_adaptation(uifield_dict, language, False)
+                results.append(jsonbson.dumps_bson(uifield_dict))
+            return results
 
 application = service.Application("References repository web service")
 root = References_repository()

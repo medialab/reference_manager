@@ -11,17 +11,6 @@
         },
         {
             "labels": {
-                "en": "Schtrphoumf",
-                "fr": "Schtrphoumf"
-            },
-            "multiple": true,
-            "property": "schtrphoumfs",
-            "type_source": "part_season",
-            "required": true,
-            "type_ui": "TypeField"
-        },
-        {
-            "labels": {
                 "en": "Abstracts",
                 "fr": "Resum\u00e9s"
             },

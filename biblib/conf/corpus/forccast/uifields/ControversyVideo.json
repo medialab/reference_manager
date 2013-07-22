@@ -11,15 +11,6 @@
         },
         {
             "labels": {
-                "en": "Pipo",
-                "fr": "Pipo"
-            },
-            "property": "pipo",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
                 "en": "Creators",
                 "fr": "Cr\u00e9ateurs"
             },
@@ -95,5 +86,5 @@
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "Controversy"
+    "rec_type": "ControversyVideo"
 }

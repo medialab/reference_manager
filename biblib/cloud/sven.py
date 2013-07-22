@@ -2,11 +2,10 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import json
 import urllib
 import urllib2
 from biblib.util import config_service
-
+from biblib.util import jsonbson
 
 config = config_service.config["sven"]
 
@@ -22,7 +21,7 @@ def authenticate(username, password):
     print url
     request = urllib2.Request(url, data_encoded)
     response = urllib2.urlopen(request)
-    result = json.loads(response.read())
+    result = jsonbson.load_json_str(response.read())
     print result
     auth_dict = {"token": result["token"], "user_id": username}
     return auth_dict
@@ -34,7 +33,7 @@ def document(item):
     print url
     print item
     if "tags" in item:
-        tags = json.dumps(item["tags"])
+        tags = jsonbson.dumps_json(item["tags"])
         del item["tags"]
         print tags
         item["tags"] = tags
@@ -44,7 +43,7 @@ def document(item):
     response = urllib2.urlopen(request)
     result = response.read()
     print result
-    return json.loads(result)
+    return jsonbson.load_json_str(result)
     try:
         pass
     except:

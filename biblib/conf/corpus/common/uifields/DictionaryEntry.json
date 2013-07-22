@@ -30,35 +30,17 @@
         },
         {
             "labels": {
-                "en": "Newspaper",
-                "fr": "Journal"
+                "en": "Dictionary",
+                "fr": "Dictionnaire"
             },
             "multiple": true,
             "only_one": true,
             "property": "is_part_ofs",
             "required": true,
             "type_fields": [
-                "Newspaper"
+                "Dictionary"
             ],
             "type_ui": "DocumentField"
-        },
-        {
-            "labels": {
-                "en": "Issue",
-                "fr": "Numéro"
-            },
-            "property": "part_issue",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Date issued",
-                "fr": "Date de publication"
-            },
-            "property": "date_issued",
-            "required": true,
-            "type_ui": "DateField"
         },
         {
             "labels": {
@@ -112,5 +94,5 @@
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "NewspaperArticle"
+    "rec_type": "DictionaryEntry"
 }

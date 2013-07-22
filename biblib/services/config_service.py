@@ -3,12 +3,11 @@
 # coding=utf-8
 
 import os
-import json
 
 from gspreadsheet import GSpreadsheet
 
 from biblib.metajson import Type
-from biblib.util import jsonbon
+from biblib.util import jsonbson
 
 
 def find_config_path():
@@ -34,7 +33,7 @@ def load_config_json():
         config_location = os.path.join(config_path, "config.json")
         with open(config_location, 'r') as config_file:
             print("config_location: {}".format(config_location))
-            return json.load(config_file)
+            return jsonbson.load_json_file(config_file)
     except IOError as e:
         print "ERROR: Can' open config.json file", e
     except ValueError as e:
@@ -51,12 +50,12 @@ def retrieve_google_types(app):
         worksheet = GSpreadsheet(worksheet=ws_id, key=config["google"]["conf_key"], email=config["google"]["email"], password=config["google"]["password"])
         type_bundle = google_worksheet_to_type(ws_name, worksheet, app, keys)
         type_bundle_id = type_bundle["type_id"]
-        type_bundle_dump = jsonbon.dump_metajson(type_bundle)
+        type_bundle_dump = jsonbson.dumps_json(type_bundle)
         type_bundle_path = os.path.abspath(os.path.join(os.getcwd(), 'biblib', 'conf', 'types', type_bundle_id + ".json"))
         print type_bundle_dump
         with open(type_bundle_path, "w") as type_bundle_file:
             type_bundle_file.write(type_bundle_dump)
-    print jsonbon.dump_metajson(keys)
+    print jsonbson.jsonbson(keys)
 
 
 def get_google_types_worksheets(spreadsheet):

@@ -1,0 +1,50 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Blog",
+                "fr": "Blog"
+            },
+            "major": true,
+            "type_id": "blog"
+        },
+        {
+            "labels": {
+                "en": "Facebook",
+                "fr": "Facebook"
+            },
+            "major": true,
+            "type_id": "facebook"
+        },
+        {
+            "labels": {
+                "en": "Slideshow",
+                "fr": "Slideshow"
+            },
+            "major": true,
+            "type_id": "slideshow"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "Web site",
+                "fr": "Site Web"
+            },
+            "major": true,
+            "type_id": "website"
+        },
+        {
+            "labels": {
+                "en": "Wiki",
+                "fr": "Wiki"
+            },
+            "major": true,
+            "type_id": "wiki"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "sort": false,
+    "type_id": "genre_web"
+}

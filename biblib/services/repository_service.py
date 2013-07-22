@@ -6,13 +6,13 @@
 
 import uuid
 import pymongo
-from bson import json_util
 from bson.objectid import ObjectId
 from bson.errors import InvalidId
 from biblib.metajson import SearchResponse
 from biblib.services import config_service
 from biblib.services import metajson_service
 from biblib.util import exceptions
+from biblib.util import jsonbson
 
 DOCUMENTS = "documents"
 AGENTS = "agents"
@@ -74,9 +74,9 @@ def get_documents_by_mongo_ids(corpus, mongo_ids):
     mongo_object_ids = []
     for mongo_id in mongo_ids:
         mongo_object_ids.append(ObjectId(mongo_id))
-    result = mongodb[corpus][DOCUMENTS].find({"_id": {"$in": mongo_object_ids}})
-    if result:
-        return metajson_service.load_dict(result)
+    results = mongodb[corpus][DOCUMENTS].find({"_id": {"$in": mongo_object_ids}})
+    if results:
+        return metajson_service.load_dict_list(results)
     else:
         return None
 
@@ -94,9 +94,9 @@ def get_document_by_rec_id(corpus, rec_id):
 def get_documents_by_rec_ids(corpus, rec_ids):
     if not corpus:
         corpus = default_corpus
-    result = mongodb[corpus][DOCUMENTS].find({"rec_id": {"$in": rec_ids}})
-    if result:
-        return metajson_service.load_dict(result)
+    results = mongodb[corpus][DOCUMENTS].find({"rec_id": {"$in": rec_ids}})
+    if results:
+        return metajson_service.load_dict_list(results)
     else:
         return None
 
@@ -104,9 +104,9 @@ def get_documents_by_rec_ids(corpus, rec_ids):
 def get_documents(corpus):
     if not corpus:
         corpus = default_corpus
-    result = mongodb[corpus][DOCUMENTS].find()
-    if result:
-        return metajson_service.load_dict(result)
+    results = mongodb[corpus][DOCUMENTS].find()
+    if results:
+        return metajson_service.load_dict_list(results)
     else:
         return None
 
@@ -224,7 +224,7 @@ def search(corpus, search_query):
     else:
         mongo_query = {}
     print "mongo_query:"
-    print json_util.dumps(mongo_query, indent=4, ensure_ascii=False, encoding="utf-8")
+    print jsonbson.dumps_bson(mongo_query, True)
 
     records = metajson_service.load_dict_list(mongodb[corpus][collection].find(mongo_query))
     records_total_count = len(records)
@@ -250,9 +250,9 @@ def search_mongo(corpus, mongo_query):
     # {"creators.agent.name_family":"Latour"}
     # {"is_part_ofs.creators.agent.name_family":"Latour"}
     # {"is_part_ofs.creators.agent.name_family":"Latour", "is_part_of.creators.agent.name_given":"Bruno"}
-    result = mongodb[corpus][DOCUMENTS].find(mongo_query)
-    if result:
-        return metajson_service.load_dict(result)
+    results = mongodb[corpus][DOCUMENTS].find(mongo_query)
+    if results:
+        return metajson_service.load_dict_list(results)
     else:
         return None
 
@@ -290,6 +290,16 @@ def get_uifield(corpus, rec_type):
         return None
 
 
+def get_uifields(corpus):
+    if not corpus:
+        corpus = default_corpus
+    results = mongodb[corpus][UIFIELDS].find()
+    if results:
+        return metajson_service.load_dict_list(results)
+    else:
+        return None
+
+
 def save_uifield(corpus, uifield):
     if not corpus:
         corpus = default_corpus
@@ -307,6 +317,16 @@ def get_type(corpus, type_id):
     result = mongodb[corpus][TYPES].find_one({"type_id": type_id})
     if result:
         return metajson_service.load_dict(result)
+    else:
+        return None
+
+
+def get_types(corpus):
+    if not corpus:
+        corpus = default_corpus
+    results = mongodb[corpus][TYPES].find()
+    if results:
+        return metajson_service.load_dict_list(results)
     else:
         return None
 

@@ -2,12 +2,9 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import json
-
-from bson import json_util
-
 from biblib.services import repository_service
 from biblib.util import console
+from biblib.util import jsonbson
 
 
 def test_search_mongo():
@@ -15,7 +12,7 @@ def test_search_mongo():
     mongo_query = {"$and": [{"$or": [{"title": {"$options": "i", "$regex": "Cheyenne"}}, {"title": {"$options": "i", "$regex": "technique"}}]}, {"publishers": {"$regex": "press", "$options": 'i'}}]}
     search_result = repository_service.search_mongo(None, mongo_query)
     print "search_result:"
-    print json_util.dumps(search_result, ensure_ascii=False, indent=4, encoding="utf-8", sort_keys=True)
+    print jsonbson.dumps_bson(search_result, True)
 
 
 def test_search():
@@ -33,12 +30,12 @@ def test_search():
     search_query["search_terms"] = [{"index": "title", "operator": "and", "value": "Cheyenne"}, {"index": "title", "operator": "or", "value": "technique"}]
 
     print "search_query:"
-    print json.dumps(search_query, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
+    print jsonbson.dumps_json(search_query, True)
 
     search_result = repository_service.search(None, search_query)
 
     print "search_result:"
-    print json_util.dumps(search_result, ensure_ascii=False, indent=4, encoding="utf-8", sort_keys=True)
+    print jsonbson.dumps_bson(search_result, True)
 
 
 def test():

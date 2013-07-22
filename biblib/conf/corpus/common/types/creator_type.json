@@ -2,10 +2,12 @@
     "bundle": true, 
     "children": [
         {
+            "default": true, 
             "labels": {
                 "en": "personal", 
                 "fr": "personne"
             }, 
+            "major": true, 
             "type_id": "personal"
         }, 
         {
@@ -13,6 +15,7 @@
                 "en": "corporate", 
                 "fr": "organisation"
             }, 
+            "major": true, 
             "type_id": "corporate"
         }, 
         {
@@ -20,6 +23,7 @@
                 "en": "family", 
                 "fr": "famille"
             }, 
+            "major": true, 
             "type_id": "family"
         }, 
         {
@@ -27,6 +31,7 @@
                 "en": "conference", 
                 "fr": "conférence"
             }, 
+            "major": true, 
             "type_id": "event"
         }
     ], 

@@ -2,13 +2,14 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import json
 from biblib import metajson
 from biblib.metajson import Creator
 from biblib.metajson import Event
 from biblib.metajson import Person
 from biblib.metajson import Orgunit
 from biblib.metajson import Family
+from biblib.util import jsonbson
+
 
 creator_person_terms_of_address = [
     "baron",
@@ -670,7 +671,7 @@ def formatted_name_to_creator(formatted_name, creator_type, role):
                 family.set_key_if_not_none("name_family", name_family)
                 creator["agent"] = family
 
-        #print json.dumps(creator,ensure_ascii=False,indent=4,encoding="utf-8")
+        #print jsonbson.dumps_json(creator, True)
         return creator
 
 

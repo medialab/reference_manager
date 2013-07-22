@@ -1,44 +1,105 @@
 {
-    "bundle": true, 
+    "bundle": true,
     "children": [
         {
+            "labels": {
+                "en": "Adler-32",
+                "fr": "Adler-32"
+            },
+            "major": true,
             "type_id": "Adler-32"
-        }, 
+        },
         {
+            "labels": {
+                "en": "CRC32",
+                "fr": "CRC32"
+            },
+            "major": true,
             "type_id": "CRC32"
-        }, 
+        },
         {
+            "labels": {
+                "en": "HAVAL",
+                "fr": "HAVAL"
+            },
+            "major": true,
             "type_id": "HAVAL"
-        }, 
+        },
         {
+            "default": true,
+            "labels": {
+                "en": "MD5",
+                "fr": "MD5"
+            },
+            "major": true,
             "type_id": "MD5"
-        }, 
+        },
         {
+            "labels": {
+                "en": "MNP",
+                "fr": "MNP"
+            },
+            "major": true,
             "type_id": "MNP"
-        }, 
+        },
         {
+            "labels": {
+                "en": "SHA-1",
+                "fr": "SHA-1"
+            },
+            "major": true,
             "type_id": "SHA-1"
-        }, 
+        },
         {
+            "labels": {
+                "en": "SHA-256",
+                "fr": "SHA-256"
+            },
+            "major": true,
             "type_id": "SHA-256"
-        }, 
+        },
         {
+            "labels": {
+                "en": "SHA-384",
+                "fr": "SHA-384"
+            },
+            "major": true,
             "type_id": "SHA-384"
-        }, 
+        },
         {
+            "labels": {
+                "en": "SHA-512",
+                "fr": "SHA-512"
+            },
+            "major": true,
             "type_id": "SHA-512"
-        }, 
+        },
         {
+            "labels": {
+                "en": "TIGER",
+                "fr": "TIGER"
+            },
+            "major": true,
             "type_id": "TIGER"
-        }, 
+        },
         {
+            "labels": {
+                "en": "WHIRLPOOL",
+                "fr": "WHIRLPOOL"
+            },
+            "major": true,
             "type_id": "WHIRLPOOL"
-        }, 
+        },
         {
+            "labels": {
+                "en": "Unknown",
+                "fr": "Inconnu"
+            },
+            "major": true,
             "type_id": "unknown"
         }
-    ], 
-    "rec_class": "Type", 
-    "rec_metajson": 1, 
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
     "type_id": "cheksum_type"
 }

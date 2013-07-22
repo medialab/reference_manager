@@ -1,0 +1,65 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "default": true,
+            "labels": {
+                "en": "Author",
+                "fr": "Auteur"
+            },
+            "major": true,
+            "type_id": "aut"
+        },
+        {
+            "labels": {
+                "en": "Director",
+                "fr": "Directeur ou metteur en sc\u00e8ne"
+            },
+            "major": true,
+            "type_id": "drt"
+        },
+        {
+            "labels": {
+                "en": "Designer",
+                "fr": "Styliste ou maquettiste"
+            },
+            "major": true,
+            "type_id": "dsr"
+        },
+        {
+            "labels": {
+                "en": "Film editor",
+                "fr": "Monteur de films"
+            },
+            "major": true,
+            "type_id": "flm"
+        },
+        {
+            "labels": {
+                "en": "Programmer",
+                "fr": "Programmeur"
+            },
+            "major": true,
+            "type_id": "prg"
+        },
+        {
+            "labels": {
+                "en": "Scenarist",
+                "fr": "Sc\u00e9nariste"
+            },
+            "major": true,
+            "type_id": "sce"
+        },
+        {
+            "labels": {
+                "en": "Speaker",
+                "fr": "Conf\u00e9rencier"
+            },
+            "major": true,
+            "type_id": "spk"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "creator_role"
+}

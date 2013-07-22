@@ -30,53 +30,12 @@
         },
         {
             "labels": {
-                "en": "Newspaper",
-                "fr": "Journal"
+                "en": "Date created",
+                "fr": "Date de cr\u00e9ation"
             },
-            "multiple": true,
-            "only_one": true,
-            "property": "is_part_ofs",
-            "required": true,
-            "type_fields": [
-                "Newspaper"
-            ],
-            "type_ui": "DocumentField"
-        },
-        {
-            "labels": {
-                "en": "Issue",
-                "fr": "Numéro"
-            },
-            "property": "part_issue",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Date issued",
-                "fr": "Date de publication"
-            },
-            "property": "date_issued",
+            "property": "date_created",
             "required": true,
             "type_ui": "DateField"
-        },
-        {
-            "labels": {
-                "en": "Start page",
-                "fr": "Page de d\u00e9but"
-            },
-            "property": "part_page_start",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "End page",
-                "fr": "Page de fin"
-            },
-            "property": "part_page_end",
-            "required": false,
-            "type_ui": "CharField"
         },
         {
             "labels": {
@@ -112,5 +71,5 @@
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "NewspaperArticle"
+    "rec_type": "WorkingPaper"
 }

@@ -90,6 +90,7 @@
                 "en": "Austria", 
                 "fr": "Autriche"
             }, 
+            "major": true, 
             "type_id": "AT"
         }, 
         {
@@ -97,6 +98,7 @@
                 "en": "Australia", 
                 "fr": "Australie"
             }, 
+            "major": true, 
             "type_id": "AU"
         }, 
         {
@@ -146,6 +148,7 @@
                 "en": "Belgium", 
                 "fr": "Belgique"
             }, 
+            "major": true, 
             "type_id": "BE"
         }, 
         {
@@ -209,6 +212,7 @@
                 "en": "Brazil", 
                 "fr": "Brésil"
             }, 
+            "major": true, 
             "type_id": "BR"
         }, 
         {
@@ -258,6 +262,7 @@
                 "en": "Canada", 
                 "fr": "Canada"
             }, 
+            "major": true, 
             "type_id": "CA"
         }, 
         {
@@ -293,6 +298,7 @@
                 "en": "Switzerland", 
                 "fr": "Suisse"
             }, 
+            "major": true, 
             "type_id": "CH"
         }, 
         {
@@ -328,6 +334,7 @@
                 "en": "China", 
                 "fr": "Chine"
             }, 
+            "major": true, 
             "type_id": "CN"
         }, 
         {
@@ -370,6 +377,7 @@
                 "en": "Cyprus", 
                 "fr": "Chypre"
             }, 
+            "major": true, 
             "type_id": "CY"
         }, 
         {
@@ -377,6 +385,7 @@
                 "en": "Czech Republic (The)", 
                 "fr": "République tchèque"
             }, 
+            "major": true, 
             "type_id": "CZ"
         }, 
         {
@@ -384,6 +393,7 @@
                 "en": "Germany", 
                 "fr": "Allemagne"
             }, 
+            "major": true, 
             "type_id": "DE"
         }, 
         {
@@ -398,6 +408,7 @@
                 "en": "Denmark", 
                 "fr": "Danemark"
             }, 
+            "major": true, 
             "type_id": "DK"
         }, 
         {
@@ -419,6 +430,7 @@
                 "en": "Algeria", 
                 "fr": "Algérie"
             }, 
+            "major": true, 
             "type_id": "DZ"
         }, 
         {
@@ -440,6 +452,7 @@
                 "en": "Egypt", 
                 "fr": "Egypte"
             }, 
+            "major": true, 
             "type_id": "EG"
         }, 
         {
@@ -461,6 +474,7 @@
                 "en": "Spain", 
                 "fr": "Espagne"
             }, 
+            "major": true, 
             "type_id": "ES"
         }, 
         {
@@ -475,6 +489,7 @@
                 "en": "Finland", 
                 "fr": "Finlande"
             }, 
+            "major": true, 
             "type_id": "FI"
         }, 
         {
@@ -506,10 +521,12 @@
             "type_id": "FO"
         }, 
         {
+            "default": true, 
             "labels": {
                 "en": "France", 
                 "fr": "France"
             }, 
+            "major": true, 
             "type_id": "FR"
         }, 
         {
@@ -524,6 +541,7 @@
                 "en": "United Kingdom (The)", 
                 "fr": "Royaume-Uni"
             }, 
+            "major": true, 
             "type_id": "GB"
         }, 
         {
@@ -608,6 +626,7 @@
                 "en": "Greece", 
                 "fr": "Grèce"
             }, 
+            "major": true, 
             "type_id": "GR"
         }, 
         {
@@ -699,6 +718,7 @@
                 "en": "Ireland", 
                 "fr": "Irlande"
             }, 
+            "major": true, 
             "type_id": "IE"
         }, 
         {
@@ -706,6 +726,7 @@
                 "en": "Israel", 
                 "fr": "Israël"
             }, 
+            "major": true, 
             "type_id": "IL"
         }, 
         {
@@ -720,6 +741,7 @@
                 "en": "India", 
                 "fr": "Inde"
             }, 
+            "major": true, 
             "type_id": "IN"
         }, 
         {
@@ -755,6 +777,7 @@
                 "en": "Italy", 
                 "fr": "Italie"
             }, 
+            "major": true, 
             "type_id": "IT"
         }, 
         {
@@ -783,6 +806,7 @@
                 "en": "Japan", 
                 "fr": "Japon"
             }, 
+            "major": true, 
             "type_id": "JP"
         }, 
         {
@@ -874,6 +898,7 @@
                 "en": "Lebanon", 
                 "fr": "Liban"
             }, 
+            "major": true, 
             "type_id": "LB"
         }, 
         {
@@ -923,6 +948,7 @@
                 "en": "Luxembourg", 
                 "fr": "Luxembourg"
             }, 
+            "major": true, 
             "type_id": "LU"
         }, 
         {
@@ -944,6 +970,7 @@
                 "en": "Morocco", 
                 "fr": "Maroc"
             }, 
+            "major": true, 
             "type_id": "MA"
         }, 
         {
@@ -951,6 +978,7 @@
                 "en": "Monaco", 
                 "fr": "Monaco"
             }, 
+            "major": true, 
             "type_id": "MC"
         }, 
         {
@@ -1049,6 +1077,7 @@
                 "en": "Malta", 
                 "fr": "Malte"
             }, 
+            "major": true, 
             "type_id": "MT"
         }, 
         {
@@ -1063,6 +1092,7 @@
                 "en": "Maldives", 
                 "fr": "Maldives"
             }, 
+            "major": true, 
             "type_id": "MV"
         }, 
         {
@@ -1147,6 +1177,7 @@
                 "en": "Norway", 
                 "fr": "Norvège"
             }, 
+            "major": true, 
             "type_id": "NO"
         }, 
         {
@@ -1175,6 +1206,7 @@
                 "en": "New Zealand", 
                 "fr": "Nouvelle-Zélande"
             }, 
+            "major": true, 
             "type_id": "NZ"
         }, 
         {
@@ -1196,6 +1228,7 @@
                 "en": "Peru", 
                 "fr": "Pérou"
             }, 
+            "major": true, 
             "type_id": "PE"
         }, 
         {
@@ -1266,6 +1299,7 @@
                 "en": "Portugal", 
                 "fr": "Portugal"
             }, 
+            "major": true, 
             "type_id": "PT"
         }, 
         {
@@ -1357,6 +1391,7 @@
                 "en": "Sweden", 
                 "fr": "Suède"
             }, 
+            "major": true, 
             "type_id": "SE"
         }, 
         {
@@ -1364,6 +1399,7 @@
                 "en": "Singapore", 
                 "fr": "Singapour"
             }, 
+            "major": true, 
             "type_id": "SG"
         }, 
         {
@@ -1448,6 +1484,7 @@
                 "en": "Syrian Arab Republic", 
                 "fr": "Syrie"
             }, 
+            "major": true, 
             "type_id": "SY"
         }, 
         {
@@ -1490,6 +1527,7 @@
                 "en": "Thailand", 
                 "fr": "Thaïlande"
             }, 
+            "major": true, 
             "type_id": "TH"
         }, 
         {
@@ -1525,6 +1563,7 @@
                 "en": "Tunisia", 
                 "fr": "Tunisie"
             }, 
+            "major": true, 
             "type_id": "TN"
         }, 
         {
@@ -1539,6 +1578,7 @@
                 "en": "Turkey", 
                 "fr": "Turquie"
             }, 
+            "major": true, 
             "type_id": "TR"
         }, 
         {
@@ -1560,6 +1600,7 @@
                 "en": "Taiwan, Province of China", 
                 "fr": "Taïwan / (République de Chine)"
             }, 
+            "major": true, 
             "type_id": "TW"
         }, 
         {
@@ -1595,6 +1636,7 @@
                 "en": "United States (The)", 
                 "fr": "Etats-Unis"
             }, 
+            "major": true, 
             "type_id": "US"
         }, 
         {
@@ -1651,6 +1693,7 @@
                 "en": "Viet Nam", 
                 "fr": "Viêt Nam"
             }, 
+            "major": true, 
             "type_id": "VN"
         }, 
         {
@@ -1693,6 +1736,7 @@
                 "en": "South Africa", 
                 "fr": "Afrique du Sud"
             }, 
+            "major": true, 
             "type_id": "ZA"
         }, 
         {
@@ -1714,6 +1758,7 @@
                 "en": "Multiple country", 
                 "fr": "Pays multiples"
             }, 
+            "major": true, 
             "type_id": "ZZ"
         }
     ], 

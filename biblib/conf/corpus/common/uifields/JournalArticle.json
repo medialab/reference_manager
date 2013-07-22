@@ -54,7 +54,7 @@
         {
             "labels": {
                 "en": "Issue",
-                "fr": "Issue"
+                "fr": "Numéro"
             },
             "property": "part_issue",
             "required": false,

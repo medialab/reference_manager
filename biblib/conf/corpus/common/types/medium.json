@@ -1,110 +1,246 @@
 {
-    "bundle": true, 
+    "bundle": true,
     "children": [
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Print"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Web"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Radio"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Television"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Audiocassette"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Audiotape"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "CD"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "LP"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Film"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "DVD"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Videocassette"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Laser disc"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Sound filmstrip"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Slide program"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Performance"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Photograph"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Graphite on paper"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Bronze"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Oil on canvas"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Personal interview"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Telephone interview"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "E-mail"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Microform"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "CD-ROM "
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "DVD-ROM"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Scores"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Digital file"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "PDF file"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Microsoft Word file"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "MP3 file"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "JPEG file"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Kindle file"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "Nook file"
-        }, 
+        },
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "EPUB file"
         }
-    ], 
-    "rec_class": "Type", 
-    "rec_metajson": 1, 
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
     "type_id": "medium"
 }

@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import json
 import xml.etree.ElementTree as ET
 
 from pybtex.database.input import bibtex
@@ -19,6 +18,7 @@ from biblib.crosswalks import repec_crosswalk
 from biblib.crosswalks import summonjson_crosswalk
 from biblib.crosswalks import unixref_crosswalk
 from biblib.util import constants
+from biblib.util import jsonbson
 
 
 def convert_native(input_data, input_format, output_format, source, only_first_record):
@@ -59,8 +59,8 @@ def convert_file(input_file, input_format, output_format, source, only_first_rec
 
         elif input_type == constants.FILE_TYPE_JSON:
             with open(input_file) as json_file:
-                json_data = json.load(json_file)
-                # json.loads(json_file.read())
+                json_data = jsonbson.load_json_file(json_file)
+                # jsonbson.load_json_str(json_file.read())
                 return convert_json(json_data, input_format, output_format, source, only_first_record)
 
         elif input_type == constants.FILE_TYPE_BIBTEX:
@@ -88,7 +88,7 @@ def convert_string(input_string, input_format, output_format, source, only_first
             return convert_xmletree(xmletree, input_format, output_format, source, only_first_record)
 
         elif input_type == constants.FILE_TYPE_JSON:
-            json_data = json.loads(input_string)
+            json_data = jsonbson.load_json_str(input_string)
             return convert_json(json_data, input_format, output_format, source, only_first_record)
 
         elif input_type == constants.FILE_TYPE_BIBTEX:

@@ -2,21 +2,45 @@
     "bundle": true, 
     "children": [
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "iso639-1"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "iso639-2b"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "iso639-3"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "rfc3066"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "rfc4646"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "rfc5646"
         }
     ], 

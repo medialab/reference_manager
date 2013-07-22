@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import json
 from lxml import etree
 
 from oaipmh.client import Client
@@ -151,7 +150,6 @@ def convert_header(header):
         result['datestamp'] = header.datestamp().isoformat()
         result['setspecs'] = header.setSpec()
         result['deleted'] = header.isDeleted()
-        json.dumps(result, ensure_ascii=False, indent=2, encoding="utf-8", sort_keys=True)
         return result
 
 

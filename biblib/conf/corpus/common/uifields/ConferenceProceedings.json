@@ -48,20 +48,6 @@
         },
         {
             "labels": {
-                "en": "Series",
-                "fr": "Collection"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "seriess",
-            "required": false,
-            "type_fields": [
-                "Series"
-            ],
-            "type_ui": "DocumentField"
-        },
-        {
-            "labels": {
                 "en": "Languages",
                 "fr": "Langues"
             },
@@ -80,6 +66,20 @@
             "property": "publishers",
             "required": true,
             "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Series",
+                "fr": "Collection"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "seriess",
+            "required": false,
+            "type_fields": [
+                "Series"
+            ],
+            "type_ui": "DocumentField"
         },
         {
             "labels": {
