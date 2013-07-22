@@ -32,7 +32,26 @@
 
     var _dom,
         _selected = {},
-        _languages = blf.assets.languages;
+        _languages = blf.control.get('lists').language || [],
+        _majorLanguages = _languages.filter(function(o) {
+          return o.major;
+        });
+
+    // If the "major" flag is not used:
+    _majorLanguages = _majorLanguages.length ? _majorLanguages : _values;
+
+    // Try to get the list:
+    // AAARGH: How am I supposed to do when I add a module that needs to
+    //         dispatch an event when bindings are actually not existing yet?
+    //         So... here is one dirty solution, waiting for something cleaner:
+    //
+    //         => https://github.com/jacomyal/domino.js/issues/35
+    window.setTimeout(function() {
+      if (!_majorLanguages.length)
+        _self.dispatchEvent('loadList', {
+          list: 'language'
+        });
+    }, 0);
 
     _dom = $(blf.templates.get('LanguageValueField')({
       label: obj.label || obj.labels[blf.assets.lang]
@@ -61,9 +80,9 @@
     function addLanguage(data) {
       data = data || {};
       var li = $(blf.templates.get('LanguageValueField.line')({
-        languages: _languages.map(function(o) {
+        languages: _majorLanguages.map(function(o) {
           return {
-            id: o.id,
+            id: o.type_id,
             label: o.label || o.labels[blf.assets.lang]
           };
         })
@@ -75,7 +94,7 @@
       // If the language is not specified, we use the first language that is
       // not used yet:
       else
-        _languages.some(function(lang) {
+        _majorLanguages.some(function(lang) {
           if (!$('option[value="' + lang.id + '"]:selected', _dom).length)
             return $('select.select-language', li).val(lang.id);
         }, null);
@@ -92,7 +111,7 @@
 
     // Check that all languages are not added yet:
     function checkLanguagesCount() {
-      if ($('li', _dom).length >= _languages.length)
+      if ($('li', _dom).length >= _majorLanguages.length)
         $('button.add-language', _dom).css('display', 'none');
       else
         $('button.add-language', _dom).css('display', '');
@@ -113,6 +132,7 @@
         var val = $(this).val();
         $(this).find('option').each(function() {
           var opt = $(this);
+          console.log(opt, opt.val(), opt.is(':selected'), _selected[opt.val()]);
           if (opt.is(':selected') || !_selected[opt.val()])
             opt.attr('disabled', null);
           else
@@ -173,6 +193,23 @@
 
       return languages.length ? languages : undefined;
     }
+
+    // Domino bindings:
+    this.triggers.events.listsUpdated = function(controller) {
+      var list = controller.get('lists').language || [];
+
+      if (!(_languages || []).length && list.length) {
+        _languages = list;
+        _majorLanguages = _languages.filter(function(o) {
+          return o.major;
+        });debugger
+
+        // If the "major" flag is not used:
+        _majorLanguages = _majorLanguages.length ? _majorLanguages : _languages;
+
+        $('select.select-in-type', _dom).empty().append(getLineContent());
+      }
+    };
 
     this.getComponent = function() {
       return {
