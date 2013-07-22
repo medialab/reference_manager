@@ -74,10 +74,33 @@
                         }
                     });
                 });
+                $("input#types_button").click(function() {
+                    $.jsonRPC.request("types", {
+                        params : ["fr"],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#types_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
+                $("input#uifield_button").click(function() {
+                    $.jsonRPC.request("uifield", {
+                        //params : ["Book","fr"],
+                        params : [$("input#uifield_input").val(),"fr"],
+                        success : function(data) {
+                            $("<p />").text(data.result).appendTo($("pre#uifield_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
                 $("input#uifields_button").click(function() {
                     $.jsonRPC.request("uifields", {
-                        //params : ["Book","fr"],
-                        params : [$("input#uifields_input").val(),"fr"],
+                        //params : ["fr"],
+                        params : ["fr"],
                         success : function(data) {
                             $("<p />").text(data.result).appendTo($("pre#uifields_result"));
                         },
@@ -189,11 +212,25 @@
         <p>Results :</p>
         <pre id="type_result"></pre>
 
-        <h2>Method uifields</h2>
-        <p><label for="uifields_input">Document type (rec_type)</label> : 
-            <input type="text" name="type_input" id="uifields_input">
+        <h2>Method types</h2>
+        <p>
+            <input name="types_button" id="types_button" value="Send types request" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="types_result"></pre>
+
+        <h2>Method uifield</h2>
+        <p><label for="uifield_input">Document type (rec_type)</label> : 
+            <input type="text" name="type_input" id="uifield_input">
             example : Book
         </p>
+        <p>
+            <input name="uifield_button" id="uifield_button" value="Send uifield request" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="uifield_result"></pre>
+
+        <h2>Method uifields</h2>
         <p>
             <input name="uifields_button" id="uifields_button" value="Send uifields request" type="button" />
         </p>

@@ -14,8 +14,8 @@ from datetime import datetime
 import hmac
 import base64
 import hashlib
-import json
 from biblib.services import config_service
+from biblib.util import jsonbson
 
 
 config = config_service.config["summon"]
@@ -49,6 +49,6 @@ def summon_query(query_string):
     response, content = http.request(url, 'GET', headers=headers)
     print response
     print content
-    result = json.loads(content)
-    print json.dumps(result, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
+    result = jsonbson.load_json_str(content)
+    print jsonbson.dumps_json(result, True)
     return result

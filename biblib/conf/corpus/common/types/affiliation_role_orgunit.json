@@ -1,22 +1,25 @@
 {
-    "bundle": true, 
+    "bundle": true,
     "children": [
         {
+            "default": true,
             "labels": {
-                "en": "is part of", 
+                "en": "is part of",
                 "fr": "fait partie de"
-            }, 
+            },
+            "major": true,
             "type_id": "is_part_of"
-        }, 
+        },
         {
             "labels": {
-                "en": "partner", 
+                "en": "partner",
                 "fr": "partenaire"
-            }, 
+            },
+            "major": true,
             "type_id": "partner"
         }
-    ], 
-    "rec_class": "Type", 
-    "rec_metajson": 1, 
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
     "type_id": "affiliation_role_orgunit"
 }

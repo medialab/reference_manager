@@ -30,60 +30,55 @@
         },
         {
             "labels": {
-                "en": "Magazine",
-                "fr": "Magazine"
+                "en": "Date created",
+                "fr": "Date de création"
             },
-            "multiple": true,
-            "only_one": true,
-            "property": "is_part_ofs",
-            "required": true,
-            "type_fields": [
-                "Magazine"
-            ],
-            "type_ui": "DocumentField"
-        },
-        {
-            "labels": {
-                "en": "Volume",
-                "fr": "Volume"
-            },
-            "property": "part_volume",
+            "property": "date_created",
             "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Issue",
-                "fr": "Numéro"
-            },
-            "property": "part_issue",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Date issued",
-                "fr": "Date de publication"
-            },
-            "property": "date_issued",
-            "required": true,
             "type_ui": "DateField"
         },
         {
             "labels": {
-                "en": "Start page",
-                "fr": "Page de d\u00e9but"
+                "en": "Medium",
+                "fr": "Medium"
             },
-            "property": "part_page_start",
+            "property": "medium",
             "required": false,
             "type_ui": "CharField"
         },
         {
             "labels": {
-                "en": "End page",
-                "fr": "Page de fin"
+                "en": "Dimensions",
+                "fr": "Dimensions"
             },
-            "property": "part_page_end",
+            "property": "extent_dimension",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Projection",
+                "fr": "Projection"
+            },
+            "property": "cartographic_projection",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Scale",
+                "fr": "Echelle"
+            },
+            "property": "cartographics_scale",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Coordinates",
+                "fr": "Coordonn\u00e9es"
+            },
+            "property": "cartographic_coordinates",
             "required": false,
             "type_ui": "CharField"
         },
@@ -117,9 +112,59 @@
             "property": "keywords",
             "required": false,
             "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Is part of",
+                "fr": "Fait partie de"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "is_part_ofs",
+            "required": false,
+            "type_fields": [
+                "Book",
+                "BookPart",
+                "JournalArticle",
+                "MagazineArticle",
+                "NewspaperArticle"
+            ],
+            "type_ui": "DocumentField"
+        },
+        {
+            "labels": {
+                "en": "Start page",
+                "fr": "Page de d\u00e9but"
+            },
+            "property": "part_page_start",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "End page",
+                "fr": "Page de fin"
+            },
+            "property": "part_page_end",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Archive",
+                "fr": "Archive"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "archives",
+            "required": false,
+            "type_fields": [
+                "Archive"
+            ],
+            "type_ui": "DocumentField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "MagazineArticle"
+    "rec_type": "Map"
 }

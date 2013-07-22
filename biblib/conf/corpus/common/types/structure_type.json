@@ -1,32 +1,97 @@
 {
-    "bundle": true, 
+    "bundle": true,
     "children": [
         {
-            "type_id": "[periodical]"
-        }, 
+            "labels": {
+                "en": "periodical",
+                "fr": "periodical"
+            },
+            "type_id": "periodical"
+        },
         {
+            "labels": {
+                "en": "year",
+                "fr": "year"
+            },
             "type_id": "year"
-        }, 
+        },
         {
+            "labels": {
+                "en": "volume",
+                "fr": "volume"
+            },
             "type_id": "volume"
-        }, 
+        },
         {
+            "labels": {
+                "en": "issue",
+                "fr": "issue"
+            },
             "type_id": "issue"
-        }, 
+        },
         {
-            "type_id": "section (chapter, article, book review)"
-        }, 
+            "default": true, 
+            "labels": {
+                "en": "section",
+                "fr": "section"
+            },
+            "major": true, 
+            "type_id": "section"
+        },
         {
+            "labels": {
+                "en": "chapter",
+                "fr": "chapter"
+            },
+            "type_id": "chapter"
+        },
+        {
+            "labels": {
+                "en": "article",
+                "fr": "article"
+            },
+            "type_id": "article"
+        },
+        {
+            "labels": {
+                "en": "book review",
+                "fr": "book review"
+            },
+            "type_id": "book review"
+        },
+        {
+            "labels": {
+                "en": "page",
+                "fr": "page"
+            },
+            "major": true, 
             "type_id": "page"
-        }, 
+        },
         {
-            "type_id": "entry (column…)"
-        }, 
+            "labels": {
+                "en": "entry",
+                "fr": "entry"
+            },
+            "major": true, 
+            "type_id": "entry"
+        },
         {
+            "labels": {
+                "en": "column",
+                "fr": "column"
+            },
+            "type_id": "column"
+        },
+        {
+            "labels": {
+                "en": "ill",
+                "fr": "ill"
+            },
+            "major": true, 
             "type_id": "ill"
         }
-    ], 
-    "rec_class": "Type", 
-    "rec_metajson": 1, 
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
     "type_id": "structure_type"
 }

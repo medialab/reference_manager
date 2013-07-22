@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import json
 import urllib
 import urllib2
 import base64
 import phpserialize
 from biblib.services import config_service
+from biblib.util import jsonbson
 
 
 config = config_service.config["anta"]
@@ -29,7 +29,7 @@ def authenticate(username, password):
     print url
     request = urllib2.Request(url, auth_encoded)
     response = urllib2.urlopen(request)
-    result = json.loads(response.read())
+    result = jsonbson.load_json_str(response.read())
     print result
     anta_auth = {"token": result["token"], "user_id": username}
     return anta_auth
@@ -74,7 +74,7 @@ def item_upload(anta_auth, item):
         response = urllib2.urlopen(request)
         result = response.read()
         print result
-        return json.loads(result)
+        return jsonbson.load_json_str(result)
     except:
         print "*** Error uploading item to anta : %s" % item["title"]
         return {"status": "ko"}

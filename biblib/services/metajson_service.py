@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-from bson import json_util
-
 from biblib import metajson
 from biblib.metajson import Common
 from biblib.metajson import Collection
@@ -57,11 +55,6 @@ def print_metajson(metajson):
     # todo
     source, rec_id, rec_type, title, is_part_of_type, is_part_of_is_part_of_type = None
     print "# {}\t:\t{}\t:\t{}\t->\titem: {} {}".format(source, rec_id, rec_type, is_part_of_type, is_part_of_is_part_of_type, title)
-
-
-def dump_metajson(metajson):
-    if metajson:
-        return json_util.dumps(metajson, ensure_ascii=False, indent=4, encoding="utf-8", sort_keys=True)
 
 
 def enhance_metajson(metajson):

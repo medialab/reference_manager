@@ -4,10 +4,10 @@
 
 import datetime
 import os
-import json
 from biblib.services import repository_service
 from biblib.services import config_service
 from biblib.util import chrono
+from biblib.util import jsonbson
 
 
 def init_corpus(corpus):
@@ -44,7 +44,7 @@ def init_types(corpus, folder):
                 if file_name.endswith(".json"):
                     with open(os.path.join(types_dir, file_name), 'r') as type_file:
                         try:
-                            json_type = json.load(type_file)
+                            json_type = jsonbson.load_json_file(type_file)
                             repository_service.save_type(corpus, json_type)
                         except ValueError as e:
                             print "ERROR: Type file is not valid JSON", folder, file_name, e
@@ -59,7 +59,7 @@ def init_uifields(corpus, folder):
                 if file_name.endswith(".json"):
                     with open(os.path.join(uifields_dir, file_name), 'r') as uifield_file:
                         try:
-                            json_uifield = json.load(uifield_file)
+                            json_uifield = jsonbson.load_json_file(uifield_file)
                             repository_service.save_uifield(corpus, json_uifield)
                         except ValueError as e:
                             print "ERROR: UIField file is not valid JSON", folder, file_name, e

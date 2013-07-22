@@ -3,10 +3,17 @@
     "children": [
         {
             "labels": {
-                "en": "Controversy",
-                "fr": "Controverse"
+                "en": "Controversy Video",
+                "fr": "Controverse Video"
             },
-            "type_id": "Controversy"
+            "type_id": "ControversyVideo"
+        },
+        {
+            "labels": {
+                "en": "Controversy Web",
+                "fr": "Controverse Web"
+            },
+            "type_id": "ControversyWeb"
         }
     ],
     "rec_class": "Type",

@@ -1,113 +1,122 @@
 {
-    "bundle": true, 
+    "bundle": true,
     "children": [
         {
+            "default": true,
             "labels": {
-                "en": "Professor/Researcher", 
+                "en": "Professor/Researcher",
                 "fr": "Enseignant/Chercheur"
-            }, 
+            },
+            "major": true,
             "type_id": "academic_staff"
-        }, 
+        },
         {
             "labels": {
-                "en": "Administrative staff", 
+                "en": "Administrative staff",
                 "fr": "Personnel administratif"
-            }, 
+            },
+            "major": true,
             "type_id": "administrative_staff"
-        }, 
+        },
         {
             "labels": {
-                "en": "Associate researcher", 
-                "fr": "Chercheur associé"
-            }, 
+                "en": "Associate researcher",
+                "fr": "Chercheur associ\u00e9"
+            },
+            "major": true,
             "type_id": "associate_researcher"
-        }, 
+        },
         {
             "labels": {
-                "en": "Director", 
+                "en": "Director",
                 "fr": "Directeur"
-            }, 
+            },
             "type_id": "director"
-        }, 
+        },
         {
             "labels": {
-                "en": "Doctoral researcher", 
+                "en": "Doctoral researcher",
                 "fr": "Chercheur doctorant"
-            }, 
+            },
+            "major": true,
             "type_id": "doctoral_researcher"
-        }, 
+        },
         {
             "labels": {
-                "en": "Guest researcher", 
-                "fr": "Chercheur invité"
-            }, 
+                "en": "Guest researcher",
+                "fr": "Chercheur invit\u00e9"
+            },
+            "major": true,
             "type_id": "guest_researcher"
-        }, 
+        },
         {
             "labels": {
-                "en": "Permanent researcher", 
+                "en": "Permanent researcher",
                 "fr": "Chercheur permanent"
-            }, 
+            },
             "type_id": "permanent_researcher"
-        }, 
+        },
         {
             "labels": {
-                "en": "Post doctoral researcher", 
+                "en": "Post doctoral researcher",
                 "fr": "Chercheur post-doctoral"
-            }, 
+            },
+            "major": true,
             "type_id": "post_doctoral_researcher"
-        }, 
+        },
         {
             "labels": {
-                "en": "president", 
+                "en": "president",
                 "fr": "President"
-            }, 
+            },
             "type_id": "president"
-        }, 
+        },
         {
             "labels": {
-                "en": "professor", 
-                "fr": "Professeur des universités"
-            }, 
+                "en": "professor",
+                "fr": "Professeur des universit\u00e9s"
+            },
             "type_id": "professor"
-        }, 
+        },
         {
             "labels": {
-                "en": "Research assistant", 
+                "en": "Research assistant",
                 "fr": "Assistant de recherche"
-            }, 
+            },
+            "major": true,
             "type_id": "research_assistant"
-        }, 
+        },
         {
             "labels": {
-                "en": "Secretary general", 
-                "fr": "Secrétaire général"
-            }, 
+                "en": "Secretary general",
+                "fr": "Secr\u00e9taire g\u00e9n\u00e9ral"
+            },
             "type_id": "secretary_general"
-        }, 
+        },
         {
             "labels": {
-                "en": "Teacher", 
+                "en": "Teacher",
                 "fr": "Enseignant"
-            }, 
+            },
             "type_id": "teacher"
-        }, 
+        },
         {
             "labels": {
-                "en": "Technical staff", 
+                "en": "Technical staff",
                 "fr": "Personnel technique"
-            }, 
+            },
+            "major": true,
             "type_id": "technical_staff"
-        }, 
+        },
         {
             "labels": {
-                "en": "Treasurer", 
-                "fr": "Trésorier"
-            }, 
+                "en": "Treasurer",
+                "fr": "Tr\u00e9sorier"
+            },
             "type_id": "treasurer"
         }
-    ], 
-    "rec_class": "Type", 
-    "rec_metajson": 1, 
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
     "type_id": "affiliation_role_person"
 }

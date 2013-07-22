@@ -3,10 +3,10 @@
 # coding=utf-8
 
 import os
-import json
 from datetime import datetime
 from biblib.cloud import oaipmh_harvester
 from biblib.metajson import Target
+from biblib.util import jsonbson
 
 
 def test():
@@ -50,5 +50,4 @@ def test():
 
 
 def dump_result(result):
-    print json.dumps(result, indent=4, ensure_ascii=False, encoding="utf-8", sort_keys=True)
-
+    print jsonbson.dumps_json(result, True)

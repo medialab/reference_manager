@@ -1,20 +1,41 @@
 {
-    "bundle": true, 
+    "bundle": true,
     "children": [
         {
+            "default": true,
+            "labels": {
+                "en": "Transmission scanner",
+                "fr": "Scanner \u00e0 transmission"
+            },
+            "major": true,
             "type_id": "transmission scanner"
-        }, 
+        },
         {
+            "labels": {
+                "en": "Reflection print scanner",
+                "fr": "Scanner \u00e0 reflexion"
+            },
+            "major": true,
             "type_id": "reflection print scanner"
-        }, 
+        },
         {
+            "labels": {
+                "en": "Digital still camera",
+                "fr": "Appareil photo num\u00e9rique"
+            },
+            "major": true,
             "type_id": "digital still camera"
-        }, 
+        },
         {
+            "labels": {
+                "en": "Still from video",
+                "fr": "Num\u00e9risation audiovisuelle"
+            },
+            "major": true,
             "type_id": "still from video"
         }
-    ], 
-    "rec_class": "Type", 
-    "rec_metajson": 1, 
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
     "type_id": "capture_device_type"
 }

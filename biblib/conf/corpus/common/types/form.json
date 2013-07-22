@@ -2,252 +2,584 @@
     "bundle": true, 
     "children": [
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "electronic resource"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "chip cartridge"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "computer optical disc cartridge"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "magnetic disk"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "magneto-optical disc"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "optical disc"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "remote"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "tape cartridge"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "tape cassette"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "tape reel"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "globe"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "celestial globe"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "earth moon globe"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "planetary or lunar globe"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "terrestrial globe"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "map"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "atlas"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "diagram"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "map"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "model"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "profile "
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "remote-sensing image"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "section"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "view"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "microform"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "aperture card"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "microfiche"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "microfiche cassette"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "microfilm cartridge"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "microfilm cassette"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "microfilm reel"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "microopaque"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "microscopic"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "motion picture"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "film cartridge"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "film cassette"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "film reel"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "nonprojected graphic"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "chart"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "collage"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "drawing"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "flash card"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "painting"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "photomechanical print"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "photonegative"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "photoprint"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "picture "
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "print"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "technical drawing"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "projected graphic"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "filmslip"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "filmstrip cartridge"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "filmstrip roll"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "other filmstrip type "
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "slide"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "transparency"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "sound recording"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "cylinder"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "roll "
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "sound cartridge"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "sound cassette "
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "sound disc "
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "sound-tape reel"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "sound-track film "
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "wire recording"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "tactile material"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "braille"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "combination"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "moon"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "tactile, with no writing system"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "text"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "braille"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "large print"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "regular print"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "text in looseleaf binder"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "videorecording"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "videocartridge"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "videocassette"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "videodisc"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "videoreel"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "unspecified"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "notated music"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "kit"
         }
     ], 

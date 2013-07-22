@@ -6,6 +6,7 @@
                 "en": "Annual",
                 "fr": "Annuel"
             },
+            "major": true,
             "type_id": "Annual"
         },
         {
@@ -13,6 +14,7 @@
                 "en": "Bimonthly",
                 "fr": "Bimensuel"
             },
+            "major": true,
             "type_id": "Bimonthly"
         },
         {
@@ -20,6 +22,7 @@
                 "en": "Semiweekly",
                 "fr": "Semi hebdomadaire"
             },
+            "major": true,
             "type_id": "Semiweekly"
         },
         {
@@ -27,6 +30,7 @@
                 "en": "Daily",
                 "fr": "Journalier"
             },
+            "major": true,
             "type_id": "Daily"
         },
         {
@@ -34,6 +38,7 @@
                 "en": "Biweekly",
                 "fr": "Bihebdomadaire"
             },
+            "major": true,
             "type_id": "Biweekly"
         },
         {
@@ -41,6 +46,7 @@
                 "en": "Semiannual",
                 "fr": "Semestriel"
             },
+            "major": true,
             "type_id": "Semiannual"
         },
         {
@@ -48,6 +54,7 @@
                 "en": "Biennial",
                 "fr": "Biannuel"
             },
+            "major": true,
             "type_id": "Biennial"
         },
         {
@@ -55,6 +62,7 @@
                 "en": "Triennial",
                 "fr": "Triennal"
             },
+            "major": true,
             "type_id": "Triennial"
         },
         {
@@ -62,6 +70,7 @@
                 "en": "Three times a week",
                 "fr": "Trois fois par semaine"
             },
+            "major": true,
             "type_id": "Three times a week"
         },
         {
@@ -69,6 +78,7 @@
                 "en": "Three times a month",
                 "fr": "Trois fois par mois"
             },
+            "major": true,
             "type_id": "Three times a month"
         },
         {
@@ -77,6 +87,7 @@
                 "en": "Continuously updated",
                 "fr": "Continuellement mis \u00e0 jour"
             },
+            "major": true,
             "type_id": "Continuously updated"
         },
         {
@@ -84,6 +95,7 @@
                 "en": "Monthly",
                 "fr": "Mensuel"
             },
+            "major": true,
             "type_id": "Monthly"
         },
         {
@@ -91,6 +103,7 @@
                 "en": "Quarterly",
                 "fr": "Trimestriel"
             },
+            "major": true,
             "type_id": "Quarterly"
         },
         {
@@ -98,6 +111,7 @@
                 "en": "Semimonthly",
                 "fr": "Semi mensuel"
             },
+            "major": true,
             "type_id": "Semimonthly"
         },
         {
@@ -105,6 +119,7 @@
                 "en": "Three times a year",
                 "fr": "Trois fois par an"
             },
+            "major": true,
             "type_id": "Three times a year"
         },
         {
@@ -112,6 +127,7 @@
                 "en": "Weekly",
                 "fr": "Hebdomadaire"
             },
+            "major": true,
             "type_id": "Weekly"
         },
         {
@@ -119,6 +135,7 @@
                 "en": "Completely irregular",
                 "fr": "Compl\u00e8tement irr\u00e9gulier"
             },
+            "major": true,
             "type_id": "Completely irregular"
         }
     ],

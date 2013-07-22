@@ -1,322 +1,365 @@
 {
-    "bundle": true, 
+    "bundle": true,
     "children": [
         {
             "labels": {
-                "en": "accrual method"
-            }, 
+                "en": "accrual method",
+                "fr": ""
+            },
             "type_id": "accrual method"
-        }, 
+        },
         {
             "labels": {
-                "en": "accrual policy"
-            }, 
+                "en": "accrual policy",
+                "fr": "accrual policy"
+            },
             "type_id": "accrual policy"
-        }, 
+        },
         {
             "labels": {
-                "en": "acquisition"
-            }, 
+                "en": "acquisition",
+                "fr": "acquisition"
+            },
             "type_id": "acquisition"
-        }, 
+        },
         {
             "labels": {
-                "en": "action"
-            }, 
+                "en": "action",
+                "fr": "action"
+            },
             "type_id": "action"
-        }, 
+        },
         {
             "labels": {
-                "en": "additional physical form"
-            }, 
+                "en": "additional physical form",
+                "fr": "additional physical form"
+            },
             "type_id": "additional physical form"
-        }, 
+        },
         {
             "labels": {
-                "en": "admin"
-            }, 
+                "en": "admin",
+                "fr": "admin"
+            },
             "type_id": "admin"
-        }, 
+        },
         {
             "labels": {
-                "en": "bibliographic history", 
-                "fr": "Note sur l'édition"
-            }, 
+                "en": "bibliographic history",
+                "fr": "Note sur l'\u00e9dition"
+            },
             "type_id": "bibliographic history"
-        }, 
+        },
         {
             "labels": {
-                "en": "bibliography", 
+                "en": "bibliography",
                 "fr": "Note sur les bibliographies"
-            }, 
+            },
             "type_id": "bibliography"
-        }, 
+        },
         {
             "labels": {
-                "en": "biographical/historical"
-            }, 
+                "en": "biographical/historical",
+                "fr": "biographical/historical"
+            },
             "type_id": "biographical/historical"
-        }, 
+        },
         {
             "labels": {
-                "en": "citation/reference", 
-                "fr": "Note sur les index extraits et citations publiés séparément"
-            }, 
+                "en": "citation/reference",
+                "fr": "Note sur les index extraits et citations publi\u00e9s s\u00e9par\u00e9ment"
+            },
             "type_id": "citation/reference"
-        }, 
+        },
         {
             "labels": {
-                "en": "conservation history", 
+                "en": "conservation history",
                 "fr": "Note sur les actions de conservation"
-            }, 
+            },
             "type_id": "conservation history"
-        }, 
+        },
         {
             "labels": {
-                "en": "content", 
+                "en": "content",
                 "fr": "Note de contenu"
-            }, 
+            },
             "type_id": "content"
-        }, 
+        },
         {
             "labels": {
-                "en": "creation/production credits"
-            }, 
+                "en": "creation/production credits",
+                "fr": "creation/production credits"
+            },
             "type_id": "creation/production credits"
-        }, 
+        },
         {
             "labels": {
-                "en": "date"
-            }, 
+                "en": "date",
+                "fr": "date"
+            },
             "type_id": "date"
-        }, 
+        },
         {
             "labels": {
-                "en": "exhibitions"
-            }, 
+                "en": "exhibitions",
+                "fr": "exhibitions"
+            },
             "type_id": "exhibitions"
-        }, 
+        },
         {
             "labels": {
-                "en": "funding"
-            }, 
+                "en": "funding",
+                "fr": "funding"
+            },
             "type_id": "funding"
-        }, 
+        },
         {
             "labels": {
-                "en": "handwritten"
-            }, 
+                "en": "handwritten",
+                "fr": "handwritten"
+            },
             "type_id": "handwritten"
-        }, 
+        },
         {
             "labels": {
-                "en": "language"
-            }, 
+                "en": "language",
+                "fr": "language"
+            },
             "type_id": "language"
-        }, 
+        },
         {
             "labels": {
-                "en": "numbering"
-            }, 
+                "en": "numbering",
+                "fr": "numbering"
+            },
             "type_id": "numbering"
-        }, 
+        },
         {
             "labels": {
-                "en": "date/sequential designation"
-            }, 
+                "en": "date/sequential designation",
+                "fr": "date/sequential designation"
+            },
             "type_id": "date/sequential designation"
-        }, 
+        },
         {
             "labels": {
-                "en": "original location"
-            }, 
+                "en": "original location",
+                "fr": "original location"
+            },
             "type_id": "original location"
-        }, 
+        },
         {
             "labels": {
-                "en": "original version"
-            }, 
+                "en": "original version",
+                "fr": "original version"
+            },
             "type_id": "original version"
-        }, 
+        },
         {
             "labels": {
-                "en": "ownership"
-            }, 
+                "en": "ownership",
+                "fr": "ownership"
+            },
             "type_id": "ownership"
-        }, 
+        },
         {
             "labels": {
-                "en": "performers"
-            }, 
+                "en": "performers",
+                "fr": "performers"
+            },
             "type_id": "performers"
-        }, 
+        },
         {
             "labels": {
-                "en": "preferred citation"
-            }, 
+                "en": "preferred citation",
+                "fr": "preferred citation"
+            },
             "type_id": "preferred citation"
-        }, 
+        },
         {
             "labels": {
-                "en": "publications"
-            }, 
+                "en": "publications",
+                "fr": "publications"
+            },
             "type_id": "publications"
-        }, 
+        },
         {
             "labels": {
-                "en": "reproduction"
-            }, 
+                "en": "reproduction",
+                "fr": "reproduction"
+            },
             "type_id": "reproduction"
-        }, 
+        },
         {
             "labels": {
-                "en": "restriction"
-            }, 
+                "en": "restriction",
+                "fr": "restriction"
+            },
             "type_id": "restriction"
-        }, 
+        },
         {
             "labels": {
-                "en": "source characteristics"
-            }, 
+                "en": "source characteristics",
+                "fr": "source characteristics"
+            },
             "type_id": "source characteristics"
-        }, 
+        },
         {
             "labels": {
-                "en": "source dimensions"
-            }, 
+                "en": "source dimensions",
+                "fr": "source dimensions"
+            },
             "type_id": "source dimensions"
-        }, 
+        },
         {
             "labels": {
-                "en": "source identifier"
-            }, 
+                "en": "source identifier",
+                "fr": "source identifier"
+            },
             "type_id": "source identifier"
-        }, 
+        },
         {
             "labels": {
-                "en": "source note"
-            }, 
+                "en": "source note",
+                "fr": "source note"
+            },
             "type_id": "source note"
-        }, 
+        },
         {
             "labels": {
-                "en": "source type"
-            }, 
+                "en": "source type",
+                "fr": "source type"
+            },
             "type_id": "source type"
-        }, 
+        },
         {
             "labels": {
-                "en": "statement of responsibility"
-            }, 
+                "en": "statement of responsibility",
+                "fr": "statement of responsibility"
+            },
             "type_id": "statement of responsibility"
-        }, 
+        },
         {
             "labels": {
-                "en": "subject completeness"
-            }, 
+                "en": "subject completeness",
+                "fr": "subject completeness"
+            },
             "type_id": "subject completeness"
-        }, 
+        },
         {
             "labels": {
-                "en": "system details"
-            }, 
+                "en": "system details",
+                "fr": "system details"
+            },
             "type_id": "system details"
-        }, 
+        },
         {
             "labels": {
-                "en": "thesis", 
-                "fr": "Note de thèse"
-            }, 
+                "en": "thesis",
+                "fr": "Note de th\u00e8se"
+            },
             "type_id": "thesis"
-        }, 
+        },
         {
             "labels": {
-                "en": "venue"
-            }, 
+                "en": "venue",
+                "fr": "venue"
+            },
             "type_id": "venue"
-        }, 
+        },
         {
             "labels": {
-                "en": "version identification"
-            }, 
+                "en": "version identification",
+                "fr": "version identification"
+            },
             "type_id": "version identification"
-        }, 
+        },
         {
             "labels": {
-                "en": "condition"
-            }, 
+                "en": "condition",
+                "fr": "condition"
+            },
             "type_id": "condition"
-        }, 
+        },
         {
             "labels": {
-                "en": "marks"
-            }, 
+                "en": "marks",
+                "fr": "marks"
+            },
             "type_id": "marks"
-        }, 
+        },
         {
             "labels": {
-                "en": "medium"
-            }, 
+                "en": "medium",
+                "fr": "medium"
+            },
             "type_id": "medium"
-        }, 
+        },
         {
             "labels": {
-                "en": "organization"
-            }, 
+                "en": "organization",
+                "fr": "organization"
+            },
             "type_id": "organization"
-        }, 
+        },
         {
             "labels": {
-                "en": "physical description"
-            }, 
+                "en": "physical description",
+                "fr": "physical description"
+            },
             "type_id": "physical description"
-        }, 
+        },
         {
             "labels": {
-                "en": "physical details"
-            }, 
+                "en": "physical details",
+                "fr": "physical details"
+            },
             "type_id": "physical details"
-        }, 
+        },
         {
             "labels": {
-                "en": "presentation"
-            }, 
+                "en": "presentation",
+                "fr": "presentation"
+            },
             "type_id": "presentation"
-        }, 
+        },
         {
             "labels": {
-                "en": "script"
-            }, 
+                "en": "script",
+                "fr": "script"
+            },
             "type_id": "script"
-        }, 
+        },
         {
             "labels": {
-                "en": "support"
-            }, 
+                "en": "support",
+                "fr": "support"
+            },
             "type_id": "support"
-        }, 
+        },
         {
             "labels": {
-                "en": "technique"
-            }, 
+                "en": "technique",
+                "fr": "technique"
+            },
             "type_id": "technique"
-        }, 
+        },
         {
             "labels": {
-                "en": "general", 
-                "fr": "Note générale"
-            }, 
+                "en": "general",
+                "fr": "Note g\u00e9n\u00e9rale"
+            },
             "type_id": "general"
-        }, 
+        },
         {
             "labels": {
-                "en": "User note", 
+                "en": "User note",
                 "fr": "Note de l'utilisateur"
-            }, 
+            },
             "type_id": "user"
         }
-    ], 
-    "rec_class": "Type", 
-    "rec_metajson": 1, 
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
     "type_id": "note_type"
 }

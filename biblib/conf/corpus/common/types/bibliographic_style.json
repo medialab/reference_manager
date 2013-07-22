@@ -1,36 +1,41 @@
 {
-    "bundle": true, 
+    "bundle": true,
     "children": [
         {
             "labels": {
-                "en": "Chicago Manual of Style", 
+                "en": "Chicago Manual of Style",
                 "fr": "Chicago Manual of Style"
-            }, 
+            },
+            "major": true,
             "type_id": "chicago"
-        }, 
+        },
         {
+            "default": true,
             "labels": {
-                "en": "MLA - Modern Language Association", 
+                "en": "MLA - Modern Language Association",
                 "fr": "MLA - Modern Language Association"
-            }, 
+            },
+            "major": true,
             "type_id": "mla"
-        }, 
+        },
         {
             "labels": {
-                "en": "APA - American Psychological Association", 
+                "en": "APA - American Psychological Association",
                 "fr": "APA - American Psychological Association"
-            }, 
+            },
+            "major": true,
             "type_id": "apa"
-        }, 
+        },
         {
             "labels": {
-                "en": "AFNOR", 
+                "en": "AFNOR",
                 "fr": "AFNOR"
-            }, 
+            },
+            "major": true,
             "type_id": "afnor"
         }
-    ], 
-    "rec_class": "Type", 
-    "rec_metajson": 1, 
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
     "type_id": "bibliographic_style"
 }

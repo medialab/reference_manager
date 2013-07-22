@@ -11,6 +11,7 @@ from biblib.services import import_service
 from biblib.services import repository_service
 from biblib.services import config_service
 from biblib.services import corpus_service
+from biblib.services import crosswalks_service
 from biblib.util import chrono
 from biblib.util import console
 
@@ -22,7 +23,7 @@ console.setup_console()
 default_corpus = config_service.config["mongodb"]["default_corpus"]
 
 
-def init(args):
+def init_corpus(args):
     corpus = args.corpus
     if not corpus:
         corpus = default_corpus
@@ -33,31 +34,45 @@ def import_references(args):
     corpus = args.corpus
     if not corpus:
         corpus = default_corpus
-    print corpus
-    input_file = args.input_file
-    print input_file
+    input_file_path = args.input_file
     input_format = args.input_format
-    print input_format
     error_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "data", "result", "result_validation_errors.txt")
     with open(error_file_path, "w") as error_file:
-        import_service.import_metadata_file(corpus, input_file, input_format, error_file, "EndNote XML File", True)
+        import_service.import_metadata_file(corpus, input_file_path, input_format, error_file, "EndNote XML File", True)
 
 
-def convert(args):
-    #todo
+def export_references(args):
+    corpus = args.corpus
+    if not corpus:
+        corpus = default_corpus
+    output_file_path = args.output_file
+    output_format = args.output_format
+    error_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "data", "result", "result_export_errors.txt")
+    with open(error_file_path, "w") as error_file:
+        export_service.export_corpus(corpus, output_file_path, output_format, error_file)
+
+
+def convert_references(args):
     print "hello convert"
     print args
+    input_file_path = args.input_file
+    print input_file_path
+    input_format = args.input_format
+    print input_format
+    output_file_path = args.output_file
+    print output_file_path
+    output_format = args.output_format
+    print output_format
+
+    # todo
+    result = crosswalks_service.convert_file(input_file_path, input_format, output_format, None, False)
+    with open(output_file_path, "w") as output_file:
+        output_file.write(result)
 
 
 def inject(args):
     #todo
     print "hello inject"
-    print args
-
-
-def export(args):
-    #todo
-    print "hello export"
     print args
 
 
@@ -126,7 +141,7 @@ subparsers = parser.add_subparsers(title='subcommands',
 # init
 init_parser = subparsers.add_parser('init',
                                     help='Empty the store and insert the configuration properties')
-init_parser.set_defaults(func=init)
+init_parser.set_defaults(func=init_corpus)
 init_parser.add_argument('-c',
                          dest='corpus',
                          help='corpus identifier like : aime, forccast...')
@@ -146,10 +161,25 @@ import_parser.add_argument('-i',
                            #type=argparse.FileType('r'),
                            help='input file path')
 
+# export
+export_parser = subparsers.add_parser('export',
+                                      help='Export a bibliographic file')
+export_parser.set_defaults(func=export_references)
+export_parser.add_argument('-c',
+                           dest='corpus',
+                           help='corpus identifier like : aime, forccast...')
+export_parser.add_argument('-f',
+                           dest='output_format',
+                           help='output file format')
+export_parser.add_argument('-o',
+                           dest='output_file',
+                           #type=argparse.FileType('r'),
+                           help='output file path')
+
 # convert
 convert_parser = subparsers.add_parser('convert',
                                        help='Convert a bibliographic file')
-convert_parser.set_defaults(func=convert)
+convert_parser.set_defaults(func=convert_references)
 convert_parser.add_argument('-f',
                             dest='input_format',
                             help='input file format')

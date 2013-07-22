@@ -117,7 +117,7 @@ def fetch_url(url):
         if url != response.geturl():
             result_redirect = True
             result_redirect_url = response.geturl()
-        result_data = response.read()
+        #result_data = response.read()
 
     finally:
         result_dict = {}
@@ -133,6 +133,7 @@ def fetch_url(url):
             result_dict["info"] = result_info
 
         print "{0}\t\t: {1}".format(result_code, url)
+        #return result_dict, result_data
         return result_dict, result_data
 
 

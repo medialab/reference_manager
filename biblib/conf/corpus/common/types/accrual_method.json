@@ -1,50 +1,57 @@
 {
-    "bundle": true, 
+    "bundle": true,
     "children": [
         {
+            "default": true,
             "labels": {
-                "en": "Deposit", 
-                "fr": "Dépôt"
-            }, 
+                "en": "Deposit",
+                "fr": "D\u00e9p\u00f4t"
+            },
+            "major": true,
             "type_id": "http://purl.org/cld/accmeth/deposit"
-        }, 
+        },
         {
             "labels": {
-                "en": "Donation", 
+                "en": "Donation",
                 "fr": "Don"
-            }, 
+            },
+            "major": true,
             "type_id": "http://purl.org/cld/accmeth/donation"
-        }, 
+        },
         {
             "labels": {
-                "en": "Purchase", 
+                "en": "Purchase",
                 "fr": "Achat"
-            }, 
+            },
+            "major": true,
             "type_id": "http://purl.org/cld/accmeth/purchase"
-        }, 
+        },
         {
             "labels": {
-                "en": "Loan", 
-                "fr": "Prêt"
-            }, 
+                "en": "Loan",
+                "fr": "Pr\u00eat"
+            },
+            "major": true,
             "type_id": "http://purl.org/cld/accmeth/loan"
-        }, 
+        },
         {
             "labels": {
-                "en": "License", 
+                "en": "License",
                 "fr": "Licence"
-            }, 
+            },
+            "major": true,
             "type_id": "http://purl.org/cld/accmeth/license"
-        }, 
+        },
         {
             "labels": {
-                "en": "Item Creation", 
-                "fr": "Création"
-            }, 
+                "en": "Item Creation",
+                "fr": "Cr\u00e9ation"
+            },
+            "major": true,
             "type_id": "http://purl.org/cld/accmeth/itemcreation"
         }
-    ], 
-    "rec_class": "Type", 
-    "rec_metajson": 1, 
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
     "type_id": "accrual_method"
 }

@@ -2,30 +2,66 @@
     "bundle": true, 
     "children": [
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "normal*"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "normal, image flipped"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "normal, rotated 180°"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "normal, image flipped, rotated 180°"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "normal, image flipped, rotated cw 90°"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "normal, rotated ccw 90°"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "normal, image flipped, rotated ccw 90°"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "normal, rotated cw 90°"
         }, 
         {
+            "labels": {
+                "en": "", 
+                "fr": ""
+            }, 
             "type_id": "unknown"
         }
     ], 
