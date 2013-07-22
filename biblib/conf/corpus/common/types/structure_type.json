@@ -30,12 +30,12 @@
             "type_id": "issue"
         },
         {
-            "default": true, 
+            "default": true,
             "labels": {
                 "en": "section",
                 "fr": "section"
             },
-            "major": true, 
+            "major": true,
             "type_id": "section"
         },
         {
@@ -64,7 +64,7 @@
                 "en": "page",
                 "fr": "page"
             },
-            "major": true, 
+            "major": true,
             "type_id": "page"
         },
         {
@@ -72,7 +72,7 @@
                 "en": "entry",
                 "fr": "entry"
             },
-            "major": true, 
+            "major": true,
             "type_id": "entry"
         },
         {
@@ -87,7 +87,7 @@
                 "en": "ill",
                 "fr": "ill"
             },
-            "major": true, 
+            "major": true,
             "type_id": "ill"
         }
     ],
