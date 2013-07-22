@@ -1,12 +1,17 @@
 #!/bin/bash
 
-source `which virtualenvwrapper.sh`
-workon AIMEPROD
-cd /var/opt/biblib/reference_manager/biblib/services/
-if [ -f /var/opt/biblib/reference_manager/biblib/services/twistd.pid ]
-then
-	kill `cat /var/opt/biblib/reference_manager/biblib/services/twistd.pid`
+envname=$1
+
+if [ -z "$envname" ]; then
+  exit 1
 fi
-twistd -noy /var/opt/biblib/reference_manager/biblib/services/jsonrpc_service.tac -l server.log &
+echo $envname
+source `which virtualenvwrapper.sh`
+workon $envname
+if [ -f twistd.pid ]
+then
+	kill `cat twistd.pid`
+fi
+twistd -noy biblib/services/jsonrpc_service.tac -l server.log &
 deactivate
 exit 0
