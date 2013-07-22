@@ -29,7 +29,7 @@
                         //params : [["296","579","697"],"metajson"],
                         params : [my_list,"metajson"],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#metadata_by_rec_ids_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#metadata_by_rec_ids_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -42,7 +42,7 @@
                         //params : [["516c07483b71f34764274feb","516c08f63b71f34a8a77b908","516c0b963b71f34a8a77b909"],"metajson"],
                         params : [my_list,"metajson"],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#metadata_by_mongo_ids_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#metadata_by_mongo_ids_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -55,7 +55,7 @@
                         //params : [["296","579","697"],"mla","html"],
                         params : [my_list,"mla","html"],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#citation_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#citation_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -67,7 +67,7 @@
                         //params : ["identifier_type","fr"],
                         params : [$("input#type_input").val(),"fr"],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#type_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#type_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -78,7 +78,7 @@
                     $.jsonRPC.request("types", {
                         params : ["fr"],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#types_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#types_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -90,7 +90,7 @@
                         //params : ["Book","fr"],
                         params : [$("input#uifield_input").val(),"fr"],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#uifield_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#uifield_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -102,7 +102,7 @@
                         //params : ["fr"],
                         params : ["fr"],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#uifields_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#uifields_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -113,7 +113,7 @@
                     $.jsonRPC.request("search_mongo", {
                         params : [JSON.parse($("input#search_mongo_input").val())],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#search_mongo_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#search_mongo_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -124,7 +124,7 @@
                     $.jsonRPC.request("search", {
                         params : [JSON.parse($("textarea#search_input").val())],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#search_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#search_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -135,7 +135,7 @@
                     $.jsonRPC.request("save", {
                         params : [$("textarea#save_input").val()],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#save_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#save_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -146,7 +146,7 @@
                     $.jsonRPC.request("delete", {
                         params : [$("input#delete_input").val()],
                         success : function(data) {
-                            $("<p />").text(data.result).appendTo($("pre#delete_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#delete_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));

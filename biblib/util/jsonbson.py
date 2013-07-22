@@ -43,3 +43,9 @@ def json_to_bson(json_obj):
     # TODO : try to convert directly JSON to BSON...
     if json_obj:
         return load_bson_str(dumps_json(json_obj))
+
+
+def bson_to_json(bson_obj):
+    # TODO : try to convert directly BSON to JSON...
+    if bson_obj:
+        return load_json_str(dumps_bson(bson_obj))
