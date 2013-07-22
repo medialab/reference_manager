@@ -1,0 +1,10 @@
+<li data-id="{{ id }}">
+  <select class="col-3 select-field">
+    {{#each type_fields}}
+      <option value="{{ this }}">{{ this }}</option>
+    {{/each}}
+  </select>
+  <button class="remove-document">-</button>
+  <div class="col-6 custom-container">
+  </div>
+</li>
