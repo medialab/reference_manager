@@ -99,6 +99,24 @@
   };
 
   /**
+   * Removes leading and trailing whitespaces from the string.
+   *
+   * Use case:
+   * *********
+   *
+   *  > var s = mlab.string.trim(' bla bla ');
+   *  > // will return the following string:
+   *  > // 'bla bla'
+   *
+   * @param  {string} str The original string.
+   * @return {string}     Returns the new string.
+   */
+  mlab.pkg('mlab.string');
+  mlab.string.trim = function(str) {
+    return str.replace(/^\s+/g, '').replace(/\s+$/g, '');
+  };
+
+  /**
    * A custom JavaScript date parser, using the custom masks stored in
    * mlab.date.masks.
    *

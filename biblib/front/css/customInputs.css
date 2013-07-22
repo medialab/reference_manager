@@ -33,6 +33,11 @@
   display: block;
 }
 
+/* KeywordField style */
+.KeywordField .languages-list li textarea {
+  display: block;
+}
+
 /* DocumentField style */
 .DocumentField > .documents-container > ul > li .custom-container {
   left: -150px;
