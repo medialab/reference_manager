@@ -33,9 +33,7 @@
     var _dom,
         _selected = {},
         _languages = blf.control.get('lists').language || [],
-        _majorLanguages = _languages.filter(function(o) {
-          return o.major;
-        });
+        _majorLanguages = blf.utils.extractMajors(_languages);
 
     // If the "major" flag is not used:
     _majorLanguages = _majorLanguages.length ? _majorLanguages : _values;
@@ -95,8 +93,8 @@
       // not used yet:
       else
         _majorLanguages.some(function(lang) {
-          if (!$('option[value="' + lang.id + '"]:selected', _dom).length)
-            return $('select.select-language', li).val(lang.id);
+          if (!$('option[value="' + lang.type_id + '"]:selected', _dom).length)
+            return $('select.select-language', li).val(lang.type_id);
         }, null);
 
 
@@ -132,7 +130,7 @@
         var val = $(this).val();
         $(this).find('option').each(function() {
           var opt = $(this);
-          console.log(opt, opt.val(), opt.is(':selected'), _selected[opt.val()]);
+
           if (opt.is(':selected') || !_selected[opt.val()])
             opt.attr('disabled', null);
           else
@@ -200,9 +198,7 @@
 
       if (!(_languages || []).length && list.length) {
         _languages = list;
-        _majorLanguages = _languages.filter(function(o) {
-          return o.major;
-        });debugger
+        _majorLanguages = blf.utils.extractMajors(_languages);
 
         // If the "major" flag is not used:
         _majorLanguages = _majorLanguages.length ? _majorLanguages : _languages;

@@ -100,4 +100,21 @@
 
     return res;
   };
+  blf.utils.extractMajors = function(array) {
+    return array.filter(function(o) {
+      return o.major;
+    }).sort(function(a, b) {
+      if ((a.default && b.default) || (!a.default && !b.default)) {
+        if (a.label < b.label)
+          return -1;
+        if (a.label > b.label)
+          return 1;
+        return 0;
+      } else if (a.default) {
+        return -1;
+      } else if (b.default) {
+        return 1;
+      }
+    })
+  };
 })();
