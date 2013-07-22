@@ -30,9 +30,7 @@
     var _dom,
         _selected = {},
         _values = blf.control.get('lists')[obj.type_source] || [],
-        _majorValues = _values.filter(function(o) {
-          return o.major;
-        }),
+        _majorValues = blf.utils.extractMajors(_values),
         _self = this;
 
     // If the "major" flag is not used:
@@ -205,9 +203,7 @@
 
       if (!(_values || []).length && list.length) {
         _values = list;
-        _majorValues = _values.filter(function(o) {
-          return o.major;
-        });
+        _majorValues = blf.utils.extractMajors(_values);
 
         // If the "major" flag is not used:
         _majorValues = _majorValues.length ? _majorValues : _values;
