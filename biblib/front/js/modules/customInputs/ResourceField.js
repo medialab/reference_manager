@@ -89,8 +89,8 @@
         $('.add-document', _dom).css('display', '');
 
       // Trigger event if only one type available:
-      if (!data.rec_type && obj.type_fields.length <= 1)
-        $('select.select-field', li).first().change();
+      if (!data.rec_type && obj.type_fields.length === 1)
+        addForm(li, obj.type_fields[0]);
     }
 
     // Bind events:
@@ -109,8 +109,8 @@
         delete _forms[id];
 
         // Trigger event if only one type available:
-        if (obj.type_fields.length <= 1)
-          $('select.select-field', li).first().change();
+        if (obj.type_fields.length === 1)
+          addForm(li, obj.type_fields[0]);
 
         // Check count:
         if (obj.only_one && _ul.children('li').length >= 1)
@@ -123,17 +123,16 @@
           li = target.closest('li');
 
       // Check which select it is:
-      if (li.length && target.is(_ul.children('li').children('select.select-field'))) {
-        var id = li.data('id'),
-            value = target.val(),
-            container = $('.custom-container', li).first();
-
-        _forms[id] = blf.modules.createPanel.generateForm(blf.control, _fields[value].children);
-        container.empty().append(_forms[id].components.map(function(o) {
-          return o.dom;
-        }));
-      }
+      if (li.length && target.is(_ul.children('li').children('select.select-field')))
+        addForm(li, target.val());
     });
+
+    function addForm(li, value) {
+      _forms[li.data('id')] = blf.modules.createPanel.generateForm(blf.control, _fields[value].children);
+      $('.custom-container', li).first().empty().append(_forms[li.data('id')].components.map(function(o) {
+        return o.dom;
+      }));
+    }
 
     /**
      *  Check if the content of the component is valid. Returns true if valid,

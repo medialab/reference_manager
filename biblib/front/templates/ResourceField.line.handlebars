@@ -1,9 +1,16 @@
 <li data-id="{{ id }}">
-  <select class="col-3 select-field">
+  {{#ifCond type_fields.length '>' 1}}
+    <select class="col-3 select-field">
+      {{#each type_fields}}
+        <option value="{{ this }}">{{ this }}</option>
+      {{/each}}
+    </select>
+  {{/ifCond}}
+  {{#ifCond type_fields.length '<=' 1}}
     {{#each type_fields}}
-      <option value="{{ this }}">{{ this }}</option>
+      <span class="inline-block col-3">{{ this }}</span>
     {{/each}}
-  </select>
+  {{/ifCond}}
   <button class="remove-document">-</button>
   <div class="col-6 custom-container">
   </div>
