@@ -32,7 +32,8 @@
 
     var _dom,
         _selected = {},
-        _languages = blf.utils.extractMajors(blf.control.get('lists').language || []);
+        _languages = blf.utils.extractMajors(blf.control.get('lists').language || []),
+        _separators = _languages.filter(function(o) { return o.separator; }).length;
 
     // Try to get the list:
     // AAARGH: How am I supposed to do when I add a module that needs to
@@ -75,7 +76,9 @@
       data = data || {};
       var li = $(blf.templates.get('KeywordField.line')({
         languages: _languages.map(function(o) {
-          return {
+          return o.separator ? {
+            separator: true
+          } : {
             id: o.type_id,
             label: o.label || o.labels[blf.assets.lang]
           };
@@ -89,7 +92,7 @@
       // not used yet:
       else
         _languages.some(function(lang) {
-          if (!$('option[value="' + lang.type_id + '"]:selected', _dom).length)
+          if (lang.type_id && !$('option[value="' + lang.type_id + '"]:selected', _dom).length)
             return $('select.select-language', li).val(lang.type_id);
         }, null);
 
@@ -105,7 +108,7 @@
 
     // Check that all languages are not added yet:
     function checkLanguagesCount() {
-      if ($('li', _dom).length >= _languages.length)
+      if ($('li', _dom).length >= _languages.length - _separators)
         $('button.add-language', _dom).css('display', 'none');
       else
         $('button.add-language', _dom).css('display', '');
@@ -121,18 +124,11 @@
         _selected[$(this).val()] = 1;
       });
 
-      // Disable selected languages:
-      list.each(function() {
-        var val = $(this).val();
-        $(this).find('option').each(function() {
-          var opt = $(this);
-
-          if (opt.is(':selected') || !_selected[opt.val()])
-            opt.attr('disabled', null);
-          else
-            opt.attr('disabled', 'true');
-        });
-      });
+      // Disable selected values:
+      $('option', _dom).attr('disabled', null);
+      $('option.disabled', _dom).attr('disabled', 'true');
+      for (var k in _selected)
+        $('option[value="' + k + '"]:not(:selected)', _dom).attr('disabled', 'true');
     }
 
     /**
@@ -207,6 +203,7 @@
 
       if (!(_languages || []).length && list.length) {
         _languages = blf.utils.extractMajors(list);
+        _separators = _languages.filter(function(o) { return o.separator; }).length;
 
         $('select.select-in-type', _dom).empty().append(getLineContent());
       }

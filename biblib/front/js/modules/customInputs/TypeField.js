@@ -30,6 +30,7 @@
     var _dom,
         _selected = {},
         _values = blf.utils.extractMajors(blf.control.get('lists')[obj.type_source] || []),
+        _separators = _values.filter(function(o) { return o.separator; }).length,
         _self = this;
 
     // Try to get the list:
@@ -69,7 +70,9 @@
 
     function getLineContent(value) {
       return _values.map(function(o) {
-        return '<option value="' + o.type_id + '">' + o.label + '</option>';
+        return o.separator ?
+          '<option class="disabled" disabled="disabled">---</option>' :
+          '<option value="' + o.type_id + '">' + o.label + '</option>';
       }).join();
     }
 
@@ -77,7 +80,7 @@
     function checkValuesCount() {
       if (
         (!obj.multiple && $('li', _dom).length) ||
-        ($('li', _dom).length >= _values.length)
+        ($('li', _dom).length >= _values.length - _separators)
       )
         $('button.add-value', _dom).css('display', 'none');
       else
@@ -96,6 +99,7 @@
 
       // Disable selected values:
       $('option', _dom).attr('disabled', null);
+      $('option.disabled', _dom).attr('disabled', 'true');
       for (var k in _selected)
         $('option[value="' + k + '"]:not(:selected)', _dom).attr('disabled', 'true');
     }
@@ -114,7 +118,7 @@
         $('> select', li).val(_values.reduce(function(res, v) {
           return res !== null ?
             res :
-            !$('option[value="' + v.type_id + '"]:selected', _dom).length ?
+            (v.type_id && !$('option[value="' + v.type_id + '"]:selected', _dom).length) ?
               v.type_id :
               null;
         }, null));
@@ -199,6 +203,7 @@
 
       if (!(_values || []).length && list.length) {
         _values = blf.utils.extractMajors(list);
+        _separators = _values.filter(function(o) { return o.separator; }).length;
 
         $('select.select-in-type', _dom).empty().append(getLineContent());
       }

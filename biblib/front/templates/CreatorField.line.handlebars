@@ -5,9 +5,12 @@
     <option value="Event">{{t "customInputs:CreatorField.line.Event" }}</option>
   </select>
   <select class="col-3 select-role">
-    {{#each creators}}
-      <option value="{{ this.type_id }}">{{ this.label }}</option>
-      {{@index}}: {{this}}
+    {{#each creators }}
+      {{#if this.separator }}
+        <option class="disabled" disabled="disabled">---</option>
+      {{else}}
+        <option value="{{ this.type_id }}">{{ this.label }}</option>
+      {{/if}}
     {{/each}}
   </select>
   <button class="remove-creator">-</button>

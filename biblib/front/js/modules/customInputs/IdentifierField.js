@@ -102,9 +102,6 @@
           null;
       }
 
-      if (!data[obj.property])
-        data[obj.property] = [];
-
       if ((domino.struct.get(res) !== 'array') || (res.length))
         data[obj.property] = (data[obj.property] || []).concat(res);
     }

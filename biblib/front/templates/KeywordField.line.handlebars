@@ -1,7 +1,11 @@
 <li>
   <select class="select-language">
     {{#each languages}}
-      <option value="{{ this.id }}">{{ this.label }}</option>
+      {{#if this.separator }}
+        <option class="disabled" disabled="disabled">---</option>
+      {{else}}
+        <option value="{{ this.id }}">{{ this.label }}</option>
+      {{/if}}
     {{/each}}
   </select>
   <button class="remove-language">-</button>

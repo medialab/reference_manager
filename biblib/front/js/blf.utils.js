@@ -101,22 +101,41 @@
     return res;
   };
   blf.utils.extractMajors = function(array) {
-    var filtered = array.filter(function(o) {
-      return o.major;
+    var defaults = [],
+        majors = [],
+        others = [];
+
+    function filter(a, b) {
+      if (a.label < b.label)
+        return -1;
+      if (a.label > b.label)
+        return 1;
+      return 0;
+    }
+
+    array.forEach(function(o) {
+      if (o.default)
+        defaults.push(o);
+      else if (o.major)
+        majors.push(o);
+      else
+        others.push(o);
     });
 
-    return (filtered.length ? filtered : array).sort(function(a, b) {
-      if ((a.default && b.default) || (!a.default && !b.default)) {
-        if (a.label < b.label)
-          return -1;
-        if (a.label > b.label)
-          return 1;
-        return 0;
-      } else if (a.default) {
-        return -1;
-      } else if (b.default) {
-        return 1;
-      }
-    })
+    if (majors.length) {
+      if (others.length)
+        others = [{ separator: true }].concat(others);
+
+      others = majors.concat(others);
+    }
+
+    if (defaults.length) {
+      if (others.length)
+        others = [{ separator: true }].concat(others);
+
+      others = defaults.concat(others);
+    }
+
+    return others;
   };
 })();

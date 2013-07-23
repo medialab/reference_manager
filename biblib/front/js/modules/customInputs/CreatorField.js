@@ -53,7 +53,9 @@
           li = $(blf.templates.get('CreatorField.line')({
             id: id,
             creators: _creatorRoles.map(function(o) {
-              return {
+              return o.separator ? {
+                separator: true
+              } : {
                 type_id: o.type_id,
                 label: o.label || o.labels[blf.assets.lang]
               };
@@ -300,7 +302,9 @@
 
       $('select.select-role', dom).html(
         _creatorRoles.map(function(o) {
-          return blf.templates.get('CreatorField.roles')({
+          return blf.templates.get('CreatorField.roles')(o.separator ? {
+            separator: true
+          } : {
             type_id: o.type_id,
             label: o.label
           });
