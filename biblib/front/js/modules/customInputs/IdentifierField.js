@@ -69,8 +69,8 @@
             value: (o || {}).value || ''
           }));
 
-      checkValuesCount();
       $('ul.identifiers-list', _dom).append(li);
+      checkValuesCount();
     }
 
     function _fill(data, fullData) {
