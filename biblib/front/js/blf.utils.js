@@ -101,9 +101,11 @@
     return res;
   };
   blf.utils.extractMajors = function(array) {
-    return array.filter(function(o) {
+    var filtered = array.filter(function(o) {
       return o.major;
-    }).sort(function(a, b) {
+    });
+
+    return (filtered.length ? filtered : array).sort(function(a, b) {
       if ((a.default && b.default) || (!a.default && !b.default)) {
         if (a.label < b.label)
           return -1;

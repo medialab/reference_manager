@@ -39,7 +39,7 @@
         _lineID = 1,
         _linesHash = {},
         _classTemplates,
-        _creatorRoles = d.get('lists').creator_role || [];
+        _creatorRoles = blf.utils.extractMajors(d.get('lists').creator_role || []);
 
     _dom = $(blf.templates.get('CreatorField')({
       label: obj.label || obj.labels[blf.assets.lang]
@@ -296,7 +296,7 @@
 
     // Domino bindings:
     this.triggers.events.creatorRolesUpdated = function(d) {
-      _creatorRoles = d.get('creatorRoles') || [];
+      _creatorRoles = blf.utils.extractMajors(d.get('creatorRoles') || []);
 
       $('select.select-role', dom).html(
         _creatorRoles.map(function(o) {

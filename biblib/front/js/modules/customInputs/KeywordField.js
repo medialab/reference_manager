@@ -32,11 +32,7 @@
 
     var _dom,
         _selected = {},
-        _languages = blf.control.get('lists').language || [],
-        _majorLanguages = blf.utils.extractMajors(_languages);
-
-    // If the "major" flag is not used:
-    _majorLanguages = _majorLanguages.length ? _majorLanguages : _values;
+        _languages = blf.utils.extractMajors(blf.control.get('lists').language || []);
 
     // Try to get the list:
     // AAARGH: How am I supposed to do when I add a module that needs to
@@ -45,7 +41,7 @@
     //
     //         => https://github.com/jacomyal/domino.js/issues/35
     window.setTimeout(function() {
-      if (!_majorLanguages.length)
+      if (!_languages.length)
         _self.dispatchEvent('loadList', {
           list: 'language'
         });
@@ -78,7 +74,7 @@
     function addLanguage(data) {
       data = data || {};
       var li = $(blf.templates.get('KeywordField.line')({
-        languages: _majorLanguages.map(function(o) {
+        languages: _languages.map(function(o) {
           return {
             id: o.type_id,
             label: o.label || o.labels[blf.assets.lang]
@@ -92,7 +88,7 @@
       // If the language is not specified, we use the first language that is
       // not used yet:
       else
-        _majorLanguages.some(function(lang) {
+        _languages.some(function(lang) {
           if (!$('option[value="' + lang.type_id + '"]:selected', _dom).length)
             return $('select.select-language', li).val(lang.type_id);
         }, null);
@@ -109,7 +105,7 @@
 
     // Check that all languages are not added yet:
     function checkLanguagesCount() {
-      if ($('li', _dom).length >= _majorLanguages.length)
+      if ($('li', _dom).length >= _languages.length)
         $('button.add-language', _dom).css('display', 'none');
       else
         $('button.add-language', _dom).css('display', '');
@@ -210,11 +206,7 @@
       var list = controller.get('lists').language || [];
 
       if (!(_languages || []).length && list.length) {
-        _languages = list;
-        _majorLanguages = blf.utils.extractMajors(_languages);
-
-        // If the "major" flag is not used:
-        _majorLanguages = _majorLanguages.length ? _majorLanguages : _languages;
+        _languages = blf.utils.extractMajors(list);
 
         $('select.select-in-type', _dom).empty().append(getLineContent());
       }

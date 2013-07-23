@@ -29,12 +29,8 @@
 
     var _dom,
         _selected = {},
-        _values = blf.control.get('lists')[obj.type_source] || [],
-        _majorValues = blf.utils.extractMajors(_values),
+        _values = blf.utils.extractMajors(blf.control.get('lists')[obj.type_source] || []),
         _self = this;
-
-    // If the "major" flag is not used:
-    _majorValues = _majorValues.length ? _majorValues : _values;
 
     // Try to get the list:
     // AAARGH: How am I supposed to do when I add a module that needs to
@@ -72,7 +68,7 @@
     });
 
     function getLineContent(value) {
-      return _majorValues.map(function(o) {
+      return _values.map(function(o) {
         return '<option value="' + o.type_id + '">' + o.label + '</option>';
       }).join();
     }
@@ -81,7 +77,7 @@
     function checkValuesCount() {
       if (
         (!obj.multiple && $('li', _dom).length) ||
-        ($('li', _dom).length >= _majorValues.length)
+        ($('li', _dom).length >= _values.length)
       )
         $('button.add-value', _dom).css('display', 'none');
       else
@@ -115,7 +111,7 @@
       // If the value is not specified, we use the first value that is
       // not used yet:
       else
-        $('> select', li).val(_majorValues.reduce(function(res, v) {
+        $('> select', li).val(_values.reduce(function(res, v) {
           return res !== null ?
             res :
             !$('option[value="' + v.type_id + '"]:selected', _dom).length ?
@@ -202,11 +198,7 @@
       var list = controller.get('lists')[obj.type_source] || [];
 
       if (!(_values || []).length && list.length) {
-        _values = list;
-        _majorValues = blf.utils.extractMajors(_values);
-
-        // If the "major" flag is not used:
-        _majorValues = _majorValues.length ? _majorValues : _values;
+        _values = blf.utils.extractMajors(list);
 
         $('select.select-in-type', _dom).empty().append(getLineContent());
       }
