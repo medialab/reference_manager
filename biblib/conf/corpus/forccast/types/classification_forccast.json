@@ -1,0 +1,89 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Architecture",
+                "fr": "Architecture"
+            },
+            "major": true,
+            "type_id": "architecture"
+        },
+        {
+            "labels": {
+                "en": "Art",
+                "fr": "Art"
+            },
+            "major": true,
+            "type_id": "art"
+        },
+        {
+            "labels": {
+                "en": "Economics",
+                "fr": "\u00c9conomie"
+            },
+            "major": true,
+            "type_id": "economics"
+        },
+        {
+            "labels": {
+                "en": "Environment",
+                "fr": "Environnement"
+            },
+            "major": true,
+            "type_id": "environment"
+        },
+        {
+            "labels": {
+                "en": "Information and communication sciences",
+                "fr": "Sciences de l'information et de la communication"
+            },
+            "major": true,
+            "type_id": "infocom"
+        },
+        {
+            "labels": {
+                "en": "Law",
+                "fr": "Droit"
+            },
+            "major": true,
+            "type_id": "law"
+        },
+        {
+            "labels": {
+                "en": "Politics",
+                "fr": "Politique"
+            },
+            "major": true,
+            "type_id": "politics"
+        },
+        {
+            "labels": {
+                "en": "Science",
+                "fr": "Science"
+            },
+            "major": true,
+            "type_id": "science"
+        },
+        {
+            "labels": {
+                "en": "Society",
+                "fr": "Soci\u00e9t\u00e9"
+            },
+            "major": true,
+            "type_id": "society"
+        },
+        {
+            "labels": {
+                "en": "Technique",
+                "fr": "Technique"
+            },
+            "major": true,
+            "type_id": "technique"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "sort": true,
+    "type_id": "classification_forccast"
+}

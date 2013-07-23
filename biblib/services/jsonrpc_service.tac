@@ -194,7 +194,7 @@ class References_repository(jsonrpc.JSONRPC):
         if type_list:
             results = []
             for type_dict in type_list:
-                print type_dict["type_id"]
+                print "type_id: {}".format(type_dict["type_id"])
                 self.type_adaptation(type_dict, language, True)
                 results.append(jsonbson.bson_to_json(type_dict))
             return results
@@ -222,7 +222,7 @@ class References_repository(jsonrpc.JSONRPC):
         if uifield_list:
             results = []
             for uifield_dict in uifield_list:
-                print uifield_dict["rec_type"]
+                print "rec_type: {}".format(uifield_dict["rec_type"])
                 self.type_adaptation(uifield_dict, language, False)
                 results.append(jsonbson.bson_to_json(uifield_dict))
             return results

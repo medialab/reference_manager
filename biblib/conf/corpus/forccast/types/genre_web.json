@@ -11,6 +11,14 @@
         },
         {
             "labels": {
+                "en": "eBook",
+                "fr": "eBook"
+            },
+            "major": true,
+            "type_id": "ebook"
+        },
+        {
+            "labels": {
                 "en": "Facebook",
                 "fr": "Facebook"
             },
@@ -19,11 +27,19 @@
         },
         {
             "labels": {
-                "en": "Slideshow",
-                "fr": "Slideshow"
+                "en": "Web Documentary",
+                "fr": "Web-documentaire"
             },
             "major": true,
-            "type_id": "slideshow"
+            "type_id": "webdocumentary"
+        },
+        {
+            "labels": {
+                "en": "Poster interactif",
+                "fr": "webposter"
+            },
+            "major": true,
+            "type_id": "webposter"
         },
         {
             "default": true,
@@ -36,6 +52,14 @@
         },
         {
             "labels": {
+                "en": "Slideshow",
+                "fr": "Présentation dynamique"
+            },
+            "major": true,
+            "type_id": "webslideshow"
+        },
+        {
+            "labels": {
                 "en": "Wiki",
                 "fr": "Wiki"
             },
@@ -45,6 +69,6 @@
     ],
     "rec_class": "Type",
     "rec_metajson": 1,
-    "sort": false,
+    "sort": true,
     "type_id": "genre_web"
 }

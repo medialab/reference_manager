@@ -36,12 +36,12 @@
         },
         {
             "labels": {
-                "en": "Programmer",
-                "fr": "Programmeur"
-            },
-            "major": true,
-            "type_id": "prg"
-        },
+                "en": "Interviewer", 
+                "fr": "Intervieweur"
+            }, 
+            "major": true, 
+            "type_id": "ivr"
+        }, 
         {
             "labels": {
                 "en": "Scenarist",
@@ -57,6 +57,110 @@
             },
             "major": true,
             "type_id": "spk"
+        },
+        {
+            "labels": {
+                "en": "Investigator",
+                "fr": "Enquêteur"
+            },
+            "major": true,
+            "type_id": "todo1"
+        },
+        {
+            "labels": {
+                "en": "Legal expert",
+                "fr": "Juriste"
+            },
+            "major": true,
+            "type_id": "todo2"
+        },
+        {
+            "labels": {
+                "en": "Webographer",
+                "fr": "Webographe"
+            },
+            "major": true,
+            "type_id": "todo3"
+        },
+        {
+            "labels": {
+                "en": "Media analyst",
+                "fr": "Analyste médiatique"
+            },
+            "major": true,
+            "type_id": "todo4"
+        },
+        {
+            "labels": {
+                "en": "Journalist",
+                "fr": "Journaliste"
+            },
+            "major": true,
+            "type_id": "todo5"
+        },
+        {
+            "labels": {
+                "en": "Documentalist",
+                "fr": "Documentaliste"
+            },
+            "major": true,
+            "type_id": "todo6"
+        },
+        {
+            "labels": {
+                "en": "Writer",
+                "fr": "Rédacteur"
+            },
+            "major": true,
+            "type_id": "todo7"
+        },
+        {
+            "labels": {
+                "en": "Coordinator",
+                "fr": "Coordinateur"
+            },
+            "major": true,
+            "type_id": "todo8"
+        },
+        {
+            "labels": {
+                "en": "Scenographer",
+                "fr": "Scénographe"
+            },
+            "major": true,
+            "type_id": "todo9"
+        },
+        {
+            "labels": {
+                "en": "Webmaster",
+                "fr": "Webmaster"
+            },
+            "major": true,
+            "type_id": "todo10"
+        },
+        {
+            "labels": {
+                "en": "Integrator",
+                "fr": "Intégrateur"
+            },
+            "major": true,
+            "type_id": "todo11"
+        },
+        {
+            "labels": {
+                "en": "scientometrist",
+                "fr": "Scientomètre"
+            },
+            "major": true,
+            "type_id": "todo12"
+        },
+        {
+            "labels": {
+                "en": "Quantitative analyst",
+                "fr": "Analyste quantitatif"
+            },
+            "major": true,
+            "type_id": "todo13"
         }
     ],
     "rec_class": "Type",
