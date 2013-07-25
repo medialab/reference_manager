@@ -77,7 +77,7 @@
       $('ul.identifiers-list', _dom).empty();
 
       (data || []).filter(function(o) {
-        return o.type === obj.id_type;
+        return o.id_type === obj.id_type;
       }).forEach(addLine);
     }
 
@@ -91,14 +91,14 @@
         res = [];
         lis.each(function() {
           res.push({
-            type: obj.id_type,
+            id_type: obj.id_type,
             value: $(this).find('input').val()
           });
         });
       } else {
         res = lis.length ?
           {
-            type: obj.id_type,
+            id_type: obj.id_type,
             value: $('li:first-child input', _dom).val()
           } :
           null;
