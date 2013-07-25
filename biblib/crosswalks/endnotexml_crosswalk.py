@@ -454,7 +454,7 @@ def extract_list(element, xpath):
     styles_xml_element = element.findall(xpath)
     if len(styles_xml_element) != 0:
         try:
-            return [style.text for style in styles_xml_element if style is not None]
+            return [style.text for style in styles_xml_element if style is not None and style.text is not None]
         except:
             return "error extract_list %s" % (ET.tostring(element))
 

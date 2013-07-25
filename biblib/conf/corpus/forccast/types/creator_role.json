@@ -64,7 +64,7 @@
                 "fr": "Enquêteur"
             },
             "major": true,
-            "type_id": "todo1"
+            "type_id": "forccast_inv"
         },
         {
             "labels": {
@@ -72,7 +72,7 @@
                 "fr": "Juriste"
             },
             "major": true,
-            "type_id": "todo2"
+            "type_id": "forccast_leg"
         },
         {
             "labels": {
@@ -80,7 +80,7 @@
                 "fr": "Webographe"
             },
             "major": true,
-            "type_id": "todo3"
+            "type_id": "forccast_weo"
         },
         {
             "labels": {
@@ -88,7 +88,7 @@
                 "fr": "Analyste médiatique"
             },
             "major": true,
-            "type_id": "todo4"
+            "type_id": "forccast_med"
         },
         {
             "labels": {
@@ -96,7 +96,7 @@
                 "fr": "Journaliste"
             },
             "major": true,
-            "type_id": "todo5"
+            "type_id": "forccast_jou"
         },
         {
             "labels": {
@@ -104,7 +104,7 @@
                 "fr": "Documentaliste"
             },
             "major": true,
-            "type_id": "todo6"
+            "type_id": "forccast_doc"
         },
         {
             "labels": {
@@ -112,7 +112,7 @@
                 "fr": "Rédacteur"
             },
             "major": true,
-            "type_id": "todo7"
+            "type_id": "forccast_wri"
         },
         {
             "labels": {
@@ -120,7 +120,7 @@
                 "fr": "Coordinateur"
             },
             "major": true,
-            "type_id": "todo8"
+            "type_id": "forccast_coo"
         },
         {
             "labels": {
@@ -128,7 +128,7 @@
                 "fr": "Scénographe"
             },
             "major": true,
-            "type_id": "todo9"
+            "type_id": "forccast_sce"
         },
         {
             "labels": {
@@ -136,7 +136,7 @@
                 "fr": "Webmaster"
             },
             "major": true,
-            "type_id": "todo10"
+            "type_id": "forccast_web"
         },
         {
             "labels": {
@@ -144,7 +144,7 @@
                 "fr": "Intégrateur"
             },
             "major": true,
-            "type_id": "todo11"
+            "type_id": "forccast_int"
         },
         {
             "labels": {
@@ -152,7 +152,7 @@
                 "fr": "Scientomètre"
             },
             "major": true,
-            "type_id": "todo12"
+            "type_id": "forccast_sci"
         },
         {
             "labels": {
@@ -160,7 +160,7 @@
                 "fr": "Analyste quantitatif"
             },
             "major": true,
-            "type_id": "todo13"
+            "type_id": "forccast_qua"
         }
     ],
     "rec_class": "Type",

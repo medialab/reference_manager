@@ -1,0 +1,25 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Cartography",
+                "fr": "Cartographie"
+            },
+            "major": true,
+            "type_id": "cartographie"
+        },
+        {
+            "labels": {
+                "en": "Spideopedia",
+                "fr": "Spideopedia"
+            },
+            "major": true,
+            "type_id": "spideopedia"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "sort": true,
+    "type_id": "genre_video"
+}

@@ -42,7 +42,6 @@
             "type_id": "webposter"
         },
         {
-            "default": true,
             "labels": {
                 "en": "Web site",
                 "fr": "Site Web"

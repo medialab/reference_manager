@@ -385,6 +385,13 @@
             "children": [
                 {
                     "labels": {
+                        "en": "Test",
+                        "fr": "Test"
+                    },
+                    "type_id": "Test"
+                },
+                {
+                    "labels": {
                         "en": "Computer program",
                         "fr": "Logiciel"
                     },

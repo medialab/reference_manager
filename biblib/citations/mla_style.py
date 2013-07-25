@@ -68,14 +68,12 @@ def cite(document, format):
     # edition
     edition = document.get_edition()
     if edition:
-        result += u"<span class=\"edition\">{0}</span>".format(edition + " ed.")
-        result += " "
+        result += u"<span class=\"edition\">{0}</span> ".format(edition + " ed.")
 
     # extent_volumes
     extent_volumes = document.get_extent_volumes()
     if extent_volumes:
-        result += u"<span class=\"extent_volumes\">{0}</span>".format(extent_volumes)
-        result += ". "
+        result += u"<span class=\"extent_volumes\">{0}</span>. ".format(extent_volumes)
 
     # degree
     # todo
@@ -83,14 +81,12 @@ def cite(document, format):
     # publication_places
     publication_places = document.get_publication_places()
     if publication_places:
-        result += u"<span class=\"publication_places\">{0}</span>".format(publication_places[0])
-        result += ": "
+        result += u"<span class=\"publication_places\">{0}</span>: ".format(publication_places[0])
 
     # publishers
     publishers = document.get_publishers()
     if publishers:
-        result += u"<span class=\"publishers\">{0}</span>".format(publishers[0])
-        result += ", "
+        result += u"<span class=\"publishers\">{0}</span>, ".format(publishers[0])
 
     else:
         pass
@@ -99,8 +95,7 @@ def cite(document, format):
     # part_volume, part_issue
     part_volume = document.get_part_volume()
     if part_volume:
-        result += u"<span class=\"part_volume\">{0}</span>".format(part_volume)
-        result += "."
+        result += u"<span class=\"part_volume\">{0}</span>.".format(part_volume)
 
     part_issue = document.get_part_issue()
     if part_issue:
@@ -111,8 +106,9 @@ def cite(document, format):
 
     # date
     date = document.get_date()
+    print date
     if date:
-        result += u"<span class=\"date\">{0}</span>".format(date)
+        result += u"<span class=\"date\">{0}</span>. ".format(date)
 
     # part_page_start & part_page_end
     part_page_start = document.get_part_page_start()
@@ -121,8 +117,7 @@ def cite(document, format):
 
     part_page_end = document.get_part_page_end()
     if part_page_end:
-        result += "-"
-        result += u"<span class=\"part_page_end\">{0}</span>".format(part_page_end)
+        result += u"-<span class=\"part_page_end\">{0}</span>".format(part_page_end)
 
     if part_page_end or part_page_end:
         result += ". "
@@ -145,12 +140,10 @@ def cite(document, format):
         if "date_last_accessed" in document["resources"][0]:
             date_last_accessed = format_date_last_accessed(document["resources"][0]["date_last_accessed"])
     if medium_of_publication:
-        result += u"<span class=\"medium_of_publication\">{0}</span>".format(medium_of_publication)
-        result += ". "
+        result += u"<span class=\"medium_of_publication\">{0}</span>. ".format(medium_of_publication)
 
     if date_last_accessed:
-        result += u"<span class=\"date_last_accessed\">{0}</span>".format(date_last_accessed)
-        result += ". "
+        result += u"<span class=\"date_last_accessed\">{0}</span>. ".format(date_last_accessed)
 
     if url:
         result += u"<span class=\"url\">{0}</span>".format(format_url(url))

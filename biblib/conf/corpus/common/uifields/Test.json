@@ -1,0 +1,177 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "property": "title",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "BooleanField",
+                "fr": "BooleanField"
+            },
+            "property": "bool",
+            "required": false,
+            "type_ui": "BooleanField"
+        },
+        {
+            "labels": {
+                "en": "CharField",
+                "fr": "CharField"
+            },
+            "property": "char",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "CharField multiple",
+                "fr": "CharField multiple"
+            },
+            "multiple": true,
+            "property": "chars",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "CheckboxField multiple",
+                "fr": "CheckboxField multiple"
+            },
+            "multiple": true,
+            "property": "checkboxs",
+            "required": false,
+            "type_source": "language",
+            "type_ui": "CheckboxField"
+        },
+        {
+            "labels": {
+                "en": "CreatorField",
+                "fr": "CreatorField"
+            },
+            "multiple": true,
+            "property": "creators",
+            "required": true,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "DateField",
+                "fr": "DateField"
+            },
+            "property": "date",
+            "required": false,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "DocumentField",
+                "fr": "DocumentField"
+            },
+            "multiple": true,
+            "only_one": false,
+            "property": "documents",
+            "required": true,
+            "type_fields": [
+                "Report",
+                "VideoRecording",
+                "WebSite"
+            ],
+            "type_ui": "DocumentField"
+        },
+        {
+            "id_type": "isbn",
+            "labels": {
+                "en": "IdentifierField ISBN",
+                "fr": "IdentifierField ISBN"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        },
+        {
+            "id_type": "doi",
+            "labels": {
+                "en": "IdentifierField DOI",
+                "fr": "IdentifierField DOI"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        },
+        {
+            "labels": {
+                "en": "IntegerField",
+                "fr": "IntegerField"
+            },
+            "property": "integ",
+            "required": false,
+            "type_ui": "IntegerField"
+        },
+        {
+            "labels": {
+                "en": "KeywordField",
+                "fr": "KeywordField"
+            },
+            "multiple": true,
+            "property": "keywords",
+            "required": false,
+            "type_ui": "KeywordField"
+        },
+        {
+            "labels": {
+                "en": "LanguageValueField",
+                "fr": "LanguageValueField"
+            },
+            "multiple": true,
+            "property": "language_values",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "ResourceField",
+                "fr": "ResourceField"
+            },
+            "multiple": true,
+            "only_one": false,
+            "property": "resources",
+            "required": false,
+            "type_fields": [
+                "ResourceRemote",
+                "ResourceBitstream"
+            ],
+            "type_ui": "ResourceField"
+        },
+        {
+            "labels": {
+                "en": "StringField",
+                "fr": "StringField"
+            },
+            "property": "rec_id",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "TypeField",
+                "fr": "TypeField"
+            },
+            "multiple": true,
+            "property": "types",
+            "required": false,
+            "type_source": "country",
+            "type_ui": "TypeField"
+        }
+    ],
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "Test"
+}

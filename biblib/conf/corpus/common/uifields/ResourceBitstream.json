@@ -1,0 +1,16 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Fichier",
+                "fr": "Fichier"
+            },
+            "property": "url",
+            "required": true,
+            "type_ui": "CharField"
+        }
+    ],
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "ResourceBitstream"
+}

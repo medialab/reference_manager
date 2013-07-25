@@ -11,15 +11,6 @@
         },
         {
             "labels": {
-                "en": "Pipo",
-                "fr": "Pipo"
-            },
-            "property": "pipo",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
                 "en": "Creators",
                 "fr": "Cr\u00e9ateurs"
             },
@@ -39,21 +30,32 @@
         },
         {
             "labels": {
-                "en": "Abstracts",
-                "fr": "Resum\u00e9s"
-            },
-            "multiple": true,
-            "property": "descriptions",
-            "required": false,
-            "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
                 "en": "Keywords",
                 "fr": "Mots-cl\u00e9s"
             },
             "multiple": true,
             "property": "keywords",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Disciplines",
+                "fr": "Disciplines"
+            },
+            "multiple": true,
+            "property": "classifications",
+            "required": false,
+            "type_source": "classification_forccast",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
             "required": false,
             "type_ui": "LanguageValueField"
         },
