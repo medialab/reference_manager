@@ -76,7 +76,9 @@
     function _fill(data, fullData) {
       $('ul.identifiers-list', _dom).empty();
 
-      (data || []).forEach(addLine);
+      (data || []).filter(function(o) {
+        return o.type === obj.id_type;
+      }).forEach(addLine);
     }
 
     function _getData(data) {
