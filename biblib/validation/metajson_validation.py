@@ -123,20 +123,26 @@ def validate_metajson_creator(creator):
     errors = []
     if "role" not in creator or not creator["role"]:
         errors.append("No role for creator")
-    if "person" in creator:
-        if "name_family" not in creator["person"] or not creator["person"]["name_family"]:
-            errors.append("No name_family in creator person")
-    elif "orgunit" in creator:
-        if "name" not in creator["orgunit"] or not creator["orgunit"]["name"]:
-            errors.append("No name in creator orgunit")
-    elif "event" in creator:
-        if "title" not in creator["event"] or not creator["event"]["title"]:
-            errors.append("No title in creator event")
-    elif "family" in creator:
-        if "name_family" not in creator["family"] or not creator["family"]["name_family"]:
-            errors.append("No name_family in creator family")
+    if "agent" in creator:
+        if "rec_class" in creator["agent"]:
+            if creator["agent"]["rec_class"] == "Person":
+                if "name_family" not in creator["agent"] or not creator["agent"]["name_family"]:
+                    errors.append("No name_family in creator Person")
+            elif creator["agent"]["rec_class"] == "Orgunit":
+                if "name" not in creator["agent"] or not creator["agent"]["name"]:
+                    errors.append("No name in creator Orgunit")
+            elif creator["agent"]["rec_class"] == "Event":
+                if "title" not in creator["agent"] or not creator["agent"]["title"]:
+                    errors.append("No title in creator Event")
+            elif creator["agent"]["rec_class"] == "Family":
+                if "name_family" not in creator["agent"] or not creator["agent"]["name_family"]:
+                    errors.append("No name_family in creator Family")
+            else:
+                errors.append("Not a valid rec_class in creator : {}".format(creator["agent"]["rec_class"]))
+        else:
+            errors.append("No rec_class in creator")
     else:
-        errors.append("No entity in creator")
+        errors.append("No agent in creator")
     return errors
 
 
