@@ -1,0 +1,23 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "File",
+                "fr": "Fichier"
+            },
+            "type_id": "ResourceBistream"
+        },
+        {
+            "labels": {
+                "en": "Remote",
+                "fr": "Distant"
+            },
+            "type_id": "ResourceRemote"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "sort": false,
+    "type_id": "resource_type"
+}
