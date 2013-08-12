@@ -12,7 +12,8 @@ from biblib.util import jsonbson
 
 def find_config_path():
     locations = [
-        os.path.abspath(os.path.join(os.getcwd(), 'biblib')),
+	os.path.join(os.path.realpath(__file__),".."),        
+	os.path.abspath(os.path.join(os.getcwd(), 'biblib')),
         os.path.abspath(os.getcwd()),
         os.path.abspath(os.path.join(os.getcwd(), os.pardir)),
         os.path.abspath(os.path.join(os.getcwd(), os.pardir, os.pardir)),
