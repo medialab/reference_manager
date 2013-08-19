@@ -1,17 +1,17 @@
 #!/bin/bash
 
-envname=$1
+env=$1
+path=$2
 
-if [ -z "$envname" ]; then
+if [ -z "$env" ]; then
   exit 1
 fi
-echo $envname
-source `which virtualenvwrapper.sh`
-workon $envname
-if [ -f twistd.pid ]
+echo $path $env
+#source `which virtualenvwrapper.sh`
+#workon $envname
+if [ -f $path/twistd.pid ]
 then
-	kill `cat twistd.pid`
+	kill `cat $path/twistd.pid`
 fi
-twistd -noy biblib/services/jsonrpc_service.tac -l server.log &
-deactivate
+${env}twistd -noy ${path}/biblib/services/jsonrpc_service.tac -l server.log &
 exit 0
