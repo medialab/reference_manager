@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+VERSION = '0.5'
+
 FILE_TYPE_BIBTEX = 'bibtex'
 FILE_TYPE_CSV = 'csv'
+FILE_TYPE_HTML = 'html'
 FILE_TYPE_JSON = 'json'
 FILE_TYPE_MARC = 'marc'
 FILE_TYPE_TXT = 'txt'
@@ -16,6 +19,7 @@ FORMAT_DDI = 'ddi'
 FORMAT_DIDL = 'didl'
 FORMAT_EAD = 'ead'
 FORMAT_ENDNOTEXML = 'endnotexml'
+FORMAT_HTML = 'html'
 FORMAT_LOM = 'lom'
 FORMAT_METAJSON = 'metajson'
 FORMAT_METS = 'mets'
@@ -31,8 +35,13 @@ FORMAT_RIS = 'ris'
 FORMAT_SUMMONJSON = 'summonjson'
 FORMAT_UNIXREF = 'unixref'
 
+LANGUAGE_UNDETERMINED = "und"
+CLASSIFICATION_UNDETERMINED = "und"
+
 file_extension_to_type = {
     'bib': FILE_TYPE_BIBTEX,
+    'htm': FILE_TYPE_HTML,
+    'html': FILE_TYPE_HTML,
     'json': FILE_TYPE_JSON,
     'marc': FILE_TYPE_MARC,
     'mrc': FILE_TYPE_MARC,
@@ -42,6 +51,7 @@ file_extension_to_type = {
 
 type_to_file_extension = {
     FILE_TYPE_BIBTEX: 'bib',
+    FILE_TYPE_HTML: 'html',
     FILE_TYPE_JSON: 'json',
     FILE_TYPE_MARC: 'mrc',  # todo list with marc
     FILE_TYPE_TXT: 'ris',
@@ -57,6 +67,7 @@ input_format_to_type = {
     FORMAT_DIDL: FILE_TYPE_XMLETREE,
     FORMAT_EAD: FILE_TYPE_XMLETREE,
     FORMAT_ENDNOTEXML: FILE_TYPE_XMLETREE,
+    FORMAT_HTML: FILE_TYPE_HTML,
     FORMAT_METAJSON: FILE_TYPE_JSON,
     FORMAT_METS: FILE_TYPE_XMLETREE,
     FORMAT_MIX: FILE_TYPE_XMLETREE,

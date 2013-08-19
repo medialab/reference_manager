@@ -11,6 +11,7 @@ import sys
 import os
 
 import biblib
+from biblib.util import constants
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -23,7 +24,7 @@ with open(os.path.join(here, 'requirements.txt')) as requirements_file, open(os.
 
     setup(
         name='biblib',
-        version='0.4',
+        version=constants.VERSION,
         author='Sciences Po - médialab',
         author_email='medialab@sciences-po.fr',
         url='https://github.com/medialab/reference_manager',
@@ -45,7 +46,7 @@ with open(os.path.join(here, 'requirements.txt')) as requirements_file, open(os.
             'Programming Language :: Python :: 2.7',
             'Topic :: Utilities'
         ],
-        keywords='reference biblio endnote bibtext mods',
+        keywords='bibliographic reference endnote bibtext mods',
         license=LICENSE,
         install_requires=requirements,
         entry_points={

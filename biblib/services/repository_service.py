@@ -308,7 +308,7 @@ def save_uifield(corpus, uifield):
     existing_uifield = get_uifield(corpus, rec_type)
     if existing_uifield:
         uifield["_id"] = existing_uifield["_id"]
-    return mongodb[corpus][UIFIELDS].save(uifield)
+    return {"rec_type": rec_type, "_id": str(mongodb[corpus][UIFIELDS].save(uifield))}
 
 
 def get_type(corpus, type_id):
@@ -339,4 +339,4 @@ def save_type(corpus, metatype):
     existing_type = get_type(corpus, type_id)
     if existing_type:
         metatype["_id"] = existing_type["_id"]
-    return mongodb[corpus][TYPES].save(metatype)
+    return {"type_id": type_id, "_id": str(mongodb[corpus][TYPES].save(metatype))}

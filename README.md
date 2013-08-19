@@ -1,35 +1,46 @@
 # BibLib
 
-## Install dependencies on Mac OS X
-### Intall Apple Xcode and Command Line Tools
+## 1. Install dependencies
+
+### 1.1. For Mac OS X
+
+#### Intall Apple Xcode and Command Line Tools
 …
-### Install Homebrew
+#### Install Homebrew
 
     ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
     brew update
     brew doctor
 
-### Install MongoDB
+#### Install MongoDB
 
 Install MongoDB with brew:
 
     brew install mongodb
 
-Create a data folder for the biblib MongoDB:
+Create a data folder for the BibLib MongoDB:
 
     mkdir $HOME/somewhere
 
 Start MongoDB:
 
     mongod --dbpath $HOME/somewhere/mongodb
-    
-### Install pip
+
+#### Install pip
 
     easy_install pip
 
-## Install dependencies on Ubuntu
+#### Install python VirtualEnv
 
-### Intall MongoDB
+Install virtualenv and virtualenvwrapper:
+
+    sudo pip install virtualenv
+    sudo pip install virtualenvwrapper
+
+
+### 1.2. For Ubuntu
+
+#### Intall MongoDB
 
 Import the 10gen public GPG Key:
 
@@ -82,38 +93,31 @@ Stopping MongoDB:
     
 Restarting MongoDB:
 
-    sudo service mongodb restart
+    sudo service mongodb restart    
     
-### Install python VirtualEnv
+#### Install pip
+
+    easy_install pip
+
+#### Install python VirtualEnv
 
 Install virtualenv and virtualenvwrapper:
 
     sudo apt-get install python-virtualenv
     sudo pip install virtualenvwrapper
- 
-Create BIBLIB virtualenv:
 
-    virtualenv BIBLIB
+### 1.2. For CentOS
 
-Switch to the AIME virtualenv:
-    
-    source ~/BIBLIB/bin/activate
-    
-To deactivate:
-    
-    deactivate
-    
-## Intall dependencies on both Mac OS X and Ubuntu
+TODO
 
-### Install python VirtualEnv
-
-Install virtualenv and virtualenvwrapper:
-
-    sudo pip install virtualenv
-    sudo pip install virtualenvwrapper
     
+## 2. Intall BibLib and common dependencies
+
+### 2.1. Configue VirtualEnv
+
 Create the .virtualenv folder:
 
+    cd ~
     mkdir .virtualenv
     
 Configure your batch profile:
@@ -141,103 +145,189 @@ Add these lines to the .profile file in your home directory:
 
 Exit and relog.
 
-### Install required modules in python
+### 2.2. Create the BIBLIB virtualenv
 
-Create the BIBLIB virtualenv:
+#### To create the BIBLIB virtualenv
 
-    mkdir .virtualenv
+    virtualenv BIBLIB
+
+or
+
     v.mk BIBLIB
 
-Switch to the BIBLIB virtualenv:
+#### To activate the BIBLIB virtualenv
+
+	source ~/BIBLIB/bin/activate
+
+or
+
+	v BIBLIB
+
+#### To deactivate the BIBLIB virtualenv
+    
+    deactivate
+
+or
+
+	v.deactivate
+
+### 2.3. Install BibLib
+
+Create the BibLib HOME Folder where you want :
+
+    cd /var/opt/
+    sudo mkdir biblib
+    sudo chown ??? biblib
+    sudo chgrp ??? biblib
+
+Clone the git repository:
+
+    cd /var/opt/biblib
+    git clone git@github.com:medialab/reference_manager.git
+
+or update it:
+
+    git reset --hard HEAD
+    git pull
+
+Install the working txjsonrpc for JSON-RPC 2.0:
 
     v BIBLIB
-
-Install required modules:
-    
-    pip install -r requirements.txt
-    add2virtualenv .
-    
-    
-Install the correct txjsonrpc:
-
+    cd /var/opt/biblib
     git clone git@github.com:hefee/txjsonrpc.git
     cd txjsonrpc
     python setup.py install
 
+Install BibLib required modules:
 
-Clone the git repository:
+    v BIBLIB
+    cd /var/opt/biblib/reference_manager
+    pip install -r requirements.txt
 
-    git clone git@github.com:medialab/reference_manager.git
+Add BibLib paths to virtualenv
+
+    v BIBLIB
+    cd /var/opt/biblib/reference_manager
+    add2virtualenv .
+    cd biblib
+    add2virtualenv .
+
+## 3. Configure
     
-To update the source:
-    
-    git pull
-    
+### 3.1. Edit config.json
 
-## Configure
-
-### Create the MongoDB
-
-    mongo
-    db
-    show dbs
-    use biblib
-    j = { name : "mongo" }
-    db.documents.insert( j )
-    show dbs
-    show collections
-    
-### Edit the config.json
-
-    cd src/biblib
+    cd /var/opt/biblib/reference_manager
+    cd conf
     cp config.template.json config.json
     vi config.json
-    
+
 #### Configure mongodb server
 
     "mongodb": {
         "db": "biblib",
         "host": "localhost",
-        "port": 27017
+        "port": 27017,
+        "default_corpus": "aime"
     }
-    
+
 #### Configure JSON-RPC port
 
 	"jsonrpc": {
         "port": 8080
-    },
-    
+    }
+
 #### Configure external services
 	
-	…
+    Don't use it for the moment. Will be replace by the targets notion in version 0.6...
 	
-## Test
+## 4. Launch and test BibLib
 
-### Start the mongodb server
+### 4.1. Terminal 1
 
-	mongod --dbpath /somewhere/mongodb
+#### Start the mongodb server
 
-### Import data
-To test all (convert endnote, insert ref inside MongoDB, export json and MLA):
+	mongod --dbpath $HOME/somewhere/mongodb
 
+### 4.2. Terminal 2
+
+#### Clean corpus
+Be careful! Create the mongodb database of the specified corpus if not already existing, erase all data and create the indexes inside this corpus database.
+
+    cd /var/opt/biblib/reference_manager
     v BIBLIB
-    cd biblib
-    python main.py
+    python biblib clean -c aime
 
-### Start the json-rpc server
-To start the json-rpc server:
-
+#### Conf corpus
+Insert or update in the corpus the types and user interface fields located in the "conf" folder
+    cd /var/opt/biblib/reference_manager
     v BIBLIB
-    cd biblib/services
-    twistd -noy jsonrpc_service.tac -l -
-    
-or 
+    python biblib conf -c aime
 
-    twistd -noy jsonrpc_service.tac -l server.log &
+#### Import metadata in the corpus
+Import a metadata file
 
-### Test the json-rpc with the simple page
-Modify the HTML page to test the json-rpc server
+    cd /var/opt/biblib/reference_manager
+    v BIBLIB
+    python biblib import -c aime -f endnotexml -i data/endnotexml/endnote-aime.xml
+
+#### Export metadata
+Export as a metadata file
+
+    cd /var/opt/biblib/reference_manager
+    v BIBLIB
+    python biblib export -c aime -f metajson -o data/result/result_aime_metajson.json
+    python biblib export -c aime -f html -o data/result/result_aime_html.html
     
+#### Convert metadata
+Convert a metadata file to another format
+
+    cd /var/opt/biblib/reference_manager
+    v BIBLIB
+    python biblib convert -f endnotexml -i data/endnotexml/endnote-aime.xml -r metajson -o data/result/result_aime_metajson.json
+    python biblib convert -f endnotexml -i data/endnotexml/endnote-aime.xml -r html -o data/result/result_aime_html.html
+
+### 4.3. Terminal 3
+
+#### Start the JSON-RPC server
+To start the JSON-RPC server using the bash script:
+
+    cd /var/opt/biblib/reference_manager
+    ./start_jsonrpc.sh BIBLIB
+
+To start an restart the JSON-RPC server manually:
+
+    cd /var/opt/biblib/reference_manager
+    v BIBLIB
+    ps -U ???
+    kill ???
+    twistd -noy biblib/services/jsonrpc_service.tac -l server.log &
+    # or
+    twistd -noy biblib/services/jsonrpc_service.tac -l -
+
+
+### 4.4. Terminal 4
+
+#### Start the BibLib Front web server
+
+BibLib Front (blf) is a javascript program that can be embedded in any HTML page.
+
+A customizable web page is located in:
+
+	cd /var/opt/biblib/reference_manager
+	less biblib/front/index.html
+
+You can use the simple python HTTP server or any other to serve this web page:
+
+	cd /var/opt/biblib/reference_manager
+	cd biblib/front
+	python -m SimpleHTTPServer 8090
+
+### 4.5 Test in a web browser
+
+#### Test with the very simple HTML web page
+Modify this HTML web page to test the JSON-RPC server:
+    
+    cd /var/opt/biblib/reference_manager
     cd test
     vi test_jsonrpc.html
     
@@ -245,15 +335,13 @@ Modify the endPoint:
     
     endPoint : 'http://localhost:8080',
     
-Try this web page in your browser
+Try this test web page in your browser:
 
-### Starting the webserver
+	file:///var/opt/biblib/reference_manager/test/test_jsonrpc.html
 
-	cd biblib/web
-	python -m SimpleHTTPServer 8090
+#### Start using BibLib Front
 
-In your browser try these URL :
-	* http://localhost:8090/echo.html
-	* http://localhost:8090/index.html
+In your web browser try this URL (see 4.4):
+	
+    http://localhost:8090
 
-...

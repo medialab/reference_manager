@@ -36,7 +36,7 @@
             "multiple": true,
             "property": "keywords",
             "required": false,
-            "type_ui": "LanguageValueField"
+            "type_ui": "KeywordField"
         },
         {
             "labels": {

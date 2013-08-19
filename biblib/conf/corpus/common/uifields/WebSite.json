@@ -2,6 +2,22 @@
     "children": [
         {
             "labels": {
+                "en": "rec_id",
+                "fr": "rec_id"
+            },
+            "property": "rec_id",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "rec_type",
+                "fr": "rec_type"
+            },
+            "property": "rec_type",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
                 "en": "Title",
                 "fr": "Titre"
             },
@@ -72,14 +88,6 @@
         },
         {
             "labels": {
-                "en": "Is peer reviewed ?",
-                "fr": "Comité de lecture ?"
-            },
-            "property": "peer_review",
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
                 "en": "Abstracts",
                 "fr": "Resum\u00e9s"
             },
@@ -96,15 +104,7 @@
             "multiple": true,
             "property": "keywords",
             "required": false,
-            "type_ui": "LanguageValueField"
-        },
-        {
-            "labels": {
-                "en": "To archive ?",
-                "fr": "A archiver ?"
-            },
-            "property": "for_archiving",
-            "type_ui": "CharField"
+            "type_ui": "KeywordField"
         }
     ],
     "rec_class": "Field",

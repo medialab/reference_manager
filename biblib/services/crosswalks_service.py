@@ -177,7 +177,7 @@ def convert_metajson_list(metajson_list, output_format):
 
 
 def convert_metajson(metajson, output_format):
-    if output_format == constants.FORMAT_METAJSON:
+    if output_format == constants.FORMAT_METAJSON or output_format == constants.FORMAT_HTML:
         return metajson
     elif output_format == constants.FORMAT_OPENURL:
         return openurl_crosswalk.metajson_to_openurl(metajson)

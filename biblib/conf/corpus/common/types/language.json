@@ -26,7 +26,6 @@
             "type_id": "el"
         }, 
         {
-            "default": true, 
             "labels": {
                 "en": "English", 
                 "fr": "anglais"
@@ -51,6 +50,7 @@
             "type_id": "fa"
         }, 
         {
+            "default": true, 
             "labels": {
                 "en": "French", 
                 "fr": "français"
@@ -3200,6 +3200,7 @@
                 "en": "Undetermined", 
                 "fr": "indéterminée"
             }, 
+            "major": true,
             "type_id": "und"
         }, 
         {

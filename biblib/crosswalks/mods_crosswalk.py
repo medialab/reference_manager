@@ -16,6 +16,8 @@ from biblib.services import creator_service
 from biblib.services import language_service
 from biblib.util import constants
 
+part_fields = ["part_chapter_number", "part_chapter_title", "part_chronology", "part_column", "part_issue", "part_month", "part_name", "part_number", "part_page_end", "part_page_start", "part_paragraph", "part_quarter", "part_season", "part_section", "part_session", "part_track", "part_unit", "part_volume", "part_week"]
+
 mods_genre_eurepo_to_metajson_document_type = {
     # info:eu-repo/semantics
     "info:eu-repo/semantics/annotation": "Annotation",
@@ -173,9 +175,12 @@ def mods_xmletree_to_metajson_list(mods_root, source, only_first_record):
 def mods_xmletree_to_metajson(mods, source):
     document = Document()
     is_part_of = None
+    review_of = None
+    series = None
 
     # source
-    document["rec_source"] = source
+    if source is not None:
+        document["rec_source"] = source
 
     # rec_type, rec_class, genres
     document.update(extract_class_type_genres(mods))
@@ -185,7 +190,9 @@ def mods_xmletree_to_metajson(mods, source):
     identifiers = convert_mods_identifiers(mods.findall(prefixtag("mods", "identifier")))
     if identifiers:
         document["identifiers"] = identifiers
-        document["rec_id"] = identifiers[0]["value"]
+        document["rec_id"] = "{}:{}".format(identifiers[0]["id_type"],identifiers[0]["value"])
+
+    # originInfo issuance
 
     # relatedItems
     related_items = mods.findall(prefixtag("mods", "relatedItem"))
@@ -193,6 +200,7 @@ def mods_xmletree_to_metajson(mods, source):
     related_item_original = None
     related_item_series = None
     if related_items:
+        print "0"
         for related_item in related_items:
             # host -> is_part_of
             if related_item.get("type") == "host":
@@ -202,10 +210,22 @@ def mods_xmletree_to_metajson(mods, source):
             elif related_item.get("type") == "series":
                 related_item_series = related_item
 
-    if related_item_host is not None:
-        is_part_of = Document()
-    if related_item_original is not None:
-        review_of = Document()
+        if related_item_host is not None:
+            print "a"
+            is_part_of = mods_xmletree_to_metajson(related_item_host, None)
+            print is_part_of
+            for key in part_fields:
+                print "b " + key
+                if key in is_part_of:
+                    print "c " + key
+                    document[key] = is_part_of[key]
+                    del is_part_of[key]
+
+        if related_item_original is not None:
+            review_of = Document()
+
+        if related_item_series is not None:
+            series = Document()
 
     # title
     document.update(convert_mods_titleinfos(mods.findall(prefixtag("mods", "titleInfo"))))
@@ -215,6 +235,51 @@ def mods_xmletree_to_metajson(mods, source):
     if creators:
         #print creators
         document["creators"] = creators
+
+    # languages
+    mods_languages = mods.findall(prefixtag("mods", "language"))
+    if mods_languages is not None:
+        languages = []
+        for mods_language in mods_languages:
+            language = convert_language(mods_language)
+            if language is not None:
+                languages.append(language)
+        if languages:
+            document["languages"] = languages
+
+    # abstract
+    mods_abstracts = mods.findall(prefixtag("mods", "abstract"))
+    if mods_abstracts is not None:
+        abstracts = []
+        for mods_abstract in mods_abstracts:
+            abstracts.append(convert_string_lang(mods_abstract))
+        if abstracts:
+            document["descriptions"] = abstracts
+
+    # subject
+    mods_subjects = mods.findall(prefixtag("mods", "subject"))
+    if mods_subjects is not None:
+        document.update(convert_subjects(mods_subjects))
+
+    # classification
+    mods_classifications = mods.findall(prefixtag("mods", "classification"))
+    if mods_classifications is not None:
+        document.update(convert_classifications(mods_classifications))
+
+    # part
+    mods_parts = mods.findall(prefixtag("mods", "part"))
+    if mods_parts is not None:
+        parts = convert_parts(mods_parts)
+        print parts
+        document.update(parts)
+
+    # relatedItem
+    if is_part_of is not None:
+        document["is_part_ofs"] = [is_part_of]
+    if review_of is not None:
+        document["review_ofs"] = [review_of]
+    if series is not None:
+        document["seriess"] = [series]
 
     # root originInfo dates
     root_dates = extract_dates_from_origininfo(mods.find(prefixtag("mods", "originInfo")))
@@ -531,3 +596,144 @@ def convert_date(mods_date):
         else:
             # todo
             return value
+
+
+def convert_language(mods_language):
+    if mods_language is not None:
+        mods_terms = mods_language.findall(prefixtag("mods", "languageTerm"))
+        if mods_terms is not None:
+            for mods_term in mods_terms:
+                if mods_term.get("type") == "code":
+                    if mods_term.get("authority") == "rfc3066":
+                        return mods_term.text
+                    else:
+                        # todo for iso639-2b and other authority
+                        pass
+                else:
+                    # todo for natural language like "French"
+                    pass
+
+
+def convert_string_lang(mods_string_lang):
+    if mods_string_lang is not None:
+        lang = mods_string_lang.get("lang")
+        value = mods_string_lang.text.strip()
+        if value is not None:
+            result = {"value": value}
+            if lang is not None:
+                result["language"] = lang
+            return result
+
+
+def convert_subjects(mods_subjects):
+    if mods_subjects is not None:
+        subjects = []
+        keywords_dict = {}
+        for mods_subject in mods_subjects:
+            if mods_subject is not None:
+                mods_subject_authority = mods_subject.get("authority")
+                mods_subject_lang = mods_subject.get("lang")
+                if mods_subject_lang is not None and mods_subject_lang not in keywords_dict:
+                    keywords_dict[mods_subject_lang] = []
+                elif mods_subject_lang is None:
+                    keywords_dict[constants.LANGUAGE_UNDETERMINED] = []
+                if mods_subject_authority is None:
+                    # it's a keyword
+                    mods_topics = mods_subject.findall(prefixtag("mods", "topic"))
+                    if mods_topics is not None:
+                        for mods_topic in mods_topics:
+                            if mods_topic.text is not None:
+                                terms = None
+                                if mods_topic.text.find(";") != -1:
+                                    terms = mods_topic.text.split(";")
+                                elif mods_topic.text.find(",") != -1:
+                                    terms = mods_topic.text.split(",")
+                                else:
+                                    terms = [mods_topic.text]
+                            if terms is not None:
+                                for term in terms:
+                                    if mods_subject_lang is not None:
+                                        keywords_dict[mods_subject_lang].append(term.strip())
+                                    else:
+                                        keywords_dict[constants.LANGUAGE_UNDETERMINED].append(term.strip())
+        result = {}
+        if subjects:
+            result["subjects"] = subjects
+        if keywords_dict:
+            result["keywords"] = keywords_dict
+        return result
+
+
+def convert_classifications(mods_classifications):
+    if mods_classifications is not None:
+        classifications_dict = {}
+        peer_review = False
+        peer_review_geo = []
+        for mods_classification in mods_classifications:
+            if mods_classification is not None:
+                mods_classification_authority = mods_classification.get("authority")
+                #mods_classification_lang = mods_classification.get("lang")
+                if mods_classification.text is not None:
+                    if mods_classification_authority is not None:
+                        if mods_classification_authority == "peer-review":
+                            if mods_classification.text == "yes":
+                                peer_review = True
+                        else:
+                            if mods_classification_authority not in classifications_dict:
+                                classifications_dict[mods_classification_authority] = []
+                            classifications_dict[mods_classification_authority].append(mods_classification.text.strip())
+                    elif mods_classification_authority is None:
+                        if constants.CLASSIFICATION_UNDETERMINED not in classifications_dict:
+                            classifications_dict[constants.CLASSIFICATION_UNDETERMINED] = []
+                        classifications_dict[constants.CLASSIFICATION_UNDETERMINED].append(mods_classification.text.strip())
+        result = {}
+        if classifications_dict:
+            result["classifications"] = classifications_dict
+        if peer_review:
+            result["peer_review"] = peer_review
+        if peer_review_geo:
+            result["peer_review_geo"] = peer_review_geo
+        return result
+
+
+def convert_parts(mods_parts):
+    print "convert_parts"
+    if mods_parts is not None:
+        print "convert_parts 0"
+        parts_dict = {}
+        for mods_part in mods_parts:
+            print "convert_parts 1"
+            if mods_part is not None:
+                # detail
+                print "convert_parts 2"
+                mods_part_details = mods_part.findall(prefixtag("mods", "detail"))
+                if mods_part_details is not None:
+                    print "convert_parts 3"
+                    for mods_part_detail in mods_part_details:
+                        print "convert_parts 4"
+                        mods_part_detail_type = mods_part_detail.get("type")
+                        mods_part_detail_number = mods_part_detail.find(prefixtag("mods", "number"))
+                        if mods_part_detail_type is not None and mods_part_detail_number is not None and mods_part_detail_number.text is not None:
+                            if mods_part_detail_type == "volume":
+                                print "volume"
+                                parts_dict["part_volume"] = mods_part_detail_number.text
+                            elif mods_part_detail_type == "issue":
+                                print "issue"
+                                parts_dict["part_issue"] = mods_part_detail_number.text
+
+                # extent
+                mods_part_extents = mods_part.findall(prefixtag("mods", "extent"))
+                if mods_part_extents is not None:
+                    print "convert_parts 10"
+                    for mods_part_extent in mods_part_extents:
+                        mods_part_extent_unit = mods_part_extent.get("unit")
+                        mods_part_extent_start = mods_part_extent.find(prefixtag("mods", "start"))
+                        mods_part_extent_end = mods_part_extent.find(prefixtag("mods", "end"))
+                        if mods_part_extent_unit is not None and (mods_part_extent_start is not None or mods_part_extent_end is not None):
+                            if mods_part_extent_unit == "page" or mods_part_extent_unit == "pages":
+                                if mods_part_extent_start is not None and mods_part_extent_start.text is not None:
+                                    parts_dict["part_page_start"] = mods_part_extent_start.text
+                                if mods_part_extent_end is not None and mods_part_extent_end.text is not None:
+                                    parts_dict["part_page_end"] = mods_part_extent_end.text
+
+        return parts_dict

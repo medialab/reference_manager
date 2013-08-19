@@ -2,6 +2,22 @@
     "children": [
         {
             "labels": {
+                "en": "rec_id",
+                "fr": "rec_id"
+            },
+            "property": "rec_id",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "rec_type",
+                "fr": "rec_type"
+            },
+            "property": "rec_type",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
                 "en": "Title",
                 "fr": "Titre"
             },
@@ -128,7 +144,7 @@
             "multiple": true,
             "property": "keywords",
             "required": false,
-            "type_ui": "LanguageValueField"
+            "type_ui": "KeywordField"
         },
         {
             "labels": {

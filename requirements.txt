@@ -1,3 +1,5 @@
+virtualenv
+virtualenvwrapper
 pymongo
 zope.interface
 Twisted

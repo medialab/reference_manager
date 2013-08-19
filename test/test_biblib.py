@@ -24,8 +24,8 @@ def teardown():
 
 def test_all():
     test_services()
-    #test_cloud()
-    #test_main()
+    test_cloud()
+    test_main()
 
 
 def test_services():
@@ -35,16 +35,13 @@ def test_services():
 
 def test_cloud():
     test_crossref.test()
-    #test_google_scholar.test()
+    test_google_scholar.test()
     test_oaipmh_harvester.test()
     test_summon.test()
 
 
-def test_main():
+def text_main():
     pass
-    refman.init_repository()
-    refman.import_references()
-
 
 console.setup_console()
 test_all()

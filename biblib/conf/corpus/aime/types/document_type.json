@@ -227,6 +227,13 @@
                                 "fr": "Working paper"
                             },
                             "type_id": "WorkingPaper"
+                        },
+                        {
+                            "labels": {
+                                "en": "Unpublished document",
+                                "fr": "Document non publi\u00e9"
+                            },
+                            "type_id": "UnpublishedDocument"
                         }
                     ],
                     "labels": {
@@ -372,6 +379,13 @@
                         "fr": "Emission de t\u00e9l\u00e9vision"
                     },
                     "type_id": "VideoBroadcast"
+                },
+                {
+                    "labels": {
+                        "en": "Video part",
+                        "fr": "Extrait vidéo"
+                    },
+                    "type_id": "VideoPart"
                 }
             ],
             "labels": {

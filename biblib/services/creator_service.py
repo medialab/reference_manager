@@ -660,11 +660,14 @@ def formatted_name_to_creator(formatted_name, creator_type, role):
                 person.set_key_if_not_none("name_prefix", name_prefix)
                 person.set_key_if_not_none("date_birth", date_birth)
                 person.set_key_if_not_none("date_death", date_death)
-                if 'affiliation_name' in vars() and affiliation_name:
-                    #todo manage as an object
-                    person["affiliations"] = [{"type": "orgunit", "preferred": True, "name": affiliation_name}]
 
                 creator["agent"] = person
+
+                if 'affiliation_name' in vars() and affiliation_name:
+                    #todo manage as an object
+                    affiliation = Orgunit()
+                    affiliation["name"] = affiliation_name
+                    creator["affiliation"] = affiliation
 
             elif creator_type == "family":
                 family = Family()

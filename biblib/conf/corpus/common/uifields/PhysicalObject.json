@@ -1,4 +1,4 @@
-{
+PhysicalObject{
     "children": [
         {
             "labels": {
@@ -55,27 +55,6 @@
         },
         {
             "labels": {
-                "en": "Duration",
-                "fr": "Dur\u00e9e"
-            },
-            "property": "extent_duration",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "id_type": "isan",
-            "labels": {
-                "en": "ISAN",
-                "fr": "ISAN"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "identifiers",
-            "required": false,
-            "type_ui": "IdentifierField"
-        },
-        {
-            "labels": {
                 "en": "Languages",
                 "fr": "Langues"
             },
@@ -108,5 +87,5 @@
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "MusicRecording"
+    "rec_type": "PhysicalObject"
 }

@@ -1,0 +1,33 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "DDC",
+                "fr": "DDC"
+            },
+            "major": true,
+            "type_id": "ddc"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "JEL",
+                "fr": "JEL"
+            },
+            "major": true,
+            "type_id": "info:eu-repo/authority/jel"
+        },
+        {
+            "labels": {
+                "en": "Undetermined",
+                "fr": "ind\u00e9termin\u00e9e"
+            },
+            "major": true,
+            "type_id": "und"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "classification_authority"
+}
