@@ -1,0 +1,73 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "questionnaire",
+                "fr": "questionnaire"
+            },
+            "major": true,
+            "type_id": "questionnaire"
+        },
+        {
+            "labels": {
+                "en": "directive interview",
+                "fr": "entretien directif"
+            },
+            "major": true,
+            "type_id": "directive interview"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "semi-directive interview",
+                "fr": "entretien semi-directif"
+            },
+            "major": true,
+            "type_id": "semi-directive interview"
+        },
+        {
+            "labels": {
+                "en": "none directive interview",
+                "fr": "entretien non directif"
+            },
+            "major": true,
+            "type_id": "none directive interview"
+        },
+        {
+            "labels": {
+                "en": "participant observation",
+                "fr": "observation participante"
+            },
+            "major": true,
+            "type_id": "participant observation"
+        },
+        {
+            "labels": {
+                "en": "experimentation",
+                "fr": "expérimentation"
+            },
+            "major": true,
+            "type_id": "experimentation"
+        },
+        {
+            "labels": {
+                "en": "content analysis",
+                "fr": "analyse documentaire"
+            },
+            "major": true,
+            "type_id": "content analysis"
+        },
+        {
+            "labels": {
+                "en": "other",
+                "fr": "autre"
+            },
+            "major": true,
+            "type_id": "other"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "data_collection_method"
+}

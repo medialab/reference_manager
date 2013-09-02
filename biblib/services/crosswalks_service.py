@@ -15,6 +15,8 @@ from biblib.crosswalks import mets_crosswalk
 from biblib.crosswalks import mods_crosswalk
 from biblib.crosswalks import openurl_crosswalk
 from biblib.crosswalks import repec_crosswalk
+from biblib.crosswalks import researcherml_crosswalk
+from biblib.crosswalks import ris_crosswalk
 from biblib.crosswalks import summonjson_crosswalk
 from biblib.crosswalks import unixref_crosswalk
 from biblib.util import constants
@@ -33,14 +35,15 @@ def convert_native(input_data, input_format, output_format, source, only_first_r
             elif input_type == constants.FILE_TYPE_BIBTEX:
                 return convert_bibtex(input_data, input_format, output_format, source, only_first_record)
             elif input_type == constants.FILE_TYPE_TXT:
-                print convert_txt(input_data, input_format, output_format, source, only_first_record)
+                print convert_txt_lines(input_data, input_format, output_format, source, only_first_record)
 
 
 def convert_file_list(input_file_list, input_format, output_format, source, only_first_record):
     for input_file in input_file_list:
-        converted_file = convert_file(input_file, input_format, output_format, source, only_first_record)
-        if converted_file:
-            yield converted_file
+        results = convert_file(input_file, input_format, output_format, source, only_first_record)
+        if results:
+            for result in results:
+                yield result
 
 
 def convert_file(input_file, input_format, output_format, source, only_first_record):
@@ -60,7 +63,6 @@ def convert_file(input_file, input_format, output_format, source, only_first_rec
         elif input_type == constants.FILE_TYPE_JSON:
             with open(input_file) as json_file:
                 json_data = jsonbson.load_json_file(json_file)
-                # jsonbson.load_json_str(json_file.read())
                 return convert_json(json_data, input_format, output_format, source, only_first_record)
 
         elif input_type == constants.FILE_TYPE_BIBTEX:
@@ -70,8 +72,8 @@ def convert_file(input_file, input_format, output_format, source, only_first_rec
 
         elif input_type == constants.FILE_TYPE_TXT:
             with open(input_file) as txt_file:
-                txt_data = txt_file.readall()
-                return convert_txt(txt_data, input_format, output_format, source, only_first_record)
+                txt_lines = list(txt_file)
+                return convert_txt_lines(txt_lines, input_format, output_format, source, only_first_record)
 
 
 def convert_string(input_string, input_format, output_format, source, only_first_record):
@@ -97,23 +99,29 @@ def convert_string(input_string, input_format, output_format, source, only_first
             return convert_bibtex(bib_data, input_format, output_format, source, only_first_record)
 
         elif input_type == constants.FILE_TYPE_TXT:
-            return convert_txt(input_string, input_format, output_format, source, only_first_record)
+            return convert_txt_lines(input_string.splitlines(), input_format, output_format, source, only_first_record)
 
 
 def convert_bibtex(bibtex_root, input_format, output_format, source, only_first_record):
     if bibtex_root:
         metajson_list = bibtex_crosswalk.bibtex_root_to_metasjon_list(bibtex_root, source, only_first_record)
+        return convert_metajson_list(metajson_list, output_format)
 
-        if metajson_list:
-            if output_format == constants.FORMAT_METAJSON:
-                return metajson_list
+
+def convert_txt_lines(txt_lines, input_format, output_format, source, only_first_record):
+    if txt_lines is not None:
+        #if input_format is None:
+        #    input_format = guess_txt_format(txt_lines)
+
+        if input_format is not None:
+            print "input_format: {0}".format(input_format)
+            metajson_list = None
+            if input_format == constants.FORMAT_RIS:
+                metajson_list = ris_crosswalk.ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record)
             else:
-                return convert_metajson_list(metajson_list, output_format)
+                print "Error: {} input_format not managed".format(input_format)
 
-
-def convert_txt(txt, input_format, output_format, source, only_first_record):
-    print "Error txt crosswalks not managed"
-    pass
+            return convert_metajson_list(metajson_list, output_format)
 
 
 def convert_json(jsondict, input_format, output_format, source, only_first_record):
@@ -133,11 +141,7 @@ def convert_json(jsondict, input_format, output_format, source, only_first_recor
             else:
                 print "Error: {} input_format not managed".format(input_format)
 
-            if metajson_list:
-                if output_format == constants.FORMAT_METAJSON:
-                    return metajson_list
-                else:
-                    return convert_metajson_list(metajson_list, output_format)
+            return convert_metajson_list(metajson_list, output_format)
 
 
 def convert_xmletree(xmletree, input_format, output_format, source, only_first_record):
@@ -146,20 +150,23 @@ def convert_xmletree(xmletree, input_format, output_format, source, only_first_r
             input_format = guess_xmletree_format(xmletree)
 
         if input_format is not None:
-            print "input_format: {0}".format(input_format)
+            print "# input_format: {0}".format(input_format)
             metajson_list = None
-            if input_format == constants.FORMAT_ENDNOTEXML:
-                metajson_list = endnotexml_crosswalk.endnotexml_xmletree_to_metajson_list(xmletree, source, only_first_record)
-            elif input_format == constants.FORMAT_MODS:
-                metajson_list = mods_crosswalk.mods_xmletree_to_metajson_list(xmletree, source, only_first_record)
+            # researcherml_crosswalk
+            if input_format == constants.FORMAT_DDI:
+                metajson_list = ddi_crosswalk.ddi_xmletree_to_metajson_list(xmletree, source, only_first_record)
             elif input_format == constants.FORMAT_DIDL:
                 metajson_list = didl_crosswalk.didl_xmletree_to_metajson_list(xmletree, source, only_first_record)
-            elif input_format == constants.FORMAT_DDI:
-                metajson_list = ddi_crosswalk.ddi_xmletree_to_metajson_list(xmletree, source, only_first_record)
-            elif input_format == constants.FORMAT_UNIXREF:
-                metajson_list = unixref_crosswalk.unixref_xmletree_to_metajson_list(xmletree, source, only_first_record)
+            elif input_format == constants.FORMAT_ENDNOTEXML:
+                metajson_list = endnotexml_crosswalk.endnotexml_xmletree_to_metajson_list(xmletree, source, only_first_record)
             elif input_format == constants.FORMAT_METS:
                 metajson_list = mets_crosswalk.mets_xmletree_to_metajson_list(xmletree, source, only_first_record)
+            elif input_format == constants.FORMAT_MODS:
+                metajson_list = mods_crosswalk.mods_xmletree_to_metajson_list(xmletree, source, only_first_record)
+            elif input_format == constants.FORMAT_RESEARCHERML:
+                metajson_list = researcherml_crosswalk.researcherml_xmletree_to_metajson_list(xmletree, source, only_first_record)
+            elif input_format == constants.FORMAT_UNIXREF:
+                metajson_list = unixref_crosswalk.unixref_xmletree_to_metajson_list(xmletree, source, only_first_record)
             else:
                 print "Error: {} input_format not managed".format(input_format)
 
@@ -186,7 +193,7 @@ def convert_metajson(metajson, output_format):
     elif output_format == constants.FORMAT_REPEC:
         return repec_crosswalk.metajson_to_repec(metajson)
     elif output_format == constants.FORMAT_BIBTEX:
-        return None
+        pass
 
 
 def register_namespaces():
@@ -207,6 +214,13 @@ def guess_file_type(input_file):
 
 
 def guess_string_type(string):
+    if string.startswith("TY  -"):
+        return constants.FORMAT_RIS
+    else:
+        return None
+
+
+def guess_txt_format(txt):
     # todo
     return None
 

@@ -1,0 +1,33 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "international",
+                "fr": "international"
+            },
+            "major": true,
+            "type_id": "international"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "national",
+                "fr": "national"
+            },
+            "major": true,
+            "type_id": "national"
+        },
+        {
+            "labels": {
+                "en": "regional",
+                "fr": "régional"
+            },
+            "major": true,
+            "type_id": "regional"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "location_of_units_of_observation"
+}

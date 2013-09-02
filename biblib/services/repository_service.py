@@ -22,7 +22,10 @@ UIFIELDS = "uifields"
 config = config_service.config["mongodb"]
 default_corpus = config["default_corpus"]
 
-mongodb = pymongo.MongoClient(config['host'], config['port'])
+try:
+    mongodb = pymongo.MongoClient(config['host'], config['port'])
+except pymongo.errors.ConnectionFailure as e:
+    print "ERROR: connexion failure to MongoDB : {}".format(e)
 
 # examples:
 # resdb = mongodb[config['mongo-scrapy']['jobListCol']].update({'_id': {'$in': update_ids}}, {'$set': {'crawling_status': crawling_statuses.RUNNING}}, multi=True, safe=True)

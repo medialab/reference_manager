@@ -1,0 +1,113 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "area", 
+                "fr": "zone"
+            }, 
+            "type_id": "area"
+        }, 
+        {
+            "labels": {
+                "en": "city", 
+                "fr": "ville"
+            }, 
+            "type_id": "city"
+        }, 
+        {
+            "labels": {
+                "en": "city section", 
+                "fr": "section de la ville"
+            }, 
+            "type_id": "citySection"
+        }, 
+        {
+            "labels": {
+                "en": "code", 
+                "fr": "code"
+            }, 
+            "type_id": "code"
+        }, 
+        {
+            "labels": {
+                "en": "continent", 
+                "fr": "continent"
+            }, 
+            "type_id": "continent"
+        }, 
+        {
+            "labels": {
+                "en": "country", 
+                "fr": "pays"
+            }, 
+            "type_id": "country"
+        }, 
+        {
+            "labels": {
+                "en": "county", 
+                "fr": "comté"
+            }, 
+            "type_id": "county"
+        }, 
+        {
+            "labels": {
+                "en": "extraterrestrial area", 
+                "fr": "territoire extraterrestre"
+            }, 
+            "type_id": "extraterrestrialArea"
+        }, 
+        {
+            "labels": {
+                "en": "island", 
+                "fr": "île"
+            }, 
+            "type_id": "island"
+        }, 
+        {
+            "labels": {
+                "en": "macro", 
+                "fr": "macro"
+            }, 
+            "type_id": "macro"
+        }, 
+        {
+            "labels": {
+                "en": "micro", 
+                "fr": "micro"
+            }, 
+            "type_id": "micro"
+        }, 
+        {
+            "labels": {
+                "en": "province", 
+                "fr": "province"
+            }, 
+            "type_id": "province"
+        }, 
+        {
+            "labels": {
+                "en": "region", 
+                "fr": "région"
+            }, 
+            "type_id": "region"
+        }, 
+        {
+            "labels": {
+                "en": "state", 
+                "fr": "état"
+            }, 
+            "type_id": "state"
+        }, 
+        {
+            "labels": {
+                "en": "territory", 
+                "fr": "territoire"
+            }, 
+            "type_id": "territory"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "geographic_type"
+}

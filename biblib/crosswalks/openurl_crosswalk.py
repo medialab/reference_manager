@@ -5,47 +5,67 @@
 import urllib
 from xml.sax.saxutils import quoteattr
 from biblib.services import creator_service
+from biblib.util import constants
+
+GENRE_BOOK_BOOK = "book"
+GENRE_BOOK_CONFERENCE = "conference"
+GENRE_BOOK_PROCEEDING = "proceeding"
+GENRE_BOOK_REPORT = "report"
+GENRE_BOOK_UNKNOWN = "unknown"
+
+GENRE_DISSERTATION = "dissertation"
+
+GENRE_JOURNAL_ARTICLE = "article"
+GENRE_JOURNAL_CONFERENCE = "conference"
+GENRE_JOURNAL_ISSUE = "issue"
+GENRE_JOURNAL_JOURNAL = "journal"
+GENRE_JOURNAL_PROCEEDING = "proceeding"
+GENRE_JOURNAL_UNKNOWN = "unknown"
+
+GENRE_PATENT = "patent"
 
 metajson_type_to_openurl_book_genre = {
-    "Book": "book",
-    "BookPart": "book",
-    "ConferencePaper": "conference",
-    "ConferenceProceedings": "proceeding",
-    "Dictionary": "book",
-    "Document": "unknown",
-    "EditedBook": "book",
-    "Encyclopedia": "book",
-    "Report": "report"
+    constants.DOC_TYPE_BOOK: GENRE_BOOK_BOOK,
+    constants.DOC_TYPE_BOOKLET: GENRE_BOOK_BOOK,
+    constants.DOC_TYPE_BOOKPART: GENRE_BOOK_BOOK,
+    constants.DOC_TYPE_CONFERENCEPAPER: GENRE_BOOK_CONFERENCE,
+    constants.DOC_TYPE_CONFERENCEPROCEEDINGS: GENRE_BOOK_PROCEEDING,
+    constants.DOC_TYPE_DICTIONARY: GENRE_BOOK_BOOK,
+    constants.DOC_TYPE_EBOOK: GENRE_BOOK_BOOK,
+    constants.DOC_TYPE_EDITEDBOOK: GENRE_BOOK_BOOK,
+    constants.DOC_TYPE_ENCYCLOPEDIA: GENRE_BOOK_BOOK,
+    constants.DOC_TYPE_MULTIVOLUMEBOOK: GENRE_BOOK_BOOK,
+    constants.DOC_TYPE_REPORT: GENRE_BOOK_REPORT,
+    constants.DOC_TYPE_UNPUBLISHEDDOCUMENT: GENRE_BOOK_UNKNOWN
 }
 
-metajson_type_to_openurl_dissertation = {
-    "DoctoralThesis": "dissertation",
-    "MasterThesis": "dissertation",
-    "ProfessoralThesis": "dissertation",
-    "Thesis": "dissertation"
+metajson_type_to_openurl_dissertation_genre = {
+    constants.DOC_TYPE_DISSERTATION: GENRE_DISSERTATION,
+    constants.DOC_TYPE_DOCTORALTHESIS: GENRE_DISSERTATION,
+    constants.DOC_TYPE_MASTERTHESIS: GENRE_DISSERTATION,
+    constants.DOC_TYPE_PROFESSORALTHESIS: GENRE_DISSERTATION
 }
 
 metajson_type_to_openurl_journal_genre = {
-    "Annotation": "article",
-    "Article": "article",
-    "BookReview": "article",
-    "ConferencePaper": "conference",
-    "ConferenceProceedings": "proceeding",
-    "Document": "unknown",
-    "InterviewArticle": "article",
-    "Journal": "journal",
-    "JournalArticle": "article",
-    "Magazine": "journal",
-    "MagazineArticle": "article",
-    "Newspaper": "journal",
-    "NewspaperArticle": "article",
-    "Periodical": "journal",
-    "PeriodicalIssue": "issue",
-    "Preprint": "issue"
+    constants.DOC_TYPE_ANNOTATIONARTICLE: GENRE_JOURNAL_ARTICLE,
+    constants.DOC_TYPE_ARTICLEREVIEW: GENRE_JOURNAL_ARTICLE,
+    constants.DOC_TYPE_BOOKREVIEW: GENRE_JOURNAL_ARTICLE,
+    constants.DOC_TYPE_CONFERENCEPAPER: GENRE_JOURNAL_CONFERENCE,
+    constants.DOC_TYPE_CONFERENCEPROCEEDINGS: GENRE_JOURNAL_PROCEEDING,
+    constants.DOC_TYPE_EJOURNAL: GENRE_JOURNAL_JOURNAL,
+    constants.DOC_TYPE_INTERVIEWARTICLE: GENRE_JOURNAL_ARTICLE,
+    constants.DOC_TYPE_JOURNAL: GENRE_JOURNAL_JOURNAL,
+    constants.DOC_TYPE_JOURNALARTICLE: GENRE_JOURNAL_ARTICLE,
+    constants.DOC_TYPE_MAGAZINE: GENRE_JOURNAL_JOURNAL,
+    constants.DOC_TYPE_MAGAZINEARTICLE: GENRE_JOURNAL_ARTICLE,
+    constants.DOC_TYPE_NEWSPAPER: GENRE_JOURNAL_JOURNAL,
+    constants.DOC_TYPE_NEWSPAPERARTICLE: GENRE_JOURNAL_ARTICLE,
+    constants.DOC_TYPE_PERIODICALISSUE: GENRE_JOURNAL_ISSUE,
+    constants.DOC_TYPE_PREPRINT: GENRE_JOURNAL_UNKNOWN
 }
 
 metajson_type_to_openurl_patent = {
-    "Patent": "patent"
+    constants.DOC_TYPE_PATENT: GENRE_PATENT
 }
 
 
@@ -165,7 +185,7 @@ def metajson_to_openurl(document):
         if sici:
             openurl["rft.sici"] = sici
 
-    elif rec_type in metajson_type_to_openurl_dissertation:
+    elif rec_type in metajson_type_to_openurl_dissertation_genre:
         # dissertation
         openurl["rft_val_fmt"] = rft_val_fmt_dissertation
 

@@ -1,0 +1,49 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "default": true,
+            "labels": {
+                "en": "one time interview",
+                "fr": "entretien unique"
+            },
+            "major": true,
+            "type_id": "one time interview"
+        },
+        {
+            "labels": {
+                "en": "repeated interview",
+                "fr": "entretien répété"
+            },
+            "major": true,
+            "type_id": "repeated interview"
+        },
+        {
+            "labels": {
+                "en": "punctual observation",
+                "fr": "observation ponctuelle"
+            },
+            "major": true,
+            "type_id": "punctual observation"
+        },
+        {
+            "labels": {
+                "en": "systematic observation",
+                "fr": "observation systématique"
+            },
+            "major": true,
+            "type_id": "systematic observation"
+        },
+        {
+            "labels": {
+                "en": "other",
+                "fr": "autre"
+            },
+            "major": true,
+            "type_id": "other"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "data_collection_time_dimension"
+}

@@ -456,14 +456,6 @@
                                 {
                                     "deprecated": true,
                                     "labels": {
-                                        "en": "Act / Statute",
-                                        "fr": "Loi"
-                                    },
-                                    "type_id": "Statute"
-                                },
-                                {
-                                    "deprecated": true,
-                                    "labels": {
                                         "en": "Government publication",
                                         "fr": "Autre publication officielle"
                                     },
@@ -476,6 +468,14 @@
                                         "fr": "Norme et standard"
                                     },
                                     "type_id": "Standard"
+                                },
+                                {
+                                    "deprecated": true,
+                                    "labels": {
+                                        "en": "Statute",
+                                        "fr": "Loi"
+                                    },
+                                    "type_id": "Statute"
                                 },
                                 {
                                     "deprecated": true,

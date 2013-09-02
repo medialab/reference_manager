@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-from biblib.metajson import Collection
 from biblib.citations import citations_manager
 from biblib.services import crosswalks_service
+from biblib.services import metajson_service
 from biblib.services import repository_service
 from biblib.util import constants
 from biblib.util import jsonbson
@@ -37,12 +37,7 @@ def export(col_id, col_title, items, output_file_path, output_format, error_file
 def export_metajson_collection(col_id, col_title, metajson_list, output_file_path):
     if metajson_list:
         with open(output_file_path, "w") as output_file:
-            collection = Collection()
-            if col_id:
-                collection["col_id"] = col_id
-            if col_title:
-                collection["title"] = col_title
-            collection["records"] = metajson_list
+            collection = metajson_service.create_collection(col_id, col_title, metajson_list)
             dump = jsonbson.dumps_bson(collection, True)
             output_file.write(dump)
             return dump

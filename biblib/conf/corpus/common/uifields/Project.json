@@ -27,12 +27,32 @@
         },
         {
             "labels": {
-                "en": "Subtitle",
-                "fr": "Sous-titre"
+                "en": "Acronym",
+                "fr": "Acronyme"
             },
-            "property": "title_sub",
+            "property": "acronym",
             "required": false,
             "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Time Period",
+                "fr": "Période"
+            },
+            "filter_date_start": "date_period_start",
+            "filter_date_end": "date_period_end",
+            "required": true,
+            "type_ui": "YearRangeField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": false,
+            "type_ui": "LanguageValueField"
         },
         {
             "labels": {
@@ -45,69 +65,10 @@
             "type_ui": "CreatorField"
         },
         {
+            "id_type": "eu",
             "labels": {
-                "en": "Journal",
-                "fr": "Revue"
-            },
-            "multiple": true,
-            "only_one": true,
-            "property": "is_part_ofs",
-            "required": true,
-            "type_fields": [
-                "Journal"
-            ],
-            "type_ui": "DocumentField"
-        },
-        {
-            "labels": {
-                "en": "Volume",
-                "fr": "Volume"
-            },
-            "property": "part_volume",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Issue",
-                "fr": "Issue"
-            },
-            "property": "part_issue",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Date issued",
-                "fr": "Date de publication"
-            },
-            "property": "date_issued",
-            "required": true,
-            "type_ui": "DateField"
-        },
-        {
-            "labels": {
-                "en": "Start page",
-                "fr": "Page de d\u00e9but"
-            },
-            "property": "part_page_start",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "End page",
-                "fr": "Page de fin"
-            },
-            "property": "part_page_end",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "id_type": "doi",
-            "labels": {
-                "en": "DOI",
-                "fr": "DOI"
+                "en": "European identifier",
+                "fr": "Identifiant européen"
             },
             "multiple": true,
             "only_one": true,
@@ -116,15 +77,16 @@
             "type_ui": "IdentifierField"
         },
         {
+            "id_type": "anr",
             "labels": {
-                "en": "Languages",
-                "fr": "Langues"
+                "en": "ANR identifier",
+                "fr": "Identifiant ANR"
             },
             "multiple": true,
-            "property": "languages",
+            "only_one": true,
+            "property": "identifiers",
             "required": false,
-            "type_source": "language",
-            "type_ui": "TypeField"
+            "type_ui": "IdentifierField"
         },
         {
             "labels": {
@@ -145,9 +107,19 @@
             "property": "keywords",
             "required": false,
             "type_ui": "KeywordField"
+        },
+        {
+            "labels": {
+                "en": "Awards",
+                "fr": "R\u00e9compenses"
+            },
+            "multiple": true,
+            "property": "awards",
+            "required": false,
+            "type_ui": "CharField"
         }
     ],
     "rec_class": "Field",
     "rec_metajson": 1,
-    "rec_type": "Annotation"
+    "rec_type": "Project"
 }

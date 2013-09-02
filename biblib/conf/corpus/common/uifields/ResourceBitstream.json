@@ -5,7 +5,7 @@
                 "en": "Fichier",
                 "fr": "Fichier"
             },
-            "property": "url",
+            "property": "bitstream",
             "required": true,
             "type_ui": "CharField"
         }

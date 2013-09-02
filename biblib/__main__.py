@@ -24,8 +24,8 @@ console.setup_console()
 default_corpus = config_service.config["mongodb"]["default_corpus"]
 
 # Supported input and output formats
-INPUT_FORMATS = [constants.FORMAT_BIBTEX, constants.FORMAT_DDI, constants.FORMAT_ENDNOTEXML, constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_RESEARCHERML]
-OUTPUT_FORMATS = [constants.FORMAT_HTML, constants.FORMAT_METAJSON]
+INPUT_FORMATS = [constants.FORMAT_BIBTEX, constants.FORMAT_DIDL, constants.FORMAT_ENDNOTEXML, constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_RESEARCHERML, constants.FORMAT_RIS, constants.FORMAT_SUMMONJSON, constants.FORMAT_UNIXREF]
+OUTPUT_FORMATS = [constants.FORMAT_HTML, constants.FORMAT_METAJSON, constants.FORMAT_REPEC]
 
 
 def clean_corpus(args):

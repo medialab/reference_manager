@@ -249,5 +249,5 @@
     ],
     "rec_class": "Type",
     "rec_metajson": 1,
-    "type_id": "identifier_type"
+    "type_id": "document_identifier_type"
 }

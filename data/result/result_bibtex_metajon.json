@@ -1,1089 +1,438 @@
 {
   "col_id": "test_bibtex", 
+  "rec_class": "Collection", 
+  "rec_metajson": 1, 
   "records": [
-    [
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "AOSIS", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2012", 
-        "description": "Small Islands Countries Declaration in preparation of the COP 18", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Alliance of Small Island States Leaders ’ Declaration , 2012"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "AOSIS", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2009", 
-        "description": "Small Islands Countries Declaration in preparation of the COP 15", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "AOSIS DECLARATION ON CLIMATE CHANGE 2009"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "Climate Vulnerable Forum", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": null, 
-        "description": "1st declaration of the CVF", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Climate Vulnerable Forum Declaration"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "Climate Vulnerable Forum", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2011", 
-        "description": "3rd Declaration of the CVF", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Climate Vulnerable Forum - DHAKA DECLARATION"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "Climate Vulnerable Forum", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2010", 
-        "description": "2nd Declaration of the CVF", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Climate Vulnerable Forum - AMBO DECLARATION"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "1996", 
-        "description": "1st COP UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "SUMMARY OF THE SECOND CONFERENCE OF THE PARTIES TO THE FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "1996", 
-        "description": "Ad Hoc Group on the Berlin Mandate (5th session)", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "SUBSIDIARY BODIES OF THE UN FRAMEWORK CONVENTION ON CLIMATE CHANGE : A BRIEF HISTORY OF THE FCCC AND ITS"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2012", 
-        "description": "14th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "1996", 
-        "description": "Ad Hoc Group on the Berlin Mandate (3rd session)", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "THE AD HOC GROUP ON THE BERLIN"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "1997", 
-        "description": "3rd COP if the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2003", 
-        "description": "9th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2001", 
-        "description": "7th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2010", 
-        "description": "16th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2011", 
-        "description": "17th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "1995", 
-        "description": "Ad Hoc Group on the Berlin Mandate (1st session)", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "SESSION OF THE INC FOR A FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "1995", 
-        "description": null, 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "A BRIEF HISTORY OF THE FRAMEWORK CONVENTION ON"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2005", 
-        "description": "UNFCCC seminar on the development and transfer of environmentally sound technologies for adaptation to climate change", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "A BRIEF HISTORY OF THE UNFCCC AND"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "1995", 
-        "description": "1st COP UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "CONFERENCE OF THE PARTIES FOR THE FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "1998", 
-        "description": "4th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2000", 
-        "description": "6th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2000", 
-        "description": "5th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "1997", 
-        "description": "d Hoc Group on the Berlin Mandate (7th session)", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "REPORT OF THE MEETINGS OF THE SUBSIDIARY BODIES TO THE FRAMEWORK"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2004", 
-        "description": "10th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2010", 
-        "description": "Ad Hoc Group on the Berlin Mandate (6th session)", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "HIGHLIGHTS FROM THE SIXTH SESSION OF THE AD HOC GROUP ON THE BERLIN MANDATE"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2005", 
-        "description": "11th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "1995", 
-        "description": "Ad Hoc Group on the Berlin Mandate (2nd session)", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "REPORT OF THE AD HOC GROUP ON THE BERLIN MANDATE"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB (2011)", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2011", 
-        "description": "Outputs of the Durban CoP (COP 17)", 
-        "is_part_ofs": [
-          {
-            "rec_class": "Document", 
-            "rec_metajson": 1, 
-            "rec_type": "journal", 
-            "title": "Earth Negotiations Bulletin"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Summary of the Durban Climate Change Conference"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "GEF", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2000", 
-        "description": "How the Global Environmental Facility initiative contributed to the implementation of Agendas 21 and Sustainable Development", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "GEF CONTRIBUTIONS TO AGENDA 21"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Hansen", 
-              "name_given": "J E", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2007", 
-        "description": "Reticences of scientists to disseminate or believe to extreme sea level rise scenarios", 
-        "is_part_ofs": [
-          {
-            "rec_class": "Document", 
-            "rec_metajson": 1, 
-            "rec_type": "journal", 
-            "title": "Environmental Research Letters"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Scientific reticence and sea level rise"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Head", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2010", 
-        "description": "Some elements on the hiostory of the adaptation concept in the climate change arena.", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Progress in Human Geography Progress reports Cultural ecology : adaptation – retrofi tting a concept ?"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Matczak", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2010", 
-        "description": "Perception of environmental changes and risk play a major role in influencing decision and action. Interviews with experts emphaiszed 5 different groups with different mental models: advocacy group, administration, politicians, researchers and media/public", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Different perceptions of adaptation to climate change : a mental model approach applied to the evidence from expert interviews"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Negotiations", 
-              "name_given": "Development", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2002", 
-        "description": "8th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Negotiations", 
-              "name_given": "Development", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2012", 
-        "description": "13th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Negotiations", 
-              "name_given": "Development", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2006", 
-        "description": "12th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Pattberg", 
-              "name_given": "Philipp", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2008", 
-        "description": null, 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Beyond the public and private divide : remapping transnational climate governance in the 21st century"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "et al", 
-              "name_given": "Reid", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2012", 
-        "description": "Advocacy acticities of civil society networks from southern countries", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Southern voices on climate policy choices"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Schipper", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2006", 
-        "description": "The history of Adaptation in the International Negotiations on Climate change", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Conceptual History of Adaptation in the UNFCCC Process"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Pilifosova", 
-              "name_given": "Smit \\&", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2001", 
-        "description": "IPCC Adapttaion chapter of the Third Assessment Report", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Adaptation to Climate Change in the Context of Sustainable Development and Equity"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "SSEE", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2011", 
-        "description": "Relations between Mitigation and Adaptation + Funding issues", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "International climate change negotiations: key lessons and next steps"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "UNFCCC", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2007", 
-        "description": "Outputs of the Bali COP 13 in 2007", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Report of the Conference of the Parties on its thirteenth session , held in Bali Part Two : Action taken by the Conference of the Parties at its thirteenth session"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "WWF", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2010", 
-        "description": "WWF Recommendations for climate finance for the G20 Summit", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Scaling up investments in global climate solutions WWF recommendations for the G20"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "WWF", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2010", 
-        "description": "WWF Recommendations to the Advisory Group on Climate Finance", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "wwf RECOMMENDATIONs"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "WWF", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2010", 
-        "description": "Recommendtaions for COP 16 (Cancun)", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "WWF 2010 RECOMMENDATIONS"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "WWF", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2011", 
-        "description": "WWF's expectations for the UNFCCC Bonn Session June 2011", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "WWF Expectations for the UNFCCC Bonn Session"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "WWF", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2013", 
-        "description": "WWF Expectations for the Copenhagen Climate Deal 2009", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "WWF Global Climate Policy WWF Expectations for a fair , ambitious and binding global climate deal in Copenhagen"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "WWF", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2013", 
-        "description": "The Montreal Climate Change Conference 2005 - results and next steps", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "The Montreal Climate Conference , Results and Next Steps January 2006 Introduction What were the cornerstones of the Montreal outcomes ? Launch of negotiations for the future"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2000", 
-        "description": "UNFCCC workshop on Adverse effects of CC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "OF CLIMATE CHANGE AND THE IMPACT OF"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2008", 
-        "description": "UNFCCC Expert Group Meeting on Methods and Tools and on Data and Observations under the Nairobi Work Programme on Impacts, Vulnerability and Adaptation to Climate Change", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "SUMMARY OF THE UNFCCC EXPERT GROUP A BRIEF HISTORY OF ADAPTATION TO CLIMATE"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2009", 
-        "description": "UNFCCC Technical Workshop on Increasing Economic Resilience to Climate Change and Reducing Reliance on Vulnerable Economic Sectors through Economic Diversification", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "SUMMARY OF THE UNFCCC TECHNICAL"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2000", 
-        "description": "UNFCCC workshop on best practices in policies and measures", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "SUMMARY OF THE WORKSHOP ON BEST"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2009", 
-        "description": "UNFCCC Technical Workshop on Advancing the Integration of Approaches to Adaptation Planning", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "UNFCCC TECHNICAL WORKSHOP ON"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Smith", 
-              "name_given": "Mark Stafford", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2011", 
-        "description": "Complexity and uncertainty can be reduced by a systematic approach to categorizing the interactions between decision lifetime, the type of uncertainty in the relevant drivers of change and the nature of adaptation response options.", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Rethinking adaptation for a 4 ° C world"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "UNFCCC", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "1996", 
-        "description": "Design of the Global Environment Facility", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "REPORT OF THE CONFERENCE OF THE PARTIES ON ITS SECOND SESSION, HELD AT GENEVA FROM 8 TO 19 JULY 1996"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "WWF", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2008", 
-        "description": "A Global Financial Architecture for Climate Change", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "A Global Financial Architecture for Climate Change"
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2001", 
-        "description": "6th COP of the UNFCCC (bis)", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "ENB", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2009", 
-        "description": "15th COP of the UNFCCC", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Earth Negotiations Bulletin"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Corfee-Morlot", 
-              "name_given": "Jamet and", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2009", 
-        "description": "A main conclusion is that although there are large uncertainties (which are not fully reflected in existing estimates of climate change global economic impacts), policy action may be justified in economic terms.", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Assessing the Impacts of Climate Change"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Remig", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2009", 
-        "description": "The author emphasizes the importance of taking into consideration historical emissions that builds upon a social, instead of a purely philosophical, lecture of responsibility. International climate change negotiations in the UN framework could lead to the construction of a “climate responsibility.”", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Historical responsibility and equity in international climate change negotiations"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Sierra", 
-              "rec_class": "Person", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2011", 
-        "description": "This paper outlines the need for and barriers to private sector investment in International funding for Adaptation. Three ideas to overcome the barriuers are: (1) to put in place a strong enabling environment for private sector, (2) to use public funds to support early entry projects at the country level that will be of sufficient scale to help transform markets and thus pave the way for further private investment, (3) to catalyze private capital with innovative tools that will attract the private sector as an investor at scale.", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "The Green Climate Fund : Options for Mobilizing the Private Sector"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "UNFCCC", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2011", 
-        "description": "Outputs of the Cancun Conference of the Parties (December 2010)", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Framework Convention on Climate Change Conference of the Parties Report of the Conference of the Parties on its sixteenth session , held in Cancun from 29 November to Part Two : Action taken by the Conference of the Parties at its sixteenth session The Ca"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "UNFCCC", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2011", 
-        "description": "Ouputs of the Cancun COP 16 + establishement of the Green Climate Fund", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Framework Convention on Climate Change Conference of the Parties Report of the Conference of the Parties on its sixteenth session , held in Cancun from 29 November to Part Two : Action taken by the Conference of the Parties at its sixteenth session The Ca"
-      }, 
-      {
-        "creators": [
-          {
-            "agent": {
-              "name": "UNFCCC", 
-              "rec_class": "Orgunit", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2012", 
-        "description": "Outputs of the COP 17 (Durban) + elemnts of the Global Environment Facility", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "title": "Conference of the Parties Report of the Conference of the Parties on its seventeenth session , held in Durban from 28 November to Addendum Part Two : Action taken by the Conference of the Parties at its seventeenth session Contents Decisions adopted by th"
-      }
-    ]
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Adams", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "rec_class": "Document", 
+          "rec_metajson": 1, 
+          "rec_type": "Journal", 
+          "title": "The name of the journal"
+        }
+      ], 
+      "part_issue": "2", 
+      "part_page_end": "213", 
+      "part_page_start": "201", 
+      "part_volume": "4", 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "JournalArticle", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Babington", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "edition": "3", 
+      "part_number": "10", 
+      "part_volume": "4", 
+      "publisher_places": [
+        "The address"
+      ], 
+      "publishers": [
+        "The name of the publisher"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "Book", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Caxton", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "published_how": "How it was published", 
+      "publisher_places": [
+        "The address of the publisher"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "Booklet", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Draper", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }, 
+        {
+          "agent": {
+            "name_family": "editor", 
+            "name_given": "The", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "edt"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "rec_class": "Document", 
+          "rec_metajson": 1, 
+          "rec_type": "Book", 
+          "title": "The title of the book"
+        }
+      ], 
+      "part_number": "5", 
+      "part_page_start": "213", 
+      "part_volume": "4", 
+      "publisher_places": [
+        "The address of the publisher"
+      ], 
+      "publishers": [
+        "The publisher"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "ConferencePaper", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Eston", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "edition": "3", 
+      "part_chapter_number": "8", 
+      "part_number": "5", 
+      "part_page_end": "213", 
+      "part_page_start": "201", 
+      "part_volume": "4", 
+      "publisher_places": [
+        "The address of the publisher"
+      ], 
+      "publishers": [
+        "The name of the publisher"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "BookPart", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Farindon", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }, 
+        {
+          "agent": {
+            "name_family": "editor", 
+            "name_given": "The", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "edt"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "edition": "3", 
+      "is_part_ofs": [
+        {
+          "rec_class": "Document", 
+          "rec_metajson": 1, 
+          "rec_type": "Book", 
+          "title": "The title of the book"
+        }
+      ], 
+      "part_chapter_number": "8", 
+      "part_number": "5", 
+      "part_page_end": "213", 
+      "part_page_start": "201", 
+      "part_volume": "4", 
+      "publisher_places": [
+        "The address of the publisher"
+      ], 
+      "publishers": [
+        "The name of the publisher"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "BookPart", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Gainsford", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "edition": "3", 
+      "publisher_places": [
+        "The address of the publisher"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "Manuel", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Harwood", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "publisher_places": [
+        "The address of the publisher"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "MasterThesis", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Isley", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "published_how": "How it was published", 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "UnpublishedDocument", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Joslin", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "publisher_places": [
+        "The address of the publisher"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "DoctoralThesis", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Kidwelly", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "edt"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "part_number": "5", 
+      "part_volume": "4", 
+      "publisher_places": [
+        "The address of the publisher"
+      ], 
+      "publishers": [
+        "The name of the publisher"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "ConferenceProceedings", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Lambert", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "part_issue": "2", 
+      "publisher_places": [
+        "The address of the publisher"
+      ], 
+      "publishers": [
+        "The institution that published"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "TechReport", 
+      "title": "The title of the work"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Marcheford", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "199307", 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "An optional note"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_type": "UnpublishedDocument", 
+      "title": "The title of the work"
+    }
   ], 
   "title": "Test bibtex"
 }

@@ -24,8 +24,8 @@ def setup_console(sys_enc="utf-8"):
             #TODO: win64/python64 implementation
         else:
             enc = (sys.stdout.encoding if sys.stdout.isatty() else
-                    sys.stderr.encoding if sys.stderr.isatty() else
-                    sys.getfilesystemencoding() or sys_enc)
+                   sys.stderr.encoding if sys.stderr.isatty() else
+                   sys.getfilesystemencoding() or sys_enc)
 
         sys.setdefaultencoding(sys_enc)
 

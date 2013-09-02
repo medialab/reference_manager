@@ -1,50 +1,77 @@
 {
   "col_id": "test_didl", 
+  "rec_class": "Collection", 
+  "rec_metajson": 1, 
   "records": [
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Centre d'études et de recherches internationales", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Ramel", 
-              "name_given": "Frédéric", 
-              "rec_class": "Person", 
-              "rec_id": "2441/53r60a8s3kup1vc9kc499cq2k", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "date_issued": "2010-01", 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_modified_date": "2013-04-05T00:09:49Z", 
-        "rec_source": "test", 
-        "rec_type": "JournalArticle", 
-        "resources": [
-          {
-            "format_mimetype": "application/pdf", 
-            "rec_access_rights": "openAccess", 
-            "rec_class": "Resource", 
-            "rec_metajson": 1, 
-            "rec_modified_date": "2013-02-22T15:21:57Z", 
-            "rec_state": "published", 
-            "rec_type": "remote", 
-            "relation_type": "publication", 
-            "relation_version": "publishedVersion", 
-            "url": "http://spire.sciences-po.fr/hdl:/2441/dambferfb7dfprc9m2l36952j/resources/spb-4-ramel-strategy-for-eu-third-party.pdf"
-          }
-        ], 
-        "title": "European Union in the Post-Cold War International System : a Third-party", 
-        "title_non_sort": "The"
-      }
-    ]
+    {
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Centre d'études et de recherches internationales", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q380gh", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Ramel", 
+            "name_given": "Frédéric", 
+            "rec_class": "Person", 
+            "rec_id": "2441/53r60a8s3kup1vc9kc499cq2k", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2010-01", 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "In this first paper of the Grand Strategy Project series, French expert Frédéric Ramel describes the EU as being a third party more than a strategic actor. In a world that is unstable due to its oligopolar structure and its heterogeneous nature, he argues, the EU needs a “complete strategy” in order to reconcile maximum variety and diversity with maximum unity and integration; set up coordination with other actors; and develop strategic agility and strategic expectancy. (Présentation de l'éditeur)"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "issuance": "continuing", 
+          "languages": [
+            "fr"
+          ], 
+          "rec_class": "Document", 
+          "rec_metajson": 1, 
+          "rec_type": "Journal", 
+          "title": "Security Policy Brief"
+        }
+      ], 
+      "languages": [
+        "en"
+      ], 
+      "part_issue": "4", 
+      "part_page_end": "6", 
+      "part_page_start": "1", 
+      "publishers": [
+        "Egmont (Royal Institute of International Relations)"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-04-05T00:09:49Z", 
+      "rec_source": "test", 
+      "rec_type": "JournalArticle", 
+      "resources": [
+        {
+          "format_mimetype": "application/pdf", 
+          "rec_access_rights": "openAccess", 
+          "rec_class": "Resource", 
+          "rec_metajson": 1, 
+          "rec_modified_date": "2013-02-22T15:21:57Z", 
+          "rec_state": "published", 
+          "rec_type": "remote", 
+          "relation_type": "publication", 
+          "relation_version": "publishedVersion", 
+          "url": "http://spire.sciences-po.fr/hdl:/2441/dambferfb7dfprc9m2l36952j/resources/spb-4-ramel-strategy-for-eu-third-party.pdf"
+        }
+      ], 
+      "title": "European Union in the Post-Cold War International System : a Third-party", 
+      "title_non_sort": "The "
+    }
   ], 
   "title": "Test didl"
 }

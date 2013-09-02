@@ -1,27 +1,15 @@
 {
   "col_id": "test_ddi", 
+  "rec_class": "Collection", 
+  "rec_metajson": 1, 
   "records": [
-    [
-      null
-    ], 
-    [
-      null
-    ], 
-    [
-      null
-    ], 
-    [
-      null
-    ], 
-    [
-      null
-    ], 
-    [
-      null
-    ], 
-    [
-      null
-    ]
+    null, 
+    null, 
+    null, 
+    null, 
+    null, 
+    null, 
+    null
   ], 
   "title": "Test ddi"
 }

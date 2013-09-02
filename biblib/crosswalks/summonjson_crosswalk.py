@@ -2,53 +2,56 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-from biblib import metajson
 from biblib.metajson import Collection
 from biblib.metajson import Document
 from biblib.metajson import Creator
 from biblib.metajson import Subject
 from biblib.services import creator_service
 from biblib.services import language_service
+from biblib.services import metajson_service
+from biblib.util import constants
+from biblib.util import string
 
 
 summon_document_type_to_metajson_document_type = {
-    "Audio Recording": "AudioRecording",
-    "Book": "Book",
-    "Book Chapter": "BookPart",
-    "Book Review": "BookReview",
-    "Case": "LegalCase",
-    "Computer File": "Software",
-    "Conference Proceeding": "Book",
-    "Data Set": "Dataset",
-    "Dissertation": "Thesis",
-    "Image": "Image",
-    "Journal": "Journal",
-    "Journal Article": "JournalArticle",
-    "Magazine": "Magazine",
-    "Magazine Article": "MagazineArticle",
-    "Manuscript": "UnpublishedDocument",
-    "Map": "Map",
-    "Music Recording": "MusicRecording",
-    "Music Score": "MusicalScore",
-    "Newspaper": "Newspaper",
-    "Newspaper Article": "NewspaperArticle",
-    "Patent": "Patent",
-    "Poster": "ConferencePoster",
-    "Realia": "PhysicalObject",
-    "Reference": "Dictionary",
-    "Report": "Report",
-    "Thesis": "Thesis",
-    "Video Recording": "VideoRecording",
-    "Web Resource": "WebEntity"
+    "Audio Recording": constants.DOC_TYPE_AUDIORECORDING,
+    "Book": constants.DOC_TYPE_BOOK,
+    "Book Chapter": constants.DOC_TYPE_BOOKPART,
+    "Book Review": constants.DOC_TYPE_BOOKREVIEW,
+    "Case": constants.DOC_TYPE_LEGALCASE,
+    "Computer File": constants.DOC_TYPE_SOFTWARE,
+    "Conference Proceeding": constants.DOC_TYPE_CONFERENCEPROCEEDINGS,
+    "Data Set": constants.DOC_TYPE_DATASETQUANTI,
+    "Dissertation": constants.DOC_TYPE_DISSERTATION,
+    "eBook": constants.DOC_TYPE_EBOOK,
+    "Image": constants.DOC_TYPE_IMAGE,
+    "Journal": constants.DOC_TYPE_JOURNAL,
+    "Journal Article": constants.DOC_TYPE_JOURNALARTICLE,
+    "Magazine": constants.DOC_TYPE_MAGAZINE,
+    "Magazine Article": constants.DOC_TYPE_MAGAZINEARTICLE,
+    "Manuscript": constants.DOC_TYPE_MANUSCRIPT,
+    "Map": constants.DOC_TYPE_MAP,
+    "Music Recording": constants.DOC_TYPE_MUSICRECORDING,
+    "Music Score": constants.DOC_TYPE_MUSICALSCORE,
+    "Newspaper": constants.DOC_TYPE_NEWSPAPER,
+    "Newspaper Article": constants.DOC_TYPE_NEWSPAPERARTICLE,
+    "Patent": constants.DOC_TYPE_PATENT,
+    "Poster": constants.DOC_TYPE_CONFERENCEPOSTER,
+    "Realia": constants.DOC_TYPE_PHYSICALOBJECT,
+    "Reference": constants.DOC_TYPE_DICTIONARY,
+    "Report": constants.DOC_TYPE_REPORT,
+    "Thesis": constants.DOC_TYPE_DOCTORALTHESIS,
+    "Video Recording": constants.DOC_TYPE_VIDEORECORDING,
+    "Web Resource": constants.DOC_TYPE_WEBSITE
 }
 
 
 summon_document_type_to_metajson_document_is_part_of_type = {
-    "Book Chapter": "Book",
-    "Book Review": "Journal",
-    "Journal Article": "Journal",
-    "Magazine Article": "Magazine",
-    "Newspaper Article": "Newspaper"
+    "Book Chapter": constants.DOC_TYPE_BOOK,
+    "Book Review": constants.DOC_TYPE_JOURNAL,
+    "Journal Article": constants.DOC_TYPE_JOURNAL,
+    "Magazine Article": constants.DOC_TYPE_MAGAZINE,
+    "Newspaper Article": constants.DOC_TYPE_NEWSPAPER
 }
 
 
@@ -112,6 +115,10 @@ def summonjson_document_to_metajson(sum_doc, source):
     # extract summon properties
     creators = extract_creators(sum_doc)
     copyright_statement = extract_value(sum_doc, "Copyright")
+    database_id = extract_value(sum_doc, "DBID")
+    print "DBID: {}".format(database_id)
+    database_xml = extract_dict_value(sum_doc, "Database_xml")
+    print "database_xml: {}".format(database_xml)
     date_issued = extract_date_issued(sum_doc)
     degree = extract_value(sum_doc, "DissertationDegree")
     descriptions = extract_convert_languageValues(sum_doc, "Abstract", main_language)
@@ -135,8 +142,8 @@ def summonjson_document_to_metajson(sum_doc, source):
     subject_agents = convert_creators(sum_doc, "RelatedPersons", None, "person", None)
     subject_topics = extract_value(sum_doc, "SubjectTerms", True)
     table_of_contents = extract_convert_languageValues(sum_doc, "TableOfContents", main_language)
-    title = extract_value(sum_doc, "Title")
-    title_sub = extract_value(sum_doc, "Subtitle")
+    title = string.strip_html_tags(extract_value(sum_doc, "Title"))
+    title_sub = string.strip_html_tags(extract_value(sum_doc, "Subtitle"))
 
     # identifiers
     has_isbn = False
@@ -148,15 +155,15 @@ def summonjson_document_to_metajson(sum_doc, source):
             for id_value in sum_doc[sum_key]:
                 id_type = summon_identifier_type_to_metajson_identifier_type[sum_key]
                 if id_type == "issn":
-                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson_service.create_identifier(id_type, id_value))
                 elif id_type == "eissn":
                     has_eissn = True
-                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson_service.create_identifier(id_type, id_value))
                 elif id_type == "isbn":
                     has_isbn = True
-                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson_service.create_identifier(id_type, id_value))
                 else:
-                    identifiers_item.append(metajson.create_identifier(id_type, id_value))
+                    identifiers_item.append(metajson_service.create_identifier(id_type, id_value))
 
     # is_part_of_type determination
     is_part_of_type = None
@@ -202,9 +209,10 @@ def summonjson_document_to_metajson(sum_doc, source):
     # series
     if series_title:
         series = Document()
+        series["rec_type"] = constants.DOC_TYPE_SERIES
         series.set_key_if_not_none("title", series_title)
 
-        document.add_items_to_key([series], "series")
+        document.add_items_to_key([series], "seriess")
 
     # classificiations
     extract_convert_add_classifications(sum_doc, document, "DEWEY", "ddc")
@@ -232,26 +240,24 @@ def summonjson_document_to_metajson(sum_doc, source):
 
     # keywords, subjects
     subjects = []
+    keywords = {main_language: []}
     if subject_keywords:
-        document["keywords"] = subject_keywords
+        keywords[main_language].extend(subject_keywords)
+    if subject_topics:
+        keywords[main_language].extend(subject_topics)
     if subject_agents:
         subject = Subject()
         subject["agents"] = subject_agents
         subjects.append(subject)
-    if subject_topics:
-        subject = Subject()
-        subject["topics"] = subject_topics
-        subjects.append(subject)
     if subjects:
         document["subjects"] = subjects
+    if keywords[main_language]:
+        document["keywords"] = keywords
 
     debug = True
     if debug:
-        related_items_msg = "\t\t\t\t\t\t"
-        if is_part_of_type:
-            related_items_msg = "\tis_part_of: {} ".format(is_part_of_type)
-        print "{}\t->\titem: {} {}\t:\t{}\t:\t{}".format(sum_type, rec_type, related_items_msg, rec_id, title)
-
+        print "Summon ContentType: {}".format(sum_type)
+        metajson_service.pretty_print_document(document)
     return document
 
 
@@ -266,15 +272,13 @@ def extract_convert_languageValues(sum_doc, sum_key, main_language):
 def extract_convert_add_classifications(sum_doc, document, sum_key, authority_id):
     classificiations = extract_value(sum_doc, sum_key, True)
     if classificiations:
-        results = []
+        if "classificiations" not in document:
+            document["classificiations"] = {}
+        if authority_id not in document["classificiations"]:
+            document["classificiations"][authority_id] = []
         for classification in classificiations:
             if classification:
-                collection = Collection()
-                collection["autority"] = {"id": authority_id}
-                collection["id"] = classification
-                results.append(collection)
-        if results:
-            document.add_items_to_key(results, "classificiations")
+                document["classificiations"][authority_id].append(classification)
 
 
 def extract_convert_identifiers(sum_doc):
@@ -287,15 +291,15 @@ def extract_convert_identifiers(sum_doc):
             for id_value in sum_doc[sum_key]:
                 id_type = summon_identifier_type_to_metajson_identifier_type[sum_key]
                 if id_type == "issn":
-                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson_service.create_identifier(id_type, id_value))
                 elif id_type == "eissn":
                     has_eissn = True
-                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson_service.create_identifier(id_type, id_value))
                 elif id_type == "isbn":
                     has_isbn = True
-                    is_part_of_identifiers.append(metajson.create_identifier(id_type, id_value))
+                    is_part_of_identifiers.append(metajson_service.create_identifier(id_type, id_value))
                 else:
-                    identifiers_item.append(metajson.create_identifier(id_type, id_value))
+                    identifiers_item.append(metajson_service.create_identifier(id_type, id_value))
     return identifiers_item, is_part_of_identifiers
 
 
@@ -376,7 +380,12 @@ def extract_value(sum_doc, key, as_list=False):
         if as_list:
             return sum_doc[key]
         else:
-            return sum_doc[key][0]
+            return sum_doc[key][0].strip()
+
+
+def extract_dict_value(sum_doc, key):
+    if key in sum_doc:
+        return sum_doc[key]
 
 
 def extract_boolean_value(sum_doc, key):

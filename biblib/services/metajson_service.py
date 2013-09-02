@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import types
+
 from biblib import metajson
 from biblib.metajson import Common
 from biblib.metajson import Collection
@@ -9,6 +11,7 @@ from biblib.metajson import Field
 from biblib.metajson import Document
 from biblib.metajson import Event
 from biblib.metajson import Family
+from biblib.metajson import Identifier
 from biblib.metajson import Orgunit
 from biblib.metajson import Person
 from biblib.metajson import Resource
@@ -51,10 +54,33 @@ def load_dict_list(meta_dict_list):
     return metajson_list
 
 
-def print_metajson(metajson):
-    # todo
-    source, rec_id, rec_type, title, is_part_of_type, is_part_of_is_part_of_type = None
-    print "# {}\t:\t{}\t:\t{}\t->\titem: {} {}".format(source, rec_id, rec_type, is_part_of_type, is_part_of_is_part_of_type, title)
+def move_keys_between_dicts(keys, dict_a, dict_b):
+    if dict_a and dict_b:
+        for key in keys:
+            if key in dict_a:
+                dict_b[key] = dict_a[key]
+                del dict_a[key]
+
+
+def copy_keys_between_dicts(keys, dict_a, dict_b):
+    if dict_a and dict_b:
+        for key in keys:
+            if key in dict_a:
+                dict_b[key] = dict_a[key]
+
+
+def pretty_print_document(document):
+    print "# rec_source: {}".format(document.get_rec_source())
+    print "# rec_type: {}\trec_id: {}\ttitle: {}".format(document.get_rec_type(), document.get_rec_id(), document.get_title())
+    is_part_of = document.get_is_part_of()
+    if is_part_of:
+        print "# is_part_ofs[0].rec_type: {}\tis_part_ofs[0].rec_id: {}\tis_part_ofs[0].title: {}".format(is_part_of.get_rec_type(), is_part_of.get_rec_id(), is_part_of.get_title())
+        is_part_of_is_part_of = is_part_of.get_is_part_of()
+        if is_part_of_is_part_of:
+            print "# is_part_ofs[0].is_part_ofs[0].rec_type: {}\tis_part_ofs[0].is_part_ofs[0].rec_id: {}\tis_part_ofs[0].is_part_ofs[0].title: {}".format(is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of.get_rec_id(), is_part_of_is_part_of.get_title())
+            is_part_of_is_part_of_is_part_of = is_part_of_is_part_of.get_is_part_of()
+            if is_part_of_is_part_of_is_part_of:
+                print "# is_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_type: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_id: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].title: {}".format(is_part_of_is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of_is_part_of.get_rec_id(), is_part_of_is_part_of_is_part_of.get_title())
 
 
 def enhance_metajson(metajson):
@@ -83,3 +109,26 @@ def manage_title_non_sort(metajson):
                         print("title: '{}'".format(title))
                         metajson["title_non_sort"] = title_non_sort
                         metajson["title"] = title
+
+
+def create_collection(col_id, col_title, metajson_list):
+    if metajson_list:
+        collection = Collection()
+        if col_id:
+            collection["col_id"] = col_id
+        if col_title:
+            collection["title"] = col_title
+        if isinstance(metajson_list, types.GeneratorType):
+            collection["records"] = list(metajson_list)
+        else:
+            collection["records"] = metajson_list
+        return collection
+
+
+def create_identifier(id_type, id_value):
+    if id_value:
+        identifier = Identifier()
+        identifier["value"] = id_value
+        if id_type:
+            identifier["id_type"] = id_type
+        return identifier

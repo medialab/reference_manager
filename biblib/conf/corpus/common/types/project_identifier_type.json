@@ -1,0 +1,44 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "European",
+                "fr": "Européen"
+            },
+            "type_id": "eu"
+        },
+        {
+            "labels": {
+                "en": "ANR",
+                "fr": "ANR"
+            },
+            "type_id": "anr"
+        },
+        {
+            "labels": {
+                "en": "HAL",
+                "fr": "HAL"
+            },
+            "type_id": "hal"
+        },
+        {
+            "labels": {
+                "en": "Handle",
+                "fr": "Handle"
+            },
+            "type_id": "hdl"
+        },
+        {
+            "labels": {
+                "en": "URI",
+                "fr": "URI"
+            },
+            "major": true,
+            "type_id": "uri"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "project_identifier_type"
+}

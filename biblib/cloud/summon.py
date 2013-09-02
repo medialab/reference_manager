@@ -47,8 +47,6 @@ def summon_query(query_string):
 
     http = httplib2.Http()
     response, content = http.request(url, 'GET', headers=headers)
-    print response
-    print content
     result = jsonbson.load_json_str(content)
     print jsonbson.dumps_json(result, True)
     return result

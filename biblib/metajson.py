@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+from biblib.util import constants
+
 REC_METAJSON = 1
 
 STYLE_GIVEN_FAMILY = "given_family"
@@ -863,7 +865,12 @@ class Common(dict):
 
 # Collection
 class Collection(Common):
-    pass
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "rec_metajson" not in self:
+            self["rec_metajson"] = REC_METAJSON
+        if "rec_class" not in self:
+            self["rec_class"] = "Collection"
 
 
 # Creator
@@ -941,8 +948,72 @@ class Document(Common):
         if "seriess" in self:
             self["seriess"] = [Document(x) for x in self["seriess"]]
 
+    def get_rec_id(self):
+        if "rec_id" in self:
+            return self["rec_id"]
+
+    def get_rec_type(self):
+        if "rec_type" in self:
+            return self["rec_type"]
+
+    def get_rec_source(self):
+        if "rec_source" in self:
+            return self["rec_source"]
+
+    def get_title(self):
+        if "title" in self:
+            return self["title"]
+
+    def get_is_part_of(self):
+        if "is_part_ofs" in self:
+            return self["is_part_ofs"][0]
+
+    def get_is_part_of_type(self):
+        if "is_part_ofs" in self:
+            if "rec_type" in self["is_part_ofs"][0]:
+                return self["is_part_ofs"][0]["rec_type"]
+
+    def get_is_part_of_is_part_of_type(self):
+        if "is_part_ofs" in self:
+            if "is_part_ofs" in self["is_part_ofs"][0]:
+                if "rec_type" in self["is_part_ofs"][0]["is_part_ofs"][0]:
+                    return self["is_part_ofs"][0]["is_part_ofs"][0]["rec_type"]
+
+    def add_creator(self, creator):
+        self.add_item_to_key(creator, "creators")
+
     def add_creators(self, creators):
         self.add_items_to_key(creators, "creators")
+
+    def add_is_part_of_creator(self, creator):
+        if "is_part_ofs" not in self:
+            is_part_of = Document()
+            self["is_part_ofs"] = [is_part_of]
+        self["is_part_ofs"][0].add_item_to_key(creator, "creators")
+
+    def add_is_part_of_title(self, title):
+        if "is_part_ofs" not in self:
+            self["is_part_ofs"] = [Document()]
+        self["is_part_ofs"][0]["title"] = title
+
+    def add_is_part_of_title_abbreviated(self, title_abbreviated):
+        if "is_part_ofs" not in self:
+            self["is_part_ofs"] = [Document()]
+        self["is_part_ofs"][0]["title_abbreviated"] = {"title": title_abbreviated}
+
+    def add_series_creator(self, creator):
+        if "seriess" not in self:
+            series = Document()
+            series["rec_type"] = constants.DOC_TYPE_SERIES
+            self["seriess"] = [series]
+        self["seriess"][0].add_item_to_key(creator, "creators")
+
+    def add_series_title(self, title):
+        if "seriess" not in self:
+            series = Document()
+            series["rec_type"] = constants.DOC_TYPE_SERIES
+            self["seriess"] = [series]
+        self["seriess"][0]["title"] = title
 
     def get_creators_by_role(self, role):
         results = []
@@ -951,6 +1022,12 @@ class Document(Common):
                 if creator["role"] == role:
                     results.append(creator)
         return results
+
+    def add_identifier(self, identifier):
+        if "identifiers" in self:
+            self["identifiers"].append(identifier)
+        else:
+            self["identifiers"] = [identifier]
 
     def get_date(self):
         date = self.get_property_from_all_level("date_issued")
@@ -1101,17 +1178,6 @@ class Family(Common):
 # Identifier
 class Identifier(Common):
     pass
-
-
-# Identifier util
-# todo : move it to the Identifier constructor
-def create_identifier(id_type, id_value):
-    if id_value:
-        identifier = Identifier()
-        identifier["value"] = id_value
-        if id_type:
-            identifier["id_type"] = id_type
-        return identifier
 
 
 # Orgunit

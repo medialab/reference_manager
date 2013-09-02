@@ -4,6 +4,11 @@
 
 import os
 from biblib.cloud import summon
+from biblib.services import crosswalks_service
+from biblib.services import metajson_service
+from biblib.util import console
+from biblib.util import constants
+from biblib.util import jsonbson
 
 
 def test():
@@ -17,4 +22,10 @@ def test():
     #query_string = "s.fvf%5B%5D=ContentType%2CConference+Proceeding%2Cf&s.fvf%5B%5D=ContentType%2CData+Set%2Cf&s.fvf%5B%5D=IsFullText%2Ctrue%2Cf&s.fvf%5B%5D=ContentType%2CNewspaper+Article%2Cf&s.fvf%5B%5D=ContentType%2CTrade+Publication+Article%2Cf&s.ps=50&s.q=europe+federal&s.cmd=removeFacetValueFilter(ContentType,Newspaper%20Article)%20removeFacetValueFilter(ContentType,Trade%20Publication%20Article)%20removeFacetValueFilter(ContentType,Data%20Set)"
     #query_string = "s.fvf%5B%5D=ContentType%2CConference+Proceeding%2Cf&s.fvf%5B%5D=IsFullText%2Ctrue%2Cf&s.ps=50&s.q=europe+federal&s.cmd=addFacetValueFilters(ContentType,Data+Set)"
     query_string = "s.q=Organized+Crime+and+States"
-    summon.summon_query(query_string)
+    summon_response = summon.summon_query(query_string)
+    metajson_list = crosswalks_service.convert_json(summon_response, constants.FORMAT_SUMMONJSON, constants.FORMAT_METAJSON, "summon", False)
+    collection = metajson_service.create_collection("summon_test", "Summon Test", metajson_list)
+    print jsonbson.dumps_json(collection, True)
+
+#console.setup_console()
+#test()

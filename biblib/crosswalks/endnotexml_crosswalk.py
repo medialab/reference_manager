@@ -8,103 +8,118 @@ from biblib.metajson import Document
 from biblib.metajson import Resource
 from biblib.services import creator_service
 from biblib.services import language_service
+from biblib.services import metajson_service
 from biblib.util import constants
 
 endnote_import_note = False
 endnote_import_research_note = False
 endnote_import_keywords = False
 
+# EndNote8 ref-type
+# sources:
+# https://drupal.org/node/344898
+# http://www.users.muohio.edu/darcusb/files/endnote-xml.tar.gz
+
+# 1: not used
 TYPE_ARTWORK = "2"
 TYPE_AUDIOVISUAL_MATERIAL = "3"
 TYPE_BILL = "4"
 TYPE_BOOK_SECTION = "5"
 TYPE_BOOK = "6"
 TYPE_CASE = "7"
-TYPE_SOFTWARE = "9"
+# 8: not used
+TYPE_COMPUTER_PROGRAM = "9"
 TYPE_CONFERENCE_PROCEEDINGS = "10"
+# 11: not used
 TYPE_WEB_PAGE = "12"
 TYPE_GENERIC = "13"
 TYPE_HEARING = "14"
+# 15: not used
+# 16: not used
 TYPE_JOURNAL_ARTICLE = "17"
+# 18: not used
 TYPE_MAGAZINE_ARTICLE = "19"
 TYPE_MAP = "20"
 TYPE_FILM_OR_BROADCAST = "21"
+# 22: not used
 TYPE_NEWSPAPER_ARTICLE = "23"
+# 24: not used
 TYPE_PATENT = "25"
 TYPE_PERSONAL_COMMUNICATION = "26"
 TYPE_REPORT = "27"
 TYPE_EDITED_BOOK = "28"
+# 29: not used
+# 30: not used
 TYPE_STATUTE = "31"
 TYPE_THESIS = "32"
+# 33: not used
 TYPE_UNPUBLISHED_WORK = "34"
+# 35: not used
 TYPE_MANUSCRIPT = "36"
 TYPE_FIGURE = "37"
 TYPE_CHART_OR_TABLE = "38"
 TYPE_EQUATION = "39"
-TYPE_ELECTRONIC_ARTICLE = "43"
+# 40: not used
+# 41: not used
+# 42: not used
+TYPE_ELECTRONIC_JOURNAL = "43"
 TYPE_ELECTRONIC_BOOK = "44"
 TYPE_ONLINE_DATABASE = "45"
-TYPE_GOVERNMENT_DOCUMENT = "46"
+TYPE_GOVERNMENT_REPORT_OR_DOCUMENT = "46"
 TYPE_CONFERENCE_PAPER = "47"
 TYPE_ONLINE_MULTIMEDIA = "48"
 TYPE_CLASSICAL_WORK = "49"
 TYPE_LEGAL_RULE_OR_REGULATION = "50"
+# 51: not used
+TYPE_DICTIONARY = "52"
 TYPE_ENCYCLOPEDIA = "53"
 TYPE_GRANT = "54"
 
 endnote_record_type_to_metajson_document_type = {
-    "Aggregated Database": constants.DOC_TYPE_DOCUMENT,
-    "Ancient Text": constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
-    TYPE_ARTWORK: constants.DOC_TYPE_IMAGE,
+    TYPE_ARTWORK: constants.DOC_TYPE_ARTWORK,
     TYPE_AUDIOVISUAL_MATERIAL: constants.DOC_TYPE_AUDIORECORDING,
-    TYPE_BILL: constants.DOC_TYPE_DOCUMENT,
-    "Blog": constants.DOC_TYPE_WEBENTITY,
+    TYPE_BILL: constants.DOC_TYPE_BILL,
     TYPE_BOOK: constants.DOC_TYPE_BOOK,
     TYPE_BOOK_SECTION: constants.DOC_TYPE_BOOKPART,
-    TYPE_CASE: constants.DOC_TYPE_DOCUMENT,
-    "Catalog": constants.DOC_TYPE_DOCUMENT,
-    TYPE_CHART_OR_TABLE: constants.DOC_TYPE_IMAGE,
-    TYPE_CLASSICAL_WORK: constants.DOC_TYPE_AUDIORECORDING,
-    "Computer Program": constants.DOC_TYPE_SOFTWARE,
-    TYPE_CONFERENCE_PAPER: constants.DOC_TYPE_BOOKPART,
-    TYPE_CONFERENCE_PROCEEDINGS: constants.DOC_TYPE_BOOK,
-    "Dataset": constants.DOC_TYPE_DOCUMENT,
-    "Dictionary": constants.DOC_TYPE_DICTIONARY,
-    TYPE_EDITED_BOOK: constants.DOC_TYPE_BOOK,
-    TYPE_ENCYCLOPEDIA: constants.DOC_TYPE_BOOK,
-    TYPE_ELECTRONIC_ARTICLE: constants.DOC_TYPE_ARTICLE,
-    "Electronic Book Section": constants.DOC_TYPE_BOOKPART,
-    TYPE_EQUATION: constants.DOC_TYPE_DOCUMENT,
+    TYPE_CASE: constants.DOC_TYPE_LEGALCASE,  # add field
+    TYPE_CHART_OR_TABLE: constants.DOC_TYPE_CHART,  # add field
+    TYPE_CLASSICAL_WORK: constants.DOC_TYPE_MUSICALSCORE,
+    TYPE_COMPUTER_PROGRAM: constants.DOC_TYPE_SOFTWARE,
+    TYPE_CONFERENCE_PAPER: constants.DOC_TYPE_CONFERENCEPAPER,
+    TYPE_CONFERENCE_PROCEEDINGS: constants.DOC_TYPE_CONFERENCEPROCEEDINGS,
+    TYPE_DICTIONARY: constants.DOC_TYPE_DICTIONARY,
+    TYPE_EDITED_BOOK: constants.DOC_TYPE_EDITEDBOOK,
+    TYPE_ENCYCLOPEDIA: constants.DOC_TYPE_ENCYCLOPEDIA,
+    TYPE_ELECTRONIC_JOURNAL: constants.DOC_TYPE_EJOURNAL,
+    TYPE_ELECTRONIC_BOOK: constants.DOC_TYPE_EBOOK,
+    TYPE_ENCYCLOPEDIA: constants.DOC_TYPE_ENCYCLOPEDIA,
+    TYPE_EQUATION: constants.DOC_TYPE_EQUATION,
     TYPE_FIGURE: constants.DOC_TYPE_IMAGE,
     TYPE_FILM_OR_BROADCAST: constants.DOC_TYPE_FILM,
-    TYPE_GRANT: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
-    TYPE_GENERIC: constants.DOC_TYPE_DOCUMENT,
-    TYPE_GOVERNMENT_DOCUMENT: constants.DOC_TYPE_DOCUMENT,
-    TYPE_HEARING: constants.DOC_TYPE_DOCUMENT,
+    TYPE_GENERIC: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
+    TYPE_GOVERNMENT_REPORT_OR_DOCUMENT: constants.DOC_TYPE_GOVERNMENTPUBLICATION,
+    TYPE_GRANT: constants.DOC_TYPE_GRANT,
+    TYPE_HEARING: constants.DOC_TYPE_HEARING,
     TYPE_JOURNAL_ARTICLE: constants.DOC_TYPE_JOURNALARTICLE,
-    "Legal": constants.DOC_TYPE_DOCUMENT,
-    TYPE_LEGAL_RULE_OR_REGULATION: constants.DOC_TYPE_DOCUMENT,
+    TYPE_LEGAL_RULE_OR_REGULATION: constants.DOC_TYPE_STATUTE,
     TYPE_MAGAZINE_ARTICLE: constants.DOC_TYPE_MAGAZINEARTICLE,
-    TYPE_MANUSCRIPT: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
-    TYPE_MAP: constants.DOC_TYPE_IMAGE,
+    TYPE_MANUSCRIPT: constants.DOC_TYPE_MANUSCRIPT,
+    TYPE_MAP: constants.DOC_TYPE_MAP,
     TYPE_NEWSPAPER_ARTICLE: constants.DOC_TYPE_NEWSPAPERARTICLE,
-    TYPE_ONLINE_DATABASE: constants.DOC_TYPE_DOCUMENT,
-    TYPE_ONLINE_MULTIMEDIA: constants.DOC_TYPE_WEBENTITY,
-    TYPE_PATENT: constants.DOC_TYPE_DOCUMENT,
-    TYPE_REPORT: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
-    "Serial": constants.DOC_TYPE_DOCUMENT,
-    "Standard": constants.DOC_TYPE_DOCUMENT,
-    TYPE_STATUTE: constants.DOC_TYPE_DOCUMENT,
-    TYPE_THESIS: constants.DOC_TYPE_THESIS,
+    TYPE_ONLINE_DATABASE: constants.DOC_TYPE_WEBSITE,
+    TYPE_ONLINE_MULTIMEDIA: constants.DOC_TYPE_WEBPAGE,
+    TYPE_PATENT: constants.DOC_TYPE_PATENT,
+    TYPE_PERSONAL_COMMUNICATION: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
+    TYPE_REPORT: constants.DOC_TYPE_REPORT,
+    TYPE_STATUTE: constants.DOC_TYPE_STATUTE,
+    TYPE_THESIS: constants.DOC_TYPE_DOCTORALTHESIS,
     TYPE_UNPUBLISHED_WORK: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
-    TYPE_WEB_PAGE: constants.DOC_TYPE_WEBENTITY
+    TYPE_WEB_PAGE: constants.DOC_TYPE_WEBSITE
 }
 
 endnote_record_type_to_metajson_document_is_part_of_type = {
     TYPE_BOOK_SECTION: constants.DOC_TYPE_BOOK,
     TYPE_CONFERENCE_PAPER: constants.DOC_TYPE_CONFERENCEPROCEEDINGS,
-    TYPE_ELECTRONIC_ARTICLE: constants.DOC_TYPE_JOURNAL,
-    "Electronic Book Section": constants.DOC_TYPE_BOOK,
     TYPE_JOURNAL_ARTICLE: constants.DOC_TYPE_JOURNAL,
     TYPE_MAGAZINE_ARTICLE: constants.DOC_TYPE_MAGAZINE,
     TYPE_NEWSPAPER_ARTICLE: constants.DOC_TYPE_NEWSPAPER
@@ -219,25 +234,25 @@ def endnotexml_record_to_metajson(record, source):
     if title_secondary is not None:
         if endnote_type == TYPE_FIGURE:
             # how to determine the is_part_of type ?
-            # if there is a volume or an issue number, it's a JournalArticle, else it's a Book or BookChapter
+            # if there is a volume or an issue number, it's a JournalArticle, else it's a Book or BookPart
             if part_volume is not None or part_number is not None:
-                is_part_of_type = "Article"
-                is_part_of_is_part_of_type = "Journal"
+                is_part_of_type = constants.DOC_TYPE_JOURNALARTICLE
+                is_part_of_is_part_of_type = constants.DOC_TYPE_JOURNAL
             else:
                 if title_translated is not None:
-                    is_part_of_type = "BookPart"
-                    is_part_of_is_part_of_type = "Book"
+                    is_part_of_type = constants.DOC_TYPE_BOOKPART
+                    is_part_of_is_part_of_type = constants.DOC_TYPE_BOOK
                 else:
-                    is_part_of_type = "Book"
+                    is_part_of_type = constants.DOC_TYPE_BOOK
         elif endnote_type == TYPE_FILM_OR_BROADCAST:
-            rec_type = "VideoPart"
-            is_part_of_type = "VideoRecording"
+            rec_type = constants.DOC_TYPE_VIDEOPART
+            is_part_of_type = constants.DOC_TYPE_VIDEORECORDING
 
     document["rec_type"] = rec_type
     document.set_key_if_not_none("rec_type_description", rec_type_description)
 
     # issn or isbn ?
-    if is_part_of_type in ["Journal", "Newspaper", "Article"]:
+    if is_part_of_type in [constants.DOC_TYPE_JOURNAL, constants.DOC_TYPE_NEWSPAPER, constants.DOC_TYPE_MAGAZINE]:
         isbn_or_issn_type = "issn"
     else:
         isbn_or_issn_type = "isbn"
@@ -367,10 +382,10 @@ def endnotexml_record_to_metajson(record, source):
             date_issued = date_year.strip()
 
         if "is_part_ofs" in document:
-            if document["is_part_ofs"][0]["rec_type"] == "Book":
+            if document["is_part_ofs"][0]["rec_type"] == constants.DOC_TYPE_BOOK:
                 document["is_part_ofs"][0].set_key_if_not_none("date_issued", date_issued)
                 document["is_part_ofs"][0].set_key_if_not_none("date_issued_first", date_issued_first)
-            elif "is_part_ofs" in document["is_part_ofs"][0] and document["is_part_ofs"][0]["is_part_ofs"][0]["rec_type"] == "Book":
+            elif "is_part_ofs" in document["is_part_ofs"][0] and document["is_part_ofs"][0]["is_part_ofs"][0]["rec_type"] == constants.DOC_TYPE_BOOK:
                 document["is_part_ofs"][0]["is_part_ofs"][0].set_key_if_not_none("date_issued", date_issued)
                 document["is_part_ofs"][0]["is_part_ofs"][0].set_key_if_not_none("date_issued_first", date_issued_first)
             else:
@@ -440,13 +455,8 @@ def endnotexml_record_to_metajson(record, source):
 
     debug = True
     if debug:
-        related_items_msg = ""
-        if is_part_of_type:
-            related_items_msg = "\tis_part_of: {} ".format(is_part_of_type)
-        if is_part_of_is_part_of_type:
-            related_items_msg += "\tis_part_of.is_part_of: {} ".format(is_part_of_is_part_of_type)
-        print "# {}\t:\t{}\t:\t{}\t->\titem: {} {}".format(source, rec_id, endnote_type, rec_type, related_items_msg, title)
-
+        print "endnote_type: {}".format(endnote_type)
+        metajson_service.pretty_print_document(document)
     return document
 
 

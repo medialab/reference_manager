@@ -1,774 +1,1532 @@
 {
   "col_id": "test_mods", 
+  "rec_class": "Collection", 
+  "rec_metajson": 1, 
   "records": [
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Département d'économie", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q385c7", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Martin", 
-              "name_given": "Philippe", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i789685q5apa2", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
+    {
+      "classifications": {
+        "info:eu-repo/authority/jel": [
+          "F32", 
+          "F41"
+        ]
+      }, 
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Département d'économie", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q385c7", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "University of Rome", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/d7a7evb2ctdg4i89ges9micbn", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Corsetti", 
-              "name_given": "Giancarlo", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i7896860lchjn", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
+          "agent": {
+            "name_family": "Martin", 
+            "name_given": "Philippe", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q5apa2", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "International Research", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/d7a7evb2ctdg4i89ges9mikg3", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Pesenti", 
-              "name_given": "Paolo", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i7896860lci21", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "identifiers": [
-          {
-            "id_type": "doi", 
-            "value": "10.1016/j.jinteco.2012.05.011"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_id": "10.1016/j.jinteco.2012.05.011", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "JournalArticle", 
-        "title": "Varieties and the transfer problem "
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Barnavie", 
-              "name_given": "Elie", 
-              "rec_class": "Person", 
-              "rec_id": "2441/eu4vqp9ompqllr09hh1aij5g1", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
+          "role": "aut"
+        }, 
+        {
+          "affiliation": {
+            "name": "University of Rome", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/d7a7evb2ctdg4i89ges9micbn", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "Centre d'études et de recherches internationales", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Dieckhoff", 
-              "name_given": "Alain", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i789685q54c93", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
+          "agent": {
+            "name_family": "Corsetti", 
+            "name_given": "Giancarlo", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i7896860lchjn", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "Centre d'études et de recherches internationales", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Lequesne", 
-              "name_given": "Christian", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i789685q54lsl", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "Audiovisual", 
-        "title": "Israël et l’Europe. Filiations et ruptures"
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Centre d'études et de recherches internationales", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Lequesne", 
-              "name_given": "Christian", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i789685q54lsl", 
-              "rec_metajson": 1
-            }, 
-            "role": "edt"
+          "role": "aut"
+        }, 
+        {
+          "affiliation": {
+            "name": "International Research", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/d7a7evb2ctdg4i89ges9mikg3", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "Department of Politics", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/5l6uh8ogmqildh09h520k4p9m", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Bulmer", 
-              "name_given": "Simon", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i7896860j0h0m", 
-              "rec_metajson": 1
-            }, 
-            "role": "edt"
-          }
-        ], 
-        "identifiers": [
-          {
-            "id_type": "isbn", 
-            "value": "9780199544837"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_id": "9780199544837", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "Book", 
-        "title": "Member States of the European Union", 
-        "title_non_sort": "The "
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Membretti", 
-              "name_given": "Andrea", 
-              "rec_class": "Person", 
-              "rec_id": "2441/eo6779thqgm5r489makgk11ai", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
+          "agent": {
+            "name_family": "Pesenti", 
+            "name_given": "Paolo", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i7896860lci21", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "Centre d'études européennes de Sciences Po", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Vitale", 
-              "name_given": "Tommaso", 
-              "rec_class": "Person", 
-              "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "BookPart", 
-        "title": "Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy"
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Centre d'études européennes de Sciences Po", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Halpern", 
-              "name_given": "Charlotte", 
-              "rec_class": "Person", 
-              "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "BookReview", 
-        "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks", 
-        "title_non_sort": "The "
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "agent": {
-              "country": "FR", 
-              "date_end": "2013-02-28", 
-              "date_start": "2013-02-27", 
-              "place": "Sciences Po, Paris", 
-              "rec_class": "Event", 
-              "rec_metajson": 1, 
-              "title": "Governing Paris and Mexico"
-            }, 
-            "role": "aut"
-          }, 
-          {
-            "affiliation": {
-              "name": "Centre d'études européennes de Sciences Po", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Halpern", 
-              "name_given": "Charlotte", 
-              "rec_class": "Person", 
-              "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "ConferenceContribution", 
-        "title": "Airport companies as silent partners?", 
-        "title_sub": "The slow awakening of Aéroports de Paris"
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Centre de recherches politiques de Sciences Po", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380qo", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Escudier", 
-              "name_given": "Alexandre", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i789685q5908j", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "ConferencePaper", 
-        "title": "régime mixte des Modernes et la question de l’Histoire ", 
-        "title_non_sort": "Le "
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Ecole de Droit", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q385ph", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Audren", 
-              "name_given": "Frédéric", 
-              "rec_class": "Person", 
-              "rec_id": "2441/5k7940uimfdf9c8990p900c2l", 
-              "rec_metajson": 1
-            }, 
-            "role": "pbd"
-          }, 
-          {
-            "agent": {
-              "name_family": "Chêne", 
-              "name_given": "Christian", 
-              "rec_class": "Person", 
-              "rec_id": "2441/7t638g2jjsquujs9mcc0jeu8l", 
-              "rec_metajson": 1
-            }, 
-            "role": "pbd"
-          }, 
-          {
-            "agent": {
-              "name_family": "Mathey", 
-              "name_given": "Nicolas", 
-              "rec_class": "Person", 
-              "rec_id": "2441/7t638g2jjsquujs9mcc0jii04", 
-              "rec_metajson": 1
-            }, 
-            "role": "pbd"
-          }, 
-          {
-            "agent": {
-              "name_family": "Vergne", 
-              "name_given": "Arnaud", 
-              "rec_class": "Person", 
-              "rec_id": "2441/7t638g2jjsquujs9mcc0k2e43", 
-              "rec_metajson": 1
-            }, 
-            "role": "pbd"
-          }, 
-          {
-            "agent": {
-              "country": "FR", 
-              "date_end": "2012-03-30", 
-              "date_start": "2012-03-29", 
-              "place": "Faculté de Droit de l'Université Paris-Descartes ", 
-              "rec_class": "Event", 
-              "rec_metajson": 1, 
-              "title": "Raymond Saleilles et au-delà"
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "identifiers": [
-          {
-            "id_type": "isbn", 
-            "value": "9782247125265"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_id": "9782247125265", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "ConferenceProceedings", 
-        "title": "Raymond Saleilles et au-delà"
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Centre de recherches politiques de Sciences Po", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380qo", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Rouban", 
-              "name_given": "Luc", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i789685q56sp5", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "ContributionToPeriodical", 
-        "title": "Fonctionnaires, la fin du mérite républicain "
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Castañeda Lefèvre", 
-              "name_given": "Dorly", 
-              "rec_class": "Person", 
-              "rec_id": "2441/3fm4jv3k2s99lms9jb5i1ag8p", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }, 
-          {
-            "affiliation": {
-              "name": "Centre d'études et de recherches internationales", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Devin", 
-              "name_given": "Guillaume", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i789685q568qo", 
-              "rec_metajson": 1
-            }, 
-            "role": "ths"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "DoctoralThesis", 
-        "title": "Peace Laboratories in Colombia: the European Approach to Peace-building", 
-        "title_translated": {
-          "title": "Les Laboratoires de paix en Colombie: L'approche européenne de la construction de la paix"
+          "role": "aut"
         }
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Epstein", 
-              "name_given": "Renaud", 
-              "rec_class": "Person", 
-              "rec_id": "2441/53r60a8s3kup1vc9k0sklgecj", 
-              "rec_metajson": 1
-            }, 
-            "role": "ivr"
+      ], 
+      "date_issued": "2013-01", 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "We revisit the classic transfer problem, accounting for two channels of adjustment: increased trade in existing goods and services (the intensive margin) and net creation and destruction of product varieties (the extensive margin). Over the medium term, the latter reduces the scope for real exchange rate and terms of trade variability in response to cross-border flows. We embed our transfer analysis in popular models of current account adjustment, where initial imbalances are driven by domestic demand for — or foreign supply of — net saving, possibly associated with over-optimistic expectations. Simulation exercises based on 2006 data suggest that a transfer of the size of the pre-crisis U.S. current account deficit may require only moderate trend depreciation in real terms, and that the aggregate welfare impact of the transfer is disconnected from the size of the relative price correction."
+        }
+      ], 
+      "identifiers": [
+        {
+          "id_type": "doi", 
+          "value": "10.1016/j.jinteco.2012.05.011"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "identifiers": [
+            {
+              "id_type": "issn", 
+              "value": "00221996"
+            }
+          ], 
+          "issuance": "continuing", 
+          "languages": [
+            "en"
+          ], 
+          "peer_review": true, 
+          "rec_class": "Document", 
+          "rec_id": "issn:00221996", 
+          "rec_metajson": 1, 
+          "rec_type": "Journal", 
+          "title": "Journal of International Economics"
+        }
+      ], 
+      "keywords": {
+        "fr": [
+          "Transfer problem", 
+          "Current account imbalances", 
+          "Extensive margin"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "part_issue": "1", 
+      "part_page_end": "12", 
+      "part_page_start": "1", 
+      "part_volume": "89", 
+      "rec_class": "Document", 
+      "rec_id": "doi:10.1016/j.jinteco.2012.05.011", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "JournalArticle", 
+      "title": "Varieties and the transfer problem"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Barnavie", 
+            "name_given": "Elie", 
+            "rec_class": "Person", 
+            "rec_id": "2441/eu4vqp9ompqllr09hh1aij5g1", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "Centre d'études européennes de Sciences Po (CEE)", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Le Galès", 
-              "name_given": "Patrick", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i789685q58ub0", 
-              "rec_metajson": 1
-            }, 
-            "role": "ive"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "Interview", 
-        "title": "Vers une révolution bureaucratique ?"
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Paris-Jourdan Sciences Economiques", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/d7a7evb2ctdg4i89ges9oe5ao", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Piketty", 
-              "name_given": "Thomas", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i7896860ngch2", 
-              "rec_metajson": 1
-            }, 
-            "role": "ths"
+          "role": "aut"
+        }, 
+        {
+          "affiliation": {
+            "name": "Centre d'études et de recherches internationales", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q380gh", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "OFCE", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q38226", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Antonin", 
-              "name_given": "Céline", 
-              "rec_class": "Person", 
-              "rec_id": "2441/5l6uh8ogmqildh09h6l10gtqo", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "MasterThesis", 
-        "title": "Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006"
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Centre d'études et de recherches internationales", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Combes", 
-              "name_given": "Hélène", 
-              "rec_class": "Person", 
-              "rec_id": "2441/eu4vqp9ompqllr09hga9pgk39", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "PeriodicalIssue", 
-        "title": "Clientélisme en situation. Échanges politiques, politisation et conflits moraux"
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Laboratoire de Conception et d'Intégration des Systèmes", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/d7a7evb2ctdg4i89gesapaoj4", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Jean", 
-              "name_given": "Sébastien", 
-              "rec_class": "Person", 
-              "rec_id": "2441/c8dmi8nm4pdjkuc9g8m3565k5", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
+          "agent": {
+            "name_family": "Dieckhoff", 
+            "name_given": "Alain", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q54c93", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "Leverhulme Centre for Research on Globalisation and Economic Policy (GEP)", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/5l6uh8ogmqildh09h29b6gkol", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Hijzen", 
-              "name_given": "Alexander", 
-              "rec_class": "Person", 
-              "rec_id": "2441/c8dmi8nm4pdjkuc9g8m34i593", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
+          "role": "aut"
+        }, 
+        {
+          "affiliation": {
+            "name": "Centre d'études et de recherches internationales", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q380gh", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "Département d'économie", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q385c7", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Mayer", 
-              "name_given": "Thierry", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i789685q5aqa5", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "Preprint", 
-        "title": "effects at home of initiating production abroad: evidence from matched french firms", 
-        "title_non_sort": "The "
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "agent": {
-              "name_family": "Artigas", 
-              "name_given": "Alvaro", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i7896860ig2b0", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
+          "agent": {
+            "name_family": "Lequesne", 
+            "name_given": "Christian", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q54lsl", 
+            "rec_metajson": 1
           }, 
-          {
-            "agent": {
-              "name_family": "Matsumoto", 
-              "name_given": "Tadashi", 
-              "rec_class": "Person", 
-              "rec_id": "2441/5rkqqmvrn4tl22s9mc0slh0gj", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2010-12-16", 
+      "descriptions": [
+        {
+          "language": "fr", 
+          "value": "Débat organisé par le CERI dans le cadre de  l'émission \"Au fil des mots\"."
+        }
+      ], 
+      "extent_duration": "52'27", 
+      "languages": [
+        "fr"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "VideoRecording", 
+      "resources": [
+        {
+          "dateLastAccessed": "2011-10-17", 
+          "rec_class": "Resource", 
+          "rec_metajson": 1, 
+          "rec_type": "remote", 
+          "url": "http://vimeo.com/17810190"
+        }
+      ], 
+      "title": "Israël et l’Europe. Filiations et ruptures"
+    }, 
+    {
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Centre d'études et de recherches internationales", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q380gh", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "Centre d'études européennes de Sciences Po", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Vitale", 
-              "name_given": "Tommaso", 
-              "rec_class": "Person", 
-              "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "Report", 
-        "title": "Greengram - Green Growth in South East Asian Metropolis"
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Centre d'études européennes de Sciences Po", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Vitale", 
-              "name_given": "Tommaso", 
-              "rec_class": "Person", 
-              "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "ReportPart", 
-        "title": "Famiglie, corsi di vita e accoglienza. Spazi e opportunità di solidarietà in contesto urbano "
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Sciences Po", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q021gm", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Durand", 
-              "name_given": "Marie-Françoise", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i789685q571ko", 
-              "rec_metajson": 1
-            }, 
-            "role": "pbd"
+          "agent": {
+            "name_family": "Lequesne", 
+            "name_given": "Christian", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q54lsl", 
+            "rec_metajson": 1
           }, 
-          {
-            "affiliation": {
-              "name": "Centre d'études et de recherches internationales", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Lequesne", 
-              "name_given": "Christian", 
-              "rec_class": "Person", 
-              "rec_id": "2441/9labe9r4se65i789685q54lsl", 
-              "rec_metajson": 1
-            }, 
-            "role": "pbd"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "Website", 
-        "title": "Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)"
-      }
-    ], 
-    [
-      {
-        "creators": [
-          {
-            "affiliation": {
-              "name": "Département d'économie", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q385c7", 
-              "rec_metajson": 1
-            }, 
-            "agent": {
-              "name_family": "Do", 
-              "name_given": "Quoc-Anh", 
-              "rec_class": "Person", 
-              "rec_id": "2441/53r60a8s3kup1vc9kc6cl8m9l", 
-              "rec_metajson": 1
-            }, 
-            "role": "aut"
+          "role": "edt"
+        }, 
+        {
+          "affiliation": {
+            "name": "Department of Politics", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/5l6uh8ogmqildh09h520k4p9m", 
+            "rec_metajson": 1
           }, 
-          {
-            "agent": {
-              "name_family": "Campante", 
-              "name_given": "Filipe R", 
-              "rec_class": "Person", 
-              "rec_id": "2441/dambferfb7dfprc9lj6bkb4sj", 
-              "rec_metajson": 1
+          "agent": {
+            "name_family": "Bulmer", 
+            "name_given": "Simon", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i7896860j0h0m", 
+            "rec_metajson": 1
+          }, 
+          "role": "edt"
+        }
+      ], 
+      "date_issued": "2012-12", 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "The Member States of the European Union combines an analysis of individual EU member states with the effects of Europeanization on domestic institutions and policies. Examining both sides of this crucial relationship, it is the best guide to EU member state relations available.\nThe second edition has been thoroughly updated to take in the latest round of EU enlargement and includes chapters on eight member states from different geographical regions and dates of accession. These are followed by seven thematic chapters on the Europeanization of structures, actors, and processes within the EU 27."
+        }
+      ], 
+      "edition": "2e éd.", 
+      "extent_pages": "480", 
+      "identifiers": [
+        {
+          "id_type": "isbn", 
+          "value": "9780199544837"
+        }
+      ], 
+      "keywords": {
+        "fr": [
+          "Union européenne", 
+          "Etudes comparatives"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "publishers": [
+        "Oxford University Press"
+      ], 
+      "rec_class": "Document", 
+      "rec_id": "isbn:9780199544837", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "Book", 
+      "seriess": [
+        {
+          "rec_class": "Document", 
+          "rec_metajson": 1, 
+          "rec_type": "Series", 
+          "title": "The New European Union Series"
+        }
+      ], 
+      "table_of_contentss": [
+        {
+          "language": "fr", 
+          "value": "1: Simon Bulmer & Christian Lequesne: The European Union and its Member States: An Overview\nPart 1 Analysis\n2: Paolo R. Graziano and Maarten P. Vink: Europeanization: Concept, Theory and Methods\nPart 2 The Member States\n3: Olivier Rozenberg: Genuine Europeanization or Monnet for Nothing?\n4: Timm Beichelt: Germany: In Search of a New Balance\n5: David Allen: The United Kingdom: Towards Isolation and a Parting of the Ways?\n6: Francesc Morata: Spain: Modernization through Europeanization\n7: Anna Michalski: Sweden: From Scepticism to Pragmatic Support\n8: Nathaniel Copsey: Poland: An Awkward Partner Redeemed\n9: Piret Ehin: Estonia: Excelling at Self-Exertion\n10: Dimitris Papadimitriou and David Phinnemore: Romania: Uneven Europeanization\n11: Simon Bulmer and Christian Lequesne: Contrasting States of Europeanization\nPart 3 Europeanization\n12: Hussein Kassim: Europeanization and Member State Institutions\n13: Robert Ladrech: Europeanization and Political Parties\n14: Sabine Saurugger: The Europeanization of Interest Groups and Social Movements\n15: Simon Bulmer and Claudio M. Radaelli: The Europeanization of Member State Policy\n16: Peter Bursens: Europeanization and Sub-national Authorities\n17: Vivien A. Schmidt: The Europeanization of National Economies\nSimon Bulmer and Christian Lequesne: Conclusion"
+        }
+      ], 
+      "title": "Member States of the European Union", 
+      "title_non_sort": "The "
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Membretti", 
+            "name_given": "Andrea", 
+            "rec_class": "Person", 
+            "rec_id": "2441/eo6779thqgm5r489makgk11ai", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }, 
+        {
+          "affiliation": {
+            "name": "Centre d'études européennes de Sciences Po", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q384oh", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Vitale", 
+            "name_given": "Tommaso", 
+            "rec_class": "Person", 
+            "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "This chapter concerns how social innovation relates to the social production of space. Usually, the scholarly literature on local welfare, social work, and ‘social cohesion’ at the urban level mostly fails to consider the relevance of space. The spatial dimension of a socially creative strategy is constituted in physical and symbolic boundaries, in the built environment, in situated objects and relationships. Space can significantly contribute to stigma and exclusion, notably in segregated places. In fact, space performs: it has social effects on people’s opportunities and on their self-esteem . Nonetheless the space is itself a social product; it is the object of strategies. Most social innovators invest in space, trying to shape it, to modify it, to make it more inclusive. They aim to use it as a lever for social innovation. Some such innovations use art as a tool to produce change in the spatial configuration for deprived groups. In this chapter we observe a case of a socially creative strategy in which a par- ticularly difficult housing problem was solved thanks to a holistic approach to the production of space. More specifically, we observed how a network of NGOs was able to manage a situation of housing exclusion for some highly stigmatized roma families. Yet the true character of this social innovation lay precisely at the level of the production of space. The main problem that the network sought to address was the issue of segregation that housing for roma usually reproduces. Welfare provisions for roma in Italy are traditionally part of the problem they are supposed to solve: they maintain segregation and fail to support roma inclusion in broader urban life. This network therefore decided to design a project and implement it in a very collab- orative way. They did not provide a specialized shelter for evicted roma people, or for roma housing emergencies; rather, they invented a participative path within the Turin metropolitan area to produce a space that could also, but not exclusively, welcome Roma families, without labelling them and without separating them from the wider local community."
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "creators": [
+            {
+              "agent": {
+                "name_family": "Maccallum", 
+                "name_given": "Diana", 
+                "rec_class": "Person", 
+                "rec_id": "2441/eo6779thqgm5r489makgmgk26", 
+                "rec_metajson": 1
+              }, 
+              "role": "pbd"
             }, 
-            "role": "aut"
-          }
-        ], 
-        "rec_class": "Document", 
-        "rec_metajson": 1, 
-        "rec_source": "test", 
-        "rec_type": "WorkingPaper", 
-        "title": "Isolated Capital Cities, Accountability and Corruption Evidence from US States", 
-        "title_sub": "Evidence from US States"
+            {
+              "agent": {
+                "name_family": "Mehmood", 
+                "name_given": "Abid", 
+                "rec_class": "Person", 
+                "rec_id": "2441/eo6779thqgm5r489makgn240p", 
+                "rec_metajson": 1
+              }, 
+              "role": "pbd"
+            }, 
+            {
+              "affiliation": {
+                "name": "APL/GURU", 
+                "rec_class": "Orgunit", 
+                "rec_id": "2441/d7a7evb2ctdg4i89gesb1epb9", 
+                "rec_metajson": 1
+              }, 
+              "agent": {
+                "name_family": "Moulaert", 
+                "name_given": "Frank", 
+                "rec_class": "Person", 
+                "rec_id": "2441/3cr7jj61bs68cvg99a9b1e21k", 
+                "rec_metajson": 1
+              }, 
+              "role": "pbd"
+            }, 
+            {
+              "agent": {
+                "name_family": "Hamdouch", 
+                "name_given": "Abdel", 
+                "rec_class": "Person", 
+                "rec_id": "2441/eo6779thqgm5r489makgnal26", 
+                "rec_metajson": 1
+              }, 
+              "role": "pbd"
+            }
+          ], 
+          "date_issued": "2013-05", 
+          "identifiers": [
+            {
+              "id_type": "isbn", 
+              "value": "9781849809986"
+            }
+          ], 
+          "publication_places": [
+            "Cheltenham"
+          ], 
+          "publishers": [
+            "Edward Elgar Publishing Ltd"
+          ], 
+          "rec_class": "Document", 
+          "rec_id": "isbn:9781849809986", 
+          "rec_metajson": 1, 
+          "rec_type": "Book", 
+          "title": "The International Handbook on Social Innovation: Collective Action, Social Learning and Transdisciplinary Research"
+        }
+      ], 
+      "keywords": {
+        "fr": [
+          "Roma", 
+          "Urban Sociology", 
+          "Social Innovation", 
+          "Space", 
+          "Housing", 
+          "Art", 
+          "Urban Governance", 
+          "Urban Conflicts"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "part_page_end": "196", 
+      "part_page_start": "186", 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "BookPart", 
+      "title": "Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy"
+    }, 
+    {
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Centre d'études européennes de Sciences Po", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q384oh", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Halpern", 
+            "name_given": "Charlotte", 
+            "rec_class": "Person", 
+            "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_created": "2011-05", 
+      "date_issued": "2012-05", 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "Europeanization of cities provides a timely assessment of the complex interplay between Europe and cities, as well as it raises many unanswered questions. By exploring the extent to which the European Union and cities alter one another, this collective endeavour contributes to current debates on Europeanization and domestic change."
+        }
+      ], 
+      "extent_pages": "637639", 
+      "is_part_ofs": [
+        {
+          "classifications": {
+            "citation-databases": [
+              "scopus", 
+              "wos"
+            ], 
+            "expert-committee": [
+              "aeres"
+            ]
+          }, 
+          "identifiers": [
+            {
+              "id_type": "issn", 
+              "value": "03091317"
+            }
+          ], 
+          "issuance": "continuing", 
+          "languages": [
+            "en"
+          ], 
+          "peer_review": true, 
+          "publishers": [
+            "Wiley-Blackwell"
+          ], 
+          "rec_class": "Document", 
+          "rec_id": "issn:03091317", 
+          "rec_metajson": 1, 
+          "rec_type": "Journal", 
+          "title": "International Journal of Urban and Regional Research"
+        }
+      ], 
+      "keywords": {
+        "en": [
+          "Europeanization", 
+          "Urban policies", 
+          "cities"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "notes": [
+        {
+          "note_type": "additional physical form", 
+          "value": "Note de lecture"
+        }
+      ], 
+      "part_issue": "3", 
+      "part_volume": "36", 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "BookReview", 
+      "review_ofs": [
+        {
+          "creators": [
+            {
+              "agent": {
+                "name_family": "Hamedinger", 
+                "name_given": "Alexander", 
+                "rec_class": "Person", 
+                "rec_id": "2441/dambferfb7dfprc9m2h2pat0k", 
+                "rec_metajson": 1
+              }, 
+              "role": "pbd"
+            }, 
+            {
+              "agent": {
+                "name_family": "Wolffhardt", 
+                "name_given": "Alexander", 
+                "rec_class": "Person", 
+                "rec_id": "2441/dambferfb7dfprc9m2h2pi026", 
+                "rec_metajson": 1
+              }, 
+              "role": "pbd"
+            }
+          ], 
+          "date_issued": "2010", 
+          "genres": [
+            {
+              "authority": "marcgt", 
+              "value": "unspecified"
+            }
+          ], 
+          "identifiers": [
+            {
+              "id_type": "isbn", 
+              "value": "9789085940272"
+            }
+          ], 
+          "languages": [
+            "en"
+          ], 
+          "publishers": [
+            "Techne Press"
+          ], 
+          "rec_class": "Document", 
+          "rec_id": "isbn:9789085940272", 
+          "rec_metajson": 1, 
+          "rec_type": "UnpublishedDocument", 
+          "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks"
+        }
+      ], 
+      "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks", 
+      "title_non_sort": "The "
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "country": "FR", 
+            "date_end": "2013-02-28", 
+            "date_start": "2013-02-27", 
+            "place": "Sciences Po, Paris", 
+            "rec_class": "Event", 
+            "rec_metajson": 1, 
+            "title": "Governing Paris and Mexico"
+          }, 
+          "role": "aut"
+        }, 
+        {
+          "affiliation": {
+            "name": "Centre d'études européennes de Sciences Po", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q384oh", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Halpern", 
+            "name_given": "Charlotte", 
+            "rec_class": "Person", 
+            "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_created": "2013-02-27", 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "Focus on the long-term trajectory of airport companies, namely Aéroports de Paris (ADP) in order to explain politics of airport planning."
+        }
+      ], 
+      "keywords": {
+        "en": [
+          "Airports", 
+          "Public policy", 
+          "Paris metropolitan area", 
+          "Conflicts"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "notes": [
+        {
+          "note_type": "creation/production credits", 
+          "value": "Programme Paris - Mexico (CEE-Sciences Po & COLMEX)"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "ConferenceContribution", 
+      "title": "Airport companies as silent partners?", 
+      "title_sub": "The slow awakening of Aéroports de Paris"
+    }, 
+    {
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Centre de recherches politiques de Sciences Po", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q380qo", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Escudier", 
+            "name_given": "Alexandre", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q5908j", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "descriptions": [
+        {
+          "language": "fr", 
+          "value": "Contribution autour de la pensée anthropologique et sociologique du philosophe afin d'éclairer ses analyses politiques, historiques, et ses différentes observations de l'actualité."
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "creators": [
+            {
+              "agent": {
+                "name_family": "Louzeau", 
+                "name_given": "Frédéric", 
+                "rec_class": "Person", 
+                "rec_id": "2441/eo6779thqgm5r489mam2pgtr2", 
+                "rec_metajson": 1
+              }, 
+              "role": "pbd"
+            }, 
+            {
+              "agent": {
+                "country": "FR", 
+                "date_end": "2011-10-15", 
+                "date_start": "2011-10-14", 
+                "place": "Paris - Collège des Bernardins", 
+                "rec_class": "Event", 
+                "rec_metajson": 1, 
+                "title": "L’anthropologie de Marcel Gauchet : analyse et débats"
+              }, 
+              "role": "aut"
+            }
+          ], 
+          "date_issued": "2013-02", 
+          "genres": [
+            {
+              "authority": "marcgt", 
+              "value": "unspecified"
+            }
+          ], 
+          "identifiers": [
+            {
+              "id_type": "isbn", 
+              "value": "9782249622557"
+            }
+          ], 
+          "publication_places": [
+            "Paris"
+          ], 
+          "publishers": [
+            "Lethielleux"
+          ], 
+          "rec_class": "Document", 
+          "rec_id": "isbn:9782249622557", 
+          "rec_metajson": 1, 
+          "rec_type": "UnpublishedDocument", 
+          "seriess": [
+            {
+              "rec_class": "Document", 
+              "rec_metajson": 1, 
+              "rec_type": "Series", 
+              "title": "Collège des Bernardins - Cours-colloques-conférences"
+            }
+          ], 
+          "title": "L’Anthropologie de Marcel Gauchet : analyse et débats"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "part_page_end": "86", 
+      "part_page_start": "69", 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "ConferencePaper", 
+      "title": "régime mixte des Modernes et la question de l’Histoire", 
+      "title_non_sort": "Le "
+    }, 
+    {
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Ecole de Droit", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q385ph", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Audren", 
+            "name_given": "Frédéric", 
+            "rec_class": "Person", 
+            "rec_id": "2441/5k7940uimfdf9c8990p900c2l", 
+            "rec_metajson": 1
+          }, 
+          "role": "pbd"
+        }, 
+        {
+          "agent": {
+            "name_family": "Chêne", 
+            "name_given": "Christian", 
+            "rec_class": "Person", 
+            "rec_id": "2441/7t638g2jjsquujs9mcc0jeu8l", 
+            "rec_metajson": 1
+          }, 
+          "role": "pbd"
+        }, 
+        {
+          "agent": {
+            "name_family": "Mathey", 
+            "name_given": "Nicolas", 
+            "rec_class": "Person", 
+            "rec_id": "2441/7t638g2jjsquujs9mcc0jii04", 
+            "rec_metajson": 1
+          }, 
+          "role": "pbd"
+        }, 
+        {
+          "agent": {
+            "name_family": "Vergne", 
+            "name_given": "Arnaud", 
+            "rec_class": "Person", 
+            "rec_id": "2441/7t638g2jjsquujs9mcc0k2e43", 
+            "rec_metajson": 1
+          }, 
+          "role": "pbd"
+        }, 
+        {
+          "agent": {
+            "country": "FR", 
+            "date_end": "2012-03-30", 
+            "date_start": "2012-03-29", 
+            "place": "Faculté de Droit de l'Université Paris-Descartes ", 
+            "rec_class": "Event", 
+            "rec_metajson": 1, 
+            "title": "Raymond Saleilles et au-delà"
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2013-03", 
+      "descriptions": [
+        {
+          "language": "fr", 
+          "value": "À l'occasion du centenaire du décès de Raymond Saleilles (1855-1912), des juristes et des politistes ont réuni leurs efforts pour revisiter, à la lumière des derniers apports de l'historiographie juridique, certains aspects de la vie professionnelle de cette grande figure des facultés de droit, ses engagements politiques et religieux, sa conception de la science du droit ainsi que la réception de son oeuvre. Cet ouvrage se propose ainsi, en premier lieu, de mettre en lumière tant la complexité de ses options politiques que l'impact de ses opinions religieuses sur sa pensée juridique. Il s'efforce, ensuite, d'explorer le rôle de Saleilles dans le renouvellement de la science du droit autour de 1900. Enfin, certaines contributions sont l'occasion d'évaluer non seulement l'intérêt de l'auteur pour les droits étrangers et le comparatisme, mais encore le retentissement de son oeuvre à travers le Monde ainsi que son apport à certaines branches du droit."
+        }
+      ], 
+      "extent_pages": "192", 
+      "identifiers": [
+        {
+          "id_type": "isbn", 
+          "value": "9782247125265"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publishers": [
+        "Dalloz"
+      ], 
+      "rec_class": "Document", 
+      "rec_id": "isbn:9782247125265", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "ConferenceProceedings", 
+      "seriess": [
+        {
+          "rec_class": "Document", 
+          "rec_metajson": 1, 
+          "rec_type": "Series", 
+          "title": "Thèmes & commentaires"
+        }
+      ], 
+      "title": "Raymond Saleilles et au-delà"
+    }, 
+    {
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Centre de recherches politiques de Sciences Po", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q380qo", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Rouban", 
+            "name_given": "Luc", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q56sp5", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2013-04-08", 
+      "descriptions": [
+        {
+          "language": "fr", 
+          "value": "« Le travail des fonctionnaires subit une mutation sociologique en profondeur depuis deux décennies qui va bien au-delà des politiques de réforme de l'État. Le travail des fonctionnaires est de plus en plus individualisé et s'inscrit dans une formalisation abstraite. Les carrières ne sont plus réglées par des logiques collectives mais dépendent de plus en plus des ressources sociales et politiques dont chaque fonctionnaire peut disposer. »"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "identifiers": [
+            {
+              "id_type": "issn", 
+              "value": "02426870"
+            }
+          ], 
+          "issuance": "continuing", 
+          "rec_class": "Document", 
+          "rec_id": "issn:02426870", 
+          "rec_metajson": 1, 
+          "rec_type": "Newspaper", 
+          "title": "L'Humanité"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "part_issue": "21144", 
+      "part_page_end": "00", 
+      "part_page_start": "11", 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "NewspaperArticle", 
+      "title": "Fonctionnaires, la fin du mérite républicain"
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Castañeda Lefèvre", 
+            "name_given": "Dorly", 
+            "rec_class": "Person", 
+            "rec_id": "2441/3fm4jv3k2s99lms9jb5i1ag8p", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }, 
+        {
+          "affiliation": {
+            "name": "Centre d'études et de recherches internationales", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q380gh", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Devin", 
+            "name_given": "Guillaume", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q568qo", 
+            "rec_metajson": 1
+          }, 
+          "role": "ths"
+        }
+      ], 
+      "date_issued": "2012-02", 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "This dissertation is about the way an international actor, the EU, has supported local peace initiatives in the midst of war, the dilemmas it faces, and the achievements and limits of its approach to building peace. The central question is, is the EU proposing an original approach to peace-building in Colombia, or are the Peace Laboratories just another development program in a conflict-affected country? I argue that the EU is willing and able to propose an original approach to peace-building. The Peace Laboratories show how the EU followed a learning process leading to the definition of a peace-building program for Colombia, based on civil society organizations, and whose scope was determined by the openness to peace of the Colombian government. Thus, this study may contribute to the general reflection on the EU’s international action, as well as on the civil society organizations’ and recipient states’ roles in building peace in armed conflict situations. I propose a definition of peace-building like the intersection of three dimensions, security, development and democracy. Based on this I analyze both sides of the cooperation programs. Part I studies the EU as an international actor, part II analyses the main Colombian recipients of European official development aid (Colombian government and civil society organizations in conflict regions), and part III seizes the learning process of the EU and the scope of the Peace Laboratories as an approach to peace-building."
+        }, 
+        {
+          "language": "fr", 
+          "value": "La thèse analyse  comment un acteur international, l’Union Européenne (UE), soutient des initiatives de paix au milieu de la guerre en Colombie, les dilemmes auxquels il est confronté,  les limites et succès de son approche à la construction de la paix. Elle pose la question:  l’UE propose-t-elle une approche originale de la construction de la paix en Colombie au travers de ses programmes de coopération  appelés « Laboratoires de Paix », ou bien s’agit-il d’un programme de développement classique dans un pays en conflit ? La thèse affirme que l’UE s’est montrée soucieuse et capable de  développer son propre approche de la construction de la paix. Les Laboratoires de Paix reflètent un processus d’apprentissage de l’UE dans ses interactions avec l’Etat Central Colombien et les organisations de la société civile dans les zones en conflit armé (OSC). L’approche se base sur l’action des OSC et developpe des moyens de les rapprocher de l’Etat colombien. La thèse s’appuie sur une définition du « peace-building » comme l’intersection de trois dimensions - la sécurité, le développement et la démocratie -  pour l’analyse du donateur et des récepteurs de l’aide. La partie I étudie l’UE comme un acteur international en construction. La partie II  analyse les perspectives de paix des acteurs colombiens, tandis que la  partie III  étudie le processus d’apprentissage de l’UE et l’étendue des Laboratoires de paix en tant qu’approche à la construction de la paix.\nCette recherche  contribue à deux débats d’intérêt pour les relations internationales : 1) l’UE acteur international et, 2) le rôle des OSC et des Etats  dans les programmes de construction de la paix en contexte de conflit armé."
+        }
+      ], 
+      "extent_pages": "428", 
+      "keywords": {
+        "fr": [
+          "Peace-building", 
+          "Construction de la paix", 
+          "Organizations de la societé civile", 
+          "Colombie", 
+          "Union Européenne", 
+          "poltique étrangère", 
+          "Union Européenne acteur international", 
+          "Aide Publique au Développpement", 
+          "Etat en Amérique Latine", 
+          "Pays en conflit"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Institut d'Etudes Politiques de Paris"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "DoctoralThesis", 
+      "title": "Peace Laboratories in Colombia: the European Approach to Peace-building", 
+      "title_translated": {
+        "title": "Les Laboratoires de paix en Colombie: L'approche européenne de la construction de la paix"
       }
-    ]
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Epstein", 
+            "name_given": "Renaud", 
+            "rec_class": "Person", 
+            "rec_id": "2441/53r60a8s3kup1vc9k0sklgecj", 
+            "rec_metajson": 1
+          }, 
+          "role": "ivr"
+        }, 
+        {
+          "affiliation": {
+            "name": "Centre d'études européennes de Sciences Po (CEE)", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q384oh", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Le Galès", 
+            "name_given": "Patrick", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q58ub0", 
+            "rec_metajson": 1
+          }, 
+          "role": "ive"
+        }
+      ], 
+      "date_issued": "2007-11", 
+      "descriptions": [
+        {
+          "language": "fr", 
+          "value": "Précurseur et emblème de la dérive néo-libérale de la social-démocratie européenne pour une large partie de la gauche française, Tony Blair fait désormais partie des figures de référence de la majorité sarkozyste. Mais connaît-on vraiment le blairisme ? Le bilan des réformes conduites au cours des dix dernières années en Grande-Bretagne que propose Patrick Le Galès, sociologue et politiste, permet de mieux en comprendre la nature et les effets. Il invite à s’interroger, par un jeu d’aller-retour transmanche, sur les transformations de la droite française et sur ce qu’elles annoncent pour l’État et la société."
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "classifications": {
+            "ddc": [
+              "320.5"
+            ]
+          }, 
+          "date_issued": "1998", 
+          "frequency": "Bimestriel", 
+          "identifiers": [
+            {
+              "id_type": "issn", 
+              "value": "12916412"
+            }
+          ], 
+          "issuance": "continuing", 
+          "languages": [
+            "fr"
+          ], 
+          "publication_places": [
+            "FR"
+          ], 
+          "publishers": [
+            "La Découverte"
+          ], 
+          "rec_class": "Document", 
+          "rec_id": "issn:12916412", 
+          "rec_metajson": 1, 
+          "rec_type": "Journal", 
+          "title": "Mouvements"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "part_issue": "52", 
+      "part_page_end": "131", 
+      "part_page_start": "115", 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "InterviewArticle", 
+      "title": "Vers une révolution bureaucratique ?"
+    }, 
+    {
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Paris-Jourdan Sciences Economiques", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/d7a7evb2ctdg4i89ges9oe5ao", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Piketty", 
+            "name_given": "Thomas", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i7896860ngch2", 
+            "rec_metajson": 1
+          }, 
+          "role": "ths"
+        }, 
+        {
+          "affiliation": {
+            "name": "OFCE", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q38226", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Antonin", 
+            "name_given": "Céline", 
+            "rec_class": "Person", 
+            "rec_id": "2441/5l6uh8ogmqildh09h6l10gtqo", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2009-09", 
+      "descriptions": [
+        {
+          "language": "fr", 
+          "value": "Au cours des cinquante dernières années, des modèles successifs ont été élaborés pour rendre\ncompte du comportement d’épargne des ménages. Ces modèles diffèrent principalement par la\nlongueur de l’horizon décisionnel : après avoir supposé une vision de court terme, l’horizon s’est\nprogressivement élargi à la durée de vie du ménage, avant de devenir illimité ; on est ainsi passé\ndu modèle myope keynésien, au modèle de cycle de vie, puis au modèle dynastique. Ces modèles\nne sont pas exclusifs, et les théories développées récemment montrent que différents horizons\npeuvent coexister, par exemple dans le cadre d’une épargne de précaution avec volonté de transmission\nintergénérationnelle.\nL’objectif principal de cette étude est de tester la pertinence de ces différents cadres de pensée,\net de déterminer l’horizon pertinent d’épargne des ménages à partir des enquêtes INSEE\nBudget des Familles, sur la période 1979-2006.\nOn montre d’abord que l’hypothèse de cycle de vie constitue un cadre un peu simpliste pour\nrendre compte du comportement d’épargne des ménages, car l’on observe pas de décroissance\ndes taux d’épargne en fin de vie. Il s’agit ensuite de détailler les comportements par âge, en\ndistinguant les ménages d’âge actif des ménages retraités :\n– Les ménages d’âge actif sont essentiellement sensibles au motif de précaution (assurance\ncontre les chocs de revenu à court terme), et au motif cycle de vie (perspective de préparation\nde la retraite). Ils ont peu de considérations dynastiques, et épargnent davantage sur\nles revenus du travail que sur les revenus du capital.\n– Les ménages retraités ont un comportement dynastique quel que soit leur niveau de richesse,\navec une désaccumulation de capital très limitée.\nAutrement dit, au cours de leur vie active, les ménages se soucient essentiellement du lendemain,\net dans une certaine mesure de leur retraite ; la prise en compte des générations futures\nn’intervient qu’au moment de la retraite.\nLe second objectif de cette étude est d’analyser l’existence de taux d’épargne différents sur\nle capital et sur le travail, une question récurrente dans le débat économique. Le consensus des\nmacroéconomistes, selon lequel on épargne davantage sur le capital que sur le travail, est aujourd’hui\nbattu en brèche par les nouvelles théories de l’épargne, notamment les théories de l’épargne\nde précaution. L’étude empirique à partir des données Budget des Familles suggère, pour la population\nd’âge actif, l’existence de taux d’épargne plus élevés sur le travail que sur le capital, ce\nqui légitime le motif de précaution."
+        }
+      ], 
+      "extent_pages": "75", 
+      "languages": [
+        "fr"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Ecole d'Economie de Paris"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "MasterThesis", 
+      "title": "Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006"
+    }, 
+    {
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Centre d'études et de recherches internationales", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q380gh", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Combes", 
+            "name_given": "Hélène", 
+            "rec_class": "Person", 
+            "rec_id": "2441/eu4vqp9ompqllr09hga9pgk39", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2012-12", 
+      "descriptions": [
+        {
+          "language": "fr", 
+          "value": "Les articles qui constituent ce dossier portent sur les formes de domination et les échanges politiques, sur la politisation des classes populaires et sur les liens entre ces groupes, les partis, les mouvements sociaux et l’État. Ces travaux privilégient, ici, une approche empirique évitant à la fois des formes d’étiquetage normatives trop rapides et des définitions simplificatrices des rapports politiques. Ils décrivent ainsi les modes de fonctionnement et des dispositifs politiques autour desquels s’organise la politique territoriale."
+        }
+      ], 
+      "extent_pages": "163", 
+      "is_part_ofs": [
+        {
+          "classifications": {
+            "ddc": [
+              "980"
+            ]
+          }, 
+          "frequency": "3 n°s par an", 
+          "identifiers": [
+            {
+              "id_type": "issn", 
+              "value": "11417161"
+            }
+          ], 
+          "issuance": "continuing", 
+          "languages": [
+            "fr"
+          ], 
+          "peer_review": true, 
+          "publication_places": [
+            "Paris"
+          ], 
+          "rec_class": "Document", 
+          "rec_id": "issn:11417161", 
+          "rec_metajson": 1, 
+          "rec_type": "Journal", 
+          "title": "Cahiers des Amériques latines"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "part_issue": "69", 
+      "part_volume": "2012/1", 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "PeriodicalIssue", 
+      "title": "Clientélisme en situation. Échanges politiques, politisation et conflits moraux"
+    }, 
+    {
+      "classifications": {
+        "info:eu-repo/authority/jel": [
+          "F14", 
+          "F21", 
+          "F23"
+        ]
+      }, 
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Laboratoire de Conception et d'Intégration des Systèmes", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/d7a7evb2ctdg4i89gesapaoj4", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Jean", 
+            "name_given": "Sébastien", 
+            "rec_class": "Person", 
+            "rec_id": "2441/c8dmi8nm4pdjkuc9g8m3565k5", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }, 
+        {
+          "affiliation": {
+            "name": "Leverhulme Centre for Research on Globalisation and Economic Policy (GEP)", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/5l6uh8ogmqildh09h29b6gkol", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Hijzen", 
+            "name_given": "Alexander", 
+            "rec_class": "Person", 
+            "rec_id": "2441/c8dmi8nm4pdjkuc9g8m34i593", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }, 
+        {
+          "affiliation": {
+            "name": "Département d'économie", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q385c7", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Mayer", 
+            "name_given": "Thierry", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q5aqa5", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_created": "2011", 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "Based on matching techniques in combination with a difference-in-difference estimator, this paper estimates the effects at home of initiating production abroad through the establishment of a foreign production affiliate. The analysis covers manufacturing and service firms active in France during the period 1987–1999. We show that the motivation to start producing abroad is an important determinant of its impact at home. Market-seeking foreign direct investment (FDI) in manufacturing is associated with significant scale effects, resulting in job creation. By contrast, factor-seeking FDI in manufacturing has no significant effect on employment. However, there is some evidence that this type of FDI is associated with technology effects, in the form of greater capital-intensity and efficiency, as well as larger exports. Finally, FDI in service sectors is associated with significant positive employment effects, presumably reflecting the importance of the market-seeking motive in these sectors."
+        }
+      ], 
+      "keywords": {
+        "fr": [
+          "FDI", 
+          "multinationals", 
+          "propensity sc ore matching", 
+          "services", 
+          "delocalisation"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "Preprint", 
+      "title": "effects at home of initiating production abroad: evidence from matched french firms", 
+      "title_non_sort": "The "
+    }, 
+    {
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Artigas", 
+            "name_given": "Alvaro", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i7896860ig2b0", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }, 
+        {
+          "agent": {
+            "name_family": "Matsumoto", 
+            "name_given": "Tadashi", 
+            "rec_class": "Person", 
+            "rec_id": "2441/5rkqqmvrn4tl22s9mc0slh0gj", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }, 
+        {
+          "affiliation": {
+            "name": "Centre d'études européennes de Sciences Po", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q384oh", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Vitale", 
+            "name_given": "Tommaso", 
+            "rec_class": "Person", 
+            "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2013-04", 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "The increasing environmental concerns at the world scale have pointed out to the unsustainability of present development and growth models as well as its unforeseen consequences such as the chaotic sprawl in space, the fragmentation of territorial units, or the issue of human security. Nowhere else than in the emergent world cities’ does the imperative of reconciling national development, metropolitan expansion and sustainable production models appear more vividly. Here impressive population increases will be absorbed by cities that are and will undisputedly remain the main driver for economic growth. Addressing the issue of sustainable metropolitan development in its most visible form (emissions, access to important utilities like water or electricity, or urban sprawl) is a vital necessity for a substantial share of cities in the South. Yet several hurdles impair the achievement of a holistic model of green growth. \n\nThe capacity of public, corporate and social actors to come about consensual development models designs that address these urgent demands pose the problem in terms of expertise buildup and leadership –the steering of development- as well as in financial terms –how to arbitrate between mitigation costs and competitiveness. Metropolitan development therefore has to include indicators of sustainability dependent on a consistent –and readable –model of green growth. Also, specific decision-making formats that remain vertical for the most part reveal entrenched interests between the State and powerful non-State actors that more often than not become crucial veto players when it comes to a revision of preexistent operational models. The integration of Asian metropolis to regional value-chains and their impact on national development plans (in the form of Special Economic Zones, high-added value technological corridors) reveal the weight of transnational capital as a decisive factor for change. As a direct consequence, transformations become erratic and the temporality of reform appears to lag behind ever growing necessities. \n\nOur project aims at studying systems of action that contribute to the emergence of green strategies in rapidly developing metropolis in Southeast Asia, namely Bangkok (Thailand), Kuala Lumpur (Malaysia), Jakarta (Indonesia) and Manila (Philippines). These cities are confronted to the simultaneous necessity to (i) adapt manufacturing infrastructural development to sustainability principles (transports, energy accessibility), (ii) improve social standards through spatial redistribution (segregation, more efficient layout of manufacturing and residential areas) and (iii) ensure the economic competitiveness at both the national and international level (first-class services, state of the art regulatory frameworks for investors, and reinforcement of strategic economic sectors). Our research also wishes to explore the leverage capacity of these cities to promote green growth models autonomous enough as to reflect the operational concerns of metropolitan entities as well as to take into account national developmental constraints and orientations. Furthermore, and irrespective of this double constraint of green growth strategies, our research wishes to explore to what extent existing programs are able to interrelate these metropolitan concerns and solutions to neighboring territories –within or outside metropolitan regions- and other cities at a national and regional scale.\n\nThe selected approach to the subject combines a technical economic study (economic growth, financial flows, manufacturing transformations and innovations) and a socio-political study of systems of action and actor’s interactions. The proposed methodology combines several in-depth case studies and a systematization ambition that would lead to the development of a model of sustainable metropolitan development in emerging countries. \n\nThe project stands out in its ambition to combine the study of both productive models transformations and their socio-political dimensions, two elements that are usually addressed from a separate perspective. The adjustment of urban and environmental policies to these major challenges presupposes a precise understanding of interdependencies between developmental, urban and financial choices and the transformation of metropolis growth models."
+        }
+      ], 
+      "extent_pages": "29", 
+      "keywords": {
+        "fr": [
+          "Metropolis", 
+          "SouthEast Asia", 
+          "Urban Sociology", 
+          "Urban Policy", 
+          "Green Growth", 
+          "Brownfield", 
+          "Compact city", 
+          "Comparative Studies", 
+          "Urban Political Economy"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "CEE (Sciences Po)"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "Report", 
+      "title": "Greengram - Green Growth in South East Asian Metropolis"
+    }, 
+    {
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Centre d'études européennes de Sciences Po", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q384oh", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Vitale", 
+            "name_given": "Tommaso", 
+            "rec_class": "Person", 
+            "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "descriptions": [
+        {
+          "language": "it", 
+          "value": "La ricerca sociologica tende a privilegiare una definizione estesa di famiglia, intesa come insieme di persone legate da vincoli di matrimonio, parentela, affinità, adozione, tutela o da vincoli affettivi coabitanti ed aventi dimora abituale nello stesso comune. Le strutture familiari tendono a mutare nel tempo. Anche se molti di questi cambiamenti sono ben noti, non è superfluo richiamarli, perché da essi conseguono questioni cruciali per le possibilità di accoglienza solidale. Le trasformazioni più rilevanti attengono alla riduzione del numero dei componenti, con una certa accentuazione in tutte le regioni del Nord, e nelle grandi città in particolare. Aumentano i single, non solo fra gli adulti ma anche fra gli anziani, e diminuisce il numero di figli per famiglia. Altri cambiamenti significativi attengono all’incremento delle famiglie ‘ricostruite’, delle coppie non coniugate e delle famiglie monogenitoriali. Se la diminuzione del numero dei membri delle famiglie è sicuramente il fenomeno più vistoso, ai nostri scopi è importante soffermarci anche sulle dinamiche dell’instabilità familiare così come delle forme di solidarietà intergenerazionale. Il capitolo esplora: \n- L’instabilità del legame coniugale \n- Le diseguaglianze di genere nelle solidarietà intergenerazionali\n- I nuovi rischi sociali e le forme di vulnerabilità delle famiglie \n- I problemi di organizzazione temporale delle famiglie, con particolare riferimento alle diseguaglianze di genere e alle “fatiche” delle coorti centrali\nAlla luce di questi risultati di ricerca si descrivono i potenziali di accoglienza nelle famiglie lombarde. Gli stessi sono interpretati alla luce di una ricerca condotta sulla mobilitazione associativa delle famiglie affidatarie."
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "creators": [
+            {
+              "agent": {
+                "name_family": "Amato", 
+                "name_given": "Silvia", 
+                "rec_class": "Person", 
+                "rec_id": "2441/eu4vqp9ompqllr09hd5rg8sg2", 
+                "rec_metajson": 1
+              }, 
+              "role": "pbd"
+            }, 
+            {
+              "agent": {
+                "name_family": "De Simone", 
+                "name_given": "Carmelita", 
+                "rec_class": "Person", 
+                "rec_id": "2441/eu4vqp9ompqllr09hd5rge0oj", 
+                "rec_metajson": 1
+              }, 
+              "role": "pbd"
+            }, 
+            {
+              "agent": {
+                "name_family": "Zandrini", 
+                "name_given": "Silvia", 
+                "rec_class": "Person", 
+                "rec_id": "2441/eu4vqp9ompqllr09hd5rg4t35", 
+                "rec_metajson": 1
+              }, 
+              "role": "pbd"
+            }
+          ], 
+          "date_issued": "2011", 
+          "publication_places": [
+            "Milan"
+          ], 
+          "publishers": [
+            "Quaderno dell'Assessorato Famiglia Scuola e Politiche sociali del Comune di Milano"
+          ], 
+          "rec_class": "Document", 
+          "rec_metajson": 1, 
+          "rec_type": "Report", 
+          "title": "Affidabile. La costruzione di un percorso per i bambini e le loro famiglie"
+        }
+      ], 
+      "keywords": {
+        "en": [
+          "Family", 
+          "Life Course", 
+          "Foster Care", 
+          "Time budget", 
+          "Social Vulnerability"
+        ]
+      }, 
+      "languages": [
+        "it"
+      ], 
+      "part_page_end": "98", 
+      "part_page_start": "89", 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "ReportPart", 
+      "title": "Famiglie, corsi di vita e accoglienza. Spazi e opportunità di solidarietà in contesto urbano"
+    }, 
+    {
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Sciences Po", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q021gm", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Durand", 
+            "name_given": "Marie-Françoise", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q571ko", 
+            "rec_metajson": 1
+          }, 
+          "role": "pbd"
+        }, 
+        {
+          "affiliation": {
+            "name": "Centre d'études et de recherches internationales", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q380gh", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Lequesne", 
+            "name_given": "Christian", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q54lsl", 
+            "rec_metajson": 1
+          }, 
+          "role": "pbd"
+        }
+      ], 
+      "date_created": "2012", 
+      "date_issued": "2012", 
+      "descriptions": [
+        {
+          "language": "fr", 
+          "value": "Le thème de cette deuxième édition du Ceriscope (2012) porte sur la pauvreté, sujet majeur de la période contemporaine, rarement abordé à la fois de façon pluridisciplinaire, à l’échelle des sociétés du monde et sous un angle comparatif. Les contributions croisent les approches de chercheurs appartenant à plusieurs disciplines des sciences sociales : l’anthropologie, l’économie, l’histoire, la géographie, la science politique et la sociologie. Chacune s’attache à donner du sujet qu’il traite une lecture simple et qualifiée, faite à la fois de clés d’interprétation et d’éléments factuels précis."
+        }
+      ], 
+      "languages": [
+        "fr", 
+        "en"
+      ], 
+      "publishers": [
+        "Sciences Po - CERI", 
+        "Sciences Po - Atelier de cartographie"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "WebSite", 
+      "resources": [
+        {
+          "rec_class": "Resource", 
+          "rec_metajson": 1, 
+          "rec_type": "remote", 
+          "url": "http://ceriscope.sciences-po.fr/pauvrete"
+        }
+      ], 
+      "table_of_contentss": [
+        {
+          "language": "fr", 
+          "value": "[Introduction] : Changer d'échelle et de regard sur la pauvreté / Marie-Françoise Durand et Christian Lequesne ; [Partie 1, Concepts et mesures de la pauvreté] Quelles « mesures » pour quantifier la pauvreté ? / Benoît Martin ; Les enjeux de la sociologie de la pauvreté / Jeanne Lazarus ; La lutte contre la pauvreté, un enjeu international / Isabelle Hillenkamp et Jean-Michel Servet ; Inégalités, pauvreté, globalisation : faits et débats / Pierre-Noël Giraud ; Vers les objectifs mondiaux pour la globalisation / Jean-Michel Severino ; [Partie 2, La pauvreté territorialisée] La pauvreté dans les villes chinoises : le cas des migrants / Alice Ekman ; Le Nordeste dans la configuration sociale du Brésil contemporain / Camille Goirand ; Pauvreté et clientélisme électoral en Colombie / Juan Carlos Guerrero Bernal et Yann Basset ; En France, les pauvres s'en vont aussi à la campagne / Marianne Berthod-Wurmser ; Migrations et pauvreté : essai sur la situation malienne / Patrick Gonin et Nathalie Kotlok ; La pauvreté en Afrique : cartes-clés / Atelier de cartographie de Sciences Po ; [Partie 3, La pauvreté, enjeu des mobilisations sociales et politiques] Injustices sociales et contestations politiques au Maghreb / Luis Martinez ; La pauvreté en Inde - une bombe à retardement ? / Christophe Jaffrelot  ; Les Sans Terre du Brésil, l'activisme transnational et la souveraineté alimentaire comme alternative à la faim / Breno Bringel ; La faiblesse des mouvements de revendication contre la pauvreté en Afrique sub-saharienne / Mahaman Tidjani  ; [Partie 4, Les politiques de lutte contre la pauvreté] La pauvreté dans l'agenda de l'ONU / Jean-Jacques Gabas et Camille Laporte ; Les politiques de cohésion économique et sociale au sein de l'Union européenne / Rachel Guyet ; Pauvreté et politique sociale sous la présidence Obama : vers une tentative d'évaluation / Taoufik Djebali ; Éducation, pauvreté, inégalités : quelles relations économiques ? / Jérôme Sgard et Florence Arestoff ; Bolsa Família : une nouvelle génération de programmes sociaux au Brésil / Valeria Pero ; Questions and Answers on microcredit / R. Ramakumar ; Coopération Sud-Sud et lutte contre la pauvreté : le cas du forum IBAS / Folashadé A. Soulé-Kohndou ; Les ONG et la lutte contre la pauvreté: de la marginalité à l'exemplarité / Simon Tordjman ; [Partie 5, Post-industrialisation, mondialisation et nouvelles formes de pauvreté] Les formes contemporaines dans la disqualification sociale / Serge Paugam ; La pauvreté post-industrielle au Royaume-Uni / Corinne Nativel ; La pauvreté et l'inégalité en Russie / Lidia Prokovieva ; Pauvreté et droits humains / Christophe Gironde et Christophe Golay"
+        }
+      ], 
+      "title": "Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)"
+    }, 
+    {
+      "classifications": {
+        "info:eu-repo/authority/jel": [
+          "D72", 
+          "D73", 
+          "L82", 
+          "R12", 
+          "R23", 
+          "R50"
+        ]
+      }, 
+      "creators": [
+        {
+          "affiliation": {
+            "name": "Département d'économie", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q385c7", 
+            "rec_metajson": 1
+          }, 
+          "agent": {
+            "name_family": "Do", 
+            "name_given": "Quoc-Anh", 
+            "rec_class": "Person", 
+            "rec_id": "2441/53r60a8s3kup1vc9kc6cl8m9l", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }, 
+        {
+          "agent": {
+            "name_family": "Campante", 
+            "name_given": "Filipe R", 
+            "rec_class": "Person", 
+            "rec_id": "2441/dambferfb7dfprc9lj6bkb4sj", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2012-08", 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "We show that isolated capital cities are robustly associated with greater levels of corruption across\nUS states, in line with the view that spatial distance between citizens and the seat of political power\nreduces accountability, and in contrast with the alternative hypothesis that keeping distance between\nthe capital and major economic interests might decrease the risk of political capture. In particular,\nthis stylized fact holds when we use the location of a state’s centroid and the spatial distribution of\nland suitability as sources of exogenous variation for the isolation of the capital city. We then show\ndirect evidence that di↵erent mechanisms for holding state politicians accountable are indeed a↵ected\nby the spatial distribution of population: newspapers provide greater coverage of state politics when\ntheir audiences are more concentrated around the capital, voters are less knowledgeable and interested\nin state politics when they are far from the capital, and voter turnout in state elections is greater in\nplaces that are closer to the capital. We find that the role of media accountability seems particularly\nimportant in explaining the connection between isolated capitals and corruption. We also find evidence\nthat there is more money in state-level political campaigns in those states with isolated capitals,\nagain contrary to the capture hypothesis. Finally, we provide some evidence that these patterns are\nassociated with lower levels of public good spending and outcomes."
+        }
+      ], 
+      "keywords": {
+        "fr": [
+          "Corruption", 
+          "Accountability", 
+          "Population Concentration", 
+          "Capital Cities", 
+          "Capture", 
+          "US State Politics", 
+          "Media", 
+          "Newspapers", 
+          "Turnout", 
+          "Campaign Contributions", 
+          "Public Good Provision"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Sciences Po - ECON"
+      ], 
+      "rec_class": "Document", 
+      "rec_metajson": 1, 
+      "rec_source": "test", 
+      "rec_type": "WorkingPaper", 
+      "seriess": [
+        {
+          "part_number": "2013-01", 
+          "rec_class": "Document", 
+          "rec_metajson": 1, 
+          "rec_type": "Series", 
+          "title": "Sciences Po Economics Discussion Papers"
+        }
+      ], 
+      "title": "Isolated Capital Cities, Accountability and Corruption Evidence from US States", 
+      "title_sub": "Evidence from US States"
+    }
   ], 
   "title": "Test mods"
 }

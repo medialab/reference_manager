@@ -2,52 +2,214 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-from biblib.metajson import Document
-from biblib.services import creator_service
+import re
+
 from pybtex.database.input import bibtex
 from pybtex.database import BibliographyData
 from pybtex.database import Person
 from pybtex.database import Entry
-import re
+
+from biblib.metajson import Document
+from biblib.services import creator_service
+from biblib.services import metajson_service
+from biblib.util import constants
+from biblib.util import string
+
+TYPE_ARTICLE = "article"
+TYPE_BOOK = "book"
+TYPE_BOOKLET = "booklet"
+TYPE_CONFERENCE = "conference"
+TYPE_ICOMM = "ICOMM"
+TYPE_INBOOK = "inbook"
+TYPE_INCOLLECTION = "incollection"
+TYPE_INPROCEEDINGS = "inproceedings"
+TYPE_MANUAL = "manual"
+TYPE_MASTERSTHESIS = "mastersthesis"
+TYPE_MISC = "misc"
+TYPE_PHDTHESIS = "phdthesis"
+TYPE_PROCEEDINGS = "proceedings"
+TYPE_TECHREPORT = "techreport"
+TYPE_UNPUBLISHED = "unpublished"
+
+bibtex_document_type_to_metajson_document_type = {
+    TYPE_ARTICLE: constants.DOC_TYPE_JOURNALARTICLE,
+    TYPE_BOOK: constants.DOC_TYPE_BOOK,
+    TYPE_BOOKLET: constants.DOC_TYPE_BOOKLET,
+    TYPE_CONFERENCE: constants.DOC_TYPE_CONFERENCEPAPER,
+    TYPE_ICOMM: constants.DOC_TYPE_CONFERENCECONTRIBUTION,
+    TYPE_INBOOK: constants.DOC_TYPE_BOOKPART,
+    TYPE_INCOLLECTION: constants.DOC_TYPE_BOOKPART,
+    TYPE_INPROCEEDINGS: constants.DOC_TYPE_CONFERENCEPAPER,
+    TYPE_MANUAL: constants.DOC_TYPE_MANUEL,
+    TYPE_MASTERSTHESIS: constants.DOC_TYPE_MASTERTHESIS,
+    TYPE_MISC: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT,
+    TYPE_PHDTHESIS: constants.DOC_TYPE_DOCTORALTHESIS,
+    TYPE_PROCEEDINGS: constants.DOC_TYPE_CONFERENCEPROCEEDINGS,
+    TYPE_TECHREPORT: constants.DOC_TYPE_TECHREPORT,
+    TYPE_UNPUBLISHED: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT
+}
 
 
 def bibtex_root_to_metasjon_list(bibtex_root, source, only_first_record):
-    print "bibtex_root_to_metasjon_list"
     for entry_key in bibtex_root.entries.keys():
         bibtex_entry = bibtex_root.entries[entry_key]
-        metajson = bibtex_entry_to_metajson(bibtex_entry, source)
-        yield metajson
+        yield bibtex_entry_to_metajson(bibtex_entry, source)
 
 
 def bibtex_entry_to_metajson(entry, source):
-    print "bibtex_entry_to_metajson"
-    # todo convert bibtext to metajson
     document = Document()
-    document["creators"] = extract_creators(entry)
-    document["title"] = get_field(entry, 'title')
-    document["date_issued"] = get_field(entry, 'year')
-    is_part_of_title = get_field(entry, 'journal')
-    if is_part_of_title:
+    # rec_type
+    bibtex_type = entry.type
+    rec_type = bibtex_document_type_to_metajson_document_type[bibtex_type]
+    document["rec_type"] = rec_type
+
+    # author -> creators
+    creators = []
+    authors = extract_creators(entry, "author", "aut")
+    if authors:
+        print "authors: {}".format(authors)
+        creators.extend(authors)
+
+    # editor -> creators
+    editors = extract_creators(entry, "editor", "edt")
+    if editors:
+        print "editors: {}".format(editors)
+        creators.extend(editors)
+
+    # organization -> creators
+    organizations = extract_creators(entry, "organization", "???")
+    if organizations:
+        print "organizations: {}".format(organizations)
+        creators.extend(organizations)
+
+    # school -> creators
+    schools = extract_creators(entry, "school", "yyy")
+    if schools:
+        print "schools: {}".format(schools)
+        creators.extend(schools)
+
+    if creators:
+        document["creators"] = creators
+
+    # title
+    title = get_field(entry, 'title')
+    if title:
+        document["title"] = title
+
+    # year, month -> date_issued
+    year = get_field(entry, 'year')
+    month = get_field(entry, 'month')
+    if year:
+        date = year
+        if month:
+            if int(month) < 10:
+                month = "0" + month
+            date += month
+        document["date_issued"] = date
+
+    # journal -> is_part_ofs
+    journal = get_field(entry, 'journal')
+    if journal:
         is_part_of = Document()
-        is_part_of["rec_type"] = "journal"
-        is_part_of["title"] = is_part_of_title
+        is_part_of["rec_type"] = "Journal"
+        is_part_of["title"] = journal
         document["is_part_ofs"] = [is_part_of]
-    document["description"] = get_field(entry, 'abstract')
+
+    # booktitle -> is_part_ofs
+    booktitle = get_field(entry, 'booktitle')
+    if booktitle:
+        is_part_of = Document()
+        is_part_of["rec_type"] = "Book"
+        is_part_of["title"] = booktitle
+        document["is_part_ofs"] = [is_part_of]
+
+    # abstract -> descriptions
+    abstract = get_field(entry, 'abstract')
+    note = get_field(entry, 'note')
+    descriptions = []
+    if abstract:
+        descriptions.append({"language": "und", "value": abstract})
+    if note:
+        descriptions.append({"language": "und", "value": note})
+    if descriptions:
+        document["descriptions"] = descriptions
+
+    # chapter -> part_chapter_number
+    chapter = get_field(entry, 'chapter')
+    if chapter:
+        document["part_chapter_number"] = chapter
+
+    # volume -> part_volume
+    volume = get_field(entry, 'volume')
+    if volume:
+        document["part_volume"] = volume
+
+    # number -> part_issue
+    number = get_field(entry, 'number')
+    if number:
+        document["part_issue"] = number
+
+    # pages -> part_page_start, part_page_end
+    pages = get_field(entry, 'pages')
+    if pages:
+        pages_list = pages.split("-")
+        document["part_page_start"] = pages_list[0]
+        if len(pages_list) > 1:
+            document["part_page_end"] = pages_list[1]
+
+    # publisher -> publishers
+    publisher = get_field(entry, 'publisher')
+    if publisher:
+        document["publishers"] = [publisher]
+
+    # institution -> publishers
+    institution = get_field(entry, 'institution')
+    if institution:
+        document["publishers"] = [institution]
+
+    # address -> publisher_places
+    address = get_field(entry, 'address')
+    if address:
+        document["publisher_places"] = [address]
+
+    # howpublished
+    howpublished = get_field(entry, 'howpublished')
+    if howpublished:
+        document["published_how"] = howpublished
+
+    # edition -> edition
+    edition = get_field(entry, 'edition')
+    if edition:
+        document["edition"] = edition
+
+    # series -> todo part_number or series[0]["title"] ?
+    series = get_field(entry, 'series')
+    if series:
+        document["part_number"] = series
+
+    # isbn -> identifiers[].id_value = isbn
+    isbn = get_field(entry, 'isbn')
 
     myfile = get_field(entry, 'file')
-    keywords = re.split(r',', get_field(entry, 'keywords').lower())
+    keywords_field = get_field(entry, 'keywords')
+    if keywords_field:
+        keywords = re.split(r',', get_field(entry, 'keywords').lower())
 
+    debug = True
+    if debug:
+        print "BibTeX type: {}".format(bibtex_type)
+        metajson_service.pretty_print_document(document)
     return document
 
 
-def extract_creators(entry):
-    if "author" in entry.persons:
+def extract_creators(entry, key, role):
+    if key in entry.persons:
         creators = []
-        authors = entry.persons["author"]
+        authors = entry.persons[key]
         for author in authors:
             formatted_name = unicode(author).encode('utf-8')
             formatted_name = formatted_name.replace("{", "").replace("}", "")
-            creator = creator_service.formatted_name_to_creator(formatted_name, "person", "aut")
+            creator = creator_service.formatted_name_to_creator(formatted_name, "person", role)
             creators.append(creator)
             return creators
     else:
