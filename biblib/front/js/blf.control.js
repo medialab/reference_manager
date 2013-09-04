@@ -237,6 +237,36 @@ blf.init = function(config) {
       ],
       hacks: [
         {
+          triggers: 'successCallback',
+          description: 'trigged from services success function, execute config callbacks given in init()',
+          method: function(e){
+            /*
+              Usage :
+
+              blf.init({
+                lang: 'fr',
+                ...
+                callbacks:{
+                  save: function(data){
+                    ...
+                  }
+                },
+                ...
+              })
+
+
+              e.data = {
+                service:input.service,
+                result:data.result,
+                params:input
+              }
+            */
+            if( blf.config.callbacks && blf.config.callbacks[ e.data.service ] )
+              blf.config.callbacks[ e.data.service ]( e.data );
+              // :-D
+          }
+        },
+        {
           triggers: 'validateEntry',
           description: 'What happens when an entry is validated from the form.',
           method: function(e) {
@@ -437,9 +467,14 @@ blf.init = function(config) {
           data: function(input) {
             return blf.global.rpc.buildData('search', [ input.query ]);
           },
-          success: function(data) {
+          success: function(data, input) {
             var results = data.result;
             this.update('resultsList', results.records || []);
+            this.dispatchEvent('successCallback',{
+              service:input.service,
+              result:data.result,
+              params:input
+            });
           }
         },
         {
@@ -529,10 +564,15 @@ blf.init = function(config) {
           data: function(input) {
             return blf.global.rpc.buildData('save', [ input.entry ]);
           },
-          success: function(data) {
-            this.log('Log from server after saving an entry:', result);
+          success: function(data, input) {
             var result = data.result;
+            this.log('Log from server after saving an entry:', result);
             this.update('mode', 'home');
+            this.dispatchEvent('successCallback',{
+              service:input.service,
+              result:data.result,
+              params:input
+            });
           }
         },
         {
@@ -553,6 +593,11 @@ blf.init = function(config) {
             this.update('resultsList', this.get('resultsList').filter(function(res) {
               return res.rec_id !== input.rec_id;
             }));
+            this.dispatchEvent('successCallback',{
+              service:input.service,
+              result:data.result,
+              params:input
+            });
           }
         }
       ]
