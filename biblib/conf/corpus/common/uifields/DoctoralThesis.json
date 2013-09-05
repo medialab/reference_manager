@@ -139,6 +139,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Doctoral Thesis",
+        "fr": "Thèse de doctorat"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "DoctoralThesis"

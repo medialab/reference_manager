@@ -85,6 +85,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Patent",
+        "fr": "Brevet"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "Patent"

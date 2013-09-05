@@ -115,6 +115,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Master Thesis",
+        "fr": "Thèse de master"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "MasterThesis"

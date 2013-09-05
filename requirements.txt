@@ -14,3 +14,5 @@ pyoai
 google-api-python-client
 gdata
 gspreadsheet
+ply
+pymarc

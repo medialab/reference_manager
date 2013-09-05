@@ -158,6 +158,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Encyclopedia",
+        "fr": "Encyclopédie"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "Encyclopedia"

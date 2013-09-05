@@ -169,6 +169,10 @@
             "type_ui": "CharField"
         }
     ],
+    "labels": {
+        "en": "Image",
+        "fr": "Image"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "Image"

@@ -102,6 +102,10 @@
             "type_ui": "IdentifierField"
         }
     ],
+    "labels": {
+        "en": "Journal",
+        "fr": "Revue"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "Journal"

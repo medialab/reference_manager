@@ -139,6 +139,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Professoral Thesis",
+        "fr": "HDR - Habilitation à diriger des recherches"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "ProfessoralThesis"

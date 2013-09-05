@@ -120,6 +120,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Video Broadcast",
+        "fr": "Vidéo télédiffusée"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "VideoBroadcast"

@@ -10,6 +10,10 @@
             "type_ui": "CharField"
         }
     ],
+    "labels": {
+        "en": "Remote resource : URL",
+        "fr": "Ressource distante : URL"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "ResourceRemote"
