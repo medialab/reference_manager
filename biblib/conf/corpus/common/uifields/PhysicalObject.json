@@ -85,6 +85,10 @@ PhysicalObject{
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Physical Object",
+        "fr": "Objet physique"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "PhysicalObject"

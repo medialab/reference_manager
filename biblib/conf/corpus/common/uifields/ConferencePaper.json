@@ -129,6 +129,10 @@
             "type_ui": "IdentifierField"
         }
     ],
+    "labels": {
+        "en": "Conference paper",
+        "fr": "Communication dans des actes de colloques publiés"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "ConferencePaper"

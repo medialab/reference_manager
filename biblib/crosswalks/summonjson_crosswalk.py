@@ -310,7 +310,7 @@ def extract_creators(sum_doc):
     creators.extend(convert_creators(sum_doc, "DissertationAdvisor_xml", None, "person", "ths"))
     creators.extend(convert_creators(sum_doc, "DissertationSchool_xml", None, "orgunit", "dgg"))
     creators.extend(convert_creators(sum_doc, "Distribution", None, None, "dst"))
-    creators.extend(convert_creators(sum_doc, "Editor_xml", None, "person", "edt"))
+    creators.extend(convert_creators(sum_doc, "Editor_xml", None, "person", "pbd"))
     creators.extend(convert_creators(sum_doc, "MeetingName", None, "event", "aut"))
     return creators
 
@@ -346,6 +346,7 @@ def convert_creators(sum_doc, sum_authors_key, sum_affiliations_key, creator_typ
                 if "sequence" in author and author["sequence"] in affiliations_dict:
                     creator["affiliation"] = affiliations_dict[author["sequence"]]
 
+                # todo : location dans le cas des DissertationSchool_xml
                 if creator:
                     creators.append(creator)
 

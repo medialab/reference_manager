@@ -10,6 +10,10 @@
             "type_ui": "CharField"
         }
     ],
+    "labels": {
+        "en": "Bitstream Resource : File",
+        "fr": "Fichier enregistré : Fichier"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "ResourceBitstream"

@@ -85,6 +85,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Conference poster",
+        "fr": "Poster dans une conférence"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "ConferencePoster"
