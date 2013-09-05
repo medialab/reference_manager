@@ -180,6 +180,10 @@
             "type_ui": "DocumentField"
         }
     ],
+    "labels": {
+        "en": "Map",
+        "fr": "Carte"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "Map"

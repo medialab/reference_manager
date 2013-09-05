@@ -4,6 +4,7 @@
 
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import QName
+
 from biblib.metajson import Creator
 from biblib.metajson import Document
 from biblib.metajson import Event

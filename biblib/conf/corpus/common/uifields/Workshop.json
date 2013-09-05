@@ -85,6 +85,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Workshop",
+        "fr": "Workshop"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "Workshop"

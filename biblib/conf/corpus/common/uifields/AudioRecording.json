@@ -106,6 +106,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Audio Recording",
+        "fr": "Enregistrement audio"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "AudioRecording"

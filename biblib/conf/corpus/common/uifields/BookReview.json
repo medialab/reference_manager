@@ -161,6 +161,10 @@
             "type_ui": "DocumentField"
         }
     ],
+    "labels": {
+        "en": "Book Review",
+        "fr": "Compte-rendu d'ouvrage"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "BookReview"

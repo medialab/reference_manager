@@ -102,6 +102,10 @@
             "type_ui": "IdentifierField"
         }
     ],
+    "labels": {
+        "en": "Newspaper",
+        "fr": "Journal de presse écrite"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "Newspaper"

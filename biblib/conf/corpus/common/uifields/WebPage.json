@@ -90,6 +90,10 @@
             "type_ui": "DocumentField"
         }
     ],
+    "labels": {
+        "en": "Web page",
+        "fr": "Page web"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "WebPage"

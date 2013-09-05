@@ -147,6 +147,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Annotation article",
+        "fr": "Commentaire d'arrêt"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "AnnotationArticle"

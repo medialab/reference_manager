@@ -129,6 +129,10 @@
             "type_ui": "IdentifierField"
         }
     ],
+    "labels": {
+        "en": "Book Part",
+        "fr": "Partie ou chapitre de livre"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "BookPart"

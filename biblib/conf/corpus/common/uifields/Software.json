@@ -103,6 +103,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Software",
+        "fr": "Logiciel"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "Software"

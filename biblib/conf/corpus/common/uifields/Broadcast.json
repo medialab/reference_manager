@@ -54,6 +54,10 @@
             "type_ui": "DateField"
         }
     ],
+    "labels": {
+        "en": "Broadcast",
+        "fr": "Emission de radio ou de télévision"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "Broadcast"

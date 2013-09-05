@@ -85,6 +85,10 @@
             "type_ui": "KeywordField"
         }
     ],
+    "labels": {
+        "en": "Personal Communication",
+        "fr": "Communication personnelle, correspondance"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "PersonalCommunication"

@@ -120,6 +120,10 @@
             "type_ui": "DocumentField"
         }
     ],
+    "labels": {
+        "en": "Video Part",
+        "fr": "Extrait vidéo"
+    },
     "rec_class": "Field",
     "rec_metajson": 1,
     "rec_type": "VideoPart"

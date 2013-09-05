@@ -63,8 +63,9 @@ class References_repository(jsonrpc.JSONRPC):
             return object id if ok or error
         """
         doc_bson = jsonbson.json_to_bson(document)
-
-        return jsonbson.bson_to_json(repository_service.save_document(None, doc_bson))
+        oid, rec_id = repository_service.save_document(None, doc_bson)
+        #jsonbson.bson_to_json(repository_service.save_document(None, doc_bson))
+        return {"rec_id": rec_id}
 
     def jsonrpc_delete(self, rec_id):
         """ delete a reference in the repository
