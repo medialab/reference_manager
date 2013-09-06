@@ -4,15 +4,22 @@
 
 import os
 
+from biblib.metajson import Document
+from biblib.metajson import Creator
+from biblib.metajson import Subject
+from biblib.services import creator_service
+from biblib.services import language_service
+from biblib.services import metajson_service
 from biblib.util import console
 from biblib.util import constants
+from biblib.util import jsonbson
 
 from pymarc import MARCReader
 
 
 # https://github.com/edsu/pymarc/wiki/Examples
 def unimarc_file_to_metasjon_list(unimarc_file):
-    reader = MARCReader(unimarc_file)
+    reader = MARCReader(unimarc_file, False, False)
     count = 0
     for record in reader:
         count += 1
@@ -21,42 +28,24 @@ def unimarc_file_to_metasjon_list(unimarc_file):
 
 
 def unimarc_record_to_metajson(record):
-    title = author = date = subject = oclc = publisher = ''
+    document = Document()
+
+    #record_dict = record.as_dict()
+    #print jsonbson.dumps_json(record_dict, True)
+
+    # leader -> rec_type
+    #print record.leader
+    print record.leader[6] + " " + record.leader[7]
+    document["rec_type"] = "Document"
 
     # title
     if record['200'] is not None:
-        title = record['200']['a']
-        if record['200']['b'] is not None:
-            title = title + " " + record['200']['b']
+        document["title"] = record['200']['a']
 
-    # determine author
-    if record['100'] is not None:
-        author = record['100']['a']
-    elif record['110'] is not None:
-        author = record['110']['a']
-    elif record['700'] is not None:
-        author = record['700']['a']
-    elif record['710'] is not None:
-        author = record['710']['a']
-
-    # date
-    if record['260'] is not None:
-        date = record['260']['c']
-
-    # subject
-    if record['650'] is not None:
-        subject = record['650']['a']
-
-    # oclc number
-    if record['035'] is not None:
-        if len(record.get_fields('035')[0].get_subfields('a')) > 0:
-            oclc = record['035']['a'].replace('(OCoLC)', '')
-
-    # publisher
-    if record['260'] is not None:
-        publisher = record['260']['b']
-
-    print title
+    debug = True
+    #if debug:
+    #    metajson_service.pretty_print_document(document)
+    return document
 
 
 # Temp Test

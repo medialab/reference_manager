@@ -21,6 +21,7 @@
                 "en": "Study title",
                 "fr": "Titre de l'enquête"
             },
+            "multiple": false,
             "property": "title",
             "required": true,
             "type_ui": "CharField"
@@ -32,7 +33,7 @@
             },
             "multiple": true,
             "property": "descriptions",
-            "required": false,
+            "required": true,
             "type_ui": "LanguageValueField"
         },
         {
@@ -42,7 +43,7 @@
             },
             "multiple": true,
             "property": "keywords",
-            "required": false,
+            "required": true,
             "type_ui": "KeywordField"
         },
         {
@@ -57,8 +58,8 @@
         },
         {
             "labels": {
-                "en": "Creators",
-                "fr": "Cr\u00e9ateurs"
+                "en": "Author(s)",
+                "fr": "Auteur(s)"
             },
             "multiple": true,
             "property": "creators",
@@ -70,8 +71,9 @@
                 "en": "Distributor",
                 "fr": "Diffuseur des données"
             },
+            "multiple": false,
             "property": "distributor",
-            "required": true,
+            "required": false,
             "type_ui": "CharField"
         },
         {
@@ -82,7 +84,7 @@
             "multiple": true,
             "only_one": false,
             "property": "projects",
-            "required": false,
+            "required": true,
             "type_fields": [
                 "Project"
             ],
@@ -94,9 +96,9 @@
                 "fr": "Niveau d'observation"
             },
             "multiple": true,
-            "property": "location_of_units_of_observation",
+            "property": "location_of_units_of_observations",
             "required": false,
-            "type_source": "location_of_units_of_observation",
+            "type_source": "location_of_units_of_observations",
             "type_ui": "TypeField"
         },
         {
@@ -105,7 +107,7 @@
                 "fr": "Pays couverts"
             },
             "multiple": true,
-            "property": "countries",
+            "property": "coverage_countries",
             "required": true,
             "type_source": "country",
             "type_ui": "TypeField"
@@ -116,7 +118,7 @@
                 "fr": "Couverture géographique"
             },
             "multiple": true,
-            "property": "regions",
+            "property": "coverage_geographics",
             "required": false,
             "type_ui": "CharField"
         },
@@ -126,7 +128,7 @@
                 "fr": "Unités spatialisées"
             },
             "multiple": true,
-            "property": "cities",
+            "property": "coverage_spatialunits",
             "required": false,
             "type_ui": "CharField"
         },
@@ -137,7 +139,7 @@
             },
             "multiple": true,
             "property": "target_groups",
-            "required": false,
+            "required": true,
             "type_ui": "CharField"
         },
         {
@@ -166,7 +168,7 @@
                 "fr": "Temporalité de collecte"
             },
             "multiple": true,
-            "property": "data_collection_time_dimension",
+            "property": "data_collection_time_dimensions",
             "required": true,
             "type_source": "data_collection_time_dimension",
             "type_ui": "TypeField"
@@ -178,8 +180,9 @@
             },
             "multiple": true,
             "property": "data_collection_mode",
-            "required": false,
-            "type_ui": "CharField"
+            "required": true,
+            "type_source": "data_collection_modes",
+            "type_ui": "TypeField"
         },
         {
             "labels": {
@@ -188,7 +191,7 @@
             },
             "multiple": true,
             "property": "data_collection_sampling",
-            "required": false,
+            "required": true,
             "type_ui": "CharField"
         },
         {
@@ -310,9 +313,68 @@
                 "en": "Date First Edition",
                 "fr": "Date de la première version"
             },
-            "property": "date_first_edition",
+            "property": "version_date_first",
             "required": true,
             "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Date Last Edition",
+                "fr": "Date de la derniére version"
+            },
+            "property": "version_date_last",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Copyright",
+                "fr": "Copyright"
+            },
+            "multiple": false,
+            "property": "copyright_statement",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Software",
+                "fr": "Logiciel"
+            },
+            "multiple": false,
+            "property": "software",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Editor",
+                "fr": "Editeur"
+            },
+            "multiple": false,
+            "property": "editor",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Depositer",
+                "fr": "Déposant"
+            },
+            "multiple": false,
+            "property": "submitter",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Observation Units",
+                "fr": "Unités d'observation"
+            },
+            "multiple": true,
+            "property": "observation_units",
+            "required": true,
+            "type_ui": "CharField"
         }
     ],
     "labels": {
