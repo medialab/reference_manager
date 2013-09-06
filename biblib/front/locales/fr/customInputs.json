@@ -34,6 +34,12 @@
       "date_end": "Date de fin :"
     }
   },
+  "CharField": {
+    "errors": {
+      "exactly_one": "Il doit y avoir exactement une entrée.",
+      "at_least_one": "Vous devez ajouter au moins une entrée."
+    }
+  },
   "IdentifierField": {
     "errors": {
       "exactly_one": "Il doit y avoir exactement un identifieur.",

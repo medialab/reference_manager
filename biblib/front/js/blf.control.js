@@ -109,8 +109,10 @@ blf.init = function(config) {
         id: 'blf.Property',
         includes: true,
         struct: {
+          filter_date_start: '?string',
+          filter_date_end: '?string',
+          property: '?string',
           multiple: '?boolean',
-          property: 'string',
           required: '?boolean',
           type_data: '?string',
           type_ui: 'string',
@@ -550,6 +552,7 @@ blf.init = function(config) {
             for (i = 0, l = result.length; i < l; i++)
               fields[result[i].rec_type] = result[i];
 
+            window.FIELDS = fields;
             this.update('fields', fields);
           }
         },
