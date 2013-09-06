@@ -554,6 +554,28 @@ blf.init = function(config) {
           }
         },
         {
+          id: 'get_entry', // given the id
+          url: blf.global.API_URL,
+          description: 'Retrieve an entry, given the rec_id identifier.',
+          type: blf.global.rpc.type,
+          error: blf.global.rpc.error,
+          expect: blf.global.rpc.expect,
+          contentType: blf.global.rpc.contentType,
+          data: function(input) {
+            return blf.global.rpc.buildData('metadata_by_rec_ids', [ [input.rec_id ]]);
+          },
+          success: function(data, input) {
+            var result = data.result;
+            this.log('Log from server after getting an entry:', result);
+            this.update('mode', 'home');
+            this.dispatchEvent('successCallback',{
+              service:input.service,
+              result:data.result,
+              params:input
+            });
+          }
+        },
+        {
           id: 'save',
           url: blf.global.API_URL,
           description: 'Saves an entry.',
