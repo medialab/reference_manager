@@ -261,6 +261,7 @@ blf.init = function(config) {
                 params:input
               }
             */
+            this.log('calling config blf.config.callbacks with params :', e.data );
             if( blf.config.callbacks && blf.config.callbacks[ e.data.service ] )
               blf.config.callbacks[ e.data.service ]( e.data );
               // :-D
@@ -566,10 +567,10 @@ blf.init = function(config) {
           },
           success: function(data, input) {
             var result = data.result;
-            this.log('Log from server after getting an entry:', result);
+            this.log('Log from server after getting an entry:', result, 'with input:', input);
             this.update('mode', 'home');
             this.dispatchEvent('successCallback',{
-              service:input.service,
+              service:'get_entry',
               result:data.result,
               params:input
             });
@@ -589,7 +590,7 @@ blf.init = function(config) {
           success: function(data, input) {
             var result = data.result;
             this.log('Log from server after saving an entry:', result);
-            this.update('mode', 'home');
+            //this.update('mode', 'home');
             this.dispatchEvent('successCallback',{
               service:input.service,
               result:data.result,
