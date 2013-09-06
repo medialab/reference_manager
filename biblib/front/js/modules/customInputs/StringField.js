@@ -37,7 +37,7 @@
     }
 
     function _getData(data) {
-      return $('.value', _dom).text();
+      return undefined;
     }
 
     function _validate() {
