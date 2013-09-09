@@ -73,50 +73,81 @@ class References_repository(jsonrpc.JSONRPC):
         """
         return jsonbson.bson_to_json(repository_service.delete_document(None, rec_id))
 
+    def jsonrpc_set_metadata_property(self, rec_id, key, value):
+        """ set the value for a property of a metadata
+            params:
+                - rec_id: rec_id of a metadata record
+                - key: property that will be set
+                - value: value that will be set
+                - format: the format wanted to describe references
+            return the asked references in the specified format
+            return the modified reference in the specified format
+        """
+        try:
+            metajson_document = repository_service.set_document_property(None, rec_id, key, value)
+            return jsonbson.bson_to_json(metajson_document)
+        except exceptions.metajsonprc_error, ex:
+            return jsonrpclib.Fault(ex.code, str(ex))
+
     def jsonrpc_metadata_by_rec_ids(self, rec_ids, format="metajson"):
         """ get metadata of a list of references
             params:
-                - ids: list of record ids (rec_id)
+                - rec_ids: list of record ids (rec_id)
                 - format: the format wanted to describe references
             return the asked references in the specified format
         """
-        metajson_document = repository_service.get_documents_by_rec_ids(None, rec_ids)
-        if format == "metajson":
-            return jsonbson.bson_to_json(metajson_document)
-        else:
-            return crosswalks_service.convert_document(metajson_document, "metajson", format)
+        try:
+            metajson_documents = repository_service.get_documents_by_rec_ids(None, rec_ids)
+            print len(metajson_documents)
+            results = []
+            for metajson_document in metajson_documents:
+                if format == "metajson":
+                    results.append(jsonbson.bson_to_json(metajson_document))
+                else:
+                    results.append(crosswalks_service.convert_document(metajson_document, "metajson", format))
+            return results
+        except exceptions.metajsonprc_error, ex:
+            return jsonrpclib.Fault(ex.code, str(ex))
 
     def jsonrpc_metadata_by_mongo_ids(self, mongo_ids, format="metajson"):
         """ get metadata of a list of references
             params:
-                - ids: list of mongodb ids (_id)
+                - mongo_ids: list of mongodb ids (_id)
                 - format: the format wanted to describe references
                     (metajson by defaut, metajsonui for user interface)
             return the asked references in the specified format
         """
-        metajson_document = repository_service.get_documents_by_mongo_ids(None, mongo_ids)
-        if format == "metajson":
-            return jsonbson.bson_to_json(metajson_document)
-        else:
-            return crosswalks_service.convert_document(metajson_document, "metajson", format)
+        try:
+            metajson_documents = repository_service.get_documents_by_mongo_ids(None, mongo_ids)
+            results = []
+            for metajson_document in metajson_documents:
+                if format == "metajson":
+                    results.append(jsonbson.bson_to_json(metajson_document))
+                else:
+                    results.append(crosswalks_service.convert_document(metajson_document, "metajson", format))
+            return results
+        except exceptions.metajsonprc_error, ex:
+            return jsonrpclib.Fault(ex.code, str(ex))
 
     def jsonrpc_citation_by_rec_ids(self, rec_ids, style="mla", format="html"):
         """ get citations of a list of references
             params:
-                - ids: list of known ids
+                - rec_ids: list of known ids
                 - style: the style in which to wirte the citations
                 - format: the format wanted to describe citations
             return the asked references in the specified format
         """
-        document_list = repository_service.get_documents_by_rec_ids(None, rec_ids)
-        if document_list:
+        try:
+            metajson_documents = repository_service.get_documents_by_rec_ids(None, rec_ids)
             results = []
-            for document in document_list:
+            for metajson_document in metajson_documents:
                 result = {}
-                result["rec_id"] = document["rec_id"]
-                result[style] = citations_manager.cite(document, style, format)
+                result["rec_id"] = metajson_document["rec_id"]
+                result[style] = citations_manager.cite(metajson_document, style, format)
                 results.append(result)
             return jsonbson.bson_to_json(results)
+        except exceptions.metajsonprc_error, ex:
+            return jsonrpclib.Fault(ex.code, str(ex))
 
     def jsonrpc_search(self, search_query):
         """ search for one or more data from the repository
@@ -131,10 +162,8 @@ class References_repository(jsonrpc.JSONRPC):
             response_time = "{0:.3f}".format(interval.total_seconds() * 1000)
             search_response["response_time"] = response_time
             return jsonbson.bson_to_json(search_response)
-        except exceptions.search_error, ex:
-            code = int(str(ex))
-            message = exceptions.search_error_message[code]
-            return jsonrpclib.Fault(code, message)
+        except exceptions.metajsonprc_error, ex:
+            return jsonrpclib.Fault(ex.code, str(ex))
 
     def jsonrpc_search_mongo(self, mongo_query):
         """ search for one or more data from the repository

@@ -4,7 +4,6 @@
 
 # mongod --dbpath /Users/jrault/Documents/SciencesPo/Projets/biblib/mongodb
 
-import uuid
 import pymongo
 from bson.objectid import ObjectId
 from bson.errors import InvalidId
@@ -68,7 +67,7 @@ def get_document_by_mongo_id(corpus, mongo_id):
     if result:
         return metajson_service.load_dict(result)
     else:
-        return None
+        raise exceptions.metajsonprc_error(3)
 
 
 def get_documents_by_mongo_ids(corpus, mongo_ids):
@@ -81,7 +80,14 @@ def get_documents_by_mongo_ids(corpus, mongo_ids):
     if results:
         return metajson_service.load_dict_list(results)
     else:
-        return None
+        raise exceptions.metajsonprc_error(4)
+
+
+def set_document_property(corpus, rec_id, key, value):
+    metajson_document = get_document_by_rec_id(corpus, rec_id)
+    metajson_document[key] = value
+    save_document(corpus, metajson_document)
+    return metajson_document
 
 
 def get_document_by_rec_id(corpus, rec_id):
@@ -91,7 +97,7 @@ def get_document_by_rec_id(corpus, rec_id):
     if result:
         return metajson_service.load_dict(result)
     else:
-        return None
+        raise exceptions.metajsonprc_error(1)
 
 
 def get_documents_by_rec_ids(corpus, rec_ids):
@@ -101,7 +107,7 @@ def get_documents_by_rec_ids(corpus, rec_ids):
     if results:
         return metajson_service.load_dict_list(results)
     else:
-        return None
+        raise exceptions.metajsonprc_error(2)
 
 
 def get_documents(corpus):
@@ -127,12 +133,12 @@ def search(corpus, search_query):
 
     # empty search_query
     if search_query is None:
-        raise exceptions.search_error("0")
+        raise exceptions.metajsonprc_error(0)
 
     # filter_class -> collection
     collection = None
     if "filter_class" not in search_query or search_query["filter_class"] not in ["Document", "Agent", "Person", "OrgUnit", "Event", "Family"]:
-        raise exceptions.search_error("100")
+        raise exceptions.metajsonprc_error(100)
     elif search_query["filter_class"] == "Document":
         collection = DOCUMENTS
     elif search_query["filter_class"] in ["Agent", "Person", "OrgUnit", "Event", "Family"]:
@@ -170,7 +176,7 @@ def search(corpus, search_query):
                 break
             # index
             if "index" not in search_term:
-                raise exceptions.search_error("100")
+                raise exceptions.metajsonprc_error(100)
             elif search_term["index"] == "all":
                 # todo
                 search_indexes.append({"title": {"$regex": search_term["value"], "$options": 'i'}})
@@ -263,8 +269,7 @@ def search_mongo(corpus, mongo_query):
 def save_document(corpus, document):
     if not corpus:
         corpus = default_corpus
-    if "rec_id" not in document or document["rec_id"] is None:
-        document["rec_id"] = str(uuid.uuid1())
+    document = metajson_service.enhance_metajson(document)
     rec_id = document["rec_id"]
     return mongodb[corpus][DOCUMENTS].save(document), rec_id
 

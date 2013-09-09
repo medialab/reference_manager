@@ -5,6 +5,7 @@
 import xml.etree.ElementTree as ET
 
 from pybtex.database.input import bibtex
+from pymarc import MARCReader
 
 from biblib.crosswalks import bibjson_crosswalk
 from biblib.crosswalks import bibtex_crosswalk
@@ -18,6 +19,7 @@ from biblib.crosswalks import repec_crosswalk
 from biblib.crosswalks import researcherml_crosswalk
 from biblib.crosswalks import ris_crosswalk
 from biblib.crosswalks import summonjson_crosswalk
+from biblib.crosswalks import unimarc_crosswalk
 from biblib.crosswalks import unixref_crosswalk
 from biblib.util import constants
 from biblib.util import jsonbson
@@ -38,42 +40,46 @@ def convert_native(input_data, input_format, output_format, source, only_first_r
                 print convert_txt_lines(input_data, input_format, output_format, source, only_first_record)
 
 
-def convert_file_list(input_file_list, input_format, output_format, source, only_first_record):
-    for input_file in input_file_list:
-        results = convert_file(input_file, input_format, output_format, source, only_first_record)
+def convert_file_list(input_file_path_list, input_format, output_format, source, only_first_record):
+    print input_file_path_list
+    for input_file_path in input_file_path_list:
+        results = convert_file(input_file_path, input_format, output_format, source, only_first_record)
         if results:
             for result in results:
                 yield result
 
 
-def convert_file(input_file, input_format, output_format, source, only_first_record):
+def convert_file(input_file_path, input_format, output_format, source, only_first_record):
     # input_format type determination
     input_type = guess_format_type(input_format)
     if input_type is None:
         # file_extension type determination
-        input_type = guess_file_type(input_file)
+        input_type = guess_file_type(input_file_path)
 
     if input_type is not None:
         if input_type == constants.FILE_TYPE_XMLETREE:
             xmlparser = ET.XMLParser(encoding="utf-8")
-            xmletree_tree = ET.parse(input_file, xmlparser)
+            xmletree_tree = ET.parse(input_file_path, xmlparser)
             xmletree_root = xmletree_tree.getroot()
             return convert_xmletree(xmletree_root, input_format, output_format, source, only_first_record)
 
         elif input_type == constants.FILE_TYPE_JSON:
-            with open(input_file) as json_file:
+            with open(input_file_path) as json_file:
                 json_data = jsonbson.load_json_file(json_file)
                 return convert_json(json_data, input_format, output_format, source, only_first_record)
 
         elif input_type == constants.FILE_TYPE_BIBTEX:
             bibtex_parser = bibtex.Parser()
-            bibtex_root = bibtex_parser.parse_file(input_file)
+            bibtex_root = bibtex_parser.parse_file(input_file_path)
             return convert_bibtex(bibtex_root, input_format, output_format, source, only_first_record)
 
         elif input_type == constants.FILE_TYPE_TXT:
-            with open(input_file) as txt_file:
+            with open(input_file_path) as txt_file:
                 txt_lines = list(txt_file)
                 return convert_txt_lines(txt_lines, input_format, output_format, source, only_first_record)
+
+        elif input_type == constants.FILE_TYPE_MARC:
+            return convert_marc(input_file_path, input_format, output_format, source, only_first_record)
 
 
 def convert_string(input_string, input_format, output_format, source, only_first_record):
@@ -106,6 +112,19 @@ def convert_bibtex(bibtex_root, input_format, output_format, source, only_first_
     if bibtex_root:
         metajson_list = bibtex_crosswalk.bibtex_root_to_metasjon_list(bibtex_root, source, only_first_record)
         return convert_metajson_list(metajson_list, output_format)
+
+
+def convert_marc(input_file_path, input_format, output_format, source, only_first_record):
+    if input_file_path:
+        try:
+            marc_file = open(input_file_path)
+            marc_reader = MARCReader(marc_file, False, False)
+            metajson_list = unimarc_crosswalk.unimarc_marcreader_to_metasjon_list(marc_reader, source, only_first_record)
+            print "coucou début"
+            return convert_metajson_list(metajson_list, output_format)
+            print "coucou fin"
+        finally:
+            pass
 
 
 def convert_txt_lines(txt_lines, input_format, output_format, source, only_first_record):

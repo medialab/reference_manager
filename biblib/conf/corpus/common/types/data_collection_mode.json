@@ -1,0 +1,49 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "default": true,
+            "labels": {
+                "en": "interview",
+                "fr": "enquête par entretien"
+            },
+            "major": true,
+            "type_id": "interview"
+        },
+        {
+            "labels": {
+                "en": "observation",
+                "fr": "enquête par observation"
+            },
+            "major": true,
+            "type_id": "observation"
+        },
+        {
+            "labels": {
+                "en": "content analysis",
+                "fr": "enquête par analyse de documents"
+            },
+            "major": true,
+            "type_id": "content analysis"
+        },
+        {
+            "labels": {
+                "en": "questionnaire",
+                "fr": "enquête par questionnaire"
+            },
+            "major": true,
+            "type_id": "questionnaire"
+        },
+        {
+            "labels": {
+                "en": "other",
+                "fr": "autre"
+            },
+            "major": true,
+            "type_id": "other"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "data_collection_mode"
+}

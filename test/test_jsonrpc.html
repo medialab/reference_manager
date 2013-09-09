@@ -153,6 +153,17 @@
                         }
                     });
                 });
+                $("input#set_metadata_property_button").click(function() {
+                    $.jsonRPC.request("set_metadata_property", {
+                        params : [$("input#set_metadata_property_rec_id").val(),$("input#set_metadata_property_key").val(),$("input#set_metadata_property_value").val()],
+                        success : function(data) {
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#set_metadata_property_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
             });
         </script>
     </head>
@@ -204,7 +215,7 @@
         <h2>Method type</h2>
         <p><label for="type_input">Type identifier (type_id)</label> : 
             <input type="text" name="type_input" id="type_input">
-            example : identifier_type
+            example : rec_status
         </p>
         <p>
             <input name="type_button" id="type_button" value="Send type request" type="button" />
@@ -383,5 +394,20 @@
         <p>Results :</p>
         <pre id="delete_result"></pre>
 
+        <h2>Method set_metadata_property</h2>
+        <p><label for="set_metadata_property_rec_id">rec_id</label> : 
+            <input type="text" name="set_metadata_property_rec_id" id="set_metadata_property_rec_id"/>
+        </p>
+        <p><label for="set_metadata_property_key">key</label> : 
+            <input type="text" name="set_metadata_property_key" id="set_metadata_property_key"/>
+        </p>
+        <p><label for="set_metadata_property_value">value</label> : 
+            <input type="text" name="set_metadata_property_value" id="set_metadata_property_value"/>
+        </p>
+        <p>
+            <input name="set_metadata_property_button" id="set_metadata_property_button" value="launch set_metadata_property" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="set_metadata_property_result"></pre>
     </body>
 </html>

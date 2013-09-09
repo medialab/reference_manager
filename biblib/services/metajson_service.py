@@ -3,6 +3,8 @@
 # coding=utf-8
 
 import types
+import uuid
+from datetime import datetime, date, time
 
 from biblib import metajson
 from biblib.metajson import Common
@@ -17,6 +19,7 @@ from biblib.metajson import Person
 from biblib.metajson import Resource
 from biblib.metajson import Target
 from biblib.metajson import Type
+from biblib.util import constants
 
 
 def load_dict(meta_dict):
@@ -84,8 +87,22 @@ def pretty_print_document(document):
 
 
 def enhance_metajson(metajson):
+    # rec_id
+    if "rec_id" not in metajson or metajson["rec_id"] is None:
+        metajson["rec_id"] = str(uuid.uuid1())
     # title_non_sort
     manage_title_non_sort(metajson)
+    # rec_status
+    if "rec_status" not in metajson or metajson["rec_status"] is None:
+        metajson["rec_status"] = constants.REC_STATUS_PRIVATE
+    # rec_created_date
+    if "rec_created_date" not in metajson or metajson["rec_created_date"] is None:
+        metajson["rec_created_date"] = datetime.now().isoformat()
+    # rec_modified_date
+        metajson["rec_modified_date"] = datetime.now().isoformat()
+    # rec_deleted_date
+        if metajson["rec_status"] == constants.REC_STATUS_DELETED and "rec_deleted_date" not in metajson:
+            metajson["rec_deleted_date"] = datetime.now().isoformat()
     return metajson
 
 

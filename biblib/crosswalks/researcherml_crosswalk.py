@@ -11,6 +11,7 @@ from biblib.metajson import Event
 from biblib.metajson import Family
 from biblib.metajson import Orgunit
 from biblib.metajson import Person
+from biblib.metajson import Project
 from biblib.metajson import Resource
 from biblib.metajson import Rights
 from biblib.services import creator_service
@@ -44,12 +45,15 @@ def researcherml_xmletree_to_metajson_list(rml_root, source, only_first_record):
 
 
 def rml_person_to_metajson(rml_person, source):
-    pass
+    person = Person()
+    return person
 
 
 def rml_orgunit_to_metajson(rml_orgunit, source):
-    pass
+    orgunit = Orgunit()
+    return orgunit
 
 
 def rml_project_to_metajson(rml_project, source):
-    pass
+    project = Project()
+    return project

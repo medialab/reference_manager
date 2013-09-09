@@ -1,0 +1,43 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "private",
+                "fr": "privé"
+            }, 
+            "type_id": "private"
+        }, 
+        {
+            "labels": {
+                "en": "pending",
+                "fr": "en attente de validation"
+            }, 
+            "type_id": "pending"
+        }, 
+        {
+            "labels": {
+                "en": "rejected",
+                "fr": "rejeté"
+            }, 
+            "type_id": "rejected"
+        }, 
+        {
+            "labels": {
+                "en": "published",
+                "fr": "publié"
+            }, 
+            "type_id": "published"
+        }, 
+        {
+            "labels": {
+                "en": "deleted",
+                "fr": "supprimé"
+            }, 
+            "type_id": "deleted"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "rec_status"
+}

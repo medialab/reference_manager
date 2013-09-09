@@ -1,0 +1,182 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "rec_id",
+                "fr": "rec_id"
+            },
+            "property": "rec_id",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "rec_type",
+                "fr": "rec_type"
+            },
+            "property": "rec_type",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Subtitle",
+                "fr": "Sous-titre"
+            },
+            "property": "title_sub",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Creators",
+                "fr": "Cr\u00e9ateurs"
+            },
+            "multiple": true,
+            "property": "creators",
+            "required": true,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "Date issued",
+                "fr": "Date de publication"
+            },
+            "property": "date_issued",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Number of pages",
+                "fr": "Nombre de pages"
+            },
+            "property": "extent_pages",
+            "required": false,
+            "type_ui": "IntegerField"
+        },
+        {
+            "labels": {
+                "en": "Series",
+                "fr": "Collection"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "seriess",
+            "required": false,
+            "type_fields": [
+                "Series"
+            ],
+            "type_ui": "DocumentField"
+        },
+        {
+            "labels": {
+                "en": "Languages",
+                "fr": "Langues"
+            },
+            "multiple": true,
+            "property": "languages",
+            "required": false,
+            "type_source": "language",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Publisher",
+                "fr": "Editeurs"
+            },
+            "multiple": true,
+            "property": "publishers",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Publication place",
+                "fr": "Lieu de publication"
+            },
+            "multiple": true,
+            "property": "publication_places",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Publication country",
+                "fr": "Pays de publication"
+            },
+            "multiple": true,
+            "property": "publication_countries",
+            "required": false,
+            "type_source": "country",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Edition",
+                "fr": "Edition"
+            },
+            "property": "edition",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "id_type": "isbn",
+            "labels": {
+                "en": "ISBN",
+                "fr": "ISBN"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        },
+        {
+            "id_type": "doi",
+            "labels": {
+                "en": "DOI",
+                "fr": "DOI"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Keywords",
+                "fr": "Mots-cl\u00e9s"
+            },
+            "multiple": true,
+            "property": "keywords",
+            "required": false,
+            "type_ui": "KeywordField"
+        }
+    ],
+    "labels": {
+        "en": "Edited Book",
+        "fr": "Ouvrage collectif"
+    },
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "EditedBook"
+}
