@@ -1,7 +1,10 @@
-<fieldset class="CharField">
+<fieldset class="customInput CharField">
   <div class="message"></div>
-  <label for="{{ property }}">
+  <label>
     {{ label }} :
   </label>
-  <input class="col-6" name="{{ property }}" type="text" />
+  <div class="lines-container container">
+    <ul class="lines"></ul>
+    <button class="action add-line">{{t "customInputs:CharField.actions.add" }}</button>
+  </div>
 </fieldset>

@@ -192,7 +192,7 @@
     };
 
     // Bind events:
-    $('button.add-creator', _dom).click(function() {
+    $('.add-creator', _dom).click(function() {
       addCreator();
     });
 
@@ -201,14 +201,14 @@
           li = target.parents('ul.creators-list > li');
 
       // Check if it is a field button:
-      if (li.length && target.is('button.remove-creator')) {
+      if (li.length && target.is('.remove-creator')) {
         var id = li.data('id');
         li.remove();
         delete _linesHash[id];
-      } else if (li.length && target.is('button.moveup-creator')) {
+      } else if (li.length && target.is('.moveup-creator')) {
         if (!li.is(':first-child'))
           li.prev().before(li);
-      } else if (li.length && target.is('button.movedown-creator')) {
+      } else if (li.length && target.is('.movedown-creator')) {
         if (!li.is(':last-child'))
           li.next().after(li);
       }

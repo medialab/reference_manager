@@ -4,7 +4,6 @@
 
   // Loading Handlebars templates:
   blf.templates.require([
-    'CharField',
     'DateField',
     'IntegerField',
     'createPanel.validate'
