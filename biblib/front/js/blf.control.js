@@ -59,8 +59,9 @@ blf.init = function(config) {
 
   // Load dictionary:
   i18n.init({
-    lng: blf.config.lang,
-    fallbackLng: blf.config.lang,
+    resGetPath: blf.config.i18n.url,
+    lng: blf.config.i18n.lang,
+    fallbackLng: blf.config.i18n.lang,
     ns: {
       namespaces: ['translation', 'customInputs'],
       defaultNs: 'translation'
