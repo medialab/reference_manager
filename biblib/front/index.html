@@ -46,7 +46,10 @@
     $(function() {
       // We start everything from here:
       blf.init({
-        lang: 'fr',
+        i18n:{
+          lang: 'fr'//,
+          // url:'/custom url'
+        },
         baseURL: 'http://localhost:8080',
         baseDOM: $('#layout'),
         advancedSearchPanel: {

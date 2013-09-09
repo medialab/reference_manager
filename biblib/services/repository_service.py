@@ -263,7 +263,7 @@ def search_mongo(corpus, mongo_query):
 def save_document(corpus, document):
     if not corpus:
         corpus = default_corpus
-    if "rec_id" not in document or document["rec_id"] is not None:
+    if "rec_id" not in document or document["rec_id"] is None:
         document["rec_id"] = str(uuid.uuid1())
     rec_id = document["rec_id"]
     return mongodb[corpus][DOCUMENTS].save(document), rec_id

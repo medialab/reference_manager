@@ -256,7 +256,7 @@ def summonjson_document_to_metajson(sum_doc, source):
 
     debug = True
     if debug:
-        print "Summon ContentType: {}".format(sum_type)
+        print "# Summon ContentType: {}".format(sum_type)
         metajson_service.pretty_print_document(document)
     return document
 
