@@ -9,6 +9,9 @@
     "errors": {
       "at_least_one": "At least one creator has to be specified."
     },
+    "actions":{
+      "add":"add one creator"
+    },
     "line": {
       "Person": "Person",
       "Orgunit": "Organization",
@@ -38,22 +41,43 @@
     "errors": {
       "exactly_one": "Exactly one entry has to be added.",
       "at_least_one": "At least one entry has to be specified."
+    },
+    "actions":{
+      "add":"add entry"
+    }
+  },
+  "KeywordField": {
+    "errors": {
+      "exactly_one": "Exactly one entry has to be added.",
+      "at_least_one": "At least one entry has to be specified."
+    },
+    "actions":{
+      "add":"add entry"
     }
   },
   "IdentifierField": {
     "errors": {
       "exactly_one": "Exactly one identifier has to be added.",
       "at_least_one": "At least one creator has to be specified."
-    }
+    },
+    "actions":{
+      "add":"add identifier"
+    },
   },
   "LanguageValueField": {
     "errors": {
       "at_least_one": "At least one language has to be specified."
+    },
+    "actions":{
+      "add":"add language"
     }
   },
   "TypeField": {
     "errors": {
       "at_least_one": "At least one entry has to be added."
+    },
+    "actions":{
+      "add":"add"
     }
   },
   "DocumentField": {
