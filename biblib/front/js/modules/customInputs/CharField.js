@@ -80,7 +80,10 @@
     function _fill(data, fullData) {
       $('ul.lines', _dom).empty();
 
-      (data || []).forEach(addLine);
+      if (domino.struct.check('array', data))
+        data.forEach(addLine);
+      else if (data)
+        addLine(data);
 
       if (!data)
         addLine();
