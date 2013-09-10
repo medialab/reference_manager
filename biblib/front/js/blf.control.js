@@ -17,6 +17,7 @@ blf.init = function(config) {
       typeof data === 'object' &&
       !('error' in data);
   };
+  blf.global.rpc.before = config.rpc.before;
   blf.global.rpc.error = function(data) {
     this.log('Error:' + data);
   };
@@ -464,6 +465,7 @@ blf.init = function(config) {
           id: 'search',
           url: blf.global.API_URL,
           description: 'A service to search on existing entries.',
+          before: blf.global.rpc.before,
           type: blf.global.rpc.type,
           error: blf.global.rpc.error,
           expect: blf.global.rpc.expect,
@@ -485,6 +487,7 @@ blf.init = function(config) {
           id: 'type',
           url: blf.global.API_URL,
           description: 'Loads the list of specified type.',
+          before: blf.global.rpc.before,
           type: blf.global.rpc.type,
           error: blf.global.rpc.error,
           expect: blf.global.rpc.expect,
@@ -502,6 +505,7 @@ blf.init = function(config) {
           id: 'types',
           url: blf.global.API_URL,
           description: 'Loads every lists.',
+          before: blf.global.rpc.before,
           type: blf.global.rpc.type,
           error: blf.global.rpc.error,
           expect: blf.global.rpc.expect,
@@ -519,6 +523,7 @@ blf.init = function(config) {
           id: 'field',
           url: blf.global.API_URL,
           description: 'Loads one field specification.',
+          before: blf.global.rpc.before,
           type: blf.global.rpc.type,
           error: blf.global.rpc.error,
           expect: blf.global.rpc.expect,
@@ -538,6 +543,7 @@ blf.init = function(config) {
           id: 'fields',
           url: blf.global.API_URL,
           description: 'Loads all fields specifications.',
+          before: blf.global.rpc.before,
           type: blf.global.rpc.type,
           error: blf.global.rpc.error,
           expect: blf.global.rpc.expect,
@@ -562,6 +568,7 @@ blf.init = function(config) {
           id: 'get_entry', // given the id
           url: blf.global.API_URL,
           description: 'Retrieve an entry, given the rec_id identifier.',
+          before: blf.global.rpc.before,
           type: blf.global.rpc.type,
           error: blf.global.rpc.error,
           expect: blf.global.rpc.expect,
@@ -584,6 +591,7 @@ blf.init = function(config) {
           id: 'save',
           url: blf.global.API_URL,
           description: 'Saves an entry.',
+          before: blf.global.rpc.before,
           type: blf.global.rpc.type,
           error: blf.global.rpc.error,
           expect: blf.global.rpc.expect,
@@ -606,6 +614,7 @@ blf.init = function(config) {
           id: 'delete',
           url: blf.global.API_URL,
           description: 'Deletes an entry.',
+          before: blf.global.rpc.before,
           type: blf.global.rpc.type,
           error: blf.global.rpc.error,
           expect: blf.global.rpc.expect,
