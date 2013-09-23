@@ -11,155 +11,155 @@
             "type_id": "aut"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Director",
                 "fr": "Directeur ou metteur en sc\u00e8ne"
             },
-            "major": true,
             "type_id": "drt"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Designer",
                 "fr": "Styliste ou maquettiste"
             },
-            "major": true,
             "type_id": "dsr"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Film editor",
                 "fr": "Monteur de films"
             },
-            "major": true,
             "type_id": "flm"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Interviewer", 
                 "fr": "Intervieweur"
             }, 
-            "major": true, 
             "type_id": "ivr"
         }, 
         {
+            "deprecated": true,
             "labels": {
                 "en": "Scenarist",
                 "fr": "Sc\u00e9nariste"
             },
-            "major": true,
             "type_id": "sce"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Speaker",
                 "fr": "Conf\u00e9rencier"
             },
-            "major": true,
             "type_id": "spk"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Investigator",
                 "fr": "Enquêteur"
             },
-            "major": true,
             "type_id": "forccast_inv"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Legal expert",
                 "fr": "Juriste"
             },
-            "major": true,
             "type_id": "forccast_leg"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Webographer",
                 "fr": "Webographe"
             },
-            "major": true,
             "type_id": "forccast_weo"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Media analyst",
                 "fr": "Analyste médiatique"
             },
-            "major": true,
             "type_id": "forccast_med"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Journalist",
                 "fr": "Journaliste"
             },
-            "major": true,
             "type_id": "forccast_jou"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Documentalist",
                 "fr": "Documentaliste"
             },
-            "major": true,
             "type_id": "forccast_doc"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Writer",
                 "fr": "Rédacteur"
             },
-            "major": true,
             "type_id": "forccast_wri"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Coordinator",
                 "fr": "Coordinateur"
             },
-            "major": true,
             "type_id": "forccast_coo"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Scenographer",
                 "fr": "Scénographe"
             },
-            "major": true,
             "type_id": "forccast_sce"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Webmaster",
                 "fr": "Webmaster"
             },
-            "major": true,
             "type_id": "forccast_web"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Integrator",
                 "fr": "Intégrateur"
             },
-            "major": true,
             "type_id": "forccast_int"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "scientometrist",
                 "fr": "Scientomètre"
             },
-            "major": true,
             "type_id": "forccast_sci"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Quantitative analyst",
                 "fr": "Analyste quantitatif"
             },
-            "major": true,
             "type_id": "forccast_qua"
         }
     ],

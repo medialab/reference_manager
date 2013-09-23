@@ -28,7 +28,6 @@
    *  >   multiple: true,
    *  >   property: "creators",
    *  >   required: true,
-   *  >   type_data: "Creator",
    *  >   type_ui: "CreatorField"
    *  > }
    */

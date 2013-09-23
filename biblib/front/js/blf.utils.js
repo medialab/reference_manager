@@ -118,7 +118,7 @@
         defaults.push(o);
       else if (o.major)
         majors.push(o);
-      else
+      else if (!o.deprecated)
         others.push(o);
     });
 

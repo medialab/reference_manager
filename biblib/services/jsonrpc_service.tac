@@ -178,7 +178,7 @@ class References_repository(jsonrpc.JSONRPC):
             return locale.strxfrm(keyfunc(obj))
         return locale_wrapper
 
-    def type_adaptation(self, type_dict, language, sort):
+    def type_adaptation(self, type_dict, language, sort, role):
         # language simplification
         if type_dict and language:
             if "sort" in type_dict:
@@ -187,7 +187,13 @@ class References_repository(jsonrpc.JSONRPC):
             self.key_language_simplification(type_dict, "descriptions", "description", language)
             if "children" in type_dict:
                 for child in type_dict["children"]:
-                    self.type_adaptation(child, language, sort)
+                    # filter Field based on role
+                    if role is not None:
+                        if "roles" in child:
+                            roles = child["roles"]
+                            if role not in roles:
+                                type_dict["children"].remove(child)
+                    self.type_adaptation(child, language, sort, role)
                 if sort:
                     #locale.setlocale(locale.LC_ALL, "fr_FR.UTF-8")
                     type_dict["children"] = sorted(type_dict["children"], key=self.locale_keyfunc(itemgetter('label')))
@@ -211,7 +217,7 @@ class References_repository(jsonrpc.JSONRPC):
             return the asked type (in JSON)
         """
         type_dict = repository_service.get_type(None, type_id)
-        self.type_adaptation(type_dict, language, True)
+        self.type_adaptation(type_dict, language, True, None)
         return jsonbson.bson_to_json(type_dict)
 
     def jsonrpc_types(self, language):
@@ -225,11 +231,11 @@ class References_repository(jsonrpc.JSONRPC):
             results = []
             for type_dict in type_list:
                 print "type_id: {}".format(type_dict["type_id"])
-                self.type_adaptation(type_dict, language, True)
+                self.type_adaptation(type_dict, language, True, None)
                 results.append(jsonbson.bson_to_json(type_dict))
             return results
 
-    def jsonrpc_uifield(self, rec_type, language):
+    def jsonrpc_uifield(self, rec_type, language, role=None):
         """ search for one uifield for user interface
             from the repository
             params:
@@ -238,10 +244,10 @@ class References_repository(jsonrpc.JSONRPC):
             return the asked uifield for user interface (in JSON)
         """
         uifield_dict = repository_service.get_uifield(None, rec_type)
-        self.type_adaptation(uifield_dict, language, False)
+        self.type_adaptation(uifield_dict, language, False, role)
         return jsonbson.bson_to_json(uifield_dict)
 
-    def jsonrpc_uifields(self, language):
+    def jsonrpc_uifields(self, language, role=None):
         """ search for all uifields for user interface
             from the repository
             params:
@@ -253,7 +259,7 @@ class References_repository(jsonrpc.JSONRPC):
             results = []
             for uifield_dict in uifield_list:
                 print "rec_type: {}".format(uifield_dict["rec_type"])
-                self.type_adaptation(uifield_dict, language, False)
+                self.type_adaptation(uifield_dict, language, False, role)
                 results.append(jsonbson.bson_to_json(uifield_dict))
             return results
 

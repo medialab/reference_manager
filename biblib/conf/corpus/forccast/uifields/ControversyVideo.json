@@ -111,6 +111,7 @@
             },
             "property": "score_value",
             "required": false,
+            "roles": ["admin", "teacher"],
             "type_ui": "CharField"
         },
         {
@@ -121,6 +122,7 @@
             "multiple": true,
             "property": "score_descriptions",
             "required": false,
+            "roles": ["admin", "teacher"],
             "type_ui": "LanguageValueField"
         },
         {
@@ -139,6 +141,7 @@
                 "fr": "A archiver ?"
             },
             "property": "for_archiving",
+            "roles": ["admin", "teacher"],
             "type_ui": "BooleanField"
         }
     ],
