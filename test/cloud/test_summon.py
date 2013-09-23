@@ -21,7 +21,14 @@ def test():
     #query_string = "s.fvf%5B%5D=ContentType%2CJournal+Article%2Cf&s.fvf%5B%5D=IsFullText%2Ctrue%2Cf&s.q=europe+federal&s.cmd=addFacetValueFilters(ContentType,Dissertation)%20removeFacetValueFilter(ContentType,Journal%20Article)"
     #query_string = "s.fvf%5B%5D=ContentType%2CConference+Proceeding%2Cf&s.fvf%5B%5D=ContentType%2CData+Set%2Cf&s.fvf%5B%5D=IsFullText%2Ctrue%2Cf&s.fvf%5B%5D=ContentType%2CNewspaper+Article%2Cf&s.fvf%5B%5D=ContentType%2CTrade+Publication+Article%2Cf&s.ps=50&s.q=europe+federal&s.cmd=removeFacetValueFilter(ContentType,Newspaper%20Article)%20removeFacetValueFilter(ContentType,Trade%20Publication%20Article)%20removeFacetValueFilter(ContentType,Data%20Set)"
     #query_string = "s.fvf%5B%5D=ContentType%2CConference+Proceeding%2Cf&s.fvf%5B%5D=IsFullText%2Ctrue%2Cf&s.ps=50&s.q=europe+federal&s.cmd=addFacetValueFilters(ContentType,Data+Set)"
-    query_string = "s.q=Organized+Crime+and+States"
+    #query_string = "s.q=Organized+Crime+and+States"
+    # Thesis:
+    #query_string = "s.cmd=addFacetValueFilters(ContentType,Dissertation)&s.q=social"
+    # Video:
+    #query_string = "s.q=social&s.fvf%5B%5D=ContentType%2CVideo+Recording%2Cf"
+    # EditedBook
+    #query_string = "s.q=ouvrage+collectif&s.cmd=addFacetValueFilters(ContentType,Book+%2F+eBook)"
+    query_string = "s.fvf%5B%5D=ContentType%2CConference+Proceeding%2Cf"
     summon_response = summon.summon_query(query_string)
     metajson_list = crosswalks_service.convert_json(summon_response, constants.FORMAT_SUMMONJSON, constants.FORMAT_METAJSON, "summon", False)
     collection = metajson_service.create_collection("summon_test", "Summon Test", metajson_list)

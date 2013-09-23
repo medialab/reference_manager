@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rml:researcherml xmlns:rml="http://bibliotheque.sciences-po.fr/standards/researcherml/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bibliotheque.sciences-po.fr/standards/researcherml/v1 http://bibliotheque.sciences-po.fr/standards/researcherml/researcherml-v1-0.xsd">
+    <rml:orgUnit type="researchCenter">
+        <rml:identifier type="ldap">CERI</rml:identifier>
+        <rml:identifier type="cnrs">UMR7050</rml:identifier>
+        <rml:identifier type="hdl">2441/9labe9r4se65i789685q380gh</rml:identifier>
+        <rml:identifier type="dai">2441/9labe9r4se65i789685q380gh</rml:identifier>
+        <rml:identifier type="hal">1011</rml:identifier>
+        <rml:name>Centre d'études et de recherches internationales</rml:name>
+        <rml:acronym>CERI</rml:acronym>
+        <rml:nationality authority="iso3166-1-a2">FR</rml:nationality>
+        <rml:address preferred="true" relationType="work">
+            <rml:street>56, rue Jacob</rml:street>
+            <rml:postCode>75006</rml:postCode>
+            <rml:localityCityTown>Paris</rml:localityCityTown>
+            <rml:country authority="iso3166-1-a2">FR</rml:country>
+        </rml:address>
+        <rml:phone preferred="true" relationType="work" type="voice" visible="true">
+            <rml:formatted>+33158717000</rml:formatted>
+        </rml:phone>
+        <rml:phone relationType="work" type="fax" visible="true">
+            <rml:formatted>+33158717090</rml:formatted>
+        </rml:phone>
+        <rml:uri preferred="true" relationType="work" visible="true">http://ceri.sciences-po.fr</rml:uri>
+        <rml:olDescription xml:lang="fr">Ce centre de recherche se consacre à l'analyse du monde contemporain et la recherche sur le système politique international.</rml:olDescription>
+        <rml:researchCoverage type="keyword" xml:lang="fr">relations internationales</rml:researchCoverage>
+        <rml:researchCoverage type="keyword" xml:lang="fr">géopolitique</rml:researchCoverage>
+        <rml:affiliation>
+            <rml:relationType authority="rmlaffroleorgunit2orgunit">isPartOf</rml:relationType>
+            <rml:identifier type="hdl">2441/d7a7evb2ctdg4i89ges99ipkj</rml:identifier>
+            <rml:name>CNRS</rml:name>
+        </rml:affiliation>
+        <rml:affiliation preferred="true">
+            <rml:relationType authority="rmlaffroleorgunit2orgunit">isPartOf</rml:relationType>
+            <rml:identifier type="hdl">2441/9labe9r4se65i789685q021gm</rml:identifier>
+            <rml:name>Sciences Po</rml:name>
+        </rml:affiliation>
+    </rml:orgUnit>
+</rml:researcherml>

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="http://bibliotheque.sciences-po.fr/standards/researcherml/v1"
+	targetNamespace="http://bibliotheque.sciences-po.fr/standards/researcherml/v1"
+	elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	
+	<!-- #### root instance #### -->
+	
+	<xsd:element name="researcherml" type="researchermlType"/>
+	
+	<!-- #### main types #### -->
+	
+	<xsd:complexType name="researchermlType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="person" type="personType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="orgUnit" type="orgUnitType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="project" type="projectType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="affiliation" type="affiliationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="personType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="identifier" type="stringType" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="firstname" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="lastnamePrefix" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="lastname" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="lastnameSuffix" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="middlename" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="nickname" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="sex" type="sexType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="nationality" type="countryType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="dateOfBirth" type="dateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="dateOfDeath" type="dateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="address" type="addressType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="phone" type="phoneType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="email" type="emailType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="uri" type="uriType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="instantMessage" type="instantMessageType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="languageCapability" type="languageCapabilityType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="olBiography" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="biography" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="academicTitle" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="honorificTitle" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="award" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="responsability" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="degree" type="degreeType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="teaching" type="teachingType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="researchCoverage" type="researchCoverageType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ongoingResearch" type="ongoingResearchType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="skill" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="affiliation" type="affiliationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="relationship" type="relationshipType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="note" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="image" type="imageType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="extension" type="extensionType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+		<xsd:attribute name="fictitious" type="xsd:boolean" use="optional"/>
+		<xsd:attribute name="IDref" type="xsd:IDREF" use="optional"/>
+	</xsd:complexType>
+						
+	<xsd:complexType name="orgUnitType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="identifier" type="stringType" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="name" type="stringLang" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="nameAlternative" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="acronym" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="nationality" type="countryType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="dateOfFoundation" type="dateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="dateOfDissolution" type="dateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="address" type="addressType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="phone" type="phoneType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="email" type="emailType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="uri" type="uriType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="headcount" type="headcountType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="turnover" type="turnoverType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="olDescription" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="description" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="award" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="researchCoverage" type="researchCoverageType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="skill" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="affiliation" type="affiliationType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="note" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="image" type="imageType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ckbData" type="ckbDataType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="extension" type="extensionType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+		<xsd:attribute name="type" type="xsd:string" use="optional"/>
+		<xsd:attribute name="IDref" type="xsd:IDREF" use="optional"/>
+	</xsd:complexType>
+						
+	<xsd:complexType name="projectType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="identifier" type="stringType" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="call" type="callType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="acronym" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="title" type="stringLang" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="titleAlternative" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="participant" type="participantType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="olDescription" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="description" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="cost" type="moneyType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="contribution" type="moneyType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="status" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="dateBegin" type="dateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="dateEnd" type="dateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="duration" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="uri" type="uriType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="researchCoverage" type="researchCoverageType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="award" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="note" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="extension" type="extensionType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+		<xsd:attribute name="IDref" type="xsd:IDREF" use="optional"/>
+	</xsd:complexType>
+	
+	
+	<!-- #### other types #### -->
+	<xsd:complexType name="addressType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="premise" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="deliveryPoint" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="street" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="specialDistribution" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="postCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="localityCityTown" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="stateProvinceRegion" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="country" type="countryType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="nutsCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="geoLatitude" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="geoLongitude" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="tz" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+		</xsd:choice>
+		<xsd:attributeGroup ref="contactAttributeGroup"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="affiliationType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="relationType" type="stringAuthority" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="dateBegin" type="dateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="dateEnd" type="dateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="description" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="identifier" type="stringType" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="name" type="stringLang" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="acronym" type="stringLang" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="type" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="nationality" type="countryType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="address" type="addressType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="uri" type="uriType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="affiliation" type="affiliationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+		<xsd:attribute name="preferred" type="xsd:boolean" use="optional"/>
+		<xsd:attribute name="IDref" type="xsd:IDREF" use="optional"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="callType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="funding" type="fundingType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="identifier" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="title" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="year" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ckbDataType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="romeoPublisher" type="romeoPublisherType" minOccurs="0" maxOccurs="1"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:attributeGroup name="contactAttributeGroup">
+		<!-- Inspired from Vcard -->
+		<xsd:attribute name="groupName" type="xsd:string" use="optional"/>
+		<xsd:attribute name="preferred" type="xsd:boolean" use="optional"/>
+		<xsd:attribute name="relationType" use="optional">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="home"/>
+					<xsd:enumeration value="work"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="visible" type="xsd:boolean" use="optional"/>
+	</xsd:attributeGroup>
+	
+	<xsd:complexType name="countryType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="authority" use="optional">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<!-- ISO 3166-1 alpha 2, alpha 3, numeric -->
+							<xsd:enumeration value="iso3166-1-a2"/>
+							<xsd:enumeration value="iso3166-1-a3"/>
+							<xsd:enumeration value="iso3166-1-num"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="dateType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="encoding" use="optional">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="w3cdtf"/>
+							<xsd:enumeration value="iso8601"/>
+							<xsd:enumeration value="marc"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="keyDate" type="xsd:boolean" use="optional"/>
+				<xsd:attribute name="present" type="xsd:boolean" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="degreeType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="level" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="title" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="identifier" type="stringType" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="name" type="stringLang" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="date" type="dateType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="description" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:complexType name="emailType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attributeGroup ref="contactAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="extensionType" mixed="true">
+		<xsd:annotation>
+			<xsd:documentation>use for local extensions or for extensions from other XML schemas</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="fundingType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="identifier" type="stringType" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="name" type="stringLang" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="programme" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="scheme" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="contribution" type="moneyType" minOccurs="0" maxOccurs="1"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="headcountType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="year" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="imageType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:anyURI">
+				<xsd:attribute name="caption" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="instantMessageType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attributeGroup ref="contactAttributeGroup"/>
+				<xsd:attribute name="service" use="optional">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="aim"/>
+							<xsd:enumeration value="icq"/>
+							<xsd:enumeration value="irc"/>
+							<xsd:enumeration value="jabber"/>
+							<xsd:enumeration value="msn"/>
+							<xsd:enumeration value="yahoo"/>
+							<xsd:enumeration value="skype"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="languageCapabilityLevel">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="none"/>
+			<xsd:enumeration value="basics"/>
+			<xsd:enumeration value="medium"/>
+			<xsd:enumeration value="good"/>
+			<xsd:enumeration value="excellent"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="languageCapabilityType">
+		<!-- Inspired from CWA 14590 -->
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="language" type="languageType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="motherTong" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="oralInput" type="languageCapabilityLevel" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="oralOutput" type="languageCapabilityLevel" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="textInput" type="languageCapabilityLevel" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="textOutput" type="languageCapabilityLevel" minOccurs="0" maxOccurs="1"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="languageType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="authority" use="optional">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="rfc3066"/>
+							<xsd:enumeration value="iso639-1"/>
+							<xsd:enumeration value="iso639-2"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="moneyType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<!-- Use ISO 4217 currency code -->
+				<xsd:attribute name="currency" type="xsd:string" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="participantType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="entityType" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="relationType" type="stringAuthority" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="identifier" type="stringType" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="name" type="stringLang" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="description" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:complexType name="periodType">
+		<xsd:choice maxOccurs="2">
+			<xsd:element name="from" type="periodfromToType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="to" type="periodfromToType" minOccurs="1" maxOccurs="1"/>
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:complexType name="periodfromToType">
+		<xsd:choice maxOccurs="1">
+			<xsd:element name="date" type="dateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="present" type="periodPresentType" minOccurs="0" maxOccurs="1"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<!-- EMPTY Tag -->
+	<xsd:complexType name="periodPresentType"/>
+	
+	<xsd:complexType name="phoneType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="countryCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="areaCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="numberMain" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="numberExt" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="formatted" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+		</xsd:choice>
+		<xsd:attribute name="messaging" type="xsd:boolean" use="optional"/>
+		<xsd:attribute name="type" use="optional">
+			<xsd:simpleType>
+				<!-- Inspired from Vcard -->
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="car"/>
+					<xsd:enumeration value="cell"/>
+					<xsd:enumeration value="fax"/>
+					<xsd:enumeration value="pager"/>
+					<xsd:enumeration value="video"/>
+					<xsd:enumeration value="voice"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attributeGroup ref="contactAttributeGroup"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="relationshipType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="relationType" type="stringAuthority" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="identifier" type="stringType" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="name" type="stringLang" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="description" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="researchCoverageType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute ref="xml:lang" use="optional"/>
+				<xsd:attribute name="type" type="xsd:string" use="optional"/>
+				<xsd:attribute name="authority" type="xsd:string" use="optional"/>
+				<xsd:attribute name="authorityId" type="xsd:string" use="optional"/>
+				<xsd:attribute name="id" type="xsd:string" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ongoingResearchType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="description" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="romeoConditionsType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="condition" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="romeoPostprintsType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="postarchiving" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="postrestrictions" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="romeoPreprintsType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="prearchiving" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="prerestrictions" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="romeoPublisherType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="name" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="alias" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="homeurl" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="preprints" type="romeoPreprintsType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="postprints" type="romeoPostprintsType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="conditions" type="romeoConditionsType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="copyright" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="romeocolour" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+		</xsd:choice>
+		<xsd:attribute name="id" type="xsd:string" use="optional"/>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="sexType">
+		<xsd:restriction base="xsd:string">
+			<!-- Inspired from ISO 5218 -->
+			<xsd:enumeration value="not known"/>
+			<xsd:enumeration value="male"/>
+			<xsd:enumeration value="female"/>
+			<xsd:enumeration value="not specified"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="stringAuthority">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="authority" type="xsd:string" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="stringLang">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute ref="xml:lang" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="stringType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="type" type="xsd:string" use="optional"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="teachingType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element name="level" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="title" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="identifier" type="stringType" minOccurs="1" maxOccurs="unbounded"/>
+			<xsd:element name="name" type="stringLang" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="dateBegin" type="dateType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="dateEnd" type="dateType" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="description" type="stringLang" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="turnoverType">
+		<xsd:simpleContent>
+			<xsd:extension base="moneyType">
+				<xsd:attribute name="year" type="xsd:string"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="uriType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attributeGroup ref="contactAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+</xsd:schema>

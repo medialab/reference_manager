@@ -142,6 +142,38 @@ def create_collection(col_id, col_title, metajson_list):
         return collection
 
 
+def create_address(street, post_code, locality_city_town, country, preferred, relation_type, visible):
+    address = {}
+    if street is not None:    
+        address["street"] = street
+    if post_code is not None:
+        address["post_code"] = post_code
+    if locality_city_town is not None:
+        address["locality_city_town"] = locality_city_town
+    if country is not None:
+        address["country"] = country
+    if preferred is not None:
+        address["preferred"] = preferred
+    if relation_type is not None:
+        address["relation_type"] = relation_type
+    if visible is not None:
+        address["visible"] = visible
+    return address
+
+
+def create_email(value, preferred, relation_type, visible):
+    if value is not None:
+        email = {}
+        email["value"] = value
+        if preferred is not None:
+            email["preferred"] = preferred
+        if relation_type is not None:
+            email["relation_type"] = relation_type
+        if visible is not None:
+            email["visible"] = visible
+        return email
+
+
 def create_identifier(id_type, id_value):
     if id_value:
         identifier = Identifier()
@@ -149,3 +181,70 @@ def create_identifier(id_type, id_value):
         if id_type:
             identifier["id_type"] = id_type
         return identifier
+
+
+def create_image_url(url):
+    if url:
+        image_url = {}
+        image_url["value"] = url
+        return image_url
+
+
+def create_instant_message(value, service, preferred, relation_type, visible):
+    if value is not None:
+        im = {}
+        im["value"] = value
+        if service is not None:
+            im["service"] = service
+        if preferred is not None:
+            im["preferred"] = preferred
+        if relation_type is not None:
+            im["relation_type"] = relation_type
+        if visible is not None:
+            im["visible"] = visible
+        return im
+
+
+def create_language_capability(language, mother_tong, oral_input, oral_output, text_input, text_output):
+    if language is not None:
+        lc = {}
+        lc["language"] = language
+        if mother_tong is not None:
+            lc["mother_tong"] = mother_tong
+        if oral_input is not None:
+            lc["oral_input"] = oral_input
+        if oral_output is not None:
+            lc["oral_output"] = oral_output
+        if text_input is not None:
+            lc["text_input"] = text_input
+        if text_output is not None:
+            lc["text_output"] = text_output
+        return lc
+
+
+def create_phone(formatted, phone_type, preferred, relation_type, visible):
+    if formatted is not None:
+        phone = {}
+        phone["formatted"] = formatted
+        if phone_type is not None:
+            phone["phone_type"] = phone_type
+        if preferred is not None:
+            phone["preferred"] = preferred
+        if relation_type is not None:
+            phone["relation_type"] = relation_type
+        if visible is not None:
+            phone["visible"] = visible
+        return phone
+
+
+def create_uri(value, preferred, relation_type, visible):
+    if value is not None:
+        uri = {}
+        uri["value"] = value
+        if preferred is not None:
+            uri["preferred"] = preferred
+        if relation_type is not None:
+            uri["relation_type"] = relation_type
+        if visible is not None:
+            uri["visible"] = visible
+        return uri

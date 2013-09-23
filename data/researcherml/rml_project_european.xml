@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rml:researcherml xmlns:rml="http://bibliotheque.sciences-po.fr/standards/researcherml/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bibliotheque.sciences-po.fr/standards/researcherml/v1 http://bibliotheque.sciences-po.fr/standards/researcherml/researcherml-v1-0.xsd">
+    <rml:project>
+        <rml:identifier type="hal">86606</rml:identifier>
+        <rml:identifier type="eu">269567</rml:identifier>
+        <rml:identifier type="hdl">2441/53r60a8s3kup1vc9jh5ki109i</rml:identifier>
+        <rml:call>
+            <rml:funding>
+                <rml:identifier>eu</rml:identifier>
+                <rml:name>European Union</rml:name>
+            </rml:funding>
+            <rml:identifier>ERC-2010-AdG_20100407</rml:identifier>
+        </rml:call>
+        <rml:acronym xml:lang="fr">AIME</rml:acronym>
+        <rml:title xml:lang="fr">An Inquiry into Modes of Existence</rml:title>
+        <rml:dateBegin encoding="iso8601">2011-09-01</rml:dateBegin>
+        <rml:dateEnd encoding="iso8601">2014-08-31</rml:dateEnd>
+    </rml:project>
+</rml:researcherml>

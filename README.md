@@ -108,9 +108,80 @@ Install virtualenv and virtualenvwrapper:
 
 ### 1.2. For CentOS
 
-TODO
+#### Intall MongoDB
 
+See the online documentation: [Install MongoDB on Red Hat Enterprise, CentOS, or Fedora Linux](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-red-hat-centos-or-fedora-linux/ "Install MongoDB on Red Hat Enterprise, CentOS, or Fedora Linux")
+
+Create the file /etc/yum.repos.d/mongodb.repo
+with:
+
+	name=MongoDB Repository
+	baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
+	gpgcheck=0
+	enabled=1
+
+
+	yum install mongo-10gen mongo-10gen-server
+
+	service mongod start
+
+	chkconfig mongod on
+	
+##### Install Python
+
+	## Python 2.7:
+	wget http://python.org/ftp/python/2.7.5/Python-2.7.5.tar.bz2
+	tar xf Python-2.7.5.tar.bz2
+	cd Python-2.7.5
+	./configure --prefix=/usr/local
+	make -j4
+	make altinstall
+
+	## Distribute et pip
+	wget http://pypi.python.org/packages/source/d/distribute/distribute-0.6.35.tar.gz
+	tar xfz distribute-0.6.35.tar.gz
+	cd distribute-0.6.35
+	python2.7 setup.py install
+	easy_install-2.7 pip
+	pip-2.7 install --upgrade pip
+
+	## Virtualenv et création de l'environnement dans /store/python-env
+	pip-2.7 install virtualenv
+	virtualenv-2.7 /store/python-env --distribute
+	
+	## Virtualenvwrapper
+	yum install python-virtualenv.noarch
+	yum install python-virtualenvwrapper.noarch
+	pip-2.7 install virtualenvwrapper
+
+Configure your batch profile:
     
+    cd ~
+    vi .bash_profile
+
+Add these lines to the .profile file in your home directory:
+
+    # Python Virtual Env
+    export WORKON_HOME=$HOME/.virtualenvs
+    source /usr/local/bin/virtualenvwrapper.sh
+    export PIP_VIRTUALENV_BASE=$WORKON_HOME
+    export PIP_RESPECT_VIRTUALENV=true
+    alias v=workon
+    alias v.deactivate=deactivate
+    alias v.mk='mkvirtualenv --no-site-packages'
+    alias v.mk_withsitepackages='mkvirtualenv'
+    alias v.rm=rmvirtualenv
+    alias v.switch=workon
+    alias v.add2virtualenv=add2virtualenv
+    alias v.cdsitepackages=cdsitepackages
+    alias v.cd=cdvirtualenv
+    alias v.lssitepackages=lssitepackages
+
+	
+	vi .bashrc
+	export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
+	export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
+
 ## 2. Intall BibLib and common dependencies
 
 ### 2.1. Configue VirtualEnv
@@ -184,6 +255,8 @@ Clone the git repository:
 
     cd /var/opt/biblib
     git clone git@github.com:medialab/reference_manager.git
+    # or
+    git clone https://github.com/medialab/reference_manager.git
 
 or update it:
 
@@ -194,7 +267,19 @@ Install the working txjsonrpc for JSON-RPC 2.0:
 
     v BIBLIB
     cd /var/opt/biblib
+    git clone git@github.com:asl2/PyZ3950.git
+    # or
+    git clone https://github.com/asl2/PyZ3950.git
+    cd PyZ3950
+    python setup.py install
+
+Install the last version of PyZ3950, not the pip one:
+
+    v BIBLIB
+    cd /var/opt/biblib
     git clone git@github.com:hefee/txjsonrpc.git
+    # or
+    git clone https://github.com/hefee/txjsonrpc.git
     cd txjsonrpc
     python setup.py install
 

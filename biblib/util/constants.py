@@ -107,9 +107,11 @@ xmlns_map = {
     'opensearchrss': "http://a9.com/-/spec/opensearchrss/1.0/",
     'premis': "info:lc/xmlns/premis-v2",
     'qualifieddc': "",
+    'rml': "http://bibliotheque.sciences-po.fr/standards/researcherml/v1",
     'rdf': "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     'researcherml': "http://bibliotheque.sciences-po.fr/standards/researcherml/v1",
     'simpledc': "",
+    'xml': "http://www.w3.org/XML/1998/namespace",
     'yt': "http://gdata.youtube.com/schemas/2007"
 }
 
@@ -187,6 +189,7 @@ DOC_TYPE_DOCTORALTHESIS = "DoctoralThesis"
 DOC_TYPE_DRAWING = "Drawing"
 DOC_TYPE_EBOOK = "EBook"
 DOC_TYPE_EJOURNAL = "EJournal"
+DOC_TYPE_EJOURNALARTICLE = "EJournalArticle"
 DOC_TYPE_EDITEDBOOK = "EditedBook"
 DOC_TYPE_EMAIL = "Email"
 DOC_TYPE_ENCYCLOPEDIA = "Encyclopedia"

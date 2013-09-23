@@ -25,6 +25,7 @@ def relevant_file_list(dir_path, file_extension):
         files = os.listdir(dir_path)
         if files:
             for file_name in files:
+                print file_name
                 if not file_name.startswith('.') and file_name.endswith("." + file_extension):
                     file_path = os.path.join(dir_path, file_name)
                     print file_path
@@ -51,8 +52,10 @@ def test():
     test_crosswalk(constants.FORMAT_ENDNOTEXML)
     test_crosswalk(constants.FORMAT_METS)
     test_crosswalk(constants.FORMAT_MODS)
+    test_crosswalk(constants.FORMAT_RESEARCHERML)
     test_crosswalk(constants.FORMAT_RIS)
     test_crosswalk(constants.FORMAT_SUMMONJSON)
+    test_crosswalk(constants.FORMAT_UNIMARC)
     test_crosswalk(constants.FORMAT_UNIXREF)
 
 console.setup_console()

@@ -1220,7 +1220,12 @@ class Person(Common):
 
 # Project
 class Project(Common):
-    pass
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "rec_metajson" not in self:
+            self["rec_metajson"] = REC_METAJSON
+        if "rec_class" not in self:
+            self["rec_class"] = "Project"
 
 
 # Resource
