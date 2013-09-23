@@ -61,7 +61,7 @@
       "at_least_one": "Vous devez ajouter au moins un identifieur."
     },
     "actions":{
-      "add":"ajouter un identifieur"
+      "add":"ajouter un identifiant"
     }
   },
   "LanguageValueField": {

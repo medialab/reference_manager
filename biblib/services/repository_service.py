@@ -83,10 +83,10 @@ def get_documents_by_mongo_ids(corpus, mongo_ids):
         raise exceptions.metajsonprc_error(4)
 
 
-def set_document_property(corpus, rec_id, key, value):
+def set_document_property(corpus, rec_id, key, value, role):
     metajson_document = get_document_by_rec_id(corpus, rec_id)
     metajson_document[key] = value
-    save_document(corpus, metajson_document)
+    save_document(corpus, metajson_document, role)
     return metajson_document
 
 
@@ -266,9 +266,24 @@ def search_mongo(corpus, mongo_query):
         return None
 
 
-def save_document(corpus, document):
+def save_document(corpus, document, role):
     if not corpus:
         corpus = default_corpus
+    # Recover already saved fields that this role can't view or edit
+    if "rec_id" in document and role is not None:
+        rec_type = document["rec_type"]
+        uifield = get_uifield(corpus, rec_type)
+        recovered_fields = []
+        for child in uifield["children"]:
+            if "roles" in child:
+                roles = child["roles"]
+                if role not in roles:
+                    recovered_fields.append(child["property"])
+        if recovered_fields:
+            saved_doc = get_document_by_rec_id(corpus, document["rec_id"])
+            for field in recovered_fields:
+                document[field] = saved_doc[field]
+    # Enhance MetaJSON
     document = metajson_service.enhance_metajson(document)
     rec_id = document["rec_id"]
     return mongodb[corpus][DOCUMENTS].save(document), rec_id

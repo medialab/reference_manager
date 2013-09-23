@@ -56,7 +56,7 @@ def import_metadatas(args):
     error_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "data", "result", "result_import_errors.txt")
     print "error_file_path: {}".format(error_file_path)
     with open(error_file_path, "w") as error_file:
-        import_service.import_metadata_file(corpus, input_file_path, input_format, error_file, "EndNote XML File", True)
+        import_service.import_metadata_file(corpus, input_file_path, input_format, error_file, "EndNote XML File", True, None)
 
 
 def export_metadatas(args):

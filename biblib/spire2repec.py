@@ -45,7 +45,7 @@ def main():
 
     # import
     with open(error_file_path, "w") as error_file:
-        result_import = import_service.import_metajson_list(corpus, oaipmh_harvester.list_records(target, None, None, target_set), error_file, True)
+        result_import = import_service.import_metajson_list(corpus, oaipmh_harvester.list_records(target, None, None, target_set), error_file, True, None)
     date_import = datetime.datetime.now()
     chrono.chrono_trace("harvest spire, convert metadata and save to MongoDB", date_init, date_import, len(result_import[0]))
 

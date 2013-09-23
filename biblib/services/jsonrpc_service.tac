@@ -58,13 +58,15 @@ class References_repository(jsonrpc.JSONRPC):
             """Return all passed args."""
             return x
 
-    def jsonrpc_save(self, document):
+    def jsonrpc_save(self, document, role=None):
         """ insert or update a reference in the repository
             return object id if ok or error
         """
+        # role correction
+        if role == "":
+            role = None
         doc_bson = jsonbson.json_to_bson(document)
-        oid, rec_id = repository_service.save_document(None, doc_bson)
-        #jsonbson.bson_to_json(repository_service.save_document(None, doc_bson))
+        oid, rec_id = repository_service.save_document(None, doc_bson, role)
         return {"rec_id": rec_id}
 
     def jsonrpc_delete(self, rec_id):
@@ -73,7 +75,7 @@ class References_repository(jsonrpc.JSONRPC):
         """
         return jsonbson.bson_to_json(repository_service.delete_document(None, rec_id))
 
-    def jsonrpc_set_metadata_property(self, rec_id, key, value):
+    def jsonrpc_set_metadata_property(self, rec_id, key, value, role=None):
         """ set the value for a property of a metadata
             params:
                 - rec_id: rec_id of a metadata record
@@ -83,8 +85,11 @@ class References_repository(jsonrpc.JSONRPC):
             return the asked references in the specified format
             return the modified reference in the specified format
         """
+        # role correction
+        if role == "":
+            role = None
         try:
-            metajson_document = repository_service.set_document_property(None, rec_id, key, value)
+            metajson_document = repository_service.set_document_property(None, rec_id, key, value, role)
             return jsonbson.bson_to_json(metajson_document)
         except exceptions.metajsonprc_error, ex:
             return jsonrpclib.Fault(ex.code, str(ex))
@@ -98,7 +103,6 @@ class References_repository(jsonrpc.JSONRPC):
         """
         try:
             metajson_documents = repository_service.get_documents_by_rec_ids(None, rec_ids)
-            print len(metajson_documents)
             results = []
             for metajson_document in metajson_documents:
                 if format == "metajson":
@@ -186,13 +190,9 @@ class References_repository(jsonrpc.JSONRPC):
             self.key_language_simplification(type_dict, "labels", "label", language)
             self.key_language_simplification(type_dict, "descriptions", "description", language)
             if "children" in type_dict:
+                if role is not None:
+                    type_dict["children"] = [child for child in type_dict["children"] if "roles" not in child or role in child["roles"]]
                 for child in type_dict["children"]:
-                    # filter Field based on role
-                    if role is not None:
-                        if "roles" in child:
-                            roles = child["roles"]
-                            if role not in roles:
-                                type_dict["children"].remove(child)
                     self.type_adaptation(child, language, sort, role)
                 if sort:
                     #locale.setlocale(locale.LC_ALL, "fr_FR.UTF-8")
@@ -243,6 +243,9 @@ class References_repository(jsonrpc.JSONRPC):
                 - language: language for label and description
             return the asked uifield for user interface (in JSON)
         """
+        # role correction$
+        if role == "":
+            role = None
         uifield_dict = repository_service.get_uifield(None, rec_type)
         self.type_adaptation(uifield_dict, language, False, role)
         return jsonbson.bson_to_json(uifield_dict)
@@ -254,6 +257,9 @@ class References_repository(jsonrpc.JSONRPC):
                 - language: language for label and description
             return the asked uifields for user interface (in JSON)
         """
+        # role correction
+        if role == "":
+            role = None
         uifield_list = repository_service.get_uifields(None)
         if uifield_list:
             results = []

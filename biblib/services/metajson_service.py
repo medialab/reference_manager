@@ -86,33 +86,33 @@ def pretty_print_document(document):
                 print "# is_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_type: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_id: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].title: {}".format(is_part_of_is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of_is_part_of.get_rec_id(), is_part_of_is_part_of_is_part_of.get_title())
 
 
-def enhance_metajson(metajson):
+def enhance_metajson(document):
     # rec_id
-    if "rec_id" not in metajson or metajson["rec_id"] is None:
-        metajson["rec_id"] = str(uuid.uuid1())
+    if "rec_id" not in document or document["rec_id"] is None:
+        document["rec_id"] = str(uuid.uuid1())
     # title_non_sort
-    manage_title_non_sort(metajson)
+    manage_title_non_sort(document)
     # rec_status
-    if "rec_status" not in metajson or metajson["rec_status"] is None:
-        metajson["rec_status"] = constants.REC_STATUS_PRIVATE
+    if "rec_status" not in document or document["rec_status"] is None:
+        document["rec_status"] = constants.REC_STATUS_PRIVATE
     # rec_created_date
-    if "rec_created_date" not in metajson or metajson["rec_created_date"] is None:
-        metajson["rec_created_date"] = datetime.now().isoformat()
+    if "rec_created_date" not in document or document["rec_created_date"] is None:
+        document["rec_created_date"] = datetime.now().isoformat()
     # rec_modified_date
-        metajson["rec_modified_date"] = datetime.now().isoformat()
+        document["rec_modified_date"] = datetime.now().isoformat()
     # rec_deleted_date
-        if metajson["rec_status"] == constants.REC_STATUS_DELETED and "rec_deleted_date" not in metajson:
-            metajson["rec_deleted_date"] = datetime.now().isoformat()
-    return metajson
+        if document["rec_status"] == constants.REC_STATUS_DELETED and "rec_deleted_date" not in metajson:
+            document["rec_deleted_date"] = datetime.now().isoformat()
+    return document
 
 
-def manage_title_non_sort(metajson):
+def manage_title_non_sort(document):
     #print("manage_title_non_sort")
-    if metajson and "title_non_sort" not in metajson and "title" in metajson:
-        title = metajson["title"]
+    if document and "title_non_sort" not in document and "title" in document:
+        title = document["title"]
         language = None
-        if "languages" in metajson:
-            language = metajson["languages"][0]
+        if "languages" in document:
+            language = document["languages"][0]
             print("language: {}".format(language))
             if language and language in metajson.TITLE_NON_SORT:
                 non_sorts = metajson.TITLE_NON_SORT[language]
@@ -124,8 +124,8 @@ def manage_title_non_sort(metajson):
                         title = " ".join(title_words[1:])
                         print("title_non_sort: '{}'".format(title_non_sort))
                         print("title: '{}'".format(title))
-                        metajson["title_non_sort"] = title_non_sort
-                        metajson["title"] = title
+                        document["title_non_sort"] = title_non_sort
+                        document["title"] = title
 
 
 def create_collection(col_id, col_title, metajson_list):

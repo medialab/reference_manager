@@ -10,28 +10,24 @@ from biblib.services import repository_service
 from biblib.util import jsonbson
 
 
-def import_endnote_files(corpus, input_files, error_file_path):
-    import_metadata_files(corpus, input_files, "endnotexml", error_file_path, True)
-
-
-def import_metadata_files(corpus, input_files, input_format, error_file_path, source, save):
+def import_metadata_files(corpus, input_files, input_format, error_file_path, source, save, role):
     if corpus and input_files:
         with open(error_file_path, "w") as error_file:
             for input_file_path in input_files:
-                return import_metadata_file(corpus, input_file_path, input_format, error_file, source, save)
+                return import_metadata_file(corpus, input_file_path, input_format, error_file, source, save, role)
 
 
-def import_metadata_file(corpus, input_file_path, input_format, error_file, source, save):
+def import_metadata_file(corpus, input_file_path, input_format, error_file, source, save, role):
     print "import_metadata_file"
     if corpus and input_file_path:
         print "corpus: {}".format(corpus)
         print "input_file_path: {}".format(input_file_path)
         print "input_format: {}".format(input_format)
         document_list = crosswalks_service.convert_file(input_file_path, input_format, "metajson", source, False)
-        return import_metajson_list(corpus, document_list, error_file, save)
+        return import_metajson_list(corpus, document_list, error_file, save, role)
 
 
-def import_metajson_list(corpus, metajson_list, error_file, save):
+def import_metajson_list(corpus, metajson_list, error_file, save, role):
     print "import_metajson_list"
     results = []
     all_errors = []
@@ -53,7 +49,7 @@ def import_metajson_list(corpus, metajson_list, error_file, save):
             if error_file:
                 error_file.write(formatted_error)
 
-        results.append(repository_service.save_document(corpus, metajson))
+        results.append(repository_service.save_document(corpus, metajson, role))
 
     return results, all_errors
 
