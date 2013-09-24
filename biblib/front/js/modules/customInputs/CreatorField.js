@@ -38,7 +38,8 @@
         _lineID = 1,
         _linesHash = {},
         _classTemplates,
-        _creatorRoles = blf.utils.extractMajors(d.get('lists').creator_role || []);
+        _creatorRoles = blf.utils.extractMajors(d.get('lists').creator_role || []),
+        _creatorAffiliationPersonRoles = blf.utils.extractMajors(d.get('lists').affiliation_role_person || []);
 
     _dom = $(blf.templates.get('CreatorField')({
       label: obj.label || obj.labels[blf.assets.lang]
@@ -65,6 +66,9 @@
       if (data.role)
         $('select.select-role', li).val(data.role);
 
+      if (data.affiliation_role)
+        $('select.select-affiliation-role', li).val(data.affiliation_role);
+
       _linesHash[id] = _classTemplates(agent.rec_class || 'Person');
       $('.custom-container', li).append(_linesHash[id].dom);
 
@@ -80,7 +84,16 @@
     _classTemplates = function(c) {
       var o = {
         Person: {
-          dom: $(blf.templates.get('CreatorField.Person')()),
+          dom: $(blf.templates.get('CreatorField.Person')({
+            affiliationRoles: _creatorAffiliationPersonRoles.map(function(o) {
+              return o.separator ? {
+                separator: true
+              } : {
+                type_id: o.type_id,
+                label: o.label || o.labels[blf.assets.lang]
+              };
+            })
+          })),
           fill: function(data, obj) {
             obj.dom.data('id', data.agent.rec_id || null);
 
@@ -90,6 +103,9 @@
             $('input[data-attribute="date_death"]', obj.dom).val(data.agent.date_death);
 
             $('input[data-attribute="affiliation"]', obj.dom).val((data.affiliation || {}).name);
+
+            $('select.select-affiliation-role', obj.dom).val((data.affiliation_role || {}).name);
+
             return this;
           },
           getData: function(data, obj) {
@@ -113,6 +129,10 @@
                 rec_metajson: 1,
                 name: aff
               };
+
+            var aff_role = $('select.select-affiliation-role', obj.dom).val();
+            if (aff_role)
+              data.affiliation_role = aff_role;
 
             for (var k in data.agent)
               if (data.agent[k] === undefined)

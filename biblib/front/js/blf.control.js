@@ -192,6 +192,13 @@ blf.init = function(config) {
         },
         {
           value: [],
+          id: 'creatorAffiliationPersonRoles',
+          type: 'array',
+          dispatch: 'creatorAffiliationPersonRolesUpdated',
+          description: 'The creator affiliation roles list.'
+        },
+        {
+          value: [],
           id: 'resultsList',
           type: 'array',
           triggers: 'updateResultsList',

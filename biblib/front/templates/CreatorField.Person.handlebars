@@ -19,4 +19,16 @@
     <label class="col-3">{{t "customInputs:CreatorField.person.affiliation" }}</label>
     <input data-attribute="affiliation" class="col-3" type="text" />
   </fieldset>
+  <fieldset>
+    <label class="col-3">{{t "customInputs:CreatorField.person.affiliation_role" }}</label>
+    <select class="col-3 select-affiliation-role">
+      {{#each affiliationRoles }}
+        {{#if this.separator }}
+          <option class="disabled" disabled="disabled">---</option>
+        {{else}}
+          <option value="{{ this.type_id }}">{{ this.label }}</option>
+        {{/if}}
+      {{/each}}
+    </select>
+  </fieldset>
 </fieldset>
