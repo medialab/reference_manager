@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# usage: 
+# dev: /home/jra/reference_manager/start_jsonrpc.sh /home/jra/.virtualenv/AIME/bin/ /home/jra/reference_manager/
+# prodv2: /var/opt/biblib/reference_manager/start_jsonrpc.sh /home/jra/.virtualenv/AIMEPROD/bin/ /var/opt/biblib/reference_manager/
+# prodv3: /var/opt/biblib/prod_v3/start_jsonrpc.sh /home/jra/.virtualenv/AIMEPROD/bin/ /var/opt/biblib/prod_v3/
+
 env=$1
 path=$2
 
@@ -13,5 +18,5 @@ if [ -f $path/twistd.pid ]
 then
 	kill `cat $path/twistd.pid`
 fi
-${env} twistd -noy ${path}/biblib/services/jsonrpc_service.tac -l server.log &
+${env}twistd -noy ${path}/biblib/services/jsonrpc_service.tac -l ${path}/log/server.log &
 exit 0
