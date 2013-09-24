@@ -10,7 +10,7 @@
       "at_least_one": "Vous devez spécifier au moins un créateur."
     },
     "actions":{
-      "add":"Ajouter un créateur"
+      "add":"ajouter un créateur"
     },
     "line": {
       "Person": "Personne",
@@ -22,7 +22,8 @@
       "name_given": "Prénom :",
       "date_birth": "Année de naissance :",
       "date_death": "Année de décès :",
-      "affiliation": "Affiliation :"
+      "affiliation": "Affiliation :",
+      "affiliation_role": "Role :"
     },
     "orgunit": {
       "name": "Nom :"

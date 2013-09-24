@@ -22,7 +22,8 @@
       "name_given": "Name :",
       "date_birth": "Birth year :",
       "date_death": "Death year :",
-      "affiliation": "Affiliation :"
+      "affiliation": "Affiliation :",
+      "affiliation_role": "Role :"
     },
     "orgunit": {
       "name": "Name :"
