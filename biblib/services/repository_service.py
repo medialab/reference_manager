@@ -156,6 +156,9 @@ def search(corpus, search_query):
         filter_query.append({"languages": {"$in": search_query["filter_languages"]}})
     if "filter_types" in search_query:
         filter_query.append({"rec_type": {"$in": search_query["filter_types"]}})
+    if "filter_status" in search_query:
+        # "private", "pending", "rejected", "published", "deleted"
+        filter_query.append({"rec_status": {"$in": search_query["filter_status"]}})
 
     # search_terms
     # a
@@ -228,15 +231,23 @@ def search(corpus, search_query):
 
     # result_sorts : how to with this index ? ...
 
-    if filter_query or search_indexes:
-        mongo_query = {"$and": search_indexes}
+    mongo_args = filter_query
+    mongo_args.extend(search_indexes)
+    if mongo_args:
+        mongo_query = {"$and": mongo_args}
     else:
         mongo_query = {}
     print "mongo_query:"
     print jsonbson.dumps_bson(mongo_query, True)
 
-    records = metajson_service.load_dict_list(mongodb[corpus][collection].find(mongo_query))
-    records_total_count = len(records)
+    mongo_response = mongodb[corpus][collection].find(mongo_query)
+    print mongo_response
+    if mongo_response:
+        records = metajson_service.load_dict_list(mongo_response)
+        records_total_count = len(records)
+    else:
+        records = []
+        records_total_count = 0
 
     search_response["records"] = records
     search_response["records_total_count"] = records_total_count
