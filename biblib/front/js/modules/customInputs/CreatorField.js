@@ -104,7 +104,7 @@
 
             $('input[data-attribute="affiliation"]', obj.dom).val((data.affiliation || {}).name);
 
-            $('select.select-affiliation-role', obj.dom).val((data.affiliation_role || {}).name);
+            $('select.select-affiliation-role', obj.dom).val(data.affiliation_role);
 
             return this;
           },
