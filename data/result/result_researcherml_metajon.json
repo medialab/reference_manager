@@ -1,0 +1,233 @@
+{
+  "col_id": "test_researcherml", 
+  "rec_class": "Collection", 
+  "rec_metajson": 1, 
+  "records": [
+    {
+      "addresses": [
+        {
+          "country": "FR", 
+          "locality_city_town": "Paris", 
+          "post_code": "75006", 
+          "preferred": "true", 
+          "relation_type": "work", 
+          "street": "56, rue Jacob"
+        }
+      ], 
+      "identifiers": [
+        {
+          "id_type": "ldap", 
+          "value": "CERI"
+        }, 
+        {
+          "id_type": "cnrs", 
+          "value": "UMR7050"
+        }, 
+        {
+          "id_type": "hdl", 
+          "value": "2441/9labe9r4se65i789685q380gh"
+        }, 
+        {
+          "id_type": "dai", 
+          "value": "2441/9labe9r4se65i789685q380gh"
+        }, 
+        {
+          "id_type": "hal", 
+          "value": "1011"
+        }
+      ], 
+      "nationality": "FR", 
+      "phones": [
+        {
+          "formatted": "+33158717000", 
+          "phone_type": "voice", 
+          "preferred": "true", 
+          "relation_type": "work", 
+          "visible": "true"
+        }, 
+        {
+          "formatted": "+33158717090", 
+          "phone_type": "fax", 
+          "relation_type": "work", 
+          "visible": "true"
+        }
+      ], 
+      "rec_class": "Orgunit", 
+      "rec_metajson": 1, 
+      "urls": [
+        {
+          "preferred": "true", 
+          "relation_type": "work", 
+          "value": "http://ceri.sciences-po.fr", 
+          "visible": "true"
+        }
+      ]
+    }, 
+    {
+      "addresses": [
+        {
+          "country": "FR", 
+          "locality_city_town": "PARIS", 
+          "post_code": "75007", 
+          "preferred": "true", 
+          "relation_type": "work", 
+          "street": "28 RUE DES SAINT PERES", 
+          "visible": "true"
+        }
+      ], 
+      "biographies": [
+        {
+          "language": "fr", 
+          "value": "&nbsp;Sophie Jacquot est docteure en science \npolitique. Sa thèse,&nbsp; soutenue en 2006 (IEP de Paris), portait sur \n«&nbsp;L’action&nbsp;&nbsp; publique communautaire et ses instruments. La politique \nd’égalité entre les femmes et les hommes à l’épreuve du <em>gender \nmainstreaming</em> ».\n<p style=\"text-align: justify;\">Spécialiste de sociologie de l’action \npublique et de l’intégration européenne, ses travaux portent sur les \ntransformations de l’action publique européenne, notamment dans le \ndomaine social et de la prise en compte des discriminations.</p>\n<p style=\"text-align: justify;\">Elle coordonne actuellement avec Bruno \nPalier (CEE Sciences Po) et Paolo Graziano (Université Milano Bocconi) \nle projet comparatif européen «&nbsp;The Europeanization of \n‘employment-friendly’ welfare states Reforms&nbsp;» sur les usages de \nl’Europe dans les réformes de protection sociale de 11 pays européens \ndans le cadre du réseau d’excellence européen RECWOWE (Reconciling Work \nand Welfare).</p>\n<p style=\"text-align: justify;\">Sophie Jacquot a enseigné à l’Université\n Paris 13, à l’IEP de Lille. Elle est actuellement responsable d’un \nséminaire doctoral sur l’analyse des politiques publiques et enseigne \négalement&nbsp;la politique sociale européenne dans le Master affaires \neuropéennes ainsi que les nouvelles formes d’engagement politique en \nsecond cycle à Sciences Po.</p>"
+        }, 
+        {
+          "language": "en", 
+          "value": "Sophie Jacquot holds a PhD in political \nscience. Her doctoral dissertation, defended in 2006 (IEP de Paris), \nfocused on «&nbsp;EU Public Action and Its Instruments. Gender Equality \nPolicy and the Test of Mainstreaming&nbsp;».\n<p style=\"text-align: justify;\">She is a specialist of sociology of \npolicy analysis and European integration studies and her research \nactivities are concerned with the transformation of EU public action, \nespecially in the social and anti-discrimination field.</p>\n<p style=\"text-align: justify;\">She coordinates with Bruno Palier \n(Centre d’études européennes de Sciences Po) and Paolo Graziano \n(Universita Milano Bocconi) a comparative European project on «&nbsp;The \nEuropeanization of ‘Employment Friendly’ Welfare States Reforms&nbsp;» on the\n usages of Europe in social policy reforms in 11 countries. This project\n is funded by the European network of excellence RECWOWE (Reconciling \nWork and Welfare).</p>\n<p style=\"text-align: justify;\">Sophie Jacquot has taught at University \nParis 13 and IEP de Lille. She is currently responsible for a doctoral \nseminar on policy analysis and teaches European social policy in the \nEuropean affairs Master and the transformation of political mobilisation\n at Sciences Po.</p>"
+        }
+      ], 
+      "biographies_short": [
+        {
+          "language": "fr", 
+          "value": "coordinatrice scientifique du Centre d'études européennes de Sciences Po"
+        }, 
+        {
+          "language": "en", 
+          "value": "scientific coordinator of the Centre d'études européennes at Sciences Po"
+        }
+      ], 
+      "date_birth": "1977", 
+      "emails": [
+        {
+          "preferred": "true", 
+          "relation_type": "work", 
+          "value": "sophie.jacquot@sciences-po.org", 
+          "visible": "true"
+        }
+      ], 
+      "identifiers": [
+        {
+          "id_type": "ldap", 
+          "value": "sophie.jacquot"
+        }, 
+        {
+          "id_type": "hdl", 
+          "value": "2441/9labe9r4se65i789685q591o2"
+        }, 
+        {
+          "id_type": "employeeNumber", 
+          "value": "16021"
+        }, 
+        {
+          "id_type": "dai", 
+          "value": "2441/9labe9r4se65i789685q591o2"
+        }
+      ], 
+      "image_urls": [
+        {
+          "value": "http://spire.sciences-po.fr/hdl:/2441/9labe9r4se65i789685q591o2/resources/sophie-jacquot.gif"
+        }
+      ], 
+      "language_capabilities": [
+        {
+          "language": "fre", 
+          "mother_tong": true, 
+          "oral_input": "medium", 
+          "oral_output": "medium", 
+          "text_input": "medium", 
+          "text_output": "medium"
+        }, 
+        {
+          "language": "eng", 
+          "mother_tong": false, 
+          "oral_input": "good", 
+          "oral_output": "excellent", 
+          "text_input": "good", 
+          "text_output": "excellent"
+        }, 
+        {
+          "language": "ita", 
+          "mother_tong": false, 
+          "oral_input": "medium", 
+          "oral_output": "good", 
+          "text_input": "basics", 
+          "text_output": "medium"
+        }
+      ], 
+      "name_family": "Jacquot", 
+      "name_given": "Sophie", 
+      "nationality": "FR", 
+      "phones": [
+        {
+          "formatted": "+33145498359", 
+          "phone_type": "voice", 
+          "preferred": "true", 
+          "relation_type": "work", 
+          "visible": "true"
+        }
+      ], 
+      "rec_class": "Person", 
+      "rec_metajson": 1, 
+      "responsabilities": [
+        {
+          "language": "fr", 
+          "value": "Responsable éditoriale des Cahiers européens de Sciences Po"
+        }, 
+        {
+          "language": "fr", 
+          "value": "Membre du comité de rédaction de la revue Politique européenne"
+        }
+      ], 
+      "titles": [
+        {
+          "language": "fr", 
+          "title_type": "academic", 
+          "value": "Docteure en science politique"
+        }
+      ], 
+      "urls": [
+        {
+          "preferred": "true", 
+          "relation_type": "work", 
+          "value": "http://www.cee.sciences-po.fr/fr/le-centre/equipe-de-recherche/35-linda.html"
+        }
+      ]
+    }, 
+    {
+      "identifiers": [
+        {
+          "id_type": "hal", 
+          "value": "1180"
+        }, 
+        {
+          "id_type": "anr", 
+          "value": "ANR-06-BLAN-0064"
+        }, 
+        {
+          "id_type": "hdl", 
+          "value": "2441/d7a7evb2ctdg4i89gesb82lpp"
+        }
+      ], 
+      "rec_class": "Project", 
+      "rec_metajson": 1
+    }, 
+    {
+      "identifiers": [
+        {
+          "id_type": "hal", 
+          "value": "86606"
+        }, 
+        {
+          "id_type": "eu", 
+          "value": "269567"
+        }, 
+        {
+          "id_type": "hdl", 
+          "value": "2441/53r60a8s3kup1vc9jh5ki109i"
+        }
+      ], 
+      "rec_class": "Project", 
+      "rec_metajson": 1
+    }
+  ], 
+  "title": "Test researcherml"
+}
