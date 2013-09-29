@@ -203,7 +203,8 @@ creator_orgunit_terms = [
 
 creator_citable_roles = [
     "aut",
-    "edt"
+    "edt",
+    "pbd"
 ]
 
 role_text_to_role_code = {

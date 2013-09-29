@@ -114,8 +114,8 @@ def manage_title_non_sort(document):
         if "languages" in document:
             language = document["languages"][0]
             print("language: {}".format(language))
-            if language and language in metajson.TITLE_NON_SORT:
-                non_sorts = metajson.TITLE_NON_SORT[language]
+            if language and language in constants.TITLE_NON_SORT:
+                non_sorts = constants.TITLE_NON_SORT[language]
                 title_words = title.split()
                 if len(title_words) > 1:
                     first_title_word = title_words[0]
@@ -159,6 +159,24 @@ def create_address(street, post_code, locality_city_town, country, preferred, re
     if visible is not None:
         address["visible"] = visible
     return address
+
+
+def create_affiliation(rec_id, name, role, date_start, date_end, preferred=False):
+    affiliation = {}
+    affiliation["preferred"] = preferred
+    if role:
+        affiliation["affiliation_role"] = role
+    if date_start:
+        affiliation["date_start"] = date_start
+    if date_end:
+        affiliation["date_end"] = date_end
+    agent = Orgunit()
+    if rec_id:
+        agent["rec_id"] = rec_id
+    if name:
+        agent["name"] = name
+    affiliation["agent"] = agent
+    return affiliation
 
 
 def create_email(value, preferred, relation_type, visible):

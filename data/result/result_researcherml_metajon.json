@@ -4,14 +4,38 @@
   "rec_metajson": 1, 
   "records": [
     {
+      "acronym": "CERI", 
       "addresses": [
         {
           "country": "FR", 
           "locality_city_town": "Paris", 
           "post_code": "75006", 
-          "preferred": "true", 
+          "preferred": true, 
           "relation_type": "work", 
-          "street": "56, rue Jacob"
+          "street": "56, rue Jacob", 
+          "visible": false
+        }
+      ], 
+      "affiliations": [
+        {
+          "agent": {
+            "name": "CNRS", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/d7a7evb2ctdg4i89ges99ipkj", 
+            "rec_metajson": 1
+          }, 
+          "preferred": false, 
+          "role": "isPartOf"
+        }, 
+        {
+          "agent": {
+            "name": "Sciences Po", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q021gm", 
+            "rec_metajson": 1
+          }, 
+          "preferred": true, 
+          "role": "isPartOf"
         }
       ], 
       "identifiers": [
@@ -41,25 +65,26 @@
         {
           "formatted": "+33158717000", 
           "phone_type": "voice", 
-          "preferred": "true", 
+          "preferred": true, 
           "relation_type": "work", 
-          "visible": "true"
+          "visible": true
         }, 
         {
           "formatted": "+33158717090", 
           "phone_type": "fax", 
+          "preferred": false, 
           "relation_type": "work", 
-          "visible": "true"
+          "visible": true
         }
       ], 
       "rec_class": "Orgunit", 
       "rec_metajson": 1, 
       "urls": [
         {
-          "preferred": "true", 
+          "preferred": true, 
           "relation_type": "work", 
           "value": "http://ceri.sciences-po.fr", 
-          "visible": "true"
+          "visible": true
         }
       ]
     }, 
@@ -69,10 +94,23 @@
           "country": "FR", 
           "locality_city_town": "PARIS", 
           "post_code": "75007", 
-          "preferred": "true", 
+          "preferred": true, 
           "relation_type": "work", 
           "street": "28 RUE DES SAINT PERES", 
-          "visible": "true"
+          "visible": true
+        }
+      ], 
+      "affiliations": [
+        {
+          "agent": {
+            "name": "Centre d'études européennes de Sciences Po", 
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q384oh", 
+            "rec_metajson": 1
+          }, 
+          "date_start": "2008", 
+          "preferred": true, 
+          "role": "academic-staff"
         }
       ], 
       "biographies": [
@@ -98,10 +136,10 @@
       "date_birth": "1977", 
       "emails": [
         {
-          "preferred": "true", 
+          "preferred": true, 
           "relation_type": "work", 
           "value": "sophie.jacquot@sciences-po.org", 
-          "visible": "true"
+          "visible": true
         }
       ], 
       "identifiers": [
@@ -160,9 +198,9 @@
         {
           "formatted": "+33145498359", 
           "phone_type": "voice", 
-          "preferred": "true", 
+          "preferred": true, 
           "relation_type": "work", 
-          "visible": "true"
+          "visible": true
         }
       ], 
       "rec_class": "Person", 
@@ -186,9 +224,10 @@
       ], 
       "urls": [
         {
-          "preferred": "true", 
+          "preferred": true, 
           "relation_type": "work", 
-          "value": "http://www.cee.sciences-po.fr/fr/le-centre/equipe-de-recherche/35-linda.html"
+          "value": "http://www.cee.sciences-po.fr/fr/le-centre/equipe-de-recherche/35-linda.html", 
+          "visible": false
         }
       ]
     }, 

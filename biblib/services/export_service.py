@@ -81,6 +81,14 @@ def export_html(col_id, col_title, metajson_list, output_file_path, style="mla")
             if "rec_id" in document and document["rec_id"]:
                 source_info += document["rec_id"] + ":"
             citation = citations_manager.cite(document, style, "html")
+
+            debug = True
+            if debug:
+                meta = jsonbson.dumps_bson(document, True)
+                output_file.write("<pre>" + meta + "</pre>\n")
+
+                output_file.write("<xmp>" + citation + "</xmp>\n")
+
             output_file.write("<div>" + citation + "</div>\n")
 
         footer = "</body>\n"

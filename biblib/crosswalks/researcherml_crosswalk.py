@@ -51,11 +51,13 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
     orgunit = Orgunit()
 
     # acronym -> acronym
+    orgunit.update(extract_element_and_set_key(rml_orgunit, "acronym", "acronym"))
 
     # address -> addresses
     orgunit.update(extract_rml_addresses(rml_orgunit))
 
     # affiliation -> affiliations
+    orgunit.update(extract_rml_affiliations(rml_orgunit))
 
     # award -> awards
 
@@ -113,6 +115,7 @@ def rml_person_to_metajson(rml_person, source):
     person.update(extract_rml_titles(rml_person))
 
     # affiliation -> affiliations
+    person.update(extract_rml_affiliations(rml_person))
 
     # address -> addresses
     person.update(extract_rml_addresses(rml_person))
@@ -207,30 +210,30 @@ def rml_person_to_metajson(rml_person, source):
 def rml_project_to_metajson(rml_project, source):
     project = Project()
     
-    # acronym -> 
+    # acronym -> acronym
 
-    # award -> 
+    # award -> award
 
-    # call -> 
+    # call -> call
     
-    # contribution -> 
+    # contribution -> creators
 
-    # cost -> 
+    # cost -> cost
 
-    # dateBegin -> 
+    # dateBegin -> date_start
 
-    # dateEnd -> 
+    # dateEnd -> date_end
 
-    # description -> 
+    # description -> descriptions
 
-    # duration -> 
+    # duration -> extent_duration
 
-    # identifiers -> 
+    # identifier -> identifiers
     project.update(extract_rml_identifiers(rml_project))
 
-    # note -> 
+    # note -> notes
 
-    # olDescription -> 
+    # olDescription -> descriptions_short
 
     # participant -> 
 
@@ -238,11 +241,11 @@ def rml_project_to_metajson(rml_project, source):
 
     # status -> 
 
-    # title -> 
+    # title -> title
 
-    # titleAlternative -> 
+    # titleAlternative -> title_alternative
 
-    # uri -> 
+    # uri -> urls
 
     return project
 
@@ -254,9 +257,9 @@ def extract_rml_addresses(rml):
         addresses = []
         for rml_address in rml_addresses:
             if rml_address is not None:
-                preferred = rml_address.get("preferred")
+                preferred = extract_attribute_boolean(rml_address, "preferred")
                 relation_type = rml_address.get("relationType")
-                visible = rml_address.get("visible")
+                visible = extract_attribute_boolean(rml_address, "visible")
                 street = extract_text_or_none(rml_address.find(prefixtag("rml", "street")))
                 post_code = extract_text_or_none(rml_address.find(prefixtag("rml", "postCode")))
                 locality_city_town = extract_text_or_none(rml_address.find(prefixtag("rml", "localityCityTown")))
@@ -269,6 +272,40 @@ def extract_rml_addresses(rml):
     return result
 
 
+def extract_rml_affiliations(rml):
+    result = {}
+    rml_affiliations = rml.findall(prefixtag("rml", "affiliation"))
+    if rml_affiliations is not None:
+        affiliations = []
+        for rml_affiliation in rml_affiliations:
+            if rml_affiliation is not None:
+                preferred = extract_attribute_boolean(rml_affiliation, "preferred")
+
+                rml_relation_type = rml_affiliation.find(prefixtag("rml", "relationType"))
+                role = extract_text_or_none(rml_relation_type)
+
+                rml_date_begin = rml_affiliation.find(prefixtag("rml", "dateBegin"))
+                date_start = extract_text_or_none(rml_date_begin)
+
+                rml_date_end = rml_affiliation.find(prefixtag("rml", "dateEnd"))
+                date_end = extract_text_or_none(rml_date_end)
+
+                identifiers = extract_rml_identifiers(rml_affiliation)
+                rec_id = None
+                if "identifiers" in identifiers and identifiers["identifiers"]:
+                    rec_id = identifiers["identifiers"][0]["value"]
+
+                rml_name = rml_affiliation.find(prefixtag("rml", "name"))
+                name = extract_text_or_none(rml_name)
+
+                affiliation = metajson_service.create_affiliation(rec_id, name, role, date_start, date_end, preferred)
+                if affiliation is not None:
+                    affiliations.append(affiliation)
+        if affiliations:
+            result["affiliations"] = affiliations
+    return result
+
+
 def extract_rml_emails(rml):
     result = {}
     rml_emails = rml.findall(prefixtag("rml", "email"))
@@ -276,9 +313,9 @@ def extract_rml_emails(rml):
         emails = []
         for rml_email in rml_emails:
             if rml_email is not None:
-                preferred = rml_email.get("preferred")
+                preferred = extract_attribute_boolean(rml_email, "preferred")
                 relation_type = rml_email.get("relationType")
-                visible = rml_email.get("visible")
+                visible = extract_attribute_boolean(rml_email, "visible")
                 value = extract_text_or_none(rml_email)
 
                 email = metajson_service.create_email(value, preferred, relation_type, visible)
@@ -330,9 +367,9 @@ def extract_rml_instant_messages(rml):
         ims = []
         for rml_im in rml_ims:
             if rml_im is not None:
-                preferred = rml_im.get("preferred")
+                preferred = extract_attribute_boolean(rml_im, "preferred")
                 relation_type = rml_im.get("relationType")
-                visible = rml_im.get("visible")
+                visible = extract_attribute_boolean(rml_im, "visible")
                 service = rml_im.get("service")
                 value = extract_text_or_none(rml_im)
 
@@ -390,10 +427,10 @@ def extract_rml_phones(rml):
         phones = []
         for rml_phone in rml_phones:
             if rml_phone is not None:
-                preferred = rml_phone.get("preferred")
+                preferred = extract_attribute_boolean(rml_phone, "preferred")
                 relation_type = rml_phone.get("relationType")
                 phone_type = rml_phone.get("type")
-                visible = rml_phone.get("visible")
+                visible = extract_attribute_boolean(rml_phone, "visible")
                 rml_formatted = rml_phone.find(prefixtag("rml", "formatted"))
                 formatted = extract_text_or_none(rml_formatted)
 
@@ -435,9 +472,9 @@ def extract_rml_uris(rml):
         uris = []
         for rml_uri in rml_uris:
             if rml_uri is not None:
-                preferred = rml_uri.get("preferred")
+                preferred = extract_attribute_boolean(rml_uri, "preferred")
                 relation_type = rml_uri.get("relationType")
-                visible = rml_uri.get("visible")
+                visible = extract_attribute_boolean(rml_uri, "visible")
                 value = extract_text_or_none(rml_uri)
 
                 uri = metajson_service.create_uri(value, preferred, relation_type, visible)
@@ -477,10 +514,17 @@ def extract_text_or_none(element):
 
 def extract_boolean(element):
     if element is not None and element.text.strip() == "true":
-        result = True
+        return True
     else:
-        result = False
-    return result
+        return False
+
+
+def extract_attribute_boolean(element, attribute):
+    if element is not None and attribute is not None:
+        att_val = element.get(attribute)
+        if att_val is not None and att_val == "true":
+            return True
+    return False
 
 
 def extract_element_and_set_key(rml, element, key):

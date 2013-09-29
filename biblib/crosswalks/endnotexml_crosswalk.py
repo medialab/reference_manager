@@ -151,9 +151,9 @@ def endnotexml_record_to_metajson(record, source):
     rec_type = endnote_record_type_to_metajson_document_type[endnote_type]
 
     primary_creators = extract_creators(None, "aut", record, "./contributors/authors/author/style")
-    secondary_creators = extract_creators(None, "edt", record, "./contributors/secondary-authors/author/style")
+    secondary_creators = extract_creators(None, "pbd", record, "./contributors/secondary-authors/author/style")
     if endnote_type in [TYPE_BOOK, TYPE_BOOK_SECTION]:
-        tertiary_creators = extract_creators(None, "edt", record, "./contributors/tertiary-authors/author/style")
+        tertiary_creators = extract_creators(None, "pbd", record, "./contributors/tertiary-authors/author/style")
     elif endnote_type == TYPE_THESIS:
         tertiary_creators = extract_creators(None, "ths", record, "./contributors/tertiary-authors/author/style")
     elif endnote_type == TYPE_FILM_OR_BROADCAST:
@@ -272,8 +272,8 @@ def endnotexml_record_to_metajson(record, source):
             is_part_of_is_part_of = Document()
             is_part_of_is_part_of.set_key_if_not_none("rec_type", is_part_of_is_part_of_type)
             is_part_of_is_part_of.set_key_if_not_none("title", title_translated)
-            # creators with role edt
-            is_part_of_is_part_of.add_creators(creator_service.change_contibutors_role(translated_creators, "edt"))
+            # creators with role pbd
+            is_part_of_is_part_of.add_creators(creator_service.change_contibutors_role(translated_creators, "pbd"))
             #is_part_of_is_part_of.set_key_if_not_none("date_issued",date_year)
             is_part_of_is_part_of.set_key_if_not_none("publishers", publishers)
             is_part_of_is_part_of.set_key_if_not_none("publication_places", publication_places)

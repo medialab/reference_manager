@@ -71,7 +71,13 @@ def bibtex_entry_to_metajson(entry, source):
         creators.extend(authors)
 
     # editor -> creators
-    editors = extract_creators(entry, "editor", "edt")
+    editors = []
+    editors_edt = extract_creators(entry, "editor", "edt")
+    if editors_edt:
+        editors.extend(editors_edt)
+    editors_pbd = extract_creators(entry, "editor", "pbd")
+    if editors_pbd:
+        editors.extend(editors_pbd)
     if editors:
         print "editors: {}".format(editors)
         creators.extend(editors)

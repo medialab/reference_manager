@@ -6,7 +6,9 @@ from biblib import metajson
 
 
 def cite(document, format):
+    result = ""
 
+    # is_part_of, is_part_of_is_part_of 
     is_part_of = None
     is_part_of_is_part_of = None
     if "is_part_ofs" in document and len(document["is_part_ofs"]) > 0:
@@ -14,10 +16,11 @@ def cite(document, format):
         if "is_part_ofs" in is_part_of and len(is_part_of["is_part_ofs"]) > 0:
             is_part_of_is_part_of = is_part_of["is_part_ofs"][0]
 
-    result = ""
+    # extract the different kind of creators
+    document_creators_dict = get_creators_role_dict(document)
 
     # creators
-    creators = format_creators_of_document(document, 0)
+    creators = format_creators_dict(document_creators_dict, 0)
     if creators:
         result += creators
 
@@ -28,18 +31,25 @@ def cite(document, format):
 
     # is_part_of
     if is_part_of:
+
+        # extract the different kind of creators
+        is_part_of_creators_dict = get_creators_role_dict(is_part_of)
+
         # is_part_of_title
         is_part_of_title = format_title_of_document(is_part_of)
         if is_part_of_title:
             result += is_part_of_title
 
         # is_part_of_creators
-        is_part_of_creators = format_creators_of_document(is_part_of, 1)
+        is_part_of_creators = format_creators_dict(is_part_of_creators_dict, 1)
         if is_part_of_creators:
             result += is_part_of_creators
 
         # is_part_of_is_part_of
         if is_part_of_is_part_of:
+
+            # extract the different kind of creators
+            is_part_of_is_part_of_creators_dict = get_creators_role_dict(is_part_of_is_part_of)
 
             # is_part_of_is_part_of_title
             is_part_of_is_part_of_title = format_title_of_document(is_part_of_is_part_of)
@@ -47,23 +57,13 @@ def cite(document, format):
                 result += is_part_of_is_part_of_title
 
             # is_part_of_is_part_of_creators
-            is_part_of_is_part_of_creators = format_creators_of_document(is_part_of_is_part_of, 2)
+            is_part_of_is_part_of_creators = format_creators_dict(is_part_of_is_part_of_creators_dict, 2)
             if is_part_of_is_part_of_creators:
                 result += is_part_of_is_part_of_creators
 
 
-    # Others creators
-    # Trans. (translated by) trl
-    # Dir. (directed by) drt
-    # Writ. (written by). sce
-    # Prod. (produced by) pro
-    # Narr. (narrated by) nrt
-    # Perf. (performers) act
-    # Ed. (edited by) edt
-    # aut
-    # dgg
-    # cph
-    contrib_dict = get_creators_dict_of_document(document)
+
+
 
     # edition
     edition = document.get_edition()
@@ -87,10 +87,12 @@ def cite(document, format):
     publishers = document.get_publishers()
     if publishers:
         result += u"<span class=\"publishers\">{0}</span>, ".format(publishers[0])
-
-    else:
-        pass
-        # todo creator dgg
+ 
+    # creators as publishers
+    if "publishers" in document_creators_dict:
+        creators_publishers = document_creators_dict["publishers"]
+        for creator in creators_publishers:
+            result += u"<span class=\"publishers\">{0}</span>, ".format(creator.formatted_name())
 
     # part_volume, part_issue
     part_volume = document.get_part_volume()
@@ -106,7 +108,7 @@ def cite(document, format):
 
     # date
     date = document.get_date()
-    print date
+    #print date
     if date:
         result += u"<span class=\"date\">{0}</span>. ".format(date)
 
@@ -189,58 +191,110 @@ def format_title_of_document(document):
             return u"<span class=\"title\">{0}</span>. ".format(result)
 
 
-def get_creators_dict_of_document(document):
+
+role_short_forms = {
+    "act": ["perf.", "Perf."],
+    "aut": ["", ""],
+    "cph": ["", ""],
+    "ctb": ["", ""],
+    "dgg": ["", ""],
+    "drt": ["dir.", "Dir."],
+    "dst": ["", ""],
+    "edt": ["ed.", "Ed."],
+    "nrt": ["narr.", "Narr."],
+    "pbd": ["ed.", "Ed."],
+    "pbl": ["", ""],
+    "pro": ["prod.", "Prod."],
+    "sce": ["writ.", "Writ."],
+    "trl": ["trans.", "Trans."],
+}
+
+
+def get_creators_role_dict(document):
+    result = {}
     if "creators" in document:
-        result = {}
-        # "aut", "act", "cph", "dgg", "edt", "pro", "trl"
+        # Sort the creators in 3 types:
+        # author
+        # publisher
+        # contributor
         for creator in document["creators"]:
             if "role" in creator:
-                try:
-                    result[creator["role"]].append(creator)
-                except:
-                    result[creator["role"]] = [creator]
+                role = creator["role"]
+                if role in ["act", "aut", "drt", "edt", "pbd", "pro", "sce", "trl", "nrt"]:
+                    add_item_to_key_of_dict(creator, "authors", result)
+                elif role in ["dgg", "dst", "pbl"]:
+                    add_item_to_key_of_dict(creator, "publishers", result)
+                elif role in ["cph"]:
+                    add_item_to_key_of_dict(creator, "copyright", result)
+                else:
+                    add_item_to_key_of_dict(creator, "contributors", result)
             else:
-                try:
-                    result["ctb"].append(creator)
-                except:
-                    result["ctb"] = [creator]
-        return result
+                add_item_to_key_of_dict(creator, "contributors", result)
+    return result
 
 
-def format_creators_of_document(document, level):
-    if "creators" in document:
+def add_item_to_key_of_dict(item, key, dic):
+    if item:
+        try:
+            dic[key].append(item)
+        except:
+            dic[key] = [item]
+
+
+def format_creators_dict(creators_dict, level):
+    if "authors" in creators_dict:
         result = ""
-        contri_count = len(document["creators"])
-        has_edt = False
-        for position, creator in enumerate(document["creators"]):
-            if creator["role"] in ["aut", "edt"]:
-                if creator["role"] == "edt":
-                    has_edt = True
+
+        contri_count = len(creators_dict["authors"])
+
+        #print "level: {}".format(level)
+        #print "contri_count: {}".format(contri_count)
+
+        for position, creator in enumerate(creators_dict["authors"]):
+            #print "position: {}".format(position)
+            # prefix
+            prefix = u""
+            formatted_name = format_creator(creator, position, level)
+            suffix = u""
+
+            if contri_count > 1:
                 if 0 < position < contri_count - 1:
-                    result += ", "
-                elif position == contri_count - 1 and contri_count > 1:
-                    result += ", and "
-                result += format_creator(creator, position)
+                    prefix = u", "
+                elif position == contri_count - 1:
+                    prefix = u", and "
 
-                if contri_count > 3:
-                    result += ", et al"
-                    break
-        if level == 0:
-            if has_edt:
-                return result + ", eds. "
-            else:
-                return result + ". "
-        else:
-            if has_edt:
-                return "Ed. " + result + ". "
-            else:
-                return result + ". "
+            if not (formatted_name.endswith(".") or formatted_name.endswith(".</span>")) and position == contri_count - 1:
+                suffix = u"."
+
+            # formatted_name
+            result += u"{}<span class=\"creator\">{}</span>{}".format(prefix, formatted_name, suffix)
+            
+            # et al
+            # deactivated
+            #if contri_count > 3:
+            #    result += u", <span class=\"creator\">et al.</span>"
+            #    print result
+            #    break
 
 
-def format_creator(creator, position):
+        #print result
+        return result + " "
+
+
+def format_creator(creator, position, level):
     style = metajson.STYLE_FAMILY_COMMA_GIVEN
-    if position > 0:
+    if level > 0 or position > 0:
         style = metajson.STYLE_GIVEN_FAMILY
     formatted_name = creator.formatted_name(style)
+    if level == 0:
+        if creator["role"] in role_short_forms:
+            short_form = role_short_forms[creator["role"]][0]
+            if short_form:
+                formatted_name = formatted_name + ", <span class=\"creator_role\">" + short_form + "</span>"
+    else:
+        if creator["role"] in role_short_forms:
+            short_form = role_short_forms[creator["role"]][1]
+            if short_form:
+                formatted_name = "<span class=\"creator_role\">" + short_form + "</span> " + formatted_name
     if formatted_name:
-        return u"<span class=\"creator\">{0}</span>".format(formatted_name)
+        return formatted_name
