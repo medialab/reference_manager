@@ -85,6 +85,13 @@
                         },
                         {
                             "labels": {
+                                "en": "Edited Book",
+                                "fr": "Ouvrage collectif"
+                            },
+                            "type_id": "EditedBook"
+                        },
+                        {
+                            "labels": {
                                 "en": "Conference proceedings",
                                 "fr": "Actes de colloque"
                             },

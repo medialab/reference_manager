@@ -54,6 +54,13 @@
                         },
                         {
                             "labels": {
+                                "en": "Edited Book",
+                                "fr": "Ouvrage collectif"
+                            },
+                            "type_id": "EditedBook"
+                        },
+                        {
+                            "labels": {
                                 "en": "Conference proceedings",
                                 "fr": "Actes de colloque"
                             },
@@ -310,6 +317,13 @@
                         "fr": "Carte ou plan"
                     },
                     "type_id": "Map"
+                },
+                {
+                    "labels": {
+                        "en": "Artwork",
+                        "fr": "Oeuvre d'art"
+                    },
+                    "type_id": "Artwork"
                 }
             ],
             "labels": {
