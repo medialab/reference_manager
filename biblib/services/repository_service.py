@@ -9,6 +9,7 @@ from bson.objectid import ObjectId
 from bson.errors import InvalidId
 from biblib.metajson import SearchResponse
 from biblib.services import config_service
+from biblib.services import date_service
 from biblib.services import metajson_service
 from biblib.util import exceptions
 from biblib.util import jsonbson
@@ -129,6 +130,7 @@ def get_documents_count(corpus):
 def search(corpus, search_query):
     if not corpus:
         corpus = default_corpus
+
     search_response = SearchResponse()
 
     # empty search_query
@@ -147,11 +149,11 @@ def search(corpus, search_query):
     # other filters
     filter_query = []
     if "filter_date_end" in search_query:
-        pass
-        #filter_query.append({"date_sort": {"$lte": search_query["filter_date_end"]}})
+        filter_date_end = date_service.parse_date(search_query["filter_date_end"])
+        filter_query.append({"date_sort": {"$lte": filter_date_end}})
     if "filter_date_start" in search_query:
-        pass
-        #filter_query.append({"date_sort": {"$gte": search_query["filter_date_start"]}})
+        filter_date_start = date_service.parse_date(search_query["filter_date_start"])
+        filter_query.append({"date_sort": {"$gte": filter_date_start}})
     if "filter_languages" in search_query:
         filter_query.append({"languages": {"$in": search_query["filter_languages"]}})
     if "filter_types" in search_query:
@@ -177,12 +179,29 @@ def search(corpus, search_query):
             if "value" not in search_term or search_term["value"] is None:
                 # useless
                 break
+
+            # split value
+            values = search_term["value"].replace(",", " ").split()
+            
             # index
             if "index" not in search_term:
+                # useless
                 raise exceptions.metajsonprc_error(100)
             elif search_term["index"] == "all":
-                # todo
-                search_indexes.append({"title": {"$regex": search_term["value"], "$options": 'i'}})
+                all_terms = []
+                for value in values:
+                    all_terms.append({"rec_id": {"$regex": value, "$options": 'i'}})
+                    all_terms.append({"identifiers.value": {"$regex": value, "$options": 'i'}})
+                    all_terms.append({"title": {"$regex": value, "$options": 'i'}})
+                    all_terms.append({"title_sub": {"$regex": value, "$options": 'i'}})
+                    all_terms.append({"publishers": {"$regex": value, "$options": 'i'}})
+                    all_terms.append({"is_part_ofs.title": {"$regex": value, "$options": 'i'}})
+                    all_terms.append({"is_part_ofs.is_part_ofs.title": {"$regex": value, "$options": 'i'}})
+                    all_terms.append({"creators.agent.name_family": {"$regex": value, "$options": 'i'}})
+                    all_terms.append({"creators.agent.name_given": {"$regex": value, "$options": 'i'}})
+                    all_terms.append({"creators.agent.name": {"$regex": value, "$options": 'i'}})
+                    all_terms.append({"creators.agent.title": {"$regex": value, "$options": 'i'}})
+                search_indexes.append({"$or": all_terms})
 
             elif search_term["index"] == "identifier":
                 try:
@@ -190,36 +209,61 @@ def search(corpus, search_query):
                     search_indexes.append({"_id": obid})
                 except (InvalidId, TypeError):
                     search_indexes.append({"or": [{"rec_id": search_term["value"]}, {"identifiers.value": search_term["value"]}]})
+
             elif search_term["index"] == "title":
-                search_indexes.append({"title": {"$regex": search_term["value"], "$options": 'i'}})
+                title_terms = []
+                for value in values:
+                    title_terms.append({"title": {"$regex": value, "$options": 'i'}})
+                search_indexes.append({"$and": title_terms})
+
             elif search_term["index"] == "is_part_of":
-                search_indexes.append({"is_part_ofs.title": {"$regex": search_term["value"], "$options": 'i'}})
+                is_part_of_terms = []
+                for value in values:
+                    is_part_of_terms.append({"is_part_ofs.title": {"$regex": value, "$options": 'i'}})
+                    is_part_of_terms.append({"is_part_ofs.is_part_ofs.title": {"$regex": value, "$options": 'i'}})
+                search_indexes.append({"$or": is_part_of_terms})
+
             elif search_term["index"] == "creator":
                 creator_terms = []
-                for value in search_term["value"].replace(",", "").split():
+                for value in values:
                     creator_terms.append({"creators.agent.name_family": {"$regex": value, "$options": 'i'}})
                     creator_terms.append({"creators.agent.name_given": {"$regex": value, "$options": 'i'}})
                     creator_terms.append({"creators.agent.name": {"$regex": value, "$options": 'i'}})
                     creator_terms.append({"creators.agent.title": {"$regex": value, "$options": 'i'}})
                 search_indexes.append({"$or": creator_terms})
+
             elif search_term["index"] == "creator_id":
                 search_indexes.append({"creators.agent.rec_id": search_term["value"]})
+
             elif search_term["index"] == "affiliation":
-                search_indexes.append({"creators.agent.affiliation.name": {"$regex": search_term["value"], "$options": 'i'}})
+                search_indexes.append({"creators.affiliation.name": {"$regex": search_term["value"], "$options": 'i'}})
+
             elif search_term["index"] == "affiliation_id":
-                search_indexes.append({"creators.agent.affiliation.rec_id": search_term["value"]})
+                search_indexes.append({"creators.affiliation.rec_id": search_term["value"]})
+
             elif search_term["index"] == "publisher":
-                search_indexes.append({"publishers": {"$regex": search_term["value"], "$options": 'i'}})
+                publisher_terms = []
+                for value in values:
+                    publisher_terms.append({"publishers": {"$regex": value, "$options": 'i'}})
+                    publisher_terms.append({"is_part_ofs.publishers": {"$regex": value, "$options": 'i'}})
+                    publisher_terms.append({"is_part_ofs.is_part_ofs.publishers": {"$regex": value, "$options": 'i'}})
+                search_indexes.append({"$or": publisher_terms})
+
             elif search_term["index"] == "keyword":
                 search_indexes.append({"keywords.value": {"$regex": search_term["value"], "$options": 'i'}})
+
             elif search_term["index"] == "classification":
                 search_indexes.append({"classifications.value": {"$regex": search_term["value"], "$options": 'i'}})
+
             elif search_term["index"] == "research_area":
                 search_indexes.append({"research_areas.value": {"$regex": search_term["value"], "$options": 'i'}})
+
             elif search_term["index"] == "subject":
                 search_indexes.append({"subjects.value": {"$regex": search_term["value"], "$options": 'i'}})
+
             elif search_term["index"] == "set":
                 search_indexes.append({"sets.value": {"$regex": search_term["value"], "$options": 'i'}})
+
             # operator
             if "operator" in search_term:
                 if search_term["operator"] == "or":
@@ -231,11 +275,15 @@ def search(corpus, search_query):
 
     # result_sorts : how to with this index ? ...
 
+    # combine filter_query and search_indexes
     mongo_args = filter_query
     mongo_args.extend(search_indexes)
+
+    # Generate the mongo query
     if mongo_args:
         mongo_query = {"$and": mongo_args}
     else:
+        # search all
         mongo_query = {}
     print "mongo_query:"
     print jsonbson.dumps_bson(mongo_query, True)
@@ -254,6 +302,7 @@ def search(corpus, search_query):
     search_response["result_batch_size"] = records_total_count
     search_response["result_offset"] = 0
     search_response["search_query"] = search_query
+
     return search_response
 
 

@@ -4,7 +4,7 @@
 
 import types
 import uuid
-from datetime import datetime, date, time
+from datetime import datetime
 
 from biblib import metajson
 from biblib.metajson import Common
@@ -20,7 +20,7 @@ from biblib.metajson import Resource
 from biblib.metajson import Target
 from biblib.metajson import Type
 from biblib.util import constants
-
+from biblib.services import date_service
 
 def load_dict(meta_dict):
     if "rec_class" not in meta_dict:
@@ -87,6 +87,9 @@ def pretty_print_document(document):
 
 
 def enhance_metajson(document):
+    if isinstance(document, dict):
+        document = load_dict(document)
+
     # rec_id
     if "rec_id" not in document or document["rec_id"] is None:
         document["rec_id"] = str(uuid.uuid1())
@@ -95,6 +98,10 @@ def enhance_metajson(document):
     # rec_status
     if "rec_status" not in document or document["rec_status"] is None:
         document["rec_status"] = constants.REC_STATUS_PRIVATE
+    # date_sort
+    date_iso = document.get_date()
+    date_sort = date_service.parse_date(date_iso)
+    document["date_sort"] = date_sort
     # rec_created_date
     if "rec_created_date" not in document or document["rec_created_date"] is None:
         document["rec_created_date"] = datetime.now().isoformat()

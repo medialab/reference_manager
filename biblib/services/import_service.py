@@ -40,8 +40,6 @@ def import_metajson_list(corpus, metajson_list, error_file, save, role):
         rec_id = metajson["rec_id"]
         rec_source = metajson["rec_source"]
 
-        metajson_service.enhance_metajson(metajson)
-
         errors = metajson_validation.validate_metajson_document(metajson)
         for error in errors:
             formatted_error = rec_source + ":" + rec_id + ": " + error + "\n"

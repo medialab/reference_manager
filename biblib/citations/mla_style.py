@@ -3,10 +3,54 @@
 # coding=utf-8
 
 from biblib import metajson
+from biblib.services import date_service
+from biblib.util import constants
 
+role_to_short_forms = {
+    "act": ["perf.", "Perf."],
+    "aut": ["", ""],
+    "com": ["comp.", "Comp."],
+    "cph": ["", ""],
+    "ctb": ["", ""],
+    "dgg": ["", ""],
+    "drt": ["dir.", "Dir."],
+    "dst": ["", ""],
+    "edt": ["ed.", "Ed."],
+    "nrt": ["narr.", "Narr."],
+    "pbd": ["ed.", "Ed."],
+    "pbl": ["", ""],
+    "pro": ["prod.", "Prod."],
+    "sce": ["writ.", "Writ."],
+    "trl": ["trans.", "Trans."]
+}
+
+thesis_rec_type_to_degree = {
+    "Dissertation": "Diss.",
+    "BachelorThesis": "BA thesis",
+    "StudentThesis": "BA thesis",
+    "MasterThesis": "MA thesis",
+    "DoctoralThesis": "PhD thesis",
+    "ProfessoralThesis": "Prof. thesis"
+}
+
+# Tape Recording: Cassette, VHS, DVD, Videocassette, Filmstrip
 
 def cite(document, format):
     result = ""
+
+    rec_type = document["rec_type"]
+
+    # Book:
+    # Lastname, Firstname. Title of Book. Place of Publication: Publisher, Year of Publication. Medium of Publication.
+
+    # Components for artwork cited from a book: 
+    # 1) Name of artist. 2) Underline title of artwork.
+    # 3) Date artwork created (if date is uncertain use [c. 1503] meaning [circa 1503] or around the year 1503).
+    # 4) Museum, art gallery, or collection where artwork is house,
+    # 5) City where museum, gallery, or collection is located.
+    # 6) Title of book used. 7) Author or editor of book.
+    # 8) Place of publication: 9) Publisher, 10) Date of publication.
+    # 11) Other relevant information, e.g. figure, page, plate, or slide number.
 
     # is_part_of, is_part_of_is_part_of 
     is_part_of = None
@@ -32,13 +76,17 @@ def cite(document, format):
     # is_part_of
     if is_part_of:
 
-        # extract the different kind of creators
-        is_part_of_creators_dict = get_creators_role_dict(is_part_of)
+        # "Review of"
+        if rec_type in [constants.DOC_TYPE_ARTICLEREVIEW, constants.DOC_TYPE_BOOKREVIEW]:
+            result += "Rev. of "
 
         # is_part_of_title
         is_part_of_title = format_title_of_document(is_part_of)
         if is_part_of_title:
             result += is_part_of_title
+
+        # extract the different kind of creators
+        is_part_of_creators_dict = get_creators_role_dict(is_part_of)
 
         # is_part_of_creators
         is_part_of_creators = format_creators_dict(is_part_of_creators_dict, 1)
@@ -61,10 +109,6 @@ def cite(document, format):
             if is_part_of_is_part_of_creators:
                 result += is_part_of_is_part_of_creators
 
-
-
-
-
     # edition
     edition = document.get_edition()
     if edition:
@@ -76,23 +120,41 @@ def cite(document, format):
         result += u"<span class=\"extent_volumes\">{0}</span>. ".format(extent_volumes)
 
     # degree
-    # todo
+    if rec_type in thesis_rec_type_to_degree:
+        degree = thesis_rec_type_to_degree[rec_type]
+        result += u"<span class=\"thesis_degree\">{0}.</span> ".format(degree)
 
     # publication_places
     publication_places = document.get_publication_places()
     if publication_places:
         result += u"<span class=\"publication_places\">{0}</span>: ".format(publication_places[0])
+    else:
+        result += u"<span class=\"publication_places\">N.p.</span>: "
 
     # publishers
+    # Shorten the publisher's name; for example, omit articles, business abbreviations (Co., Inc.),
+    # and descriptive words (Press, Publisher).
+    # When multiple publishers are listed, include all of them, placing a semicolon between each.
+    # Example aime : 368
+    # publishers
     publishers = document.get_publishers()
-    if publishers:
-        result += u"<span class=\"publishers\">{0}</span>, ".format(publishers[0])
- 
     # creators as publishers
     if "publishers" in document_creators_dict:
         creators_publishers = document_creators_dict["publishers"]
+        if not publishers:
+            publishers = []
         for creator in creators_publishers:
-            result += u"<span class=\"publishers\">{0}</span>, ".format(creator.formatted_name())
+            publishers.append(creator.formatted_name())
+    if publishers:
+        publishers_count = len(publishers)
+        #print "publishers_count:{}".format(publishers_count)
+        for position, publisher in enumerate(publishers):
+            #print "position:{}".format(position)
+            #print "publisher:{}".format(publisher)
+            result += u"<span class=\"publishers\">{0}</span>".format(publisher)
+            if publishers_count > 1 and position < publishers_count - 1:
+                result += u"; "
+        result += u", "
 
     # part_volume, part_issue
     part_volume = document.get_part_volume()
@@ -108,9 +170,17 @@ def cite(document, format):
 
     # date
     date = document.get_date()
-    #print date
-    if date:
-        result += u"<span class=\"date\">{0}</span>. ".format(date)
+    date_result = date_service.format_date(date)
+    if date_result:
+        # date_issued_first
+        # "date_issued_first": "1920" (example aime : 208)
+        if "date_issued_first" in document:
+            date_result += " [{}]".format(date_service.format_date(document["date_issued_first"]))
+        result += u"<span class=\"date\">{0}</span>".format(date_result)
+        if not date_result.endswith("."):
+            result += u". "
+        else:
+            result += u" "
 
     # part_page_start & part_page_end
     part_page_start = document.get_part_page_start()
@@ -121,7 +191,7 @@ def cite(document, format):
     if part_page_end:
         result += u"-<span class=\"part_page_end\">{0}</span>".format(part_page_end)
 
-    if part_page_end or part_page_end:
+    if part_page_start or part_page_end:
         result += ". "
 
     # medium of publication, date_last_accessed, url
@@ -178,6 +248,8 @@ def format_url(url):
 
 
 def format_title_of_document(document):
+    # Capitalize the first word and all other principal words of the titles and subtitles
+    # of cited works listed. (Do not capitalize articles, prepositions, coordinating conjunctions, or the "to" in infinitives.)
     if document and "title" in document:
         result = u""
         if "title_non_sort" in document:
@@ -191,25 +263,6 @@ def format_title_of_document(document):
             return u"<span class=\"title\">{0}</span>. ".format(result)
 
 
-
-role_short_forms = {
-    "act": ["perf.", "Perf."],
-    "aut": ["", ""],
-    "cph": ["", ""],
-    "ctb": ["", ""],
-    "dgg": ["", ""],
-    "drt": ["dir.", "Dir."],
-    "dst": ["", ""],
-    "edt": ["ed.", "Ed."],
-    "nrt": ["narr.", "Narr."],
-    "pbd": ["ed.", "Ed."],
-    "pbl": ["", ""],
-    "pro": ["prod.", "Prod."],
-    "sce": ["writ.", "Writ."],
-    "trl": ["trans.", "Trans."],
-}
-
-
 def get_creators_role_dict(document):
     result = {}
     if "creators" in document:
@@ -220,7 +273,7 @@ def get_creators_role_dict(document):
         for creator in document["creators"]:
             if "role" in creator:
                 role = creator["role"]
-                if role in ["act", "aut", "drt", "edt", "pbd", "pro", "sce", "trl", "nrt"]:
+                if role in ["act", "aut", "com", "drt", "edt", "pbd", "pro", "sce", "trl", "nrt"]:
                     add_item_to_key_of_dict(creator, "authors", result)
                 elif role in ["dgg", "dst", "pbl"]:
                     add_item_to_key_of_dict(creator, "publishers", result)
@@ -287,13 +340,13 @@ def format_creator(creator, position, level):
         style = metajson.STYLE_GIVEN_FAMILY
     formatted_name = creator.formatted_name(style)
     if level == 0:
-        if creator["role"] in role_short_forms:
-            short_form = role_short_forms[creator["role"]][0]
+        if creator["role"] in role_to_short_forms:
+            short_form = role_to_short_forms[creator["role"]][0]
             if short_form:
                 formatted_name = formatted_name + ", <span class=\"creator_role\">" + short_form + "</span>"
     else:
-        if creator["role"] in role_short_forms:
-            short_form = role_short_forms[creator["role"]][1]
+        if creator["role"] in role_to_short_forms:
+            short_form = role_to_short_forms[creator["role"]][1]
             if short_form:
                 formatted_name = "<span class=\"creator_role\">" + short_form + "</span> " + formatted_name
     if formatted_name:

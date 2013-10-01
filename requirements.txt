@@ -16,3 +16,4 @@ gdata
 gspreadsheet
 ply
 pymarc
+python-dateutil < 2.0
