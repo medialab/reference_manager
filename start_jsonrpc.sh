@@ -18,5 +18,6 @@ if [ -f $path/twistd.pid ]
 then
 	kill `cat $path/twistd.pid`
 fi
+cd $path
 ${env}twistd -noy ${path}/biblib/services/jsonrpc_service.tac -l ${path}/log/server.log &
 exit 0
