@@ -128,7 +128,7 @@ def cite(document, format):
     publication_places = document.get_publication_places()
     if publication_places:
         result += u"<span class=\"publication_places\">{0}</span>: ".format(publication_places[0])
-    else:
+    elif rec_type in [constants.DOC_TYPE_BOOK, constants.DOC_TYPE_BOOKLET, constants.DOC_TYPE_BOOKPART, constants.DOC_TYPE_CONFERENCEPAPER, constants.DOC_TYPE_CONFERENCEPROCEEDINGS, constants.DOC_TYPE_DICTIONARY, constants.DOC_TYPE_DICTIONARYENTRY, constants.DOC_TYPE_DISSERTATION, constants.DOC_TYPE_DOCTORALTHESIS, constants.DOC_TYPE_EBOOK, constants.DOC_TYPE_EJOURNAL, constants.DOC_TYPE_EDITEDBOOK, constants.DOC_TYPE_ENCYCLOPEDIA, constants.DOC_TYPE_ENCYCLOPEDIAARTICLE, constants.DOC_TYPE_JOURNAL, constants.DOC_TYPE_MAGAZINE, constants.DOC_TYPE_MAP, constants.DOC_TYPE_MASTERTHESIS, constants.DOC_TYPE_MULTIVOLUMEBOOK, constants.DOC_TYPE_NEWSPAPER, constants.DOC_TYPE_PROFESSORALTHESIS, constants.DOC_TYPE_REPORT, constants.DOC_TYPE_REPORTPART, constants.DOC_TYPE_TECHREPORT]:
         result += u"<span class=\"publication_places\">N.p.</span>: "
 
     # publishers
@@ -196,7 +196,7 @@ def cite(document, format):
 
     # medium of publication, date_last_accessed, url
     medium_of_publication = None
-    date_last_accessed = None
+    date_last_accessed_formatted = None
     url = None
     if "medium" in document:
         medium_of_publication = document["medium"]
@@ -210,12 +210,13 @@ def cite(document, format):
         if not medium_of_publication and url:
             medium_of_publication = "Web"
         if "date_last_accessed" in document["resources"][0]:
-            date_last_accessed = format_date_last_accessed(document["resources"][0]["date_last_accessed"])
+            date_last_accessed = document["resources"][0]["date_last_accessed"]
+            date_last_accessed_formatted = date_service.format_date(date_last_accessed)
     if medium_of_publication:
         result += u"<span class=\"medium_of_publication\">{0}</span>. ".format(medium_of_publication)
 
-    if date_last_accessed:
-        result += u"<span class=\"date_last_accessed\">{0}</span>. ".format(date_last_accessed)
+    if date_last_accessed_formatted:
+        result += u"<span class=\"date_last_accessed\">{0}</span>. ".format(date_last_accessed_formatted)
 
     if url:
         result += u"<span class=\"url\">{0}</span>".format(format_url(url))
@@ -234,12 +235,6 @@ def remove_last_point(text):
             return text[:-1]
         else:
             return text
-
-
-def format_date_last_accessed(date):
-    if date:
-        result = date
-        return result
 
 
 def format_url(url):
