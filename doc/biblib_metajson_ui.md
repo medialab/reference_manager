@@ -185,7 +185,7 @@ Video types are :
 
 When the user have chosen a document_type, the UI can obtain the Fields for this document_type using the JSON-RPC method : **types**
 
-    {"jsonrpc":"2.0","method":"uifields","id":1,"params":["Book","fr"]}
+    {"jsonrpc":"2.0","method":"fields","id":1,"params":["Book","fr"]}
 
 
 ### 2.1. UI Field
@@ -262,7 +262,7 @@ Description of each field :
       "title": "Cosmopolitiques - Tome 1: la guerre des sciences"
     }
 
-#### UIFields
+#### Fields
 
 	
 

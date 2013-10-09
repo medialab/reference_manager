@@ -7,9 +7,9 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $.jsonRPC.setup({
-                    endPoint : 'http://localhost:8080',
+                    endPoint : 'http://modesofexistence.org/biblio_manager_v4',
                     //endPoint : 'http://modesofexistence.org/biblio_manager_dev',
-                    //endPoint : 'http://modesofexistence.org/biblio_manager',
+                    //endPoint : 'http://modesofexistence.org/biblio_manager_v4',
                     namespace : ''
                 });
                 $("input#echo_button").click(function() {
@@ -85,24 +85,24 @@
                         }
                     });
                 });
-                $("input#uifield_button").click(function() {
-                    $.jsonRPC.request("uifield", {
+                $("input#field_button").click(function() {
+                    $.jsonRPC.request("field", {
                         //params : ["Book","fr"],
-                        params : [$("input#uifield_input").val(),"fr"],
+                        params : [$("input#field_input").val(),"fr"],
                         success : function(data) {
-                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#uifield_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#field_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
                         }
                     });
                 });
-                $("input#uifields_button").click(function() {
-                    $.jsonRPC.request("uifields", {
+                $("input#fields_button").click(function() {
+                    $.jsonRPC.request("fields", {
                         //params : ["fr"],
                         params : ["fr"],
                         success : function(data) {
-                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#uifields_result"));
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#fields_result"));
                         },
                         error : function(data) {
                             alert(JSON.stringify(data));
@@ -230,23 +230,23 @@
         <p>Results :</p>
         <pre id="types_result"></pre>
 
-        <h2>Method uifield</h2>
-        <p><label for="uifield_input">Document type (rec_type)</label> : 
-            <input type="text" name="type_input" id="uifield_input">
+        <h2>Method field</h2>
+        <p><label for="field_input">Document type (rec_type)</label> : 
+            <input type="text" name="type_input" id="field_input">
             example : Book
         </p>
         <p>
-            <input name="uifield_button" id="uifield_button" value="Send uifield request" type="button" />
+            <input name="field_button" id="field_button" value="Send field request" type="button" />
         </p>
         <p>Results :</p>
-        <pre id="uifield_result"></pre>
+        <pre id="field_result"></pre>
 
-        <h2>Method uifields</h2>
+        <h2>Method fields</h2>
         <p>
-            <input name="uifields_button" id="uifields_button" value="Send uifields request" type="button" />
+            <input name="fields_button" id="fields_button" value="Send fields request" type="button" />
         </p>
         <p>Results :</p>
-        <pre id="uifields_result"></pre>
+        <pre id="fields_result"></pre>
 
         <h2>Method search_mongo</h2>
         <p><label for="search_mongo_input">MongoDB query</label> : 

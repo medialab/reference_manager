@@ -1,0 +1,387 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Type",
+                "fr": "Type"
+            },
+            "property": "rec_type",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Identifier",
+                "fr": "Identifiant"
+            },
+            "property": "rec_id",
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Study title",
+                "fr": "Titre de l'enquête"
+            },
+            "multiple": false,
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": true,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Keywords",
+                "fr": "Mots-cl\u00e9s"
+            },
+            "multiple": true,
+            "property": "keywords",
+            "required": true,
+            "type_ui": "KeywordField"
+        },
+        {
+            "labels": {
+                "en": "Time Period Covered",
+                "fr": "Période couverte"
+            },
+            "filter_date_start": "date_period_covered_start",
+            "filter_date_end": "date_period_covered_end",
+            "required": true,
+            "type_ui": "YearRangeField"
+        },
+        {
+            "labels": {
+                "en": "Author(s)",
+                "fr": "Auteur(s)"
+            },
+            "multiple": true,
+            "property": "creators",
+            "required": true,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "Distributor",
+                "fr": "Diffuseur des données"
+            },
+            "multiple": false,
+            "property": "distributor",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Project",
+                "fr": "Projet"
+            },
+            "multiple": true,
+            "only_one": false,
+            "property": "projects",
+            "required": true,
+            "type_fields": [
+                "Project"
+            ],
+            "type_ui": "DocumentField"
+        },
+        {
+            "labels": {
+                "en": "Location of Units of Observation",
+                "fr": "Niveau d'observation"
+            },
+            "multiple": true,
+            "property": "location_of_units_of_observations",
+            "required": false,
+            "type_source": "location_of_units_of_observations",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Covered countries",
+                "fr": "Pays couverts"
+            },
+            "multiple": true,
+            "property": "coverage_countries",
+            "required": true,
+            "type_source": "country",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Geographic coverage",
+                "fr": "Couverture géographique"
+            },
+            "multiple": true,
+            "property": "coverage_geographics",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Spatial Units",
+                "fr": "Unités spatialisées"
+            },
+            "multiple": true,
+            "property": "coverage_spatialunits",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Target Groups",
+                "fr": "Groupes de population ciblés"
+            },
+            "multiple": true,
+            "property": "target_groups",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Study documents dates",
+                "fr": "Dates des documents de l'enquête"
+            },
+            "filter_date_start": "documents_date_start",
+            "filter_date_end": "documents_date_end",
+            "required": true,
+            "type_ui": "YearRangeField"
+        },
+        {
+            "labels": {
+                "en": "Data collection dates",
+                "fr": "Dates de collecte des données"
+            },
+            "filter_date_start": "data_collection_date_start",
+            "filter_date_end": "data_collection_date_end",
+            "required": true,
+            "type_ui": "YearRangeField"
+        },
+        {
+            "labels": {
+                "en": "Time Dimension",
+                "fr": "Temporalité de collecte"
+            },
+            "multiple": true,
+            "property": "data_collection_time_dimensions",
+            "required": true,
+            "type_source": "data_collection_time_dimension",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Mode of Data Collection",
+                "fr": "Mode de collecte des données"
+            },
+            "multiple": true,
+            "property": "data_collection_mode",
+            "required": true,
+            "type_source": "data_collection_modes",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Sampling Procedure",
+                "fr": "Procédure d'échantillonnage"
+            },
+            "multiple": true,
+            "property": "data_collection_sampling",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Research Instrument",
+                "fr": "Protocole de collecte"
+            },
+            "multiple": true,
+            "property": "data_collection_method",
+            "required": true,
+            "type_source": "data_collection_method",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Data kind",
+                "fr": "Types de matériaux"
+            },
+            "multiple": true,
+            "property": "documents_types",
+            "required": true,
+            "type_source": "documents_types",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Data collection context",
+                "fr": "Contexte de la collecte"
+            },
+            "multiple": true,
+            "property": "data_collection_context",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Transcription",
+                "fr": "Transcription"
+            },
+            "multiple": false,
+            "property": "analysis_transcription",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Anonymization",
+                "fr": "Anonymisation"
+            },
+            "multiple": false,
+            "property": "analysis_anonymization",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Analysis",
+                "fr": "Analysis"
+            },
+            "multiple": true,
+            "property": "analysis_type",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Data languages",
+                "fr": "Langues des données"
+            },
+            "multiple": true,
+            "property": "data_langues",
+            "required": false,
+            "type_source": "language",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Documentation languages",
+                "fr": "Langues de la documentation"
+            },
+            "multiple": true,
+            "property": "documentation_languages",
+            "required": false,
+            "type_source": "language",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Access Conditions",
+                "fr": "Conditions d'accès"
+            },
+            "multiple": true,
+            "property": "access_conditions",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Archive localisation",
+                "fr": "Lieu de conservation"
+            },
+            "multiple": false,
+            "property": "archive_location",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Contacts",
+                "fr": "Contacts"
+            },
+            "multiple": true,
+            "property": "contacts",
+            "required": true,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "Date First Edition",
+                "fr": "Date de la première version"
+            },
+            "property": "version_date_first",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Date Last Edition",
+                "fr": "Date de la derniére version"
+            },
+            "property": "version_date_last",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Copyright",
+                "fr": "Copyright"
+            },
+            "multiple": false,
+            "property": "copyright_statement",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Software",
+                "fr": "Logiciel"
+            },
+            "multiple": false,
+            "property": "software",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Editor",
+                "fr": "Editeur"
+            },
+            "multiple": false,
+            "property": "editor",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Depositer",
+                "fr": "Déposant"
+            },
+            "multiple": false,
+            "property": "submitter",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Observation Units",
+                "fr": "Unités d'observation"
+            },
+            "multiple": true,
+            "property": "observation_units",
+            "required": true,
+            "type_ui": "CharField"
+        }
+    ],
+    "labels": {
+        "en": "Qualitative Data Set",
+        "fr": "Données qualitatives"
+    },
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "DatasetQuali"
+}

@@ -7,10 +7,10 @@
   },
   "CreatorField": {
     "errors": {
-      "at_least_one": "At least one creator has to be specified."
+      "at_least_one": "At least one author has to be specified."
     },
     "actions":{
-      "add":"add one creator"
+      "add":"add one author"
     },
     "line": {
       "Person": "Person",
@@ -18,8 +18,9 @@
       "Event": "Event"
     },
     "person": {
+      "name_prefix": "Family name prefix :",
       "name_family": "Family name :",
-      "name_given": "Name :",
+      "name_given": "Given name :",
       "date_birth": "Birth year :",
       "date_death": "Death year :",
       "affiliation": "Affiliation :",

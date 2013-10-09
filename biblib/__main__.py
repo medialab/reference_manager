@@ -21,7 +21,7 @@ from biblib.util import constants
 # python biblib convert -f endnotexml -i data/endnotexml/endnote-aime.xml -r metajson -o data/result/result_aime_metajson.json
 
 console.setup_console()
-default_corpus = config_service.config["mongodb"]["default_corpus"]
+default_corpus = config_service.config["default_corpus"]
 
 # Supported input and output formats
 INPUT_FORMATS = [constants.FORMAT_BIBTEX, constants.FORMAT_DIDL, constants.FORMAT_ENDNOTEXML, constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_RESEARCHERML, constants.FORMAT_RIS, constants.FORMAT_SUMMONJSON, constants.FORMAT_UNIXREF]

@@ -1,0 +1,77 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Identifier",
+                "fr": "Identifiant"
+            },
+            "property": "rec_id",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Type",
+                "fr": "Type"
+            },
+            "property": "rec_type",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Keywords",
+                "fr": "Mots-cl\u00e9s"
+            },
+            "multiple": true,
+            "property": "keywords",
+            "required": false,
+            "type_ui": "KeywordField"
+        },
+        {
+            "labels": {
+                "en": "Authors",
+                "fr": "Auteurs"
+            },
+            "multiple": true,
+            "property": "creators",
+            "required": true,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "Languages",
+                "fr": "Langues"
+            },
+            "multiple": true,
+            "property": "languages",
+            "required": false,
+            "type_source": "language",
+            "type_ui": "TypeField"
+        }
+    ],
+    "labels": {
+        "en": "Quantitative Data Set",
+        "fr": "Données quantitatives"
+    },
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "DatasetQuanti"
+}

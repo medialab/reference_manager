@@ -1,0 +1,167 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Identifier",
+                "fr": "Identifiant"
+            },
+            "property": "rec_id",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Type",
+                "fr": "Type"
+            },
+            "property": "rec_type",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Subtitle",
+                "fr": "Sous-titre"
+            },
+            "property": "title_sub",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Authors",
+                "fr": "Auteurs"
+            },
+            "multiple": true,
+            "property": "creators",
+            "required": false,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "Periodical",
+                "fr": "Périodique"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "is_part_ofs",
+            "required": true,
+            "type_fields": [
+                "Journal",
+                "Magazine",
+                "Newspaper"
+            ],
+            "type_ui": "DocumentField"
+        },
+        {
+            "labels": {
+                "en": "Year",
+                "fr": "Année"
+            },
+            "property": "part_year",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Season",
+                "fr": "Saison"
+            },
+            "property": "part_season",
+            "required": false,
+            "type_source": "part_season",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Quarter",
+                "fr": "Trimestre"
+            },
+            "property": "part_quarter",
+            "required": false,
+            "type_source": "part_quarter",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Month",
+                "fr": "Mois"
+            },
+            "property": "part_month",
+            "required": false,
+            "type_source": "part_month",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Week",
+                "fr": "Semaine"
+            },
+            "property": "part_week",
+            "required": false,
+            "type_source": "part_week",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Volume",
+                "fr": "Volume"
+            },
+            "property": "part_volume",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Issue",
+                "fr": "Numéro"
+            },
+            "property": "part_issue",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Date issued",
+                "fr": "Date de publication"
+            },
+            "property": "date_issued",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Keywords",
+                "fr": "Mots-cl\u00e9s"
+            },
+            "multiple": true,
+            "property": "keywords",
+            "required": false,
+            "type_ui": "KeywordField"
+        }
+    ],
+    "labels": {
+        "en": "Periodical Issue",
+        "fr": "Numéro de périodique"
+    },
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "PeriodicalIssue"
+}

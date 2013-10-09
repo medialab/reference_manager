@@ -1,0 +1,130 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Identifier",
+                "fr": "Identifiant"
+            },
+            "property": "rec_id",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Type",
+                "fr": "Type"
+            },
+            "property": "rec_type",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Subtitle",
+                "fr": "Sous-titre"
+            },
+            "property": "title_sub",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Authors",
+                "fr": "Auteurs"
+            },
+            "multiple": true,
+            "property": "creators",
+            "required": true,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "Broadcast",
+                "fr": "Emission"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "is_part_ofs",
+            "required": true,
+            "type_fields": [
+                "Broadcast"
+            ],
+            "type_ui": "DocumentField"
+        },
+        {
+            "labels": {
+                "en": "Date broadcast",
+                "fr": "Date de diffusion"
+            },
+            "property": "date_issued",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Duration",
+                "fr": "Dur\u00e9e"
+            },
+            "property": "extent_duration",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "id_type": "isan",
+            "labels": {
+                "en": "ISAN",
+                "fr": "ISAN"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        },
+        {
+            "labels": {
+                "en": "Languages",
+                "fr": "Langues"
+            },
+            "multiple": true,
+            "property": "languages",
+            "required": false,
+            "type_source": "language",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Keywords",
+                "fr": "Mots-cl\u00e9s"
+            },
+            "multiple": true,
+            "property": "keywords",
+            "required": false,
+            "type_ui": "KeywordField"
+        }
+    ],
+    "labels": {
+        "en": "Audio Broadcast",
+        "fr": "Diffusion audio (radio, podcast...)"
+    },
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "AudioBroadcast"
+}

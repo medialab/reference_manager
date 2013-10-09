@@ -1,0 +1,112 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Identifier",
+                "fr": "Identifiant"
+            },
+            "property": "rec_id",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Type",
+                "fr": "Type"
+            },
+            "property": "rec_type",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Languages",
+                "fr": "Langues"
+            },
+            "multiple": true,
+            "property": "languages",
+            "required": false,
+            "type_source": "language",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Publisher",
+                "fr": "Editeurs"
+            },
+            "multiple": true,
+            "property": "publishers",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Publication place",
+                "fr": "Lieu de publication"
+            },
+            "multiple": true,
+            "property": "publication_places",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Publication country",
+                "fr": "Pays de publication"
+            },
+            "multiple": true,
+            "property": "publication_countries",
+            "required": false,
+            "type_source": "country",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Frequency",
+                "fr": "P\u00e9riodicit\u00e9"
+            },
+            "property": "frequency",
+            "required": false,
+            "type_source": "frequency",
+            "type_ui": "TypeField"
+        },
+        {
+            "id_type": "issn",
+            "labels": {
+                "en": "ISSN",
+                "fr": "ISSN"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        },
+        {
+            "id_type": "eissn",
+            "labels": {
+                "en": "e-ISSN",
+                "fr": "e-ISSN"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        }
+    ],
+    "labels": {
+        "en": "Journal",
+        "fr": "Revue"
+    },
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "Journal"
+}

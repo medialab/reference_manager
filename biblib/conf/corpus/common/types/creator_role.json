@@ -6,6 +6,7 @@
                 "en": "Actor", 
                 "fr": "Acteur"
             }, 
+            "major": true, 
             "type_id": "act"
         }, 
         {
@@ -277,6 +278,7 @@
                 "en": "Compiler", 
                 "fr": "Compilateur"
             }, 
+            "major": true, 
             "type_id": "com"
         }, 
         {
@@ -312,6 +314,7 @@
                 "en": "Copyright holder", 
                 "fr": "Détenteur de droits d'auteur"
             }, 
+            "major": true, 
             "type_id": "cph"
         }, 
         {
@@ -455,6 +458,7 @@
                 "en": "Degree grantor", 
                 "fr": "Institution délivrant des diplômes"
             }, 
+            "major": true, 
             "type_id": "dgg"
         }, 
         {
@@ -502,8 +506,9 @@
         {
             "labels": {
                 "en": "Director", 
-                "fr": "Directeur ou metteur en scène"
+                "fr": "Réalisateur ou metteur en scène"
             }, 
+            "major": true, 
             "type_id": "drt"
         }, 
         {
@@ -518,6 +523,7 @@
                 "en": "Distributor", 
                 "fr": "Distributeur"
             }, 
+            "major": true, 
             "type_id": "dst"
         }, 
         {
@@ -831,6 +837,7 @@
                 "en": "Narrator", 
                 "fr": "Narrateur"
             }, 
+            "major": true, 
             "type_id": "nrt"
         }, 
         {
@@ -958,8 +965,9 @@
         {
             "labels": {
                 "en": "Producer", 
-                "fr": "Directeur de production "
+                "fr": "Producteur"
             }, 
+            "major": true, 
             "type_id": "pro"
         }, 
         {
@@ -1103,6 +1111,7 @@
                 "en": "Scenarist", 
                 "fr": "Scénariste"
             }, 
+            "major": true, 
             "type_id": "sce"
         }, 
         {

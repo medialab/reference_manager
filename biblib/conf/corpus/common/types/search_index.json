@@ -32,14 +32,14 @@
         {
             "labels": {
                 "en": "Publisher", 
-                "fr": "Publisher"
+                "fr": "Editeur"
             }, 
             "type_id": "publisher"
         }, 
         {
             "labels": {
-                "en": "Identifiant", 
-                "fr": "Identifier"
+                "en": "Identifier", 
+                "fr": "Identifiant"
             }, 
             "type_id": "identifier"
         }, 

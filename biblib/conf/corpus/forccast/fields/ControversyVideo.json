@@ -1,0 +1,151 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Authors",
+                "fr": "Auteurs"
+            },
+            "multiple": true,
+            "property": "creators",
+            "required": true,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "Genre",
+                "fr": "Genre"
+            },
+            "multiple": true,
+            "property": "genres",
+            "required": false,
+            "type_source": "genre_video",
+            "type_ui": "TypeField"
+        },
+        {
+            "id_type": "isan",
+            "labels": {
+                "en": "ISAN",
+                "fr": "ISAN"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        },
+        {
+            "labels": {
+                "en": "Languages",
+                "fr": "Langues"
+            },
+            "multiple": true,
+            "property": "languages",
+            "required": false,
+            "type_source": "language",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Subtitles Languages",
+                "fr": "Langues des sous-titres"
+            },
+            "multiple": true,
+            "property": "languages_subtitles",
+            "required": false,
+            "type_source": "language",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Keywords",
+                "fr": "Mots-cl\u00e9s"
+            },
+            "multiple": true,
+            "property": "keywords",
+            "required": false,
+            "type_ui": "KeywordField"
+        },
+        {
+            "labels": {
+                "en": "Disciplines",
+                "fr": "Disciplines"
+            },
+            "multiple": true,
+            "property": "classifications",
+            "required": false,
+            "type_source": "classification_forccast",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Abstracts",
+                "fr": "Resum\u00e9s"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Date defended",
+                "fr": "Date de soutenance"
+            },
+            "property": "date_defence",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Overall Forccast score",
+                "fr": "Note globale Forccast"
+            },
+            "property": "score_value",
+            "required": false,
+            "roles": ["admin", "teacher"],
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Score description",
+                "fr": "Appr\u00e9ciation globale"
+            },
+            "multiple": true,
+            "property": "score_descriptions",
+            "required": false,
+            "roles": ["admin", "teacher"],
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Awards",
+                "fr": "R\u00e9compenses"
+            },
+            "multiple": true,
+            "property": "awards",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "To archive ?",
+                "fr": "A archiver ?"
+            },
+            "property": "for_archiving",
+            "roles": ["admin", "teacher"],
+            "type_ui": "BooleanField"
+        }
+    ],
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "ControversyVideo"
+}

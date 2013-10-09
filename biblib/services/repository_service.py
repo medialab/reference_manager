@@ -17,10 +17,10 @@ from biblib.util import jsonbson
 DOCUMENTS = "documents"
 AGENTS = "agents"
 TYPES = "types"
-UIFIELDS = "uifields"
+FIELDS = "fields"
 
 config = config_service.config["mongodb"]
-default_corpus = config["default_corpus"]
+default_corpus = config_service.config["default_corpus"]
 
 try:
     mongodb = pymongo.MongoClient(config['host'], config['port'])
@@ -34,15 +34,23 @@ except pymongo.errors.ConnectionFailure as e:
 # return db[config['mongo-scrapy']['jobLogsCol']].insert([{'_job': _id, 'timestamp': timestamp, 'log': msg} for _id in jobid])
 
 
+def list_corpora():
+    return [x for x in mongodb.database_names() if x != "local"]
+
+
 def create_corpus(corpus):
     mongodb[corpus]
+
+
+def delete_corpus(corpus):
+    mongodb.drop_database(corpus)
 
 
 def empty_corpus(corpus):
     mongodb[corpus][DOCUMENTS].drop()
     mongodb[corpus][AGENTS].drop()
     mongodb[corpus][TYPES].drop()
-    mongodb[corpus][UIFIELDS].drop()
+    mongodb[corpus][FIELDS].drop()
 
 
 def init_corpus_indexes(corpus):
@@ -58,7 +66,7 @@ def init_corpus_indexes(corpus):
     mongodb[corpus][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
     mongodb[corpus][AGENTS].ensure_index([index_id, index_rec_id, index_name, index_name_family], safe=True)
     mongodb[corpus][TYPES].ensure_index([index_id], safe=True)
-    mongodb[corpus][UIFIELDS].ensure_index([index_id], safe=True)
+    mongodb[corpus][FIELDS].ensure_index([index_id], safe=True)
 
 
 def get_document_by_mongo_id(corpus, mongo_id):
@@ -189,19 +197,21 @@ def search(corpus, search_query):
                 raise exceptions.metajsonprc_error(100)
             elif search_term["index"] == "all":
                 all_terms = []
-                for value in values:
-                    all_terms.append({"rec_id": {"$regex": value, "$options": 'i'}})
-                    all_terms.append({"identifiers.value": {"$regex": value, "$options": 'i'}})
-                    all_terms.append({"title": {"$regex": value, "$options": 'i'}})
-                    all_terms.append({"title_sub": {"$regex": value, "$options": 'i'}})
-                    all_terms.append({"publishers": {"$regex": value, "$options": 'i'}})
-                    all_terms.append({"is_part_ofs.title": {"$regex": value, "$options": 'i'}})
-                    all_terms.append({"is_part_ofs.is_part_ofs.title": {"$regex": value, "$options": 'i'}})
-                    all_terms.append({"creators.agent.name_family": {"$regex": value, "$options": 'i'}})
-                    all_terms.append({"creators.agent.name_given": {"$regex": value, "$options": 'i'}})
-                    all_terms.append({"creators.agent.name": {"$regex": value, "$options": 'i'}})
-                    all_terms.append({"creators.agent.title": {"$regex": value, "$options": 'i'}})
-                search_indexes.append({"$or": all_terms})
+                if values:
+                    for value in values:
+                        all_terms.append({"rec_id": {"$regex": value, "$options": 'i'}})
+                        all_terms.append({"identifiers.value": {"$regex": value, "$options": 'i'}})
+                        all_terms.append({"title": {"$regex": value, "$options": 'i'}})
+                        all_terms.append({"title_sub": {"$regex": value, "$options": 'i'}})
+                        all_terms.append({"publishers": {"$regex": value, "$options": 'i'}})
+                        all_terms.append({"is_part_ofs.title": {"$regex": value, "$options": 'i'}})
+                        all_terms.append({"is_part_ofs.is_part_ofs.title": {"$regex": value, "$options": 'i'}})
+                        all_terms.append({"creators.agent.name_family": {"$regex": value, "$options": 'i'}})
+                        all_terms.append({"creators.agent.name_given": {"$regex": value, "$options": 'i'}})
+                        all_terms.append({"creators.agent.name": {"$regex": value, "$options": 'i'}})
+                        all_terms.append({"creators.agent.title": {"$regex": value, "$options": 'i'}})
+                        all_terms.append({"rec_type": {"$regex": value, "$options": 'i'}})
+                    search_indexes.append({"$or": all_terms})
 
             elif search_term["index"] == "identifier":
                 try:
@@ -332,9 +342,9 @@ def save_document(corpus, document, role):
     # Recover already saved fields that this role can't view or edit
     if "rec_id" in document and role is not None:
         rec_type = document["rec_type"]
-        uifield = get_uifield(corpus, rec_type)
+        field = get_field(corpus, rec_type)
         recovered_fields = []
-        for child in uifield["children"]:
+        for child in field["children"]:
             if "roles" in child:
                 roles = child["roles"]
                 if role not in roles:
@@ -364,35 +374,35 @@ def delete_document(corpus, rec_id):
     return result
 
 
-def get_uifield(corpus, rec_type):
+def get_field(corpus, rec_type):
     if not corpus:
         corpus = default_corpus
-    result = mongodb[corpus][UIFIELDS].find_one({"rec_type": rec_type})
+    result = mongodb[corpus][FIELDS].find_one({"rec_type": rec_type})
     if result:
         return metajson_service.load_dict(result)
     else:
         return None
 
 
-def get_uifields(corpus):
+def get_fields(corpus):
     if not corpus:
         corpus = default_corpus
-    results = mongodb[corpus][UIFIELDS].find()
+    results = mongodb[corpus][FIELDS].find()
     if results:
         return metajson_service.load_dict_list(results)
     else:
         return None
 
 
-def save_uifield(corpus, uifield):
+def save_field(corpus, field):
     if not corpus:
         corpus = default_corpus
     # insert or update ?
-    rec_type = uifield["rec_type"]
-    existing_uifield = get_uifield(corpus, rec_type)
-    if existing_uifield:
-        uifield["_id"] = existing_uifield["_id"]
-    return {"rec_type": rec_type, "_id": str(mongodb[corpus][UIFIELDS].save(uifield))}
+    rec_type = field["rec_type"]
+    existing_field = get_field(corpus, rec_type)
+    if existing_field:
+        field["_id"] = existing_field["_id"]
+    return {"rec_type": rec_type, "_id": str(mongodb[corpus][FIELDS].save(field))}
 
 
 def get_type(corpus, type_id):
@@ -424,3 +434,4 @@ def save_type(corpus, metatype):
     if existing_type:
         metatype["_id"] = existing_type["_id"]
     return {"type_id": type_id, "_id": str(mongodb[corpus][TYPES].save(metatype))}
+

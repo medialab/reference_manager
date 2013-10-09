@@ -125,6 +125,31 @@ endnote_record_type_to_metajson_document_is_part_of_type = {
     TYPE_NEWSPAPER_ARTICLE: constants.DOC_TYPE_NEWSPAPER
 }
 
+unpublished_types = [
+    constants.DOC_TYPE_ANCIENTTEXT, 
+    constants.DOC_TYPE_ARTWORK, 
+    constants.DOC_TYPE_AUDIOPART, 
+    constants.DOC_TYPE_AUDIORECORDING, 
+    constants.DOC_TYPE_BIBLIOGRAPHY, 
+    constants.DOC_TYPE_CONFERENCECONTRIBUTION, 
+    constants.DOC_TYPE_CONFERENCEPOSTER, 
+    constants.DOC_TYPE_DOCUMENT, 
+    constants.DOC_TYPE_MANUSCRIPT, 
+    constants.DOC_TYPE_MAP, 
+    constants.DOC_TYPE_MUSICRECORDING, 
+    constants.DOC_TYPE_PATENT, 
+    constants.DOC_TYPE_PERFORMANCE, 
+    constants.DOC_TYPE_PERSONALCOMMUNICATION, 
+    constants.DOC_TYPE_PHYSICALOBJECT, 
+    constants.DOC_TYPE_REPORT, 
+    constants.DOC_TYPE_SLIDE, 
+    constants.DOC_TYPE_SPEECH, 
+    constants.DOC_TYPE_UNPUBLISHEDDOCUMENT, 
+    constants.DOC_TYPE_VIDEOPART, 
+    constants.DOC_TYPE_VIDEORECORDING, 
+    constants.DOC_TYPE_WORKINGPAPER, 
+    constants.DOC_TYPE_WORKSHOP
+]
 
 def endnotexml_xmletree_to_metajson_list(endnotexml_root, source, only_first_record):
     records_elements = endnotexml_root.find("records")
@@ -290,7 +315,8 @@ def endnotexml_record_to_metajson(record, source):
             is_part_of.set_key_if_not_none("publication_places", publication_places)
             is_part_of.set_key_with_value_type_in_list("identifiers", isbn_or_issn, isbn_or_issn_type)
 
-        document.add_items_to_key([is_part_of], "is_part_ofs")
+        if "title" in is_part_of and is_part_of["title"]:
+            document.add_items_to_key([is_part_of], "is_part_ofs")
 
     else:
         document.set_key_with_value_type_in_list("identifiers", isbn_or_issn, isbn_or_issn_type)
@@ -306,6 +332,7 @@ def endnotexml_record_to_metajson(record, source):
     # seriess[]
     if endnote_type in [TYPE_BOOK, TYPE_BOOK_SECTION]:
         series = Document()
+        series["rec_type"] = constants.DOC_TYPE_SERIES
         if endnote_type == TYPE_BOOK and title_secondary:
             series.set_key_if_not_none("title", title_secondary)
             series.add_creators(secondary_creators)
@@ -390,10 +417,16 @@ def endnotexml_record_to_metajson(record, source):
                 document["is_part_ofs"][0]["is_part_ofs"][0].set_key_if_not_none("date_issued_first", date_issued_first)
             else:
                 document.set_key_if_not_none("date_issued_first", date_issued_first)
-                document.set_key_if_not_none("date_issued", date_issued)
+                if rec_type in unpublished_types:
+                    document.set_key_if_not_none("date_created", date_issued)
+                else:
+                    document.set_key_if_not_none("date_issued", date_issued)
         else:
             document.set_key_if_not_none("date_issued_first", date_issued_first)
-            document.set_key_if_not_none("date_issued", date_issued)
+            if rec_type in unpublished_types:
+                document.set_key_if_not_none("date_created", date_issued)
+            else:
+                document.set_key_if_not_none("date_issued", date_issued)
 
     # identifiers[]
     document.set_key_with_value_type_in_list("identifiers", accessionnumber, "accessionnumber")

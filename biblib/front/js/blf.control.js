@@ -10,6 +10,7 @@ blf.init = function(config) {
   mlab.pkg('blf.global.rpc');
 
   blf.global.API_URL = blf.config.baseURL;
+  blf.global.corpus = blf.config.corpus;
   blf.global.rpc.type = 'POST';
   blf.global.rpc.contentType = 'application/x-www-form-urlencoded';
   blf.global.rpc.expect = function(data) {
@@ -469,6 +470,38 @@ blf.init = function(config) {
       services: [
         // RPC services:
         {
+          id: 'list_corpora',
+          url: blf.global.API_URL,
+          description: 'Retrieve the corpora list',
+          before: blf.global.rpc.before,
+          type: blf.global.rpc.type,
+          error: blf.global.rpc.error,
+          expect: blf.global.rpc.expect,
+          contentType: blf.global.rpc.contentType,
+          data: function(input) {
+            return blf.global.rpc.buildData('list_corpora', [ ]);
+          },
+          success: function(data, input) {
+            // TODO
+          }
+        },
+        {
+          id: 'default_corpus',
+          url: blf.global.API_URL,
+          description: 'Retrieve the default corpus',
+          before: blf.global.rpc.before,
+          type: blf.global.rpc.type,
+          error: blf.global.rpc.error,
+          expect: blf.global.rpc.expect,
+          contentType: blf.global.rpc.contentType,
+          data: function(input) {
+            return blf.global.rpc.buildData('default_corpus', [ ]);
+          },
+          success: function(data, input) {
+            // TODO
+          }
+        },
+        {
           id: 'search',
           url: blf.global.API_URL,
           description: 'A service to search on existing entries.',
@@ -478,7 +511,7 @@ blf.init = function(config) {
           expect: blf.global.rpc.expect,
           contentType: blf.global.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('search', [ input.query ]);
+            return blf.global.rpc.buildData('search', [ blf.global.corpus, input.query ]);
           },
           success: function(data, input) {
             var results = data.result;
@@ -500,7 +533,7 @@ blf.init = function(config) {
           expect: blf.global.rpc.expect,
           contentType: blf.global.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('type', [ input.typeName, 'fr' ]);
+            return blf.global.rpc.buildData('type', [ blf.global.corpus, input.typeName, 'fr' ]);
           },
           success: function(data) {
             this.dispatchEvent('addTypes', {
@@ -518,7 +551,7 @@ blf.init = function(config) {
           expect: blf.global.rpc.expect,
           contentType: blf.global.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('types', [ 'fr' ]);
+            return blf.global.rpc.buildData('types', [ blf.global.corpus, 'fr' ]);
           },
           success: function(data) {
             this.dispatchEvent('addTypes', {
@@ -536,7 +569,7 @@ blf.init = function(config) {
           expect: blf.global.rpc.expect,
           contentType: blf.global.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('uifield', [ input.field, 'fr' ]);
+            return blf.global.rpc.buildData('field', [ blf.global.corpus, input.field, 'fr' ]);
           },
           success: function(data) {
             var result = data.result,
@@ -556,7 +589,7 @@ blf.init = function(config) {
           expect: blf.global.rpc.expect,
           contentType: blf.global.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('uifields', [ 'fr' ]);
+            return blf.global.rpc.buildData('fields', [ blf.global.corpus, 'fr' ]);
           },
           success: function(data) {
             var i,
@@ -581,7 +614,7 @@ blf.init = function(config) {
           expect: blf.global.rpc.expect,
           contentType: blf.global.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('metadata_by_rec_ids', [ [input.rec_id ]]);
+            return blf.global.rpc.buildData('metadata_by_rec_ids', [ blf.global.corpus, [input.rec_id ]]);
           },
           success: function(data, input) {
             var result = data.result;
@@ -604,7 +637,7 @@ blf.init = function(config) {
           expect: blf.global.rpc.expect,
           contentType: blf.global.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('save', [ input.entry ]);
+            return blf.global.rpc.buildData('save', [ blf.global.corpus, input.entry ]);
           },
           success: function(data, input) {
             var result = data.result;
@@ -627,7 +660,7 @@ blf.init = function(config) {
           expect: blf.global.rpc.expect,
           contentType: blf.global.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('delete', [ input.rec_id ]);
+            return blf.global.rpc.buildData('delete', [ blf.global.corpus, input.rec_id ]);
           },
           success: function(data, input) {
             var result = data.result;

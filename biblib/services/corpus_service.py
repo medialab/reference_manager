@@ -56,25 +56,25 @@ def conf_corpus(corpus):
         chrono.chrono_trace("conf_types", date_start, date_types, total_count)
 
         # datafields
-        results_uifields_common = conf_uifields(corpus, "common")
-        results_uifields_corpus = conf_uifields(corpus, corpus)
-        date_uifields = datetime.datetime.now()
+        results_fields_common = conf_fields(corpus, "common")
+        results_fields_corpus = conf_fields(corpus, corpus)
+        date_fields = datetime.datetime.now()
         total_count = 0
-        print "# uifields common:"
-        if results_uifields_common:
-            for entry in results_uifields_common:
+        print "# fields common:"
+        if results_fields_common:
+            for entry in results_fields_common:
                 total_count += 1
                 print "rec_type: {}, _id: {}".format(entry["rec_type"], entry["_id"])
         else:
-            print "Empty common uifields"
-        print "# uifields corpus:"
-        if results_uifields_corpus:
-            for entry in results_uifields_corpus:
+            print "Empty common fields"
+        print "# fields corpus:"
+        if results_fields_corpus:
+            for entry in results_fields_corpus:
                 total_count += 1
                 print "rec_type: {}, _id: {}".format(entry["rec_type"], entry["_id"])
         else:
-            print "Empty corpus uifields"
-        chrono.chrono_trace("conf_uifields", date_types, date_uifields, total_count)
+            print "Empty corpus fields"
+        chrono.chrono_trace("conf_fields", date_types, date_fields, total_count)
 
 
 def conf_types(corpus, folder):
@@ -94,18 +94,18 @@ def conf_types(corpus, folder):
             return results
 
 
-def conf_uifields(corpus, folder):
-    uifields_dir = os.path.abspath(os.path.join(config_service.config_path, "corpus", folder, "uifields"))
-    if os.path.exists(uifields_dir):
-        files = os.listdir(uifields_dir)
+def conf_fields(corpus, folder):
+    fields_dir = os.path.abspath(os.path.join(config_service.config_path, "corpus", folder, "fields"))
+    if os.path.exists(fields_dir):
+        files = os.listdir(fields_dir)
         if files:
             results = []
-            for file_name in os.listdir(uifields_dir):
+            for file_name in os.listdir(fields_dir):
                 if file_name.endswith(".json"):
-                    with open(os.path.join(uifields_dir, file_name), 'r') as uifield_file:
+                    with open(os.path.join(fields_dir, file_name), 'r') as field_file:
                         try:
-                            json_uifield = jsonbson.load_json_file(uifield_file)
-                            results.append(repository_service.save_uifield(corpus, json_uifield))
+                            json_field = jsonbson.load_json_file(field_file)
+                            results.append(repository_service.save_field(corpus, json_field))
                         except ValueError as e:
-                            print "ERROR: UIField file is not valid JSON", folder, file_name, e
+                            print "ERROR: Field file is not valid JSON", folder, file_name, e
             return results

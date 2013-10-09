@@ -145,5 +145,5 @@ def google_worksheet_to_type(ws_name, worksheet, app, keys):
 
 config_path = find_config_path()
 config = load_config_json()
-print "Default corpus : {}".format(config["mongodb"]["default_corpus"])
+print "Default corpus : {}".format(config["default_corpus"])
 #retrieve_google_types("spire")

@@ -22,8 +22,8 @@
    *
    *  > {
    *  >   labels: {
-   *  >       en: "Creators",
-   *  >       fr: "Créateurs"
+   *  >       en: "Authors",
+   *  >       fr: "Auteurs"
    *  >   },
    *  >   multiple: true,
    *  >   property: "creators",
@@ -97,10 +97,9 @@
           fill: function(data, obj) {
             obj.dom.data('id', data.agent.rec_id || null);
 
+            $('input[data-attribute="name_prefix"]', obj.dom).val(data.agent.name_prefix);
             $('input[data-attribute="name_family"]', obj.dom).val(data.agent.name_family);
             $('input[data-attribute="name_given"]', obj.dom).val(data.agent.name_given);
-            $('input[data-attribute="date_birth"]', obj.dom).val(data.agent.date_birth);
-            $('input[data-attribute="date_death"]', obj.dom).val(data.agent.date_death);
 
             $('input[data-attribute="affiliation"]', obj.dom).val((data.affiliation || {}).name);
 
@@ -117,10 +116,9 @@
             if (obj.dom.data('id'))
               data.agent.rec_id = obj.dom.data('id');
 
+            data.agent.name_prefix = $('input[data-attribute="name_prefix"]', obj.dom).val() || undefined;
             data.agent.name_family = $('input[data-attribute="name_family"]', obj.dom).val() || undefined;
             data.agent.name_given = $('input[data-attribute="name_given"]', obj.dom).val() || undefined;
-            data.agent.date_birth = $('input[data-attribute="date_birth"]', obj.dom).val() || undefined;
-            data.agent.date_death = $('input[data-attribute="date_death"]', obj.dom).val() || undefined;
 
             var aff = $('input[data-attribute="affiliation"]', obj.dom).val();
             if (aff)

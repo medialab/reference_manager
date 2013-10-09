@@ -1,0 +1,64 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Identifier",
+                "fr": "Identifiant"
+            },
+            "property": "rec_id",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Type",
+                "fr": "Type"
+            },
+            "property": "rec_type",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Authors",
+                "fr": "Auteurs"
+            },
+            "multiple": true,
+            "property": "creators",
+            "required": false,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "Date broadcast start",
+                "fr": "Date de début de diffusion"
+            },
+            "property": "date_period_start",
+            "required": false,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Date broadcast end",
+                "fr": "Date de fin de diffusion"
+            },
+            "property": "date_period_end",
+            "required": false,
+            "type_ui": "DateField"
+        }
+    ],
+    "labels": {
+        "en": "Broadcast",
+        "fr": "Emission de radio ou de télévision"
+    },
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "Broadcast"
+}

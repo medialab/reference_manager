@@ -2,12 +2,12 @@
     "mongodb": {
         "db": "biblib",
         "host": "localhost",
-        "port": 27017,
-        "default_corpus": "aime"
+        "port": 27017
     },
     "jsonrpc": {
         "port": 8080
     },
+    "default_corpus": "aime",
     "anta": {
         "endpoint": "http://anta.example.com/api/",
         "endpoint_frog": "http://anta.example.com/api-frog/",

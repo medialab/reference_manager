@@ -124,6 +124,11 @@ def cite(document, format):
         degree = thesis_rec_type_to_degree[rec_type]
         result += u"<span class=\"thesis_degree\">{0}.</span> ".format(degree)
 
+    # date_issued_first
+    # (example aime : 208)
+    if "date_issued_first" in document and document["date_issued_first"]:
+        result += u"<span class=\"date\">{}</span>. ".format(date_service.format_date(document["date_issued_first"]))
+
     # publication_places
     publication_places = document.get_publication_places()
     if publication_places:
@@ -172,10 +177,10 @@ def cite(document, format):
     date = document.get_date()
     date_result = date_service.format_date(date)
     if date_result:
-        # date_issued_first
-        # "date_issued_first": "1920" (example aime : 208)
-        if "date_issued_first" in document:
-            date_result += " [{}]".format(date_service.format_date(document["date_issued_first"]))
+        if rec_type in [constants.DOC_TYPE_JOURNALARTICLE]:
+            date_result = u"(" + date_result + u")"
+
+        # todo : deux point au lieu d'un point
         result += u"<span class=\"date\">{0}</span>".format(date_result)
         if not date_result.endswith("."):
             result += u". "
@@ -250,7 +255,7 @@ def format_title_of_document(document):
         if "title_non_sort" in document:
             result += document["title_non_sort"]
         result += remove_last_point(document["title"])
-        if "title_sub" in document:
+        if "title_sub" in document and document["title_sub"]:
             result += u": " + remove_last_point(document["title_sub"])
         if "is_part_ofs" in document:
             return u"\"<span class=\"title\">{0}</span>.\" ".format(result)
