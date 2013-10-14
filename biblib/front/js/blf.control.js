@@ -642,7 +642,8 @@ blf.init = function(config) {
           success: function(data, input) {
             var result = data.result;
             this.log('Log from server after saving an entry:', result);
-            //this.update('mode', 'home');
+            if(blf.config.back_home_on_save)
+              this.update('mode', 'home');
             this.dispatchEvent('successCallback',{
               service:input.service,
               result:data.result,
