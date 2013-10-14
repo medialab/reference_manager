@@ -101,9 +101,10 @@
             $('input[data-attribute="name_family"]', obj.dom).val(data.agent.name_family);
             $('input[data-attribute="name_given"]', obj.dom).val(data.agent.name_given);
 
-            $('input[data-attribute="affiliation"]', obj.dom).val((data.affiliation || {}).name);
-
-            $('select.select-affiliation-role', obj.dom).val(data.affiliation_role);
+            if (data.affiliation !== undefined)
+              obj.dom.data('aff_id', data.affiliation.agent.rec_id || null);
+              $('input[data-attribute="affiliation_name"]', obj.dom).val(((data.affiliation || {}).agent || {}).name);
+              $('select.select-affiliation-role', obj.dom).val((data.affiliation || {}).role);
 
             return this;
           },
@@ -120,18 +121,21 @@
             data.agent.name_family = $('input[data-attribute="name_family"]', obj.dom).val() || undefined;
             data.agent.name_given = $('input[data-attribute="name_given"]', obj.dom).val() || undefined;
 
-            var aff = $('input[data-attribute="affiliation"]', obj.dom).val();
-            if (aff)
+            var aff_name = $('input[data-attribute="affiliation_name"]', obj.dom).val();
+            if (aff_name) {
               data.affiliation = {
-                rec_class: 'Orgunit',
-                rec_metajson: 1,
-                name: aff
+                agent: {
+                  rec_class: 'Orgunit',
+                  rec_metajson: 1,
+                  name: aff_name
+                }
               };
-
-            var aff_role = $('select.select-affiliation-role', obj.dom).val();
-            if (aff_role)
-              data.affiliation_role = aff_role;
-
+              var aff_role = $('select.select-affiliation-role', obj.dom).val();
+              if (aff_role)
+                data.affiliation.role = aff_role;
+              if (obj.dom.data('aff_id'))
+              data.affiliation.agent.rec_id = obj.dom.data('aff_id');
+            }
             for (var k in data.agent)
               if (data.agent[k] === undefined)
                 delete data.agent[k];
