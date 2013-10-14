@@ -60,19 +60,24 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
     orgunit.update(extract_rml_affiliations(rml_orgunit))
 
     # award -> awards
+    orgunit.update(extract_rml_string_lang(rml_orgunit, "award", "awards"))
 
     # ckbData ->
 
     # dateOfDissolution -> date_dissolution
+    orgunit.update(extract_element_and_set_key(rml_orgunit, "dateOfDissolution", "date_dissolution"))
 
     # dateOfFoundation -> date_foundation
+    orgunit.update(extract_element_and_set_key(rml_orgunit, "dateOfFoundation", "date_foundation"))
 
     # description -> descriptions
+    orgunit.update(extract_rml_string_lang(rml_orgunit, "description", "descriptions"))
 
     # email -> emails
     orgunit.update(extract_rml_emails(rml_orgunit))
 
     # headcount -> headcounts
+    orgunit.update(extract_rml_headcounts(rml_orgunit))
 
     # identifier -> identifiers
     orgunit.update(extract_rml_identifiers(rml_orgunit))
@@ -81,20 +86,25 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
     orgunit.update(extract_rml_images(rml_orgunit))
 
     # name -> name
+    orgunit.update(extract_element_and_set_key(rml_orgunit, "name", "name"))
 
     # nameAlternative ->
+    orgunit.update(extract_rml_string_lang(rml_orgunit, "nameAlternative", "name_alternatives"))
 
     # nationality -> nationality
     orgunit.update(extract_element_and_set_key(rml_orgunit, "nationality", "nationality"))
 
     # note -> notes
+    orgunit.update(extract_rml_string_lang(rml_orgunit, "note", "notes"))
 
-    # olDescription -> Descriptions_short
+    # olDescription -> descriptions_short
+    orgunit.update(extract_rml_string_lang(rml_orgunit, "olDescription", "descriptions_short"))
 
     # phone -> phones
     orgunit.update(extract_rml_phones(rml_orgunit))
 
     # researchCoverage -> research_coverages
+    orgunit.update(extract_rml_research_coverages(rml_orgunit))
 
     # skill -> skills
 
@@ -189,6 +199,7 @@ def rml_person_to_metajson(rml_person, source):
     # relationship ->
 
     # researchCoverage -> 
+    person.update(extract_rml_research_coverages(rml_person))
 
     # responsability -> responsabilities
     person.update(extract_rml_string_lang(rml_person, "responsability", "responsabilities"))
@@ -326,6 +337,25 @@ def extract_rml_emails(rml):
     return result
 
 
+def extract_rml_headcounts(rml):
+    result = {}
+    rml_headcounts = rml.findall(prefixtag("rml", "headcount"))
+    if rml_headcounts is not None:
+        headcounts = []
+        for rml_headcount in rml_headcounts:
+            if rml_headcount is not None:
+                year = rml_headcount.get("year")
+                value = rml_headcount.text.strip()
+                if value is not None:
+                    headcount = {"value": value}
+                    if year is not None:
+                        headcount["year"] = year.strip()
+                    headcounts.append(headcount)
+        if headcounts:
+            result["headcounts"] = headcounts
+    return result
+
+
 def extract_rml_identifiers(rml):
     result = {}
     rml_identifiers = rml.findall(prefixtag("rml", "identifier"))
@@ -439,6 +469,42 @@ def extract_rml_phones(rml):
                     phones.append(phone)
         if phones:
             result["phones"] = phones
+    return result
+
+
+def extract_rml_research_coverages(rml):
+    result = {}
+    rml_rcs = rml.findall(prefixtag("rml", "researchCoverage"))
+    if rml_rcs is not None:
+        rc_classifications = []
+        rc_keywords = []
+        for rml_rc in rml_rcs:
+            if rml_rc is not None:
+                value = rml_rc.text.strip()
+                if value is not None:
+                    rc_type = rml_rc.get("type")
+                    if rc_type == "keyword":
+                        rc_keyword = {"value": value}
+                        language = rml_rc.get(prefixtag("xml", "lang"))
+                        if language is not None:
+                            rc_keyword["language"] = language.strip()
+                        rc_keywords.append(rc_keyword)
+                    else:
+                        rc_classification = {"term": value}
+                        authority = rml_rc.get("authority")
+                        authority_id = rml_rc.get("authorityId")
+                        term_id = rml_rc.get("id")
+                        if authority is not None:
+                            rc_classification["authority"] = authority.strip()
+                        if authority_id is not None:
+                            rc_classification["authority_id"] = authority_id.strip()
+                        if term_id is not None:
+                            rc_classification["term_id"] = term_id.strip()
+                        rc_classifications.append(rc_classification)
+        if rc_classifications:
+            result["research_coverage_classifications"] = rc_classifications
+        if rc_keywords:
+            result["research_coverage_keywords"] = rc_keywords
     return result
 
 

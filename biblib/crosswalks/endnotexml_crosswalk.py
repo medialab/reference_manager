@@ -283,7 +283,7 @@ def endnotexml_record_to_metajson(record, source):
         isbn_or_issn_type = "isbn"
 
     # is_part_of, is_part_of.is_part_of
-    if is_part_of_type is not None:
+    if is_part_of_type is not None and title_secondary:
         is_part_of = Document()
         is_part_of.set_key_if_not_none("rec_type", is_part_of_type)
         is_part_of.set_key_if_not_none("title", title_secondary)
@@ -345,15 +345,26 @@ def endnotexml_record_to_metajson(record, source):
             document.add_items_to_key([series], "seriess")
 
     # originals[]
-    if (reprint_edition or orig_pub) and endnote_type in [TYPE_BOOK, TYPE_BOOK_SECTION, TYPE_JOURNAL_ARTICLE, TYPE_FILM_OR_BROADCAST]:
-        original = Document()
+    if (reprint_edition or title_translated or orig_pub) and endnote_type in [TYPE_BOOK, TYPE_BOOK_SECTION, TYPE_JOURNAL_ARTICLE, TYPE_FILM_OR_BROADCAST]:
+        original_title = None
+        original_is_part_of = None        
         if reprint_edition:
             original_title = reprint_edition
-        elif orig_pub:
-            original_title = orig_pub
-        original.set_key_if_not_none("title", original_title)
-        original.set_key_if_not_none("rec_type", rec_type)
-        document.add_items_to_key([original], "originals")
+        if title_translated and is_part_of_is_part_of_type is None:
+            original_title = title_translated
+        if orig_pub:
+            if is_part_of_type is not None:
+                original_is_part_of = Document()
+                original_is_part_of["rec_type"] = is_part_of_type
+                original_is_part_of["title"] = orig_pub
+            else:
+                original_title = orig_pub
+        if original_title:
+            original = Document()
+            original["rec_type"] = rec_type
+            original.set_key_if_not_none("title", original_title)
+            original.add_item_to_key(original_is_part_of, "is_part_ofs")
+            document.add_item_to_key(original, "originals")
 
     # review_ofs[]
     if reviewed_item and endnote_type in [TYPE_BOOK_SECTION, TYPE_JOURNAL_ARTICLE]:
@@ -482,9 +493,6 @@ def endnotexml_record_to_metajson(record, source):
         document["title_alternative"] = [{"title": title_alternative}]
     if title_abbreviated:
         document["title_abbreviated"] = [{"title": title_abbreviated}]
-    if not is_part_of_is_part_of_type and title_translated:
-        # the title_translated is used for the is_part_of.is_part_of_type.title
-        document["title_translated"] = [{"title": title_translated}]
 
     debug = True
     if debug:

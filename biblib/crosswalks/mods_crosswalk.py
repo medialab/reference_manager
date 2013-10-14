@@ -153,7 +153,6 @@ MODS_GENRE_MARCGT_TO_METAJSON_DOCUMENT_TYPE = {
     "websiteContribution": constants.DOC_TYPE_WEBPAGE
 }
 
-
 def register_namespaces():
     for key in constants.xmlns_map:
         ET.register_namespace(key, constants.xmlns_map[key])
@@ -186,7 +185,7 @@ def mods_xmletree_to_metajson(mods, source):
     mods_version = mods.get("version")
     print "# mods_version: {}".format(mods_version)
 
-    document = mods_root_or_related_item_to_metajson(mods)
+    document = mods_root_or_related_item_to_metajson(mods, None)
 
     # source
     if source is not None:
@@ -199,7 +198,7 @@ def mods_xmletree_to_metajson(mods, source):
     return document
 
 
-def mods_root_or_related_item_to_metajson(mods):
+def mods_root_or_related_item_to_metajson(mods, root_rec_type):
     if mods is None:
         return None
 
@@ -207,6 +206,8 @@ def mods_root_or_related_item_to_metajson(mods):
 
     # typeOfResource, genre -> rec_type, genres
     document.update(extract_mods_genres_type_of_resources(mods))
+    if root_rec_type is not None and root_rec_type in constants.root_rec_type_to_is_part_of_rec_type:
+        document["rec_type"] = constants.root_rec_type_to_is_part_of_rec_type[root_rec_type]
     rec_type = document["rec_type"]
 
     # ID, identifiers -> rec_id, identifiers
@@ -279,7 +280,7 @@ def extract_mods_related_items(mods_root, root_rec_type):
                 # mods_related_item_type in : preceding, succeeding, original, host, constituent, series, otherVersion, otherFormat, isReferencedBy, references, reviewOf)
 
                 # convert like a mods record
-                related_item = mods_root_or_related_item_to_metajson(mods_related_item)
+                related_item = mods_root_or_related_item_to_metajson(mods_related_item, root_rec_type)
 
                 if related_item is not None:
                     # extract related_item rec_type
@@ -516,14 +517,16 @@ def extract_mods_dailist_to_dict(mods):
             if mods_dai_identifiers:
                 result = {}
                 for mods_dai_identifier in mods_dai_identifiers:
-                    result[mods_dai_identifier.get("IDref")] = {"authority": mods_dai_identifier.get("authority"), "value": mods_dai_identifier.text.strip()}
+                    authority = mods_dai_identifier.get("authority")
+                    dai = mods_dai_identifier.text.strip()
+                    result[mods_dai_identifier.get("IDref")] = {"authority": authority, "value": dai}
                 return result
 
 
 def convert_mods_name_dai_dict_to_creator(mods_name, dai_dict):
     if mods_name is not None:
         creator = Creator()
-        # extract properties
+        # extract mods properties
         # type
         mods_name_type = mods_name.get("type")
         # ID
@@ -540,30 +543,34 @@ def convert_mods_name_dai_dict_to_creator(mods_name, dai_dict):
         # description
         mods_name_descriptions = mods_name.findall(prefixtag("mods", "description"))
 
-        # affiliation
-        affiliation = None
-        if mods_name_affiliations:
-            affiliation = Orgunit()
-            affiliation["name"] = mods_name_affiliations[0].text.strip()
-
-        #agent_rec_id, agent_identifiers, affiliation_rec_id
+        #agent_rec_id, agent_identifiers, affiliation_name, affiliation_rec_id
         agent_rec_id = None
         agent_identifiers = None
+        affiliation_name = None
+        affiliation_rec_id = None
+        affiliation = None
         if mods_name_id is not None:
-            spire_name_ids = mods_name_id.split("_-_")
-            if spire_name_ids and len(spire_name_ids) >= 4:
-                agent_rec_id = spire_name_ids[2].replace("__", "/")
-                affiliation_rec_id = spire_name_ids[4]
-                if affiliation_rec_id:
-                    if not affiliation:
-                        affiliation = Orgunit()
-                    affiliation["rec_id"] = affiliation_rec_id.replace("__", "/")
+            if "spire" in mods_name_id:
+                # In case of Spire name.ID
+                # name.ID format : _-_spire_-_creator_id_-_creator_dai_-_affiliation_id_-_random_id
+                spire_name_ids = mods_name_id.split("_-_")
+                if spire_name_ids and len(spire_name_ids) >= 4:
+                    agent_rec_id = spire_name_ids[2].replace("__", "/")
+                    affiliation_rec_id = spire_name_ids[4]
+                    if affiliation_rec_id:
+                        affiliation_rec_id = affiliation_rec_id.replace("__", "/")
             elif dai_dict is not None and mods_name_id in dai_dict:
-                # identifiers
+                # agent_rec_id
+                agent_rec_id = dai_dict[mods_name_id]["value"]
+                # agent_identifiers
                 id_value = dai_dict[mods_name_id]["authority"] + "/" + dai_dict[mods_name_id]["value"]
                 agent_identifiers = [metajson_service.create_identifier("uri", id_value)]
-                # rec_id
-                agent_rec_id = dai_dict[mods_name_id]["value"]
+
+        if mods_name_affiliations:
+            affiliation_name = mods_name_affiliations[0].text.strip()
+
+        if affiliation_name or affiliation_rec_id:
+            affiliation = metajson_service.create_affiliation(affiliation_rec_id, affiliation_name, None, None, None, False)
 
         if mods_name_type == "personal":
             # print "personal"
