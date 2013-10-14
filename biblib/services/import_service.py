@@ -10,10 +10,10 @@ from biblib.services import repository_service
 from biblib.util import jsonbson
 
 
-def import_metadata_files(corpus, input_files, input_format, error_file_path, source, save, role):
-    if corpus and input_files:
+def import_metadata_files(corpus, input_file_paths, input_format, error_file_path, source, save, role):
+    if corpus and input_file_paths:
         with open(error_file_path, "w") as error_file:
-            for input_file_path in input_files:
+            for input_file_path in input_file_paths:
                 return import_metadata_file(corpus, input_file_path, input_format, error_file, source, save, role)
 
 

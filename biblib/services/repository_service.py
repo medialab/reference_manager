@@ -352,7 +352,8 @@ def save_document(corpus, document, role):
         if recovered_fields:
             saved_doc = get_document_by_rec_id(corpus, document["rec_id"])
             for field in recovered_fields:
-                document[field] = saved_doc[field]
+                if field in saved_doc:
+                    document[field] = saved_doc[field]
     # Enhance MetaJSON
     document = metajson_service.enhance_metajson(document)
     rec_id = document["rec_id"]
