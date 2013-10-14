@@ -168,11 +168,12 @@ def create_address(street, post_code, locality_city_town, country, preferred, re
     return address
 
 
-def create_affiliation(rec_id, name, role, date_start, date_end, preferred=False):
+def create_affiliation(rec_id, name, role=None, date_start=None, date_end=None, preferred=False):
     affiliation = {}
-    affiliation["preferred"] = preferred
+    if preferred:
+        affiliation["preferred"] = preferred
     if role:
-        affiliation["affiliation_role"] = role
+        affiliation["role"] = role
     if date_start:
         affiliation["date_start"] = date_start
     if date_end:
