@@ -15,8 +15,8 @@ def setup_console(sys_enc="utf-8"):
     """
     reload(sys)
     try:
-        #locale.setlocale(locale.LC_ALL, "fr_FR.UTF-8")
-        locale.setlocale(locale.LC_ALL, '')
+        locale.setlocale(locale.LC_ALL, "fr_FR.UTF-8")
+        #locale.setlocale(locale.LC_ALL, '')
 
         if sys.platform.startswith("win"):
             import ctypes
