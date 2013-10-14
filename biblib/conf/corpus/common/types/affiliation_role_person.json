@@ -2,31 +2,29 @@
     "bundle": true,
     "children": [
         {
-            "default": true,
             "labels": {
                 "en": "Professor/Researcher",
                 "fr": "Enseignant/Chercheur"
             },
             "major": true,
-            "type_id": "academic_staff"
+            "type_id": "academic-staff"
         },
         {
             "labels": {
                 "en": "Administrative staff",
                 "fr": "Personnel administratif"
             },
-            "major": true,
-            "type_id": "administrative_staff"
+            "type_id": "administrative-staff"
         },
         {
             "labels": {
                 "en": "Associate researcher",
                 "fr": "Chercheur associ\u00e9"
             },
-            "major": true,
-            "type_id": "associate_researcher"
+            "type_id": "associate-researcher"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Director",
                 "fr": "Directeur"
@@ -38,33 +36,32 @@
                 "en": "Doctoral researcher",
                 "fr": "Chercheur doctorant"
             },
-            "major": true,
-            "type_id": "doctoral_researcher"
+            "type_id": "doctoral-researcher"
         },
         {
             "labels": {
                 "en": "Guest researcher",
                 "fr": "Chercheur invit\u00e9"
             },
-            "major": true,
-            "type_id": "guest_researcher"
+            "type_id": "guest-researcher"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Permanent researcher",
                 "fr": "Chercheur permanent"
             },
-            "type_id": "permanent_researcher"
+            "type_id": "permanent-researcher"
         },
         {
             "labels": {
                 "en": "Post doctoral researcher",
                 "fr": "Chercheur post-doctoral"
             },
-            "major": true,
-            "type_id": "post_doctoral_researcher"
+            "type_id": "post-doctoral-researcher"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "president",
                 "fr": "President"
@@ -72,6 +69,7 @@
             "type_id": "president"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "professor",
                 "fr": "Professeur des universit\u00e9s"
@@ -79,21 +77,23 @@
             "type_id": "professor"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Research assistant",
                 "fr": "Assistant de recherche"
             },
-            "major": true,
-            "type_id": "research_assistant"
+            "type_id": "research-assistant"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Secretary general",
                 "fr": "Secr\u00e9taire g\u00e9n\u00e9ral"
             },
-            "type_id": "secretary_general"
+            "type_id": "secretary-general"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Teacher",
                 "fr": "Enseignant"
@@ -101,19 +101,29 @@
             "type_id": "teacher"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Technical staff",
                 "fr": "Personnel technique"
             },
-            "major": true,
-            "type_id": "technical_staff"
+            "type_id": "technical-staff"
         },
         {
+            "deprecated": true,
             "labels": {
                 "en": "Treasurer",
                 "fr": "Tr\u00e9sorier"
             },
             "type_id": "treasurer"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "Undetermined", 
+                "fr": "indéterminé"
+            }, 
+            "major": true,
+            "type_id": "undetermined"
         }
     ],
     "rec_class": "Type",

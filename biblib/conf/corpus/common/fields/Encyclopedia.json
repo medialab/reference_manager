@@ -41,7 +41,7 @@
             },
             "multiple": true,
             "property": "creators",
-            "required": true,
+            "required": false,
             "type_ui": "CreatorField"
         },
         {

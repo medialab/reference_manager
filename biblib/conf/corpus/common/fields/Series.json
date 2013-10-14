@@ -17,6 +17,18 @@
             "property": "part_number",
             "required": false,
             "type_ui": "CharField"
+        },
+        {
+            "id_type": "issn",
+            "labels": {
+                "en": "ISSN",
+                "fr": "ISSN"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
         }
     ],
     "labels": {

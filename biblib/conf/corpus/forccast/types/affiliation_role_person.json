@@ -1,0 +1,33 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Student",
+                "fr": "Étudiant"
+            },
+            "major": true,
+            "type_id": "student"
+        },
+        {
+            "labels": {
+                "en": "Teacher",
+                "fr": "Enseignant"
+            },
+            "major": true,
+            "type_id": "teacher"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "Undetermined", 
+                "fr": "indéterminé"
+            }, 
+            "major": true,
+            "type_id": "undetermined"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "affiliation_role_person"
+}

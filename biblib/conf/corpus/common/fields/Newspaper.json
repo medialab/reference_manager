@@ -38,6 +38,16 @@
         },
         {
             "labels": {
+                "en": "Publisher",
+                "fr": "Editeurs"
+            },
+            "multiple": true,
+            "property": "publishers",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
                 "en": "Publication place",
                 "fr": "Lieu de publication"
             },

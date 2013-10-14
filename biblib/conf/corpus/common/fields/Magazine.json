@@ -43,7 +43,7 @@
             },
             "multiple": true,
             "property": "publishers",
-            "required": true,
+            "required": false,
             "type_ui": "CharField"
         },
         {

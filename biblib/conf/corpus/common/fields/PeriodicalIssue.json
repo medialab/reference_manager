@@ -62,10 +62,19 @@
         },
         {
             "labels": {
-                "en": "Year",
-                "fr": "Année"
+                "en": "Volume",
+                "fr": "Volume"
             },
-            "property": "part_year",
+            "property": "part_volume",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Issue",
+                "fr": "Numéro"
+            },
+            "property": "part_issue",
             "required": false,
             "type_ui": "CharField"
         },
@@ -108,24 +117,6 @@
             "required": false,
             "type_source": "part_week",
             "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Volume",
-                "fr": "Volume"
-            },
-            "property": "part_volume",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Issue",
-                "fr": "Numéro"
-            },
-            "property": "part_issue",
-            "required": false,
-            "type_ui": "CharField"
         },
         {
             "labels": {

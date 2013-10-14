@@ -41,7 +41,7 @@
             },
             "multiple": true,
             "property": "creators",
-            "required": true,
+            "required": false,
             "type_ui": "CreatorField"
         },
         {
@@ -50,7 +50,7 @@
                 "fr": "Date de publication"
             },
             "property": "date_issued",
-            "required": true,
+            "required": false,
             "type_ui": "DateField"
         },
         {
@@ -73,17 +73,6 @@
             "property": "publication_countries",
             "required": false,
             "type_source": "country",
-            "type_ui": "TypeField"
-        },
-        {
-            "labels": {
-                "en": "Genre",
-                "fr": "Genre"
-            },
-            "multiple": true,
-            "property": "genre",
-            "required": false,
-            "type_source": "genre",
             "type_ui": "TypeField"
         },
         {
