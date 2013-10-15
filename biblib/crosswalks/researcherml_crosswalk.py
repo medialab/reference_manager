@@ -107,10 +107,13 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
     orgunit.update(extract_rml_research_coverages(rml_orgunit))
 
     # skill -> skills
+    orgunit.update(extract_rml_string_lang(rml_orgunit, "skill", "skills"))
 
     # turnover -> turnovers
+    orgunit.update(extract_rml_turnovers(rml_orgunit))
 
-    # type ->
+    # type -> rec_type
+    orgunit.update(extract_attribute_and_set_key(rml_orgunit, "type", "rec_type"))
 
     # uri -> urls
     orgunit.update(extract_rml_uris(rml_orgunit))
@@ -148,9 +151,7 @@ def rml_person_to_metajson(rml_person, source):
     person.update(extract_rml_emails(rml_person))
 
     # fictitious
-    fictitious = rml_person.get("fictitious")
-    if fictitious is not None and fictitious.strip() == "true":
-        person["fictitious"] = fictitious
+    person.update(extract_boolean_attribute_and_set_key(rml_person, "fictitious", "fictitious"))
 
     # firstname -> name_given
     person.update(extract_element_and_set_key(rml_person, "firstname", "name_given"))
@@ -211,6 +212,7 @@ def rml_person_to_metajson(rml_person, source):
     person.update(extract_rml_string_lang(rml_person, "skill", "skills"))
 
     # teaching -> teachings
+    person.update(extract_rml_teachings(rml_person))
 
     # uri -> urls
     person.update(extract_rml_uris(rml_person))
@@ -268,13 +270,13 @@ def extract_rml_addresses(rml):
         addresses = []
         for rml_address in rml_addresses:
             if rml_address is not None:
-                preferred = extract_attribute_boolean(rml_address, "preferred")
+                preferred = get_attribute_boolean(rml_address, "preferred")
                 relation_type = rml_address.get("relationType")
-                visible = extract_attribute_boolean(rml_address, "visible")
-                street = extract_text_or_none(rml_address.find(prefixtag("rml", "street")))
-                post_code = extract_text_or_none(rml_address.find(prefixtag("rml", "postCode")))
-                locality_city_town = extract_text_or_none(rml_address.find(prefixtag("rml", "localityCityTown")))
-                country = extract_text_or_none(rml_address.find(prefixtag("rml", "country")))
+                visible = get_attribute_boolean(rml_address, "visible")
+                street = get_text_or_none(rml_address.find(prefixtag("rml", "street")))
+                post_code = get_text_or_none(rml_address.find(prefixtag("rml", "postCode")))
+                locality_city_town = get_text_or_none(rml_address.find(prefixtag("rml", "localityCityTown")))
+                country = get_text_or_none(rml_address.find(prefixtag("rml", "country")))
                 address = metajson_service.create_address(street, post_code, locality_city_town, country, preferred, relation_type, visible)
                 if address:
                     addresses.append(address)
@@ -290,16 +292,16 @@ def extract_rml_affiliations(rml):
         affiliations = []
         for rml_affiliation in rml_affiliations:
             if rml_affiliation is not None:
-                preferred = extract_attribute_boolean(rml_affiliation, "preferred")
+                preferred = get_attribute_boolean(rml_affiliation, "preferred")
 
                 rml_relation_type = rml_affiliation.find(prefixtag("rml", "relationType"))
-                role = extract_text_or_none(rml_relation_type)
+                role = get_text_or_none(rml_relation_type)
 
                 rml_date_begin = rml_affiliation.find(prefixtag("rml", "dateBegin"))
-                date_start = extract_text_or_none(rml_date_begin)
+                date_start = get_text_or_none(rml_date_begin)
 
                 rml_date_end = rml_affiliation.find(prefixtag("rml", "dateEnd"))
-                date_end = extract_text_or_none(rml_date_end)
+                date_end = get_text_or_none(rml_date_end)
 
                 identifiers = extract_rml_identifiers(rml_affiliation)
                 rec_id = None
@@ -307,7 +309,7 @@ def extract_rml_affiliations(rml):
                     rec_id = identifiers["identifiers"][0]["value"]
 
                 rml_name = rml_affiliation.find(prefixtag("rml", "name"))
-                name = extract_text_or_none(rml_name)
+                name = get_text_or_none(rml_name)
 
                 affiliation = metajson_service.create_affiliation(rec_id, name, role, date_start, date_end, preferred)
                 if affiliation is not None:
@@ -324,10 +326,10 @@ def extract_rml_emails(rml):
         emails = []
         for rml_email in rml_emails:
             if rml_email is not None:
-                preferred = extract_attribute_boolean(rml_email, "preferred")
+                preferred = get_attribute_boolean(rml_email, "preferred")
                 relation_type = rml_email.get("relationType")
-                visible = extract_attribute_boolean(rml_email, "visible")
-                value = extract_text_or_none(rml_email)
+                visible = get_attribute_boolean(rml_email, "visible")
+                value = get_text_or_none(rml_email)
 
                 email = metajson_service.create_email(value, preferred, relation_type, visible)
                 if email:
@@ -364,7 +366,7 @@ def extract_rml_identifiers(rml):
         for rml_identifier in rml_identifiers:
             if rml_identifier is not None:
                 id_type = rml_identifier.get("type")
-                id_value = extract_text_or_none(rml_identifier)
+                id_value = get_text_or_none(rml_identifier)
                 identifier = metajson_service.create_identifier(id_type, id_value)
                 if identifier is not None:
                     identifiers.append(identifier)
@@ -380,7 +382,7 @@ def extract_rml_images(rml):
         images = []
         for rml_image in rml_images:
             if rml_image is not None:
-                url = extract_text_or_none(rml_image)
+                url = get_text_or_none(rml_image)
                 image = metajson_service.create_image_url(url)
                 if image is not None:
                     images.append(image)
@@ -397,11 +399,11 @@ def extract_rml_instant_messages(rml):
         ims = []
         for rml_im in rml_ims:
             if rml_im is not None:
-                preferred = extract_attribute_boolean(rml_im, "preferred")
+                preferred = get_attribute_boolean(rml_im, "preferred")
                 relation_type = rml_im.get("relationType")
-                visible = extract_attribute_boolean(rml_im, "visible")
+                visible = get_attribute_boolean(rml_im, "visible")
                 service = rml_im.get("service")
-                value = extract_text_or_none(rml_im)
+                value = get_text_or_none(rml_im)
 
                 im = metajson_service.create_instant_message(value, service, preferred, relation_type, visible)
                 if im:
@@ -420,27 +422,27 @@ def extract_rml_language_capabilities(rml):
             if rml_lc is not None:
                 # language
                 rml_language = rml_lc.find(prefixtag("rml", "language"))
-                language = extract_text_or_none(rml_language)
+                language = get_text_or_none(rml_language)
 
                 # motherTong
                 rml_mother_tong = rml_lc.find(prefixtag("rml", "motherTong"))
-                mother_tong = extract_boolean(rml_mother_tong)
+                mother_tong = get_boolean(rml_mother_tong)
 
                 # oralInput
                 rml_oral_input = rml_lc.find(prefixtag("rml", "oralInput"))
-                oral_input = extract_text_or_none(rml_oral_input)
+                oral_input = get_text_or_none(rml_oral_input)
 
                 # oralOutput
                 rml_oral_output = rml_lc.find(prefixtag("rml", "oralOutput"))
-                oral_output = extract_text_or_none(rml_oral_output)
+                oral_output = get_text_or_none(rml_oral_output)
 
                 # textInput
                 rml_text_input = rml_lc.find(prefixtag("rml", "textInput"))
-                text_input = extract_text_or_none(rml_text_input)
+                text_input = get_text_or_none(rml_text_input)
 
                 # textOutput
                 rml_text_output = rml_lc.find(prefixtag("rml", "textOutput"))
-                text_output = extract_text_or_none(rml_text_output)
+                text_output = get_text_or_none(rml_text_output)
 
                 lc = metajson_service.create_language_capability(language, mother_tong, oral_input, oral_output, text_input, text_output)
                 if lc is not None:
@@ -457,12 +459,12 @@ def extract_rml_phones(rml):
         phones = []
         for rml_phone in rml_phones:
             if rml_phone is not None:
-                preferred = extract_attribute_boolean(rml_phone, "preferred")
+                preferred = get_attribute_boolean(rml_phone, "preferred")
                 relation_type = rml_phone.get("relationType")
                 phone_type = rml_phone.get("type")
-                visible = extract_attribute_boolean(rml_phone, "visible")
+                visible = get_attribute_boolean(rml_phone, "visible")
                 rml_formatted = rml_phone.find(prefixtag("rml", "formatted"))
-                formatted = extract_text_or_none(rml_formatted)
+                formatted = get_text_or_none(rml_formatted)
 
                 phone = metajson_service.create_phone(formatted, phone_type, preferred, relation_type, visible)
                 if phone:
@@ -477,18 +479,19 @@ def extract_rml_research_coverages(rml):
     rml_rcs = rml.findall(prefixtag("rml", "researchCoverage"))
     if rml_rcs is not None:
         rc_classifications = []
-        rc_keywords = []
+        rc_keywords = {}
         for rml_rc in rml_rcs:
             if rml_rc is not None:
                 value = rml_rc.text.strip()
                 if value is not None:
                     rc_type = rml_rc.get("type")
                     if rc_type == "keyword":
-                        rc_keyword = {"value": value}
                         language = rml_rc.get(prefixtag("xml", "lang"))
                         if language is not None:
-                            rc_keyword["language"] = language.strip()
-                        rc_keywords.append(rc_keyword)
+                            if language in rc_keywords:
+                                rc_keywords[language].append(value)
+                            else:
+                                rc_keywords[language] = [value]
                     else:
                         rc_classification = {"term": value}
                         authority = rml_rc.get("authority")
@@ -505,6 +508,43 @@ def extract_rml_research_coverages(rml):
             result["research_coverage_classifications"] = rc_classifications
         if rc_keywords:
             result["research_coverage_keywords"] = rc_keywords
+    return result
+
+
+def extract_rml_teachings(rml):
+    result = {}
+    rml_teachings = rml.findall(prefixtag("rml", "teaching"))
+    if rml_teachings is not None:
+        teachings = []
+        for rml_teaching in rml_teachings:
+            if rml_teaching is not None:
+                teaching = {}
+
+                # level
+                teaching.update(extract_element_and_set_key(rml_teaching, "level", "level"))
+
+                # title
+                teaching.update(extract_element_and_set_key(rml_teaching, "title", "title"))
+
+                # identifier
+                teaching.update(extract_rml_identifiers(rml_teaching))
+
+                # name
+                teaching.update(extract_element_and_set_key(rml_teaching, "name", "name"))
+
+                # date_start
+                teaching.update(extract_element_and_set_key(rml_teaching, "dateBegin", "date_start"))
+
+                # date_end
+                teaching.update(extract_element_and_set_key(rml_teaching, "dateEnd", "date_end"))
+
+                # descriptions
+                teaching.update(extract_rml_string_lang(rml_teaching, "description", "descriptions"))
+
+                if teaching is not None:
+                    teachings.append(teaching)
+        if teachings:
+            result["teachings"] = teachings
     return result
 
 
@@ -531,6 +571,26 @@ def extract_rml_titles(rml):
     return result
 
 
+def extract_rml_turnovers(rml):
+    result = {}
+    rml_turnovers = rml.findall(prefixtag("rml", "turnover"))
+    if rml_turnovers is not None:
+        turnovers = []
+        for rml_turnover in rml_turnovers:
+            if rml_turnover is not None:
+                turnover = {}
+
+                turnover.update(extract_attribute_and_set_key(rml_turnover, "currency", "currency"))
+                turnover.update(extract_attribute_and_set_key(rml_turnover, "year", "year"))
+                turnover["value"] = get_text_or_none(rml_turnover)
+
+                if turnover:
+                    turnovers.append(turnover)
+        if turnovers:
+            result["turnovers"] = turnovers
+    return result
+
+
 def extract_rml_uris(rml):
     result = {}
     rml_uris = rml.findall(prefixtag("rml", "uri"))
@@ -538,10 +598,10 @@ def extract_rml_uris(rml):
         uris = []
         for rml_uri in rml_uris:
             if rml_uri is not None:
-                preferred = extract_attribute_boolean(rml_uri, "preferred")
+                preferred = get_attribute_boolean(rml_uri, "preferred")
                 relation_type = rml_uri.get("relationType")
-                visible = extract_attribute_boolean(rml_uri, "visible")
-                value = extract_text_or_none(rml_uri)
+                visible = get_attribute_boolean(rml_uri, "visible")
+                value = get_text_or_none(rml_uri)
 
                 uri = metajson_service.create_uri(value, preferred, relation_type, visible)
                 if uri:
@@ -570,35 +630,51 @@ def extract_rml_string_lang(rml, element, key):
     return result
 
 
-def extract_text_or_none(element):
-    if element is not None:
+def extract_attribute_and_set_key(rml, attribute, key):
+    result = {}
+    att_value = rml.get(attribute)
+    if att_value is not None:
+        result[key] = att_value
+    return result
+
+
+def extract_boolean_attribute_and_set_key(rml, attribute, key):
+    result = {}
+    att_value = get_attribute_boolean(rml, attribute)
+    if att_value:
+        result[key] = att_value
+    return result
+
+
+def extract_element_and_set_key(rml, element, key):
+    result = {}
+    element_xmletree = rml.find(prefixtag("rml", element))
+    key_value = get_text_or_none(element_xmletree)
+    if key_value is not None:
+        result[key] = key_value
+    return result
+
+
+def get_text_or_none(element):
+    if element is not None and element.text is not None:
         result = element.text.strip()
     else:
         result = None
     return result
 
 
-def extract_boolean(element):
-    if element is not None and element.text.strip() == "true":
+def get_boolean(element):
+    if element is not None and element.text is not None and element.text.strip() == "true":
         return True
     else:
         return False
 
 
-def extract_attribute_boolean(element, attribute):
+def get_attribute_boolean(element, attribute):
     if element is not None and attribute is not None:
         att_val = element.get(attribute)
         if att_val is not None and att_val == "true":
             return True
     return False
-
-
-def extract_element_and_set_key(rml, element, key):
-    result = {}
-    element_xmletree = rml.find(prefixtag("rml", element))
-    key_value = extract_text_or_none(element_xmletree)
-    if key_value is not None:
-        result[key] = key_value
-    return result
 
 
