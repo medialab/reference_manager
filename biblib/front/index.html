@@ -10,6 +10,9 @@
 <body>
   <div id="layout"></div>
 
+  <!-- configuration file (just some variables), javascript object stored at window.config.blf -->
+  <script src="config.blf.js"></script>
+
   <!-- External JS dependencies -->
   <script src="js/ext/jquery.min.js"></script>
   <script src="js/ext/domino.min.js"></script>
@@ -47,14 +50,14 @@
       // We start everything from here:
       blf.init({
         i18n:{
-          lang: 'fr'//,
+          lang: config.blf.lang,
           // url:'/custom url'
         },
         rpc:{
 
         },
-        baseURL: 'http://localhost:8080',
-        corpus: "aime",
+        baseURL: config.blf.baseURL,
+        corpus: config.blf.corpus,
         baseDOM: $('#layout'),
         back_home_on_save: true,
         advancedSearchPanel: {

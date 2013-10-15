@@ -49,6 +49,7 @@ nosetests.xml
 
 # protect the config credentials
 config.json
+config.blf.js
 
 # mongodb ignore
 mongodb/local.*
