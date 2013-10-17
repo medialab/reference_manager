@@ -350,11 +350,14 @@ def save_document(corpus, document, role):
                 if role not in roles:
                     recovered_fields.append(child["property"])
         if recovered_fields:
-            saved_doc = get_document_by_rec_id(corpus, document["rec_id"])
-            if saved_doc is not None:
-                for field in recovered_fields:
-                    if field in saved_doc:
-                        document[field] = saved_doc[field]
+            try:
+                saved_doc = get_document_by_rec_id(corpus, document["rec_id"])
+                if saved_doc is not None:
+                    for field in recovered_fields:
+                        if field in saved_doc:
+                            document[field] = saved_doc[field]
+            except:
+                pass
     # Enhance MetaJSON
     document = metajson_service.enhance_metajson(document)
     rec_id = document["rec_id"]
