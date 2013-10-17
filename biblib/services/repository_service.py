@@ -143,12 +143,12 @@ def search(corpus, search_query):
 
     # empty search_query
     if search_query is None:
-        raise exceptions.metajsonprc_error(0)
+        raise exceptions.metajsonprc_error(40)
 
     # filter_class -> collection
     collection = None
     if "filter_class" not in search_query or search_query["filter_class"] not in ["Document", "Agent", "Person", "OrgUnit", "Event", "Family"]:
-        raise exceptions.metajsonprc_error(100)
+        raise exceptions.metajsonprc_error(40)
     elif search_query["filter_class"] == "Document":
         collection = DOCUMENTS
     elif search_query["filter_class"] in ["Agent", "Person", "OrgUnit", "Event", "Family"]:
@@ -194,7 +194,7 @@ def search(corpus, search_query):
             # index
             if "index" not in search_term:
                 # useless
-                raise exceptions.metajsonprc_error(100)
+                raise exceptions.metajsonprc_error(40)
             elif search_term["index"] == "all":
                 all_terms = []
                 if values:
@@ -351,9 +351,10 @@ def save_document(corpus, document, role):
                     recovered_fields.append(child["property"])
         if recovered_fields:
             saved_doc = get_document_by_rec_id(corpus, document["rec_id"])
-            for field in recovered_fields:
-                if field in saved_doc:
-                    document[field] = saved_doc[field]
+            if saved_doc is not None:
+                for field in recovered_fields:
+                    if field in saved_doc:
+                        document[field] = saved_doc[field]
     # Enhance MetaJSON
     document = metajson_service.enhance_metajson(document)
     rec_id = document["rec_id"]

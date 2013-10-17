@@ -62,7 +62,7 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
     # award -> awards
     orgunit.update(extract_rml_string_lang(rml_orgunit, "award", "awards"))
 
-    # ckbData ->
+    # ckbData -> ckb_data
 
     # dateOfDissolution -> date_dissolution
     orgunit.update(extract_element_and_set_key(rml_orgunit, "dateOfDissolution", "date_dissolution"))
@@ -88,7 +88,7 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
     # name -> name
     orgunit.update(extract_element_and_set_key(rml_orgunit, "name", "name"))
 
-    # nameAlternative ->
+    # nameAlternative -> name_alternatives
     orgunit.update(extract_rml_string_lang(rml_orgunit, "nameAlternative", "name_alternatives"))
 
     # nationality -> nationality
@@ -150,7 +150,7 @@ def rml_person_to_metajson(rml_person, source):
     # email -> emails
     person.update(extract_rml_emails(rml_person))
 
-    # fictitious
+    # fictitious -> fictitious
     person.update(extract_boolean_attribute_and_set_key(rml_person, "fictitious", "fictitious"))
 
     # firstname -> name_given
@@ -197,9 +197,10 @@ def rml_person_to_metajson(rml_person, source):
     # phone -> phones
     person.update(extract_rml_phones(rml_person))
 
-    # relationship ->
+    # relationship -> relationships
+    person.update(extract_rml_relationships(rml_person))
 
-    # researchCoverage -> 
+    # researchCoverage -> research_coverages
     person.update(extract_rml_research_coverages(rml_person))
 
     # responsability -> responsabilities
@@ -474,6 +475,34 @@ def extract_rml_phones(rml):
     return result
 
 
+def extract_rml_relationships(rml):
+    result = {}
+    rml_relationships = rml.findall(prefixtag("rml", "relationship"))
+    if rml_relationships is not None:
+        relationships = []
+        for rml_relationship in rml_relationships:
+            if rml_relationship is not None:
+                relationship = {}
+
+                # relation_type
+                relationship.update(extract_element_and_set_key(rml_relationship, "relationType", "relation_type"))
+
+                # identifiers
+                relationship.update(extract_rml_identifiers(rml_relationship))
+
+                # name
+                relationship.update(extract_element_and_set_key(rml_relationship, "name", "name"))
+
+                # descriptions
+                relationship.update(extract_rml_string_lang(rml_relationship, "description", "descriptions"))
+
+                if relationship is not None:
+                    relationships.append(relationship)
+        if relationships:
+            result["relationships"] = relationships
+    return result
+
+
 def extract_rml_research_coverages(rml):
     result = {}
     rml_rcs = rml.findall(prefixtag("rml", "researchCoverage"))
@@ -526,7 +555,7 @@ def extract_rml_teachings(rml):
                 # title
                 teaching.update(extract_element_and_set_key(rml_teaching, "title", "title"))
 
-                # identifier
+                # identifiers
                 teaching.update(extract_rml_identifiers(rml_teaching))
 
                 # name

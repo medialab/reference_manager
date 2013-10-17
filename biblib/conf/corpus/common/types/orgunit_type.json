@@ -1,0 +1,92 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "Cluster",
+                "fr": "Cluster"
+            },
+            "type_id": "cluster"
+        },
+        {
+            "labels": {
+                "en": "Company",
+                "fr": "Soci\u00e9t\u00e9"
+            },
+            "type_id": "company"
+        },
+        {
+            "labels": {
+                "en": "Department",
+                "fr": "D\u00e9partement"
+            },
+            "type_id": "department"
+        },
+        {
+            "labels": {
+                "en": "Doctoral school",
+                "fr": "Ecole doctorale"
+            },
+            "type_id": "doctoralSchool"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "Faculty",
+                "fr": "Facult\u00e9"
+            },
+            "type_id": "faculty"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "Institute",
+                "fr": "Institut"
+            },
+            "type_id": "institute"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "Laboratory",
+                "fr": "Laboratoire"
+            },
+            "type_id": "lab"
+        },
+        {
+            "labels": {
+                "en": "Other",
+                "fr": "Autre"
+            },
+            "type_id": "other"
+        },
+        {
+            "labels": {
+                "en": "Research agency",
+                "fr": "Organisme de recherche"
+            },
+            "type_id": "researchAgency"
+        },
+        {
+            "labels": {
+                "en": "Research center",
+                "fr": "Centre de recherche"
+            },
+            "major": true,
+            "type_id": "researchCenter"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "University",
+                "fr": "Universit\u00e9"
+            },
+            "major": true,
+            "type_id": "university"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "orgunit_type"
+}

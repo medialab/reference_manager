@@ -4,6 +4,7 @@
 
 import datetime
 import locale
+import traceback
 
 from txjsonrpc.web import jsonrpc
 from txjsonrpc import jsonrpclib
@@ -56,18 +57,28 @@ class References_repository(jsonrpc.JSONRPC):
         return jsonrpc.JSONRPC._cbRender(self, result, request, id, version=2.0)
 
     def jsonrpc_echo(self, x):
-            """Return all passed args."""
-            return x
+        """ Return all passed args.
+            params:
+                - corpus: the corpus 
+        """
+        return x
 
     def jsonrpc_list_corpora(self):
+        """ Return the list of corpora"""
         return repository_service.list_corpora()
 
     def jsonrpc_default_corpus(self):
+        """ Return the default corpus"""
         return default_corpus
 
     def jsonrpc_save(self, corpus, document, role=None):
         """ insert or update a reference in the repository
             return object id if ok or error
+            params:
+                - corpus: the corpus
+                - document: the document metadata to save 
+                - role: the user role
+
         """
         # default corpus management
         if not corpus:
@@ -75,13 +86,20 @@ class References_repository(jsonrpc.JSONRPC):
         # role correction
         if role == "":
             role = None
-        doc_bson = jsonbson.json_to_bson(document)
-        oid, rec_id = repository_service.save_document(corpus, doc_bson, role)
-        return {"rec_id": rec_id}
+        try:
+            doc_bson = jsonbson.json_to_bson(document)
+            oid, rec_id = repository_service.save_document(corpus, doc_bson, role)
+            return {"rec_id": rec_id}
+        except Exception as ex:
+            traceback.print_exc()
+            return jsonrpclib.Fault(100, str(ex))
 
     def jsonrpc_delete(self, corpus, rec_id):
         """ delete a reference in the repository
             return object id if ok or error
+            params:
+                - corpus: the corpus 
+                - rec_id: rec_id of a metadata record
         """
         # default corpus management
         if not corpus:
@@ -91,10 +109,11 @@ class References_repository(jsonrpc.JSONRPC):
     def jsonrpc_set_metadata_property(self, corpus, rec_id, key, value, role=None):
         """ set the value for a property of a metadata
             params:
+                - corpus: the corpus 
                 - rec_id: rec_id of a metadata record
                 - key: property that will be set
                 - value: value that will be set
-                - format: the format wanted to describe references
+                - role: the user role
             return the asked references in the specified format
             return the modified reference in the specified format
         """
@@ -107,12 +126,13 @@ class References_repository(jsonrpc.JSONRPC):
         try:
             metajson_document = repository_service.set_document_property(corpus, rec_id, key, value, role)
             return jsonbson.bson_to_json(metajson_document)
-        except exceptions.metajsonprc_error, ex:
+        except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
     def jsonrpc_metadata_by_rec_ids(self, corpus, rec_ids, format="metajson"):
         """ get metadata of a list of references
             params:
+                - corpus: the corpus 
                 - rec_ids: list of record ids (rec_id)
                 - format: the format wanted to describe references
             return the asked references in the specified format
@@ -129,12 +149,13 @@ class References_repository(jsonrpc.JSONRPC):
                 else:
                     results.append(crosswalks_service.convert_document(metajson_document, "metajson", format))
             return results
-        except exceptions.metajsonprc_error, ex:
+        except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
     def jsonrpc_metadata_by_mongo_ids(self, corpus, mongo_ids, format="metajson"):
         """ get metadata of a list of references
             params:
+                - corpus: the corpus 
                 - mongo_ids: list of mongodb ids (_id)
                 - format: the format wanted to describe references
                     (metajson by defaut, metajsonui for user interface)
@@ -152,13 +173,14 @@ class References_repository(jsonrpc.JSONRPC):
                 else:
                     results.append(crosswalks_service.convert_document(metajson_document, "metajson", format))
             return results
-        except exceptions.metajsonprc_error, ex:
+        except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
     # todo : rename citations
     def jsonrpc_citation_by_rec_ids(self, corpus, rec_ids, style="mla", format="html"):
         """ get citations of a list of references
             params:
+                - corpus: the corpus 
                 - rec_ids: list of known ids
                 - style: the style in which to wirte the citations
                 - format: the format wanted to describe citations
@@ -176,12 +198,13 @@ class References_repository(jsonrpc.JSONRPC):
                 result[style] = citations_manager.cite(metajson_document, style, format)
                 results.append(result)
             return jsonbson.bson_to_json(results)
-        except exceptions.metajsonprc_error, ex:
+        except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
     def jsonrpc_search(self, corpus, search_query):
         """ search for one or more data from the repository
             params:
+                - corpus: the corpus 
                 - search_query: a custom SearchQuery object with the query params
         """
         # default corpus management
@@ -195,12 +218,13 @@ class References_repository(jsonrpc.JSONRPC):
             response_time = "{0:.3f}".format(interval.total_seconds() * 1000)
             search_response["response_time"] = response_time
             return jsonbson.bson_to_json(search_response)
-        except exceptions.metajsonprc_error, ex:
+        except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
     def jsonrpc_search_mongo(self, corpus, mongo_query):
         """ search for one or more data from the repository
             params:
+                - corpus: the corpus 
                 - mongo_query: search query must respect the mongo query syntax
             return the asked data (in JSON)
         """
@@ -212,6 +236,7 @@ class References_repository(jsonrpc.JSONRPC):
     def jsonrpc_type(self, corpus, type_id, language):
         """ search for one types from the repository
             params:
+                - corpus: the corpus 
                 - type_id: type identifier
                 - language: language for label and description
             return the asked type (in JSON)
@@ -226,6 +251,7 @@ class References_repository(jsonrpc.JSONRPC):
     def jsonrpc_types(self, corpus, language):
         """ search for all types from the repository
             params:
+                - corpus: the corpus 
                 - language: language for label and description
             return the asked type (in JSON)
         """
@@ -245,8 +271,10 @@ class References_repository(jsonrpc.JSONRPC):
         """ search for one field for user interface
             from the repository
             params:
+                - corpus: the corpus 
                 - rec_type: document type
                 - language: language for label and description
+                - role: the user role
             return the asked field for user interface (in JSON)
         """
         # default corpus management
@@ -263,7 +291,9 @@ class References_repository(jsonrpc.JSONRPC):
         """ search for all fields for user interface
             from the repository
             params:
+                - corpus: the corpus 
                 - language: language for label and description
+                - role: the user role
             return the asked fields for user interface (in JSON)
         """
         # default corpus management
@@ -313,7 +343,7 @@ class References_repository(jsonrpc.JSONRPC):
                 del type_dict[key_old]
                 type_dict[key_new] = result
 
-application = service.Application("References repository web service")
+application = service.Application("Biblib JSON-RPC services")
 root = References_repository()
 site = server.Site(root)
 server = internet.TCPServer(port, site)
