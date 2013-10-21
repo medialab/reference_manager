@@ -523,17 +523,17 @@ role_unimarc_to_role_code = {
 }
 
 
-def formatted_name_list_to_creator_list(formatted_name_list, creator_type="person", role="aut"):
+def formatted_name_list_to_creator_list(formatted_name_list, rec_class="person", role="aut"):
     if formatted_name_list:
         creator_list = []
         for formatted_name in formatted_name_list:
-            creator = formatted_name_to_creator(formatted_name, creator_type, role)
+            creator = formatted_name_to_creator(formatted_name, rec_class, role)
             if creator:
                 creator_list.append(creator)
         return creator_list
 
 
-def formatted_name_to_creator(formatted_name, creator_type, role):
+def formatted_name_to_creator(formatted_name, rec_class, role):
     if formatted_name:
         formatted_name = formatted_name.strip()
         event = None
@@ -542,33 +542,33 @@ def formatted_name_to_creator(formatted_name, creator_type, role):
         person = None
 
         #print("name: %s"%formatted_name)
-        # creator_type determination
+        # rec_class determination
         for event_term in creator_event_terms:
             if event_term in formatted_name.lower():
-                creator_type = "event"
+                rec_class = "event"
                 break
         for orgunit_term in creator_orgunit_terms:
             if orgunit_term in formatted_name.lower():
-                creator_type = "orgunit"
+                rec_class = "orgunit"
                 break
-        if creator_type is None:
-            creator_type = "person"
+        if rec_class is None:
+            rec_class = "person"
 
         creator = Creator()
         if role:
             creator["role"] = role
 
-        if creator_type == "event":
+        if rec_class == "event":
             event = Event()
             event["title"] = formatted_name
             creator["agent"] = event
 
-        elif creator_type == "orgunit":
+        elif rec_class == "orgunit":
             orgunit = Orgunit()
             orgunit["name"] = formatted_name
             creator["agent"] = orgunit
 
-        elif creator_type == "person" or creator_type == "family":
+        elif rec_class == "person" or rec_class == "family":
             #type is "person" or "family"
 
             name_given = ""
@@ -652,7 +652,7 @@ def formatted_name_to_creator(formatted_name, creator_type, role):
                         name_prefix = name_given
                         name_given = None
 
-            if creator_type == "person":
+            if rec_class == "person":
                 person = Person()
                 person.set_key_if_not_none("name_family", name_family)
                 person.set_key_if_not_none("name_given", name_given)
@@ -670,7 +670,7 @@ def formatted_name_to_creator(formatted_name, creator_type, role):
                     affiliation["name"] = affiliation_name
                     creator["affiliation"] = affiliation
 
-            elif creator_type == "family":
+            elif rec_class == "family":
                 family = Family()
                 family.set_key_if_not_none("name_family", name_family)
                 creator["agent"] = family

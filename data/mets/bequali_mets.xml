@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mets:mets OBJID="cdsp_bequali_sp4" PROFILE="http://www.sciencespo.fr/bibliotheque/standards/numer/bequali.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ddi="http://www.icpsr.umich.edu/DDI" xmlns:mets="http://www.loc.gov/METS/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd http://www.icpsr.umich.edu/DDI http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd">
+  <mets:metsHdr CREATEDATE="2013-10-17T14:15:35.5Z" LASTMODDATE="2013-10-17T17:15:35.5Z" RECORDSTATUS="Complete">
+    <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+      <mets:name>Sciences Po | CDSP | beQuali</mets:name>
+    </mets:agent>
+    <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+      <mets:name>Sciences Po | CDSP | beQuali</mets:name>
+    </mets:agent>
+  </mets:metsHdr>
+  <mets:dmdSec ID="dmd_collection" GROUPID="collection">
+    <mets:mdWrap MDTYPE="DDI">
+      <mets:xmlData>
+        <ddi:codeBook ID="cdsp_bequali_sp4_ddi" version="2.5" xml-lang="fr" xmlns:ddi="http://www.icpsr.umich.edu/DDI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.icpsr.umich.edu/DDI http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd">
+          <ddi:docDscr>
+            <ddi:citation>
+              <ddi:titlStmt>
+                <ddi:titl>XML codeBook for cdsp_bequali_sp4</ddi:titl>
+              </ddi:titlStmt>
+              <ddi:prodStmt>
+                <ddi:prodDate date="2013-01-29">29 January 2013</ddi:prodDate>
+              </ddi:prodStmt>
+              <ddi:verStmt date="2014-04-17">17 avril 2014</ddi:verStmt>
+            </ddi:citation>
+          </ddi:docDscr>
+          <ddi:stdyDscr>
+            <ddi:citation>
+              <ddi:titlStmt>
+                <ddi:IDNo agency="CDSP">cdsp_bequali_sp4</ddi:IDNo>
+                <ddi:titl>La boutique contre la gauche</ddi:titl>
+              </ddi:titlStmt>
+              <ddi:rspStmt>
+                <ddi:AuthEnty affiliation="CEVIPOF">MAYER, Nonna</ddi:AuthEnty>
+              </ddi:rspStmt>
+              <ddi:prodStmt>
+                <ddi:AuthEnty affiliation="CDSP">BOTH, Anne</ddi:AuthEnty>
+                <ddi:AuthEnty affiliation="CDSP">CADOREL, Sarah</ddi:AuthEnty>
+                <ddi:copyright>beQuali</ddi:copyright>
+                <ddi:fundAg>CNRS</ddi:fundAg>
+                <ddi:fundAg>CEVIPOF</ddi:fundAg>
+                <ddi:software>PowerGrep</ddi:software>
+                <ddi:software>EXMARaLDA</ddi:software>
+              </ddi:prodStmt>
+              <ddi:distStmt>
+                <ddi:distrbtr affiliation="CDSP">beQuali</ddi:distrbtr>
+                <ddi:depositr affiliation="CEVIPOF">MAYER, Nonna</ddi:depositr>
+                <ddi:depDate date="2010-06-21">21 June 2010</ddi:depDate>
+                <ddi:distDate date="2010-07-21">21 July 2010</ddi:distDate>
+              </ddi:distStmt>
+            </ddi:citation>
+            <ddi:stdyInfo>
+              <ddi:subject>
+                <ddi:keyword>Artisans</ddi:keyword>
+                <ddi:keyword>Poujadisme</ddi:keyword>
+                <ddi:topcClas vocab="RAMEAU">Sociologie politique</ddi:topcClas>
+                <ddi:keyword vocab="Y">1961</ddi:keyword>
+                <ddi:keyword vocab="Y">1962</ddi:keyword>
+              </ddi:subject>
+              <ddi:abstract>Enquête réalisée dans les années 70 par Nonna Mayer pour sa thèse d'État consacrée à l'univers politique des petits commerçants français. Le terrain a été réalisé en deux fois. La première vague d'entretiens a été réalisée par Nonna Mayer entre 1972 et 1974 et la deuxième par Claude Nédélec entre 1976 et 1977.</ddi:abstract>
+              <ddi:sumDscr>
+                <ddi:timePrd date="1970-00-00" event="start">1970</ddi:timePrd>
+                <ddi:timePrd date="1980-00-00" event="end">1980</ddi:timePrd>
+                <ddi:nation>France</ddi:nation>
+                <ddi:geogCover>Paris</ddi:geogCover>
+                <ddi:geogUnit>7ème arrondissement</ddi:geogUnit>
+                <ddi:geogUnit>18ème arrondissement</ddi:geogUnit>
+                <ddi:anlyUnit>Individus</ddi:anlyUnit>
+                <ddi:universe level="study">Niveau d'observation:</ddi:universe>
+                <ddi:universe level="study">national</ddi:universe>
+                <ddi:universe level="study">Groupes de population ciblés:</ddi:universe>
+                <ddi:universe level="study">Petits commerçants</ddi:universe>
+                <ddi:collDate date="1972-00-00" event="start">1972</ddi:collDate>
+                <ddi:collDate date="1977-00-00" event="end">1977</ddi:collDate>
+                <ddi:dataKind type="text">Documents textuels</ddi:dataKind>
+                <ddi:dataKind>Transcriptions fines avec indication du paraverbal</ddi:dataKind>
+              </ddi:sumDscr>
+              <ddi:notes>Les entretiens ont été anonymisés par l'auteur.</ddi:notes>
+              <ddi:notes>Analyse typologique à la fois quantitative et qualitative.</ddi:notes>
+            </ddi:stdyInfo>
+            <ddi:method>
+              <ddi:dataColl>
+                <ddi:timeMeth>Entretiens uniques</ddi:timeMeth>
+                <ddi:collMode>Enquête par entretiens</ddi:collMode>
+                <ddi:collMode>Enquête par analyse documentaire</ddi:collMode>
+                <ddi:collMode>Autre</ddi:collMode>
+                <ddi:sampProc>Deux rues commerçantes à Paris, l'une dans un quartier bourgeois (7ème) l'autre dans un quartier populaire (10ème). Tous les commerçants ont été contactés, certains n'ont pas voulu répondre.</ddi:sampProc>
+                <ddi:resInstru>consigne (entretien non directif)</ddi:resInstru>
+                <ddi:collSitu>Nonna Mayer a choisi d'interroger des petits commerçants dans une première rue du 10ème arrondissemnt de Paris pui sdans une deuxième rue du 7ème arrondissement de Paris. Elle a choisi de proposer systématiquement à tous les commerçants de chaque rue de répondre à l'enquête. L'échantillon est composé des ceux qui ont accepté de répondre aux entretiens.</ddi:collSitu>
+              </ddi:dataColl>
+            </ddi:method>
+            <ddi:dataAccs>
+              <ddi:setAvail>
+                <ddi:fileQnty>100 fichiers</ddi:fileQnty>
+                <ddi:origArch>Mission Archives - Sciences Po</ddi:origArch>
+              </ddi:setAvail>
+              <ddi:useStmt>
+                <ddi:condition>Accès soumis à autorisation</ddi:condition>
+                <ddi:contact>info@bequali.fr</ddi:contact>
+              </ddi:useStmt>
+            </ddi:dataAccs>
+            <ddi:othrStdyMat>
+              <ddi:relPubl>MAYER, Nonna, 1986, La boutique contre la Gauche, Presses de la FNSP, Paris.</ddi:relPubl>
+            </ddi:othrStdyMat>
+          </ddi:stdyDscr>
+        </ddi:codeBook>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:dmdSec ID="dmd_record_000001" GROUPID="record">
+    <mets:mdWrap MDTYPE="DC">
+      <mets:xmlData>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:date>1975</dc:date>
+          <dc:identifier>cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau</dc:identifier>
+          <dc:title>Tableau</dc:title>
+          <dc:type>Text</dc:type>
+        </oai_dc:dc>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:dmdSec ID="dmd_record_000002" GROUPID="record">
+    <mets:mdWrap MDTYPE="DC">
+      <mets:xmlData>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:date>1973</dc:date>
+          <dc:identifier>cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus</dc:identifier>
+          <dc:title>Legume 13</dc:title>
+          <dc:type>Text</dc:type>
+        </oai_dc:dc>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:dmdSec ID="dmd_record_000003" GROUPID="record">
+    <mets:mdWrap MDTYPE="DC">
+      <mets:xmlData>
+        <oai_dc:dc xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+          <dc:date>1972</dc:date>
+          <dc:identifier>cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus</dc:identifier>
+          <dc:title>Boucher 1</dc:title>
+          <dc:type>Text</dc:type>
+        </oai_dc:dc>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:fileSec>
+    <mets:fileGrp USE="master">
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau_000001_master" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau/cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau_000001_master.jp2"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau_000002_master" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau/cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau_000002_master.jp2"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000001_master" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus/cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000001_master.jp2"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000002_master" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus/cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000002_master.jp2"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497ez" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus_000001_master" MIMETYPE="image/jp2" SIZE="3242356">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus/cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus_000001_master.jp2"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497ez" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus_000002_master" MIMETYPE="image/jp2" SIZE="3242356">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus/cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus_000002_master.jp2"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="ocr">
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000001_ocr" MIMETYPE="application/xml" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://ocr/cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus/cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000001_ocr.xml"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000002_ocr" MIMETYPE="application/xml" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://ocr/cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus/cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000002_ocr.xml"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="pdfmaster">
+      <mets:file CHECKSUM="9aa2877a2903711862ba3861f99fb234" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau_pdfmaster" MIMETYPE="application/pdf" SIZE="1234">
+        <mets:FLocat LOCTYPE="URL" xlink:href="files/pdfmaster/cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau.pdf"/>
+      </mets:file>
+      <mets:file CHECKSUM="9aa2877a2903711862ba3861f99fb234" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus_pdfmaster" MIMETYPE="application/pdf" SIZE="1234">
+        <mets:FLocat LOCTYPE="URL" xlink:href="files/pdfmaster/cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus.pdf"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="pdfmasterocr">
+      <mets:file CHECKSUM="9aa2877a2903711862ba3861f99fb234" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_pdfmasterocr" MIMETYPE="application/pdf" SIZE="1234">
+        <mets:FLocat LOCTYPE="URL" xlink:href="files/pdfmasterocr/cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus.pdf"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="odt">
+      <mets:file CHECKSUM="9aa2877a2903711862ba3861f99fb234" CHECKSUMTYPE="MD5" ID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_odt" MIMETYPE="application/vnd.oasis.opendocument.text" SIZE="1234">
+        <mets:FLocat LOCTYPE="URL" xlink:href="files/odt/cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus.odt"/>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap ID="structmap_image" TYPE="image">
+    <mets:div DMDID="dmd_collection" LABEL="La boutique contre la gauche" TYPE="study">
+      <mets:div LABEL="anal" ORDER="1" TYPE="subcollection">
+        <mets:div LABEL="inter" ORDER="1" TYPE="folder">
+          <mets:div LABEL="entretien" ORDER="1" TYPE="subfolder">
+            <mets:div DMDID="dmd_record_000001" LABEL="Tableau" ORDER="1" TYPE="record">
+              <mets:div ORDER="1" TYPE="page">
+                <mets:fptr FILEID="cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau_000001_master"/>
+              </mets:div>
+              <mets:div ORDER="2" TYPE="page">
+                <mets:fptr FILEID="cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau_000002_master"/>
+              </mets:div>
+            </mets:div>
+          </mets:div>
+        </mets:div>
+      </mets:div>
+      <mets:div LABEL="col" ORDER="2" TYPE="subcollection">
+        <mets:div LABEL="transcr" ORDER="1" TYPE="folder">
+          <mets:div LABEL="entretien" ORDER="1" TYPE="subfolder">
+            <mets:div DMDID="dmd_record_000002" LABEL="Legume 13" ORDER="1" TYPE="record">
+              <mets:div ORDER="1" TYPE="page">
+                <mets:fptr FILEID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000001_master"/>
+                <mets:fptr FILEID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000001_ocr"/>
+              </mets:div>
+              <mets:div ORDER="2" TYPE="page">
+                <mets:fptr FILEID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000002_master"/>
+                <mets:fptr FILEID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_000002_ocr"/>
+              </mets:div>
+            </mets:div>
+            <mets:div DMDID="dmd_record_000003" LABEL="Boucher 1" ORDER="2" TYPE="record">
+              <mets:div ORDER="1" TYPE="page">
+                <mets:fptr FILEID="cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus_000001_master"/>
+              </mets:div>
+              <mets:div ORDER="2" TYPE="page">
+                <mets:fptr FILEID="cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus_000002_master"/>
+              </mets:div>
+            </mets:div>
+          </mets:div>
+        </mets:div>
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+  <mets:structMap ID="structmap_derivated" TYPE="derivated">
+    <mets:div DMDID="dmd_collection" LABEL="La boutique contre la gauche" TYPE="study">
+      <mets:div LABEL="anal" ORDER="1" TYPE="subcollection">
+        <mets:div LABEL="inter" ORDER="1" TYPE="folder">
+          <mets:div LABEL="entretien" ORDER="1" TYPE="subfolder">
+            <mets:div DMDID="dmd_record_000001" LABEL="Legume 13" ORDER="1" TYPE="record">
+              <mets:fptr FILEID="cdsp_bequali_sp4_anal_inter_entretien_fr_vet25_tableau_pdfmaster"/>
+            </mets:div>
+          </mets:div>
+        </mets:div>
+      </mets:div>
+      <mets:div LABEL="col" ORDER="2" TYPE="subcollection">
+        <mets:div LABEL="transcr" ORDER="1" TYPE="folder">
+          <mets:div LABEL="entretien" ORDER="1" TYPE="subfolder">
+            <mets:div DMDID="dmd_record_000002" LABEL="Legume 13" ORDER="1" TYPE="record">
+              <mets:fptr FILEID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_pdfmasterocr"/>
+              <mets:fptr FILEID="cdsp_bequali_sp4_col_note_entretien_fr_legume13_1_tapus_odt"/>
+            </mets:div>
+            <mets:div DMDID="dmd_record_000003" LABEL="Boucher 1" ORDER="2" TYPE="record">
+              <mets:fptr FILEID="cdsp_bequali_sp4_col_transcr_entretien_fr_boucher1_manus_pdfmaster"/>
+            </mets:div>
+          </mets:div>
+        </mets:div>
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>

@@ -4,6 +4,2033 @@
   "rec_metajson": 1, 
   "records": [
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=September&amp;rft.date=2012&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Alliance+of+Small+Island+States+Leaders+%E2%80%99+Declaration+%2C+2012&amp;rft.genre=article\"></span><span class=\"creator\">AOSIS</span>. <span class=\"title\">Alliance of Small Island States Leaders ’ Declaration , 2012</span>. <span class=\"part_issue\">September</span> <span class=\"date\">(2012)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "AOSIS", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2012", 
+      "date_sort": {
+        "$date": 1325376000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Small Islands Countries Declaration in preparation of the COP 18"
+        }
+      ], 
+      "part_issue": "September", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.170852", 
+      "rec_id": "53acdaeb-3a57-11e3-97f4-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.170864", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Alliance of Small Island States Leaders ’ Declaration , 2012"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=AOSIS+DECLARATION+ON+CLIMATE+CHANGE+2009&amp;rft.genre=article&amp;rft.date=2009\"></span><span class=\"creator\">AOSIS</span>. <span class=\"title\">AOSIS DECLARATION ON CLIMATE CHANGE 2009</span>. <span class=\"date\">(2009)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "AOSIS", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2009", 
+      "date_sort": {
+        "$date": 1230768000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Small Islands Countries Declaration in preparation of the COP 15"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.171485", 
+      "rec_id": "53add7e1-3a57-11e3-bd7d-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.171491", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "AOSIS DECLARATION ON CLIMATE CHANGE 2009"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=Climate+Vulnerable+Forum+Declaration&amp;rft.genre=article\"></span><span class=\"creator\">Climate Vulnerable Forum</span>. <span class=\"title\">Climate Vulnerable Forum Declaration</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "Climate Vulnerable Forum", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "1st declaration of the CVF"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.171896", 
+      "rec_id": "53ade82b-3a57-11e3-bd26-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.171902", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Climate Vulnerable Forum Declaration"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.date=2011&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Climate+Vulnerable+Forum+-+DHAKA+DECLARATION&amp;rft.genre=article\"></span><span class=\"creator\">Climate Vulnerable Forum</span>. <span class=\"title\">Climate Vulnerable Forum - DHAKA DECLARATION</span>. <span class=\"date\">(2011)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "Climate Vulnerable Forum", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2011", 
+      "date_sort": {
+        "$date": 1293840000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "3rd Declaration of the CVF"
+        }
+      ], 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.172311", 
+      "rec_id": "53adf863-3a57-11e3-a9b6-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.172317", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Climate Vulnerable Forum - DHAKA DECLARATION"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=November&amp;rft.date=2010&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Climate+Vulnerable+Forum+-+AMBO+DECLARATION&amp;rft.genre=article\"></span><span class=\"creator\">Climate Vulnerable Forum</span>. <span class=\"title\">Climate Vulnerable Forum - AMBO DECLARATION</span>. <span class=\"part_issue\">November</span> <span class=\"date\">(2010)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "Climate Vulnerable Forum", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2010", 
+      "date_sort": {
+        "$date": 1262304000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "2nd Declaration of the CVF"
+        }
+      ], 
+      "part_issue": "November", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.172735", 
+      "rec_id": "53ae08fa-3a57-11e3-9caf-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.172741", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Climate Vulnerable Forum - AMBO DECLARATION"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=38&amp;rft.date=1996&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=SUMMARY+OF+THE+SECOND+CONFERENCE+OF+THE+PARTIES+TO+THE+FRAMEWORK+CONVENTION+ON+CLIMATE+CHANGE+%3A&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">SUMMARY OF THE SECOND CONFERENCE OF THE PARTIES TO THE FRAMEWORK CONVENTION ON CLIMATE CHANGE :</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">38</span> <span class=\"date\">(1996)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1996", 
+      "date_sort": {
+        "$date": 820454400000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "1st COP UNFCCC"
+        }
+      ], 
+      "part_issue": "38", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.173148", 
+      "rec_id": "53ae191c-3a57-11e3-a45f-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.173154", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "SUMMARY OF THE SECOND CONFERENCE OF THE PARTIES TO THE FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=39&amp;rft.date=1996&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=SUBSIDIARY+BODIES+OF+THE+UN+FRAMEWORK+CONVENTION+ON+CLIMATE+CHANGE+%3A+A+BRIEF+HISTORY+OF+THE+FCCC+AND+ITS&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">SUBSIDIARY BODIES OF THE UN FRAMEWORK CONVENTION ON CLIMATE CHANGE : A BRIEF HISTORY OF THE FCCC AND ITS</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">39</span> <span class=\"date\">(1996)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1996", 
+      "date_sort": {
+        "$date": 820454400000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Ad Hoc Group on the Berlin Mandate (5th session)"
+        }
+      ], 
+      "part_issue": "39", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.173592", 
+      "rec_id": "53ae2a75-3a57-11e3-b5e1-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.173598", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "SUBSIDIARY BODIES OF THE UN FRAMEWORK CONVENTION ON CLIMATE CHANGE : A BRIEF HISTORY OF THE FCCC AND ITS"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=395&amp;rft.date=2012&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">Earth Negotiations Bulletin</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">395</span> <span class=\"date\">(2012)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2012", 
+      "date_sort": {
+        "$date": 1325376000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "14th COP of the UNFCCC"
+        }
+      ], 
+      "part_issue": "395", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.174038", 
+      "rec_id": "53ae3be1-3a57-11e3-bb75-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.174044", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=27&amp;rft.date=1996&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=THE+AD+HOC+GROUP+ON+THE+BERLIN&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">THE AD HOC GROUP ON THE BERLIN</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">27</span> <span class=\"date\">(1996)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1996", 
+      "date_sort": {
+        "$date": 820454400000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Ad Hoc Group on the Berlin Mandate (3rd session)"
+        }
+      ], 
+      "part_issue": "27", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.174458", 
+      "rec_id": "53ae4c4a-3a57-11e3-b40b-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.174463", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "THE AD HOC GROUP ON THE BERLIN"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=c&amp;rft.date=1997&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </span>. <span class=\"part_issue\">c</span> <span class=\"date\">(1997)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1997", 
+      "date_sort": {
+        "$date": 852076800000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "3rd COP if the UNFCCC"
+        }
+      ], 
+      "part_issue": "c", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.174884", 
+      "rec_id": "53ae5cf8-3a57-11e3-8ee8-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.174890", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.date=2003&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </span>. <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2003", 
+      "date_sort": {
+        "$date": 1041379200000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "9th COP of the UNFCCC"
+        }
+      ], 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.175302", 
+      "rec_id": "53ae6d42-3a57-11e3-b68d-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.175308", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.date=2001&amp;rft.volume=7&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">Earth Negotiations Bulletin</span>. <span class=\"part_volume\">7</span>. <span class=\"date\">(2001)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2001", 
+      "date_sort": {
+        "$date": 978307200000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "7th COP of the UNFCCC"
+        }
+      ], 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "7", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.175710", 
+      "rec_id": "53ae7d3a-3a57-11e3-8778-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.175716", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=498&amp;rft.date=2010&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">Earth Negotiations Bulletin</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">498</span> <span class=\"date\">(2010)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2010", 
+      "date_sort": {
+        "$date": 1262304000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "16th COP of the UNFCCC"
+        }
+      ], 
+      "part_issue": "498", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.176126", 
+      "rec_id": "53ae8d70-3a57-11e3-b5d6-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.176131", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=534&amp;rft.date=2011&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">Earth Negotiations Bulletin</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">534</span> <span class=\"date\">(2011)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2011", 
+      "date_sort": {
+        "$date": 1293840000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "17th COP of the UNFCCC"
+        }
+      ], 
+      "part_issue": "534", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.176542", 
+      "rec_id": "53ae9dba-3a57-11e3-8c7a-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.176548", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=11&amp;rft.date=1995&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=SESSION+OF+THE+INC+FOR+A+FRAMEWORK+CONVENTION+ON+CLIMATE+CHANGE+%3A&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">SESSION OF THE INC FOR A FRAMEWORK CONVENTION ON CLIMATE CHANGE :</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">11</span> <span class=\"date\">(1995)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1995", 
+      "date_sort": {
+        "$date": 788918400000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Ad Hoc Group on the Berlin Mandate (1st session)"
+        }
+      ], 
+      "part_issue": "11", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.176960", 
+      "rec_id": "53aeadfa-3a57-11e3-9565-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.176965", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "SESSION OF THE INC FOR A FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=1&amp;rft.date=1995&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=A+BRIEF+HISTORY+OF+THE+FRAMEWORK+CONVENTION+ON&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">A BRIEF HISTORY OF THE FRAMEWORK CONVENTION ON</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">1</span> <span class=\"date\">(1995)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1995", 
+      "date_sort": {
+        "$date": 788918400000
+      }, 
+      "part_issue": "1", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.177385", 
+      "rec_id": "53aebe97-3a57-11e3-80f1-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.177390", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "A BRIEF HISTORY OF THE FRAMEWORK CONVENTION ON"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.date=2005&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=A+BRIEF+HISTORY+OF+THE+UNFCCC+AND&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">A BRIEF HISTORY OF THE UNFCCC AND</span>. <span class=\"date\">(2005)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2005", 
+      "date_sort": {
+        "$date": 1104537600000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "UNFCCC seminar on the development and transfer of environmentally sound technologies for adaptation to climate change"
+        }
+      ], 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.177793", 
+      "rec_id": "53aece8f-3a57-11e3-af4f-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.177798", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "A BRIEF HISTORY OF THE UNFCCC AND"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=21&amp;rft.date=1995&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=CONFERENCE+OF+THE+PARTIES+FOR+THE+FRAMEWORK+CONVENTION+ON+CLIMATE+CHANGE+%3A&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">CONFERENCE OF THE PARTIES FOR THE FRAMEWORK CONVENTION ON CLIMATE CHANGE :</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">21</span> <span class=\"date\">(1995)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1995", 
+      "date_sort": {
+        "$date": 788918400000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "1st COP UNFCCC"
+        }
+      ], 
+      "part_issue": "21", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.178201", 
+      "rec_id": "53aede80-3a57-11e3-af00-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.178206", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "CONFERENCE OF THE PARTIES FOR THE FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.date=1998&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Negotiations+Bulletin&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">Negotiations Bulletin</span>. <span class=\"date\">(1998)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1998", 
+      "date_sort": {
+        "$date": 883612800000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "4th COP of the UNFCCC"
+        }
+      ], 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.178628", 
+      "rec_id": "53aeef35-3a57-11e3-ae66-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.178634", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Negotiations Bulletin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.date=2000&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">Earth Negotiations Bulletin</span>. <span class=\"date\">(2000)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2000", 
+      "date_sort": {
+        "$date": 946684800000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "6th COP of the UNFCCC"
+        }
+      ], 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.179027", 
+      "rec_id": "53aefec5-3a57-11e3-8c2a-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.179032", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=November+1999&amp;rft.date=2000&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">Earth Negotiations Bulletin</span>. <span class=\"part_issue\">November 1999</span> <span class=\"date\">(2000)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2000", 
+      "date_sort": {
+        "$date": 946684800000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "5th COP of the UNFCCC"
+        }
+      ], 
+      "part_issue": "November 1999", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.179422", 
+      "rec_id": "53af0e33-3a57-11e3-afb3-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.179427", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=55&amp;rft.date=1997&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=REPORT+OF+THE+MEETINGS+OF+THE+SUBSIDIARY+BODIES+TO+THE+FRAMEWORK&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">REPORT OF THE MEETINGS OF THE SUBSIDIARY BODIES TO THE FRAMEWORK</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">55</span> <span class=\"date\">(1997)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1997", 
+      "date_sort": {
+        "$date": 852076800000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "d Hoc Group on the Berlin Mandate (7th session)"
+        }
+      ], 
+      "part_issue": "55", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.179829", 
+      "rec_id": "53af1e19-3a57-11e3-b115-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.179835", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "REPORT OF THE MEETINGS OF THE SUBSIDIARY BODIES TO THE FRAMEWORK"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=260&amp;rft.date=2004&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">Earth Negotiations Bulletin</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">260</span> <span class=\"date\">(2004)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2004", 
+      "date_sort": {
+        "$date": 1072915200000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "10th COP of the UNFCCC"
+        }
+      ], 
+      "part_issue": "260", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.180255", 
+      "rec_id": "53af2eba-3a57-11e3-987a-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.180260", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=3&amp;rft.issue=41&amp;rft.date=2010&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=HIGHLIGHTS+FROM+THE+SIXTH+SESSION+OF+THE+AD+HOC+GROUP+ON+THE+BERLIN+MANDATE&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">HIGHLIGHTS FROM THE SIXTH SESSION OF THE AD HOC GROUP ON THE BERLIN MANDATE</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">41</span> <span class=\"date\">(2010)</span>. <span class=\"part_page_begin\">3</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2010", 
+      "date_sort": {
+        "$date": 1262304000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Ad Hoc Group on the Berlin Mandate (6th session)"
+        }
+      ], 
+      "part_issue": "41", 
+      "part_page_begin": "3", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.180683", 
+      "rec_id": "53af3f4c-3a57-11e3-81bc-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.180688", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "HIGHLIGHTS FROM THE SIXTH SESSION OF THE AD HOC GROUP ON THE BERLIN MANDATE"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=291&amp;rft.date=2005&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">Earth Negotiations Bulletin</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">291</span> <span class=\"date\">(2005)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2005", 
+      "date_sort": {
+        "$date": 1104537600000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "11th COP of the UNFCCC"
+        }
+      ], 
+      "part_issue": "291", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.181115", 
+      "rec_id": "53af5054-3a57-11e3-96ad-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.181120", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=22&amp;rft.date=1995&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=REPORT+OF+THE+AD+HOC+GROUP+ON+THE+BERLIN+MANDATE&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">REPORT OF THE AD HOC GROUP ON THE BERLIN MANDATE</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">22</span> <span class=\"date\">(1995)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1995", 
+      "date_sort": {
+        "$date": 788918400000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Ad Hoc Group on the Berlin Mandate (2nd session)"
+        }
+      ], 
+      "part_issue": "22", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.181540", 
+      "rec_id": "53af60ee-3a57-11e3-8563-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.181545", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "REPORT OF THE AD HOC GROUP ON THE BERLIN MANDATE"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.date=2011&amp;rft.volume=7&amp;rft.atitle=Summary+of+the+Durban+Climate+Change+Conference&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin&amp;rft.genre=article\"></span><span class=\"creator\">ENB (2011)</span>. \"<span class=\"title\">Summary of the Durban Climate Change Conference</span>.\" <span class=\"title\">Earth Negotiations Bulletin</span>. <span class=\"part_volume\">7</span>. <span class=\"date\">(2011)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB (2011)", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2011", 
+      "date_sort": {
+        "$date": 1293840000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Outputs of the Durban CoP (COP 17)"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "rec_class": "Document", 
+          "rec_metajson": 1, 
+          "rec_type": "Journal", 
+          "title": "Earth Negotiations Bulletin"
+        }
+      ], 
+      "part_volume": "7", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.181979", 
+      "rec_id": "53af7211-3a57-11e3-a968-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.181984", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Summary of the Durban Climate Change Conference"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=June&amp;rft.date=2000&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=GEF+CONTRIBUTIONS+TO+AGENDA+21&amp;rft.genre=article\"></span><span class=\"creator\">GEF</span>. <span class=\"title\">GEF CONTRIBUTIONS TO AGENDA 21</span>. <span class=\"part_issue\">June</span> <span class=\"date\">(2000)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "GEF", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2000", 
+      "date_sort": {
+        "$date": 946684800000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "How the Global Environmental Facility initiative contributed to the implementation of Agendas 21 and Sustainable Development"
+        }
+      ], 
+      "part_issue": "June", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.182487", 
+      "rec_id": "53af85f5-3a57-11e3-9b60-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.182492", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "GEF CONTRIBUTIONS TO AGENDA 21"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=024002&amp;rft.issue=2&amp;rft.date=200704&amp;rft.volume=2&amp;rft.atitle=Scientific+reticence+and+sea+level+rise&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Environmental+Research+Letters&amp;rft.genre=article\"></span><span class=\"creator\">Hansen, J E</span>. \"<span class=\"title\">Scientific reticence and sea level rise</span>.\" <span class=\"title\">Environmental Research Letters</span>. <span class=\"part_volume\">2</span>.<span class=\"part_issue\">2</span> <span class=\"date\">(200704)</span>. <span class=\"part_page_begin\">024002</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Hansen", 
+            "name_given": "J E", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "200704", 
+      "date_sort": {
+        "$date": 1175385600000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Reticences of scientists to disseminate or believe to extreme sea level rise scenarios"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "rec_class": "Document", 
+          "rec_metajson": 1, 
+          "rec_type": "Journal", 
+          "title": "Environmental Research Letters"
+        }
+      ], 
+      "part_issue": "2", 
+      "part_page_begin": "024002", 
+      "part_volume": "2", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.183098", 
+      "rec_id": "53af9dca-3a57-11e3-8636-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.183104", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Scientific reticence and sea level rise"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=July+2009&amp;rft.date=2010&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Progress+in+Human+Geography+Progress+reports+Cultural+ecology+%3A+adaptation+%E2%80%93+retrofi+tting+a+concept+%3F&amp;rft.genre=article\"></span><span class=\"creator\">Head</span>. <span class=\"title\">Progress in Human Geography Progress reports Cultural ecology : adaptation – retrofi tting a concept ?</span>. <span class=\"part_issue\">July 2009</span> <span class=\"date\">(2010)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Head", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2010", 
+      "date_sort": {
+        "$date": 1262304000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Some elements on the hiostory of the adaptation concept in the climate change arena."
+        }
+      ], 
+      "part_issue": "July 2009", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.183600", 
+      "rec_id": "53afb166-3a57-11e3-9e67-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.183606", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Progress in Human Geography Progress reports Cultural ecology : adaptation – retrofi tting a concept ?"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=Different+perceptions+of+adaptation+to+climate+change+%3A+a+mental+model+approach+applied+to+the+evidence+from+expert+interviews&amp;rft.genre=article&amp;rft.date=2010\"></span><span class=\"creator\">Matczak</span>. <span class=\"title\">Different perceptions of adaptation to climate change : a mental model approach applied to the evidence from expert interviews</span>. <span class=\"date\">(2010)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Matczak", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2010", 
+      "date_sort": {
+        "$date": 1262304000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Perception of environmental changes and risk play a major role in influencing decision and action. Interviews with experts emphaiszed 5 different groups with different mental models: advocacy group, administration, politicians, researchers and media/public"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.184104", 
+      "rec_id": "53afc514-3a57-11e3-8420-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.184109", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Different perceptions of adaptation to climate change : a mental model approach applied to the evidence from expert interviews"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.date=2002&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.+.&amp;rft.genre=article\"></span><span class=\"creator\">Negotiations, Development</span>. <span class=\"title\">Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </span>. <span class=\"date\">(2002)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Negotiations", 
+            "name_given": "Development", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2002", 
+      "date_sort": {
+        "$date": 1009843200000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "8th COP of the UNFCCC"
+        }
+      ], 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.184761", 
+      "rec_id": "53afde47-3a57-11e3-856c-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.184768", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=Earth+Negotiations+Bulletin&amp;rft.genre=article&amp;rft.date=2012\"></span><span class=\"creator\">Negotiations, Development</span>. <span class=\"title\">Earth Negotiations Bulletin</span>. <span class=\"date\">(2012)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Negotiations", 
+            "name_given": "Development", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2012", 
+      "date_sort": {
+        "$date": 1325376000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "13th COP of the UNFCCC"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.185485", 
+      "rec_id": "53affad7-3a57-11e3-b77d-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.185492", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=318&amp;rft.date=2006&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Earth+Negotiations+Bulletin&amp;rft.genre=article\"></span><span class=\"creator\">Negotiations, Development</span>. <span class=\"title\">Earth Negotiations Bulletin</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">318</span> <span class=\"date\">(2006)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Negotiations", 
+            "name_given": "Development", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2006", 
+      "date_sort": {
+        "$date": 1136073600000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "12th COP of the UNFCCC"
+        }
+      ], 
+      "part_issue": "318", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.186119", 
+      "rec_id": "53b01385-3a57-11e3-833d-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.186126", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Earth Negotiations Bulletin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=Ivm&amp;rft.date=2008&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Beyond+the+public+and+private+divide+%3A+remapping+transnational+climate+governance+in+the+21st+century&amp;rft.genre=article\"></span><span class=\"creator\">Pattberg, Philipp</span>. <span class=\"title\">Beyond the public and private divide : remapping transnational climate governance in the 21st century</span>. <span class=\"part_issue\">Ivm</span> <span class=\"date\">(2008)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Pattberg", 
+            "name_given": "Philipp", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2008", 
+      "date_sort": {
+        "$date": 1199145600000
+      }, 
+      "part_issue": "Ivm", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.186837", 
+      "rec_id": "53b02f68-3a57-11e3-b88b-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.186844", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Beyond the public and private divide : remapping transnational climate governance in the 21st century"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.btitle=Southern+voices+on+climate+policy+choices&amp;rft.genre=book&amp;rft.date=2012\"></span><span class=\"creator\">et al, Reid</span>. <span class=\"title\">Southern voices on climate policy choices</span>. <span class=\"publication_places\">N.p.</span>: <span class=\"date\">2012</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "et al", 
+            "name_given": "Reid", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2012", 
+      "date_sort": {
+        "$date": 1325376000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Advocacy acticities of civil society networks from southern countries"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.187463", 
+      "rec_id": "53b0482e-3a57-11e3-80b5-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.187469", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "title": "Southern voices on climate policy choices"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=82&amp;rft.issue=1&amp;rft.date=2006&amp;rft.volume=15&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Conceptual+History+of+Adaptation+in+the+UNFCCC+Process&amp;rft.genre=article\"></span><span class=\"creator\">Schipper</span>. <span class=\"title\">Conceptual History of Adaptation in the UNFCCC Process</span>. <span class=\"part_volume\">15</span>.<span class=\"part_issue\">1</span> <span class=\"date\">(2006)</span>. <span class=\"part_page_begin\">82</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Schipper", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2006", 
+      "date_sort": {
+        "$date": 1136073600000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "The history of Adaptation in the International Negotiations on Climate change"
+        }
+      ], 
+      "part_issue": "1", 
+      "part_page_begin": "82", 
+      "part_page_end": "", 
+      "part_volume": "15", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.187942", 
+      "rec_id": "53b05b02-3a57-11e3-9454-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.187948", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Conceptual History of Adaptation in the UNFCCC Process"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=Adaptation+to+Climate+Change+in+the+Context+of+Sustainable+Development+and+Equity&amp;rft.genre=article&amp;rft.date=2001\"></span><span class=\"creator\">Pilifosova, Smit \\&</span>. <span class=\"title\">Adaptation to Climate Change in the Context of Sustainable Development and Equity</span>. <span class=\"date\">(2001)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Pilifosova", 
+            "name_given": "Smit \\&", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2001", 
+      "date_sort": {
+        "$date": 978307200000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "IPCC Adapttaion chapter of the Third Assessment Report"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.188556", 
+      "rec_id": "53b072fd-3a57-11e3-b185-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.188562", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Adaptation to Climate Change in the Context of Sustainable Development and Equity"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=International+climate+change+negotiations%3A+key+lessons+and+next+steps&amp;rft.genre=article&amp;rft.date=2011\"></span><span class=\"creator\">SSEE</span>. <span class=\"title\">International climate change negotiations: key lessons and next steps</span>. <span class=\"date\">(2011)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "SSEE", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2011", 
+      "date_sort": {
+        "$date": 1293840000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Relations between Mitigation and Adaptation + Funding issues"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.189005", 
+      "rec_id": "53b0848a-3a57-11e3-b4ca-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.189011", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "International climate change negotiations: key lessons and next steps"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=Report+of+the+Conference+of+the+Parties+on+its+thirteenth+session+%2C+held+in+Bali+Part+Two+%3A+Action+taken+by+the+Conference+of+the+Parties+at+its+thirteenth+session&amp;rft.genre=article&amp;rft.date=2007\"></span><span class=\"creator\">UNFCCC</span>. <span class=\"title\">Report of the Conference of the Parties on its thirteenth session , held in Bali Part Two : Action taken by the Conference of the Parties at its thirteenth session</span>. <span class=\"date\">(2007)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "UNFCCC", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2007", 
+      "date_sort": {
+        "$date": 1167609600000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Outputs of the Bali COP 13 in 2007"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.189424", 
+      "rec_id": "53b094e6-3a57-11e3-97b5-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.189430", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Report of the Conference of the Parties on its thirteenth session , held in Bali Part Two : Action taken by the Conference of the Parties at its thirteenth session"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=20&amp;rft.date=2010&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Scaling+up+investments+in+global+climate+solutions+WWF+recommendations+for+the+G20&amp;rft.genre=article\"></span><span class=\"creator\">WWF</span>. <span class=\"title\">Scaling up investments in global climate solutions WWF recommendations for the G20</span>. <span class=\"date\">(2010)</span>. <span class=\"part_page_begin\">20</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "WWF", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2010", 
+      "date_sort": {
+        "$date": 1262304000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "WWF Recommendations for climate finance for the G20 Summit"
+        }
+      ], 
+      "part_page_begin": "20", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.189997", 
+      "rec_id": "53b0ab33-3a57-11e3-b488-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.190003", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Scaling up investments in global climate solutions WWF recommendations for the G20"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=wwf+RECOMMENDATIONs&amp;rft.genre=article&amp;rft.date=2010\"></span><span class=\"creator\">WWF</span>. <span class=\"title\">wwf RECOMMENDATIONs</span>. <span class=\"date\">(2010)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "WWF", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2010", 
+      "date_sort": {
+        "$date": 1262304000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "WWF Recommendations to the Advisory Group on Climate Finance"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.190442", 
+      "rec_id": "53b0bc6e-3a57-11e3-ba2b-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.190449", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "wwf RECOMMENDATIONs"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.date=2010&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=WWF+2010+RECOMMENDATIONS&amp;rft.genre=article\"></span><span class=\"creator\">WWF</span>. <span class=\"title\">WWF 2010 RECOMMENDATIONS</span>. <span class=\"date\">(2010)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "WWF", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2010", 
+      "date_sort": {
+        "$date": 1262304000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Recommendtaions for COP 16 (Cancun)"
+        }
+      ], 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.190876", 
+      "rec_id": "53b0cd9e-3a57-11e3-a8ca-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.190882", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "WWF 2010 RECOMMENDATIONS"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=May&amp;rft.date=2011&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=WWF+Expectations+for+the+UNFCCC+Bonn+Session&amp;rft.genre=article\"></span><span class=\"creator\">WWF</span>. <span class=\"title\">WWF Expectations for the UNFCCC Bonn Session</span>. <span class=\"part_issue\">May</span> <span class=\"date\">(2011)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "WWF", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2011", 
+      "date_sort": {
+        "$date": 1293840000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "WWF's expectations for the UNFCCC Bonn Session June 2011"
+        }
+      ], 
+      "part_issue": "May", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.191317", 
+      "rec_id": "53b0dea6-3a57-11e3-b3ca-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.191323", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "WWF Expectations for the UNFCCC Bonn Session"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=november+2009&amp;rft.date=2013&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=WWF+Global+Climate+Policy+WWF+Expectations+for+a+fair+%2C+ambitious+and+binding+global+climate+deal+in+Copenhagen&amp;rft.genre=article\"></span><span class=\"creator\">WWF</span>. <span class=\"title\">WWF Global Climate Policy WWF Expectations for a fair , ambitious and binding global climate deal in Copenhagen</span>. <span class=\"part_issue\">november 2009</span> <span class=\"date\">(2013)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "WWF", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2013", 
+      "date_sort": {
+        "$date": 1356998400000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "WWF Expectations for the Copenhagen Climate Deal 2009"
+        }
+      ], 
+      "part_issue": "november 2009", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.191739", 
+      "rec_id": "53b0ef4a-3a57-11e3-ae29-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.191744", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "WWF Global Climate Policy WWF Expectations for a fair , ambitious and binding global climate deal in Copenhagen"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=22&amp;rft.date=2013&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=The+Montreal+Climate+Conference+%2C+Results+and+Next+Steps+January+2006+Introduction+What+were+the+cornerstones+of+the+Montreal+outcomes+%3F+Launch+of+negotiations+for+the+future&amp;rft.genre=article\"></span><span class=\"creator\">WWF</span>. <span class=\"title\">The Montreal Climate Conference , Results and Next Steps January 2006 Introduction What were the cornerstones of the Montreal outcomes ? Launch of negotiations for the future</span>. <span class=\"date\">(2013)</span>. <span class=\"part_page_begin\">22</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "WWF", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2013", 
+      "date_sort": {
+        "$date": 1356998400000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "The Montreal Climate Change Conference 2005 - results and next steps"
+        }
+      ], 
+      "part_page_begin": "22", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.192192", 
+      "rec_id": "53b100fd-3a57-11e3-8ccc-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.192199", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "The Montreal Climate Conference , Results and Next Steps January 2006 Introduction What were the cornerstones of the Montreal outcomes ? Launch of negotiations for the future"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.date=2000&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=OF+CLIMATE+CHANGE+AND+THE+IMPACT+OF&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">OF CLIMATE CHANGE AND THE IMPACT OF</span>. <span class=\"date\">(2000)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2000", 
+      "date_sort": {
+        "$date": 946684800000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "UNFCCC workshop on Adverse effects of CC"
+        }
+      ], 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.192686", 
+      "rec_id": "53b11433-3a57-11e3-8ed2-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.192692", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "OF CLIMATE CHANGE AND THE IMPACT OF"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=355&amp;rft.date=2008&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=SUMMARY+OF+THE+UNFCCC+EXPERT+GROUP+A+BRIEF+HISTORY+OF+ADAPTATION+TO+CLIMATE&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">SUMMARY OF THE UNFCCC EXPERT GROUP A BRIEF HISTORY OF ADAPTATION TO CLIMATE</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">355</span> <span class=\"date\">(2008)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2008", 
+      "date_sort": {
+        "$date": 1199145600000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "UNFCCC Expert Group Meeting on Methods and Tools and on Data and Observations under the Nairobi Work Programme on Impacts, Vulnerability and Adaptation to Climate Change"
+        }
+      ], 
+      "part_issue": "355", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.193114", 
+      "rec_id": "53b1250a-3a57-11e3-a582-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.193120", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "SUMMARY OF THE UNFCCC EXPERT GROUP A BRIEF HISTORY OF ADAPTATION TO CLIMATE"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=409&amp;rft.date=2009&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=SUMMARY+OF+THE+UNFCCC+TECHNICAL&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">SUMMARY OF THE UNFCCC TECHNICAL</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">409</span> <span class=\"date\">(2009)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2009", 
+      "date_sort": {
+        "$date": 1230768000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "UNFCCC Technical Workshop on Increasing Economic Resilience to Climate Change and Reducing Reliance on Vulnerable Economic Sectors through Economic Diversification"
+        }
+      ], 
+      "part_issue": "409", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.193539", 
+      "rec_id": "53b135a3-3a57-11e3-b4fa-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.193544", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "SUMMARY OF THE UNFCCC TECHNICAL"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=126&amp;rft.date=2000&amp;rft.volume=12&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=SUMMARY+OF+THE+WORKSHOP+ON+BEST&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">SUMMARY OF THE WORKSHOP ON BEST</span>. <span class=\"part_volume\">12</span>.<span class=\"part_issue\">126</span> <span class=\"date\">(2000)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2000", 
+      "date_sort": {
+        "$date": 946684800000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "UNFCCC workshop on best practices in policies and measures"
+        }
+      ], 
+      "part_issue": "126", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "part_volume": "12", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.193976", 
+      "rec_id": "53b146b5-3a57-11e3-a500-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.193981", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "SUMMARY OF THE WORKSHOP ON BEST"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.date=2009&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=UNFCCC+TECHNICAL+WORKSHOP+ON&amp;rft.genre=article\"></span><span class=\"creator\">ENB</span>. <span class=\"title\">UNFCCC TECHNICAL WORKSHOP ON</span>. <span class=\"date\">(2009)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "ENB", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2009", 
+      "date_sort": {
+        "$date": 1230768000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "UNFCCC Technical Workshop on Advancing the Integration of Approaches to Adaptation Planning"
+        }
+      ], 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.194398", 
+      "rec_id": "53b15730-3a57-11e3-8932-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.194403", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "UNFCCC TECHNICAL WORKSHOP ON"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=196&amp;rft.date=2011&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Rethinking+adaptation+for+a+4+%C2%B0+C+world&amp;rft.genre=article\"></span><span class=\"creator\">Smith, Mark Stafford</span>. <span class=\"title\">Rethinking adaptation for a 4 ° C world</span>. <span class=\"date\">(2011)</span>. <span class=\"part_page_begin\">196</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Smith", 
+            "name_given": "Mark Stafford", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2011", 
+      "date_sort": {
+        "$date": 1293840000000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Complexity and uncertainty can be reduced by a systematic approach to categorizing the interactions between decision lifetime, the type of uncertainty in the relevant drivers of change and the nature of adaptation response options."
+        }
+      ], 
+      "part_page_begin": "196", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.195014", 
+      "rec_id": "53b16f42-3a57-11e3-8190-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.195020", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Rethinking adaptation for a 4 ° C world"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=REPORT+OF+THE+CONFERENCE+OF+THE+PARTIES+ON+ITS+SECOND+SESSION%2C+HELD+AT+GENEVA+FROM+8+TO+19+JULY+1996&amp;rft.genre=article&amp;rft.date=1996\"></span><span class=\"creator\">UNFCCC</span>. <span class=\"title\">REPORT OF THE CONFERENCE OF THE PARTIES ON ITS SECOND SESSION, HELD AT GENEVA FROM 8 TO 19 JULY 1996</span>. <span class=\"date\">(1996)</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "UNFCCC", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1996", 
+      "date_sort": {
+        "$date": 820454400000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "Design of the Global Environment Facility"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.195447", 
+      "rec_id": "53b18021-3a57-11e3-bd9a-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.195452", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "REPORT OF THE CONFERENCE OF THE PARTIES ON ITS SECOND SESSION, HELD AT GENEVA FROM 8 TO 19 JULY 1996"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=December&amp;rft.date=2008&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=A+Global+Financial+Architecture+for+Climate+Change&amp;rft.genre=article\"></span><span class=\"creator\">WWF</span>. <span class=\"title\">A Global Financial Architecture for Climate Change</span>. <span class=\"part_issue\">December</span> <span class=\"date\">(2008)</span>. <span class=\"part_page_begin\">1</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "WWF", 
+            "rec_class": "Orgunit", 
+            "rec_metajson": 1
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "2008", 
+      "date_sort": {
+        "$date": 1199145600000
+      }, 
+      "descriptions": [
+        {
+          "language": "und", 
+          "value": "A Global Financial Architecture for Climate Change"
+        }
+      ], 
+      "part_issue": "December", 
+      "part_page_begin": "1", 
+      "part_page_end": "", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.195874", 
+      "rec_id": "53b190d9-3a57-11e3-a49b-406c8f07170d", 
+      "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.195879", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "A Global Financial Architecture for Climate Change"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=201&amp;rft.issue=2&amp;rft.epage=213&amp;rft.date=199307&amp;rft.volume=4&amp;rft.atitle=The+title+of+the+work&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=The+name+of+the+journal&amp;rft.genre=article\"></span><span class=\"creator\">Adams, Peter</span>. \"<span class=\"title\">The title of the work</span>.\" <span class=\"title\">The name of the journal</span>. <span class=\"part_volume\">4</span>.<span class=\"part_issue\">2</span> <span class=\"date\">(199307)</span>. <span class=\"part_page_begin\">201</span>-<span class=\"part_page_end\">213</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -16,6 +2043,9 @@
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -31,15 +2061,24 @@
         }
       ], 
       "part_issue": "2", 
+      "part_page_begin": "201", 
       "part_page_end": "213", 
-      "part_page_start": "201", 
       "part_volume": "4", 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.205358", 
+      "rec_id": "53b302b3-3a57-11e3-baa5-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.205371", 
+      "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=The+name+of+the+publisher&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.edition=3&amp;rft.date=199307&amp;rft.btitle=The+title+of+the+work&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Babington, Peter</span>. <span class=\"title\">The title of the work</span>. <span class=\"edition\">3 ed.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">The name of the publisher</span>, <span class=\"part_volume\">4</span>. <span class=\"date\">199307</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -52,6 +2091,9 @@
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -68,11 +2110,20 @@
         "The name of the publisher"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.206047", 
+      "rec_id": "53b31e28-3a57-11e3-abac-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.206053", 
+      "rec_status": "private", 
       "rec_type": "Book", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.btitle=The+title+of+the+work&amp;rft.genre=book&amp;rft.date=199307\"></span><span class=\"creator\">Caxton, Peter</span>. <span class=\"title\">The title of the work</span>. <span class=\"publication_places\">N.p.</span>: <span class=\"date\">199307</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -85,6 +2136,9 @@
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -96,11 +2150,20 @@
         "The address of the publisher"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.206610", 
+      "rec_id": "53b33426-3a57-11e3-98bb-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.206616", 
+      "rec_status": "private", 
       "rec_type": "Booklet", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=The+publisher&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=213&amp;rft.date=199307&amp;rft.btitle=The+title+of+the+book&amp;rft.atitle=The+title+of+the+work&amp;ctx_ver=Z39.88-2004&amp;rft.genre=conference\"></span><span class=\"creator\">Draper, Peter</span>, <span class=\"creator\">The editor, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">The editor, <span class=\"creator_role\">ed.</span></span> \"<span class=\"title\">The title of the work</span>.\" <span class=\"title\">The title of the book</span>. <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">The publisher</span>, <span class=\"part_volume\">4</span>. <span class=\"date\">199307</span>. <span class=\"part_page_begin\">213</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -119,9 +2182,21 @@
             "rec_metajson": 1
           }, 
           "role": "edt"
+        }, 
+        {
+          "agent": {
+            "name_family": "editor", 
+            "name_given": "The", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "pbd"
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -137,7 +2212,7 @@
         }
       ], 
       "part_number": "5", 
-      "part_page_start": "213", 
+      "part_page_begin": "213", 
       "part_volume": "4", 
       "publisher_places": [
         "The address of the publisher"
@@ -146,11 +2221,20 @@
         "The publisher"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.207571", 
+      "rec_id": "53b359b0-3a57-11e3-a887-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.207577", 
+      "rec_status": "private", 
       "rec_type": "ConferencePaper", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=The+name+of+the+publisher&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=201&amp;rft.epage=213&amp;rft.edition=3&amp;rft.date=199307&amp;rft.btitle=The+title+of+the+work&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Eston, Peter</span>. <span class=\"title\">The title of the work</span>. <span class=\"edition\">3 ed.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">The name of the publisher</span>, <span class=\"part_volume\">4</span>. <span class=\"date\">199307</span>. <span class=\"part_page_begin\">201</span>-<span class=\"part_page_end\">213</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -163,6 +2247,9 @@
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -172,8 +2259,8 @@
       "edition": "3", 
       "part_chapter_number": "8", 
       "part_number": "5", 
+      "part_page_begin": "201", 
       "part_page_end": "213", 
-      "part_page_start": "201", 
       "part_volume": "4", 
       "publisher_places": [
         "The address of the publisher"
@@ -182,11 +2269,20 @@
         "The name of the publisher"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.208256", 
+      "rec_id": "53b37473-3a57-11e3-9e24-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.208262", 
+      "rec_status": "private", 
       "rec_type": "BookPart", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=The+name+of+the+publisher&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=201&amp;rft.epage=213&amp;rft.edition=3&amp;rft.date=199307&amp;rft.btitle=The+title+of+the+book&amp;rft.atitle=The+title+of+the+work&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Farindon, Peter</span>, <span class=\"creator\">The editor, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">The editor, <span class=\"creator_role\">ed.</span></span> \"<span class=\"title\">The title of the work</span>.\" <span class=\"title\">The title of the book</span>. <span class=\"edition\">3 ed.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">The name of the publisher</span>, <span class=\"part_volume\">4</span>. <span class=\"date\">199307</span>. <span class=\"part_page_begin\">201</span>-<span class=\"part_page_end\">213</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -205,9 +2301,21 @@
             "rec_metajson": 1
           }, 
           "role": "edt"
+        }, 
+        {
+          "agent": {
+            "name_family": "editor", 
+            "name_given": "The", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "pbd"
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -225,8 +2333,8 @@
       ], 
       "part_chapter_number": "8", 
       "part_number": "5", 
+      "part_page_begin": "201", 
       "part_page_end": "213", 
-      "part_page_start": "201", 
       "part_volume": "4", 
       "publisher_places": [
         "The address of the publisher"
@@ -235,11 +2343,20 @@
         "The name of the publisher"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.209283", 
+      "rec_id": "53b39c8f-3a57-11e3-82e6-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.209289", 
+      "rec_status": "private", 
       "rec_type": "BookPart", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"creator\">Gainsford, Peter</span>. <span class=\"title\">The title of the work</span>. <span class=\"edition\">3 ed.</span> <span class=\"date\">199307</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -252,6 +2369,9 @@
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -263,11 +2383,20 @@
         "The address of the publisher"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.209930", 
+      "rec_id": "53b3b5e8-3a57-11e3-8483-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.209936", 
+      "rec_status": "private", 
       "rec_type": "Manuel", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.atitle=The+title+of+the+work&amp;ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.au=Harwood%2C+Peter&amp;rft.date=199307\"></span><span class=\"creator\">Harwood, Peter</span>. <span class=\"title\">The title of the work</span>. <span class=\"thesis_degree\">MA thesis.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"date\">199307</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -280,6 +2409,9 @@
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -290,11 +2422,20 @@
         "The address of the publisher"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.210380", 
+      "rec_id": "53b3c735-3a57-11e3-aaf5-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.210386", 
+      "rec_status": "private", 
       "rec_type": "MasterThesis", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.btitle=The+title+of+the+work&amp;rft.genre=unknown&amp;rft.date=199307\"></span><span class=\"creator\">Isley, Peter</span>. <span class=\"title\">The title of the work</span>. <span class=\"date\">199307</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -307,6 +2448,9 @@
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -315,11 +2459,20 @@
       ], 
       "published_how": "How it was published", 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.210907", 
+      "rec_id": "53b3dc14-3a57-11e3-9d14-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.210913", 
+      "rec_status": "private", 
       "rec_type": "UnpublishedDocument", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.atitle=The+title+of+the+work&amp;ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.au=Joslin%2C+Peter&amp;rft.date=199307\"></span><span class=\"creator\">Joslin, Peter</span>. <span class=\"title\">The title of the work</span>. <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"date\">199307</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -332,6 +2485,9 @@
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -342,11 +2498,20 @@
         "The address of the publisher"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.211422", 
+      "rec_id": "53b3f030-3a57-11e3-89dd-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.211427", 
+      "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=The+name+of+the+publisher&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.date=199307&amp;rft.btitle=The+title+of+the+work&amp;ctx_ver=Z39.88-2004&amp;rft.genre=proceeding\"></span><span class=\"creator\">Kidwelly, Peter, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Peter Kidwelly, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">The title of the work</span>. <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">The name of the publisher</span>, <span class=\"part_volume\">4</span>. <span class=\"date\">199307</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -356,9 +2521,21 @@
             "rec_metajson": 1
           }, 
           "role": "edt"
+        }, 
+        {
+          "agent": {
+            "name_family": "Kidwelly", 
+            "name_given": "Peter", 
+            "rec_class": "Person", 
+            "rec_metajson": 1
+          }, 
+          "role": "pbd"
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -374,11 +2551,20 @@
         "The name of the publisher"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.212165", 
+      "rec_id": "53b40d42-3a57-11e3-94cc-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.212171", 
+      "rec_status": "private", 
       "rec_type": "ConferenceProceedings", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"creator\">Lambert, Peter</span>. <span class=\"title\">The title of the work</span>. <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">The institution that published</span>, <span class=\"part_issue\">2</span> <span class=\"date\">199307</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -391,6 +2577,9 @@
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -405,11 +2594,20 @@
         "The institution that published"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.212728", 
+      "rec_id": "53b42335-3a57-11e3-97d1-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.212733", 
+      "rec_status": "private", 
       "rec_type": "TechReport", 
       "title": "The title of the work"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.btitle=The+title+of+the+work&amp;rft.genre=unknown&amp;rft.date=199307\"></span><span class=\"creator\">Marcheford, Peter</span>. <span class=\"title\">The title of the work</span>. <span class=\"date\">199307</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -422,6 +2620,9 @@
         }
       ], 
       "date_issued": "199307", 
+      "date_sort": {
+        "$date": 741484800000
+      }, 
       "descriptions": [
         {
           "language": "und", 
@@ -429,7 +2630,11 @@
         }
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.213181", 
+      "rec_id": "53b434e8-3a57-11e3-9f84-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:29.213186", 
+      "rec_status": "private", 
       "rec_type": "UnpublishedDocument", 
       "title": "The title of the work"
     }

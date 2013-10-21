@@ -252,7 +252,7 @@
                 "en": "Time Period Covered",
                 "fr": "Période couverte"
             },
-            "filter_date_start": "year_range_start",
+            "filter_date_begin": "year_range_begin",
             "filter_date_end": "year_range_end",
             "required": true,
             "type_ui": "YearRangeField"

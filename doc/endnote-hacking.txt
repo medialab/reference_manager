@@ -45,7 +45,7 @@ Nous avons défini le détournement d'EndNote suivant afin d'enregistrer les don
 *- TITRE (2) DU DOCUMENT  qui le contient (livre, article, etc.) : Image Source Program : /titles/secondary-title/style : is_part_ofs/title
 - DATE (2) DU DOCUMENT qui le contient (livre, article, etc.) : Date : 
 - TITRE (3) [Pour Julien : si ‘Translated Tile’ : associer la date, Place Published, Publisher, Description/pages à ce translated Title] : Translated Title : /titles/translated-title/style : is_part_ofs/is_part_ofs/title
-- PAGES : Description : /pages/style : extent_pages ou part_page_start et part_page_end
+- PAGES : Description : /pages/style : extent_pages ou part_page_begin et part_page_end
 - VOLUME : Image Size : /volume/style : part_volume 
 - NUMERO (issue) : Number : /number/style : part_issue
 - EDITEUR : Publisher : /publisher/style : publisher

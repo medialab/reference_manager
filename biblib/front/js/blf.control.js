@@ -112,7 +112,7 @@ blf.init = function(config) {
         id: 'blf.Property',
         includes: true,
         struct: {
-          filter_date_start: '?string',
+          filter_date_begin: '?string',
           filter_date_end: '?string',
           property: '?string',
           multiple: '?boolean',

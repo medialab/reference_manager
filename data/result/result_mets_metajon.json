@@ -4,12 +4,50 @@
   "rec_metajson": 1, 
   "records": [
     {
+      "citations": {
+        "html": {
+          "mla": ""
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
       "dmds": [
         {
           "meta_type": "DDI", 
           "rec_class": "Warpper", 
-          "rec_id": "DMD_00001", 
-          "rec_id_group": null, 
+          "rec_id": "dmd_collection", 
+          "rec_id_group": "collection", 
+          "rec_metajson": 1, 
+          "records": [
+            null
+          ]
+        }, 
+        {
+          "meta_type": "DC", 
+          "rec_class": "Warpper", 
+          "rec_id": "dmd_record_000001", 
+          "rec_id_group": "record", 
+          "rec_metajson": 1, 
+          "records": [
+            null
+          ]
+        }, 
+        {
+          "meta_type": "DC", 
+          "rec_class": "Warpper", 
+          "rec_id": "dmd_record_000002", 
+          "rec_id_group": "record", 
+          "rec_metajson": 1, 
+          "records": [
+            null
+          ]
+        }, 
+        {
+          "meta_type": "DC", 
+          "rec_class": "Warpper", 
+          "rec_id": "dmd_record_000003", 
+          "rec_id_group": "record", 
           "rec_metajson": 1, 
           "records": [
             null
@@ -17,10 +55,22 @@
         }
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:35.330402", 
+      "rec_id": "57599e2e-3a57-11e3-bcee-406c8f07170d", 
       "rec_metajson": 1, 
-      "rec_source": "test"
+      "rec_modified_date": "2013-10-21T15:47:35.330414", 
+      "rec_source": "test", 
+      "rec_status": "private"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": ""
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
       "dmds": [
         {
           "meta_type": "DC", 
@@ -48,10 +98,22 @@
         }
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:35.416080", 
+      "rec_id": "5766b0fd-3a57-11e3-8e52-406c8f07170d", 
       "rec_metajson": 1, 
-      "rec_source": "test"
+      "rec_modified_date": "2013-10-21T15:47:35.416092", 
+      "rec_source": "test", 
+      "rec_status": "private"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": ""
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
       "dmds": [
         {
           "meta_type": "DC", 
@@ -81,10 +143,22 @@
         }
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:35.613346", 
+      "rec_id": "5784caae-3a57-11e3-b214-406c8f07170d", 
       "rec_metajson": 1, 
-      "rec_source": "test"
+      "rec_modified_date": "2013-10-21T15:47:35.613358", 
+      "rec_source": "test", 
+      "rec_status": "private"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": ""
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
       "dmds": [
         {
           "meta_type": "DC", 
@@ -113,10 +187,22 @@
         }
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:35.766830", 
+      "rec_id": "579c3630-3a57-11e3-b64f-406c8f07170d", 
       "rec_metajson": 1, 
-      "rec_source": "test"
+      "rec_modified_date": "2013-10-21T15:47:35.766843", 
+      "rec_source": "test", 
+      "rec_status": "private"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": ""
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
       "dmds": [
         {
           "meta_type": "DC", 
@@ -143,10 +229,22 @@
         }
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:35.999200", 
+      "rec_id": "57bfab1c-3a57-11e3-9b38-406c8f07170d", 
       "rec_metajson": 1, 
-      "rec_source": "test"
+      "rec_modified_date": "2013-10-21T15:47:35.999213", 
+      "rec_source": "test", 
+      "rec_status": "private"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": ""
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
       "dmds": [
         {
           "meta_type": "DC", 
@@ -169,10 +267,22 @@
         }
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.257173", 
+      "rec_id": "57e7082e-3a57-11e3-b569-406c8f07170d", 
       "rec_metajson": 1, 
-      "rec_source": "test"
+      "rec_modified_date": "2013-10-21T15:47:36.257185", 
+      "rec_source": "test", 
+      "rec_status": "private"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": ""
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
       "dmds": [
         {
           "meta_type": "MODS", 
@@ -1576,10 +1686,22 @@
         }
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.386251", 
+      "rec_id": "57faba35-3a57-11e3-a5cb-406c8f07170d", 
       "rec_metajson": 1, 
-      "rec_source": "test"
+      "rec_modified_date": "2013-10-21T15:47:36.386263", 
+      "rec_source": "test", 
+      "rec_status": "private"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": ""
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
       "dmds": [
         {
           "meta_type": "MODS", 
@@ -1593,8 +1715,12 @@
         }
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.397463", 
+      "rec_id": "57fc7087-3a57-11e3-8ee2-406c8f07170d", 
       "rec_metajson": 1, 
-      "rec_source": "test"
+      "rec_modified_date": "2013-10-21T15:47:36.397472", 
+      "rec_source": "test", 
+      "rec_status": "private"
     }
   ], 
   "title": "Test mets"

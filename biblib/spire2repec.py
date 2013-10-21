@@ -21,7 +21,7 @@ console.setup_console()
 def main():
     print("spire2repec")
     # init corpus
-    date_start = datetime.datetime.now()
+    date_begin = datetime.datetime.now()
 
     data_dir = os.path.join(os.path.dirname(__file__), os.pardir, "data")
     print "data_dir: " + data_dir
@@ -41,7 +41,7 @@ def main():
     init_corpus.init(corpus)
 
     date_init = datetime.datetime.now()
-    chrono.chrono_trace("Initialize corpus", date_start, date_init, None)
+    chrono.chrono_trace("Initialize corpus", date_begin, date_init, None)
 
     # import
     with open(error_file_path, "w") as error_file:

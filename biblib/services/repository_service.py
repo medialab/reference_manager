@@ -159,9 +159,9 @@ def search(corpus, search_query):
     if "filter_date_end" in search_query:
         filter_date_end = date_service.parse_date(search_query["filter_date_end"])
         filter_query.append({"date_sort": {"$lte": filter_date_end}})
-    if "filter_date_start" in search_query:
-        filter_date_start = date_service.parse_date(search_query["filter_date_start"])
-        filter_query.append({"date_sort": {"$gte": filter_date_start}})
+    if "filter_date_begin" in search_query:
+        filter_date_begin = date_service.parse_date(search_query["filter_date_begin"])
+        filter_query.append({"date_sort": {"$gte": filter_date_begin}})
     if "filter_languages" in search_query:
         filter_query.append({"languages": {"$in": search_query["filter_languages"]}})
     if "filter_types" in search_query:

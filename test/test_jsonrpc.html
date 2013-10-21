@@ -7,7 +7,8 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $.jsonRPC.setup({
-                    endPoint : 'http://modesofexistence.org/biblio_manager_v4',
+                    endPoint : 'http://localhost:8080',
+                    //endPoint : 'http://localhost:8080',
                     //endPoint : 'http://modesofexistence.org/biblio_manager_dev',
                     //endPoint : 'http://modesofexistence.org/biblio_manager_v4',
                     namespace : ''
@@ -26,8 +27,8 @@
                 $("input#metadata_by_rec_ids_button").click(function() {
                     var my_list = $("input#metadata_by_rec_ids_input").val().split(",")
                     $.jsonRPC.request("metadata_by_rec_ids", {
-                        //params : [["296","579","697"],"metajson"],
-                        params : [my_list,"metajson"],
+                        //params : ["corpus",["296","579","697"],"metajson"],
+                        params : ["aime",my_list,"metajson"],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#metadata_by_rec_ids_result"));
                         },
@@ -39,8 +40,8 @@
                 $("input#metadata_by_mongo_ids_button").click(function() {
                     var my_list = $("input#metadata_by_mongo_ids_input").val().split(",")
                     $.jsonRPC.request("metadata_by_mongo_ids", {
-                        //params : [["516c07483b71f34764274feb","516c08f63b71f34a8a77b908","516c0b963b71f34a8a77b909"],"metajson"],
-                        params : [my_list,"metajson"],
+                        //params : ["aime",["516c07483b71f34764274feb","516c08f63b71f34a8a77b908","516c0b963b71f34a8a77b909"],"metajson"],
+                        params : ["aime",my_list,"metajson"],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#metadata_by_mongo_ids_result"));
                         },
@@ -52,8 +53,8 @@
                 $("input#citation_button").click(function() {
                     var my_list = $("input#citation_input").val().split(",")
                     $.jsonRPC.request("citation_by_rec_ids", {
-                        //params : [["296","579","697"],"mla","html"],
-                        params : [my_list,"mla","html"],
+                        //params : ["aime",["296","579","697"],"mla","html"],
+                        params : ["aime",my_list,"mla","html"],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#citation_result"));
                         },
@@ -64,8 +65,8 @@
                 });
                 $("input#type_button").click(function() {
                     $.jsonRPC.request("type", {
-                        //params : ["identifier_type","fr"],
-                        params : [$("input#type_input").val(),"fr"],
+                        //params : ["aime","identifier_type","fr"],
+                        params : ["aime",$("input#type_input").val(),"fr"],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#type_result"));
                         },
@@ -76,7 +77,7 @@
                 });
                 $("input#types_button").click(function() {
                     $.jsonRPC.request("types", {
-                        params : ["fr"],
+                        params : ["aime","fr"],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#types_result"));
                         },
@@ -87,8 +88,8 @@
                 });
                 $("input#field_button").click(function() {
                     $.jsonRPC.request("field", {
-                        //params : ["Book","fr"],
-                        params : [$("input#field_input").val(),"fr"],
+                        //params : ["aime","Book","fr"],
+                        params : ["aime",$("input#field_input").val(),"fr"],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#field_result"));
                         },
@@ -99,8 +100,8 @@
                 });
                 $("input#fields_button").click(function() {
                     $.jsonRPC.request("fields", {
-                        //params : ["fr"],
-                        params : ["fr"],
+                        //params : ["aime","fr"],
+                        params : ["aime","fr"],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#fields_result"));
                         },
@@ -111,7 +112,7 @@
                 });
                 $("input#search_mongo_button").click(function() {
                     $.jsonRPC.request("search_mongo", {
-                        params : [JSON.parse($("input#search_mongo_input").val())],
+                        params : ["aime",JSON.parse($("input#search_mongo_input").val())],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#search_mongo_result"));
                         },
@@ -122,7 +123,7 @@
                 });
                 $("input#search_button").click(function() {
                     $.jsonRPC.request("search", {
-                        params : [JSON.parse($("textarea#search_input").val())],
+                        params : ["aime",JSON.parse($("textarea#search_input").val())],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#search_result"));
                         },
@@ -133,7 +134,7 @@
                 });
                 $("input#save_button").click(function() {
                     $.jsonRPC.request("save", {
-                        params : [$("textarea#save_input").val()],
+                        params : ["aime",JSON.parse($("textarea#save_input").val())],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#save_result"));
                         },
@@ -142,9 +143,20 @@
                         }
                     });
                 });
+                $("input#preview_button").click(function() {
+                    $.jsonRPC.request("preview", {
+                        params : [[JSON.parse($("textarea#preview_input").val())],["mla"],["html"]],
+                        success : function(data) {
+                            $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#preview_result"));
+                        },
+                        error : function(data) {
+                            alert(JSON.stringify(data));
+                        }
+                    });
+                });
                 $("input#delete_button").click(function() {
                     $.jsonRPC.request("delete", {
-                        params : [$("input#delete_input").val()],
+                        params : ["aime",$("input#delete_input").val()],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#delete_result"));
                         },
@@ -155,7 +167,7 @@
                 });
                 $("input#set_metadata_property_button").click(function() {
                     $.jsonRPC.request("set_metadata_property", {
-                        params : [$("input#set_metadata_property_rec_id").val(),$("input#set_metadata_property_key").val(),$("input#set_metadata_property_value").val()],
+                        params : ["aime",$("input#set_metadata_property_rec_id").val(),$("input#set_metadata_property_key").val(),$("input#set_metadata_property_value").val()],
                         success : function(data) {
                             $("<p />").text(JSON.stringify(data.result)).appendTo($("pre#set_metadata_property_result"));
                         },
@@ -264,8 +276,8 @@
             <textarea name="search_input" id="search_input" rows="10" cols="30"></textarea>
             example : <pre>{
     "filter_class": "Document",
+    "filter_date_begin": "2010-01-01",
     "filter_date_end": "2010-12-31",
-    "filter_date_start": "2010-01-01",
     "filter_favorite": true,
     "filter_langues": [
         "en",
@@ -383,6 +395,16 @@
         </p>
         <p>Results :</p>
         <pre id="save_result"></pre>
+
+        <h2>Method preview</h2>
+        <p><label for="preview_input">JSON to preview</label> : 
+            <textarea name="preview_input" id="preview_input" rows="10" cols="30"></textarea>
+        </p>
+        <p>
+            <input name="preview_button" id="preview_button" value="Preview metadata in JSON" type="button" />
+        </p>
+        <p>Results :</p>
+        <pre id="preview_result"></pre>
 
         <h2>Method delete</h2>
         <p><label for="delete_input">rec_id to delete</label> : 

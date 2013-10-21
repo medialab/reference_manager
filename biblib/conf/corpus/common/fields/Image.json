@@ -155,7 +155,7 @@
                 "en": "Start page",
                 "fr": "Page de d\u00e9but"
             },
-            "property": "part_page_start",
+            "property": "part_page_begin",
             "required": false,
             "type_ui": "CharField"
         },

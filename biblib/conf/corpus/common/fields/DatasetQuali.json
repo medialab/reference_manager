@@ -51,7 +51,7 @@
                 "en": "Time Period Covered",
                 "fr": "Période couverte"
             },
-            "filter_date_start": "date_period_covered_start",
+            "filter_date_begin": "date_period_covered_begin",
             "filter_date_end": "date_period_covered_end",
             "required": true,
             "type_ui": "YearRangeField"
@@ -147,7 +147,7 @@
                 "en": "Study documents dates",
                 "fr": "Dates des documents de l'enquête"
             },
-            "filter_date_start": "documents_date_start",
+            "filter_date_begin": "documents_date_begin",
             "filter_date_end": "documents_date_end",
             "required": true,
             "type_ui": "YearRangeField"
@@ -157,7 +157,7 @@
                 "en": "Data collection dates",
                 "fr": "Dates de collecte des données"
             },
-            "filter_date_start": "data_collection_date_start",
+            "filter_date_begin": "data_collection_date_begin",
             "filter_date_end": "data_collection_date_end",
             "required": true,
             "type_ui": "YearRangeField"

@@ -156,6 +156,11 @@ xmltag_to_input_format = {
     'type': 'dc'
 }
 
+CLASS_DOCUMENT = "Document"
+CLASS_ORGUNIT = "Orgunit"
+CLASS_PERSON = "Person"
+CLASS_PROJECT = "Project"
+
 DOC_TYPE_ANCIENTTEXT = "AncientText"
 DOC_TYPE_ANNOTATIONARTICLE = "AnnotationArticle"
 DOC_TYPE_ARTICLEREVIEW = "ArticleReview"

@@ -232,7 +232,7 @@ def ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record):
                     else:
                         document["date_issued"] = value
                 elif key == "SP":
-                    document["part_page_start"] = value
+                    document["part_page_begin"] = value
                 elif key == "EP":
                     document["part_page_end"] = value
                 elif key == "VL":

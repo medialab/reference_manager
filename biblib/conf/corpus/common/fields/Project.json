@@ -39,7 +39,7 @@
                 "en": "Time Period",
                 "fr": "Période"
             },
-            "filter_date_start": "date_period_start",
+            "filter_date_begin": "date_period_begin",
             "filter_date_end": "date_period_end",
             "required": true,
             "type_ui": "YearRangeField"

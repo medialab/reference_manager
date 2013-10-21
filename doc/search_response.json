@@ -18,8 +18,8 @@
     "result_offset": 0,
     "search_query": {
         "filter_class": "Document",
+        "filter_date_begin": "2010-01-01",
         "filter_date_end": "2010-12-31",
-        "filter_date_start": "2010-01-01",
         "filter_favorite": true,
         "filter_langues": [
             "en",

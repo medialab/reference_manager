@@ -4,13 +4,20 @@
   "rec_metajson": 1, 
   "records": [
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=4&amp;rft.epage=6&amp;rft.date=2010-01&amp;rft.atitle=European+Union+in+the+Post-Cold+War+International+System+%3A+a+Third-party&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Security+Policy+Brief&amp;rft.genre=article\"></span><span class=\"creator\">Ramel, Frédéric</span>. \"<span class=\"title\">The European Union in the Post-Cold War International System : a Third-party</span>.\" <span class=\"title\">Security Policy Brief</span>. <span class=\"publishers\">Egmont (Royal Institute of International Relations)</span>, <span class=\"part_issue\">4</span> <span class=\"date\">(jan. 2010)</span>. <span class=\"part_page_begin\">1</span>-<span class=\"part_page_end\">6</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://spire.sciences-po.fr/hdl:/2441/dambferfb7dfprc9m2l36952j/resources/spb-4-ramel-strategy-for-eu-third-party.pdf\" target=\"_blank\">http://spire.sciences-po.fr/hdl:/2441/dambferfb7dfprc9m2l36952j/resources/spb-4-ramel-strategy-for-eu-third-party.pdf</a>&gt;</span>"
+        }
+      }, 
       "creators": [
         {
           "affiliation": {
-            "name": "Centre d'études et de recherches internationales", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q380gh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Ramel", 
@@ -23,6 +30,9 @@
         }
       ], 
       "date_issued": "2010-01", 
+      "date_sort": {
+        "$date": 1262304000000
+      }, 
       "descriptions": [
         {
           "language": "en", 
@@ -45,15 +55,18 @@
         "en"
       ], 
       "part_issue": "4", 
+      "part_page_begin": "1", 
       "part_page_end": "6", 
-      "part_page_start": "1", 
       "publishers": [
         "Egmont (Royal Institute of International Relations)"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:29.256328", 
+      "rec_id": "53bac9ca-3a57-11e3-becf-406c8f07170d", 
       "rec_metajson": 1, 
-      "rec_modified_date": "2013-04-05T00:09:49Z", 
+      "rec_modified_date": "2013-10-21T15:47:29.256338", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "resources": [
         {

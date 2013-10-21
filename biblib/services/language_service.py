@@ -1907,6 +1907,7 @@ def convert_rfc5646_to_iso639_2(rfc5646):
     # <iso_639_1or2_code> "-" <iso_15924_code> "-" <iso_3166_code>
 
     if rfc5646:
+        print "convert_rfc5646_to_iso639_2: rfc5646 = {}".format(rfc5646)
         rfc5646 = rfc5646.lower()
         first_minus_index = rfc5646.find("-")
 
@@ -1944,11 +1945,11 @@ def convert_rfc5646_to_iso639_1(rfc5646):
     return convert_iso639_2_to_iso639_1(convert_rfc5646_to_iso639_2(rfc5646))
 
 
-def convert_french_to_iso639_2(french):
-    if french:
-        french = french.lower()
-        if french in french_to_iso639_2:
-            return french_to_iso639_2[french]
+def convert_english_to_iso639_1(english):
+    if english:
+        english = english.lower()
+        if english in english_to_iso639_2:
+            return convert_iso639_2_to_iso639_1(english_to_iso639_2[english])
 
 
 def convert_english_to_iso639_2(english):
@@ -1963,6 +1964,30 @@ def convert_english_to_rfc5646(english):
     return convert_iso639_2_to_rfc5646(iso639_2)
 
 
+def convert_french_to_iso639_1(french):
+    if french:
+        french = french.lower()
+        if french in french_to_iso639_2:
+            return convert_iso639_2_to_iso639_1(french_to_iso639_2[french])
+
+
+def convert_french_to_iso639_2(french):
+    if french:
+        french = french.lower()
+        if french in french_to_iso639_2:
+            return french_to_iso639_2[french]
+
+
+def convert_unknown_format_to_iso639_1(unknown):
+    if unknown:
+        result = convert_rfc5646_to_iso639_1(unknown)
+        if not result:
+            result = convert_french_to_iso639_1(unknown)
+        if not result:
+            result = convert_english_to_iso639_1(unknown)
+        return result
+
+
 def convert_unknown_format_to_iso639_2(unknown):
     if unknown:
         result = convert_rfc5646_to_iso639_2(unknown)
@@ -1971,7 +1996,6 @@ def convert_unknown_format_to_iso639_2(unknown):
         if not result:
             result = convert_english_to_iso639_2(unknown)
         return result
-
 
 def test():
     print convert_iso639_2_to_iso639_1("fre")

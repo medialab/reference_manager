@@ -21,8 +21,10 @@ from biblib.crosswalks import ris_crosswalk
 from biblib.crosswalks import summonjson_crosswalk
 from biblib.crosswalks import unimarc_crosswalk
 from biblib.crosswalks import unixref_crosswalk
+from biblib.services import metajson_service
 from biblib.util import constants
 from biblib.util import jsonbson
+from biblib.util import xmletree
 
 
 def convert_native(input_data, input_format, output_format, source, only_first_record):
@@ -91,9 +93,9 @@ def convert_string(input_string, input_format, output_format, source, only_first
 
     if input_type is not None:
         if input_type == constants.FILE_TYPE_XMLETREE:
-            register_namespaces()
-            xmletree = ET.fromstring(input_string)
-            return convert_xmletree(xmletree, input_format, output_format, source, only_first_record)
+            xmletree.register_namespaces()
+            xmletree_element = ET.fromstring(input_string)
+            return convert_xmletree(xmletree_element, input_format, output_format, source, only_first_record)
 
         elif input_type == constants.FILE_TYPE_JSON:
             json_data = jsonbson.load_json_str(input_string)
@@ -110,7 +112,11 @@ def convert_string(input_string, input_format, output_format, source, only_first
 
 def convert_bibtex(bibtex_root, input_format, output_format, source, only_first_record):
     if bibtex_root:
+        # convert to metajson
         metajson_list = bibtex_crosswalk.bibtex_root_to_metasjon_list(bibtex_root, source, only_first_record)
+
+        # enhance metajson list
+        metajson_list = metajson_service.enhance_metajson_list(metajson_list)
         return convert_metajson_list(metajson_list, output_format)
 
 
@@ -120,9 +126,11 @@ def convert_marc(input_file_path, input_format, output_format, source, only_firs
             marc_file = open(input_file_path)
             marc_reader = MARCReader(marc_file, False, False)
             metajson_list = unimarc_crosswalk.unimarc_marcreader_to_metasjon_list(marc_reader, source, only_first_record)
-            print "coucou début"
+
+            # enhance metajson list
+            metajson_list = metajson_service.enhance_metajson_list(metajson_list)
+
             return convert_metajson_list(metajson_list, output_format)
-            print "coucou fin"
         finally:
             pass
 
@@ -139,6 +147,9 @@ def convert_txt_lines(txt_lines, input_format, output_format, source, only_first
                 metajson_list = ris_crosswalk.ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record)
             else:
                 print "Error: {} input_format not managed".format(input_format)
+
+            # enhance metajson list
+            metajson_list = metajson_service.enhance_metajson_list(metajson_list)
 
             return convert_metajson_list(metajson_list, output_format)
 
@@ -159,6 +170,9 @@ def convert_json(jsondict, input_format, output_format, source, only_first_recor
                 metajson_list = bibjson_crosswalk.bibjson_to_metajson_list(jsondict, source, only_first_record)
             else:
                 print "Error: {} input_format not managed".format(input_format)
+
+            # enhance metajson list
+            metajson_list = metajson_service.enhance_metajson_list(metajson_list)
 
             return convert_metajson_list(metajson_list, output_format)
 
@@ -189,11 +203,10 @@ def convert_xmletree(xmletree, input_format, output_format, source, only_first_r
             else:
                 print "Error: {} input_format not managed".format(input_format)
 
-            if metajson_list:
-                if output_format == constants.FORMAT_METAJSON:
-                    return metajson_list
-                else:
-                    return convert_metajson_list(metajson_list, output_format)
+            # enhance metajson list
+            metajson_list = metajson_service.enhance_metajson_list(metajson_list)
+
+            return convert_metajson_list(metajson_list, output_format)
 
 
 def convert_metajson_list(metajson_list, output_format):
@@ -213,11 +226,6 @@ def convert_metajson(metajson, output_format):
         return repec_crosswalk.metajson_to_repec(metajson)
     elif output_format == constants.FORMAT_BIBTEX:
         pass
-
-
-def register_namespaces():
-    for key in constants.xmlns_map:
-        ET.register_namespace(key, constants.xmlns_map[key])
 
 
 def guess_format_type(input_format):

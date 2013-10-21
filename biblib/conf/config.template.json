@@ -8,6 +8,10 @@
         "port": 8080
     },
     "default_corpus": "aime",
+    "citations" : {
+        "formats": ["html"],
+        "styles": ["mla"]
+    },
     "anta": {
         "endpoint": "http://anta.example.com/api/",
         "endpoint_frog": "http://anta.example.com/api-frog/",

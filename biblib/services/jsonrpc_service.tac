@@ -16,8 +16,10 @@ from operator import itemgetter
 from biblib.citations import citations_manager
 from biblib.services import config_service
 from biblib.services import crosswalks_service
+from biblib.services import metajson_service
 from biblib.services import repository_service
 from biblib.util import console
+from biblib.util import constants
 from biblib.util import exceptions
 from biblib.util import jsonbson
 
@@ -176,15 +178,14 @@ class References_repository(jsonrpc.JSONRPC):
         except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
-    # todo : rename citations
     def jsonrpc_citation_by_rec_ids(self, corpus, rec_ids, style="mla", format="html"):
-        """ get citations of a list of references
+        """ get citations for a list of metadatas by their rec_ids
             params:
                 - corpus: the corpus 
                 - rec_ids: list of known ids
-                - style: the style in which to wirte the citations
-                - format: the format wanted to describe citations
-            return the asked references in the specified format
+                - style: the style in which to format the citations (mla by default)
+                - format: the format wanted to describe citations (html by default)
+            return the asked citations in the specified format
         """
         # default corpus management
         if not corpus:
@@ -201,6 +202,27 @@ class References_repository(jsonrpc.JSONRPC):
         except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
+    def jsonrpc_preview(self, metadatas, styles, formats):
+        """ Add formated citations inside each metadata
+            params:
+                - metadatas: list of metadatas in the MetaJSON metadata format
+                - styles: the list of bibliographic style in which to format citations
+                - formats: the list of citation result format wanted to format citations
+            return the metadata with citations formated inside
+        """
+        try:
+            if metadatas:
+                metadatas = metajson_service.load_dict_list(metadatas)
+                results = []
+                for metadata in metadatas:
+                    if "rec_class" in metadata and metadata["rec_class"] == constants.CLASS_DOCUMENT:
+                        results.append(citations_manager.add_citations_to_metadata(metadata, styles, formats))
+                return jsonbson.bson_to_json(results)
+            else:
+                raise exceptions.metajsonprc_error(0)
+        except exceptions.metajsonprc_error as ex:
+            return jsonrpclib.Fault(ex.code, str(ex))
+
     def jsonrpc_search(self, corpus, search_query):
         """ search for one or more data from the repository
             params:
@@ -211,10 +233,10 @@ class References_repository(jsonrpc.JSONRPC):
         if not corpus:
             corpus = default_corpus
         try:
-            date_start = datetime.datetime.now()
+            date_begin = datetime.datetime.now()
             search_response = repository_service.search(corpus, search_query)
             date_end = datetime.datetime.now()
-            interval = date_end - date_start
+            interval = date_end - date_begin
             response_time = "{0:.3f}".format(interval.total_seconds() * 1000)
             search_response["response_time"] = response_time
             return jsonbson.bson_to_json(search_response)

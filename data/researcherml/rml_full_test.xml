@@ -66,58 +66,26 @@
       <textInput>excellent</textInput>
       <textOutput>good</textOutput>
     </languageCapability>
-    <olBiography xml:lang="en">Dr. Jean-Paul Fitoussi is a
-            Professor of Economics at Sciences Po (Paris) and President of the
-            Sciences Po’s Economic Research Centre.</olBiography>
-    <biography xml:lang="en">Dr. Jean-Paul Fitoussi is a Professor
-            of Economics at the Institut d'Etudes Politiques de Paris where he
-            has taught since 1982. Currently he is President of the Scientific
-            Council of the Institut d'Etudes Politiques de Paris and President of
-            the Observatoire Français des Conjonctures Econoniques, an institute
-            dedicated to economic research and forecasting. Born in 1942, Dr.
-            Fitoussi received a Ph.D. cum laude in Law and Economics from the
-            University of Strasbourg (France). His doctoral thesis was on
-            inflation, equilibria and unemployment. Professor Fitoussi began his
-            academic career as a lecturer and taught at the University of
-            Strasbourg. From1979 until 1983, he was a professor at the European
-            University Institute in Florence, and a visiting professor at the
-            University of California, Los Angeles, in 1984. ...</biography>
+    <olBiography xml:lang="en">Dr. Jean-Paul Fitoussi is a Professor of Economics at Sciences Po (Paris) and President of the Sciences Po’s Economic Research Centre.</olBiography>
+    <biography xml:lang="en">Dr. Jean-Paul Fitoussi is a Professor of Economics at the Institut d'Etudes Politiques de Paris where he has taught since 1982. Currently he is President of the Scientific Council of the Institut d'Etudes Politiques de Paris and President of the Observatoire Français des Conjonctures Econoniques, an institute dedicated to economic research and forecasting. Born in 1942, Dr. Fitoussi received a Ph.D. cum laude in Law and Economics from the University of Strasbourg (France). His doctoral thesis was on inflation, equilibria and unemployment. Professor Fitoussi began his academic career as a lecturer and taught at the University of Strasbourg. From1979 until 1983, he was a professor at the European University Institute in Florence, and a visiting professor at the University of California, Los Angeles, in 1984. ...</biography>
     <academicTitle xml:lang="en">Professor of Economics</academicTitle>
     <academicTitle xml:lang="fr">Professeur d'économie</academicTitle>
-    <honorificTitle xml:lang="en">Honorary Dean of the
-            Faculty of Economy of Strasbourg (France)</honorificTitle>
-    <honorificTitle xml:lang="en">Doctor Honoris Causa
-            from the University of Buenos Aires (Argentina)</honorificTitle>
-    <honorificTitle xml:lang="en">Professor onorario of
-            the University of Trento (Italy)</honorificTitle>
-    <honorificTitle xml:lang="fr">Officier de l'Ordre
-            National du Mérite (France)</honorificTitle>
-    <honorificTitle xml:lang="fr">Chevalier de la
-            Legion d'Honneur (France)</honorificTitle>
-    <award xml:lang="en">Prize of the Association Française de
-            Sciences Economiques (France)</award>
-    <award xml:lang="en">Rossi Prize of the Académie des Sciences
-            Morales et Politiques (France)</award>
-    <responsability xml:lang="en">Professor of
-            Economics at Sciences Po (France)</responsability>
-    <responsability xml:lang="en">President of the
-            Scientific Council of the Sciences Po (France)</responsability>
-    <responsability xml:lang="en">President of the
-            Sciences Po’s Economic Research Centre (France)</responsability>
-    <responsability xml:lang="en">Member of the Council of
-            Economic Analysis of the Prime Minister (France)</responsability>
-    <responsability xml:lang="en">General Secretary of
-            the International Economic Association</responsability>
-    <responsability xml:lang="en">Expert at the European
-            Parliament, Commission of Monetary and Economic Affairs</responsability>
-    <responsability xml:lang="en">Managing Editor of the
-            Revue de l’OFCE and the Lettre de I'OFCE</responsability>
-    <responsability xml:lang="en">Member of the Scientific
-            committee of Revue Française d'Economie, Critique Internationale,
-            International Labour Review</responsability>
-    <responsability xml:lang="en">Member of the Editorial
-            Board of Labour and The International Journal of Development Planning
-            Literature</responsability>
+    <honorificTitle xml:lang="en">Honorary Dean of the Faculty of Economy of Strasbourg (France)</honorificTitle>
+    <honorificTitle xml:lang="en">Doctor Honoris Causa from the University of Buenos Aires (Argentina)</honorificTitle>
+    <honorificTitle xml:lang="en">Professor onorario of the University of Trento (Italy)</honorificTitle>
+    <honorificTitle xml:lang="fr">Officier de l'Ordre National du Mérite (France)</honorificTitle>
+    <honorificTitle xml:lang="fr">Chevalier de la Legion d'Honneur (France)</honorificTitle>
+    <award xml:lang="en">Prize of the Association Française de Sciences Economiques (France)</award>
+    <award xml:lang="en">Rossi Prize of the Académie des Sciences Morales et Politiques (France)</award>
+    <responsability xml:lang="en">Professor of Economics at Sciences Po (France)</responsability>
+    <responsability xml:lang="en">President of the Scientific Council of the Sciences Po (France)</responsability>
+    <responsability xml:lang="en">President of the Sciences Po’s Economic Research Centre (France)</responsability>
+    <responsability xml:lang="en">Member of the Council of Economic Analysis of the Prime Minister (France)</responsability>
+    <responsability xml:lang="en">General Secretary of the International Economic Association</responsability>
+    <responsability xml:lang="en">Expert at the European Parliament, Commission of Monetary and Economic Affairs</responsability>
+    <responsability xml:lang="en">Managing Editor of the Revue de l’OFCE and the Lettre de I'OFCE</responsability>
+    <responsability xml:lang="en">Member of the Scientific committee of Revue Française d'Economie, Critique Internationale, International Labour Review</responsability>
+    <responsability xml:lang="en">Member of the Editorial Board of Labour and The International Journal of Development Planning Literature</responsability>
     <degree>
       <level>Ph.D</level>
       <title>Law and Economics</title>
@@ -136,15 +104,21 @@
       <description>A description...</description>
     </teaching>
     <researchCoverage authority="jel" authorityId="hdl:1234/5678" type="classification">D63</researchCoverage>
-    <researchCoverage type="keyword" xml:lang="en">Theories
-            of inflation</researchCoverage>
+    <researchCoverage type="keyword" xml:lang="en">Theories of inflation</researchCoverage>
     <researchCoverage type="keyword" xml:lang="en">Unemployment</researchCoverage>
-    <researchCoverage type="keyword" xml:lang="en">Foreign
-            trade and the role of macro-economic policies</researchCoverage>
+    <researchCoverage type="keyword" xml:lang="en">Foreign trade and the role of macro-economic policies</researchCoverage>
+    <ongoingResearch>
+      <description xml:lang="en">An english description A</description>
+      <description xml:lang="en">Une description française A</description>
+    </ongoingResearch>
+    <ongoingResearch>
+      <description xml:lang="en">A english description B</description>
+      <description xml:lang="en">Une description française B</description>
+    </ongoingResearch>
     <skill xml:lang="en">skill example</skill>
     <affiliation preferred="true">
       <identifier type="hdl">hdl:2441/72</identifier>
-      <name>Sciences Po’s Economic Research Centre (France)</name>
+      <name>Sciences Po’s Economic Research Center (France)</name>
       <relationType authority="rmlaffrole">president</relationType>
       <dateBegin encoding="iso8601">1990</dateBegin>
       <dateEnd encoding="iso8601" present="true"/>
@@ -164,12 +138,9 @@
   </person>
   <orgUnit type="laboratory">
     <identifier type="uri">ofce.sciences-po.fr</identifier>
-    <name xml:lang="fr">Centre de recherche en économie de Sciences
-            Po</name>
-    <nameAlternative xml:lang="en">Sciences Po’s
-            Economic Research Centre</nameAlternative>
-    <nameAlternative xml:lang="en">French Economic
-            Observatory</nameAlternative>
+    <name xml:lang="fr">Centre de recherche en économie de Sciences Po</name>
+    <nameAlternative xml:lang="en">Sciences Po’s Economic Research Centre</nameAlternative>
+    <nameAlternative xml:lang="en">French Economic Observatory</nameAlternative>
     <acronym>OFCE</acronym>
     <nationality authority="iso3166-1-a2">FR</nationality>
     <dateOfFoundation encoding="iso8601">1981</dateOfFoundation>
@@ -192,15 +163,8 @@
     <headcount year="2008">40</headcount>
     <headcount year="2007">39</headcount>
     <turnover currency="EUR" year="2008">100000</turnover>
-    <olDescription xml:lang="en">The OFCE is both a university
-            research centre and an institution for forecasting and evaluating
-            public policies.</olDescription>
-    <description xml:lang="en">Sciences Po’s Economic
-            Research Centre – The French Economic Observatory, or OFCE – is
-            chaired by Jean-Paul Fitoussi, university professor at the Institut
-            d’Etudes Politiques, Paris. The Observatory’s first chairman was
-            Jean-Marcel Jeanneney, former minister and professor emeritus of the
-            University of Paris Panthéon-Sorbonne. </description>
+    <olDescription xml:lang="en">The OFCE is both a university research centre and an institution for forecasting and evaluating public policies.</olDescription>
+    <description xml:lang="en">Sciences Po’s Economic Research Centre – The French Economic Observatory, or OFCE – is chaired by Jean-Paul Fitoussi, university professor at the Institut d’Etudes Politiques, Paris. The Observatory’s first chairman was Jean-Marcel Jeanneney, former minister and professor emeritus of the University of Paris Panthéon-Sorbonne. </description>
     <award xml:lang="en">Prize of the ...</award>
     <researchCoverage type="keyword" xml:lang="en">Economic</researchCoverage>
     <researchCoverage authority="jel" id="A10" type="classification">Macro-economic</researchCoverage>
@@ -228,16 +192,11 @@
           <postrestrictions/>
         </postprints>
         <conditions>
-          <condition>Publishers version/PDF may be used on authors
-                        personal or institutional website</condition>
-          <condition>Authors own version of final article on e-print
-                        servers</condition>
+          <condition>Publishers version/PDF may be used on authors personal or institutional website</condition>
+          <condition>Authors own version of final article on e-print servers</condition>
           <condition>Must link to publisher version or journal home page</condition>
-          <condition>Publisher copyright and source must be
-                        acknowledged</condition>
-          <condition>If funding agency rules apply, authors may post
-                        articles in PubMed Central 12 months after publication or use
-                        Author Select or AIP Access X-Press to comply.</condition>
+          <condition>Publisher copyright and source must be acknowledged</condition>
+          <condition>If funding agency rules apply, authors may post articles in PubMed Central 12 months after publication or use Author Select or AIP Access X-Press to comply.</condition>
         </conditions>
         <copyrightlinks>
           <copyrightlink>
@@ -253,6 +212,75 @@
     <identifier type="uri">sciences-po.fr</identifier>
     <name xml:lang="fr">Sciences Po</name>
   </orgUnit>
+  <orgUnit type="publisher">
+    <identifier type="hdl">2441/9labe9r4se65i78968605ah42</identifier>
+    <name>Elsevier</name>
+    <nameAlternative xml:lang="en">Elsevier</nameAlternative>
+    <nationality authority="iso3166-1-a2">UN</nationality>
+    <uri relationType="work" visible="true">http://www.elsevier.com/</uri>
+    <ckbData>
+      <romeoPublisher id="30">
+        <name>Elsevier</name>
+        <homeurl>http://www.elsevier.com/</homeurl>
+        <preprints>
+          <prearchiving>can</prearchiving>
+        </preprints>
+        <postprints>
+          <postarchiving>can</postarchiving>
+        </postprints>
+        <conditions>
+          <condition>Voluntary deposit by author of pre-print allowed on Institutions open scholarly website and pre-print servers, without embargo, where there is not a policy or mandate</condition>
+          <condition>Voluntary deposit by author of authors post-print allowed on institutions open scholarly website including Institutional Repository, without embargo, where there is not a policy or mandate</condition>
+          <condition>Deposit due to Funding Body, Institutional and Governmental policy or mandate only allowed where separate agreement between repository and the publisher exists.</condition>
+          <condition>Permitted deposit due to Funding Body, Institutional and Governmental policy or mandate, may be required to comply with embargo periods of &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; to &lt;num&gt;48&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; .</condition>
+          <condition>Set statement to accompany deposit</condition>
+          <condition>Published source must be acknowledged</condition>
+          <condition>Must link to journal home page or articles' DOI</condition>
+          <condition>Publisher's version/PDF cannot be used</condition>
+          <condition>Articles in some journals can be made Open Access on payment of additional charge</condition>
+          <condition>NIH Authors articles will be submitted to PubMed Central after &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt;</condition>
+          <condition>Authors who are required to deposit in subject-based repositories may also use Sponsorship Option</condition>
+        </conditions>
+        <paidaccess>
+          <paidaccessurl>http://www.elsevier.com/about/open-access/sponsored-articles</paidaccessurl>
+          <paidaccessname>Sponsorship Articles</paidaccessname>
+        </paidaccess>
+        <copyrightlinks>
+          <copyrightlink>
+            <copyrightlinktext>Copyright Policy</copyrightlinktext>
+            <copyrightlinkurl>http://www.elsevier.com/wps/find/authorsview.authors/copyright</copyrightlinkurl>
+          </copyrightlink>
+          <copyrightlink>
+            <copyrightlinktext>Article Posting Policies</copyrightlinktext>
+            <copyrightlinkurl>http://www.elsevier.com/about/open-access/open-access-policies/article-posting-policy</copyrightlinkurl>
+          </copyrightlink>
+          <copyrightlink>
+            <copyrightlinktext>Rights &amp; responsibilities</copyrightlinktext>
+            <copyrightlinkurl>http://www.elsevier.com/authors/author-rights-and-responsibilities</copyrightlinkurl>
+          </copyrightlink>
+          <copyrightlink>
+            <copyrightlinktext>Funding Body Agreements</copyrightlinktext>
+            <copyrightlinkurl>http://www.elsevier.com/wps/find/authorsview.authors/fundingbodyagreements</copyrightlinkurl>
+          </copyrightlink>
+          <copyrightlink>
+            <copyrightlinktext>Green Open Access</copyrightlinktext>
+            <copyrightlinkurl>http://www.elsevier.com/about/open-access/green-open-access</copyrightlinkurl>
+          </copyrightlink>
+          <copyrightlink>
+            <copyrightlinktext>Open Access License Policy  Green Open Access</copyrightlinktext>
+            <copyrightlinkurl>http://www.elsevier.com/about/open-access/oa-and-elsevier/oa-license-policy#green-open-access</copyrightlinkurl>
+          </copyrightlink>
+          <copyrightlink>
+            <copyrightlinktext>Elsevier Journal Specific Embargo Periods</copyrightlinktext>
+            <copyrightlinkurl>http://www.elsevier.com/embargoperiodlist</copyrightlinkurl>
+          </copyrightlink>
+        </copyrightlinks>
+        <romeocolour>green</romeocolour>
+        <dateadded>2004-01-10 00:00:00</dateadded>
+        <dateupdated>2013-04-17 10:19:58</dateupdated>
+      </romeoPublisher>
+    </ckbData>
+  </orgUnit>
   <project>
     <identifier type="anr">2006-ANR-12-34</identifier>
     <call>
@@ -263,21 +291,14 @@
     <acronym>ACRO</acronym>
     <title>Project title</title>
     <titleAlternative xml:lang="fr">Titre du projet</titleAlternative>
-    <participant entityType="PERSON">
+    <participant entityType="Person">
       <relationType authority="rmlparticipantpers">coordinatedBy</relationType>
       <identifier type="hdl">hdl:2441/4234234234</identifier>
       <name>ANR</name>
       <description xml:lang="fr">description</description>
     </participant>
-    <olDescription xml:lang="en">The OFCE is both a university
-            research centre and an institution for forecasting and evaluating
-            public policies.</olDescription>
-    <description xml:lang="en">Sciences Po’s Economic
-            Research Centre – The French Economic Observatory, or OFCE – is
-            chaired by Jean-Paul Fitoussi, university professor at the Institut
-            d’Etudes Politiques, Paris. The Observatory’s first chairman was
-            Jean-Marcel Jeanneney, former minister and professor emeritus of the
-            University of Paris Panthéon-Sorbonne. </description>
+    <olDescription xml:lang="en">The OFCE is both a university research centre and an institution for forecasting and evaluating public policies.</olDescription>
+    <description xml:lang="en">Sciences Po’s Economic Research Centre – The French Economic Observatory, or OFCE – is chaired by Jean-Paul Fitoussi, university professor at the Institut d’Etudes Politiques, Paris. The Observatory’s first chairman was Jean-Marcel Jeanneney, former minister and professor emeritus of the University of Paris Panthéon-Sorbonne. </description>
     <cost currency="EUR">100000</cost>
     <contribution currency="EUR">100000</contribution>
     <status>completed</status>

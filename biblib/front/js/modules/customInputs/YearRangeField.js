@@ -13,7 +13,7 @@
    *
    *  > {
    *  >   labels: "Year",
-   *  >   property_start: "filter_date_start",
+   *  >   property_begin: "filter_date_begin",
    *  >   property_end: "filter_date_end",
    *  >   type_ui: "YearRangeField"
    *  > }
@@ -34,13 +34,13 @@
     }
 
     function _fill(data, fullData) {
-      $('.date-from', _dom).val(fullData[obj.property_start]);
+      $('.date-from', _dom).val(fullData[obj.property_begin]);
       $('.date-to', _dom).val(fullData[obj.property_end]);
     }
 
     function _getData(data) {
       if ($('.date-from', _dom).val())
-        data[obj.property_start] = $('.date-from', _dom).val();
+        data[obj.property_begin] = $('.date-from', _dom).val();
       if ($('.date-to', _dom).val())
         data[obj.property_end] = $('.date-to', _dom).val();
     }
@@ -49,7 +49,7 @@
       var data = {};
       _getData(data);
 
-      if (+data[obj.property_start] > +data[obj.property_end]) {
+      if (+data[obj.property_begin] > +data[obj.property_end]) {
         $('.message', _dom).text(i18n.t('customInputs:YearRangeField.errors.wrong_order'));
         return false;
       }

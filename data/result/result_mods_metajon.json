@@ -4,6 +4,11 @@
   "rec_metajson": 1, 
   "records": [
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=1&amp;rft.epage=12&amp;rft.date=2013-01&amp;rft.volume=89&amp;rft.atitle=Varieties+and+the+transfer+problem&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Journal+of+International+Economics&amp;rft.genre=article\"></span><span class=\"creator\">Martin, Philippe</span>, <span class=\"creator\">Giancarlo Corsetti</span>, and <span class=\"creator\">Paolo Pesenti</span>. \"<span class=\"title\">Varieties and the transfer problem</span>.\" <span class=\"title\">Journal of International Economics</span>. <span class=\"part_volume\">89</span>.<span class=\"part_issue\">1</span> <span class=\"date\">(jan. 2013)</span>. <span class=\"part_page_begin\">1</span>-<span class=\"part_page_end\">12</span>. "
+        }
+      }, 
       "classifications": {
         "info:eu-repo/authority/jel": [
           "F32", 
@@ -13,10 +18,12 @@
       "creators": [
         {
           "affiliation": {
-            "name": "Département d'économie", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q385c7", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Département d'économie", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q385c7", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Martin", 
@@ -29,10 +36,12 @@
         }, 
         {
           "affiliation": {
-            "name": "University of Rome", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/d7a7evb2ctdg4i89ges9micbn", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "University of Rome", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9micbn", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Corsetti", 
@@ -45,10 +54,12 @@
         }, 
         {
           "affiliation": {
-            "name": "International Research", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/d7a7evb2ctdg4i89ges9mikg3", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "International Research", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9mikg3", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Pesenti", 
@@ -61,6 +72,9 @@
         }
       ], 
       "date_issued": "2013-01", 
+      "date_sort": {
+        "$date": 1356998400000
+      }, 
       "descriptions": [
         {
           "language": "en", 
@@ -104,17 +118,25 @@
         "en"
       ], 
       "part_issue": "1", 
+      "part_page_begin": "1", 
       "part_page_end": "12", 
-      "part_page_start": "1", 
       "part_volume": "89", 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.422778", 
       "rec_id": "doi:10.1016/j.jinteco.2012.05.011", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.422790", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Varieties and the transfer problem"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"creator\">Barnavie, Elie</span>, <span class=\"creator\">Alain Dieckhoff</span>, and <span class=\"creator\">Christian Lequesne</span>. <span class=\"title\">Israël et l’Europe. Filiations et ruptures</span>. <span class=\"date\">16 dec. 2010</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://vimeo.com/17810190\" target=\"_blank\">http://vimeo.com/17810190</a>&gt;</span>"
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -128,10 +150,12 @@
         }, 
         {
           "affiliation": {
-            "name": "Centre d'études et de recherches internationales", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q380gh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Dieckhoff", 
@@ -144,10 +168,12 @@
         }, 
         {
           "affiliation": {
-            "name": "Centre d'études et de recherches internationales", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q380gh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Lequesne", 
@@ -160,6 +186,9 @@
         }
       ], 
       "date_issued": "2010-12-16", 
+      "date_sort": {
+        "$date": 1292457600000
+      }, 
       "descriptions": [
         {
           "language": "fr", 
@@ -171,8 +200,12 @@
         "fr"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.425845", 
+      "rec_id": "5800c463-3a57-11e3-b940-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.425852", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "VideoRecording", 
       "resources": [
         {
@@ -186,13 +219,20 @@
       "title": "Israël et l’Europe. Filiations et ruptures"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Oxford+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=480&amp;rft.edition=2e+%C3%A9d.&amp;rft.date=2012-12&amp;rft.series=The+New+European+Union+Series&amp;rft.btitle=Member+States+of+the+European+Union&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Lequesne, Christian, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Simon Bulmer, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">The Member States of the European Union</span>. <span class=\"edition\">2e éd. ed.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">Oxford University Press</span>, <span class=\"date\">dec. 2012</span>. "
+        }
+      }, 
       "creators": [
         {
           "affiliation": {
-            "name": "Centre d'études et de recherches internationales", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q380gh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Lequesne", 
@@ -205,10 +245,12 @@
         }, 
         {
           "affiliation": {
-            "name": "Department of Politics", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/5l6uh8ogmqildh09h520k4p9m", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Department of Politics", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/5l6uh8ogmqildh09h520k4p9m", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Bulmer", 
@@ -221,6 +263,9 @@
         }
       ], 
       "date_issued": "2012-12", 
+      "date_sort": {
+        "$date": 1354320000000
+      }, 
       "descriptions": [
         {
           "language": "en", 
@@ -248,9 +293,12 @@
         "Oxford University Press"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.428833", 
       "rec_id": "isbn:9780199544837", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.428849", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "Book", 
       "seriess": [
         {
@@ -270,6 +318,11 @@
       "title_non_sort": "The "
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Edward+Elgar+Publishing+Ltd&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=186&amp;rft.epage=196&amp;rft.place=Cheltenham&amp;rft.date=2013-05&amp;rft.btitle=The+International+Handbook+on+Social+Innovation%3A+Collective+Action%2C+Social+Learning+and+Transdisciplinary+Research&amp;rft.atitle=Just+another+roll+of+the+dice%3A+a+socially+creative+initiative+to+assure+Roma+housing+in+North+Western+Italy&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Membretti, Andrea</span>, and <span class=\"creator\">Tommaso Vitale</span>. \"<span class=\"title\">Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy</span>.\" <span class=\"title\">The International Handbook on Social Innovation: Collective Action, Social Learning and Transdisciplinary Research</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Diana Maccallum</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Abid Mehmood</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frank Moulaert</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Abdel Hamdouch</span>. <span class=\"publication_places\">Cheltenham</span>: <span class=\"publishers\">Edward Elgar Publishing Ltd</span>, <span class=\"date\">may 2013</span>. <span class=\"part_page_begin\">186</span>-<span class=\"part_page_end\">196</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -283,10 +336,12 @@
         }, 
         {
           "affiliation": {
-            "name": "Centre d'études européennes de Sciences Po", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q384oh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études européennes de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Vitale", 
@@ -298,6 +353,9 @@
           "role": "aut"
         }
       ], 
+      "date_sort": {
+        "$date": 1367366400000
+      }, 
       "descriptions": [
         {
           "language": "en", 
@@ -329,10 +387,12 @@
             }, 
             {
               "affiliation": {
-                "name": "APL/GURU", 
-                "rec_class": "Orgunit", 
-                "rec_id": "2441/d7a7evb2ctdg4i89gesb1epb9", 
-                "rec_metajson": 1
+                "agent": {
+                  "name": "APL/GURU", 
+                  "rec_class": "Orgunit", 
+                  "rec_id": "2441/d7a7evb2ctdg4i89gesb1epb9", 
+                  "rec_metajson": 1
+                }
               }, 
               "agent": {
                 "name_family": "Moulaert", 
@@ -389,22 +449,33 @@
       "languages": [
         "en"
       ], 
+      "part_page_begin": "186", 
       "part_page_end": "196", 
-      "part_page_start": "186", 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.434458", 
+      "rec_id": "58021519-3a57-11e3-b01a-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.434471", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "BookPart", 
       "title": "Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=3&amp;rft.date=2012-05&amp;rft.volume=36&amp;rft.atitle=Europeanization+of+Cities%3A+Policies%2C+Urban+Change+and+Urban+Networks&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=International+Journal+of+Urban+and+Regional+Research&amp;rft.genre=article\"></span><span class=\"creator\">Halpern, Charlotte</span>. \"<span class=\"title\">The Europeanization of Cities: Policies, Urban Change and Urban Networks</span>.\" Rev. of <span class=\"title\">International Journal of Urban and Regional Research</span>. <span class=\"publishers\">Wiley-Blackwell</span>, <span class=\"part_volume\">36</span>.<span class=\"part_issue\">3</span> <span class=\"date\">may 2012</span>. "
+        }
+      }, 
       "creators": [
         {
           "affiliation": {
-            "name": "Centre d'études européennes de Sciences Po", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q384oh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études européennes de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Halpern", 
@@ -418,6 +489,9 @@
       ], 
       "date_created": "2011-05", 
       "date_issued": "2012-05", 
+      "date_sort": {
+        "$date": 1335830400000
+      }, 
       "descriptions": [
         {
           "language": "en", 
@@ -476,8 +550,12 @@
       "part_issue": "3", 
       "part_volume": "36", 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.439458", 
+      "rec_id": "5802d8d7-3a57-11e3-a4ce-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.439470", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "BookReview", 
       "review_ofs": [
         {
@@ -525,7 +603,7 @@
           "rec_class": "Document", 
           "rec_id": "isbn:9789085940272", 
           "rec_metajson": 1, 
-          "rec_type": "UnpublishedDocument", 
+          "rec_type": "Journal", 
           "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks"
         }
       ], 
@@ -533,12 +611,17 @@
       "title_non_sort": "The "
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"creator\">Governing Paris and Mexico</span>, and <span class=\"creator\">Charlotte Halpern</span>. <span class=\"title\">Airport companies as silent partners?: The slow awakening of Aéroports de Paris</span>. <span class=\"date\">27 feb. 2013</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
             "country": "FR", 
+            "date_begin": "2013-02-27", 
             "date_end": "2013-02-28", 
-            "date_start": "2013-02-27", 
             "place": "Sciences Po, Paris", 
             "rec_class": "Event", 
             "rec_metajson": 1, 
@@ -548,10 +631,12 @@
         }, 
         {
           "affiliation": {
-            "name": "Centre d'études européennes de Sciences Po", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q384oh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études européennes de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Halpern", 
@@ -564,6 +649,9 @@
         }
       ], 
       "date_created": "2013-02-27", 
+      "date_sort": {
+        "$date": 1361923200000
+      }, 
       "descriptions": [
         {
           "language": "en", 
@@ -588,20 +676,31 @@
         }
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.441929", 
+      "rec_id": "58033954-3a57-11e3-837e-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.441937", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "ConferenceContribution", 
       "title": "Airport companies as silent partners?", 
       "title_sub": "The slow awakening of Aéroports de Paris"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Lethielleux&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=69&amp;rft.epage=86&amp;rft.place=Paris&amp;rft.date=2013-02&amp;rft.series=Coll%C3%A8ge+des+Bernardins+-+Cours-colloques-conf%C3%A9rences&amp;rft.btitle=L%E2%80%99Anthropologie+de+Marcel+Gauchet+%3A+analyse+et+d%C3%A9bats&amp;rft.atitle=r%C3%A9gime+mixte+des+Modernes+et+la+question+de+l%E2%80%99Histoire&amp;ctx_ver=Z39.88-2004&amp;rft.genre=conference\"></span><span class=\"creator\">Escudier, Alexandre</span>. \"<span class=\"title\">Le régime mixte des Modernes et la question de l’Histoire</span>.\" <span class=\"title\">L’Anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frédéric Louzeau</span>, and <span class=\"creator\">L’anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Lethielleux</span>, <span class=\"date\">feb. 2013</span>. <span class=\"part_page_begin\">69</span>-<span class=\"part_page_end\">86</span>. "
+        }
+      }, 
       "creators": [
         {
           "affiliation": {
-            "name": "Centre de recherches politiques de Sciences Po", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q380qo", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre de recherches politiques de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380qo", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Escudier", 
@@ -613,6 +712,9 @@
           "role": "aut"
         }
       ], 
+      "date_sort": {
+        "$date": 1359676800000
+      }, 
       "descriptions": [
         {
           "language": "fr", 
@@ -635,8 +737,8 @@
             {
               "agent": {
                 "country": "FR", 
+                "date_begin": "2011-10-14", 
                 "date_end": "2011-10-15", 
-                "date_start": "2011-10-14", 
                 "place": "Paris - Collège des Bernardins", 
                 "rec_class": "Event", 
                 "rec_metajson": 1, 
@@ -667,7 +769,7 @@
           "rec_class": "Document", 
           "rec_id": "isbn:9782249622557", 
           "rec_metajson": 1, 
-          "rec_type": "UnpublishedDocument", 
+          "rec_type": "ConferenceProceedings", 
           "seriess": [
             {
               "rec_class": "Document", 
@@ -682,23 +784,34 @@
       "languages": [
         "fr"
       ], 
+      "part_page_begin": "69", 
       "part_page_end": "86", 
-      "part_page_start": "69", 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.445639", 
+      "rec_id": "5803ca73-3a57-11e3-99cc-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.445649", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "ConferencePaper", 
       "title": "régime mixte des Modernes et la question de l’Histoire", 
       "title_non_sort": "Le "
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Dalloz&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=192&amp;rft.date=2013-03&amp;rft.series=Th%C3%A8mes+%26+commentaires&amp;rft.btitle=Raymond+Saleilles+et+au-del%C3%A0&amp;ctx_ver=Z39.88-2004&amp;rft.genre=proceeding\"></span><span class=\"creator\">Audren, Frédéric, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Christian Chêne, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Nicolas Mathey, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Arnaud Vergne, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Raymond Saleilles et au-delà</span>. <span class=\"title\">Raymond Saleilles et au-delà</span>. <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">Dalloz</span>, <span class=\"date\">mar. 2013</span>. "
+        }
+      }, 
       "creators": [
         {
           "affiliation": {
-            "name": "Ecole de Droit", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q385ph", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Ecole de Droit", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q385ph", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Audren", 
@@ -742,8 +855,8 @@
         {
           "agent": {
             "country": "FR", 
+            "date_begin": "2012-03-29", 
             "date_end": "2012-03-30", 
-            "date_start": "2012-03-29", 
             "place": "Faculté de Droit de l'Université Paris-Descartes ", 
             "rec_class": "Event", 
             "rec_metajson": 1, 
@@ -753,6 +866,9 @@
         }
       ], 
       "date_issued": "2013-03", 
+      "date_sort": {
+        "$date": 1362096000000
+      }, 
       "descriptions": [
         {
           "language": "fr", 
@@ -773,9 +889,12 @@
         "Dalloz"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.449030", 
       "rec_id": "isbn:9782247125265", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.449037", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "ConferenceProceedings", 
       "seriess": [
         {
@@ -788,13 +907,20 @@
       "title": "Raymond Saleilles et au-delà"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=11&amp;rft.issue=21144&amp;rft.epage=00&amp;rft.date=2013-04-08&amp;rft.atitle=Fonctionnaires%2C+la+fin+du+m%C3%A9rite+r%C3%A9publicain&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=L%27Humanit%C3%A9&amp;rft.genre=article\"></span><span class=\"creator\">Rouban, Luc</span>. \"<span class=\"title\">Fonctionnaires, la fin du mérite républicain</span>.\" <span class=\"title\">L'Humanité</span>. <span class=\"part_issue\">21144</span> <span class=\"date\">8 apr. 2013</span>. <span class=\"part_page_begin\">11</span>-<span class=\"part_page_end\">00</span>. "
+        }
+      }, 
       "creators": [
         {
           "affiliation": {
-            "name": "Centre de recherches politiques de Sciences Po", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q380qo", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre de recherches politiques de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380qo", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Rouban", 
@@ -807,6 +933,9 @@
         }
       ], 
       "date_issued": "2013-04-08", 
+      "date_sort": {
+        "$date": 1365379200000
+      }, 
       "descriptions": [
         {
           "language": "fr", 
@@ -833,15 +962,24 @@
         "fr"
       ], 
       "part_issue": "21144", 
+      "part_page_begin": "11", 
       "part_page_end": "00", 
-      "part_page_start": "11", 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.451888", 
+      "rec_id": "5804bdd9-3a57-11e3-9e6c-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.451896", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
       "title": "Fonctionnaires, la fin du mérite républicain"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.tpages=428&amp;rft.au=Casta%C3%B1eda+Lef%C3%A8vre%2C+Dorly&amp;rft.date=2012-02&amp;rft.atitle=Peace+Laboratories+in+Colombia%3A+the+European+Approach+to+Peace-building&amp;ctx_ver=Z39.88-2004\"></span><span class=\"creator\">Castañeda Lefèvre, Dorly</span>. <span class=\"title\">Peace Laboratories in Colombia: the European Approach to Peace-building</span>. <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Institut d'Etudes Politiques de Paris</span>, <span class=\"date\">feb. 2012</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -855,10 +993,12 @@
         }, 
         {
           "affiliation": {
-            "name": "Centre d'études et de recherches internationales", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q380gh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Devin", 
@@ -871,6 +1011,9 @@
         }
       ], 
       "date_issued": "2012-02", 
+      "date_sort": {
+        "$date": 1328054400000
+      }, 
       "descriptions": [
         {
           "language": "en", 
@@ -906,8 +1049,12 @@
         "Institut d'Etudes Politiques de Paris"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.454329", 
+      "rec_id": "58051df0-3a57-11e3-8758-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.454336", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
       "title": "Peace Laboratories in Colombia: the European Approach to Peace-building", 
       "title_translated": {
@@ -915,6 +1062,11 @@
       }
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=115&amp;rft.issue=52&amp;rft.epage=131&amp;rft.date=2007-11&amp;rft.atitle=Vers+une+r%C3%A9volution+bureaucratique+%3F&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Mouvements&amp;rft.genre=article\"></span>\"<span class=\"title\">Vers une révolution bureaucratique ?</span>.\" <span class=\"title\">Mouvements</span>. <span class=\"publication_places\">FR</span>: <span class=\"publishers\">La Découverte</span>, <span class=\"part_issue\">52</span> <span class=\"date\">nov. 2007</span>. <span class=\"part_page_begin\">115</span>-<span class=\"part_page_end\">131</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -928,10 +1080,12 @@
         }, 
         {
           "affiliation": {
-            "name": "Centre d'études européennes de Sciences Po (CEE)", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q384oh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études européennes de Sciences Po (CEE)", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Le Galès", 
@@ -944,6 +1098,9 @@
         }
       ], 
       "date_issued": "2007-11", 
+      "date_sort": {
+        "$date": 1193875200000
+      }, 
       "descriptions": [
         {
           "language": "fr", 
@@ -986,22 +1143,33 @@
         "fr"
       ], 
       "part_issue": "52", 
+      "part_page_begin": "115", 
       "part_page_end": "131", 
-      "part_page_start": "115", 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.457481", 
+      "rec_id": "580598a1-3a57-11e3-8dd6-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.457496", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "InterviewArticle", 
       "title": "Vers une révolution bureaucratique ?"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.tpages=75&amp;rft.au=Antonin%2C+C%C3%A9line&amp;rft.date=2009-09&amp;rft.atitle=Age%2C+revenu+et+comportements+d%27%C3%A9pargne+des+m%C3%A9nages+%3A+une+analyse+th%C3%A9orique+et+empirique+sur+la+p%C3%A9riode+1978-2006&amp;ctx_ver=Z39.88-2004\"></span><span class=\"creator\">Antonin, Céline</span>. <span class=\"title\">Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006</span>. <span class=\"thesis_degree\">MA thesis.</span> <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Ecole d'Economie de Paris</span>, <span class=\"date\">sep. 2009</span>. "
+        }
+      }, 
       "creators": [
         {
           "affiliation": {
-            "name": "Paris-Jourdan Sciences Economiques", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/d7a7evb2ctdg4i89ges9oe5ao", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Paris-Jourdan Sciences Economiques", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9oe5ao", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Piketty", 
@@ -1014,10 +1182,12 @@
         }, 
         {
           "affiliation": {
-            "name": "OFCE", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q38226", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "OFCE", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q38226", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Antonin", 
@@ -1030,6 +1200,9 @@
         }
       ], 
       "date_issued": "2009-09", 
+      "date_sort": {
+        "$date": 1251763200000
+      }, 
       "descriptions": [
         {
           "language": "fr", 
@@ -1047,19 +1220,30 @@
         "Ecole d'Economie de Paris"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.459785", 
+      "rec_id": "5805f297-3a57-11e3-9147-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.459792", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "MasterThesis", 
       "title": "Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=69&amp;rft.date=2012-12&amp;rft.volume=2012%2F1&amp;rft.atitle=Client%C3%A9lisme+en+situation.+%C3%89changes+politiques%2C+politisation+et+conflits+moraux&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Cahiers+des+Am%C3%A9riques+latines&amp;rft.genre=issue\"></span><span class=\"creator\">Combes, Hélène</span>. \"<span class=\"title\">Clientélisme en situation. Échanges politiques, politisation et conflits moraux</span>.\" <span class=\"title\">Cahiers des Amériques latines</span>. <span class=\"publication_places\">Paris</span>: <span class=\"part_volume\">2012/1</span>.<span class=\"part_issue\">69</span> <span class=\"date\">dec. 2012</span>. "
+        }
+      }, 
       "creators": [
         {
           "affiliation": {
-            "name": "Centre d'études et de recherches internationales", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q380gh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Combes", 
@@ -1072,6 +1256,9 @@
         }
       ], 
       "date_issued": "2012-12", 
+      "date_sort": {
+        "$date": 1354320000000
+      }, 
       "descriptions": [
         {
           "language": "fr", 
@@ -1114,12 +1301,21 @@
       "part_issue": "69", 
       "part_volume": "2012/1", 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.462761", 
+      "rec_id": "580666d9-3a57-11e3-b773-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.462769", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "PeriodicalIssue", 
       "title": "Clientélisme en situation. Échanges politiques, politisation et conflits moraux"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=effects+at+home+of+initiating+production+abroad%3A+evidence+from+matched+french+firms&amp;rft.genre=unknown&amp;rft.date=2011\"></span><span class=\"creator\">Jean, Sébastien</span>, <span class=\"creator\">Alexander Hijzen</span>, and <span class=\"creator\">Thierry Mayer</span>. <span class=\"title\">The effects at home of initiating production abroad: evidence from matched french firms</span>. <span class=\"date\">2011</span>. "
+        }
+      }, 
       "classifications": {
         "info:eu-repo/authority/jel": [
           "F14", 
@@ -1130,10 +1326,12 @@
       "creators": [
         {
           "affiliation": {
-            "name": "Laboratoire de Conception et d'Intégration des Systèmes", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/d7a7evb2ctdg4i89gesapaoj4", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Laboratoire de Conception et d'Intégration des Systèmes", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/d7a7evb2ctdg4i89gesapaoj4", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Jean", 
@@ -1146,10 +1344,12 @@
         }, 
         {
           "affiliation": {
-            "name": "Leverhulme Centre for Research on Globalisation and Economic Policy (GEP)", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/5l6uh8ogmqildh09h29b6gkol", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Leverhulme Centre for Research on Globalisation and Economic Policy (GEP)", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/5l6uh8ogmqildh09h29b6gkol", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Hijzen", 
@@ -1162,10 +1362,12 @@
         }, 
         {
           "affiliation": {
-            "name": "Département d'économie", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q385c7", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Département d'économie", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q385c7", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Mayer", 
@@ -1178,6 +1380,9 @@
         }
       ], 
       "date_created": "2011", 
+      "date_sort": {
+        "$date": 1293840000000
+      }, 
       "descriptions": [
         {
           "language": "en", 
@@ -1197,13 +1402,22 @@
         "en"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.465271", 
+      "rec_id": "5806c9ab-3a57-11e3-a401-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.465277", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "Preprint", 
       "title": "effects at home of initiating production abroad: evidence from matched french firms", 
       "title_non_sort": "The "
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=CEE+%28Sciences+Po%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=29&amp;rft.place=Paris&amp;rft.date=2013-04&amp;rft.btitle=Greengram+-+Green+Growth+in+South+East+Asian+Metropolis&amp;ctx_ver=Z39.88-2004&amp;rft.genre=report\"></span><span class=\"creator\">Artigas, Alvaro</span>, <span class=\"creator\">Tadashi Matsumoto</span>, and <span class=\"creator\">Tommaso Vitale</span>. <span class=\"title\">Greengram - Green Growth in South East Asian Metropolis</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">CEE (Sciences Po)</span>, <span class=\"date\">apr. 2013</span>. "
+        }
+      }, 
       "creators": [
         {
           "agent": {
@@ -1227,10 +1441,12 @@
         }, 
         {
           "affiliation": {
-            "name": "Centre d'études européennes de Sciences Po", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q384oh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études européennes de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Vitale", 
@@ -1243,6 +1459,9 @@
         }
       ], 
       "date_issued": "2013-04", 
+      "date_sort": {
+        "$date": 1364774400000
+      }, 
       "descriptions": [
         {
           "language": "en", 
@@ -1273,19 +1492,30 @@
         "CEE (Sciences Po)"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.468487", 
+      "rec_id": "580746d4-3a57-11e3-8ca2-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.468493", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "Report", 
       "title": "Greengram - Green Growth in South East Asian Metropolis"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"creator\">Vitale, Tommaso</span>. \"<span class=\"title\">Famiglie, corsi di vita e accoglienza. Spazi e opportunità di solidarietà in contesto urbano</span>.\" <span class=\"title\">Affidabile. La costruzione di un percorso per i bambini e le loro famiglie</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Silvia Amato</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Carmelita De Simone</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Silvia Zandrini</span>. <span class=\"publication_places\">Milan</span>: <span class=\"publishers\">Quaderno dell'Assessorato Famiglia Scuola e Politiche sociali del Comune di Milano</span>, <span class=\"date\">2011</span>. <span class=\"part_page_begin\">89</span>-<span class=\"part_page_end\">98</span>. "
+        }
+      }, 
       "creators": [
         {
           "affiliation": {
-            "name": "Centre d'études européennes de Sciences Po", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q384oh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études européennes de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Vitale", 
@@ -1297,6 +1527,9 @@
           "role": "aut"
         }
       ], 
+      "date_sort": {
+        "$date": 1293840000000
+      }, 
       "descriptions": [
         {
           "language": "it", 
@@ -1362,22 +1595,33 @@
       "languages": [
         "it"
       ], 
+      "part_page_begin": "89", 
       "part_page_end": "98", 
-      "part_page_start": "89", 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.471666", 
+      "rec_id": "5807c1fd-3a57-11e3-863d-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.471674", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "ReportPart", 
       "title": "Famiglie, corsi di vita e accoglienza. Spazi e opportunità di solidarietà in contesto urbano"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"creator\">Durand, Marie-Françoise, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Christian Lequesne, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)</span>. <span class=\"publishers\">Sciences Po - CERI</span>; <span class=\"publishers\">Sciences Po - Atelier de cartographie</span>, <span class=\"date\">2012</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://ceriscope.sciences-po.fr/pauvrete\" target=\"_blank\">http://ceriscope.sciences-po.fr/pauvrete</a>&gt;</span>"
+        }
+      }, 
       "creators": [
         {
           "affiliation": {
-            "name": "Sciences Po", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q021gm", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q021gm", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Durand", 
@@ -1390,10 +1634,12 @@
         }, 
         {
           "affiliation": {
-            "name": "Centre d'études et de recherches internationales", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q380gh", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Lequesne", 
@@ -1407,6 +1653,9 @@
       ], 
       "date_created": "2012", 
       "date_issued": "2012", 
+      "date_sort": {
+        "$date": 1325376000000
+      }, 
       "descriptions": [
         {
           "language": "fr", 
@@ -1422,8 +1671,12 @@
         "Sciences Po - Atelier de cartographie"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.473938", 
+      "rec_id": "58081b5e-3a57-11e3-86f4-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.473946", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "WebSite", 
       "resources": [
         {
@@ -1442,6 +1695,11 @@
       "title": "Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)"
     }, 
     {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"creator\">Do, Quoc-Anh</span>, and <span class=\"creator\">Filipe R Campante</span>. <span class=\"title\">Isolated Capital Cities, Accountability and Corruption Evidence from US States: Evidence from US States</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Sciences Po - ECON</span>, <span class=\"date\">aug. 2012</span>. "
+        }
+      }, 
       "classifications": {
         "info:eu-repo/authority/jel": [
           "D72", 
@@ -1455,10 +1713,12 @@
       "creators": [
         {
           "affiliation": {
-            "name": "Département d'économie", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q385c7", 
-            "rec_metajson": 1
+            "agent": {
+              "name": "Département d'économie", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q385c7", 
+              "rec_metajson": 1
+            }
           }, 
           "agent": {
             "name_family": "Do", 
@@ -1481,6 +1741,9 @@
         }
       ], 
       "date_issued": "2012-08", 
+      "date_sort": {
+        "$date": 1343779200000
+      }, 
       "descriptions": [
         {
           "language": "en", 
@@ -1512,8 +1775,12 @@
         "Sciences Po - ECON"
       ], 
       "rec_class": "Document", 
+      "rec_created_date": "2013-10-21T15:47:36.476758", 
+      "rec_id": "580889fd-3a57-11e3-9bee-406c8f07170d", 
       "rec_metajson": 1, 
+      "rec_modified_date": "2013-10-21T15:47:36.476765", 
       "rec_source": "test", 
+      "rec_status": "private", 
       "rec_type": "WorkingPaper", 
       "seriess": [
         {

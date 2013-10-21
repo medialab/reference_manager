@@ -16,14 +16,14 @@ def clean_corpus(corpus):
     else:
         print("clean corpus: {}".format(corpus))
 
-        date_start = datetime.datetime.now()
+        date_begin = datetime.datetime.now()
 
         repository_service.create_corpus(corpus)
         repository_service.empty_corpus(corpus)
         repository_service.init_corpus_indexes(corpus)
 
         date_end = datetime.datetime.now()
-        chrono.chrono_trace("clean_corpus", date_start, date_end, None)
+        chrono.chrono_trace("clean_corpus", date_begin, date_end, None)
 
 
 def conf_corpus(corpus):
@@ -32,7 +32,7 @@ def conf_corpus(corpus):
     else:
         print("init corpus: {}".format(corpus))
 
-        date_start = datetime.datetime.now()
+        date_begin = datetime.datetime.now()
 
         # types
         results_types_common = conf_types(corpus, "common")
@@ -53,7 +53,7 @@ def conf_corpus(corpus):
                 print "type_id: {}, _id: {}".format(entry["type_id"], entry["_id"])
         else:
             print "Empty corpus types"
-        chrono.chrono_trace("conf_types", date_start, date_types, total_count)
+        chrono.chrono_trace("conf_types", date_begin, date_types, total_count)
 
         # datafields
         results_fields_common = conf_fields(corpus, "common")

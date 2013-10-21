@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ddi:codeBook ID="cdsp_bequali_sp4_ddi" version="2.5" xml-lang="fr" xmlns:ddi="http://www.icpsr.umich.edu/DDI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.icpsr.umich.edu/DDI http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd">
+	<ddi:docDscr>
+		<ddi:citation>
+			<ddi:titlStmt>
+				<ddi:titl>XML codeBook for cdsp_bequali_sp4</ddi:titl>
+			</ddi:titlStmt>
+			<ddi:prodStmt>
+				<ddi:prodDate date="2013-01-29">29 January 2013</ddi:prodDate>
+			</ddi:prodStmt>
+			<ddi:verStmt date="2014-04-17">17 avril 2014</ddi:verStmt>
+		</ddi:citation>
+	</ddi:docDscr>
+	<ddi:stdyDscr>
+		<ddi:citation>
+			<ddi:titlStmt>
+				<ddi:IDNo agency="CDSP">cdsp_bequali_sp4</ddi:IDNo>
+				<ddi:titl>La boutique contre la gauche</ddi:titl>
+			</ddi:titlStmt>
+			<ddi:rspStmt>
+				<ddi:AuthEnty affiliation="CEVIPOF">MAYER, Nonna</ddi:AuthEnty>
+			</ddi:rspStmt>
+			<ddi:prodStmt>
+				<ddi:AuthEnty affiliation="CDSP">BOTH, Anne</ddi:AuthEnty>
+				<ddi:AuthEnty affiliation="CDSP">CADOREL, Sarah</ddi:AuthEnty>
+				<ddi:copyright>beQuali</ddi:copyright>
+				<ddi:fundAg>CNRS</ddi:fundAg>
+				<ddi:fundAg>CEVIPOF</ddi:fundAg>
+				<ddi:software>PowerGrep</ddi:software>
+				<ddi:software>EXMARaLDA</ddi:software>
+			</ddi:prodStmt>
+			<ddi:distStmt>
+				<ddi:distrbtr affiliation="CDSP">beQuali</ddi:distrbtr>
+				<ddi:depositr affiliation="CEVIPOF">MAYER, Nonna</ddi:depositr>
+				<ddi:depDate date="2010-06-21">21 June 2010</ddi:depDate>
+				<ddi:distDate date="2010-07-21">21 July 2010</ddi:distDate>
+			</ddi:distStmt>
+		</ddi:citation>
+		<ddi:stdyInfo>
+			<ddi:subject>
+				<ddi:keyword>Artisans</ddi:keyword>
+				<ddi:keyword>Poujadisme</ddi:keyword>
+				<ddi:topcClas vocab="RAMEAU">Sociologie politique</ddi:topcClas>
+				<ddi:keyword vocab="Y">1961</ddi:keyword>
+				<ddi:keyword vocab="Y">1962</ddi:keyword>
+			</ddi:subject>
+			<ddi:abstract>Enquête réalisée dans les années 70 par Nonna Mayer pour sa thèse d'État consacrée à l'univers politique des petits commerçants français. Le terrain a été réalisé en deux fois. La première vague d'entretiens a été réalisée par Nonna Mayer entre 1972 et 1974 et la deuxième par Claude Nédélec entre 1976 et 1977.</ddi:abstract>
+			<ddi:sumDscr>
+				<ddi:timePrd date="1970-00-00" event="start">1970</ddi:timePrd>
+				<ddi:timePrd date="1980-00-00" event="end">1980</ddi:timePrd>
+				<ddi:nation>France</ddi:nation>
+				<ddi:geogCover>Paris</ddi:geogCover>
+				<ddi:geogUnit>7ème arrondissement</ddi:geogUnit>
+				<ddi:geogUnit>18ème arrondissement</ddi:geogUnit>
+				<ddi:anlyUnit>Individus</ddi:anlyUnit>
+				<ddi:universe level="study">Niveau d'observation:</ddi:universe>
+				<ddi:universe level="study">national</ddi:universe>
+				<ddi:universe level="study">Groupes de population ciblés:</ddi:universe>
+				<ddi:universe level="study">Petits commerçants</ddi:universe>
+				<ddi:collDate date="1972-00-00" event="start">1972</ddi:collDate>
+				<ddi:collDate date="1977-00-00" event="end">1977</ddi:collDate>
+				<ddi:dataKind type="text">Documents textuels</ddi:dataKind>
+				<ddi:dataKind>Transcriptions fines avec indication du paraverbal</ddi:dataKind>
+			</ddi:sumDscr>
+			<ddi:notes>Les entretiens ont été anonymisés par l'auteur.</ddi:notes>
+			<ddi:notes>Analyse typologique à la fois quantitative et qualitative.</ddi:notes>
+		</ddi:stdyInfo>
+		<ddi:method>
+			<ddi:dataColl>
+				<ddi:timeMeth>Entretiens uniques</ddi:timeMeth>
+				<ddi:collMode>Enquête par entretiens</ddi:collMode>
+				<ddi:collMode>Enquête par analyse documentaire</ddi:collMode>
+				<ddi:collMode>Autre</ddi:collMode>
+				<ddi:sampProc>Deux rues commerçantes à Paris, l'une dans un quartier bourgeois (7ème) l'autre dans un quartier populaire (10ème). Tous les commerçants ont été contactés, certains n'ont pas voulu répondre.</ddi:sampProc>
+				<ddi:resInstru>consigne (entretien non directif)</ddi:resInstru>
+				<ddi:collSitu>Nonna Mayer a choisi d'interroger des petits commerçants dans une première rue du 10ème arrondissemnt de Paris pui sdans une deuxième rue du 7ème arrondissement de Paris. Elle a choisi de proposer systématiquement à tous les commerçants de chaque rue de répondre à l'enquête. L'échantillon est composé des ceux qui ont accepté de répondre aux entretiens.</ddi:collSitu>
+			</ddi:dataColl>
+		</ddi:method>
+		<ddi:dataAccs>
+			<ddi:setAvail>
+				<ddi:fileQnty>100 fichiers</ddi:fileQnty>
+				<ddi:origArch>Mission Archives - Sciences Po</ddi:origArch>
+			</ddi:setAvail>
+			<ddi:useStmt>
+				<ddi:condition>Accès soumis à autorisation</ddi:condition>
+				<ddi:contact>info@bequali.fr</ddi:contact>
+			</ddi:useStmt>
+		</ddi:dataAccs>
+		<ddi:othrStdyMat>
+			<ddi:relPubl>MAYER, Nonna, 1986, La boutique contre la Gauche, Presses de la FNSP, Paris.</ddi:relPubl>
+		</ddi:othrStdyMat>
+	</ddi:stdyDscr>
+</ddi:codeBook>

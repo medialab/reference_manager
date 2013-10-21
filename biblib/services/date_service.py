@@ -144,7 +144,10 @@ def parse_date(date_iso):
         date_iso += "-01"
 
     # YYYY-MM-DD
-    result = parser.parse(date_iso)
+    try:
+        result = parser.parse(date_iso)
+    except:
+        result = parser.parse("1970-01-01")
 
     #print result
     return result

@@ -38,7 +38,10 @@ thesis_rec_type_to_degree = {
 def cite(document, format):
     result = ""
 
-    rec_type = document["rec_type"]
+    if "rec_type" in document:
+        rec_type = document["rec_type"]
+    else:
+        rec_type = "Document"
 
     # Book:
     # Lastname, Firstname. Title of Book. Place of Publication: Publisher, Year of Publication. Medium of Publication.
@@ -187,16 +190,16 @@ def cite(document, format):
         else:
             result += u" "
 
-    # part_page_start & part_page_end
-    part_page_start = document.get_part_page_start()
-    if part_page_start:
-        result += u"<span class=\"part_page_start\">{0}</span>".format(part_page_start)
+    # part_page_begin & part_page_end
+    part_page_begin = document.get_part_page_begin()
+    if part_page_begin:
+        result += u"<span class=\"part_page_begin\">{0}</span>".format(part_page_begin)
 
     part_page_end = document.get_part_page_end()
     if part_page_end:
         result += u"-<span class=\"part_page_end\">{0}</span>".format(part_page_end)
 
-    if part_page_start or part_page_end:
+    if part_page_begin or part_page_end:
         result += ". "
 
     # medium of publication, date_last_accessed, url

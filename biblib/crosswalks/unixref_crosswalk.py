@@ -43,7 +43,7 @@ def unixref_record_to_metajson(record, source):
         year = journal_article.find("publication_date/year")
         month = journal_article.find("publication_date/month")
         day = journal_article.find("publication_date/day")
-        part_page_start = journal_article.find("pages/first_page")
+        part_page_begin = journal_article.find("pages/first_page")
         part_page_end = journal_article.find("pages/last_page")
         doi = journal_article.find("doi_data/doi")
         resource_url = journal_article.find("doi_data/resource")
@@ -85,8 +85,8 @@ def unixref_record_to_metajson(record, source):
     if part_volume is not None:
         document["part_volume"] = part_volume.text
 
-    if part_page_start is not None:
-        document["part_page_start"] = part_page_start.text
+    if part_page_begin is not None:
+        document["part_page_begin"] = part_page_begin.text
 
     if part_page_end is not None:
         document["part_page_end"] = part_page_end.text

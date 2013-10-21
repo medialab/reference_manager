@@ -11,6 +11,7 @@ from pybtex.database import Entry
 
 from biblib.metajson import Document
 from biblib.services import creator_service
+from biblib.services import date_service
 from biblib.services import metajson_service
 from biblib.util import constants
 from biblib.util import string
@@ -67,7 +68,7 @@ def bibtex_entry_to_metajson(entry, source):
     creators = []
     authors = extract_creators(entry, "author", "aut")
     if authors:
-        print "authors: {}".format(authors)
+        #print "authors: {}".format(authors)
         creators.extend(authors)
 
     # editor -> creators
@@ -79,19 +80,19 @@ def bibtex_entry_to_metajson(entry, source):
     if editors_pbd:
         editors.extend(editors_pbd)
     if editors:
-        print "editors: {}".format(editors)
+        #print "editors: {}".format(editors)
         creators.extend(editors)
 
     # organization -> creators
     organizations = extract_creators(entry, "organization", "???")
     if organizations:
-        print "organizations: {}".format(organizations)
+        #print "organizations: {}".format(organizations)
         creators.extend(organizations)
 
     # school -> creators
     schools = extract_creators(entry, "school", "yyy")
     if schools:
-        print "schools: {}".format(schools)
+        #print "schools: {}".format(schools)
         creators.extend(schools)
 
     if creators:
@@ -108,8 +109,13 @@ def bibtex_entry_to_metajson(entry, source):
     if year:
         date = year
         if month:
-            if int(month) < 10:
-                month = "0" + month
+            try:
+                if int(month) < 10:
+                    month = "0" + month
+            except ValueError:
+                month_lower = month.lower()
+                if month_lower in date_service.month_text_to_month_decimal:
+                    month = date_service.month_text_to_month_decimal[month_lower]
             date += month
         document["date_issued"] = date
 
@@ -155,11 +161,11 @@ def bibtex_entry_to_metajson(entry, source):
     if number:
         document["part_issue"] = number
 
-    # pages -> part_page_start, part_page_end
+    # pages -> part_page_begin, part_page_end
     pages = get_field(entry, 'pages')
     if pages:
         pages_list = pages.split("-")
-        document["part_page_start"] = pages_list[0]
+        document["part_page_begin"] = pages_list[0]
         if len(pages_list) > 1:
             document["part_page_end"] = pages_list[1]
 
@@ -196,14 +202,17 @@ def bibtex_entry_to_metajson(entry, source):
     # isbn -> identifiers[].id_value = isbn
     isbn = get_field(entry, 'isbn')
 
+    # file -> todo
     myfile = get_field(entry, 'file')
+
+    # keywords -> todo
     keywords_field = get_field(entry, 'keywords')
     if keywords_field:
         keywords = re.split(r',', get_field(entry, 'keywords').lower())
 
     debug = True
     if debug:
-        print "BibTeX type: {}".format(bibtex_type)
+        print "# BibTeX type: {}".format(bibtex_type)
         metajson_service.pretty_print_document(document)
     return document
 

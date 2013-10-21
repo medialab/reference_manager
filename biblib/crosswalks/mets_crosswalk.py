@@ -2,14 +2,12 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import xml.etree.ElementTree as ET
-from xml.etree.ElementTree import QName
-
 from biblib.metajson import Document
 from biblib.metajson import Resource
 from biblib.metajson import Warpper
 from biblib.services import language_service
 from biblib.util import constants
+from biblib.util import xmletree
 
 
 mdtype_to_format = {
@@ -65,7 +63,7 @@ def mets_xmletree_to_metajson(mets, source):
 
 def extract_dmdsecs(mets):
     print "dmdsecs"
-    dmdsecs = mets.findall(prefixtag("mets", "dmdSec"))
+    dmdsecs = mets.findall(xmletree.prefixtag("mets", "dmdSec"))
     if dmdsecs:
         warppers = []
         for dmdsec in dmdsecs:
@@ -74,9 +72,9 @@ def extract_dmdsecs(mets):
             warpper['rec_id'] = dmdsec.get("ID")
             warpper['rec_id_group'] = dmdsec.get("GROUPID")
 
-            mdwrap = dmdsec.find(prefixtag("mets", "mdWrap"))
+            mdwrap = dmdsec.find(xmletree.prefixtag("mets", "mdWrap"))
             warpper['meta_type'] = mdwrap.get("MDTYPE")
-            xmldatas = mdwrap.findall(prefixtag("mets", "xmlData/*"))
+            xmldatas = mdwrap.findall(xmletree.prefixtag("mets", "xmlData/*"))
             if xmldatas is not None:
                 warpper['records'] = []
                 for xmldata in xmldatas:
@@ -92,16 +90,3 @@ def convert_xmldata(xmlData, mdtype):
     # mdtype to input_format
     # xmlData to metajson
     return None
-
-
-def register_namespaces():
-    for key in constants.xmlns_map:
-        ET.register_namespace(key, constants.xmlns_map[key])
-
-
-def prefixtag(ns_prefix, tagname):
-    if tagname:
-        if ns_prefix and ns_prefix in constants.xmlns_map:
-            return str(QName(constants.xmlns_map[ns_prefix], tagname))
-        else:
-            return tagname

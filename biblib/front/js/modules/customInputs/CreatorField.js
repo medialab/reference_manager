@@ -178,7 +178,7 @@
             $('input[data-attribute="number"]', obj.dom).val(data.agent.number);
             $('input[data-attribute="place"]', obj.dom).val(data.agent.place);
             $('input[data-attribute="country"]', obj.dom).val(data.agent.country);
-            $('input[data-attribute="date_start"]', obj.dom).val(data.agent.date_start);
+            $('input[data-attribute="date_begin"]', obj.dom).val(data.agent.date_begin);
             $('input[data-attribute="date_end"]', obj.dom).val(data.agent.date_end);
             $('input[data-attribute="international"]', obj.dom).attr('checked', data.agent.international ? 'checked' : null);
             return this;
@@ -196,7 +196,7 @@
             data.agent.number = $('input[data-attribute="number"]', obj.dom).val() || undefined;
             data.agent.place = $('input[data-attribute="place"]', obj.dom).val() || undefined;
             data.agent.country = $('input[data-attribute="country"]', obj.dom).val() || undefined;
-            data.agent.date_start = $('input[data-attribute="date_start"]', obj.dom).val() || undefined;
+            data.agent.date_begin = $('input[data-attribute="date_begin"]', obj.dom).val() || undefined;
             data.agent.date_end = $('input[data-attribute="date_end"]', obj.dom).val() || undefined;
             data.agent.international = !!$('input[data-attribute="international"]', obj.dom).is(':checked');
 

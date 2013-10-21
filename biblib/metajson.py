@@ -45,6 +45,16 @@ class Common(dict):
                 self[key] = [item]
 
 
+# Call
+class Call(Common):
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "rec_metajson" not in self:
+            self["rec_metajson"] = REC_METAJSON
+        if "rec_class" not in self:
+            self["rec_class"] = "Call"
+
+
 # Collection
 class Collection(Common):
     def __init__(self, *args, **kwargs):
@@ -246,8 +256,8 @@ class Document(Common):
     def get_part_name(self):
         return self.get_property_from_all_level("part_name")
 
-    def get_part_page_start(self):
-        return self.get_property_from_all_level("part_page_start")
+    def get_part_page_begin(self):
+        return self.get_property_from_all_level("part_page_begin")
 
     def get_part_page_end(self):
         return self.get_property_from_all_level("part_page_end")

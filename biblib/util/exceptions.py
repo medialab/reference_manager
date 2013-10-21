@@ -6,6 +6,7 @@
 # from and including -32768 to -32000
 
 metajsonprc_error_code_to_message = {
+    0: "Empty mandatory arguments",
     1: "Non-existent metadata for rec_id",
     2: "Non-existent metadatas for rec_ids",
     3: "Non-existent metadata for mongo_id",

@@ -7,6 +7,7 @@ import uuid
 from datetime import datetime
 
 from biblib import metajson
+from biblib.citations import citations_manager
 from biblib.metajson import Common
 from biblib.metajson import Collection
 from biblib.metajson import Field
@@ -16,10 +17,12 @@ from biblib.metajson import Family
 from biblib.metajson import Identifier
 from biblib.metajson import Orgunit
 from biblib.metajson import Person
+from biblib.metajson import Project
 from biblib.metajson import Resource
 from biblib.metajson import Target
 from biblib.metajson import Type
 from biblib.util import constants
+from biblib.util import jsonbson
 from biblib.services import date_service
 
 def load_dict(meta_dict):
@@ -31,6 +34,8 @@ def load_dict(meta_dict):
         return Person(meta_dict)
     elif meta_dict["rec_class"] == "Orgunit":
         return Orgunit(meta_dict)
+    elif meta_dict["rec_class"] == "Project":
+        return Project(meta_dict)
     elif meta_dict["rec_class"] == "Event":
         return Event(meta_dict)
     elif meta_dict["rec_class"] == "Family":
@@ -46,6 +51,7 @@ def load_dict(meta_dict):
     elif meta_dict["rec_class"] == "Collection":
         return Collection(meta_dict)
     else:
+        #print jsonbson.dumps_bson(meta_dict)
         print "Unknown rec_class: {O}".format(meta_dict["rec_class"])
         return Common(meta_dict)
 
@@ -86,6 +92,13 @@ def pretty_print_document(document):
                 print "# is_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_type: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_id: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].title: {}".format(is_part_of_is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of_is_part_of.get_rec_id(), is_part_of_is_part_of_is_part_of.get_title())
 
 
+def enhance_metajson_list(documents):
+    if documents:
+        for document in documents:
+            if document:
+                yield enhance_metajson(document)
+
+
 def enhance_metajson(document):
     if isinstance(document, dict):
         document = load_dict(document)
@@ -93,34 +106,52 @@ def enhance_metajson(document):
     # rec_id
     if "rec_id" not in document or document["rec_id"] is None:
         document["rec_id"] = str(uuid.uuid1())
+
+    # language
+    # todo use language_service
+
     # title_non_sort
     manage_title_non_sort(document)
+
     # rec_status
     if "rec_status" not in document or document["rec_status"] is None:
         document["rec_status"] = constants.REC_STATUS_PRIVATE
-    # date_sort
-    date_iso = document.get_date()
-    date_sort = date_service.parse_date(date_iso)
-    document["date_sort"] = date_sort
+
     # rec_created_date
     if "rec_created_date" not in document or document["rec_created_date"] is None:
         document["rec_created_date"] = datetime.now().isoformat()
+
     # rec_modified_date
-        document["rec_modified_date"] = datetime.now().isoformat()
+    document["rec_modified_date"] = datetime.now().isoformat()
+    
     # rec_deleted_date
-        if document["rec_status"] == constants.REC_STATUS_DELETED and "rec_deleted_date" not in metajson:
-            document["rec_deleted_date"] = datetime.now().isoformat()
+    if document["rec_status"] == constants.REC_STATUS_DELETED and "rec_deleted_date" not in metajson:
+        document["rec_deleted_date"] = datetime.now().isoformat()
+
+    # For "rec_class": "Document" only
+    if "rec_class" in document and document["rec_class"] == constants.CLASS_DOCUMENT:
+        # citations
+        citations_manager.add_citations_to_metadata(document, None, None)
+        # date_sort
+        date_iso = document.get_date()
+        date_sort = date_service.parse_date(date_iso)
+        document["date_sort"] = date_sort
+
     return document
 
 
 def manage_title_non_sort(document):
     #print("manage_title_non_sort")
     if document and "title_non_sort" not in document and "title" in document:
+        # debug
+        #print jsonbson.dumps_bson(document)
+        #if "rec_id" in document:
+        #    print "document[""rec_id""] = {}".format(document["rec_id"])
         title = document["title"]
         language = None
         if "languages" in document:
             language = document["languages"][0]
-            print("language: {}".format(language))
+            #print("language: {}".format(language))
             if language and language in constants.TITLE_NON_SORT:
                 non_sorts = constants.TITLE_NON_SORT[language]
                 title_words = title.split()
@@ -129,8 +160,8 @@ def manage_title_non_sort(document):
                     if first_title_word in non_sorts:
                         title_non_sort = first_title_word
                         title = " ".join(title_words[1:])
-                        print("title_non_sort: '{}'".format(title_non_sort))
-                        print("title: '{}'".format(title))
+                        #print("title_non_sort: '{}'".format(title_non_sort))
+                        #print("title: '{}'".format(title))
                         document["title_non_sort"] = title_non_sort
                         document["title"] = title
 
@@ -168,14 +199,14 @@ def create_address(street, post_code, locality_city_town, country, preferred, re
     return address
 
 
-def create_affiliation(rec_id, name, role=None, date_start=None, date_end=None, preferred=False):
+def create_affiliation(rec_id, name, role=None, date_begin=None, date_end=None, preferred=False):
     affiliation = {}
     if preferred:
         affiliation["preferred"] = preferred
     if role:
         affiliation["role"] = role
-    if date_start:
-        affiliation["date_start"] = date_start
+    if date_begin:
+        affiliation["date_begin"] = date_begin
     if date_end:
         affiliation["date_end"] = date_end
     agent = Orgunit()
@@ -263,14 +294,18 @@ def create_phone(formatted, phone_type, preferred, relation_type, visible):
         return phone
 
 
-def create_uri(value, preferred, relation_type, visible):
+def create_url(value, preferred, relation_type, label, date_last_accessed, visible):
     if value is not None:
-        uri = {}
-        uri["value"] = value
+        url = {}
+        url["value"] = value
         if preferred is not None:
-            uri["preferred"] = preferred
+            url["preferred"] = preferred
         if relation_type is not None:
-            uri["relation_type"] = relation_type
+            url["relation_type"] = relation_type
+        if label is not None:
+            url["label"] = label
+        if date_last_accessed is not None:
+            url["date_last_accessed"] = date_last_accessed
         if visible is not None:
-            uri["visible"] = visible
-        return uri
+            url["visible"] = visible
+        return url

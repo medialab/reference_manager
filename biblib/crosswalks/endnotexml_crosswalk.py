@@ -411,10 +411,10 @@ def endnotexml_record_to_metajson(record, source):
     if date_year:
         date_issued = ""
         date_issued_first = ""
-        orig_index_start = date_year.find("[")
+        orig_index_begin = date_year.find("[")
         orig_index_end = date_year.find("]")
-        if orig_index_start != -1 and orig_index_end != -1:
-            date_issued_first = date_year[orig_index_start + 1: orig_index_end]
+        if orig_index_begin != -1 and orig_index_end != -1:
+            date_issued_first = date_year[orig_index_begin + 1: orig_index_end]
             date_issued = date_year.replace("[" + date_issued_first + "]", "").strip()
         else:
             date_issued = date_year.strip()
@@ -446,9 +446,9 @@ def endnotexml_record_to_metajson(record, source):
 
     # language
     if language:
-        iso639_2 = language_service.convert_unknown_format_to_iso639_2(language)
-        if iso639_2:
-            document["languages"] = [{"authority": "iso639-2b", "value": iso639_2}]
+        iso639_1 = language_service.convert_unknown_format_to_iso639_1(language)
+        if iso639_1:
+            document["languages"] = [iso639_1]
 
     # note
     if endnote_import_note and note:
@@ -456,13 +456,13 @@ def endnotexml_record_to_metajson(record, source):
     if endnote_import_research_note and research_notes:
         document.set_key_with_value_type_in_list("notes", research_notes, "user")
 
-    # part_page_start & part_page_end
+    # part_page_begin & part_page_end
     if endnote_type in [TYPE_BOOK_SECTION, TYPE_FIGURE, TYPE_JOURNAL_ARTICLE] and pages:
         hyphen_index = pages.find("-")
         if hyphen_index == -1:
-            document["part_page_start"] = pages.replace("p.", "").strip()
+            document["part_page_begin"] = pages.replace("p.", "").strip()
         else:
-            document["part_page_start"] = pages[:hyphen_index].replace("p.", "").strip()
+            document["part_page_begin"] = pages[:hyphen_index].replace("p.", "").strip()
             document["part_page_end"] = pages[hyphen_index+1:].replace("p.", "").strip()
 
     if endnote_type in [TYPE_JOURNAL_ARTICLE]:
@@ -496,7 +496,7 @@ def endnotexml_record_to_metajson(record, source):
 
     debug = True
     if debug:
-        print "endnote_type: {}".format(endnote_type)
+        print "# endnote_type: {}".format(endnote_type)
         metajson_service.pretty_print_document(document)
     return document
 

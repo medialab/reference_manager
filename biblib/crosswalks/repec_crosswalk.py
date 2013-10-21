@@ -46,8 +46,8 @@ def metajson_to_repec(document):
         write_key_value(repec, "X-PublishedAs-Volume", document["part_volume"])
     if "part_issue" in document:
         write_key_value(repec, "X-PublishedAs-Issue", document["part_issue"])
-    if "part_page_start" in document:
-        pages = document["part_page_start"]
+    if "part_page_begin" in document:
+        pages = document["part_page_begin"]
         if "part_page_end" in document:
             pages += "-" + document["part_page_end"]
         write_key_value(repec, "X-PublishedAs-Pages", pages)

@@ -17,8 +17,8 @@ def test_search_mongo():
 
 def test_search():
     search_query = {"filter_class": "Document"}
-    search_query["filter_date_end"] = "2000"
-    search_query["filter_date_start"] = "2013"
+    search_query["filter_date_begin"] = "2010"
+    search_query["filter_date_end"] = "2013"
     search_query["filter_languages"] = ["en", "fr"]
     search_query["filter_types"] = ["Book", "BookPart"]
     search_query["rec_class"] = "SearchQuery"

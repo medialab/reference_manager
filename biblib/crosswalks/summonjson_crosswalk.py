@@ -5,6 +5,7 @@
 from biblib.metajson import Collection
 from biblib.metajson import Document
 from biblib.metajson import Creator
+from biblib.metajson import Person
 from biblib.metajson import Subject
 from biblib.services import creator_service
 from biblib.services import language_service
@@ -116,9 +117,9 @@ def summonjson_document_to_metajson(sum_doc, source):
     creators = extract_creators(sum_doc)
     copyright_statement = extract_value(sum_doc, "Copyright")
     database_id = extract_value(sum_doc, "DBID")
-    print "DBID: {}".format(database_id)
+    #print "DBID: {}".format(database_id)
     database_xml = extract_dict_value(sum_doc, "Database_xml")
-    print "database_xml: {}".format(database_xml)
+    #print "database_xml: {}".format(database_xml)
     date_issued = extract_date_issued(sum_doc)
     degree = extract_value(sum_doc, "DissertationDegree")
     descriptions = extract_convert_languageValues(sum_doc, "Abstract", main_language)
@@ -131,7 +132,7 @@ def summonjson_document_to_metajson(sum_doc, source):
     notes = extract_convert_languageValues(sum_doc, "Notes", main_language)
     part_issue = extract_value(sum_doc, "Issue")
     part_page_end = extract_value(sum_doc, "EndPage")
-    part_page_start = extract_value(sum_doc, "StartPage")
+    part_page_begin = extract_value(sum_doc, "StartPage")
     part_volume = extract_value(sum_doc, "Volume")
     peer_reviewed = extract_boolean_value(sum_doc, "IsPeerReviewed")
     publisher = extract_value(sum_doc, "Publisher")
@@ -231,7 +232,7 @@ def summonjson_document_to_metajson(sum_doc, source):
     document.set_key_if_not_none("notes", notes)
     document.set_key_if_not_none("part_issue", part_issue)
     document.set_key_if_not_none("part_page_end", part_page_end)
-    document.set_key_if_not_none("part_page_start", part_page_start)
+    document.set_key_if_not_none("part_page_begin", part_page_begin)
     document.set_key_if_not_none("part_volume", part_volume)
     document.set_key_if_not_none("scholarly", scholarly)
     document.set_key_if_not_none("table_of_contents", table_of_contents)
@@ -330,9 +331,10 @@ def convert_creators(sum_doc, sum_authors_key, sum_affiliations_key, creator_typ
             for author in sum_authors:
                 creator = Creator()
                 if "surname" in author and "givenname" in author:
-                    creator.set_key_if_not_none("name_family", author["surname"])
-                    creator.set_key_if_not_none("name_given", author["givenname"])
-                    creator["type"] = "person"
+                    person = Person()
+                    person.set_key_if_not_none("name_family", author["surname"])
+                    person.set_key_if_not_none("name_given", author["givenname"])
+                    creator["agent"] = person
                     if role:
                         creator["role"] = role
                 else:

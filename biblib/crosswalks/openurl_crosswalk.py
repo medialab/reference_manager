@@ -292,7 +292,7 @@ def metajson_to_openurl(document):
             openurl["rft.issn"] = issn
 
         # spage
-        spage = document.get_part_page_start()
+        spage = document.get_part_page_begin()
         if spage:
             openurl["rft.spage"] = spage
 

@@ -40,7 +40,7 @@
                 "en": "Date broadcast start",
                 "fr": "Date de début de diffusion"
             },
-            "property": "date_period_start",
+            "property": "date_period_begin",
             "required": false,
             "type_ui": "DateField"
         },
