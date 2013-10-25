@@ -114,12 +114,13 @@ See the online documentation: [Install MongoDB on Red Hat Enterprise, CentOS, or
 
 Create the file /etc/yum.repos.d/mongodb.repo
 with:
-
+	[mongodb]
 	name=MongoDB Repository
 	baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
 	gpgcheck=0
 	enabled=1
 
+Then install the packages:
 
 	yum install mongo-10gen mongo-10gen-server
 
