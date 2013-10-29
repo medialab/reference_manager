@@ -64,7 +64,7 @@
     },
     "actions":{
       "add":"add identifier"
-    },
+    }
   },
   "LanguageValueField": {
     "errors": {
