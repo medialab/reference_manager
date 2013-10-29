@@ -25,14 +25,14 @@
    *  >   "type_ui": "CharField"
    *  > }
    */
-  blf.modules.customInputs.CharField = function(obj) {
+  blf.modules.customInputs.CharField = function(obj, controller) {
     domino.module.call(this);
 
     var _dom,
         _self = this;
 
     _dom = $(blf.templates.get('CharField')({
-      label: obj.label || obj.labels[blf.assets.lang]
+      label: obj.label || obj.labels[controller.get('assets_lang')]
     }));
 
     // Add empty line:
@@ -119,7 +119,6 @@
 
     function _validate() {
       var data = _getData();
-      console.log(obj.property, data);
 
       // Check !multiple && required:
       if (

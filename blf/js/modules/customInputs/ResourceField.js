@@ -33,18 +33,18 @@
    *  >   type_ui: "ResourceField"
    *  > }
    */
-  blf.modules.customInputs.ResourceField = function(obj, d) {
+  blf.modules.customInputs.ResourceField = function(obj, controller) {
     domino.module.call(this);
 
     var _dom = $(blf.templates.get('ResourceField')({
-          label: obj.label || obj.labels[blf.assets.lang]
+          label: obj.label || obj.labels[controller.get('assets_lang')]
         })),
         _ul = $('ul', _dom).first(),
         _lineID = 1,
         _self = this,
         _forms = {},
         _classTemplates,
-        _fields = d.get('fields');
+        _fields = controller.get('fields');
 
     // Try to get the list:
     // AAARGH: How am I supposed to do when I add a module that needs to
@@ -72,7 +72,7 @@
 
       if (data.rec_type) {
         $('select.select-field', li).first().val(data.rec_type);
-        _forms[id] = blf.modules.createPanel.generateForm(blf.control, _fields[data.rec_type].children);
+        _forms[id] = blf.modules.createPanel.generateForm(controller, _fields[data.rec_type].children);
 
         $('.custom-container', li).first().empty().append(_forms[id].components.map(function(o) {
           return o.dom;
@@ -128,7 +128,7 @@
     });
 
     function addForm(li, value) {
-      _forms[li.data('id')] = blf.modules.createPanel.generateForm(blf.control, _fields[value].children);
+      _forms[li.data('id')] = blf.modules.createPanel.generateForm(controller, _fields[value].children);
       $('.custom-container', li).first().empty().append(_forms[li.data('id')].components.map(function(o) {
         return o.dom;
       }));
@@ -212,7 +212,7 @@
     };
 
     // Domino bindings:
-    this.triggers.events.fieldsUpdated = function(d) {
+    this.triggers.events.fieldsUpdated = function(controller) {
       // If each related field has already been loaded, do nothing:
       if (obj.type_fields.every(function(o) {
         return _fields[o];
@@ -220,7 +220,7 @@
         return;
 
       // Else, let's regenerate the <select> contents:
-      _fields = d.get('fields');
+      _fields = controller.get('fields');
 
       _ul.children('li').each(function() {
         $(this).find('select.select-field').first().html(

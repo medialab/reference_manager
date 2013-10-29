@@ -3,7 +3,7 @@
 
   mlab.pkg('blf.modules');
 
-  blf.modules.layout = function() {
+  blf.modules.layout = function(controller) {
     domino.module.call(this);
 
     var _self = this,
@@ -33,29 +33,29 @@
     });
 
     // Initialize other modules:
-    _modules.push(blf.control.addModule(
+    _modules.push(controller.addModule(
       blf.modules.fieldsPanel,
       [ $('[data-panel="fields"]', _panels) ]
     ));
 
-    _modules.push(blf.control.addModule(
+    _modules.push(controller.addModule(
       blf.modules.createPanel,
-      [ $('[data-panel="create"]', _panels) ]
+      [ $('[data-panel="create"]', _panels), controller ]
     ));
 
-    _modules.push(blf.control.addModule(
+    _modules.push(controller.addModule(
       blf.modules.listPanel,
       [ $('[data-panel="list"]', _panels) ]
     ));
 
-    _modules.push(blf.control.addModule(
+    _modules.push(controller.addModule(
       blf.modules.advancedSearchPanel,
-      [ $('[data-panel="advancedSearch"]', _panels) ]
+      [ $('[data-panel="advancedSearch"]', _panels), controller ]
     ));
 
     // Listen to the controller:
-    this.triggers.events.modeUpdated = function(d) {
-      var mode = d.get('mode');
+    this.triggers.events.modeUpdated = function(controller) {
+      var mode = controller.get('mode');
       $('[data-panel]:not([data-panel="' + mode + '"])', _panels).css('display', 'none');
       $('[data-panel="' + mode + '"]', _panels).css('display', '');
     };

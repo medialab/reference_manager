@@ -31,7 +31,7 @@
         _self = this;
 
     _dom = $(blf.templates.get('IdentifierField')({
-      label: obj.label || obj.labels[blf.assets.lang]
+      label: obj.label || obj.labels[controller.get('assets_lang')]
     }));
 
     // Bind events:

@@ -2,27 +2,32 @@ window.blf = window.blf || {};
 blf.init = function(config) {
   'use strict';
 
-  // Package "blf": BibLib Front
+  // BibLib Front default configuration:
   mlab.pkg('blf');
-  blf.config = config || {};
+  config = config || {};
+  config.rpc = config.rpc || {};
+  config.i18n = config.i18n || {};
+  config.lang = config.lang || 'en';
 
-  // Global vars:
-  mlab.pkg('blf.global.rpc');
+  var controller,
+      env = {
+        rpc: {}
+      };
 
-  blf.global.API_URL = blf.config.baseURL;
-  blf.global.corpus = blf.config.corpus;
-  blf.global.rpc.type = 'POST';
-  blf.global.rpc.contentType = 'application/x-www-form-urlencoded';
-  blf.global.rpc.expect = function(data) {
+  env.API_URL = config.baseURL;
+  env.corpus = config.corpus;
+  env.rpc.type = 'POST';
+  env.rpc.contentType = 'application/x-www-form-urlencoded';
+  env.rpc.expect = function(data) {
     return data !== null &&
       typeof data === 'object' &&
       !('error' in data);
   };
-  blf.global.rpc.before = config.rpc.before;
-  blf.global.rpc.error = function(data) {
+  env.rpc.before = config.rpc.before;
+  env.rpc.error = function(data) {
     this.log('Error:' + data);
   };
-  blf.global.rpc.buildData = function(method, params) {
+  env.rpc.buildData = function(method, params) {
     return JSON.stringify({
       id: 1,
       jsonrpc: '2.0',
@@ -31,39 +36,11 @@ blf.init = function(config) {
     });
   };
 
-  // Domino global settings:
-  domino.settings({
-    shortcutPrefix: '::',
-    displayTime: true,
-    verbose: true,
-    strict: true
-  });
-
-  // Initialize lang and other global assets:
-  mlab.pkg('blf.assets');
-  blf.assets.lang = 'en';
-  blf.assets.languages = [
-    {
-      id: 'fr',
-      labels: {
-        fr: 'Français',
-        en: 'French'
-      }
-    },
-    {
-      id: 'en',
-      labels: {
-        fr: 'Anglais',
-        en: 'English'
-      }
-    }
-  ];
-
   // Load dictionary:
   i18n.init({
-    resGetPath: blf.config.i18n.url,
-    lng: blf.config.i18n.lang,
-    fallbackLng: blf.config.i18n.lang,
+    lng: config.lang,
+    fallbackLng: config.lang,
+    resGetPath: config.i18n.url,
     ns: {
       namespaces: ['translation', 'customInputs'],
       defaultNs: 'translation'
@@ -71,7 +48,7 @@ blf.init = function(config) {
   }, function(t) {
     // Load main template:
     blf.templates.require('main', function(template) {
-      blf.config.baseDOM.append(template());
+      config.baseDOM.append(template());
       $.t('navigation.addEntry');
       $('body').i18n();
       start();
@@ -91,9 +68,9 @@ blf.init = function(config) {
      *  >     }
      *  >   });
      */
-    if (!domino.struct.isValid('blf.Config'))
+    if (!domino.struct.isValid('Config'))
       domino.struct.add({
-        id: 'blf.Config',
+        id: 'Config',
         struct: 'object'
       });
 
@@ -159,9 +136,38 @@ blf.init = function(config) {
     /**
      * Controler:
      */
-    blf.control = new domino({
-      name: 'blf.control',
+    controller = new domino({
+      name: config.name || config.corpus,
       properties: [
+        // ASSETS
+        {
+          value: config.lang,
+          id: 'assets_lang',
+          type: 'string',
+          description: '[ASSETS] The current lang.'
+        },
+        {
+          value: [
+            {
+              id: 'fr',
+              labels: {
+                fr: 'Français',
+                en: 'French'
+              }
+            },
+            {
+              id: 'en',
+              labels: {
+                fr: 'Anglais',
+                en: 'English'
+              }
+            }
+          ],
+          id: 'assets_languages',
+          type: 'array',
+          description: '[ASSETS] The list of available languages + translations.'
+        },
+
         // DATA related properties
         {
           value: {},
@@ -217,9 +223,9 @@ blf.init = function(config) {
 
         // INTERFACE related properties
         {
-          value: blf.config,
+          value: config,
           id: 'config',
-          type: 'blf.Config',
+          type: 'Config',
           description: 'The configuration object of the interface.'
         },
         {
@@ -273,9 +279,9 @@ blf.init = function(config) {
                 params:input
               }
             */
-            this.log('calling config blf.config.callbacks with params :', e.data );
-            if( blf.config.callbacks && blf.config.callbacks[ e.data.service ] )
-              blf.config.callbacks[ e.data.service ]( e.data );
+            this.log('calling config config.callbacks with params :', e.data );
+            if( config.callbacks && config.callbacks[ e.data.service ] )
+              config.callbacks[ e.data.service ]( e.data );
               // :-D
           }
         },
@@ -471,15 +477,15 @@ blf.init = function(config) {
         // RPC services:
         {
           id: 'list_corpora',
-          url: blf.global.API_URL,
+          url: env.API_URL,
           description: 'Retrieve the corpora list',
-          before: blf.global.rpc.before,
-          type: blf.global.rpc.type,
-          error: blf.global.rpc.error,
-          expect: blf.global.rpc.expect,
-          contentType: blf.global.rpc.contentType,
+          before: env.rpc.before,
+          type: env.rpc.type,
+          error: env.rpc.error,
+          expect: env.rpc.expect,
+          contentType: env.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('list_corpora', [ ]);
+            return env.rpc.buildData('list_corpora', [ ]);
           },
           success: function(data, input) {
             // TODO
@@ -487,15 +493,15 @@ blf.init = function(config) {
         },
         {
           id: 'default_corpus',
-          url: blf.global.API_URL,
+          url: env.API_URL,
           description: 'Retrieve the default corpus',
-          before: blf.global.rpc.before,
-          type: blf.global.rpc.type,
-          error: blf.global.rpc.error,
-          expect: blf.global.rpc.expect,
-          contentType: blf.global.rpc.contentType,
+          before: env.rpc.before,
+          type: env.rpc.type,
+          error: env.rpc.error,
+          expect: env.rpc.expect,
+          contentType: env.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('default_corpus', [ ]);
+            return env.rpc.buildData('default_corpus', [ ]);
           },
           success: function(data, input) {
             // TODO
@@ -503,15 +509,15 @@ blf.init = function(config) {
         },
         {
           id: 'search',
-          url: blf.global.API_URL,
+          url: env.API_URL,
           description: 'A service to search on existing entries.',
-          before: blf.global.rpc.before,
-          type: blf.global.rpc.type,
-          error: blf.global.rpc.error,
-          expect: blf.global.rpc.expect,
-          contentType: blf.global.rpc.contentType,
+          before: env.rpc.before,
+          type: env.rpc.type,
+          error: env.rpc.error,
+          expect: env.rpc.expect,
+          contentType: env.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('search', [ blf.global.corpus, input.query ]);
+            return env.rpc.buildData('search', [ env.corpus, input.query ]);
           },
           success: function(data, input) {
             var results = data.result;
@@ -525,15 +531,15 @@ blf.init = function(config) {
         },
         {
           id: 'type',
-          url: blf.global.API_URL,
+          url: env.API_URL,
           description: 'Loads the list of specified type.',
-          before: blf.global.rpc.before,
-          type: blf.global.rpc.type,
-          error: blf.global.rpc.error,
-          expect: blf.global.rpc.expect,
-          contentType: blf.global.rpc.contentType,
+          before: env.rpc.before,
+          type: env.rpc.type,
+          error: env.rpc.error,
+          expect: env.rpc.expect,
+          contentType: env.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('type', [ blf.global.corpus, input.typeName, 'fr' ]);
+            return env.rpc.buildData('type', [ env.corpus, input.typeName, 'fr' ]);
           },
           success: function(data) {
             this.dispatchEvent('addTypes', {
@@ -543,15 +549,15 @@ blf.init = function(config) {
         },
         {
           id: 'types',
-          url: blf.global.API_URL,
+          url: env.API_URL,
           description: 'Loads every lists.',
-          before: blf.global.rpc.before,
-          type: blf.global.rpc.type,
-          error: blf.global.rpc.error,
-          expect: blf.global.rpc.expect,
-          contentType: blf.global.rpc.contentType,
+          before: env.rpc.before,
+          type: env.rpc.type,
+          error: env.rpc.error,
+          expect: env.rpc.expect,
+          contentType: env.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('types', [ blf.global.corpus, 'fr' ]);
+            return env.rpc.buildData('types', [ env.corpus, 'fr' ]);
           },
           success: function(data) {
             this.dispatchEvent('addTypes', {
@@ -561,15 +567,15 @@ blf.init = function(config) {
         },
         {
           id: 'field',
-          url: blf.global.API_URL,
+          url: env.API_URL,
           description: 'Loads one field specification.',
-          before: blf.global.rpc.before,
-          type: blf.global.rpc.type,
-          error: blf.global.rpc.error,
-          expect: blf.global.rpc.expect,
-          contentType: blf.global.rpc.contentType,
+          before: env.rpc.before,
+          type: env.rpc.type,
+          error: env.rpc.error,
+          expect: env.rpc.expect,
+          contentType: env.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('field', [ blf.global.corpus, input.field, 'fr' ]);
+            return env.rpc.buildData('field', [ env.corpus, input.field, 'fr' ]);
           },
           success: function(data) {
             var result = data.result,
@@ -581,15 +587,15 @@ blf.init = function(config) {
         },
         {
           id: 'fields',
-          url: blf.global.API_URL,
+          url: env.API_URL,
           description: 'Loads all fields specifications.',
-          before: blf.global.rpc.before,
-          type: blf.global.rpc.type,
-          error: blf.global.rpc.error,
-          expect: blf.global.rpc.expect,
-          contentType: blf.global.rpc.contentType,
+          before: env.rpc.before,
+          type: env.rpc.type,
+          error: env.rpc.error,
+          expect: env.rpc.expect,
+          contentType: env.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('fields', [ blf.global.corpus, 'fr' ]);
+            return env.rpc.buildData('fields', [ env.corpus, 'fr' ]);
           },
           success: function(data) {
             var i,
@@ -606,15 +612,15 @@ blf.init = function(config) {
         },
         {
           id: 'get_entry', // given the id
-          url: blf.global.API_URL,
+          url: env.API_URL,
           description: 'Retrieve an entry, given the rec_id identifier.',
-          before: blf.global.rpc.before,
-          type: blf.global.rpc.type,
-          error: blf.global.rpc.error,
-          expect: blf.global.rpc.expect,
-          contentType: blf.global.rpc.contentType,
+          before: env.rpc.before,
+          type: env.rpc.type,
+          error: env.rpc.error,
+          expect: env.rpc.expect,
+          contentType: env.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('metadata_by_rec_ids', [ blf.global.corpus, [input.rec_id ]]);
+            return env.rpc.buildData('metadata_by_rec_ids', [ env.corpus, [input.rec_id ]]);
           },
           success: function(data, input) {
             var result = data.result;
@@ -629,20 +635,20 @@ blf.init = function(config) {
         },
         {
           id: 'save',
-          url: blf.global.API_URL,
+          url: env.API_URL,
           description: 'Saves an entry.',
-          before: blf.global.rpc.before,
-          type: blf.global.rpc.type,
-          error: blf.global.rpc.error,
-          expect: blf.global.rpc.expect,
-          contentType: blf.global.rpc.contentType,
+          before: env.rpc.before,
+          type: env.rpc.type,
+          error: env.rpc.error,
+          expect: env.rpc.expect,
+          contentType: env.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('save', [ blf.global.corpus, input.entry ]);
+            return env.rpc.buildData('save', [ env.corpus, input.entry ]);
           },
           success: function(data, input) {
             var result = data.result;
             this.log('Log from server after saving an entry:', result);
-            if(blf.config.back_home_on_save)
+            if(config.back_home_on_save)
               this.update('mode', 'home');
             this.dispatchEvent('successCallback',{
               service:input.service,
@@ -653,15 +659,15 @@ blf.init = function(config) {
         },
         {
           id: 'delete',
-          url: blf.global.API_URL,
+          url: env.API_URL,
           description: 'Deletes an entry.',
-          before: blf.global.rpc.before,
-          type: blf.global.rpc.type,
-          error: blf.global.rpc.error,
-          expect: blf.global.rpc.expect,
-          contentType: blf.global.rpc.contentType,
+          before: env.rpc.before,
+          type: env.rpc.type,
+          error: env.rpc.error,
+          expect: env.rpc.expect,
+          contentType: env.rpc.contentType,
           data: function(input) {
-            return blf.global.rpc.buildData('delete', [ blf.global.corpus, input.rec_id ]);
+            return env.rpc.buildData('delete', [ env.corpus, input.rec_id ]);
           },
           success: function(data, input) {
             var result = data.result;
@@ -680,20 +686,23 @@ blf.init = function(config) {
       ]
     });
 
-    // Layout initialization:
-    blf.layout = blf.control.addModule(blf.modules.layout);
-
-    // Data initialization:
-    blf.control.request(['types', 'fields'], {
-      success: function() {
-        if (typeof blf.config.onComplete === 'function')
-          blf.config.onComplete();
-      }
+    // Domino global settings:
+    controller.settings({
+      shortcutPrefix: '::',
+      displayTime: true,
+      verbose: true,
+      strict: true
     });
 
-    // Due to issue #25, binding a success to a multi-request does not work.
-    // Sooooooooo... Here is the hack:
-    window.setTimeout(function() {
-    }, 300);
+    // Layout initialization:
+    controller.addModule(blf.modules.layout, [controller]);
+
+    // Data initialization:
+    controller.request(['types', 'fields'], {
+      success: function() {
+        if (typeof config.onComplete === 'function')
+          config.onComplete(controller);
+      }
+    });
   }
 };

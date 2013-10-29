@@ -24,12 +24,12 @@
    *  >   type_ui: "TypeField"
    *  > }
    */
-  blf.modules.customInputs.TypeField = function(obj) {
+  blf.modules.customInputs.TypeField = function(obj, controller) {
     domino.module.call(this);
 
     var _dom,
         _selected = {},
-        _values = blf.utils.extractMajors(blf.control.get('lists')[obj.type_source] || []),
+        _values = blf.utils.extractMajors(controller.get('lists')[obj.type_source] || []),
         _separators = _values.filter(function(o) { return o.separator; }).length,
         _self = this;
 
@@ -47,7 +47,7 @@
     }, 0);
 
     _dom = $(blf.templates.get('TypeField')({
-      label: obj.label || obj.labels[blf.assets.lang],
+      label: obj.label || obj.labels[controller.get('assets_lang')],
       multi: !obj.only_one
     }));
 

@@ -10,7 +10,7 @@
   ]);
 
   // Module constructor:
-  blf.modules.createPanel = function(html) {
+  blf.modules.createPanel = function(html, controller) {
     domino.module.call(this);
 
     var _self = this,
@@ -24,7 +24,7 @@
       var entry = e.data.entry,
           field = d.get('fields')[e.data.field],
           form = blf.modules.createPanel.generateForm(
-            blf.control,
+            controller,
             d.get('fields')[e.data.field].children
           );
 
@@ -48,7 +48,7 @@
    * *******************************
    */
   mlab.pkg('blf.modules.createPanel.defaultMethods');
-  blf.modules.createPanel.generateForm = function(d, config) {
+  blf.modules.createPanel.generateForm = function(controller, config) {
     // Form private properties:
     var _currentToKeep = {},
         _propertiesToAdd = {
@@ -73,7 +73,7 @@
 
     // Parse children:
     for (i = 0, l = config.length; i < l; i++)
-      _components.push(blf.modules.createPanel.getComponent(d, config[i]));
+      _components.push(blf.modules.createPanel.getComponent(controller, config[i]));
 
     // Methods:
     function getData() {
@@ -98,7 +98,7 @@
     function validate() {
       var invalid = 0;
 
-      blf.control.log('Form validation:');
+      controller.log('Form validation:');
       _components.forEach(function(component) {
         var isValid = blf.modules.createPanel.validate(component);
 
@@ -106,11 +106,11 @@
           invalid++;
 
         if (!isValid)
-          blf.control.log('  - Invalid component:', component.property);
+          controller.log('  - Invalid component:', component.property);
       });
 
       if (invalid === 0) {
-        blf.control.log('  - Everything is valid');
+        controller.log('  - Everything is valid');
         return true;
       } else
         return false;
@@ -131,7 +131,7 @@
         component = _components[i];
 
         if (parsed[component.property])
-          blf.control.log('Hum, the property "' + component.property + '" has already been given to a component...');
+          controller.log('Hum, the property "' + component.property + '" has already been given to a component...');
 
         parsed[component.property] = 1;
 
@@ -141,7 +141,7 @@
 
       for (i in entry)
         if (!parsed[i])
-          blf.control.log('Property not parsed:', i, 'value:', entry[i]);
+          controller.log('Property not parsed:', i, 'value:', entry[i]);
     }
 
     return {
@@ -156,14 +156,14 @@
    * Instanciates and returns the good component.
    * @return {*} The component instance.
    */
-  blf.modules.createPanel.getComponent = function(d, obj) {
+  blf.modules.createPanel.getComponent = function(controller, obj) {
     var component,
         template,
         module = blf.modules.customInputs[obj.type_ui];
 
     // If a custom component is found:
     if (typeof module === 'function') {
-      module = d.addModule(module, [obj]);
+      module = controller.addModule(module, [obj, controller]);
       component = module.getComponent();
 
     // Else, if a basic component is recognized:
@@ -172,14 +172,14 @@
         propertyObject: obj,
         property: obj.property,
         dom: $(template({
-          label: obj.label || obj.labels[blf.assets.lang],
+          label: obj.label || obj.labels[controller.get('assets_lang')],
           property: obj.property
         }))
       };
 
     // If not recognized at all:
     else
-      d.warn('Data type "' + obj.type_ui + '" not recognized.');
+      controller.warn('Data type "' + obj.type_ui + '" not recognized.');
 
     return component;
   };

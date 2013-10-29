@@ -27,12 +27,12 @@
    *  >   type_ui: "LanguageValueField"
    *  > }
    */
-  blf.modules.customInputs.LanguageValueField = function(obj) {
+  blf.modules.customInputs.LanguageValueField = function(obj, controller) {
     domino.module.call(this);
 
     var _dom,
         _selected = {},
-        _languages = blf.utils.extractMajors(blf.control.get('lists').language || []),
+        _languages = blf.utils.extractMajors(controller.get('lists').language || []),
         _separators = _languages.filter(function(o) { return o.separator; }).length;
 
     // Try to get the list:
@@ -49,7 +49,7 @@
     }, 0);
 
     _dom = $(blf.templates.get('LanguageValueField')({
-      label: obj.label || obj.labels[blf.assets.lang]
+      label: obj.label || obj.labels[controller.get('assets_lang')]
     }));
 
     // Bind events:
@@ -80,7 +80,7 @@
             separator: true
           } : {
             id: o.type_id,
-            label: o.label || o.labels[blf.assets.lang]
+            label: o.label || o.labels[controller.get('assets_lang')]
           };
         })
       }));

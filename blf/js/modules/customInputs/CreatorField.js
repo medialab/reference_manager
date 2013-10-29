@@ -31,18 +31,18 @@
    *  >   type_ui: "CreatorField"
    *  > }
    */
-  blf.modules.customInputs.CreatorField = function(obj, d) {
+  blf.modules.customInputs.CreatorField = function(obj, controller) {
     domino.module.call(this);
 
     var _dom,
         _lineID = 1,
         _linesHash = {},
         _classTemplates,
-        _creatorRoles = blf.utils.extractMajors(d.get('lists').creator_role || []),
-        _creatorAffiliationPersonRoles = blf.utils.extractMajors(d.get('lists').affiliation_role_person || []);
+        _creatorRoles = blf.utils.extractMajors(controller.get('lists').creator_role || []),
+        _creatorAffiliationPersonRoles = blf.utils.extractMajors(controller.get('lists').affiliation_role_person || []);
 
     _dom = $(blf.templates.get('CreatorField')({
-      label: obj.label || obj.labels[blf.assets.lang]
+      label: obj.label || obj.labels[controller.get('assets_lang')]
     }));
 
     // Add a line. The line is empty (ie to be filled by the user) if data is
@@ -57,7 +57,7 @@
                 separator: true
               } : {
                 type_id: o.type_id,
-                label: o.label || o.labels[blf.assets.lang]
+                label: o.label || o.labels[controller.get('assets_lang')]
               };
             })
           }));
@@ -90,7 +90,7 @@
                 separator: true
               } : {
                 type_id: o.type_id,
-                label: o.label || o.labels[blf.assets.lang]
+                label: o.label || o.labels[controller.get('assets_lang')]
               };
             })
           })),

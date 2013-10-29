@@ -17,7 +17,8 @@
     var _self = this,
         _html = html,
         _config = blf.utils.translateLabels(
-          controller.get('config').advancedSearchPanel || {}
+          controller.get('config').advancedSearchPanel || {},
+          controller.get('assets_lang')
         ),
         _index = _config.index,
         _filter = _config.filters,
@@ -125,7 +126,7 @@
       });
 
       _filtersComponents = blf.modules.createPanel.generateForm(
-        blf.control,
+        controller,
         _filter
       ).components;
       $('.filter-container', _html).empty().append(_filtersComponents.map(function(o) {

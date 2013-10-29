@@ -27,7 +27,6 @@
   });
 
   // Templates management:
-  mlab.pkg('blf.config');
   mlab.pkg('blf.templates.preloaded');
   (function() {
     var _templates = {},
@@ -75,7 +74,7 @@
 
   // Some specific utils:
   mlab.pkg('blf.utils');
-  blf.utils.translateLabels = function(obj) {
+  blf.utils.translateLabels = function(obj, lang) {
     var k,
         i,
         l,
@@ -85,16 +84,20 @@
     if (domino.struct.check('object', obj))
       for (k in obj) {
         if (k === 'labels')
-          res.label = obj[k][blf.config.lang];
+          res.label = obj[k][lang];
         else if (domino.struct.check('array', obj[k]))
-          res[k] = obj[k].map(blf.utils.translateLabels);
+          res[k] = obj[k].map(function(val) {
+            return blf.utils.translateLabels(val, lang);
+          });
         else if (domino.struct.check('object', obj[k]))
-          res[k] = blf.utils.translateLabels(obj[k]);
+          res[k] = blf.utils.translateLabels(obj[k], lang);
         else
           res[k] = obj[k];
       }
     else if (domino.struct.check('array', obj))
-      res = obj.map(blf.utils.translateLabels);
+      res = obj.map(function(val) {
+        return blf.utils.translateLabels(val, lang);
+      });
     else
       res = obj;
 
