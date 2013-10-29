@@ -10,6 +10,9 @@
   <!-- The div where blf will be instanciated -->
   <div id="layout"></div>
 
+  <!-- configuration file (just some variables), javascript object stored at window.config.blf -->
+  <script src="config.blf.js"></script>
+
   <!-- JS bundle (including dependencies + templates + localization) -->
   <script src="build/blf.min.js"></script>
 
@@ -17,9 +20,11 @@
     $(function() {
       // We start everything from here:
       blf.init({
-        lang: 'fr',
-        baseURL: 'http://localhost:8080',
+        lang: config.blf.lang,
+        baseURL: config.blf.baseURL,
+        corpus: config.blf.corpus,
         baseDOM: $('#layout'),
+        back_home_on_save: true,
         advancedSearchPanel: {
           index: {
             property_source_index: 'search_index',
@@ -49,6 +54,16 @@
               multiple: true,
               property: 'filter_types',
               type_source: 'document_type',
+              type_ui: 'CheckboxField'
+            },
+            {
+              labels: {
+                en: 'Status',
+                fr: 'Statuts'
+              },
+              multiple: true,
+              property: 'filter_status',
+              type_source: 'rec_status',
               type_ui: 'CheckboxField'
             },
             {
