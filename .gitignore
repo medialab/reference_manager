@@ -57,5 +57,5 @@ mongodb/refmanager.*
 mongodb/remanager.*
 
 # about front-end:
-biblib/front/build
-biblib/front/node_modules
+blf/build
+blf/node_modules
