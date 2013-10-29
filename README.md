@@ -114,21 +114,32 @@ See the online documentation: [Install MongoDB on Red Hat Enterprise, CentOS, or
 
 Create the file /etc/yum.repos.d/mongodb.repo
 with:
+	
 	[mongodb]
 	name=MongoDB Repository
 	baseurl=http://downloads-distro.mongodb.org/repo/redhat/os/x86_64/
 	gpgcheck=0
 	enabled=1
 
+
 Then install the packages:
 
 	yum install mongo-10gen mongo-10gen-server
 
-	service mongod start
+Edit conf file with the correct path to mongod data path
 
-	chkconfig mongod on
+	vi /etc/mongod.conf
+
+edit this line
+
+	dbpath=/store/mongo
+
+Set the path to be accessible to mongod user
+	
+	sudo chown mongod /store/mongo
 	
 ##### Install Python
+	http://toomuchdata.com/2012/06/25/how-to-install-python-2-7-3-on-centos-6-2/
 
 	## Python 2.7:
 	wget http://python.org/ftp/python/2.7.5/Python-2.7.5.tar.bz2
@@ -264,7 +275,7 @@ or update it:
     git reset --hard HEAD
     git pull
 
-Install the working txjsonrpc for JSON-RPC 2.0:
+Install the last version of PyZ3950, not the pip one:
 
     v BIBLIB
     cd /var/opt/biblib
@@ -274,7 +285,8 @@ Install the working txjsonrpc for JSON-RPC 2.0:
     cd PyZ3950
     python setup.py install
 
-Install the last version of PyZ3950, not the pip one:
+
+Install the working txjsonrpc for JSON-RPC 2.0:
 
     v BIBLIB
     cd /var/opt/biblib
