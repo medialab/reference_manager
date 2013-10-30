@@ -551,7 +551,7 @@
         {
             "labels": {
                 "en": "Editor", 
-                "fr": "Éditeur scientifique"
+                "fr": "Editeur scientifique"
             }, 
             "major": true, 
             "type_id": "edt"
@@ -566,7 +566,7 @@
         {
             "labels": {
                 "en": "Electrotyper", 
-                "fr": "Électrotypographe"
+                "fr": "Electrotypographe"
             }, 
             "type_id": "elt"
         }, 
@@ -594,7 +594,7 @@
         {
             "labels": {
                 "en": "Facsimilist", 
-                "fr": "Éditeur de copie fac-similaires"
+                "fr": "Editeur de copie fac-similaires"
             }, 
             "type_id": "fac"
         }, 
@@ -895,7 +895,7 @@
         {
             "labels": {
                 "en": "Publisher", 
-                "fr": "Éditeur commercial"
+                "fr": "Editeur commercial"
             }, 
             "type_id": "pbl"
         }, 
@@ -944,7 +944,7 @@
         {
             "labels": {
                 "en": "Production personnel", 
-                "fr": "Équipe de production (collaborateur ?)"
+                "fr": "Equipe de production (collaborateur ?)"
             }, 
             "type_id": "prd"
         }, 

@@ -12,9 +12,10 @@ from biblib.util import jsonbson
 
 def find_config_path():
     locations = [
+        os.path.abspath(os.getcwd()),
+        os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", ".."),
         os.path.join(os.path.dirname(os.path.realpath(__file__)), ".."),
         os.path.abspath(os.path.join(os.getcwd(), 'biblib')),
-        os.path.abspath(os.getcwd()),
         os.path.abspath(os.path.join(os.getcwd(), os.pardir)),
         os.path.abspath(os.path.join(os.getcwd(), os.pardir, os.pardir)),
         os.path.expanduser("~"),
@@ -22,7 +23,7 @@ def find_config_path():
         os.environ.get("BIBLIB_CONF")
     ]
     for location in locations:
-        #print("location: {}".format(location))
+        print("location: {}".format(location))
         config_location = os.path.join(location, "conf", "config.json")
         if os.path.exists(config_location):
             return os.path.join(location, "conf")

@@ -15,10 +15,11 @@ from biblib.util import constants
 
 # usage:
 # python biblib clean -c aime
-# python biblib conf -c aime
+# python biblib conf -c aime -d aime
 # python biblib import -c aime -f endnotexml -i data/endnotexml/endnote-aime.xml
 # python biblib export -c aime -f metajson -o data/result/result_aime_metajson.json
 # python biblib convert -f endnotexml -i data/endnotexml/endnote-aime.xml -r metajson -o data/result/result_aime_metajson.json
+# python biblib harvest 
 
 console.setup_console()
 default_corpus = config_service.config["default_corpus"]
@@ -41,7 +42,9 @@ def conf_corpus(args):
     if not corpus:
         corpus = default_corpus
     print "corpus: {}".format(corpus)
-    corpus_service.conf_corpus(corpus)
+    corpus_conf_dir_name = args.corpus_conf_dir_name
+    print "corpus_conf_dir_name: {}".format(corpus_conf_dir_name)
+    corpus_service.conf_corpus(corpus, corpus_conf_dir_name)
 
 
 def import_metadatas(args):
@@ -113,6 +116,7 @@ clean_parser = subparsers.add_parser('clean',
                                      help="Be careful! Create the mongodb database of the specified corpus if not already existing, erase all data and create the indexes inside this corpus database.")
 clean_parser.set_defaults(func=clean_corpus)
 clean_parser.add_argument('-c',
+                          '--corpus',
                           dest='corpus',
                           help='corpus identifier like : aime, forccast...')
 
@@ -121,21 +125,29 @@ conf_parser = subparsers.add_parser('conf',
                                     help='Insert or update in the corpus the types and user interface fields located in the "conf" folder')
 conf_parser.set_defaults(func=conf_corpus)
 conf_parser.add_argument('-c',
+                         '--corpus',
                          dest='corpus',
                          help='corpus identifier like : aime, forccast...')
+conf_parser.add_argument('-d',
+                         '--corpus_conf_dir_name',
+                         dest='corpus_conf_dir_name',
+                         help='corpus directory name inside the conf/corpus : aime, forccast...')
 
 # import
 import_parser = subparsers.add_parser('import',
                                       help='Import a metadata file')
 import_parser.set_defaults(func=import_metadatas)
 import_parser.add_argument('-c',
+                           '--corpus',
                            dest='corpus',
                            help='corpus identifier like : aime, forccast...')
 import_parser.add_argument('-f',
+                           '--input_format',
                            dest='input_format',
                            choices=INPUT_FORMATS,
                            help='input file format')
 import_parser.add_argument('-i',
+                           '--input_file_path',
                            dest='input_file_path',
                            #type=argparse.FileType('r'),
                            help='input file path')
@@ -145,13 +157,16 @@ export_parser = subparsers.add_parser('export',
                                       help='Export as a metadata file')
 export_parser.set_defaults(func=export_metadatas)
 export_parser.add_argument('-c',
+                           '--corpus',
                            dest='corpus',
                            help='corpus identifier like : aime, forccast...')
 export_parser.add_argument('-f',
+                           '--output_format',
                            dest='output_format',
                            choices=OUTPUT_FORMATS,
                            help='output file format')
 export_parser.add_argument('-o',
+                           '--output_file_path',
                            dest='output_file_path',
                            #type=argparse.FileType('r'),
                            help='output file path')
@@ -161,18 +176,22 @@ convert_parser = subparsers.add_parser('convert',
                                        help='Convert a metadata file to another format')
 convert_parser.set_defaults(func=convert_metadatas)
 convert_parser.add_argument('-f',
+                            '--input_format',
                             dest='input_format',
                             choices=INPUT_FORMATS,
                             help='input file format')
 convert_parser.add_argument('-i',
+                            '--input_file_path',
                             dest='input_file_path',
                             #type=argparse.FileType('r'),
                             help='input file path')
 convert_parser.add_argument('-r',
+                            '--output_format',
                             dest='output_format',
                             choices=OUTPUT_FORMATS,
                             help='output file format')
 convert_parser.add_argument('-o',
+                            '--output_file_path',
                             dest='output_file_path',
                             #type=argparse.FileType('r'),
                             help='output file path')

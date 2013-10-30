@@ -26,17 +26,20 @@ def clean_corpus(corpus):
         chrono.chrono_trace("clean_corpus", date_begin, date_end, None)
 
 
-def conf_corpus(corpus):
+def conf_corpus(corpus, corpus_conf_dir_name):
     if not corpus:
         print("Error: empty corpus")
     else:
         print("init corpus: {}".format(corpus))
 
+        if not corpus_conf_dir_name:
+            corpus_conf_dir_name = corpus
+
         date_begin = datetime.datetime.now()
 
         # types
         results_types_common = conf_types(corpus, "common")
-        results_types_corpus = conf_types(corpus, corpus)
+        results_types_corpus = conf_types(corpus, corpus_conf_dir_name)
         date_types = datetime.datetime.now()
         total_count = 0
         print "# types common:"
