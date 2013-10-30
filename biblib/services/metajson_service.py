@@ -294,6 +294,18 @@ def create_phone(formatted, phone_type, preferred, relation_type, visible):
         return phone
 
 
+def create_resource_remote(url, role=None, date_last_accessed=None):
+    if url is not None:
+        resource = Resource()
+        resource["rec_type"] = "ResourceRemote"
+        if role:
+            resource["role"] = role
+        if date_last_accessed:
+            resource["date_last_accessed"] = date_last_accessed
+        resource["url"] = url
+        return resource
+
+
 def create_url(value, preferred, relation_type, label, date_last_accessed, visible):
     if value is not None:
         url = {}

@@ -113,6 +113,7 @@ def get_documents_by_rec_ids(corpus, rec_ids):
     if not corpus:
         corpus = default_corpus
     results = mongodb[corpus][DOCUMENTS].find({"rec_id": {"$in": rec_ids}})
+    # results is a pymongo.cursor.Cursor
     if results:
         return metajson_service.load_dict_list(results)
     else:

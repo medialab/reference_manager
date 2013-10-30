@@ -54,7 +54,7 @@ type_to_file_extension = {
     FILE_TYPE_BIBTEX: 'bib',
     FILE_TYPE_HTML: 'html',
     FILE_TYPE_JSON: 'json',
-    FILE_TYPE_MARC: 'mrc',  # todo list with marc
+    FILE_TYPE_MARC: 'mrc',
     FILE_TYPE_TXT: 'ris',
     FILE_TYPE_XMLETREE: 'xml'
 }
@@ -157,6 +157,8 @@ xmltag_to_input_format = {
 }
 
 CLASS_DOCUMENT = "Document"
+CLASS_EVENT = "Event"
+CLASS_FAMILY = "Family"
 CLASS_ORGUNIT = "Orgunit"
 CLASS_PERSON = "Person"
 CLASS_PROJECT = "Project"
