@@ -446,9 +446,9 @@ def endnotexml_record_to_metajson(record, source):
 
     # language
     if language:
-        iso639_1 = language_service.convert_unknown_format_to_iso639_1(language)
-        if iso639_1:
-            document["languages"] = [iso639_1]
+        rfc5646 = language_service.convert_unknown_format_to_rfc5646(language)
+        if rfc5646:
+            document["languages"] = [rfc5646]
 
     # note
     if endnote_import_note and note:
