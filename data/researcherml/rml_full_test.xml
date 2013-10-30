@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <researcherml xmlns="http://bibliotheque.sciences-po.fr/standards/researcherml/v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://bibliotheque.sciences-po.fr/standards/researcherml/v1 http://bibliotheque.sciences-po.fr/standards/researcherml/researcherml-v1-0.xsd">
+  <project>
+    <identifier type="hal">35345</identifier>
+    <identifier type="eu">355345</identifier>
+    <identifier type="anr">ANR-06-BLAN-0000</identifier>
+    <identifier type="hdl">2441/dgsgfsdgf</identifier>
+    <call>
+      <funding>
+        <identifier>anr</identifier>
+        <name>Agence Nationale de la Recherche</name>
+        <programme>funding_programme</programme>
+        <scheme>funding_scheme</scheme>
+        <contribution currency="EUR">funding_contribution</contribution>
+      </funding>
+      <funding>
+        <identifier>eu</identifier>
+        <name>European Union</name>
+      </funding>
+      <identifier>call_id</identifier>
+      <title>call_title</title>
+      <year>call_year</year>
+    </call>
+    <acronym xml:lang="fr">project_acronym</acronym>
+    <title xml:lang="fr">project_title</title>
+    <dateBegin encoding="iso8601">2011-09-01</dateBegin>
+    <dateEnd encoding="iso8601">2014-08-31</dateEnd>
+  </project>
   <affiliation IDref="n2" preferred="true">
     <relationType authority="rmlaffrole">isPartOf</relationType>
     <dateBegin encoding="iso8601">1981</dateBegin>
@@ -109,11 +135,11 @@
     <researchCoverage type="keyword" xml:lang="en">Foreign trade and the role of macro-economic policies</researchCoverage>
     <ongoingResearch>
       <description xml:lang="en">An english description A</description>
-      <description xml:lang="en">Une description française A</description>
+      <description xml:lang="fr">Une description française A</description>
     </ongoingResearch>
     <ongoingResearch>
       <description xml:lang="en">A english description B</description>
-      <description xml:lang="en">Une description française B</description>
+      <description xml:lang="fr">Une description française B</description>
     </ongoingResearch>
     <skill xml:lang="en">skill example</skill>
     <affiliation preferred="true">

@@ -55,7 +55,7 @@ def test():
     test_crosswalk(constants.FORMAT_RESEARCHERML)
     test_crosswalk(constants.FORMAT_RIS)
     test_crosswalk(constants.FORMAT_SUMMONJSON)
-    #test_crosswalk(constants.FORMAT_UNIMARC)
+    test_crosswalk(constants.FORMAT_UNIMARC)
     test_crosswalk(constants.FORMAT_UNIXREF)
 
 console.setup_console()
