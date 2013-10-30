@@ -69,7 +69,7 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
     # identifier -> identifiers
     orgunit.update(get_rml_identifiers(rml_orgunit))
 
-    # image -> image_urls
+    # image -> resources[0]
     orgunit.update(get_rml_images(rml_orgunit))
 
     # name -> name
@@ -148,7 +148,7 @@ def rml_person_to_metajson(rml_person, source):
     # firstname -> name_given
     person.update(get_rml_element_text_and_set_key(rml_person, "firstname", "name_given"))
 
-    # identifier -> identifiers
+    # identifier -> identifiers & rec_id
     person.update(get_rml_identifiers(rml_person))
 
     # image -> image_urls
@@ -245,7 +245,7 @@ def rml_project_to_metajson(rml_project, source):
     # duration -> extent_duration
     project.update(get_rml_element_text_and_set_key(rml_project, "duration", "extent_duration"))
 
-    # identifier -> identifiers
+    # identifier -> identifiers & rec_id
     project.update(get_rml_identifiers(rml_project))
 
     # note -> notes
@@ -362,28 +362,36 @@ def get_rml_call(rml):
     if rml_call is not None:
         call = Call()
 
-        # funding -> funding
-        rml_funding = rml_call.find(xmletree.prefixtag("rml", "funding"))
-        if rml_funding is not None:
-            funding = Orgunit()
+        # funding -> creators[0]
+        rml_fundings = rml_call.findall(xmletree.prefixtag("rml", "funding"))
+        if rml_fundings is not None:
+            creators = []
+            for rml_funding in rml_fundings:
+                if rml_funding is not None:
+                    # name -> agent.name
+                    name = get_rml_element_text(rml_funding, "name")
+                    creator = creator_service.formatted_name_to_creator(name, constants.CLASS_ORGUNIT, "fnd")
+                    if creator is None:
+                        creator = Creator()
+                        creator["agent"] = Orgunit()
+                        creator["role"] = "fnd"
 
-            # identifier -> rec_id
-            funding.update(get_rml_element_text_and_set_key(rml_funding, "identifier", "rec_id"))
+                    # identifier -> agent.rec_id & agent.identifiers
+                    creator["agent"].update(get_rml_identifiers(rml_funding))
 
-            # name -> name
-            funding.update(get_rml_element_text_and_set_key(rml_funding, "name", "name"))
+                    # programme -> funding_programme
+                    creator.update(get_rml_element_text_and_set_key(rml_funding, "programme", "funding_programme"))
 
-            # programme -> programme
-            funding.update(get_rml_element_text_and_set_key(rml_funding, "programme", "programme"))
+                    # scheme -> funding_scheme
+                    creator.update(get_rml_element_text_and_set_key(rml_funding, "scheme", "funding_scheme"))
 
-            # scheme -> scheme
-            funding.update(get_rml_element_text_and_set_key(rml_funding, "scheme", "scheme"))
+                    # contribution -> funding_contribution
+                    creator.update(get_rml_money_and_set_key(rml_funding, "contribution", "funding_contribution"))
 
-            # contribution -> budget_contribution
-            funding.update(get_rml_money_and_set_key(rml_funding, "contribution", "budget_contribution"))
+                    creators.append(creator)
 
-            if funding:
-                call["funding"] = funding
+            if creators:     
+                call["creators"] = creators
 
         # identifier -> rec_id
         call.update(get_rml_element_text_and_set_key(rml_call, "identifier", "rec_id"))
@@ -418,17 +426,26 @@ def get_rml_degrees(rml):
                 # descriptions
                 degree.update(get_rml_textlangs_and_set_key(rml_degree, "description", "descriptions"))
 
-                # identifiers
-                degree.update(get_rml_identifiers(rml_degree))
-
                 # level
                 degree.update(get_rml_element_text_and_set_key(rml_degree, "level", "level"))
 
-                # name
-                degree.update(get_rml_element_text_and_set_key(rml_degree, "name", "name"))
-
                 # title
                 degree.update(get_rml_element_text_and_set_key(rml_degree, "title", "title"))
+
+                # creators
+                # name -> creators[0].agent.name
+                name = get_rml_element_text(rml_degree, "name")
+                creator = creator_service.formatted_name_to_creator(name, constants.CLASS_ORGUNIT, "dgg")
+                if creator is None:
+                    creator = Creator()
+                    creator["agent"] = Orgunit()
+                    creator["role"] = "dgg"
+
+                # identifiers -> creators[0].agent.rec_id or creators[0].agent.identifiers
+                creator["agent"].update(get_rml_identifiers(rml_degree))
+
+                if "name" in creator["agent"] or "rec_id" in creator["agent"] or "identifiers" in creator["agent"]:
+                    degree["creators"] = [creator]
 
                 if degree is not None:
                     degrees.append(degree)
@@ -484,34 +501,38 @@ def get_rml_identifiers(rml):
     rml_identifiers = rml.findall(xmletree.prefixtag("rml", "identifier"))
     if rml_identifiers is not None:
         identifiers = []
+        rec_id = None
         for rml_identifier in rml_identifiers:
             if rml_identifier is not None:
                 id_type = rml_identifier.get("type")
                 id_value = xmletree.get_element_text(rml_identifier)
-                identifier = metajson_service.create_identifier(id_type, id_value)
-                if identifier is not None:
-                    identifiers.append(identifier)
+                if id_type is None or id_type == "hdl":
+                    rec_id = id_value
+                else:
+                    identifier = metajson_service.create_identifier(id_type, id_value)
+                    if identifier is not None:
+                        identifiers.append(identifier)
         if identifiers:
             result["identifiers"] = identifiers
+        if rec_id:
+            result["rec_id"] = rec_id
     return result
 
 
 def get_rml_images(rml):
-    # todo resources
-    """ image -> image_urls """
+    """ image -> resources[0] """
     result = {}
     rml_images = rml.findall(xmletree.prefixtag("rml", "image"))
     if rml_images is not None:
-        images = []
+        resources = []
         for rml_image in rml_images:
             if rml_image is not None:
                 url = xmletree.get_element_text(rml_image)
-                image = metajson_service.create_image_url(url)
-                if image is not None:
-                    images.append(image)
-        if images:
-            result["image_urls"] = images
-            # todo : metajson
+                resource = metajson_service.create_resource_remote(url, "picture")
+                if resource is not None:
+                    resources.append(resource)
+        if resources:
+            result["resources"] = resources
     return result
 
 
@@ -548,6 +569,7 @@ def get_rml_language_capabilities(rml):
                 # language
                 rml_language = rml_lc.find(xmletree.prefixtag("rml", "language"))
                 language = xmletree.get_element_text(rml_language)
+                language = language_service.convert_unknown_format_to_rfc5646(language)
 
                 # motherTong
                 rml_mother_tong = rml_lc.find(xmletree.prefixtag("rml", "motherTong"))
@@ -627,7 +649,7 @@ def get_rml_participants(rml):
                 if creator_name:
                     creator_rec_class = xmletree.get_element_attribute(rml_participant, "entityType")
                     if creator_rec_class:
-                        creator_rec_class = creator_rec_class.lower()
+                        creator_rec_class = creator_rec_class.title()
                     creator = creator_service.formatted_name_to_creator(creator_name, creator_rec_class, None)
                     if creator:
                         creators.append(creator)
@@ -693,7 +715,7 @@ def get_rml_research_coverages(rml):
     result = {}
     rml_rcs = rml.findall(xmletree.prefixtag("rml", "researchCoverage"))
     if rml_rcs is not None:
-        rc_classifications = []
+        rc_classifications_dict = {}
         rc_keywords = {}
         for rml_rc in rml_rcs:
             if rml_rc is not None:
@@ -708,19 +730,15 @@ def get_rml_research_coverages(rml):
                             else:
                                 rc_keywords[language] = [value]
                     else:
-                        rc_classification = {"term": value}
+                        rc_classification = {"term_id": value}
                         authority = rml_rc.get("authority")
-                        authority_id = rml_rc.get("authorityId")
-                        term_id = rml_rc.get("id")
-                        if authority is not None:
-                            rc_classification["authority"] = authority.strip()
-                        if authority_id is not None:
-                            rc_classification["authority_id"] = authority_id.strip()
-                        if term_id is not None:
-                            rc_classification["term_id"] = term_id.strip()
-                        rc_classifications.append(rc_classification)
-        if rc_classifications:
-            result["research_coverage_classifications"] = rc_classifications
+                        if authority is None:
+                            authority = "undetermined"
+                        if authority not in rc_classifications_dict:
+                            rc_classifications_dict[authority] = []
+                        rc_classifications_dict[authority].append(rc_classification)
+        if rc_classifications_dict:
+            result["research_coverage_classifications"] = rc_classifications_dict
         if rc_keywords:
             result["research_coverage_keywords"] = rc_keywords
     return result
@@ -852,11 +870,20 @@ def get_rml_teachings(rml):
                 # title
                 teaching.update(get_rml_element_text_and_set_key(rml_teaching, "title", "title"))
 
-                # identifiers
-                teaching.update(get_rml_identifiers(rml_teaching))
+                # creators
+                # name -> creators[0].agent.name
+                name = get_rml_element_text(rml_teaching, "name")
+                creator = creator_service.formatted_name_to_creator(name, constants.CLASS_ORGUNIT, "dgg")
+                if creator is None:
+                    creator = Creator()
+                    creator["agent"] = Orgunit()
+                    creator["role"] = "dgg"
 
-                # name
-                teaching.update(get_rml_element_text_and_set_key(rml_teaching, "name", "name"))
+                # identifiers -> creators[0].agent.rec_id or creators[0].agent.identifiers
+                creator["agent"].update(get_rml_identifiers(rml_teaching))
+
+                if "name" in creator["agent"] or "rec_id" in creator["agent"] or "identifiers" in creator["agent"]:
+                    teaching["creators"] = [creator]
 
                 # date_begin
                 teaching.update(get_rml_element_text_and_set_key(rml_teaching, "dateBegin", "date_begin"))
