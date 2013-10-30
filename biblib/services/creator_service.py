@@ -9,6 +9,7 @@ from biblib.metajson import Person
 from biblib.metajson import Orgunit
 from biblib.metajson import Family
 from biblib.util import jsonbson
+from biblib.util import constants
 
 
 creator_person_terms_of_address = [
@@ -543,33 +544,34 @@ def formatted_name_to_creator(formatted_name, rec_class, role):
 
         #print("name: %s"%formatted_name)
         # rec_class determination
-        for event_term in creator_event_terms:
-            if event_term in formatted_name.lower():
-                rec_class = "event"
-                break
-        for orgunit_term in creator_orgunit_terms:
-            if orgunit_term in formatted_name.lower():
-                rec_class = "orgunit"
-                break
-        if rec_class is None:
-            rec_class = "person"
+        if rec_class is None or rec_class not in [constants.CLASS_EVENT, constants.CLASS_FAMILY, constants.CLASS_ORGUNIT, constants.CLASS_PERSON]:
+            for event_term in creator_event_terms:
+                if event_term in formatted_name.lower():
+                    rec_class = constants.CLASS_EVENT
+                    break
+            for orgunit_term in creator_orgunit_terms:
+                if orgunit_term in formatted_name.lower():
+                    rec_class = constants.CLASS_ORGUNIT
+                    break
+            if rec_class is None:
+                rec_class = constants.CLASS_PERSON
 
         creator = Creator()
         if role:
             creator["role"] = role
 
-        if rec_class == "event":
+        if rec_class == constants.CLASS_EVENT:
             event = Event()
             event["title"] = formatted_name
             creator["agent"] = event
 
-        elif rec_class == "orgunit":
+        elif rec_class == constants.CLASS_ORGUNIT:
             orgunit = Orgunit()
             orgunit["name"] = formatted_name
             creator["agent"] = orgunit
 
-        elif rec_class == "person" or rec_class == "family":
-            #type is "person" or "family"
+        elif rec_class == constants.CLASS_PERSON or rec_class == constants.CLASS_FAMILY:
+            # class is "Person" or "Family"
 
             name_given = ""
             name_middle = ""
@@ -652,7 +654,7 @@ def formatted_name_to_creator(formatted_name, rec_class, role):
                         name_prefix = name_given
                         name_given = None
 
-            if rec_class == "person":
+            if rec_class == constants.CLASS_PERSON:
                 person = Person()
                 person.set_key_if_not_none("name_family", name_family)
                 person.set_key_if_not_none("name_given", name_given)
@@ -670,7 +672,7 @@ def formatted_name_to_creator(formatted_name, rec_class, role):
                     affiliation["name"] = affiliation_name
                     creator["affiliation"] = affiliation
 
-            elif rec_class == "family":
+            elif rec_class == constants.CLASS_FAMILY:
                 family = Family()
                 family.set_key_if_not_none("name_family", name_family)
                 creator["agent"] = family
