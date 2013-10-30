@@ -49,8 +49,6 @@ class Common(dict):
 class Call(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
         if "rec_class" not in self:
             self["rec_class"] = "Call"
 
@@ -101,8 +99,6 @@ class Creator(Common):
 class Field(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
         if "rec_class" not in self:
             self["rec_class"] = "Field"
 
@@ -111,8 +107,6 @@ class Field(Common):
 class Document(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
         if "rec_class" not in self:
             self["rec_class"] = "Document"
         if "creators" in self:
@@ -343,8 +337,6 @@ class Document(Common):
 class Event(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
         if "rec_class" not in self:
             self["rec_class"] = "Event"
 
@@ -357,8 +349,6 @@ class Event(Common):
 class Family(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
         if "rec_class" not in self:
             self["rec_class"] = "Family"
 
@@ -376,8 +366,6 @@ class Identifier(Common):
 class Orgunit(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
         if "rec_class" not in self:
             self["rec_class"] = "Orgunit"
 
@@ -391,8 +379,6 @@ class Orgunit(Common):
 class Person(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
         if "rec_class" not in self:
             self["rec_class"] = "Person"
 
@@ -415,8 +401,6 @@ class Person(Common):
 class Project(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
         if "rec_class" not in self:
             self["rec_class"] = "Project"
 
@@ -425,8 +409,6 @@ class Project(Common):
 class Resource(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
         if "rec_class" not in self:
             self["rec_class"] = "Resource"
 
@@ -465,8 +447,6 @@ class Subject(Common):
 class Target(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
         if "rec_class" not in self:
             self["rec_class"] = "Target"
 
@@ -475,8 +455,6 @@ class Target(Common):
 class Type(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
-        if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
         if "rec_class" not in self:
             self["rec_class"] = "Type"
 
