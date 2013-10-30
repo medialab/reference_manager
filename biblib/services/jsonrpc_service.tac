@@ -174,7 +174,10 @@ class References_repository(jsonrpc.JSONRPC):
                     results.append(jsonbson.bson_to_json(metajson_document))
                 else:
                     results.append(crosswalks_service.convert_document(metajson_document, "metajson", format))
-            return results
+            if results:
+                return results
+            else:
+                return jsonrpclib.Fault(2, exceptions.metajsonprc_error_code_to_message[2])
         except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
@@ -198,7 +201,10 @@ class References_repository(jsonrpc.JSONRPC):
                 result["rec_id"] = metajson_document["rec_id"]
                 result[style] = citations_manager.cite(metajson_document, style, format)
                 results.append(result)
-            return jsonbson.bson_to_json(results)
+            if results:
+                return jsonbson.bson_to_json(results)
+            else:
+                return jsonrpclib.Fault(2, exceptions.metajsonprc_error_code_to_message[2])
         except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
@@ -335,6 +341,8 @@ class References_repository(jsonrpc.JSONRPC):
 
     def locale_keyfunc(self, keyfunc):
         def locale_wrapper(obj):
+            #print locale.getlocale(locale.LC_COLLATE)
+            #return locale.strxfrm(keyfunc(obj)).lower()
             return locale.strxfrm(keyfunc(obj))
         return locale_wrapper
 
@@ -352,6 +360,7 @@ class References_repository(jsonrpc.JSONRPC):
                     self.type_adaptation(child, language, sort, role)
                 if sort:
                     #locale.setlocale(locale.LC_ALL, "fr_FR.UTF-8")
+                    #locale.setlocale(locale.LC_ALL, ("no", None))
                     type_dict["children"] = sorted(type_dict["children"], key=self.locale_keyfunc(itemgetter('label')))
 
     def key_language_simplification(self, type_dict, key_old, key_new, language):
