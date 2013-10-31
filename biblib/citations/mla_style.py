@@ -238,7 +238,7 @@ def cite(document, format):
 
 
 def remove_last_point(text):
-    if text:
+    if text and (isinstance(text, unicode) or isinstance(text, str)):
         if text.endswith("."):
             return text[:-1]
         else:
@@ -309,28 +309,29 @@ def format_creators_dict(creators_dict, level):
         for position, creator in enumerate(creators_dict["authors"]):
             #print "position: {}".format(position)
             # prefix
-            prefix = u""
             formatted_name = format_creator(creator, position, level)
-            suffix = u""
+            if formatted_name:
+                prefix = u""
+                suffix = u""
 
-            if contri_count > 1:
-                if 0 < position < contri_count - 1:
-                    prefix = u", "
-                elif position == contri_count - 1:
-                    prefix = u", and "
+                if contri_count > 1:
+                    if 0 < position < contri_count - 1:
+                        prefix = u", "
+                    elif position == contri_count - 1:
+                        prefix = u", and "
 
-            if not (formatted_name.endswith(".") or formatted_name.endswith(".</span>")) and position == contri_count - 1:
-                suffix = u"."
+                if not (formatted_name.endswith(".") or formatted_name.endswith(".</span>")) and position == contri_count - 1:
+                    suffix = u"."
 
-            # formatted_name
-            result += u"{}<span class=\"creator\">{}</span>{}".format(prefix, formatted_name, suffix)
-            
-            # et al
-            # deactivated
-            #if contri_count > 3:
-            #    result += u", <span class=\"creator\">et al.</span>"
-            #    print result
-            #    break
+                # formatted_name
+                result += u"{}<span class=\"creator\">{}</span>{}".format(prefix, formatted_name, suffix)
+                
+                # et al
+                # deactivated
+                #if contri_count > 3:
+                #    result += u", <span class=\"creator\">et al.</span>"
+                #    print result
+                #    break
 
 
         #print result
@@ -342,15 +343,16 @@ def format_creator(creator, position, level):
     if level > 0 or position > 0:
         style = metajson.STYLE_GIVEN_FAMILY
     formatted_name = creator.formatted_name(style)
-    if level == 0:
-        if creator["role"] in role_to_short_forms:
-            short_form = role_to_short_forms[creator["role"]][0]
-            if short_form:
-                formatted_name = formatted_name + ", <span class=\"creator_role\">" + short_form + "</span>"
-    else:
-        if creator["role"] in role_to_short_forms:
-            short_form = role_to_short_forms[creator["role"]][1]
-            if short_form:
-                formatted_name = "<span class=\"creator_role\">" + short_form + "</span> " + formatted_name
     if formatted_name:
-        return formatted_name
+        if level == 0:
+            if creator["role"] in role_to_short_forms:
+                short_form = role_to_short_forms[creator["role"]][0]
+                if short_form:
+                    formatted_name = formatted_name + ", <span class=\"creator_role\">" + short_form + "</span>"
+        else:
+            if creator["role"] in role_to_short_forms:
+                short_form = role_to_short_forms[creator["role"]][1]
+                if short_form:
+                    formatted_name = "<span class=\"creator_role\">" + short_form + "</span> " + formatted_name
+        if formatted_name:
+            return formatted_name
