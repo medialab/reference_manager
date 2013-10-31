@@ -4,8 +4,12 @@
 
 import os
 
-from biblib.metajson import Document
 from biblib.metajson import Creator
+from biblib.metajson import Document
+from biblib.metajson import Event
+from biblib.metajson import Family
+from biblib.metajson import Orgunit
+from biblib.metajson import Person
 from biblib.metajson import Subject
 from biblib.services import creator_service
 from biblib.services import language_service
@@ -44,13 +48,14 @@ def unimarc_record_to_metajson(record, source):
     #record_dict = record.as_dict()
     #print jsonbson.dumps_json(record_dict, True)
 
-    # rec_id
+    # 002, 991$e, 995$f -> rec_id
     rec_id = ""
     if record['002'] is not None:
         rec_id_prefix = "sciencespo_catalog_"
         rec_id = rec_id_prefix + record['002'].data
     if record['991'] is not None and record['991']['e'] is not None:
         rec_id += "_" + record['991']['e']
+    # todo numer holding identifier
     if rec_id:
         print "rec_id: {}".format(rec_id)
         document["rec_id"] = rec_id
@@ -59,7 +64,7 @@ def unimarc_record_to_metajson(record, source):
     rec_type = extract_unimarc_type(record)
     document["rec_type"] = rec_type
 
-    # identifiers
+    # 0XX, 945 -> identifiers
     identifiers = []
     if record['001'] is not None and record['001'].data is not None:
         identifiers.append({"id_type": "ppn", "value": record['001'].data})
@@ -82,7 +87,7 @@ def unimarc_record_to_metajson(record, source):
     if identifiers:
         document["identifiers"] = identifiers
 
-    # title
+    # 200 -> title
     if record['200'] is not None:
         if record['200']['a'] is not None:
             title_non_sort_pos = int(record['200'].indicator2)
@@ -101,13 +106,22 @@ def unimarc_record_to_metajson(record, source):
         if record['200']['i'] is not None:
             document["part_name"] = record['200']['i']
 
-    # date_issued
+    # 100$a -> date_issued
     if record['100'] is not None and record['100']['a'] is not None:
         date_issued = record['100']['a'][9:13]
         if date_issued:
             document["date_issued"] = date_issued
 
-    # publishers, publication_places
+    # 102$a -> publication_countries
+    publication_countries = []
+    if record.get_fields('102'):
+        for field in record.get_fields('102'):
+            for subfield in field.get_subfields('a'):
+                publication_countries.append(subfield)
+        if publication_countries:
+            document["publication_countries"] = publication_countries
+
+    # 210$a, 210$c -> publication_places, publishers
     publication_places = []
     publishers = []
     for field210 in record.get_fields('210'):
@@ -121,6 +135,48 @@ def unimarc_record_to_metajson(record, source):
         document["publication_places"] = publication_places
     if publishers:
         document["publishers"] = publishers
+
+    # 7XX -> creators
+    creators = []
+    fields_creators = record.get_fields("700", "701", "702", "710", "711", "712", "716", "720", "721", "722", "730")
+    if fields_creators:
+        for field in fields_creators:
+            creator = extract_unimarc_creator(field)
+            if creator:
+                creators.append(creator)
+    if creators:
+        document["creators"] = creators
+
+    # 101$a -> languages
+    if record.get_fields('101'):
+        languages = []
+        for field in record.get_fields('101'):
+            for lang_iso639_2b in field.get_subfields('a'):
+                lang_rfc5646 = language_service.convert_iso639_2b_to_rfc5646(lang_iso639_2b)
+                if lang_rfc5646:
+                    languages.append(lang_rfc5646)
+        if languages:
+            document["languages"] = languages
+
+    # 6XX -> subject<
+    if record.get_fields('607'):
+        subjects = []
+        for field in record.get_fields('607'):
+            subject = {}
+            # todo
+
+    # 676$a -> classifications ddc
+    if record.get_fields('676'):
+        deweys = []
+        for field in record.get_fields('676'):
+            deweys.extend(field.get_subfields('a'))
+        if deweys:
+            if "classifications" not in document:
+                document["classifications"] ={}
+            document["classifications"]["ddc"] = deweys
+
+    # holdings / copies
+    print record['995']
 
     debug = True
     if debug:
@@ -237,3 +293,105 @@ def extract_unimarc_type(record):
         rec_type = constants.DOC_TYPE_DOCUMENT
 
     return rec_type
+
+
+def extract_unimarc_creator(field):
+    if field:
+        creator = Creator()
+        # $4 -> role
+        if field['4']:
+            print "field['4']"
+            print field['4']
+            if field['4'] in creator_service.role_unimarc_to_role_code:
+                creator["role"] = creator_service.role_unimarc_to_role_code[field['4']]
+            else:
+                creator["role"] = "ctb"
+
+        # 700, 701, 702 -> Person
+        if field.tag in ["700", "701", "702"]:
+            # Person
+            person = Person()
+            if field.subfields:
+                if field.get_subfields('a'):
+                    # name_family
+                    person["name_family"] = "".join(field.get_subfields('a'))
+                if field.get_subfields('b'):
+                    # name_given
+                    person["name_given"] = "".join(field.get_subfields('b'))
+                if field.get_subfields('f'):
+                    dates = format_dates_as_list(field.get_subfields('f'))
+                    if dates:
+                        person["date_birth"] = dates[0]
+                        if len(dates) > 1:
+                            person["date_death"] = dates[1]
+                if person:
+                    creator["agent"] = person
+
+        # 710, 711, 712 -> Orgunit, Event
+        elif field.tag in ["710", "711", "712"]:
+            if field.subfields:
+                if field.indicator1 == "1":
+                    # Event
+                    event = Event()
+                    if field.get_subfields('a'):
+                        event["title"] = "".join(field.get_subfields('a'))
+                    if field.get_subfields('d'):
+                        event["number"] = "".join(field.get_subfields('d'))
+                    if field.get_subfields('e'):
+                        event["place"] = "".join(field.get_subfields('e'))
+                    if field.get_subfields('f'):
+                        event["date_begin"] = "".join(field.get_subfields('f'))
+                    if event:
+                        creator["agent"] = event
+                else:
+                    # Orgunit
+                    orgunit = Orgunit()
+                    name = []
+                    if field.get_subfields('a'):
+                        name.extend(field.get_subfields('a'))
+                    if field.get_subfields('b'):
+                        name.append(". ")
+                        name.extend(field.get_subfields('b'))
+                    if name:
+                        orgunit["name"] = "".join(name)
+                    dates = format_dates_as_list(field.get_subfields('c'))
+                    if dates:
+                        orgunit["date_foundation"] = dates[0]
+                        if len(dates) > 1:
+                            orgunit["date_dissolution"] = dates[1]
+                    if orgunit:
+                        creator["agent"] = orgunit
+
+        elif field.tag in ["716"]:
+            # Nom de marque
+            print "WARNING: todo"
+
+        elif field.tag in ["720", "721", "722"]:
+            if field.subfields:
+                # Family
+                family = Family()
+                if field.get_subfields('a'):
+                    # name_family
+                    family["name_family"] = "".join(field.get_subfields('a'))
+                if field.get_subfields('f'):
+                    dates = format_dates_as_list(field.get_subfields('f'))
+                    if dates:
+                        family["date_birth"] = dates[0]
+                        if len(dates) > 1:
+                            family["date_death"] = dates[1]
+                if family:
+                    creator["agent"] = family
+
+        elif field.tag == "730":
+            # Intellectual responsability
+            print "WARNING: todo"
+
+        if creator:
+            return creator
+
+
+def format_dates_as_list(dates):
+    if dates:
+        # (1811-1882)
+        # todo : pb with 710$c that can be another think than a date..
+        return dates[0].replace("(","").replace(")","").replace("-....","").split("-")
