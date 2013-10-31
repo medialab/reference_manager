@@ -4,6 +4,61 @@
   "rec_metajson": 1, 
   "records": [
     {
+      "acronym": "project_acronym", 
+      "call": {
+        "creators": [
+          {
+            "agent": {
+              "name": "Agence Nationale de la Recherche", 
+              "rec_class": "Orgunit", 
+              "rec_id": "anr"
+            }, 
+            "funding_contribution": {
+              "currency": "EUR", 
+              "value": "funding_contribution"
+            }, 
+            "funding_programme": "funding_programme", 
+            "funding_scheme": "funding_scheme", 
+            "role": "fnd"
+          }, 
+          {
+            "agent": {
+              "name": "European Union", 
+              "rec_class": "Orgunit", 
+              "rec_id": "eu"
+            }, 
+            "role": "fnd"
+          }
+        ], 
+        "date_issued": "call_year", 
+        "rec_class": "Call", 
+        "rec_id": "call_id", 
+        "title": "call_title"
+      }, 
+      "date_begin": "2011-09-01", 
+      "date_end": "2014-08-31", 
+      "identifiers": [
+        {
+          "id_type": "hal", 
+          "value": "35345"
+        }, 
+        {
+          "id_type": "eu", 
+          "value": "355345"
+        }, 
+        {
+          "id_type": "anr", 
+          "value": "ANR-06-BLAN-0000"
+        }
+      ], 
+      "rec_class": "Project", 
+      "rec_created_date": "2013-10-31T11:21:15.224961", 
+      "rec_id": "2441/dgsgfsdgf", 
+      "rec_modified_date": "2013-10-31T11:21:15.224972", 
+      "rec_status": "private", 
+      "title": "project_title"
+    }, 
+    {
       "addresses": [
         {
           "country": "FR", 
@@ -19,9 +74,7 @@
         {
           "agent": {
             "name": "Sciences Po’s Economic Research Center (France)", 
-            "rec_class": "Orgunit", 
-            "rec_id": "hdl:2441/72", 
-            "rec_metajson": 1
+            "rec_class": "Orgunit"
           }, 
           "date_begin": "1990", 
           "preferred": true, 
@@ -53,19 +106,22 @@
       "date_birth": "1942", 
       "degrees": [
         {
+          "creators": [
+            {
+              "agent": {
+                "name": "University of Strasbourg (France)", 
+                "rec_class": "Orgunit", 
+                "rec_id": "hdl:2441/32"
+              }, 
+              "role": "dgg"
+            }
+          ], 
           "descriptions": [
             {
               "value": "A description..."
             }
           ], 
-          "identifiers": [
-            {
-              "id_type": "hdl", 
-              "value": "hdl:2441/32"
-            }
-          ], 
           "level": "Ph.D", 
-          "name": "University of Strasbourg (France)", 
           "title": "Law and Economics"
         }
       ], 
@@ -90,7 +146,7 @@
       ], 
       "language_capabilities": [
         {
-          "language": "fre", 
+          "language": "fr", 
           "mother_tong": true, 
           "oral_input": "excellent", 
           "oral_output": "excellent", 
@@ -98,7 +154,7 @@
           "text_output": "excellent"
         }, 
         {
-          "language": "eng", 
+          "language": "en", 
           "mother_tong": false, 
           "oral_input": "excellent", 
           "oral_output": "good", 
@@ -123,7 +179,7 @@
               "value": "An english description A"
             }, 
             {
-              "language": "en", 
+              "language": "fr", 
               "value": "Une description française A"
             }
           ]
@@ -135,37 +191,31 @@
               "value": "A english description B"
             }, 
             {
-              "language": "en", 
+              "language": "fr", 
               "value": "Une description française B"
             }
           ]
         }
       ], 
       "rec_class": "Person", 
-      "rec_created_date": "2013-10-21T15:47:36.509573", 
-      "rec_id": "580d8ba1-3a57-11e3-b978-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.509584", 
+      "rec_created_date": "2013-10-31T11:21:15.227258", 
+      "rec_id": "2c5d4b47-4216-11e3-bf10-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.227265", 
       "rec_status": "private", 
       "relationships": [
         {
-          "identifiers": [
-            {
-              "id_type": "hdl", 
-              "value": "hdl:2441/63"
-            }
-          ], 
           "name": "Martin, Paul", 
+          "rec_id": "hdl:2441/63", 
           "relation_type": "collaboratesWith"
         }
       ], 
-      "research_coverage_classifications": [
-        {
-          "authority": "jel", 
-          "authority_id": "hdl:1234/5678", 
-          "term": "D63"
-        }
-      ], 
+      "research_coverage_classifications": {
+        "jel": [
+          {
+            "term_id": "D63"
+          }
+        ]
+      }, 
       "research_coverage_keywords": {
         "en": [
           "Theories of inflation", 
@@ -219,20 +269,23 @@
       ], 
       "teachings": [
         {
+          "creators": [
+            {
+              "agent": {
+                "name": "University of Strasbourg (France)", 
+                "rec_class": "Orgunit", 
+                "rec_id": "hdl:2441/32"
+              }, 
+              "role": "dgg"
+            }
+          ], 
           "date_begin": "1990", 
           "descriptions": [
             {
               "value": "A description..."
             }
           ], 
-          "identifiers": [
-            {
-              "id_type": "hdl", 
-              "value": "hdl:2441/32"
-            }
-          ], 
           "level": "Master", 
-          "name": "University of Strasbourg (France)", 
           "title": "Theories of inflation"
         }
       ], 
@@ -292,10 +345,9 @@
       "name_family": "Martin", 
       "name_given": "Paul", 
       "rec_class": "Person", 
-      "rec_created_date": "2013-10-21T15:47:36.510385", 
-      "rec_id": "580dabe6-3a57-11e3-9de4-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.510392", 
+      "rec_created_date": "2013-10-31T11:21:15.227869", 
+      "rec_id": "2c5d639e-4216-11e3-8fcd-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.227875", 
       "rec_status": "private"
     }, 
     {
@@ -315,9 +367,7 @@
         {
           "agent": {
             "name": "Sciences Po", 
-            "rec_class": "Orgunit", 
-            "rec_id": "hdl:2441/1", 
-            "rec_metajson": 1
+            "rec_class": "Orgunit"
           }, 
           "date_begin": "1981", 
           "preferred": true, 
@@ -386,19 +436,18 @@
         }
       ], 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-10-21T15:47:36.511645", 
-      "rec_id": "580ddd28-3a57-11e3-868c-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.511651", 
+      "rec_created_date": "2013-10-31T11:21:15.229097", 
+      "rec_id": "2c5d93ab-4216-11e3-9ddb-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.229103", 
       "rec_status": "private", 
       "rec_type": "laboratory", 
-      "research_coverage_classifications": [
-        {
-          "authority": "jel", 
-          "term": "Macro-economic", 
-          "term_id": "A10"
-        }
-      ], 
+      "research_coverage_classifications": {
+        "jel": [
+          {
+            "term_id": "Macro-economic"
+          }
+        ]
+      }, 
       "research_coverage_keywords": {
         "en": [
           "Economic"
@@ -457,20 +506,13 @@
       ], 
       "name": "Sciences Po", 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-10-21T15:47:36.511976", 
-      "rec_id": "580dea2b-3a57-11e3-9efb-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.511981", 
+      "rec_created_date": "2013-10-31T11:21:15.229431", 
+      "rec_id": "2c5da0ca-4216-11e3-97e2-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.229437", 
       "rec_status": "private", 
       "rec_type": "university"
     }, 
     {
-      "identifiers": [
-        {
-          "id_type": "hdl", 
-          "value": "2441/9labe9r4se65i78968605ah42"
-        }
-      ], 
       "name": "Elsevier", 
       "name_alternatives": [
         {
@@ -480,10 +522,9 @@
       ], 
       "nationality": "UN", 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-10-21T15:47:36.512702", 
-      "rec_id": "580e068f-3a57-11e3-bdc3-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.512707", 
+      "rec_created_date": "2013-10-31T11:21:15.230138", 
+      "rec_id": "2441/9labe9r4se65i78968605ah42", 
+      "rec_modified_date": "2013-10-31T11:21:15.230143", 
       "rec_status": "private", 
       "rec_type": "publisher", 
       "self_archiving_policy": {
@@ -567,15 +608,13 @@
         "date_issued": "2006", 
         "rec_class": "Call", 
         "rec_id": "2006-ANR-12", 
-        "rec_metajson": 1, 
         "title": "Titre de l'appel"
       }, 
       "creators": [
         {
           "agent": {
             "name_family": "ANR", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }
         }
       ], 
@@ -607,10 +646,9 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-10-21T15:47:36.513364", 
-      "rec_id": "580e2057-3a57-11e3-a883-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.513369", 
+      "rec_created_date": "2013-10-31T11:21:15.230792", 
+      "rec_id": "2c5dd5d7-4216-11e3-bdb6-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.230798", 
       "rec_status": "private", 
       "research_coverage_keywords": {
         "en": [
@@ -651,18 +689,14 @@
         {
           "agent": {
             "name": "CNRS", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/d7a7evb2ctdg4i89ges99ipkj", 
-            "rec_metajson": 1
+            "rec_class": "Orgunit"
           }, 
           "role": "isPartOf"
         }, 
         {
           "agent": {
             "name": "Sciences Po", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q021gm", 
-            "rec_metajson": 1
+            "rec_class": "Orgunit"
           }, 
           "preferred": true, 
           "role": "isPartOf"
@@ -682,10 +716,6 @@
         {
           "id_type": "cnrs", 
           "value": "UMR7050"
-        }, 
-        {
-          "id_type": "hdl", 
-          "value": "2441/9labe9r4se65i789685q380gh"
         }, 
         {
           "id_type": "dai", 
@@ -715,10 +745,9 @@
         }
       ], 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-10-21T15:47:36.515138", 
-      "rec_id": "580e658f-3a57-11e3-8945-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.515145", 
+      "rec_created_date": "2013-10-31T11:21:15.232586", 
+      "rec_id": "2441/9labe9r4se65i789685q380gh", 
+      "rec_modified_date": "2013-10-31T11:21:15.232596", 
       "rec_status": "private", 
       "rec_type": "researchCenter", 
       "research_coverage_keywords": {
@@ -752,9 +781,7 @@
         {
           "agent": {
             "name": "Centre d'études européennes de Sciences Po", 
-            "rec_class": "Orgunit", 
-            "rec_id": "2441/9labe9r4se65i789685q384oh", 
-            "rec_metajson": 1
+            "rec_class": "Orgunit"
           }, 
           "date_begin": "2008", 
           "preferred": true, 
@@ -784,68 +811,80 @@
       "date_birth": "1977", 
       "degrees": [
         {
+          "creators": [
+            {
+              "agent": {
+                "name": "Sciences Po", 
+                "rec_class": "Orgunit", 
+                "rec_id": "2441/9labe9r4se65i789685q021gm"
+              }, 
+              "role": "dgg"
+            }
+          ], 
           "descriptions": [
             {
               "language": "fr", 
               "value": "Doctorat de science politique – mention « très honorable » avec les félicitations du jury à l’unanimité, « L’action publique communautaire et ses instruments. La politique d’égalité entre les femmes et les hommes à l’épreuve du gender mainstreaming », sous la direction de Pierre Muller"
             }
           ], 
-          "identifiers": [
-            {
-              "id_type": "hdl", 
-              "value": "2441/9labe9r4se65i789685q021gm"
-            }
-          ], 
-          "level": "phd", 
-          "name": "Sciences Po"
+          "level": "phd"
         }, 
         {
+          "creators": [
+            {
+              "agent": {
+                "name": "Sciences Po", 
+                "rec_class": "Orgunit", 
+                "rec_id": "2441/9labe9r4se65i789685q021gm"
+              }, 
+              "role": "dgg"
+            }
+          ], 
           "descriptions": [
             {
               "language": "fr", 
               "value": "DEA de sociologie politique et politiques publiques – mention « bien », « L’évolution d’un groupe d’intérêt public communautaire : le Lobby Européen des Femmes depuis sa création », sous la direction d’Elisabeth Dupoirier et de Pierre Muller"
             }
           ], 
-          "identifiers": [
-            {
-              "id_type": "hdl", 
-              "value": "2441/9labe9r4se65i789685q021gm"
-            }
-          ], 
-          "level": "dea", 
-          "name": "Sciences Po"
+          "level": "dea"
         }, 
         {
+          "creators": [
+            {
+              "agent": {
+                "name": "Sciences Po", 
+                "rec_class": "Orgunit", 
+                "rec_id": "2441/9labe9r4se65i789685q021gm"
+              }, 
+              "role": "dgg"
+            }
+          ], 
           "descriptions": [
             {
               "language": "fr", 
               "value": "Diplôme de l’IEP de Paris – mention « Lauréat avec les félicitations du jury »\nSection Internationale, filière Europe communautaire"
             }
           ], 
-          "identifiers": [
-            {
-              "id_type": "hdl", 
-              "value": "2441/9labe9r4se65i789685q021gm"
-            }
-          ], 
-          "level": "diploma", 
-          "name": "Sciences Po"
+          "level": "diploma"
         }, 
         {
+          "creators": [
+            {
+              "agent": {
+                "name": "université Lumière Lyon 2", 
+                "rec_class": "Orgunit", 
+                "rec_id": "2441/d7a7evb2ctdg4i89gesag4t33"
+              }, 
+              "role": "dgg"
+            }
+          ], 
           "descriptions": [
             {
               "language": "fr", 
               "value": "Licence d’anglais – mention « bien »"
             }
           ], 
-          "identifiers": [
-            {
-              "id_type": "hdl", 
-              "value": "2441/d7a7evb2ctdg4i89gesag4t33"
-            }
-          ], 
-          "level": "licence", 
-          "name": "université Lumière Lyon 2"
+          "level": "licence"
         }
       ], 
       "emails": [
@@ -862,10 +901,6 @@
           "value": "sophie.jacquot"
         }, 
         {
-          "id_type": "hdl", 
-          "value": "2441/9labe9r4se65i789685q591o2"
-        }, 
-        {
           "id_type": "employeeNumber", 
           "value": "16021"
         }, 
@@ -874,14 +909,9 @@
           "value": "2441/9labe9r4se65i789685q591o2"
         }
       ], 
-      "image_urls": [
-        {
-          "value": "http://spire.sciences-po.fr/hdl:/2441/9labe9r4se65i789685q591o2/resources/sophie-jacquot.gif"
-        }
-      ], 
       "language_capabilities": [
         {
-          "language": "fre", 
+          "language": "fr", 
           "mother_tong": true, 
           "oral_input": "medium", 
           "oral_output": "medium", 
@@ -889,7 +919,7 @@
           "text_output": "medium"
         }, 
         {
-          "language": "eng", 
+          "language": "en", 
           "mother_tong": false, 
           "oral_input": "good", 
           "oral_output": "excellent", 
@@ -897,7 +927,7 @@
           "text_output": "excellent"
         }, 
         {
-          "language": "ita", 
+          "language": "it", 
           "mother_tong": false, 
           "oral_input": "medium", 
           "oral_output": "good", 
@@ -918,16 +948,23 @@
         }
       ], 
       "rec_class": "Person", 
-      "rec_created_date": "2013-10-21T15:47:36.519723", 
-      "rec_id": "580f1897-3a57-11e3-a8ea-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.519730", 
+      "rec_created_date": "2013-10-31T11:21:15.237316", 
+      "rec_id": "2441/9labe9r4se65i789685q591o2", 
+      "rec_modified_date": "2013-10-31T11:21:15.237331", 
       "rec_status": "private", 
       "research_coverage_keywords": {
         "fr": [
           "Sociologie de l’action publique, Union européenne, genre, politiques anti-discriminatoires, politique sociale, européanisation des politiques nationales"
         ]
       }, 
+      "resources": [
+        {
+          "rec_class": "Resource", 
+          "rec_type": "ResourceRemote", 
+          "role": "picture", 
+          "url": "http://spire.sciences-po.fr/hdl:/2441/9labe9r4se65i789685q591o2/resources/sophie-jacquot.gif"
+        }
+      ], 
       "responsabilities": [
         {
           "language": "fr", 
@@ -940,39 +977,48 @@
       ], 
       "teachings": [
         {
-          "date_begin": "2009", 
-          "identifiers": [
+          "creators": [
             {
-              "id_type": "hdl", 
-              "value": "2441/9labe9r4se65i789685q021gm"
+              "agent": {
+                "name": "Sciences Po", 
+                "rec_class": "Orgunit", 
+                "rec_id": "2441/9labe9r4se65i789685q021gm"
+              }, 
+              "role": "dgg"
             }
           ], 
+          "date_begin": "2009", 
           "level": "doctorat", 
-          "name": "Sciences Po", 
           "title": "Responsable du séminaire doctoral \"Analyser les politiques publiques aujourd'hui : regards croisés\" (avec Laurie Boussaguet, Patrick Hassenteufel et Bruno Palier)"
         }, 
         {
-          "date_begin": "2009", 
-          "identifiers": [
+          "creators": [
             {
-              "id_type": "hdl", 
-              "value": "2441/9labe9r4se65i789685q021gm"
+              "agent": {
+                "name": "Sciences Po", 
+                "rec_class": "Orgunit", 
+                "rec_id": "2441/9labe9r4se65i789685q021gm"
+              }, 
+              "role": "dgg"
             }
           ], 
+          "date_begin": "2009", 
           "level": "master", 
-          "name": "Sciences Po", 
           "title": "Chargée de cours, « Politique sociale européenne et européanisation des politiques nationales », Master affaires européennes"
         }, 
         {
-          "date_begin": "2010", 
-          "identifiers": [
+          "creators": [
             {
-              "id_type": "hdl", 
-              "value": "2441/9labe9r4se65i789685q021gm"
+              "agent": {
+                "name": "Sciences Po", 
+                "rec_class": "Orgunit", 
+                "rec_id": "2441/9labe9r4se65i789685q021gm"
+              }, 
+              "role": "dgg"
             }
           ], 
+          "date_begin": "2010", 
           "level": "master", 
-          "name": "Sciences Po", 
           "title": "Chargée de cours, « Méthodologie du mémoire de recherche », Euromaster / Transatlantic Master"
         }
       ], 
@@ -995,16 +1041,19 @@
     {
       "acronym": "LEGICONTEST", 
       "call": {
+        "creators": [
+          {
+            "agent": {
+              "name": "Agence Nationale de la Recherche", 
+              "rec_class": "Orgunit", 
+              "rec_id": "anr"
+            }, 
+            "role": "fnd"
+          }
+        ], 
         "date_issued": "2006", 
-        "funding": {
-          "name": "Agence Nationale de la Recherche", 
-          "rec_class": "Orgunit", 
-          "rec_id": "anr", 
-          "rec_metajson": 1
-        }, 
         "rec_class": "Call", 
         "rec_id": "BLANC", 
-        "rec_metajson": 1, 
         "title": "Programme \"blanc"
       }, 
       "identifiers": [
@@ -1015,32 +1064,30 @@
         {
           "id_type": "anr", 
           "value": "ANR-06-BLAN-0064"
-        }, 
-        {
-          "id_type": "hdl", 
-          "value": "2441/d7a7evb2ctdg4i89gesb82lpp"
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-10-21T15:47:36.520682", 
-      "rec_id": "580f3e14-3a57-11e3-b872-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.520688", 
+      "rec_created_date": "2013-10-31T11:21:15.238384", 
+      "rec_id": "2441/d7a7evb2ctdg4i89gesb82lpp", 
+      "rec_modified_date": "2013-10-31T11:21:15.238391", 
       "rec_status": "private", 
       "title": "Concurrences de légitimité, types de contestation et transformations de la place de l'Etat dans les sociétés européennes"
     }, 
     {
       "acronym": "AIME", 
       "call": {
-        "funding": {
-          "name": "European Union", 
-          "rec_class": "Orgunit", 
-          "rec_id": "eu", 
-          "rec_metajson": 1
-        }, 
+        "creators": [
+          {
+            "agent": {
+              "name": "European Union", 
+              "rec_class": "Orgunit", 
+              "rec_id": "eu"
+            }, 
+            "role": "fnd"
+          }
+        ], 
         "rec_class": "Call", 
-        "rec_id": "ERC-2010-AdG_20100407", 
-        "rec_metajson": 1
+        "rec_id": "ERC-2010-AdG_20100407"
       }, 
       "date_begin": "2011-09-01", 
       "date_end": "2014-08-31", 
@@ -1052,17 +1099,12 @@
         {
           "id_type": "eu", 
           "value": "269567"
-        }, 
-        {
-          "id_type": "hdl", 
-          "value": "2441/53r60a8s3kup1vc9jh5ki109i"
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-10-21T15:47:36.521615", 
-      "rec_id": "580f6287-3a57-11e3-956f-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.521621", 
+      "rec_created_date": "2013-10-31T11:21:15.239324", 
+      "rec_id": "2441/53r60a8s3kup1vc9jh5ki109i", 
+      "rec_modified_date": "2013-10-31T11:21:15.239330", 
       "rec_status": "private", 
       "title": "An Inquiry into Modes of Existence"
     }

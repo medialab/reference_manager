@@ -21,16 +21,14 @@
             "agent": {
               "name": "Département d'économie", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q385c7", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q385c7"
             }
           }, 
           "agent": {
             "name_family": "Martin", 
             "name_given": "Philippe", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q5apa2", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i789685q5apa2"
           }, 
           "role": "aut"
         }, 
@@ -39,16 +37,14 @@
             "agent": {
               "name": "University of Rome", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/d7a7evb2ctdg4i89ges9micbn", 
-              "rec_metajson": 1
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9micbn"
             }
           }, 
           "agent": {
             "name_family": "Corsetti", 
             "name_given": "Giancarlo", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i7896860lchjn", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i7896860lchjn"
           }, 
           "role": "aut"
         }, 
@@ -57,16 +53,14 @@
             "agent": {
               "name": "International Research", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/d7a7evb2ctdg4i89ges9mikg3", 
-              "rec_metajson": 1
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9mikg3"
             }
           }, 
           "agent": {
             "name_family": "Pesenti", 
             "name_given": "Paolo", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i7896860lci21", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i7896860lci21"
           }, 
           "role": "aut"
         }
@@ -102,7 +96,6 @@
           "peer_review": true, 
           "rec_class": "Document", 
           "rec_id": "issn:00221996", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Journal of International Economics"
         }
@@ -122,10 +115,9 @@
       "part_page_end": "12", 
       "part_volume": "89", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.422778", 
+      "rec_created_date": "2013-10-31T11:21:15.135288", 
       "rec_id": "doi:10.1016/j.jinteco.2012.05.011", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.422790", 
+      "rec_modified_date": "2013-10-31T11:21:15.135307", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -143,8 +135,7 @@
             "name_family": "Barnavie", 
             "name_given": "Elie", 
             "rec_class": "Person", 
-            "rec_id": "2441/eu4vqp9ompqllr09hh1aij5g1", 
-            "rec_metajson": 1
+            "rec_id": "2441/eu4vqp9ompqllr09hh1aij5g1"
           }, 
           "role": "aut"
         }, 
@@ -153,16 +144,14 @@
             "agent": {
               "name": "Centre d'études et de recherches internationales", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q380gh"
             }
           }, 
           "agent": {
             "name_family": "Dieckhoff", 
             "name_given": "Alain", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q54c93", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i789685q54c93"
           }, 
           "role": "aut"
         }, 
@@ -171,16 +160,14 @@
             "agent": {
               "name": "Centre d'études et de recherches internationales", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q380gh"
             }
           }, 
           "agent": {
             "name_family": "Lequesne", 
             "name_given": "Christian", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q54lsl", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
           "role": "aut"
         }
@@ -200,10 +187,9 @@
         "fr"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.425845", 
-      "rec_id": "5800c463-3a57-11e3-b940-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.425852", 
+      "rec_created_date": "2013-10-31T11:21:15.143758", 
+      "rec_id": "2c4fb726-4216-11e3-98d0-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.143770", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "VideoRecording", 
@@ -211,7 +197,6 @@
         {
           "dateLastAccessed": "2011-10-17", 
           "rec_class": "Resource", 
-          "rec_metajson": 1, 
           "rec_type": "remote", 
           "url": "http://vimeo.com/17810190"
         }
@@ -230,16 +215,14 @@
             "agent": {
               "name": "Centre d'études et de recherches internationales", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q380gh"
             }
           }, 
           "agent": {
             "name_family": "Lequesne", 
             "name_given": "Christian", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q54lsl", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
           "role": "edt"
         }, 
@@ -248,16 +231,14 @@
             "agent": {
               "name": "Department of Politics", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/5l6uh8ogmqildh09h520k4p9m", 
-              "rec_metajson": 1
+              "rec_id": "2441/5l6uh8ogmqildh09h520k4p9m"
             }
           }, 
           "agent": {
             "name_family": "Bulmer", 
             "name_given": "Simon", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i7896860j0h0m", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i7896860j0h0m"
           }, 
           "role": "edt"
         }
@@ -293,17 +274,15 @@
         "Oxford University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.428833", 
+      "rec_created_date": "2013-10-31T11:21:15.146763", 
       "rec_id": "isbn:9780199544837", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.428849", 
+      "rec_modified_date": "2013-10-31T11:21:15.146771", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "seriess": [
         {
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Series", 
           "title": "The New European Union Series"
         }
@@ -329,8 +308,7 @@
             "name_family": "Membretti", 
             "name_given": "Andrea", 
             "rec_class": "Person", 
-            "rec_id": "2441/eo6779thqgm5r489makgk11ai", 
-            "rec_metajson": 1
+            "rec_id": "2441/eo6779thqgm5r489makgk11ai"
           }, 
           "role": "aut"
         }, 
@@ -339,16 +317,14 @@
             "agent": {
               "name": "Centre d'études européennes de Sciences Po", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q384oh"
             }
           }, 
           "agent": {
             "name_family": "Vitale", 
             "name_given": "Tommaso", 
             "rec_class": "Person", 
-            "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
-            "rec_metajson": 1
+            "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
           }, 
           "role": "aut"
         }
@@ -370,8 +346,7 @@
                 "name_family": "Maccallum", 
                 "name_given": "Diana", 
                 "rec_class": "Person", 
-                "rec_id": "2441/eo6779thqgm5r489makgmgk26", 
-                "rec_metajson": 1
+                "rec_id": "2441/eo6779thqgm5r489makgmgk26"
               }, 
               "role": "pbd"
             }, 
@@ -380,8 +355,7 @@
                 "name_family": "Mehmood", 
                 "name_given": "Abid", 
                 "rec_class": "Person", 
-                "rec_id": "2441/eo6779thqgm5r489makgn240p", 
-                "rec_metajson": 1
+                "rec_id": "2441/eo6779thqgm5r489makgn240p"
               }, 
               "role": "pbd"
             }, 
@@ -390,16 +364,14 @@
                 "agent": {
                   "name": "APL/GURU", 
                   "rec_class": "Orgunit", 
-                  "rec_id": "2441/d7a7evb2ctdg4i89gesb1epb9", 
-                  "rec_metajson": 1
+                  "rec_id": "2441/d7a7evb2ctdg4i89gesb1epb9"
                 }
               }, 
               "agent": {
                 "name_family": "Moulaert", 
                 "name_given": "Frank", 
                 "rec_class": "Person", 
-                "rec_id": "2441/3cr7jj61bs68cvg99a9b1e21k", 
-                "rec_metajson": 1
+                "rec_id": "2441/3cr7jj61bs68cvg99a9b1e21k"
               }, 
               "role": "pbd"
             }, 
@@ -408,8 +380,7 @@
                 "name_family": "Hamdouch", 
                 "name_given": "Abdel", 
                 "rec_class": "Person", 
-                "rec_id": "2441/eo6779thqgm5r489makgnal26", 
-                "rec_metajson": 1
+                "rec_id": "2441/eo6779thqgm5r489makgnal26"
               }, 
               "role": "pbd"
             }
@@ -429,7 +400,6 @@
           ], 
           "rec_class": "Document", 
           "rec_id": "isbn:9781849809986", 
-          "rec_metajson": 1, 
           "rec_type": "Book", 
           "title": "The International Handbook on Social Innovation: Collective Action, Social Learning and Transdisciplinary Research"
         }
@@ -452,10 +422,9 @@
       "part_page_begin": "186", 
       "part_page_end": "196", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.434458", 
-      "rec_id": "58021519-3a57-11e3-b01a-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.434471", 
+      "rec_created_date": "2013-10-31T11:21:15.151110", 
+      "rec_id": "2c51ac85-4216-11e3-9129-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.151118", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -473,16 +442,14 @@
             "agent": {
               "name": "Centre d'études européennes de Sciences Po", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q384oh"
             }
           }, 
           "agent": {
             "name_family": "Halpern", 
             "name_given": "Charlotte", 
             "rec_class": "Person", 
-            "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9", 
-            "rec_metajson": 1
+            "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9"
           }, 
           "role": "aut"
         }
@@ -526,7 +493,6 @@
           ], 
           "rec_class": "Document", 
           "rec_id": "issn:03091317", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "International Journal of Urban and Regional Research"
         }
@@ -550,10 +516,9 @@
       "part_issue": "3", 
       "part_volume": "36", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.439458", 
-      "rec_id": "5802d8d7-3a57-11e3-a4ce-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.439470", 
+      "rec_created_date": "2013-10-31T11:21:15.155827", 
+      "rec_id": "2c526566-4216-11e3-9180-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.155834", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -565,8 +530,7 @@
                 "name_family": "Hamedinger", 
                 "name_given": "Alexander", 
                 "rec_class": "Person", 
-                "rec_id": "2441/dambferfb7dfprc9m2h2pat0k", 
-                "rec_metajson": 1
+                "rec_id": "2441/dambferfb7dfprc9m2h2pat0k"
               }, 
               "role": "pbd"
             }, 
@@ -575,8 +539,7 @@
                 "name_family": "Wolffhardt", 
                 "name_given": "Alexander", 
                 "rec_class": "Person", 
-                "rec_id": "2441/dambferfb7dfprc9m2h2pi026", 
-                "rec_metajson": 1
+                "rec_id": "2441/dambferfb7dfprc9m2h2pi026"
               }, 
               "role": "pbd"
             }
@@ -602,7 +565,6 @@
           ], 
           "rec_class": "Document", 
           "rec_id": "isbn:9789085940272", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks"
         }
@@ -624,7 +586,6 @@
             "date_end": "2013-02-28", 
             "place": "Sciences Po, Paris", 
             "rec_class": "Event", 
-            "rec_metajson": 1, 
             "title": "Governing Paris and Mexico"
           }, 
           "role": "aut"
@@ -634,16 +595,14 @@
             "agent": {
               "name": "Centre d'études européennes de Sciences Po", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q384oh"
             }
           }, 
           "agent": {
             "name_family": "Halpern", 
             "name_given": "Charlotte", 
             "rec_class": "Person", 
-            "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9", 
-            "rec_metajson": 1
+            "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9"
           }, 
           "role": "aut"
         }
@@ -676,10 +635,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.441929", 
-      "rec_id": "58033954-3a57-11e3-837e-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.441937", 
+      "rec_created_date": "2013-10-31T11:21:15.158218", 
+      "rec_id": "2c52c28f-4216-11e3-bd15-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.158225", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferenceContribution", 
@@ -698,16 +656,14 @@
             "agent": {
               "name": "Centre de recherches politiques de Sciences Po", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380qo", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q380qo"
             }
           }, 
           "agent": {
             "name_family": "Escudier", 
             "name_given": "Alexandre", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q5908j", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i789685q5908j"
           }, 
           "role": "aut"
         }
@@ -729,8 +685,7 @@
                 "name_family": "Louzeau", 
                 "name_given": "Frédéric", 
                 "rec_class": "Person", 
-                "rec_id": "2441/eo6779thqgm5r489mam2pgtr2", 
-                "rec_metajson": 1
+                "rec_id": "2441/eo6779thqgm5r489mam2pgtr2"
               }, 
               "role": "pbd"
             }, 
@@ -741,7 +696,6 @@
                 "date_end": "2011-10-15", 
                 "place": "Paris - Collège des Bernardins", 
                 "rec_class": "Event", 
-                "rec_metajson": 1, 
                 "title": "L’anthropologie de Marcel Gauchet : analyse et débats"
               }, 
               "role": "aut"
@@ -768,12 +722,10 @@
           ], 
           "rec_class": "Document", 
           "rec_id": "isbn:9782249622557", 
-          "rec_metajson": 1, 
           "rec_type": "ConferenceProceedings", 
           "seriess": [
             {
               "rec_class": "Document", 
-              "rec_metajson": 1, 
               "rec_type": "Series", 
               "title": "Collège des Bernardins - Cours-colloques-conférences"
             }
@@ -787,10 +739,9 @@
       "part_page_begin": "69", 
       "part_page_end": "86", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.445639", 
-      "rec_id": "5803ca73-3a57-11e3-99cc-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.445649", 
+      "rec_created_date": "2013-10-31T11:21:15.161913", 
+      "rec_id": "2c535321-4216-11e3-9d27-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.161920", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferencePaper", 
@@ -809,16 +760,14 @@
             "agent": {
               "name": "Ecole de Droit", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q385ph", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q385ph"
             }
           }, 
           "agent": {
             "name_family": "Audren", 
             "name_given": "Frédéric", 
             "rec_class": "Person", 
-            "rec_id": "2441/5k7940uimfdf9c8990p900c2l", 
-            "rec_metajson": 1
+            "rec_id": "2441/5k7940uimfdf9c8990p900c2l"
           }, 
           "role": "pbd"
         }, 
@@ -827,8 +776,7 @@
             "name_family": "Chêne", 
             "name_given": "Christian", 
             "rec_class": "Person", 
-            "rec_id": "2441/7t638g2jjsquujs9mcc0jeu8l", 
-            "rec_metajson": 1
+            "rec_id": "2441/7t638g2jjsquujs9mcc0jeu8l"
           }, 
           "role": "pbd"
         }, 
@@ -837,8 +785,7 @@
             "name_family": "Mathey", 
             "name_given": "Nicolas", 
             "rec_class": "Person", 
-            "rec_id": "2441/7t638g2jjsquujs9mcc0jii04", 
-            "rec_metajson": 1
+            "rec_id": "2441/7t638g2jjsquujs9mcc0jii04"
           }, 
           "role": "pbd"
         }, 
@@ -847,8 +794,7 @@
             "name_family": "Vergne", 
             "name_given": "Arnaud", 
             "rec_class": "Person", 
-            "rec_id": "2441/7t638g2jjsquujs9mcc0k2e43", 
-            "rec_metajson": 1
+            "rec_id": "2441/7t638g2jjsquujs9mcc0k2e43"
           }, 
           "role": "pbd"
         }, 
@@ -859,7 +805,6 @@
             "date_end": "2012-03-30", 
             "place": "Faculté de Droit de l'Université Paris-Descartes ", 
             "rec_class": "Event", 
-            "rec_metajson": 1, 
             "title": "Raymond Saleilles et au-delà"
           }, 
           "role": "aut"
@@ -889,17 +834,15 @@
         "Dalloz"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.449030", 
+      "rec_created_date": "2013-10-31T11:21:15.165406", 
       "rec_id": "isbn:9782247125265", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.449037", 
+      "rec_modified_date": "2013-10-31T11:21:15.165419", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferenceProceedings", 
       "seriess": [
         {
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Series", 
           "title": "Thèmes & commentaires"
         }
@@ -918,16 +861,14 @@
             "agent": {
               "name": "Centre de recherches politiques de Sciences Po", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380qo", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q380qo"
             }
           }, 
           "agent": {
             "name_family": "Rouban", 
             "name_given": "Luc", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q56sp5", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i789685q56sp5"
           }, 
           "role": "aut"
         }
@@ -953,7 +894,6 @@
           "issuance": "continuing", 
           "rec_class": "Document", 
           "rec_id": "issn:02426870", 
-          "rec_metajson": 1, 
           "rec_type": "Newspaper", 
           "title": "L'Humanité"
         }
@@ -965,10 +905,9 @@
       "part_page_begin": "11", 
       "part_page_end": "00", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.451888", 
-      "rec_id": "5804bdd9-3a57-11e3-9e6c-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.451896", 
+      "rec_created_date": "2013-10-31T11:21:15.168343", 
+      "rec_id": "2c544d5e-4216-11e3-aead-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.168350", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -986,8 +925,7 @@
             "name_family": "Castañeda Lefèvre", 
             "name_given": "Dorly", 
             "rec_class": "Person", 
-            "rec_id": "2441/3fm4jv3k2s99lms9jb5i1ag8p", 
-            "rec_metajson": 1
+            "rec_id": "2441/3fm4jv3k2s99lms9jb5i1ag8p"
           }, 
           "role": "aut"
         }, 
@@ -996,16 +934,14 @@
             "agent": {
               "name": "Centre d'études et de recherches internationales", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q380gh"
             }
           }, 
           "agent": {
             "name_family": "Devin", 
             "name_given": "Guillaume", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q568qo", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i789685q568qo"
           }, 
           "role": "ths"
         }
@@ -1049,10 +985,9 @@
         "Institut d'Etudes Politiques de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.454329", 
-      "rec_id": "58051df0-3a57-11e3-8758-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.454336", 
+      "rec_created_date": "2013-10-31T11:21:15.170857", 
+      "rec_id": "2c54b028-4216-11e3-aee8-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.170864", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -1073,8 +1008,7 @@
             "name_family": "Epstein", 
             "name_given": "Renaud", 
             "rec_class": "Person", 
-            "rec_id": "2441/53r60a8s3kup1vc9k0sklgecj", 
-            "rec_metajson": 1
+            "rec_id": "2441/53r60a8s3kup1vc9k0sklgecj"
           }, 
           "role": "ivr"
         }, 
@@ -1083,16 +1017,14 @@
             "agent": {
               "name": "Centre d'études européennes de Sciences Po (CEE)", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q384oh"
             }
           }, 
           "agent": {
             "name_family": "Le Galès", 
             "name_given": "Patrick", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q58ub0", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i789685q58ub0"
           }, 
           "role": "ive"
         }
@@ -1134,7 +1066,6 @@
           ], 
           "rec_class": "Document", 
           "rec_id": "issn:12916412", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Mouvements"
         }
@@ -1146,10 +1077,9 @@
       "part_page_begin": "115", 
       "part_page_end": "131", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.457481", 
-      "rec_id": "580598a1-3a57-11e3-8dd6-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.457496", 
+      "rec_created_date": "2013-10-31T11:21:15.174240", 
+      "rec_id": "2c5533fd-4216-11e3-8995-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.174248", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "InterviewArticle", 
@@ -1167,16 +1097,14 @@
             "agent": {
               "name": "Paris-Jourdan Sciences Economiques", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/d7a7evb2ctdg4i89ges9oe5ao", 
-              "rec_metajson": 1
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9oe5ao"
             }
           }, 
           "agent": {
             "name_family": "Piketty", 
             "name_given": "Thomas", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i7896860ngch2", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i7896860ngch2"
           }, 
           "role": "ths"
         }, 
@@ -1185,16 +1113,14 @@
             "agent": {
               "name": "OFCE", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q38226", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q38226"
             }
           }, 
           "agent": {
             "name_family": "Antonin", 
             "name_given": "Céline", 
             "rec_class": "Person", 
-            "rec_id": "2441/5l6uh8ogmqildh09h6l10gtqo", 
-            "rec_metajson": 1
+            "rec_id": "2441/5l6uh8ogmqildh09h6l10gtqo"
           }, 
           "role": "aut"
         }
@@ -1220,10 +1146,9 @@
         "Ecole d'Economie de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.459785", 
-      "rec_id": "5805f297-3a57-11e3-9147-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.459792", 
+      "rec_created_date": "2013-10-31T11:21:15.176530", 
+      "rec_id": "2c558d73-4216-11e3-8d30-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.176537", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "MasterThesis", 
@@ -1241,16 +1166,14 @@
             "agent": {
               "name": "Centre d'études et de recherches internationales", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q380gh"
             }
           }, 
           "agent": {
             "name_family": "Combes", 
             "name_given": "Hélène", 
             "rec_class": "Person", 
-            "rec_id": "2441/eu4vqp9ompqllr09hga9pgk39", 
-            "rec_metajson": 1
+            "rec_id": "2441/eu4vqp9ompqllr09hga9pgk39"
           }, 
           "role": "aut"
         }
@@ -1290,7 +1213,6 @@
           ], 
           "rec_class": "Document", 
           "rec_id": "issn:11417161", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Cahiers des Amériques latines"
         }
@@ -1301,10 +1223,9 @@
       "part_issue": "69", 
       "part_volume": "2012/1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.462761", 
-      "rec_id": "580666d9-3a57-11e3-b773-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.462769", 
+      "rec_created_date": "2013-10-31T11:21:15.179606", 
+      "rec_id": "2c56052b-4216-11e3-8127-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.179617", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "PeriodicalIssue", 
@@ -1329,16 +1250,14 @@
             "agent": {
               "name": "Laboratoire de Conception et d'Intégration des Systèmes", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/d7a7evb2ctdg4i89gesapaoj4", 
-              "rec_metajson": 1
+              "rec_id": "2441/d7a7evb2ctdg4i89gesapaoj4"
             }
           }, 
           "agent": {
             "name_family": "Jean", 
             "name_given": "Sébastien", 
             "rec_class": "Person", 
-            "rec_id": "2441/c8dmi8nm4pdjkuc9g8m3565k5", 
-            "rec_metajson": 1
+            "rec_id": "2441/c8dmi8nm4pdjkuc9g8m3565k5"
           }, 
           "role": "aut"
         }, 
@@ -1347,16 +1266,14 @@
             "agent": {
               "name": "Leverhulme Centre for Research on Globalisation and Economic Policy (GEP)", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/5l6uh8ogmqildh09h29b6gkol", 
-              "rec_metajson": 1
+              "rec_id": "2441/5l6uh8ogmqildh09h29b6gkol"
             }
           }, 
           "agent": {
             "name_family": "Hijzen", 
             "name_given": "Alexander", 
             "rec_class": "Person", 
-            "rec_id": "2441/c8dmi8nm4pdjkuc9g8m34i593", 
-            "rec_metajson": 1
+            "rec_id": "2441/c8dmi8nm4pdjkuc9g8m34i593"
           }, 
           "role": "aut"
         }, 
@@ -1365,16 +1282,14 @@
             "agent": {
               "name": "Département d'économie", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q385c7", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q385c7"
             }
           }, 
           "agent": {
             "name_family": "Mayer", 
             "name_given": "Thierry", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q5aqa5", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i789685q5aqa5"
           }, 
           "role": "aut"
         }
@@ -1402,10 +1317,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.465271", 
-      "rec_id": "5806c9ab-3a57-11e3-a401-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.465277", 
+      "rec_created_date": "2013-10-31T11:21:15.182191", 
+      "rec_id": "2c566b33-4216-11e3-b738-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.182198", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Preprint", 
@@ -1424,8 +1338,7 @@
             "name_family": "Artigas", 
             "name_given": "Alvaro", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i7896860ig2b0", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i7896860ig2b0"
           }, 
           "role": "aut"
         }, 
@@ -1434,8 +1347,7 @@
             "name_family": "Matsumoto", 
             "name_given": "Tadashi", 
             "rec_class": "Person", 
-            "rec_id": "2441/5rkqqmvrn4tl22s9mc0slh0gj", 
-            "rec_metajson": 1
+            "rec_id": "2441/5rkqqmvrn4tl22s9mc0slh0gj"
           }, 
           "role": "aut"
         }, 
@@ -1444,16 +1356,14 @@
             "agent": {
               "name": "Centre d'études européennes de Sciences Po", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q384oh"
             }
           }, 
           "agent": {
             "name_family": "Vitale", 
             "name_given": "Tommaso", 
             "rec_class": "Person", 
-            "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
-            "rec_metajson": 1
+            "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
           }, 
           "role": "aut"
         }
@@ -1492,10 +1402,9 @@
         "CEE (Sciences Po)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.468487", 
-      "rec_id": "580746d4-3a57-11e3-8ca2-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.468493", 
+      "rec_created_date": "2013-10-31T11:21:15.185292", 
+      "rec_id": "2c56e407-4216-11e3-9022-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.185299", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Report", 
@@ -1513,16 +1422,14 @@
             "agent": {
               "name": "Centre d'études européennes de Sciences Po", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q384oh"
             }
           }, 
           "agent": {
             "name_family": "Vitale", 
             "name_given": "Tommaso", 
             "rec_class": "Person", 
-            "rec_id": "2441/5k7940uimfdf9c8990p8ph108", 
-            "rec_metajson": 1
+            "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
           }, 
           "role": "aut"
         }
@@ -1544,8 +1451,7 @@
                 "name_family": "Amato", 
                 "name_given": "Silvia", 
                 "rec_class": "Person", 
-                "rec_id": "2441/eu4vqp9ompqllr09hd5rg8sg2", 
-                "rec_metajson": 1
+                "rec_id": "2441/eu4vqp9ompqllr09hd5rg8sg2"
               }, 
               "role": "pbd"
             }, 
@@ -1554,8 +1460,7 @@
                 "name_family": "De Simone", 
                 "name_given": "Carmelita", 
                 "rec_class": "Person", 
-                "rec_id": "2441/eu4vqp9ompqllr09hd5rge0oj", 
-                "rec_metajson": 1
+                "rec_id": "2441/eu4vqp9ompqllr09hd5rge0oj"
               }, 
               "role": "pbd"
             }, 
@@ -1564,8 +1469,7 @@
                 "name_family": "Zandrini", 
                 "name_given": "Silvia", 
                 "rec_class": "Person", 
-                "rec_id": "2441/eu4vqp9ompqllr09hd5rg4t35", 
-                "rec_metajson": 1
+                "rec_id": "2441/eu4vqp9ompqllr09hd5rg4t35"
               }, 
               "role": "pbd"
             }
@@ -1578,7 +1482,6 @@
             "Quaderno dell'Assessorato Famiglia Scuola e Politiche sociali del Comune di Milano"
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Report", 
           "title": "Affidabile. La costruzione di un percorso per i bambini e le loro famiglie"
         }
@@ -1598,10 +1501,9 @@
       "part_page_begin": "89", 
       "part_page_end": "98", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.471666", 
-      "rec_id": "5807c1fd-3a57-11e3-863d-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.471674", 
+      "rec_created_date": "2013-10-31T11:21:15.188844", 
+      "rec_id": "2c576e07-4216-11e3-b4f3-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.188851", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ReportPart", 
@@ -1619,16 +1521,14 @@
             "agent": {
               "name": "Sciences Po", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q021gm", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q021gm"
             }
           }, 
           "agent": {
             "name_family": "Durand", 
             "name_given": "Marie-Françoise", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q571ko", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i789685q571ko"
           }, 
           "role": "pbd"
         }, 
@@ -1637,16 +1537,14 @@
             "agent": {
               "name": "Centre d'études et de recherches internationales", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q380gh"
             }
           }, 
           "agent": {
             "name_family": "Lequesne", 
             "name_given": "Christian", 
             "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q54lsl", 
-            "rec_metajson": 1
+            "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
           "role": "pbd"
         }
@@ -1671,17 +1569,15 @@
         "Sciences Po - Atelier de cartographie"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.473938", 
-      "rec_id": "58081b5e-3a57-11e3-86f4-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.473946", 
+      "rec_created_date": "2013-10-31T11:21:15.191098", 
+      "rec_id": "2c57c68c-4216-11e3-b12a-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.191105", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WebSite", 
       "resources": [
         {
           "rec_class": "Resource", 
-          "rec_metajson": 1, 
           "rec_type": "remote", 
           "url": "http://ceriscope.sciences-po.fr/pauvrete"
         }
@@ -1716,16 +1612,14 @@
             "agent": {
               "name": "Département d'économie", 
               "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q385c7", 
-              "rec_metajson": 1
+              "rec_id": "2441/9labe9r4se65i789685q385c7"
             }
           }, 
           "agent": {
             "name_family": "Do", 
             "name_given": "Quoc-Anh", 
             "rec_class": "Person", 
-            "rec_id": "2441/53r60a8s3kup1vc9kc6cl8m9l", 
-            "rec_metajson": 1
+            "rec_id": "2441/53r60a8s3kup1vc9kc6cl8m9l"
           }, 
           "role": "aut"
         }, 
@@ -1734,8 +1628,7 @@
             "name_family": "Campante", 
             "name_given": "Filipe R", 
             "rec_class": "Person", 
-            "rec_id": "2441/dambferfb7dfprc9lj6bkb4sj", 
-            "rec_metajson": 1
+            "rec_id": "2441/dambferfb7dfprc9lj6bkb4sj"
           }, 
           "role": "aut"
         }
@@ -1775,10 +1668,9 @@
         "Sciences Po - ECON"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.476758", 
-      "rec_id": "580889fd-3a57-11e3-9bee-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.476765", 
+      "rec_created_date": "2013-10-31T11:21:15.193894", 
+      "rec_id": "2c58341e-4216-11e3-8941-406c8f07170d", 
+      "rec_modified_date": "2013-10-31T11:21:15.193901", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WorkingPaper", 
@@ -1786,7 +1678,6 @@
         {
           "part_number": "2013-01", 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Series", 
           "title": "Sciences Po Economics Discussion Papers"
         }
