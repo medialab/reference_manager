@@ -2,7 +2,15 @@
   {{#ifCond type_fields.length '>' 1}}
     <select class="col-3 select-field">
       {{#each type_fields}}
-        <option value="{{ this }}">{{ this }}</option>
+        {{#if this.title }}
+          <option value="blf.placeholder" class="placeholder">{{ this.text }}</option>
+        {{else}}
+          {{#if this.separator }}
+            <option class="disabled" disabled="disabled">---</option>
+          {{else}}
+            <option value="{{ this }}">{{ this }}</option>
+          {{/if}}
+        {{/if}}
       {{/each}}
     </select>
   {{/ifCond}}

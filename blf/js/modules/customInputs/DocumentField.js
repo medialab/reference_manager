@@ -67,12 +67,23 @@
       var id = _lineID++,
           li = $(blf.templates.get('DocumentField.line')({
             id: id,
-            type_fields: obj.type_fields
+            type_fields: [
+              {
+                text: i18n.t('customInputs:DocumentField.messages.select_type'),
+                title: true
+              },
+              {
+                separator: true
+              }
+            ].concat(obj.type_fields)
           }));
 
       if (data.rec_type) {
         $('select.select-field', li).first().val(data.rec_type);
-        _forms[id] = blf.modules.createPanel.generateForm(controller, _fields[data.rec_type].children);
+        _forms[id] = blf.modules.createPanel.generateForm(
+          controller,
+          _fields[data.rec_type].children
+        );
 
         $('.custom-container', li).first().empty().append(_forms[id].components.map(function(o) {
           return o.dom;
@@ -124,19 +135,24 @@
 
       // Check which select it is:
       if (li.length && target.is(_ul.children('li').children('select.select-field')))
-        addForm(li, target.val());
+        if (target.val() === 'blf.placeholder')
+          $('.custom-container', li).first().empty();
+        else
+          addForm(li, target.val());
     });
 
     function addForm(li, value) {
       _forms[li.data('id')] = blf.modules.createPanel.generateForm(controller, _fields[value].children);
+      _forms[li.data('id')].fill({ rec_type: value });
+
       $('.custom-container', li).first().empty().append(_forms[li.data('id')].components.map(function(o) {
         return o.dom;
       }));
     }
 
     /**
-     *  Check if the content of the component is valid. Returns true if valid,
-     *  and false if not.
+     * Check if the content of the component is valid. Returns true if valid,
+     * and false if not.
      *
      * @return {string} Returns true if the content id valid, and false else.
      */
@@ -187,6 +203,9 @@
             data = _forms[id].getData();
 
         data.rec_type = $('select.select-field', li).first().val();
+        if ('rec_class' in obj)
+          data.rec_class = obj.rec_class;
+
         documents.push(data);
       });
 
@@ -218,7 +237,7 @@
         return;
 
       // Else, let's regenerate the <select> contents:
-      _fields = controller.get('fields');
+      _fields = d.get('fields');
 
       _ul.children('li').each(function() {
         $(this).find('select.select-field').first().html(
