@@ -1,0 +1,95 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "CV",
+                        "fr": "CV"
+                    },
+                    "type_id": "cv"
+                },
+                {
+                    "labels": {
+                        "en": "Identity picture",
+                        "fr": "Photo d'identit\u00e9"
+                    },
+                    "type_id": "picture"
+                },
+            ],
+            "labels": {
+                "en": "Person resources",
+                "fr": "Ressources pour une personne"
+            },
+            "type_id": "PersonBundle"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "Logo",
+                        "fr": "Logotype"
+                    },
+                    "type_id": "logo"
+                }
+            ],
+            "labels": {
+                "en": "Orgunit resources",
+                "fr": "Ressources pour une orgunit"
+            },
+            "type_id": "OrgunitBundle"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "Back cover",
+                        "fr": "Dernière de couverture"
+                    },
+                    "type_id": "backCover"
+                },
+                {
+                    "labels": {
+                        "en": "Front cover",
+                        "fr": "Première de couverture"
+                    },
+                    "type_id": "frontCover"
+                },
+                {
+                    "labels": {
+                        "en": "DataSet",
+                        "fr": "DataSet"
+                    },
+                    "type_id": "dataset"
+                },
+                {
+                    "labels": {
+                        "en": "Human start page",
+                        "fr": "Page d'accueil"
+                    },
+                    "type_id": "humanStartPage"
+                },
+                {
+                    "labels": {
+                        "en": "Publication",
+                        "fr": "Publication"
+                    },
+                    "type_id": "publication"
+                }
+            ],
+            "labels": {
+                "en": "Document resources",
+                "fr": "Ressources pour un document"
+            },
+            "type_id": "DocumentBundle"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "sort": false,
+    "type_id": "resource_relation_type"
+}

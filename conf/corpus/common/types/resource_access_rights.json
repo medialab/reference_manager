@@ -1,0 +1,37 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Closed access",
+                "fr": "Accès payant"
+            },
+            "type_id": "closedAccess"
+        },
+        {
+            "labels": {
+                "en": "Embargoed access",
+                "fr": "Accès sous embargo"
+            },
+            "type_id": "embargoedAccess"
+        },
+        {
+            "labels": {
+                "en": "Open access",
+                "fr": "Accès libre"
+            },
+            "type_id": "openAccess"
+        },
+        {
+            "labels": {
+                "en": "Restricted access",
+                "fr": "Accès restreint"
+            },
+            "type_id": "restrictedAccess"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "sort": false,
+    "type_id": "resource_access_rights"
+}

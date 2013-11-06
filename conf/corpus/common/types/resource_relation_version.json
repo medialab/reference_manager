@@ -1,0 +1,33 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "Author version",
+                        "fr": "Version de l'auteur"
+                    },
+                    "type_id": "authorVersion"
+                },
+                {
+                    "labels": {
+                        "en": "Published version",
+                        "fr": "Version de l'éditeur"
+                    },
+                    "type_id": "publishedVersion"
+                }
+            ],
+            "labels": {
+                "en": "Document resources",
+                "fr": "Ressources pour un document"
+            },
+            "type_id": "DocumentBundle"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "sort": false,
+    "type_id": "resource_relation_version"
+}
