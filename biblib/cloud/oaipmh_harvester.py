@@ -10,6 +10,7 @@ from oaipmh.metadata import MetadataRegistry
 from oaipmh.common import Metadata
 
 from biblib.services import crosswalks_service
+from biblib.services import metajson_service
 from biblib.util import constants
 
 
@@ -164,7 +165,8 @@ def convert_record(record, meta_orig_prefix, source):
         # header identifier
         if "identifiers" not in metajson:
             metajson["identifiers"] = []
-        metajson["identifiers"].append({"oai": header["identifier"]})
+        metajson["identifiers"].append(metajson_service.create_identifier("oai", header["identifier"]))
+        # todo : use the identifier info replace the prefix
         metajson["rec_id"] = header["identifier"].replace("oai:spire.sciences-po.fr:", "")
         # header datestamp
         metajson["rec_modified_date"] = header["datestamp"]
