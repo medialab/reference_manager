@@ -15,7 +15,10 @@ from biblib.util import constants
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-with open(os.path.join(here, 'requirements.txt')) as requirements_file, open(os.path.join(here, 'README.md')) as README_file, open(os.path.join(here, 'NEWS.txt')) as NEWS_file, open(os.path.join(here, 'LICENSE')) as LICENSE_file:
+with open(os.path.join(here, 'requirements.txt')) as requirements_file,
+            open(os.path.join(here, 'README.md')) as README_file, 
+            open(os.path.join(here, 'NEWS.txt')) as NEWS_file, 
+            open(os.path.join(here, 'LICENSE')) as LICENSE_file:
 
     requirements = requirements_file.read().splitlines()
     README = README_file.read()
