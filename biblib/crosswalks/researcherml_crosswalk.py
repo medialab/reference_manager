@@ -4,7 +4,6 @@
 
 from biblib.metajson import Call
 from biblib.metajson import Creator
-from biblib.metajson import Family
 from biblib.metajson import Orgunit
 from biblib.metajson import Person
 from biblib.metajson import Project
@@ -49,7 +48,7 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
     orgunit.update(get_rml_textlangs_and_set_key(rml_orgunit, "award", "awards"))
 
     # ckbData -> self_archiving_policy
-    orgunit.update(get_rml_self_ckbdatas(rml_orgunit))
+    orgunit.update(get_rml_self_archiving_policy(rml_orgunit))
 
     # dateOfDissolution -> date_dissolution
     orgunit.update(get_rml_element_text_and_set_key(rml_orgunit, "dateOfDissolution", "date_dissolution"))
@@ -70,7 +69,7 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
     orgunit.update(get_rml_identifiers(rml_orgunit))
 
     # image -> resources[0]
-    orgunit.update(get_rml_images(rml_orgunit))
+    orgunit.update(get_rml_images(rml_orgunit, "logo"))
 
     # name -> name
     orgunit.update(get_rml_element_text_and_set_key(rml_orgunit, "name", "name"))
@@ -118,11 +117,11 @@ def rml_person_to_metajson(rml_person, source):
     # academicTitle, honorificTitle -> titles
     person.update(get_rml_titles(rml_person))
 
-    # affiliation -> affiliations
-    person.update(get_rml_affiliations(rml_person))
-
     # address -> addresses
     person.update(get_rml_addresses(rml_person))
+
+    # affiliation -> affiliations
+    person.update(get_rml_affiliations(rml_person))
 
     # award -> awards
     person.update(get_rml_textlangs_and_set_key(rml_person, "award", "awards"))
@@ -142,7 +141,7 @@ def rml_person_to_metajson(rml_person, source):
     # email -> emails
     person.update(get_rml_emails(rml_person))
 
-    # fictitious -> fictitious
+    # @fictitious -> fictitious
     person.update(xmletree.get_element_attribute_as_boolean_and_set_key(rml_person, "fictitious", "fictitious"))
 
     # firstname -> name_given
@@ -151,8 +150,8 @@ def rml_person_to_metajson(rml_person, source):
     # identifier -> identifiers & rec_id
     person.update(get_rml_identifiers(rml_person))
 
-    # image -> image_urls
-    person.update(get_rml_images(rml_person))
+    # image -> resources[i]
+    person.update(get_rml_images(rml_person, "picture"))
 
     # instantMessage -> instant_messages
     person.update(get_rml_instant_messages(rml_person))
@@ -283,26 +282,27 @@ def get_rml_addresses(rml):
         addresses = []
         for rml_address in rml_addresses:
             if rml_address is not None:
-                # @preferred -> preferred
-                preferred = xmletree.get_element_attribute_as_boolean(rml_address, "preferred")
 
-                # relationType -> relation_type
-                relation_type = rml_address.get("relationType")
-
-                # visible -> visible
-                visible = xmletree.get_element_attribute_as_boolean(rml_address, "visible")
-
-                # street -> street
-                street = xmletree.get_element_text(rml_address.find(xmletree.prefixtag("rml", "street")))
-
-                # post_code -> post_code
-                post_code = xmletree.get_element_text(rml_address.find(xmletree.prefixtag("rml", "postCode")))
+                # country -> country
+                country = xmletree.get_element_text(rml_address.find(xmletree.prefixtag("rml", "country")))
 
                 # locality_city_town -> locality_city_town
                 locality_city_town = xmletree.get_element_text(rml_address.find(xmletree.prefixtag("rml", "localityCityTown")))
 
-                # country -> country
-                country = xmletree.get_element_text(rml_address.find(xmletree.prefixtag("rml", "country")))
+                # post_code -> post_code
+                post_code = xmletree.get_element_text(rml_address.find(xmletree.prefixtag("rml", "postCode")))
+
+                # @preferred -> preferred
+                preferred = xmletree.get_element_attribute_as_boolean(rml_address, "preferred")
+
+                # @relationType -> relation_type
+                relation_type = rml_address.get("relationType")
+
+                # street -> street
+                street = xmletree.get_element_text(rml_address.find(xmletree.prefixtag("rml", "street")))
+
+                # @visible -> visible
+                visible = xmletree.get_element_attribute_as_boolean(rml_address, "visible")
 
                 # address -> addresses[i]
                 address = metajson_service.create_address(street, post_code, locality_city_town, country, preferred, relation_type, visible)
@@ -322,32 +322,31 @@ def get_rml_affiliations(rml):
         affiliations = []
         for rml_affiliation in rml_affiliations:
             if rml_affiliation is not None:
+                # dateBegin -> date_begin
+                date_begin = get_rml_element_text(rml_affiliation, "dateBegin")
+
+                # dateEnd -> date_end
+                date_end = get_rml_element_text(rml_affiliation, "dateEnd")
+
+                # description -> descriptions
+                descriptions = get_rml_textlangs_as_list(rml_affiliation, "description")
+
+                # identifier -> agent.rec_id
+                identifiers = get_rml_identifiers(rml_affiliation)
+                rec_id = None
+                if "rec_id" in identifiers and identifiers["rec_id"]:
+                    rec_id = identifiers["rec_id"]
+
+                # name -> agent.name
+                name = get_rml_element_text(rml_affiliation, "name")
+
                 # @preferred -> preferred
                 preferred = xmletree.get_element_attribute_as_boolean(rml_affiliation, "preferred")
 
-                # dateBegin -> date_begin
-                rml_date_begin = rml_affiliation.find(xmletree.prefixtag("rml", "dateBegin"))
-                date_begin = xmletree.get_element_text(rml_date_begin)
-
-                # dateEnd -> date_end
-                rml_date_end = rml_affiliation.find(xmletree.prefixtag("rml", "dateEnd"))
-                date_end = xmletree.get_element_text(rml_date_end)
-
-                # identifier -> identifiers
-                identifiers = get_rml_identifiers(rml_affiliation)
-                rec_id = None
-                if "identifiers" in identifiers and identifiers["identifiers"]:
-                    rec_id = identifiers["identifiers"][0]["value"]
-
-                # name -> name
-                rml_name = rml_affiliation.find(xmletree.prefixtag("rml", "name"))
-                name = xmletree.get_element_text(rml_name)
-
                 # relationType -> role
-                rml_relation_type = rml_affiliation.find(xmletree.prefixtag("rml", "relationType"))
-                role = xmletree.get_element_text(rml_relation_type)
+                role = get_rml_element_text(rml_affiliation, "relationType")
 
-                affiliation = metajson_service.create_affiliation(rec_id, name, role, date_begin, date_end, preferred)
+                affiliation = metajson_service.create_affiliation(rec_id, name, role, date_begin, date_end, preferred, descriptions)
                 if affiliation is not None:
                     affiliations.append(affiliation)
         if affiliations:
@@ -362,36 +361,30 @@ def get_rml_call(rml):
     if rml_call is not None:
         call = Call()
 
-        # funding -> creators[0]
-        rml_fundings = rml_call.findall(xmletree.prefixtag("rml", "funding"))
-        if rml_fundings is not None:
-            creators = []
-            for rml_funding in rml_fundings:
-                if rml_funding is not None:
-                    # name -> agent.name
-                    name = get_rml_element_text(rml_funding, "name")
-                    creator = creator_service.formatted_name_to_creator(name, constants.CLASS_ORGUNIT, "fnd")
-                    if creator is None:
-                        creator = Creator()
-                        creator["agent"] = Orgunit()
-                        creator["role"] = "fnd"
+        # funding -> funding
+        rml_funding = rml_call.find(xmletree.prefixtag("rml", "funding"))
+        if rml_funding is not None:
+            # name -> agent.name
+            name = get_rml_element_text(rml_funding, "name")
+            funding = creator_service.formatted_name_to_creator(name, constants.CLASS_ORGUNIT, None)
+            if funding is None:
+                funding = Creator()
+                funding["agent"] = Orgunit()
 
-                    # identifier -> agent.rec_id & agent.identifiers
-                    creator["agent"].update(get_rml_identifiers(rml_funding))
+            # identifier -> agent.rec_id & agent.identifiers
+            funding["agent"].update(get_rml_identifiers(rml_funding))
 
-                    # programme -> funding_programme
-                    creator.update(get_rml_element_text_and_set_key(rml_funding, "programme", "funding_programme"))
+            # programme -> programme
+            funding.update(get_rml_element_text_and_set_key(rml_funding, "programme", "programme"))
 
-                    # scheme -> funding_scheme
-                    creator.update(get_rml_element_text_and_set_key(rml_funding, "scheme", "funding_scheme"))
+            # scheme -> scheme
+            funding.update(get_rml_element_text_and_set_key(rml_funding, "scheme", "scheme"))
 
-                    # contribution -> funding_contribution
-                    creator.update(get_rml_money_and_set_key(rml_funding, "contribution", "funding_contribution"))
+            # contribution -> contribution
+            funding.update(get_rml_money_and_set_key(rml_funding, "contribution", "contribution"))
 
-                    creators.append(creator)
-
-            if creators:     
-                call["creators"] = creators
+            if funding:     
+                call["funding"] = funding
 
         # identifier -> rec_id
         call.update(get_rml_element_text_and_set_key(rml_call, "identifier", "rec_id"))
@@ -417,19 +410,19 @@ def get_rml_degrees(rml):
             if rml_degree is not None:
                 degree = {}
 
-                # date_begin
+                # dateBegin -> date_begin
                 degree.update(get_rml_element_text_and_set_key(rml_degree, "dateBegin", "date_begin"))
 
-                # date_end
+                # dateEnd -> date_end
                 degree.update(get_rml_element_text_and_set_key(rml_degree, "dateEnd", "date_end"))
 
-                # descriptions
+                # description -> descriptions
                 degree.update(get_rml_textlangs_and_set_key(rml_degree, "description", "descriptions"))
 
-                # level
+                # level -> level
                 degree.update(get_rml_element_text_and_set_key(rml_degree, "level", "level"))
 
-                # title
+                # title -> title
                 degree.update(get_rml_element_text_and_set_key(rml_degree, "title", "title"))
 
                 # creators
@@ -462,9 +455,16 @@ def get_rml_emails(rml):
         emails = []
         for rml_email in rml_emails:
             if rml_email is not None:
+                # @preferred -> preferred
                 preferred = xmletree.get_element_attribute_as_boolean(rml_email, "preferred")
+
+                # @relationType -> relation_type
                 relation_type = rml_email.get("relationType")
+
+                # @visible -> visible
                 visible = xmletree.get_element_attribute_as_boolean(rml_email, "visible")
+
+                # value
                 value = xmletree.get_element_text(rml_email)
 
                 email = metajson_service.create_email(value, preferred, relation_type, visible)
@@ -483,7 +483,9 @@ def get_rml_headcounts(rml):
         headcounts = []
         for rml_headcount in rml_headcounts:
             if rml_headcount is not None:
+                # @year -> year
                 year = rml_headcount.get("year")
+                # value
                 value = rml_headcount.text.strip()
                 if value is not None:
                     headcount = {"value": value}
@@ -504,11 +506,15 @@ def get_rml_identifiers(rml):
         rec_id = None
         for rml_identifier in rml_identifiers:
             if rml_identifier is not None:
+                # @type -> id_type
                 id_type = rml_identifier.get("type")
+                # value
                 id_value = xmletree.get_element_text(rml_identifier)
                 if id_type is None or id_type == "hdl":
+                    # rec_id
                     rec_id = id_value
                 else:
+                    # identifier
                     identifier = metajson_service.create_identifier(id_type, id_value)
                     if identifier is not None:
                         identifiers.append(identifier)
@@ -519,7 +525,7 @@ def get_rml_identifiers(rml):
     return result
 
 
-def get_rml_images(rml):
+def get_rml_images(rml, role):
     """ image -> resources[0] """
     result = {}
     rml_images = rml.findall(xmletree.prefixtag("rml", "image"))
@@ -528,7 +534,7 @@ def get_rml_images(rml):
         for rml_image in rml_images:
             if rml_image is not None:
                 url = xmletree.get_element_text(rml_image)
-                resource = metajson_service.create_resource_remote(url, "picture")
+                resource = metajson_service.create_resource_remote(url, None, role)
                 if resource is not None:
                     resources.append(resource)
         if resources:
@@ -544,10 +550,15 @@ def get_rml_instant_messages(rml):
         ims = []
         for rml_im in rml_ims:
             if rml_im is not None:
+                # @preferred -> preferred
                 preferred = xmletree.get_element_attribute_as_boolean(rml_im, "preferred")
+                # @relationType -> relation_type
                 relation_type = rml_im.get("relationType")
-                visible = xmletree.get_element_attribute_as_boolean(rml_im, "visible")
+                # @service -> service
                 service = rml_im.get("service")
+                # @visible -> visible
+                visible = xmletree.get_element_attribute_as_boolean(rml_im, "visible")
+                # value
                 value = xmletree.get_element_text(rml_im)
 
                 im = metajson_service.create_instant_message(value, service, preferred, relation_type, visible)
@@ -566,30 +577,24 @@ def get_rml_language_capabilities(rml):
         lcs = []
         for rml_lc in rml_lcs:
             if rml_lc is not None:
-                # language
-                rml_language = rml_lc.find(xmletree.prefixtag("rml", "language"))
-                language = xmletree.get_element_text(rml_language)
+                # language -> language
+                language = get_rml_element_text(rml_lc, "language")
                 language = language_service.convert_unknown_format_to_rfc5646(language)
 
-                # motherTong
-                rml_mother_tong = rml_lc.find(xmletree.prefixtag("rml", "motherTong"))
-                mother_tong = xmletree.get_element_text_as_boolean(rml_mother_tong)
+                # motherTong -> mother_tong
+                mother_tong = get_rml_element_text_as_boolean(rml_lc, "motherTong")
 
-                # oralInput
-                rml_oral_input = rml_lc.find(xmletree.prefixtag("rml", "oralInput"))
-                oral_input = xmletree.get_element_text(rml_oral_input)
+                # oralInput -> oral_input
+                oral_input = get_rml_element_text(rml_lc, "oralInput")
 
-                # oralOutput
-                rml_oral_output = rml_lc.find(xmletree.prefixtag("rml", "oralOutput"))
-                oral_output = xmletree.get_element_text(rml_oral_output)
+                # oralOutput -> oral_output
+                oral_output = get_rml_element_text(rml_lc, "oralOutput")
 
-                # textInput
-                rml_text_input = rml_lc.find(xmletree.prefixtag("rml", "textInput"))
-                text_input = xmletree.get_element_text(rml_text_input)
+                # textInput -> text_input
+                text_input = get_rml_element_text(rml_lc, "textInput")
 
-                # textOutput
-                rml_text_output = rml_lc.find(xmletree.prefixtag("rml", "textOutput"))
-                text_output = xmletree.get_element_text(rml_text_output)
+                # textOutput -> text_output
+                text_output = get_rml_element_text(rml_lc, "textOutput")
 
                 lc = metajson_service.create_language_capability(language, mother_tong, oral_input, oral_output, text_input, text_output)
                 if lc is not None:
@@ -620,18 +625,23 @@ def get_rml_money_and_set_key(rml, element, key):
 def get_rml_ongoing_researches(rml):
     """ ongoingResearch -> ongoing_researches """
     result = {}
-    rml_ongoing_researches = rml.findall(xmletree.prefixtag("rml", "ongoingResearch"))
-    if rml_ongoing_researches is not None:
-        ongoing_researches = []
-        for rml_ongoing_research in rml_ongoing_researches:
-            if rml_ongoing_research is not None:
-                ongoing_research = {}
-
-                # descriptions
-                ongoing_research.update(get_rml_textlangs_and_set_key(rml_ongoing_research, "description", "descriptions"))
-
-                if ongoing_research is not None:
-                    ongoing_researches.append(ongoing_research)
+    rml_ors = rml.findall(xmletree.prefixtag("rml", "ongoingResearch"))
+    if rml_ors is not None:
+        ongoing_researches = {}
+        for rml_or in rml_ors:
+            rml_descriptions = rml_or.findall(xmletree.prefixtag("rml", "description"))
+            if rml_descriptions is not None:
+                for rml_description in rml_descriptions:
+                    if rml_description is not None:
+                        if rml_description.text is not None:
+                            value = rml_description.text.strip()
+                            if value is not None:
+                                language = rml_description.get(xmletree.prefixtag("xml", "lang"))
+                                if language is not None:
+                                    if language in ongoing_researches:
+                                        ongoing_researches[language].append(value)
+                                    else:
+                                        ongoing_researches[language] = [value]
         if ongoing_researches:
             result["ongoing_researches"] = ongoing_researches
     return result
@@ -666,10 +676,15 @@ def get_rml_phones(rml):
         phones = []
         for rml_phone in rml_phones:
             if rml_phone is not None:
+                # @preferred -> preferred
                 preferred = xmletree.get_element_attribute_as_boolean(rml_phone, "preferred")
+                # @relationType -> relation_type
                 relation_type = rml_phone.get("relationType")
+                # @type -> phone_type
                 phone_type = rml_phone.get("type")
+                # @visible -> visible
                 visible = xmletree.get_element_attribute_as_boolean(rml_phone, "visible")
+                # formatted -> formatted
                 rml_formatted = rml_phone.find(xmletree.prefixtag("rml", "formatted"))
                 formatted = xmletree.get_element_text(rml_formatted)
 
@@ -689,18 +704,20 @@ def get_rml_relationships(rml):
         relationships = []
         for rml_relationship in rml_relationships:
             if rml_relationship is not None:
-                relationship = {}
+                # name -> agent.name
+                name = get_rml_element_text(rml_relationship, "name")
+                relationship = creator_service.formatted_name_to_creator(name, constants.CLASS_PERSON, None)
+                if relationship is None:
+                    relationship = {}
+                    relationship["agent"] = Person()
 
-                # relation_type
+                # identifier -> agent.rec_id & agent.identifiers
+                relationship["agent"].update(get_rml_identifiers(rml_relationship))
+
+                # relationType -> relation_type
                 relationship.update(get_rml_element_text_and_set_key(rml_relationship, "relationType", "relation_type"))
 
-                # identifiers
-                relationship.update(get_rml_identifiers(rml_relationship))
-
-                # name
-                relationship.update(get_rml_element_text_and_set_key(rml_relationship, "name", "name"))
-
-                # descriptions
+                # descriptions -> descriptions
                 relationship.update(get_rml_textlangs_and_set_key(rml_relationship, "description", "descriptions"))
 
                 if relationship is not None:
@@ -744,39 +761,39 @@ def get_rml_research_coverages(rml):
     return result
 
 
-def get_rml_self_ckbdatas(rml):
+def get_rml_self_archiving_policy(rml):
     """ ckbData -> self_archiving_policy """
     result = {}
     rml_ckbdata = rml.find(xmletree.prefixtag("rml", "ckbData"))
     if rml_ckbdata is not None:
 
         sap = {}
-        # romeo
+        # romeoPublisher -> .
         rml_romeo = rml_ckbdata.find(xmletree.prefixtag("rml", "romeoPublisher"))
         if rml_romeo is not None:
-            # publisher
-            #sap_publisher = Orgunit()
-            #sap_publisher["rec_type"] = "publisher"
+            # publisher : don't repeate this information
+            #publisher = Orgunit()
+            #publisher["rec_type"] = "publisher"
 
-            # alias -> acronym
-            #sap_publisher.update(get_rml_element_text_and_set_key(rml_romeo, "alias", "alias"))
+            # alias -> publisher.acronym
+            #publisher.update(get_rml_element_text_and_set_key(rml_romeo, "alias", "acronym"))
 
-            # homeurl -> url
+            # homeurl -> publisher.urls[]
             #rml_homeurl_value = xmletree.get_element_text(rml_romeo.find(xmletree.prefixtag("rml", "homeurl")))
             #if rml_homeurl_value:
-            #    sap_publisher["urls"] = [metajson_service.create_url(rml_homeurl_value, True, "work", None, None, True)]
+            #    publisher["urls"] = [metajson_service.create_url(rml_homeurl_value, True, "work", None, None, True)]
 
-            # id -> identifiers[i]
+            # id -> publisher.identifiers[i]
             #rml_id_value = xmletree.get_element_text(rml_romeo.find(xmletree.prefixtag("rml", "id")))
             #if rml_id_value:
-            #    sap_publisher["identifiers"] = [metajson_service.create_identifier("romeo", rml_id_value)]
+            #    publisher["identifiers"] = [metajson_service.create_identifier("romeo", rml_id_value)]
 
-            # name -> name
-            #sap_publisher.update(get_rml_element_text_and_set_key(rml_romeo, "name", "name"))
+            # name -> publisher.name
+            #publisher.update(get_rml_element_text_and_set_key(rml_romeo, "name", "name"))
 
-            #sap["publisher"] = sap_publisher
+            #sap["publisher"] = publisher
 
-            # conditions -> conditions
+            # conditions.condition -> conditions[]
             rml_conditions = rml_romeo.find(xmletree.prefixtag("rml", "conditions"))
             if rml_conditions is not None:
                 rml_conditions_list = rml_conditions.findall(xmletree.prefixtag("rml", "condition"))
@@ -819,6 +836,8 @@ def get_rml_self_ckbdatas(rml):
 
                 # paidaccessnotes -> notes
                 # rml_paidaccessnotes = rml_paidaccess.findall(xmletree.prefixtag("rml", "paidaccessnotes"))
+
+                sap["paid_access"] = paid_access
 
             # postprints -> postprint
             rml_postprints = rml_romeo.find(xmletree.prefixtag("rml", "postprints"))
@@ -864,10 +883,19 @@ def get_rml_teachings(rml):
             if rml_teaching is not None:
                 teaching = {}
 
-                # level
+                # dateBegin -> date_begin
+                teaching.update(get_rml_element_text_and_set_key(rml_teaching, "dateBegin", "date_begin"))
+
+                # dateEnd -> date_end
+                teaching.update(get_rml_element_text_and_set_key(rml_teaching, "dateEnd", "date_end"))
+
+                # description -> descriptions[i]
+                teaching.update(get_rml_textlangs_and_set_key(rml_teaching, "description", "descriptions"))
+
+                # level -> level
                 teaching.update(get_rml_element_text_and_set_key(rml_teaching, "level", "level"))
 
-                # title
+                # title -> title
                 teaching.update(get_rml_element_text_and_set_key(rml_teaching, "title", "title"))
 
                 # creators
@@ -884,15 +912,6 @@ def get_rml_teachings(rml):
 
                 if "name" in creator["agent"] or "rec_id" in creator["agent"] or "identifiers" in creator["agent"]:
                     teaching["creators"] = [creator]
-
-                # date_begin
-                teaching.update(get_rml_element_text_and_set_key(rml_teaching, "dateBegin", "date_begin"))
-
-                # date_end
-                teaching.update(get_rml_element_text_and_set_key(rml_teaching, "dateEnd", "date_end"))
-
-                # descriptions
-                teaching.update(get_rml_textlangs_and_set_key(rml_teaching, "description", "descriptions"))
 
                 if teaching is not None:
                     teachings.append(teaching)
@@ -967,11 +986,9 @@ def get_rml_uris(rml):
     return result
 
 
-def get_rml_textlangs_and_set_key(rml, element, key):
-    """ element -> key
-        @xml:lang -> language
+def get_rml_textlangs_as_list(rml, element):
+    """ @xml:lang -> language
         text -> value """
-    result = {}
     rml_sls = rml.findall(xmletree.prefixtag("rml", element))
     if rml_sls is not None:
         sls = []
@@ -985,13 +1002,28 @@ def get_rml_textlangs_and_set_key(rml, element, key):
                         sl["language"] = language.strip()
                     sls.append(sl)
         if sls:
-            result[key] = sls
+            return sls
+
+
+def get_rml_textlangs_and_set_key(rml, element, key):
+    """ element -> key
+        @xml:lang -> language
+        text -> value """
+    result = {}
+    sls = get_rml_textlangs_as_list(rml, element)
+    if sls:
+        result[key] = sls
     return result
 
 
 def get_rml_element_text(rml, element):
     element_xmletree = rml.find(xmletree.prefixtag("rml", element))
     return xmletree.get_element_text(element_xmletree)
+
+
+def get_rml_element_text_as_boolean(rml, element):    
+    element_xmletree = rml.find(xmletree.prefixtag("rml", element))
+    return xmletree.get_element_text_as_boolean(element_xmletree)
 
 
 def get_rml_element_text_and_set_key(rml, element, key):
