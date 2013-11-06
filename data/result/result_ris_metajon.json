@@ -14,8 +14,7 @@
           "agent": {
             "name_family": "Hartmann", 
             "name_given": "J.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -23,8 +22,7 @@
           "agent": {
             "name_family": "Maassen", 
             "name_given": "V.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -32,8 +30,7 @@
           "agent": {
             "name_family": "Rieber", 
             "name_given": "P.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -41,8 +38,7 @@
           "agent": {
             "name_family": "Fricke", 
             "name_given": "H.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -60,7 +56,6 @@
       "is_part_ofs": [
         {
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "European Journal of Immunology", 
           "title_abbreviated": {
@@ -86,10 +81,9 @@
       "part_volume": "25", 
       "publication_status": "IN FILE", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.536268", 
-      "rec_id": "58119e8f-3a57-11e3-8351-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.536278", 
+      "rec_created_date": "2013-11-06T18:31:57.515242", 
+      "rec_id": "560c0194-4709-11e3-bc1d-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.515252", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -106,8 +100,7 @@
           "agent": {
             "name_family": "Smith", 
             "name_given": "K.M.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -132,10 +125,9 @@
         "Elsevier Scientific Publishing Company"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.536975", 
-      "rec_id": "5811ba87-3a57-11e3-8e34-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.536981", 
+      "rec_created_date": "2013-11-06T18:31:57.515941", 
+      "rec_id": "560c1d63-4709-11e3-95e8-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.515947", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -152,8 +144,7 @@
           "agent": {
             "name_family": "Lewicki", 
             "name_given": "J.A.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -161,8 +152,7 @@
           "agent": {
             "name_family": "Protter", 
             "name_given": "A.A.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -178,8 +168,7 @@
               "agent": {
                 "name_family": "Laragh", 
                 "name_given": "J.H.", 
-                "rec_class": "Person", 
-                "rec_metajson": 1
+                "rec_class": "Person"
               }, 
               "role": "edt"
             }, 
@@ -187,14 +176,12 @@
               "agent": {
                 "name_family": "Brenner", 
                 "name_given": "B.M.", 
-                "rec_class": "Person", 
-                "rec_metajson": 1
+                "rec_class": "Person"
               }, 
               "role": "edt"
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Book", 
           "title": "Hypertension: Pathophysiology, Diagnosis, and Management"
         }
@@ -247,10 +234,9 @@
         "Raven Press, Ltd."
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.538236", 
-      "rec_id": "5811ebd1-3a57-11e3-bd1b-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.538242", 
+      "rec_created_date": "2013-11-06T18:31:57.517172", 
+      "rec_id": "560c4d85-4709-11e3-a379-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.517179", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -267,8 +253,7 @@
           "agent": {
             "name_family": "Aberle", 
             "name_given": "N.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -276,8 +261,7 @@
           "agent": {
             "name_family": "Witte", 
             "name_given": "U.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -301,7 +285,6 @@
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Marine Ecology Progress Series", 
           "title_abbreviated": {
@@ -329,17 +312,15 @@
         "Inter-Research"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.539125", 
-      "rec_id": "58120e8c-3a57-11e3-977b-406c8f07170d", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.539131", 
+      "rec_created_date": "2013-11-06T18:31:57.518066", 
+      "rec_id": "560c7066-4709-11e3-baae-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.518072", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "resources": [
         {
           "rec_class": "Resource", 
-          "rec_metajson": 1, 
           "url": "http://www.int-res.com/abstracts/meps/v251/p37-47ID  - Aberle+Witte2003"
         }
       ], 
@@ -356,8 +337,7 @@
           "agent": {
             "name_family": "Arntz", 
             "name_given": "WE", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -365,8 +345,7 @@
           "agent": {
             "name_family": "Gutt", 
             "name_given": "J.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -374,8 +353,7 @@
           "agent": {
             "name_family": "Klages", 
             "name_given": "M.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -397,8 +375,7 @@
               "agent": {
                 "name_family": "Battaglia", 
                 "name_given": "B.", 
-                "rec_class": "Person", 
-                "rec_metajson": 1
+                "rec_class": "Person"
               }, 
               "role": "edt"
             }, 
@@ -406,8 +383,7 @@
               "agent": {
                 "name_family": "Valencia", 
                 "name_given": "J.", 
-                "rec_class": "Person", 
-                "rec_metajson": 1
+                "rec_class": "Person"
               }, 
               "role": "edt"
             }, 
@@ -415,8 +391,7 @@
               "agent": {
                 "name_family": "Walton", 
                 "name_given": "DWH", 
-                "rec_class": "Person", 
-                "rec_metajson": 1
+                "rec_class": "Person"
               }, 
               "role": "edt"
             }
@@ -428,7 +403,6 @@
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Book", 
           "title": "Antarctic Communities: Species, Structure and Survival"
         }
@@ -451,10 +425,9 @@
         "Cambridge University Press (UK)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.540673", 
+      "rec_created_date": "2013-11-06T18:31:57.519586", 
       "rec_id": "Arntz++1997", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.540679", 
+      "rec_modified_date": "2013-11-06T18:31:57.519593", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -471,8 +444,7 @@
           "agent": {
             "name_family": "Arrigo", 
             "name_given": "KR", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -488,8 +460,7 @@
               "agent": {
                 "name_family": "Thomas", 
                 "name_given": "DN", 
-                "rec_class": "Person", 
-                "rec_metajson": 1
+                "rec_class": "Person"
               }, 
               "role": "edt"
             }, 
@@ -497,8 +468,7 @@
               "agent": {
                 "name_family": "Dieckmann", 
                 "name_given": "GS", 
-                "rec_class": "Person", 
-                "rec_metajson": 1
+                "rec_class": "Person"
               }, 
               "role": "edt"
             }
@@ -510,7 +480,6 @@
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Book", 
           "title": "Sea ice - an introduction to its physics, chemistry, biology and geology"
         }
@@ -524,10 +493,9 @@
         "Blackwell Science Ltd"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.541693", 
+      "rec_created_date": "2013-11-06T18:31:57.520594", 
       "rec_id": "Arrigo2003", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.541698", 
+      "rec_modified_date": "2013-11-06T18:31:57.520600", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -544,8 +512,7 @@
           "agent": {
             "name_family": "Auel", 
             "name_given": "H.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -553,8 +520,7 @@
           "agent": {
             "name_family": "Klages", 
             "name_given": "M.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -562,8 +528,7 @@
           "agent": {
             "name_family": "Werner", 
             "name_given": "I.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -587,7 +552,6 @@
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Marine Biology", 
           "title_abbreviated": {
@@ -606,17 +570,15 @@
         "Springer-Verlag"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.542674", 
+      "rec_created_date": "2013-11-06T18:31:57.521561", 
       "rec_id": "Auel++2003", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.542679", 
+      "rec_modified_date": "2013-11-06T18:31:57.521566", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "resources": [
         {
           "rec_class": "Resource", 
-          "rec_metajson": 1, 
           "url": "http://www.springerlink.com/openurl.asp?genre=article&issn=0025-3162&volume=143&issue=2&spage=275"
         }
       ], 
@@ -633,8 +595,7 @@
           "agent": {
             "name_family": "Benthien", 
             "name_given": "A.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -646,7 +607,6 @@
       "is_part_ofs": [
         {
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Journal"
         }
       ], 
@@ -663,10 +623,9 @@
         "Universität Kiel"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.543308", 
+      "rec_created_date": "2013-11-06T18:31:57.522185", 
       "rec_id": "Benthien1994", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.543313", 
+      "rec_modified_date": "2013-11-06T18:31:57.522190", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -683,8 +642,7 @@
           "agent": {
             "name_family": "Bochert", 
             "name_given": "A.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -702,7 +660,6 @@
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Berichte zur Polarforschung", 
           "title_abbreviated": {
@@ -724,10 +681,9 @@
         "Alfred-Wegener Institut für Meeres- und Polarforschung"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.543857", 
+      "rec_created_date": "2013-11-06T18:31:57.522727", 
       "rec_id": "Bochert1996", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.543862", 
+      "rec_modified_date": "2013-11-06T18:31:57.522733", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -744,8 +700,7 @@
           "agent": {
             "name_family": "Haas", 
             "name_given": "C.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -763,7 +718,6 @@
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Berichte zur Polarforschung", 
           "title_abbreviated": {
@@ -785,10 +739,9 @@
         "Alfred-Wegener Institut für Meeres- und Polarforschung"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.544392", 
+      "rec_created_date": "2013-11-06T18:31:57.523256", 
       "rec_id": "Haas1997", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.544397", 
+      "rec_modified_date": "2013-11-06T18:31:57.523261", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -805,8 +758,7 @@
           "agent": {
             "name_family": "Krell", 
             "name_given": "A.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -814,8 +766,7 @@
           "agent": {
             "name_family": "Ummenhofer", 
             "name_given": "C.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -823,8 +774,7 @@
           "agent": {
             "name_family": "Kattner", 
             "name_given": "G.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -832,8 +782,7 @@
           "agent": {
             "name_family": "Naumov", 
             "name_given": "A.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -841,8 +790,7 @@
           "agent": {
             "name_family": "Evans", 
             "name_given": "D.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -850,8 +798,7 @@
           "agent": {
             "name_family": "Dieckmann", 
             "name_given": "GS", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -859,8 +806,7 @@
           "agent": {
             "name_family": "Thomas", 
             "name_given": "DN", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -884,7 +830,6 @@
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Polar Biology", 
           "title_abbreviated": {
@@ -903,17 +848,15 @@
         "Springer-Verlag"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.546050", 
+      "rec_created_date": "2013-11-06T18:31:57.524844", 
       "rec_id": "Krell++2003", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.546056", 
+      "rec_modified_date": "2013-11-06T18:31:57.524850", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "resources": [
         {
           "rec_class": "Resource", 
-          "rec_metajson": 1, 
           "url": "http://www.springerlink.com/openurl.asp?genre=article&issn=0722-4060&volume=26&issue=11&spage=707"
         }
       ], 
@@ -930,8 +873,7 @@
           "agent": {
             "name_family": "McMinn", 
             "name_given": "A.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -939,8 +881,7 @@
           "agent": {
             "name_family": "Heijnis", 
             "name_given": "H.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -948,8 +889,7 @@
           "agent": {
             "name_family": "Hodgson", 
             "name_given": "D.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -971,8 +911,7 @@
               "agent": {
                 "name_family": "Battaglia", 
                 "name_given": "B.", 
-                "rec_class": "Person", 
-                "rec_metajson": 1
+                "rec_class": "Person"
               }, 
               "role": "edt"
             }, 
@@ -980,8 +919,7 @@
               "agent": {
                 "name_family": "Valencia", 
                 "name_given": "J.", 
-                "rec_class": "Person", 
-                "rec_metajson": 1
+                "rec_class": "Person"
               }, 
               "role": "edt"
             }, 
@@ -989,8 +927,7 @@
               "agent": {
                 "name_family": "Walton", 
                 "name_given": "DWH", 
-                "rec_class": "Person", 
-                "rec_metajson": 1
+                "rec_class": "Person"
               }, 
               "role": "edt"
             }
@@ -1002,7 +939,6 @@
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Book", 
           "title": "Antarctic Communities: Species, Structure and Survival"
         }
@@ -1024,10 +960,9 @@
         "Cambridge University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.547667", 
+      "rec_created_date": "2013-11-06T18:31:57.526424", 
       "rec_id": "McMinn++1997", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.547673", 
+      "rec_modified_date": "2013-11-06T18:31:57.526430", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -1044,8 +979,7 @@
           "agent": {
             "name_family": "Medlin", 
             "name_given": "LK", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "edt"
         }, 
@@ -1053,8 +987,7 @@
           "agent": {
             "name_family": "Priddle", 
             "name_given": "J.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "edt"
         }
@@ -1082,10 +1015,9 @@
         "British Antarctic Survey"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.548475", 
+      "rec_created_date": "2013-11-06T18:31:57.527224", 
       "rec_id": "Medlin+Priddle1990", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.548481", 
+      "rec_modified_date": "2013-11-06T18:31:57.527230", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -1102,8 +1034,7 @@
           "agent": {
             "name_family": "Mock", 
             "name_given": "T.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -1111,8 +1042,7 @@
           "agent": {
             "name_family": "Kruse", 
             "name_given": "M.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -1120,8 +1050,7 @@
           "agent": {
             "name_family": "Dieckmann", 
             "name_given": "GS", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -1145,7 +1074,6 @@
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Aquatic Microbial Ecology", 
           "title_abbreviated": {
@@ -1195,17 +1123,15 @@
         "Inter-Research"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.549485", 
+      "rec_created_date": "2013-11-06T18:31:57.528227", 
       "rec_id": "Mock++2003", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.549491", 
+      "rec_modified_date": "2013-11-06T18:31:57.528234", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "resources": [
         {
           "rec_class": "Resource", 
-          "rec_metajson": 1, 
           "url": "http://int-res.com/abstracts/ame/v30/n2/p197-205.html"
         }
       ], 
@@ -1222,8 +1148,7 @@
           "agent": {
             "name_family": "Schewe", 
             "name_given": "I.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -1231,8 +1156,7 @@
           "agent": {
             "name_family": "Soltwedel", 
             "name_given": "T.", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -1256,7 +1180,6 @@
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Polar Biology", 
           "title_abbreviated": {
@@ -1275,17 +1198,15 @@
         "Springer-Verlag"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.550315", 
+      "rec_created_date": "2013-11-06T18:31:57.529059", 
       "rec_id": "Schewe+Soltwedel2003", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.550320", 
+      "rec_modified_date": "2013-11-06T18:31:57.529065", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "resources": [
         {
           "rec_class": "Resource", 
-          "rec_metajson": 1, 
           "url": "http://www.springerlink.com/openurl.asp?genre=article&issn=0722-4060&volume=26&issue=9&spage=610"
         }
       ], 
@@ -1302,8 +1223,7 @@
           "agent": {
             "name_family": "Thomas", 
             "name_given": "DN", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "edt"
         }, 
@@ -1311,8 +1231,7 @@
           "agent": {
             "name_family": "Dieckmann", 
             "name_given": "GS", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "edt"
         }
@@ -1346,17 +1265,15 @@
         "Blackwell Science Ltd"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.551112", 
+      "rec_created_date": "2013-11-06T18:31:57.529843", 
       "rec_id": "Thomas+Dieckmann2003", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.551117", 
+      "rec_modified_date": "2013-11-06T18:31:57.529849", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "resources": [
         {
           "rec_class": "Resource", 
-          "rec_metajson": 1, 
           "url": "http://www.blackwellpublishing.com/book.asp?ref=0632058080&site=1"
         }
       ], 
@@ -1373,8 +1290,7 @@
           "agent": {
             "name_family": "Zhukov", 
             "name_given": "YuN", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }, 
@@ -1382,8 +1298,7 @@
           "agent": {
             "name_family": "Fedorov", 
             "name_given": "VD", 
-            "rec_class": "Person", 
-            "rec_metajson": 1
+            "rec_class": "Person"
           }, 
           "role": "aut"
         }
@@ -1407,7 +1322,6 @@
             }
           ], 
           "rec_class": "Document", 
-          "rec_metajson": 1, 
           "rec_type": "Journal", 
           "title": "Vestnik Moskovskogo universiteta", 
           "title_abbreviated": {
@@ -1439,10 +1353,9 @@
       "part_page_begin": "24", 
       "part_page_end": "31", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-21T15:47:36.551904", 
+      "rec_created_date": "2013-11-06T18:31:57.530627", 
       "rec_id": "Zhukov+Fedorov2003", 
-      "rec_metajson": 1, 
-      "rec_modified_date": "2013-10-21T15:47:36.551910", 
+      "rec_modified_date": "2013-11-06T18:31:57.530633", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 

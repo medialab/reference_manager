@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modsCollection xmlns="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd">
+    <mods version="3.3">
+        <titleInfo>
+            <title>FranUlmer.com -- Home Page</title>
+        </titleInfo>
+        <titleInfo type="alternative">
+            <title>Fran Ulmer, Democratic candidate for Governor, Alaska, 2002</title>
+        </titleInfo>
+        <name type="personal">
+            <namePart>Ulmer, Fran</namePart>
+        </name>
+        <genre>Website</genre>
+        <originInfo>
+            <dateCaptured encoding="iso8601" point="start">20020702 </dateCaptured>
+            <dateCaptured encoding="iso8601" point="end">20021203</dateCaptured>
+        </originInfo>
+        <language>
+            <languageTerm authority="iso639-2b">eng</languageTerm>
+        </language>
+        <physicalDescription>
+            <internetMediaType>text/html</internetMediaType>
+            <internetMediaType>image/jpg</internetMediaType>
+        </physicalDescription>
+        <abstract>Website promoting the candidacy of Fran Ulmer, Democratic candidate for Governor, Alaska, 2002. Includes candidate biography, issue position statements, campaign contact information, privacy policy and campaign news press releases. Site features enable visitors to sign up for campaign email list, volunteer, make campaign contributions and follow links to other internet locations. </abstract>
+        <subject>
+            <topic>Elections</topic>
+            <geographic>Alaska</geographic>
+        </subject>
+        <subject>
+            <topic>Governors</topic>
+            <geographic>Alaska</geographic>
+            <topic>Election</topic>
+        </subject>
+        <subject>
+            <topic>Democratic Party (AK)</topic>
+        </subject>
+        <relatedItem type="host">
+            <titleInfo>
+                <title>Election 2002 Web Archive</title>
+            </titleInfo>
+            <location>
+                <url>http://www.loc.gov/minerva/collect/elec2002/</url>
+            </location>
+        </relatedItem>
+        <location>
+            <url displayLabel="Active site (if available)">http://www.franulmer.com/</url>
+        </location>
+        <location>
+            <url displayLabel="Archived site">http://wayback-cgi1.alexa.com/e2002/*/http://www.franulmer.com/</url>
+        </location>
+    </mods>
+    <mods version="3.3">
+        <titleInfo>
+            <title>At Gettysburg, or, What a Girl Saw and Heard of the Battle: A True Narrative</title>
+        </titleInfo>
+        <name type="personal">
+            <namePart>Alleman, Tillie Pierce [1848-1914]</namePart>
+            <role>
+                <roleTerm authority="marcrelator" type="code">aut</roleTerm>
+                <roleTerm authority="marcrelator" type="text">Author</roleTerm>
+            </role>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <originInfo>
+            <place>
+                <placeTerm type="text">New York</placeTerm>
+            </place>
+            <publisher>W. Lake Borland</publisher>
+            <dateIssued encoding="w3cdtf" keyDate="yes">1889</dateIssued>
+        </originInfo>
+        <language>
+            <languageTerm authority="iso639-2b">eng</languageTerm>
+            <languageTerm type="text">English</languageTerm>
+        </language>
+        <physicalDescription>
+            <internetMediaType>text/html</internetMediaType>
+            <digitalOrigin>reformatted digital</digitalOrigin>
+        </physicalDescription>
+        <subject authority="lcsh">
+            <topic>Gettysburg, Battle of, Gettysburg, Pa., 1863</topic>
+        </subject>
+        <subject authority="lcsh">
+            <topic>Gettysburg (Pa.) -- History -- Civil War, 1861-1865</topic>
+        </subject>
+        <subject authority="lcsh">
+            <topic>United States -- History -- Civil War, 1861-1865 -- Campaigns</topic>
+        </subject>
+        <classification authority="lcc">E475.53 .A42</classification>
+        <relatedItem type="host">
+            <titleInfo authority="dlfaqcoll" type="uniform">
+                <title>A Celebration of Women Writers: Americana</title>
+            </titleInfo>
+        </relatedItem>
+        <location>
+            <url access="object in context" usage="primary display">http://digital.library.upenn.edu/women/alleman/gettysburg/gettysburg.html</url>
+        </location>
+        <accessCondition>Personal, noncommercial use of this item is permitted in the United States of America. Please see http://digital.library.upenn.edu/women/ for other rights and restrictions that may apply to this resource.</accessCondition>
+        <recordInfo>
+            <recordContentSource>University of Pennsylvania Digital Library</recordContentSource>
+            <recordOrigin>MODS auto-converted from a simple Online Books Page metadata record. For details, see http://onlinebooks.library.upenn.edu/mods.html</recordOrigin>
+            <languageOfCataloging>
+                <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+            </languageOfCataloging>
+        </recordInfo>
+    </mods>
+    <mods version="3.3">
+        <titleInfo>
+            <title>Telescope Peak from Zabriskie Point</title>
+        </titleInfo>
+        <titleInfo type="alternative">
+            <title>Telescope PK from Zabriskie Pt.</title>
+        </titleInfo>
+        <name type="personal">
+            <namePart type="family">Cushman</namePart>
+            <namePart type="given">Charles Weever</namePart>
+            <namePart type="date">1896-1972</namePart>
+            <role>
+                <roleTerm authority="marcrelator" type="code">pht</roleTerm>
+                <roleTerm authority="marcrelator" type="text">Photographer</roleTerm>
+            </role>
+        </name>
+        <typeOfResource>still image</typeOfResource>
+        <genre authority="gmgpc">Landscape photographs</genre>
+        <originInfo>
+            <dateCreated encoding="w3cdtf" keyDate="yes">1955-03-22</dateCreated>
+            <copyrightDate encoding="w3cdtf">2003</copyrightDate>
+        </originInfo>
+        <physicalDescription>
+            <internetMediaType>image/jpeg</internetMediaType>
+            <digitalOrigin>reformatted digital</digitalOrigin>
+            <note>Original 35mm slide was digitized in 2003 as a TIFF image. Display versions in JPEG format in three sizes are available.</note>
+            <note>100 f 6.3 tl</note>
+        </physicalDescription>
+        <subject authority="lctgm">
+            <topic>Mountains</topic>
+        </subject>
+        <subject authority="lctgm">
+            <topic>Snow</topic>
+        </subject>
+        <subject>
+            <topic>Telescope Peak (Inyo County, Calif.)</topic>
+        </subject>
+        <subject>
+            <topic>Zabriskie Point (Calif.)</topic>
+        </subject>
+        <subject>
+            <hierarchicalGeographic>
+                <country>United States</country>
+                <state>California</state>
+                <county>Inyo</county>
+            </hierarchicalGeographic>
+        </subject>
+        <relatedItem type="original">
+            <originInfo>
+                <dateCreated encoding="w3cdtf" keyDate="yes">1955-03-22</dateCreated>
+            </originInfo>
+            <physicalDescription>
+                <form authority="gmd">graphic</form>
+                <extent>1 slide : col. ; 35mm</extent>
+                <note>Original 35mm slide was digitized in 2003 as a TIFF image. Display versions in JPEG format in three sizes are available.</note>
+            </physicalDescription>
+            <location>
+                <physicalLocation displayLabel="Original slide">Indiana University, Bloomington. University Archives P07803</physicalLocation>
+            </location>
+        </relatedItem>
+        <relatedItem type="host">
+            <titleInfo authority="dlfaqcoll" type="uniform">
+                <title>Indiana University Digital Library Program: Charles W. Cushman Photograph Collection</title>
+            </titleInfo>
+        </relatedItem>
+        <identifier displayLabel="Cushman number" type="local">955.11</identifier>
+        <identifier displayLabel="IU Archives number" type="local">P07803</identifier>
+        <location>
+            <url>http://purl.dlib.indiana.edu/iudl/archives/cushman/P07803</url>
+            <url access="preview">http://quod.lib.umich.edu/m/mods/thumbs/Indiana/oai.dlib.indiana.edu/ archives/cushman/oai_3Aoai.dlib.indiana.edu_3Aarchives_5Ccushman_5CP07803.png</url>
+        </location>
+        <accessCondition>Copyright and reproduction rights for all Charles W. Cushman photographs are held by Indiana University and administered by the University Archives, Indiana University, Bloomington, IN 47405</accessCondition>
+        <recordInfo>
+            <recordContentSource>Indiana University Digital Library Program</recordContentSource>
+            <recordCreationDate encoding="w3cdtf">2004-09-09</recordCreationDate>
+            <recordIdentifier>archives/cushman/P07803</recordIdentifier>
+        </recordInfo>
+    </mods>
+    <mods version="3.3">
+        <titleInfo>
+            <title>Hiring and recruitment practices in academic libraries</title>
+        </titleInfo>
+        <name type="personal">
+            <namePart>Raschke, Gregory K.</namePart>
+            <displayForm>Gregory K. Raschke</displayForm>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <genre>journal article</genre>
+        <originInfo>
+            <place>
+                <placeTerm>Baltimore, Md.</placeTerm>
+            </place>
+            <publisher>Johns Hopkins University Press</publisher>
+            <dateIssued>2003</dateIssued>
+            <issuance>monographic</issuance>
+        </originInfo>
+        <language>
+            <languageTerm authority="iso639-2b">eng</languageTerm>
+        </language>
+        <physicalDescription>
+            <form authority="marcform">print</form>
+            <extent>15 p.</extent>
+        </physicalDescription>
+        <abstract>Academic libraries need to change their recruiting and hiring procedures to stay competitive in today's changing marketplace. By taking too long to find and to hire talented professionals in a tight labor market, academic libraries are losing out on top candidates and limiting their ability to become innovative and dynamic organizations. Traditional, deliberate, and risk-averse hiring models lead to positions remaining open for long periods, opportunities lost as top prospects find other positions, and a reduction in the overall talent level of the organization. To be more competitive and effective in their recruitment and hiring processes, academic libraries must foster manageable internal solutions, look to other professions for effective hiring techniques and models, and employ innovative concepts from modern personnel management literature. </abstract>
+        <subject>
+            <topic>College librarians</topic>
+            <topic>Recruiting</topic>
+            <geographic>United States</geographic>
+        </subject>
+        <subject>
+            <topic>College librarians</topic>
+            <topic>Selection and appointment</topic>
+            <geographic>United States</geographic>
+        </subject>
+        <relatedItem type="host">
+            <titleInfo>
+                <title>portal: libraries and the academy</title>
+            </titleInfo>
+            <part>
+                <detail type="volume">
+                    <number>3</number>
+                    <caption>vol.</caption>
+                </detail>
+                <detail type="number">
+                    <number>1</number>
+                    <caption>no.</caption>
+                </detail>
+                <extent unit="page">
+                    <start>53</start>
+                    <end>57</end>
+                </extent>
+                <date>Jan. 2003</date>
+            </part>
+            <identifier type="issn">1531-2542</identifier>
+        </relatedItem>
+    </mods>
+    <mods version="3.5" xmlns="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+        <titleInfo>
+            <title>Sound and fury</title>
+            <subTitle>the making of the punditocracy</subTitle>
+        </titleInfo>
+        <name authorityURI="http://id.loc.gov/authorities/names" type="personal" valueURI="http://id.loc.gov/authorities/names/n92101908">
+            <namePart>Alterman, Eric</namePart>
+            <role>
+                <roleTerm type="text">creator</roleTerm>
+            </role>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <genre authority="marcgt">bibliography</genre>
+        <originInfo eventType="publication">
+            <place>
+                <placeTerm authority="marccountry" authorityURI="http://id.loc.gov/vocabulary/countries" type="code" valueURI="http://id.loc.gov/vocabulary/countries/nyu">nyu</placeTerm>
+            </place>
+            <place>
+                <placeTerm type="text">Ithaca, N.Y</placeTerm>
+            </place>
+            <publisher>Cornell University Press</publisher>
+            <dateIssued>c1999</dateIssued>
+            <dateIssued encoding="marc">1999</dateIssued>
+            <issuance>monographic</issuance>
+        </originInfo>
+        <language>
+            <languageTerm authority="iso639-2b" authorityURI="http://id.loc.gov/vocabulary/iso639-2" type="code" valueURI="http://id.loc.gov/vocabulary/iso639-2/eng">eng</languageTerm>
+        </language>
+        <physicalDescription>
+            <form authority="marcform">print</form>
+            <extent>vii, 322 p. ; 23 cm.</extent>
+        </physicalDescription>
+        <note type="statement of responsibility">Eric Alterman.</note>
+        <note>Includes bibliographical references (p. 291-312) and index.</note>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects">
+            <topic valueURI="http://id.loc.gov/authorities/subjects/sh85070736">Journalism</topic>
+            <topic valueURI="http://id.loc.gov/authorities/subjects/sh00005651">Political aspects</topic>
+            <geographic valueURI="http://id.loc.gov/authorities/names/n78095330">United States</geographic>
+        </subject>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects">
+            <geographic valueURI="http://id.loc.gov/authorities/names/n78095330">United States</geographic>
+            <topic valueURI="http://id.loc.gov/authorities/subjects/sh2002011436">Politics and
+      government</topic>
+            <temporal valueURI="http://id.loc.gov/authorities/subjects/sh2002012476">20th century</temporal>
+        </subject>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects" valueURI="http://id.loc.gov/authorities/subjects/sh2008107507">
+            <topic valueURI="http://id.loc.gov/authorities/subjects/sh85081863">Mass media</topic>
+            <topic valueURI="http://id.loc.gov/authorities/subjects/sh00005651">Political aspects</topic>
+            <geographic valueURI="http://id.loc.gov/authorities/names/n78095330">United States</geographic>
+        </subject>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects" valueURI="http://id.loc.gov/authorities/subjects/sh2010115992">
+            <topic valueURI="http://id.loc.gov/authorities/subjects/sh85133490">Television and
+      politics</topic>
+            <geographic valueURI="http://id.loc.gov/authorities/names/n78095330">United States</geographic>
+        </subject>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects" valueURI="http://id.loc.gov/authorities/subjects/sh2008109555">
+            <topic valueURI="http://id.loc.gov/authorities/subjects/sh85106514">Press and politics</topic>
+            <geographic valueURI="http://id.loc.gov/authorities/names/n78095330">United States</geographic>
+        </subject>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects" valueURI="http://id.loc.gov/authorities/subjects/sh2010115993.html">
+            <topic valueURI="http://id.loc.gov/authorities/subjects/sh2006004518.html">Television talk shows</topic>
+            <geographic valueURI="http://id.loc.gov/authorities/names/n78095330">United States</geographic>
+        </subject>
+        <classification authority="lcc">PN4888.P6 A48 1999</classification>
+        <classification authority="ddc" edition="21">071/.3</classification>
+        <identifier type="isbn">0801486394 (pbk. : acid-free, recycled paper)</identifier>
+        <identifier type="lccn">99042030</identifier>
+        <recordInfo>
+            <descriptionStandard>aacr</descriptionStandard>
+            <recordContentSource>DLC</recordContentSource>
+            <recordCreationDate encoding="marc">990730</recordCreationDate>
+            <recordChangeDate encoding="iso8601">20000406144503.0</recordChangeDate>
+            <recordIdentifier>11761548</recordIdentifier>
+            <recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl (Revision
+      1.74), valueURIs and authorityURIs added by hand 20120123</recordOrigin>
+        </recordInfo>
+    </mods>
+    <mods version="3.5" xmlns="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-5.xsd">
+        <titleInfo>
+            <title>Models, Fantasies and Phantoms of Transition</title>
+        </titleInfo>
+        <name type="personal">
+            <namePart type="given">Ash</namePart>
+            <namePart type="family">Amin</namePart>
+            <role>
+                <roleTerm type="text">author</roleTerm>
+            </role>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <relatedItem type="host">
+            <titleInfo>
+                <title>Post-Fordism</title>
+                <subTitle>A Reader</subTitle>
+            </titleInfo>
+            <name type="personal">
+                <namePart type="given">Ash</namePart>
+                <namePart type="family">Amin</namePart>
+                <role>
+                    <roleTerm type="text">editor</roleTerm>
+                </role>
+            </name>
+            <originInfo eventType="publication">
+                <dateIssued>1994</dateIssued>
+                <publisher>Blackwell Publishers</publisher>
+                <place>
+                    <placeTerm type="text">Oxford</placeTerm>
+                </place>
+            </originInfo>
+            <part>
+                <extent unit="page">
+                    <start>23</start>
+                    <end>45</end>
+                </extent>
+            </part>
+        </relatedItem>
+        <identifier>Amin1994a</identifier>
+    </mods>
+    <mods version="3.4" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+        <titleInfo>
+            <title>Directory of computer assisted research in musicology</title>
+        </titleInfo>
+        <titleInfo type="alternative">
+            <title>Computer assisted research in musicology</title>
+        </titleInfo>
+        <name type="corporate">
+            <namePart>Center for Computer Assisted Research in the Humanities</namePart>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <genre authority="marcgt">directory</genre>
+        <originInfo>
+            <place>
+                <placeTerm authority="marccountry" type="code">cau</placeTerm>
+            </place>
+            <place>
+                <placeTerm type="text">Menlo Park, CA</placeTerm>
+            </place>
+            <publisher>Center for Computer Assisted Research in the Humanities</publisher>
+            <dateIssued>-1988</dateIssued>
+            <dateIssued encoding="marc" point="start">1985</dateIssued>
+            <dateIssued encoding="marc" point="end">1988</dateIssued>
+            <issuance>serial</issuance>
+            <frequency authority="marcfrequency">Annual</frequency>
+        </originInfo>
+        <frequency>Annual</frequency>
+        <language>
+            <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+        </language>
+        <physicalDescription>
+            <form authority="marcform">print</form>
+            <extent>4 v. : ill., music ; 26 cm.</extent>
+        </physicalDescription>
+        <note altRepGroup="00" type="statement of responsibility"/>
+        <note type="date/sequential designation">Began in 1985.</note>
+        <note type="date/sequential designation">-1988.</note>
+        <subject authority="lcsh">
+            <topic>Musicology</topic>
+            <topic>Data processing</topic>
+            <genre>Periodicals</genre>
+        </subject>
+        <subject authority="lcsh">
+            <topic>Music</topic>
+            <genre>Bibliography</genre>
+            <genre>Periodicals</genre>
+        </subject>
+        <subject authority="lcsh">
+            <topic>Musicians</topic>
+            <genre>Directories</genre>
+        </subject>
+        <subject authority="lcsh">
+            <topic>Musicologists</topic>
+            <genre>Directories</genre>
+        </subject>
+        <subject authority="lcsh">
+            <topic>Musicology</topic>
+            <topic>Data processing</topic>
+            <genre>Directories</genre>
+        </subject>
+        <subject authority="rvm">
+            <topic>Musicologie</topic>
+            <topic>Informatique</topic>
+            <genre>Périodiques</genre>
+        </subject>
+        <subject authority="rvm">
+            <topic>Musique</topic>
+            <genre>Bibliographie</genre>
+            <genre>Périodiques</genre>
+        </subject>
+        <subject authority="rvm">
+            <topic>Musiciens</topic>
+            <genre>Répertoires</genre>
+        </subject>
+        <subject authority="rvm">
+            <topic>Musicologues</topic>
+            <genre>Répertoires</genre>
+        </subject>
+        <subject authority="rvm">
+            <topic>Musicologie</topic>
+            <topic>Informatique</topic>
+            <genre>Répertoires</genre>
+        </subject>
+        <subject authority="swd">
+            <topic>Datenverarbeitung</topic>
+        </subject>
+        <subject authority="swd">
+            <topic>Musikwissenschaft</topic>
+        </subject>
+        <classification authority="lcc">ML73 .D57</classification>
+        <classification authority="ddc" edition="19">780/.01/02584</classification>
+        <relatedItem displayLabel="Online version:" type="otherFormat">
+            <titleInfo>
+                <title>Directory of computer assisted research in musicology</title>
+            </titleInfo>
+            <identifier type="local">(OCoLC)633494839</identifier>
+        </relatedItem>
+        <relatedItem type="succeeding">
+            <titleInfo>
+                <title>Computing in musicology</title>
+            </titleInfo>
+            <identifier type="issn">1057-9478</identifier>
+            <identifier type="local">(DLC)   91656596</identifier>
+            <identifier type="local">(OCoLC)21202412</identifier>
+        </relatedItem>
+        <identifier type="lccn">86646620</identifier>
+        <identifier type="oclc">ocm14913926</identifier>
+        <recordInfo>
+            <descriptionStandard>aacr</descriptionStandard>
+            <recordContentSource authority="marcorg">DLC</recordContentSource>
+            <recordCreationDate encoding="marc">861202</recordCreationDate>
+            <recordChangeDate encoding="iso8601">20130105160019.0</recordChangeDate>
+            <recordIdentifier>11315879</recordIdentifier>
+            <recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
+                (Revision 1.85 2013/03/07)</recordOrigin>
+            <languageOfCataloging>
+                <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+            </languageOfCataloging>
+        </recordInfo>
+    </mods>
+    <mods version="3.4" xmlns="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+        <titleInfo>
+            <nonSort>The</nonSort>
+            <title>Urban Question as a Scale Question</title>
+            <subTitle>Reflections on Henri Lefebre, Urban Theory and the Politics of Scale</subTitle>
+        </titleInfo>
+        <name type="personal">
+            <namePart type="given">Neil</namePart>
+            <namePart type="family">Brenner</namePart>
+            <role>
+                <roleTerm type="text">author</roleTerm>
+            </role>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <genre>article</genre>
+        <originInfo>
+            <issuance>monographic</issuance>
+        </originInfo>
+        <relatedItem type="host">
+            <titleInfo>
+                <title>International Journal of Urban and Regional Research</title>
+            </titleInfo>
+            <originInfo>
+                <issuance>continuing</issuance>
+            </originInfo>
+            <part>
+                <detail type="volume">
+                    <number>24</number>
+                </detail>
+                <detail type="issue">
+                    <number>2</number>
+                    <caption>no.</caption>
+                </detail>
+                <extent unit="pages">
+                    <start>361</start>
+                    <end>378</end>
+                </extent>
+                <date>2000</date>
+            </part>
+        </relatedItem>
+        <identifier>BrennerN2000a</identifier>
+    </mods>
+    <mods version="3.4" xmlns="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+        <titleInfo>
+            <title>Fifth-Grade Boys' Decisions about Participation in Sports Activities</title>
+        </titleInfo>
+        <name type="personal">
+            <namePart type="family">Conley</namePart>
+            <namePart type="given">Alice</namePart>
+            <role>
+                <roleTerm type="text">author</roleTerm>
+            </role>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <relatedItem type="host">
+            <titleInfo>
+                <title>Non-subject-matter Outcomes of Schooling</title>
+            </titleInfo>
+            <name>
+                <namePart>Good, Thomas L.</namePart>
+                <role>
+                    <roleTerm>editor</roleTerm>
+                </role>
+            </name>
+            <note type="statement of responsibility">ed.  Thomas L. Good</note>
+            <originInfo>
+                <issuance>continuing</issuance>
+            </originInfo>
+            <part>
+                <detail type="title">
+                    <title>Special issue, Elementary School Journal</title>
+                </detail>
+                <detail type="volume">
+                    <number>99</number>
+                </detail>
+                <detail type="issue">
+                    <number>5</number>
+                    <caption>no.</caption>
+                </detail>
+                <extent unit="pages">
+                    <start>131</start>
+                    <end>146</end>
+                </extent>
+                <date>1999</date>
+            </part>
+        </relatedItem>
+    </mods>
+    <mods version="3.4" xmlns="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+        <titleInfo>
+            <title>2700 MHz observations of 4c radio sources in the declination zone +4 to -4</title>
+        </titleInfo>
+        <name type="personal">
+            <namePart type="family">Wall</namePart>
+            <namePart type="given">J. V.</namePart>
+            <role>
+                <roleTerm type="text">author</roleTerm>
+            </role>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <relatedItem type="host">
+            <titleInfo>
+                <title>Australian Journal of Physics and Astronphysics</title>
+            </titleInfo>
+            <titleInfo type="abbreviated">
+                <title>Australian J. Phys. Astronphys.</title>
+            </titleInfo>
+            <originInfo>
+                <issuance>continuing</issuance>
+            </originInfo>
+            <genre>academic journal</genre>
+            <part>
+                <detail type="supplement">
+                    <caption>Suppl. no.</caption>
+                    <number>20</number>
+                </detail>
+                <date>1971</date>
+            </part>
+        </relatedItem>
+    </mods>
+    <mods version="3.0" xmlns="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-0.xsd">
+        <titleInfo>
+            <title>Emergence and Dissolvence in the Self-Organization of Complex Systems</title>
+        </titleInfo>
+        <name type="personal">
+            <namePart type="family">Testa</namePart>
+            <namePart type="given">Bernard</namePart>
+            <role>
+                <roleTerm>author</roleTerm>
+            </role>
+        </name>
+        <name type="personal">
+            <namePart type="family">Kier</namePart>
+            <namePart type="given">Lamont B.</namePart>
+            <role>
+                <roleTerm>author</roleTerm>
+            </role>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <identifier type="uri">http://www.mdpi.org/entropy/papers/e2010001.pdf</identifier>
+        <relatedItem type="host">
+            <titleInfo>
+                <title>Entropy</title>
+            </titleInfo>
+            <originInfo>
+                <issuance>continuing</issuance>
+            </originInfo>
+            <part>
+                <detail type="volume">
+                    <number>2</number>
+                </detail>
+                <detail type="issue">
+                    <caption>no.</caption>
+                    <number>1</number>
+                </detail>
+                <extent unit="pages">
+                    <start>17</start>
+                    <end>17</end>
+                </extent>
+                <date>2000</date>
+            </part>
+        </relatedItem>
+    </mods>
+    <mods version="3.4" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+        <titleInfo>
+            <nonSort>The </nonSort>
+            <title>American ballroom companion</title>
+            <subTitle>dance instruction manuals, ca. 1600-1920</subTitle>
+        </titleInfo>
+        <titleInfo type="alternative">
+            <title>Dance instruction manuals, ca. 1600-1920</title>
+        </titleInfo>
+        <name type="corporate">
+            <namePart>Library of Congress</namePart>
+            <namePart>Music Division.</namePart>
+        </name>
+        <name type="corporate">
+            <namePart>Library of Congress</namePart>
+            <namePart>National Digital Library Program.</namePart>
+        </name>
+        <typeOfResource>software, multimedia</typeOfResource>
+        <originInfo>
+            <place>
+                <placeTerm authority="marccountry" type="code">dcu</placeTerm>
+            </place>
+            <place>
+                <placeTerm type="text">Washington, D.C</placeTerm>
+            </place>
+            <publisher>Library of Congress</publisher>
+            <dateIssued>1998-]</dateIssued>
+            <dateIssued encoding="marc" point="start">1998</dateIssued>
+            <dateIssued encoding="marc" point="end">9999</dateIssued>
+            <issuance>monographic</issuance>
+        </originInfo>
+        <language>
+            <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+        </language>
+        <physicalDescription>
+            <form authority="marcform">electronic</form>
+            <form authority="gmd">electronic resource</form>
+            <form>Computer data and programs.</form>
+        </physicalDescription>
+        <abstract>Presents over two hundred social dance manuals, pocket-sized books with diagrams used by itinerant dancing masters to teach the American gentry the latest dance steps. Includes anti-dance manuals as well as treatises on etiquette. Offered as part of the American Memory online resource compiled by the National Digital Library Program of the Library of Congress.</abstract>
+        <note altRepGroup="00" type="statement of responsibility">Music Division, Library of Congress.</note>
+        <note>Title from title screen dated Mar. 23, 1998.</note>
+        <note type="system details">System requirements: World Wide Web (WWW) browser software.</note>
+        <note type="system details">Mode of access: Internet.</note>
+        <subject>
+            <geographicCode authority="marcgac">n-us---</geographicCode>
+        </subject>
+        <subject authority="lcsh">
+            <topic>Ballroom dancing</topic>
+            <geographic>United States</geographic>
+        </subject>
+        <classification authority="lcc">GV1623</classification>
+        <classification authority="ddc" edition="13">793.3</classification>
+        <location>
+            <url displayLabel="electronic resource" usage="primary display">http://hdl.loc.gov/loc.music/collmus.mu000010</url>
+        </location>
+        <identifier type="lccn">98801326</identifier>
+        <identifier type="hdl">hdl:loc.music/collmus.mu000010</identifier>
+        <identifier type="hdl">hdl:loc.music/collmus.mu000010</identifier>
+        <recordInfo>
+            <descriptionStandard>aacr</descriptionStandard>
+            <recordContentSource authority="marcorg">DLC</recordContentSource>
+            <recordCreationDate encoding="marc">980323</recordCreationDate>
+            <recordChangeDate encoding="iso8601">20060131154904.0</recordChangeDate>
+            <recordIdentifier>5004836</recordIdentifier>
+            <recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
+                (Revision 1.85 2013/03/07)</recordOrigin>
+        </recordInfo>
+    </mods>
+    <mods version="3.4" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+        <titleInfo>
+            <title>Papers from the First International Workshop on Plasma-Based Ion Implantation</title>
+            <subTitle>4-6 August 1993, University of Wisconsin--Madison, Madison, Wisconsin</subTitle>
+        </titleInfo>
+        <name type="conference">
+            <namePart>International Workshop on Plasma-Based Ion Implantation 1993 : University of Wisconsin--Madison)</namePart>
+        </name>
+        <name type="personal">
+            <namePart>Conrad, John R.</namePart>
+        </name>
+        <name type="personal">
+            <namePart>Sridharan, Kumar.</namePart>
+        </name>
+        <name type="corporate">
+            <namePart>Applied Science and Technology (ASTeX), Inc</namePart>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <genre authority="marcgt">bibliography</genre>
+        <genre authority="marcgt">conference publication</genre>
+        <originInfo>
+            <place>
+                <placeTerm authority="marccountry" type="code">nyu</placeTerm>
+            </place>
+            <place>
+                <placeTerm type="text">New York</placeTerm>
+            </place>
+            <publisher>Published for the American Vacuum Society by the American Institute of Physics</publisher>
+            <dateIssued>1994</dateIssued>
+            <dateIssued encoding="marc">1994</dateIssued>
+            <issuance>monographic</issuance>
+        </originInfo>
+        <language>
+            <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+        </language>
+        <physicalDescription>
+            <form authority="marcform">print</form>
+            <extent>p. 813-998 : ill. ; 30 cm.</extent>
+        </physicalDescription>
+        <note altRepGroup="00" type="statement of responsibility">sponsored by Applied Science and Technology (ASTeX), Inc. ... [et al.] ; editors for the workshop, John R. Conrad, Kumar Sridharan.</note>
+        <note>&quot;Published in both 1994 March/April issue of the Journal of vacuum science and technology B, vol. 12, no. 2&quot;--T.p. verso.</note>
+        <note type="bibliography">Includes bibliographical references and index.</note>
+        <subject authority="lcsh">
+            <topic>Ion implantation</topic>
+            <topic>Congresses</topic>
+        </subject>
+        <classification authority="lcc">TS695.25 .I57 1993</classification>
+        <classification authority="ddc" edition="21">621.3815/2</classification>
+        <relatedItem type="host">
+            <titleInfo>
+                <title>Journal of vacuum science &amp; technology. B, Microelectronics and nanometer structures processing, measurement and phenomena</title>
+            </titleInfo>
+            <identifier type="issn">1071-1023</identifier>
+            <identifier type="local">(OCoLC)23276603</identifier>
+            <identifier type="local">(DLC)sn 92021098</identifier>
+            <part>
+                <text>2nd ser., v. 12, no. 2</text>
+            </part>
+        </relatedItem>
+        <identifier type="isbn">1563963442</identifier>
+        <identifier type="lccn">97129132</identifier>
+        <identifier type="oclc">35547175</identifier>
+        <recordInfo>
+            <descriptionStandard>aacr</descriptionStandard>
+            <recordContentSource authority="marcorg">DLC</recordContentSource>
+            <recordCreationDate encoding="marc">940504</recordCreationDate>
+            <recordChangeDate encoding="iso8601">19970618142736.9</recordChangeDate>
+            <recordIdentifier>4968605</recordIdentifier>
+            <recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
+                (Revision 1.85 2013/03/07)</recordOrigin>
+        </recordInfo>
+    </mods>
+    <mods version="3.4" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+        <titleInfo>
+            <nonSort>The </nonSort>
+            <title>Cast iron story</title>
+        </titleInfo>
+        <name type="corporate">
+            <namePart>Walter J. Klein Company</namePart>
+        </name>
+        <typeOfResource>moving image</typeOfResource>
+        <genre authority="marcgt">motion picture</genre>
+        <originInfo>
+            <place>
+                <placeTerm authority="marccountry" type="code">ncu</placeTerm>
+            </place>
+            <place>
+                <placeTerm type="text">Charlotte, N.C</placeTerm>
+            </place>
+            <publisher>W.J. Klein Co.</publisher>
+            <dateIssued>1978</dateIssued>
+            <dateIssued encoding="marc">1978</dateIssued>
+            <issuance>monographic</issuance>
+        </originInfo>
+        <language>
+            <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+        </language>
+        <physicalDescription>
+            <form authority="gmd">motion picture</form>
+            <form authority="marccategory">motion picture</form>
+            <form authority="marcsmd">film reel</form>
+            <extent>1 film reel (15 min.) : sd., col. ; 16 mm.</extent>
+        </physicalDescription>
+        <abstract>Shows how cast iron bathtubs are manufactured, illustrating each step from the sculpturing of the wood patterns through the casting and enameling processes.</abstract>
+        <targetAudience authority="marctarget">adult</targetAudience>
+        <note altRepGroup="00" type="statement of responsibility">Walter J. Klein Company.</note>
+        <note>Title from data sheet.</note>
+        <note>Intended audience: Junior high school students through adults.</note>
+        <note>Issued also as super 8 mm. and as videorecording.</note>
+        <subject authority="lcsh">
+            <topic>Bathtubs</topic>
+        </subject>
+        <subject authority="lcsh">
+            <topic>Cast-iron</topic>
+        </subject>
+        <subject authority="lcsh">
+            <topic>Iron-founding</topic>
+        </subject>
+        <subject authority="lcshac">
+            <topic>Bathtubs</topic>
+        </subject>
+        <subject authority="lcshac">
+            <topic>Cast-iron</topic>
+        </subject>
+        <subject authority="lcshac">
+            <topic>Iron founding</topic>
+        </subject>
+        <classification authority="lcc">TH6493</classification>
+        <classification authority="ddc" edition="11">683</classification>
+        <identifier type="lccn">80700998</identifier>
+        <recordInfo>
+            <descriptionStandard>aacr</descriptionStandard>
+            <recordContentSource authority="marcorg">Walter J. Klein Co.</recordContentSource>
+            <recordCreationDate encoding="marc">820106</recordCreationDate>
+            <recordChangeDate encoding="iso8601">19980501135351.7</recordChangeDate>
+            <recordIdentifier>11510774</recordIdentifier>
+            <recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
+                (Revision 1.85 2013/03/07)</recordOrigin>
+        </recordInfo>
+    </mods>
+    <mods version="3.4" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+        <titleInfo>
+            <title>Campbell County, Wyoming</title>
+        </titleInfo>
+        <name type="corporate">
+            <namePart>Campbell County Chamber of Commerce</namePart>
+        </name>
+        <typeOfResource>cartographic</typeOfResource>
+        <genre authority="marcgt">map</genre>
+        <originInfo>
+            <place>
+                <placeTerm authority="marccountry" type="code">wyu</placeTerm>
+            </place>
+            <place>
+                <placeTerm type="text">Gillette, Wyo.]</placeTerm>
+            </place>
+            <publisher>Campbell County Chamber of Commerce</publisher>
+            <dateIssued>[1982?]</dateIssued>
+            <dateIssued encoding="marc">1982</dateIssued>
+            <dateIssued encoding="marc">1982</dateIssued>
+            <issuance>monographic</issuance>
+        </originInfo>
+        <language>
+            <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+        </language>
+        <physicalDescription>
+            <extent>1 map ; 33 x 15 cm.</extent>
+        </physicalDescription>
+        <note altRepGroup="00" type="statement of responsibility">this map reproduced by Campbell County Chamber of Commerce.</note>
+        <note>In lower right corner: Kintzels-Casper.</note>
+        <subject>
+            <cartographics>
+                <scale>Scale [ca. 1:510,000].</scale>
+            </cartographics>
+        </subject>
+        <subject authority="lcsh">
+            <geographic>Campbell County (Wyo.)</geographic>
+            <topic>Maps</topic>
+        </subject>
+        <classification authority="lcc">G4263.C3 1982  .C3</classification>
+        <identifier type="lccn">83691515</identifier>
+        <recordInfo>
+            <descriptionStandard>aacr</descriptionStandard>
+            <recordContentSource authority="marcorg">DLC</recordContentSource>
+            <recordCreationDate encoding="marc">830222</recordCreationDate>
+            <recordChangeDate encoding="iso8601">19830426000000.0</recordChangeDate>
+            <recordIdentifier>5466714</recordIdentifier>
+            <recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
+                (Revision 1.85 2013/03/07)</recordOrigin>
+        </recordInfo>
+    </mods>
+    <mods version="3.4" xmlns="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+        <titleInfo>
+            <title>3 Viennese arias :</title>
+            <subTitle>for soprano, obbligato clarinet in B flat, and piano</subTitle>
+        </titleInfo>
+        <name authorityURI="http://id.loc.gov/authorities/names" type="personal" valueURI="http://id.loc.gov/authorities/names/n81100426">
+            <namePart>Lawson, Colin (Colin James)</namePart>
+        </name>
+        <typeOfResource>notated music</typeOfResource>
+        <originInfo>
+            <place>
+                <placeTerm authority="marccountry" authorityURI="http://id.loc.gov/vocabulary/countries" type="code" valueURI="http://id.loc.gov/vocabulary/countries/enk">enk</placeTerm>
+            </place>
+            <place>
+                <placeTerm type="text">London</placeTerm>
+            </place>
+            <publisher>Nova Music</publisher>
+            <dateIssued>c1984</dateIssued>
+            <dateIssued encoding="marc">1984</dateIssued>
+            <issuance>monographic</issuance>
+        </originInfo>
+        <language>
+            <languageTerm authority="iso639-2b" authorityURI="http://id.loc.gov/vocabulary/iso639-2" type="code" valueURI="http://id.loc.gov/vocabulary/iso639-2/ita">ita</languageTerm>
+        </language>
+        <language objectPart="libretto">
+            <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+        </language>
+        <physicalDescription>
+            <form authority="marcform">print</form>
+            <extent>1 score (12 p.) + 2 parts ; 31 cm.</extent>
+        </physicalDescription>
+        <tableOfContents>Tutto in pianto il cor struggete / Emperor Joseph I -- E sempre inquieto quel
+        core infelice : from Endimione / G. Bononcini -- L'adorata genitrice : from Muzio [i.e.
+        Mutio] Scevola / G. Bononcini.</tableOfContents>
+        <note type="statement of responsibility">G.B. Bononcini and Emperor Joseph I ; edited by Colin
+        Lawson.</note>
+        <note>Opera excerpts.</note>
+        <note>Acc. arr. for piano; obbligato for the 2nd-3rd excerpts originally for chalumeau.</note>
+        <note>Italian words.</note>
+        <note>Cover title.</note>
+        <note>The 1st excerpt composed for inclusion in M.A. Ziani's Chilonida.</note>
+        <note>Texts with English translations on cover p. [2].</note>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects" valueURI="http://id.loc.gov/authorities/subjects/sh2008108658">
+            <topic valueURI="http://id.loc.gov/authorities/subjects/sh85094914">Operas</topic>
+            <genre valueURI="http://id.loc.gov/authorities/subjects/sh99001548">Excerpts,
+            Arranged</genre>
+            <genre valueURI="http://id.loc.gov/authorities/subjects/sh99001780">Scores and parts</genre>
+        </subject>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects">
+            <topic valueURI="http://id.loc.gov/authorities/subjects/sh85125142">Songs (High voice) with
+            instrumental ensemble</topic>
+            <genre valueURI="http://id.loc.gov/authorities/subjects/sh99001780">Scores and parts</genre>
+        </subject>
+        <classification authority="lcc">M1506 .A14 1984</classification>
+        <relatedItem type="series">
+            <titleInfo>
+                <title>Music for voice and instrument</title>
+            </titleInfo>
+        </relatedItem>
+        <relatedItem type="constituent">
+            <titleInfo authorityURI="http://id.loc.gov/authorities/names" type="uniform" valueURI="http://id.loc.gov/authorities/names/no97083914">
+                <title>Tutto in pianto il cor struggete</title>
+            </titleInfo>
+            <name authorityURI="http://id.loc.gov/authorities/names" type="personal" valueURI="http://id.loc.gov/authorities/names/n79055650">
+                <namePart>Joseph I, Holy Roman Emperor,</namePart>
+                <namePart type="date">1678-1711</namePart>
+            </name>
+        </relatedItem>
+        <relatedItem type="constituent">
+            <titleInfo authorityURI="http://id.loc.gov/authorities/names" type="uniform" valueURI="http://id.loc.gov/authorities/names/n85337311">
+                <title>Endimione.</title>
+                <partName>E sempre inquieto quel core infelice.</partName>
+            </titleInfo>
+            <name authorityURI="http://id.loc.gov/authorities/names" type="personal" valueURI="http://id.loc.gov/authorities/names/n81005197">
+                <namePart>Bononcini, Giovanni,</namePart>
+                <namePart type="date">1670-1747</namePart>
+            </name>
+        </relatedItem>
+        <relatedItem type="constituent">
+            <titleInfo authorityURI="http://id.loc.gov/authorities/names" type="uniform" valueURI="http://id.loc.gov/authorities/names/n85337312">
+                <title>Mutio Scevola.</title>
+                <partName>Adorata genitrice.</partName>
+            </titleInfo>
+            <name authorityURI="http://id.loc.gov/authorities/names" type="personal" valueURI="http://id.loc.gov/authorities/names/n81005197">
+                <namePart>Bononcini, Giovanni,</namePart>
+                <namePart type="date">1670-1747</namePart>
+            </name>
+        </relatedItem>
+        <relatedItem type="constituent">
+            <titleInfo>
+                <title>Three Viennese arias.</title>
+            </titleInfo>
+        </relatedItem>
+        <relatedItem type="constituent">
+            <titleInfo>
+                <title>Viennese arias.</title>
+            </titleInfo>
+        </relatedItem>
+        <recordInfo>
+            <descriptionStandard>aacr</descriptionStandard>
+            <recordContentSource>DLC</recordContentSource>
+            <recordCreationDate encoding="marc">850813</recordCreationDate>
+            <recordChangeDate encoding="iso8601">19950601141653.9</recordChangeDate>
+            <recordIdentifier>5594130</recordIdentifier>
+            <recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
+            (Revision 1.74), valueURIs and authority URIs added by hand 20120124</recordOrigin>
+        </recordInfo>
+    </mods>
+    <mods version="3.4" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+        <titleInfo>
+            <title>2001 bluegrass odyssey</title>
+        </titleInfo>
+        <name type="corporate">
+            <namePart>Roustabouts (Musical group)</namePart>
+            <role>
+                <roleTerm authority="marcrelator" type="code">prf</roleTerm>
+            </role>
+        </name>
+        <typeOfResource>sound recording-musical</typeOfResource>
+        <originInfo>
+            <place>
+                <placeTerm authority="marccountry" type="code">ncu</placeTerm>
+            </place>
+            <place>
+                <placeTerm type="text">Charlotte, NC</placeTerm>
+            </place>
+            <publisher>Lamon Records</publisher>
+            <dateIssued>p1980</dateIssued>
+            <dateIssued encoding="marc">1980</dateIssued>
+            <dateIssued encoding="marc">1980</dateIssued>
+            <issuance>monographic</issuance>
+        </originInfo>
+        <language>
+            <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+        </language>
+        <physicalDescription>
+            <form authority="gmd">sound recording</form>
+            <form authority="marccategory">sound recording</form>
+            <form authority="marcsmd">sound disc</form>
+            <extent>1 sound disc : analog, 33 1/3 rpm ; 12 in.</extent>
+        </physicalDescription>
+        <tableOfContents>Bluegrass odyssey -- Hills of Tennessee -- Sassafrass -- Muddy river -- Take your shoes off Moses -- Don't let Smokey Mountain smoke get in your eyes -- Farewell party -- Faded love -- Super sonic bluegrass -- Old love letters -- Will the circle be unbroken.</tableOfContents>
+        <note altRepGroup="00" type="statement of responsibility"/>
+        <note>Brief record.</note>
+        <note type="performers">Performed by the Roustabouts.</note>
+        <subject authority="lcsh">
+            <topic>Country music</topic>
+            <temporal>1971-1980</temporal>
+        </subject>
+        <subject authority="lcsh">
+            <topic>Bluegrass music</topic>
+            <temporal>1971-1980</temporal>
+        </subject>
+        <classification authority="lcc">Lamon Records LR-4280</classification>
+        <identifier type="lccn">94759273</identifier>
+        <identifier type="issue number">LR-4280 Lamon Records</identifier>
+        <identifier type="oclc">31023015</identifier>
+        <recordInfo>
+            <descriptionStandard>aacr</descriptionStandard>
+            <recordContentSource authority="marcorg">DLC</recordContentSource>
+            <recordCreationDate encoding="marc">940829</recordCreationDate>
+            <recordChangeDate encoding="iso8601">19940830080228.8</recordChangeDate>
+            <recordIdentifier>5718053</recordIdentifier>
+            <recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
+                (Revision 1.85 2013/03/07)</recordOrigin>
+        </recordInfo>
+    </mods>
+    <mods version="3.4" xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd">
+        <titleInfo>
+            <title>Massachusetts death and marriage records, 1837-1897</title>
+        </titleInfo>
+        <typeOfResource collection="yes" manuscript="yes">mixed material</typeOfResource>
+        <originInfo>
+            <issuance>monographic</issuance>
+        </originInfo>
+        <language>
+            <languageTerm authority="iso639-2b" type="code">eng</languageTerm>
+        </language>
+        <physicalDescription>
+            <extent>2 volumes.</extent>
+        </physicalDescription>
+        <abstract>Records of deaths and marriages in Millbury and Springfield, Mass.</abstract>
+        <accessCondition type="restrictionOnAccess">Open to research.</accessCondition>
+        <note altRepGroup="00" type="statement of responsibility"/>
+        <note type="acquisition">Purchase, 1946.</note>
+        <note type="language">Collection material in English.</note>
+        <note>Forms part of: Miscellaneous Manuscripts collection.</note>
+        <subject authority="lcsh">
+            <topic>Registers of births, etc</topic>
+            <geographic>Massachusetts</geographic>
+            <geographic>Millbury</geographic>
+        </subject>
+        <subject authority="lcsh">
+            <topic>Registers of births, etc</topic>
+            <geographic>Massachusetts</geographic>
+            <geographic>Springfield</geographic>
+        </subject>
+        <location>
+            <physicalLocation>Library of Congress Manuscript Division Washington, D.C. 20540 USA</physicalLocation>
+            <physicalLocation xlink:href="http://hdl.loc.gov/loc.mss/mss.home" xmlns:xlink="http://www.w3.org/1999/xlink">http://hdl.loc.gov/loc.mss/mss.home</physicalLocation>
+        </location>
+        <identifier type="lccn">mm 83001404</identifier>
+        <recordInfo>
+            <descriptionStandard>aacr</descriptionStandard>
+            <descriptionStandard>dacs</descriptionStandard>
+            <recordContentSource authority="marcorg">DLC</recordContentSource>
+            <recordCreationDate encoding="marc">830926</recordCreationDate>
+            <recordChangeDate encoding="iso8601">20110707103737.0</recordChangeDate>
+            <recordIdentifier>5810505</recordIdentifier>
+            <recordOrigin>Converted from MARCXML to MODS version 3.4 using MARC21slim2MODS3-4.xsl
+                (Revision 1.85 2013/03/07)</recordOrigin>
+        </recordInfo>
+    </mods>
+</modsCollection>

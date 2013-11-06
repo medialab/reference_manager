@@ -6,31 +6,20 @@
     {
       "acronym": "project_acronym", 
       "call": {
-        "creators": [
-          {
-            "agent": {
-              "name": "Agence Nationale de la Recherche", 
-              "rec_class": "Orgunit", 
-              "rec_id": "anr"
-            }, 
-            "funding_contribution": {
-              "currency": "EUR", 
-              "value": "funding_contribution"
-            }, 
-            "funding_programme": "funding_programme", 
-            "funding_scheme": "funding_scheme", 
-            "role": "fnd"
-          }, 
-          {
-            "agent": {
-              "name": "European Union", 
-              "rec_class": "Orgunit", 
-              "rec_id": "eu"
-            }, 
-            "role": "fnd"
-          }
-        ], 
         "date_issued": "call_year", 
+        "funding": {
+          "agent": {
+            "name": "Agence Nationale de la Recherche", 
+            "rec_class": "Orgunit", 
+            "rec_id": "anr"
+          }, 
+          "contribution": {
+            "currency": "EUR", 
+            "value": "contribution"
+          }, 
+          "programme": "programme", 
+          "scheme": "scheme"
+        }, 
         "rec_class": "Call", 
         "rec_id": "call_id", 
         "title": "call_title"
@@ -52,9 +41,9 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-10-31T11:21:15.224961", 
+      "rec_created_date": "2013-11-06T18:31:57.482230", 
       "rec_id": "2441/dgsgfsdgf", 
-      "rec_modified_date": "2013-10-31T11:21:15.224972", 
+      "rec_modified_date": "2013-11-06T18:31:57.482241", 
       "rec_status": "private", 
       "title": "project_title"
     }, 
@@ -74,9 +63,20 @@
         {
           "agent": {
             "name": "Sciences Po’s Economic Research Center (France)", 
-            "rec_class": "Orgunit"
+            "rec_class": "Orgunit", 
+            "rec_id": "hdl:2441/72"
           }, 
           "date_begin": "1990", 
+          "descriptions": [
+            {
+              "language": "en", 
+              "value": "A description..."
+            }, 
+            {
+              "language": "fr", 
+              "value": "Une description..."
+            }
+          ], 
           "preferred": true, 
           "role": "president"
         }
@@ -171,42 +171,35 @@
           "value": "note example"
         }
       ], 
-      "ongoing_researches": [
-        {
-          "descriptions": [
-            {
-              "language": "en", 
-              "value": "An english description A"
-            }, 
-            {
-              "language": "fr", 
-              "value": "Une description française A"
-            }
-          ]
-        }, 
-        {
-          "descriptions": [
-            {
-              "language": "en", 
-              "value": "A english description B"
-            }, 
-            {
-              "language": "fr", 
-              "value": "Une description française B"
-            }
-          ]
-        }
-      ], 
+      "ongoing_researches": {
+        "en": [
+          "An english description A", 
+          "An english description B"
+        ], 
+        "fr": [
+          "Une description française A", 
+          "Une description française B"
+        ]
+      }, 
       "rec_class": "Person", 
-      "rec_created_date": "2013-10-31T11:21:15.227258", 
-      "rec_id": "2c5d4b47-4216-11e3-bf10-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.227265", 
+      "rec_created_date": "2013-11-06T18:31:57.484678", 
+      "rec_id": "560757ca-4709-11e3-9cac-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.484685", 
       "rec_status": "private", 
       "relationships": [
         {
-          "name": "Martin, Paul", 
-          "rec_id": "hdl:2441/63", 
-          "relation_type": "collaboratesWith"
+          "agent": {
+            "name_family": "Martin", 
+            "name_given": "Paul", 
+            "rec_class": "Person", 
+            "rec_id": "hdl:2441/63"
+          }, 
+          "descriptions": [
+            {
+              "value": "Une description sans langue"
+            }
+          ], 
+          "relation_type": "thesisAdvisorOf"
         }
       ], 
       "research_coverage_classifications": {
@@ -345,9 +338,9 @@
       "name_family": "Martin", 
       "name_given": "Paul", 
       "rec_class": "Person", 
-      "rec_created_date": "2013-10-31T11:21:15.227869", 
-      "rec_id": "2c5d639e-4216-11e3-8fcd-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.227875", 
+      "rec_created_date": "2013-11-06T18:31:57.485239", 
+      "rec_id": "56076e2b-4709-11e3-8e0d-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.485245", 
       "rec_status": "private"
     }, 
     {
@@ -367,9 +360,15 @@
         {
           "agent": {
             "name": "Sciences Po", 
-            "rec_class": "Orgunit"
+            "rec_class": "Orgunit", 
+            "rec_id": "hdl:2441/1"
           }, 
           "date_begin": "1981", 
+          "descriptions": [
+            {
+              "value": "A description..."
+            }
+          ], 
           "preferred": true, 
           "role": "isPartOf"
         }
@@ -436,9 +435,9 @@
         }
       ], 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-10-31T11:21:15.229097", 
-      "rec_id": "2c5d93ab-4216-11e3-9ddb-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.229103", 
+      "rec_created_date": "2013-11-06T18:31:57.486449", 
+      "rec_id": "56079d70-4709-11e3-b1ca-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.486455", 
       "rec_status": "private", 
       "rec_type": "laboratory", 
       "research_coverage_classifications": {
@@ -506,9 +505,9 @@
       ], 
       "name": "Sciences Po", 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-10-31T11:21:15.229431", 
-      "rec_id": "2c5da0ca-4216-11e3-97e2-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.229437", 
+      "rec_created_date": "2013-11-06T18:31:57.486774", 
+      "rec_id": "5607aa40-4709-11e3-b2e6-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.486780", 
       "rec_status": "private", 
       "rec_type": "university"
     }, 
@@ -522,9 +521,9 @@
       ], 
       "nationality": "UN", 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-10-31T11:21:15.230138", 
+      "rec_created_date": "2013-11-06T18:31:57.487464", 
       "rec_id": "2441/9labe9r4se65i78968605ah42", 
-      "rec_modified_date": "2013-10-31T11:21:15.230143", 
+      "rec_modified_date": "2013-11-06T18:31:57.487469", 
       "rec_status": "private", 
       "rec_type": "publisher", 
       "self_archiving_policy": {
@@ -571,6 +570,10 @@
             "value": "http://www.elsevier.com/embargoperiodlist"
           }
         ], 
+        "paid_access": {
+          "label": "Sponsorship Articles", 
+          "url": "http://www.elsevier.com/about/open-access/sponsored-articles"
+        }, 
         "postprint": {
           "possibility": "can"
         }, 
@@ -646,9 +649,9 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-10-31T11:21:15.230792", 
-      "rec_id": "2c5dd5d7-4216-11e3-bdb6-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.230798", 
+      "rec_created_date": "2013-11-06T18:31:57.488063", 
+      "rec_id": "5607dc85-4709-11e3-8c49-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.488069", 
       "rec_status": "private", 
       "research_coverage_keywords": {
         "en": [
@@ -689,14 +692,16 @@
         {
           "agent": {
             "name": "CNRS", 
-            "rec_class": "Orgunit"
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/d7a7evb2ctdg4i89ges99ipkj"
           }, 
           "role": "isPartOf"
         }, 
         {
           "agent": {
             "name": "Sciences Po", 
-            "rec_class": "Orgunit"
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q021gm"
           }, 
           "preferred": true, 
           "role": "isPartOf"
@@ -745,9 +750,9 @@
         }
       ], 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-10-31T11:21:15.232586", 
+      "rec_created_date": "2013-11-06T18:31:57.491345", 
       "rec_id": "2441/9labe9r4se65i789685q380gh", 
-      "rec_modified_date": "2013-10-31T11:21:15.232596", 
+      "rec_modified_date": "2013-11-06T18:31:57.491358", 
       "rec_status": "private", 
       "rec_type": "researchCenter", 
       "research_coverage_keywords": {
@@ -781,7 +786,8 @@
         {
           "agent": {
             "name": "Centre d'études européennes de Sciences Po", 
-            "rec_class": "Orgunit"
+            "rec_class": "Orgunit", 
+            "rec_id": "2441/9labe9r4se65i789685q384oh"
           }, 
           "date_begin": "2008", 
           "preferred": true, 
@@ -948,9 +954,9 @@
         }
       ], 
       "rec_class": "Person", 
-      "rec_created_date": "2013-10-31T11:21:15.237316", 
+      "rec_created_date": "2013-11-06T18:31:57.496180", 
       "rec_id": "2441/9labe9r4se65i789685q591o2", 
-      "rec_modified_date": "2013-10-31T11:21:15.237331", 
+      "rec_modified_date": "2013-11-06T18:31:57.496188", 
       "rec_status": "private", 
       "research_coverage_keywords": {
         "fr": [
@@ -960,8 +966,9 @@
       "resources": [
         {
           "rec_class": "Resource", 
+          "rec_state": "published", 
           "rec_type": "ResourceRemote", 
-          "role": "picture", 
+          "relation_type": "picture", 
           "url": "http://spire.sciences-po.fr/hdl:/2441/9labe9r4se65i789685q591o2/resources/sophie-jacquot.gif"
         }
       ], 
@@ -1041,17 +1048,14 @@
     {
       "acronym": "LEGICONTEST", 
       "call": {
-        "creators": [
-          {
-            "agent": {
-              "name": "Agence Nationale de la Recherche", 
-              "rec_class": "Orgunit", 
-              "rec_id": "anr"
-            }, 
-            "role": "fnd"
-          }
-        ], 
         "date_issued": "2006", 
+        "funding": {
+          "agent": {
+            "name": "Agence Nationale de la Recherche", 
+            "rec_class": "Orgunit", 
+            "rec_id": "anr"
+          }
+        }, 
         "rec_class": "Call", 
         "rec_id": "BLANC", 
         "title": "Programme \"blanc"
@@ -1067,25 +1071,22 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-10-31T11:21:15.238384", 
+      "rec_created_date": "2013-11-06T18:31:57.497459", 
       "rec_id": "2441/d7a7evb2ctdg4i89gesb82lpp", 
-      "rec_modified_date": "2013-10-31T11:21:15.238391", 
+      "rec_modified_date": "2013-11-06T18:31:57.497467", 
       "rec_status": "private", 
       "title": "Concurrences de légitimité, types de contestation et transformations de la place de l'Etat dans les sociétés européennes"
     }, 
     {
       "acronym": "AIME", 
       "call": {
-        "creators": [
-          {
-            "agent": {
-              "name": "European Union", 
-              "rec_class": "Orgunit", 
-              "rec_id": "eu"
-            }, 
-            "role": "fnd"
+        "funding": {
+          "agent": {
+            "name": "European Union", 
+            "rec_class": "Orgunit", 
+            "rec_id": "eu"
           }
-        ], 
+        }, 
         "rec_class": "Call", 
         "rec_id": "ERC-2010-AdG_20100407"
       }, 
@@ -1102,9 +1103,9 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-10-31T11:21:15.239324", 
+      "rec_created_date": "2013-11-06T18:31:57.498680", 
       "rec_id": "2441/53r60a8s3kup1vc9jh5ki109i", 
-      "rec_modified_date": "2013-10-31T11:21:15.239330", 
+      "rec_modified_date": "2013-11-06T18:31:57.498688", 
       "rec_status": "private", 
       "title": "An Inquiry into Modes of Existence"
     }

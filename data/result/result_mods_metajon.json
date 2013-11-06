@@ -115,9 +115,9 @@
       "part_page_end": "12", 
       "part_volume": "89", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.135288", 
+      "rec_created_date": "2013-11-06T18:31:57.332850", 
       "rec_id": "doi:10.1016/j.jinteco.2012.05.011", 
-      "rec_modified_date": "2013-10-31T11:21:15.135307", 
+      "rec_modified_date": "2013-11-06T18:31:57.332860", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -187,9 +187,9 @@
         "fr"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.143758", 
-      "rec_id": "2c4fb726-4216-11e3-98d0-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.143770", 
+      "rec_created_date": "2013-11-06T18:31:57.335747", 
+      "rec_id": "55f09d97-4709-11e3-9c5e-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.335754", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "VideoRecording", 
@@ -206,7 +206,7 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Oxford+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=480&amp;rft.edition=2e+%C3%A9d.&amp;rft.date=2012-12&amp;rft.series=The+New+European+Union+Series&amp;rft.btitle=Member+States+of+the+European+Union&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Lequesne, Christian, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Simon Bulmer, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">The Member States of the European Union</span>. <span class=\"edition\">2e éd. ed.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">Oxford University Press</span>, <span class=\"date\">dec. 2012</span>. "
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Oxford+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=480&amp;rft.edition=2e+%C3%A9d.&amp;rft.date=2012-12&amp;rft.series=The+New+European+Union+Series&amp;rft.btitle=Member+States+of+the+European+Union&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Lequesne, Christian, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Simon Bulmer, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">TheMember States of the European Union</span>. <span class=\"edition\">2e éd. ed.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">Oxford University Press</span>, <span class=\"date\">dec. 2012</span>. "
         }
       }, 
       "creators": [
@@ -274,9 +274,9 @@
         "Oxford University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.146763", 
+      "rec_created_date": "2013-11-06T18:31:57.338437", 
       "rec_id": "isbn:9780199544837", 
-      "rec_modified_date": "2013-10-31T11:21:15.146771", 
+      "rec_modified_date": "2013-11-06T18:31:57.338444", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -294,7 +294,7 @@
         }
       ], 
       "title": "Member States of the European Union", 
-      "title_non_sort": "The "
+      "title_non_sort": "The"
     }, 
     {
       "citations": {
@@ -422,9 +422,9 @@
       "part_page_begin": "186", 
       "part_page_end": "196", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.151110", 
-      "rec_id": "2c51ac85-4216-11e3-9129-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.151118", 
+      "rec_created_date": "2013-11-06T18:31:57.347956", 
+      "rec_id": "55f2798f-4709-11e3-8fe9-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.347971", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -433,7 +433,7 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=3&amp;rft.date=2012-05&amp;rft.volume=36&amp;rft.atitle=Europeanization+of+Cities%3A+Policies%2C+Urban+Change+and+Urban+Networks&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=International+Journal+of+Urban+and+Regional+Research&amp;rft.genre=article\"></span><span class=\"creator\">Halpern, Charlotte</span>. \"<span class=\"title\">The Europeanization of Cities: Policies, Urban Change and Urban Networks</span>.\" Rev. of <span class=\"title\">International Journal of Urban and Regional Research</span>. <span class=\"publishers\">Wiley-Blackwell</span>, <span class=\"part_volume\">36</span>.<span class=\"part_issue\">3</span> <span class=\"date\">may 2012</span>. "
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=3&amp;rft.date=2012-05&amp;rft.volume=36&amp;rft.atitle=Europeanization+of+Cities%3A+Policies%2C+Urban+Change+and+Urban+Networks&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=International+Journal+of+Urban+and+Regional+Research&amp;rft.genre=article\"></span><span class=\"creator\">Halpern, Charlotte</span>. \"<span class=\"title\">TheEuropeanization of Cities: Policies, Urban Change and Urban Networks</span>.\" Rev. of <span class=\"title\">International Journal of Urban and Regional Research</span>. <span class=\"publishers\">Wiley-Blackwell</span>, <span class=\"part_volume\">36</span>.<span class=\"part_issue\">3</span> <span class=\"date\">may 2012</span>. "
         }
       }, 
       "creators": [
@@ -468,15 +468,13 @@
       "extent_pages": "637639", 
       "is_part_ofs": [
         {
-          "classifications": {
-            "citation-databases": [
-              "scopus", 
-              "wos"
-            ], 
-            "expert-committee": [
-              "aeres"
-            ]
-          }, 
+          "citation_databases": [
+            "scopus", 
+            "wos"
+          ], 
+          "expert_committees": [
+            "aeres"
+          ], 
           "identifiers": [
             {
               "id_type": "issn", 
@@ -516,9 +514,9 @@
       "part_issue": "3", 
       "part_volume": "36", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.155827", 
-      "rec_id": "2c526566-4216-11e3-9180-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.155834", 
+      "rec_created_date": "2013-11-06T18:31:57.353066", 
+      "rec_id": "55f34302-4709-11e3-9dd0-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.353074", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -565,12 +563,12 @@
           ], 
           "rec_class": "Document", 
           "rec_id": "isbn:9789085940272", 
-          "rec_type": "Journal", 
+          "rec_type": "UnpublishedDocument", 
           "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks"
         }
       ], 
       "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks", 
-      "title_non_sort": "The "
+      "title_non_sort": "The"
     }, 
     {
       "citations": {
@@ -635,9 +633,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.158218", 
-      "rec_id": "2c52c28f-4216-11e3-bd15-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.158225", 
+      "rec_created_date": "2013-11-06T18:31:57.355411", 
+      "rec_id": "55f39e61-4709-11e3-a1d1-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.355418", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferenceContribution", 
@@ -647,7 +645,7 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Lethielleux&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=69&amp;rft.epage=86&amp;rft.place=Paris&amp;rft.date=2013-02&amp;rft.series=Coll%C3%A8ge+des+Bernardins+-+Cours-colloques-conf%C3%A9rences&amp;rft.btitle=L%E2%80%99Anthropologie+de+Marcel+Gauchet+%3A+analyse+et+d%C3%A9bats&amp;rft.atitle=r%C3%A9gime+mixte+des+Modernes+et+la+question+de+l%E2%80%99Histoire&amp;ctx_ver=Z39.88-2004&amp;rft.genre=conference\"></span><span class=\"creator\">Escudier, Alexandre</span>. \"<span class=\"title\">Le régime mixte des Modernes et la question de l’Histoire</span>.\" <span class=\"title\">L’Anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frédéric Louzeau</span>, and <span class=\"creator\">L’anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Lethielleux</span>, <span class=\"date\">feb. 2013</span>. <span class=\"part_page_begin\">69</span>-<span class=\"part_page_end\">86</span>. "
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Lethielleux&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=69&amp;rft.epage=86&amp;rft.place=Paris&amp;rft.date=2013-02&amp;rft.series=Coll%C3%A8ge+des+Bernardins+-+Cours-colloques-conf%C3%A9rences&amp;rft.btitle=L%E2%80%99Anthropologie+de+Marcel+Gauchet+%3A+analyse+et+d%C3%A9bats&amp;rft.atitle=r%C3%A9gime+mixte+des+Modernes+et+la+question+de+l%E2%80%99Histoire&amp;ctx_ver=Z39.88-2004&amp;rft.genre=conference\"></span><span class=\"creator\">Escudier, Alexandre</span>. \"<span class=\"title\">Lerégime mixte des Modernes et la question de l’Histoire</span>.\" <span class=\"title\">L’Anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frédéric Louzeau</span>, and <span class=\"creator\">L’anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Lethielleux</span>, <span class=\"date\">feb. 2013</span>. <span class=\"part_page_begin\">69</span>-<span class=\"part_page_end\">86</span>. "
         }
       }, 
       "creators": [
@@ -722,7 +720,7 @@
           ], 
           "rec_class": "Document", 
           "rec_id": "isbn:9782249622557", 
-          "rec_type": "ConferenceProceedings", 
+          "rec_type": "UnpublishedDocument", 
           "seriess": [
             {
               "rec_class": "Document", 
@@ -739,14 +737,14 @@
       "part_page_begin": "69", 
       "part_page_end": "86", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.161913", 
-      "rec_id": "2c535321-4216-11e3-9d27-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.161920", 
+      "rec_created_date": "2013-11-06T18:31:57.358940", 
+      "rec_id": "55f42875-4709-11e3-8034-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.358947", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferencePaper", 
       "title": "régime mixte des Modernes et la question de l’Histoire", 
-      "title_non_sort": "Le "
+      "title_non_sort": "Le"
     }, 
     {
       "citations": {
@@ -834,9 +832,9 @@
         "Dalloz"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.165406", 
+      "rec_created_date": "2013-11-06T18:31:57.362174", 
       "rec_id": "isbn:9782247125265", 
-      "rec_modified_date": "2013-10-31T11:21:15.165419", 
+      "rec_modified_date": "2013-11-06T18:31:57.362182", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferenceProceedings", 
@@ -905,9 +903,9 @@
       "part_page_begin": "11", 
       "part_page_end": "00", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.168343", 
-      "rec_id": "2c544d5e-4216-11e3-aead-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.168350", 
+      "rec_created_date": "2013-11-06T18:31:57.364903", 
+      "rec_id": "55f510c2-4709-11e3-a6f6-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.364911", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -985,9 +983,9 @@
         "Institut d'Etudes Politiques de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.170857", 
-      "rec_id": "2c54b028-4216-11e3-aee8-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.170864", 
+      "rec_created_date": "2013-11-06T18:31:57.367338", 
+      "rec_id": "55f57045-4709-11e3-954e-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.367345", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -999,7 +997,7 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=115&amp;rft.issue=52&amp;rft.epage=131&amp;rft.date=2007-11&amp;rft.atitle=Vers+une+r%C3%A9volution+bureaucratique+%3F&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Mouvements&amp;rft.genre=article\"></span>\"<span class=\"title\">Vers une révolution bureaucratique ?</span>.\" <span class=\"title\">Mouvements</span>. <span class=\"publication_places\">FR</span>: <span class=\"publishers\">La Découverte</span>, <span class=\"part_issue\">52</span> <span class=\"date\">nov. 2007</span>. <span class=\"part_page_begin\">115</span>-<span class=\"part_page_end\">131</span>. "
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=115&amp;rft.issue=52&amp;rft.epage=131&amp;rft.date=2007-11&amp;rft.atitle=Vers+une+r%C3%A9volution+bureaucratique+%3F&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Mouvements&amp;rft.genre=article\"></span>\"<span class=\"title\">Vers une révolution bureaucratique ?</span>.\" <span class=\"title\">Mouvements</span>. <span class=\"publishers\">La Découverte</span>, <span class=\"part_issue\">52</span> <span class=\"date\">nov. 2007</span>. <span class=\"part_page_begin\">115</span>-<span class=\"part_page_end\">131</span>. "
         }
       }, 
       "creators": [
@@ -1058,7 +1056,7 @@
           "languages": [
             "fr"
           ], 
-          "publication_places": [
+          "publication_countries": [
             "FR"
           ], 
           "publishers": [
@@ -1077,13 +1075,1463 @@
       "part_page_begin": "115", 
       "part_page_end": "131", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.174240", 
-      "rec_id": "2c5533fd-4216-11e3-8995-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.174248", 
+      "rec_created_date": "2013-11-06T18:31:57.370601", 
+      "rec_id": "55f5ef6b-4709-11e3-8665-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.370608", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "InterviewArticle", 
       "title": "Vers une révolution bureaucratique ?"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "\"<span class=\"title\">FranUlmer.com -- Home Page</span>.\" <span class=\"title\">Election 2002 Web Archive</span>. <span class=\"date\">20020702</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.franulmer.com/\" target=\"_blank\">http://www.franulmer.com/</a>&gt;</span>"
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "rec_class": "Person"
+          }
+        }
+      ], 
+      "date_captured": "20020702", 
+      "date_sort": {
+        "$date": 1025568000000
+      }, 
+      "descriptions": [
+        {
+          "value": "Website promoting the candidacy of Fran Ulmer, Democratic candidate for Governor, Alaska, 2002. Includes candidate biography, issue position statements, campaign contact information, privacy policy and campaign news press releases. Site features enable visitors to sign up for campaign email list, volunteer, make campaign contributions and follow links to other internet locations."
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "resources": [
+            {
+              "rec_class": "Resource", 
+              "rec_type": "remote", 
+              "url": "http://www.loc.gov/minerva/collect/elec2002/"
+            }
+          ], 
+          "title": "Election 2002 Web Archive"
+        }
+      ], 
+      "keywords": {
+        "und": [
+          "Elections", 
+          "Governors", 
+          "Election", 
+          "Democratic Party (AK)"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-06T18:31:57.390260", 
+      "rec_id": "55f8ef63-4709-11e3-82ea-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.390270", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "WebSite", 
+      "resources": [
+        {
+          "rec_class": "Resource", 
+          "rec_type": "remote", 
+          "url": "http://www.franulmer.com/"
+        }, 
+        {
+          "rec_class": "Resource", 
+          "rec_type": "remote", 
+          "url": "http://wayback-cgi1.alexa.com/e2002/*/http://www.franulmer.com/"
+        }
+      ], 
+      "title": "FranUlmer.com -- Home Page", 
+      "title_alternative": {
+        "title": "Fran Ulmer, Democratic candidate for Governor, Alaska, 2002"
+      }
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": " \"<span class=\"title\">At Gettysburg, or, What a Girl Saw and Heard of the Battle: A True Narrative</span>.\" <span class=\"publication_places\">New York</span>: <span class=\"publishers\">W. Lake Borland</span>, <span class=\"date\">1889</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://digital.library.upenn.edu/women/alleman/gettysburg/gettysburg.html\" target=\"_blank\">http://digital.library.upenn.edu/women/alleman/gettysburg/gettysburg.html</a>&gt;</span>"
+        }
+      }, 
+      "classifications": {
+        "lcc": [
+          "E475.53 .A42"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "rec_class": "Person"
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1889", 
+      "date_sort": {
+        "$date": -2556057600000
+      }, 
+      "digital_origin": "reformatted digital", 
+      "is_part_ofs": [
+        {
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title_uniform": {
+            "title": "A Celebration of Women Writers: Americana"
+          }
+        }
+      ], 
+      "keywords": {
+        "und": []
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "publication_places": [
+        "New York"
+      ], 
+      "publishers": [
+        "W. Lake Borland"
+      ], 
+      "rec_cataloging_languages": [
+        null
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-06T18:31:57.391658", 
+      "rec_id": "55f92633-4709-11e3-88ef-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.391666", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Document", 
+      "resources": [
+        {
+          "rec_class": "Resource", 
+          "rec_type": "remote", 
+          "url": "http://digital.library.upenn.edu/women/alleman/gettysburg/gettysburg.html"
+        }
+      ], 
+      "rights": {
+        "other_conditions": [
+          {
+            "value": "Personal, noncommercial use of this item is permitted in the United States of America. Please see http://digital.library.upenn.edu/women/ for other rights and restrictions that may apply to this resource."
+          }
+        ]
+      }, 
+      "title": "At Gettysburg, or, What a Girl Saw and Heard of the Battle: A True Narrative"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "\"<span class=\"title\">Telescope Peak from Zabriskie Point</span>.\" <span class=\"date\">22 mar. 1955</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://purl.dlib.indiana.edu/iudl/archives/cushman/P07803\" target=\"_blank\">http://purl.dlib.indiana.edu/iudl/archives/cushman/P07803</a>&gt;</span>"
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "date_birth": "1896", 
+            "date_death": "1972", 
+            "name_family": "Cushman", 
+            "name_given": "Charles Weever", 
+            "rec_class": "Person"
+          }, 
+          "role": "pht"
+        }
+      ], 
+      "date_copyrighted": "2003", 
+      "date_created": "1955-03-22", 
+      "date_sort": {
+        "$date": -466473600000
+      }, 
+      "digital_origin": "reformatted digital", 
+      "genres": [
+        {
+          "authority": "gmgpc", 
+          "value": "Landscape photographs"
+        }
+      ], 
+      "identifiers": [
+        {
+          "id_type": "local", 
+          "value": "955.11"
+        }, 
+        {
+          "id_type": "local", 
+          "value": "P07803"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title_uniform": {
+            "title": "Indiana University Digital Library Program: Charles W. Cushman Photograph Collection"
+          }
+        }
+      ], 
+      "keywords": {
+        "und": [
+          "Telescope Peak (Inyo County", 
+          "Calif.)", 
+          "Zabriskie Point (Calif.)"
+        ]
+      }, 
+      "originals": [
+        {
+          "date_created": "1955-03-22", 
+          "extent_pages": "1 slide : col. ; 35mm", 
+          "form": {
+            "authority": "gmd", 
+            "value": "graphic"
+          }, 
+          "physical_description_notes": [
+            {
+              "value": "Original 35mm slide was digitized in 2003 as a TIFF image. Display versions in JPEG format in three sizes are available."
+            }
+          ], 
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "resources": [
+            {
+              "rec_class": "Resource"
+            }
+          ]
+        }
+      ], 
+      "physical_description_notes": [
+        {
+          "value": "Original 35mm slide was digitized in 2003 as a TIFF image. Display versions in JPEG format in three sizes are available."
+        }, 
+        {
+          "value": "100 f 6.3 tl"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2004-09-09", 
+      "rec_id": "archives/cushman/P07803", 
+      "rec_modified_date": "2013-11-06T18:31:57.393516", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Image", 
+      "resources": [
+        {
+          "rec_class": "Resource", 
+          "rec_type": "remote", 
+          "url": "http://purl.dlib.indiana.edu/iudl/archives/cushman/P07803"
+        }
+      ], 
+      "rights": {
+        "other_conditions": [
+          {
+            "value": "Copyright and reproduction rights for all Charles W. Cushman photographs are held by Indiana University and administered by the University Archives, Indiana University, Bloomington, IN 47405"
+          }
+        ]
+      }, 
+      "title": "Telescope Peak from Zabriskie Point", 
+      "title_alternative": {
+        "title": "Telescope PK from Zabriskie Pt."
+      }
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=53&amp;rft.epage=57&amp;rft.date=2003&amp;rft.volume=3&amp;rft.atitle=Hiring+and+recruitment+practices+in+academic+libraries&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=portal%3A+libraries+and+the+academy&amp;rft.genre=article\"></span>\"<span class=\"title\">Hiring and recruitment practices in academic libraries</span>.\" <span class=\"title\">portal: libraries and the academy</span>. <span class=\"publication_places\">Baltimore, Md.</span>: <span class=\"publishers\">Johns Hopkins University Press</span>, <span class=\"part_volume\">3</span>. <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">53</span>-<span class=\"part_page_end\">57</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "rec_class": "Person"
+          }
+        }
+      ], 
+      "date_issued": "2003", 
+      "date_sort": {
+        "$date": 1041379200000
+      }, 
+      "descriptions": [
+        {
+          "value": "Academic libraries need to change their recruiting and hiring procedures to stay competitive in today's changing marketplace. By taking too long to find and to hire talented professionals in a tight labor market, academic libraries are losing out on top candidates and limiting their ability to become innovative and dynamic organizations. Traditional, deliberate, and risk-averse hiring models lead to positions remaining open for long periods, opportunities lost as top prospects find other positions, and a reduction in the overall talent level of the organization. To be more competitive and effective in their recruitment and hiring processes, academic libraries must foster manageable internal solutions, look to other professions for effective hiring techniques and models, and employ innovative concepts from modern personnel management literature."
+        }
+      ], 
+      "extent_pages": "15 p.", 
+      "form": {
+        "authority": "marcform", 
+        "value": "print"
+      }, 
+      "is_part_ofs": [
+        {
+          "identifiers": [
+            {
+              "id_type": "issn", 
+              "value": "1531-2542"
+            }
+          ], 
+          "rec_class": "Document", 
+          "rec_id": "issn:1531-2542", 
+          "rec_type": "Document", 
+          "title": "portal: libraries and the academy"
+        }
+      ], 
+      "issuance": "monographic", 
+      "keywords": {
+        "und": [
+          "College librarians", 
+          "Recruiting", 
+          "College librarians", 
+          "Selection and appointment"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "part_page_begin": "53", 
+      "part_page_end": "57", 
+      "part_volume": "3", 
+      "publication_places": [
+        "Baltimore, Md."
+      ], 
+      "publishers": [
+        "Johns Hopkins University Press"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-06T18:31:57.394848", 
+      "rec_id": "55f9a2f5-4709-11e3-aebe-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.394854", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Hiring and recruitment practices in academic libraries"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"title\">Sound and fury: the making of the punditocracy</span>. <span class=\"publication_places\">nyu</span>: <span class=\"publishers\">Cornell University Press</span>, <span class=\"date\">c1999</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "071/.3"
+        ], 
+        "lcc": [
+          "PN4888.P6 A48 1999"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "rec_class": "Person"
+          }, 
+          "role": "cre"
+        }
+      ], 
+      "date_issued": "c1999", 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "extent_pages": "vii, 322 p. ; 23 cm.", 
+      "form": {
+        "authority": "marcform", 
+        "value": "print"
+      }, 
+      "identifiers": [
+        {
+          "id_type": "isbn", 
+          "value": "0801486394 (pbk. : acid-free, recycled paper)"
+        }, 
+        {
+          "id_type": "lccn", 
+          "value": "99042030"
+        }
+      ], 
+      "issuance": "monographic", 
+      "keywords": {
+        "und": []
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "notes": [
+        {
+          "note_type": "statement of responsibility", 
+          "value": "Eric Alterman."
+        }, 
+        {
+          "value": "Includes bibliographical references (p. 291-312) and index."
+        }
+      ], 
+      "publication_places": [
+        "nyu", 
+        "Ithaca, N.Y"
+      ], 
+      "publishers": [
+        "Cornell University Press"
+      ], 
+      "rec_cataloging_rules": [
+        "aacr"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "990730", 
+      "rec_id": "11761548", 
+      "rec_modified_date": "2013-11-06T18:31:57.396034", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Bibliography", 
+      "title": "Sound and fury", 
+      "title_sub": "the making of the punditocracy"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "\"<span class=\"title\">Models, Fantasies and Phantoms of Transition</span>.\" <span class=\"title\">Post-Fordism: A Reader</span>. <span class=\"publication_places\">Oxford</span>: <span class=\"publishers\">Blackwell Publishers</span>, <span class=\"date\">1994</span>. <span class=\"part_page_begin\">23</span>-<span class=\"part_page_end\">45</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Amin", 
+            "name_given": "Ash", 
+            "rec_class": "Person"
+          }, 
+          "role": "cre"
+        }
+      ], 
+      "date_sort": {
+        "$date": 757382400000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "local", 
+          "value": "Amin1994a"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "creators": [
+            {
+              "agent": {
+                "name_family": "Amin", 
+                "name_given": "Ash", 
+                "rec_class": "Person"
+              }, 
+              "role": "cre"
+            }
+          ], 
+          "date_issued": "1994", 
+          "publication_places": [
+            "Oxford"
+          ], 
+          "publishers": [
+            "Blackwell Publishers"
+          ], 
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title": "Post-Fordism", 
+          "title_sub": "A Reader"
+        }
+      ], 
+      "part_page_begin": "23", 
+      "part_page_end": "45", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-06T18:31:57.397240", 
+      "rec_id": "local:Amin1994a", 
+      "rec_modified_date": "2013-11-06T18:31:57.397246", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Document", 
+      "title": "Models, Fantasies and Phantoms of Transition"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Center+for+Computer+Assisted+Research+in+the+Humanities&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=4+v.+%3A+ill.%2C+music+%3B+26+cm.&amp;rft.place=cau&amp;rft.date=-1988&amp;rft.btitle=Directory+of+computer+assisted+research+in+musicology&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"title\">Directory of computer assisted research in musicology</span>. <span class=\"publication_places\">cau</span>: <span class=\"publishers\">Center for Computer Assisted Research in the Humanities</span>, "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "780/.01/02584"
+        ], 
+        "lcc": [
+          "ML73 .D57"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "Center for Computer Assisted Research in the Humanities", 
+            "rec_class": "Orgunit"
+          }
+        }
+      ], 
+      "date_issued": "-1988", 
+      "date_sort": {
+        "$date": 594777600000
+      }, 
+      "extent_pages": "4 v. : ill., music ; 26 cm.", 
+      "form": {
+        "authority": "marcform", 
+        "value": "print"
+      }, 
+      "frequency": "Annual", 
+      "identifiers": [
+        {
+          "id_type": "lccn", 
+          "value": "86646620"
+        }, 
+        {
+          "id_type": "oclc", 
+          "value": "ocm14913926"
+        }
+      ], 
+      "issuance": "serial", 
+      "keywords": {
+        "und": []
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "notes": [
+        {
+          "note_type": "date/sequential designation", 
+          "value": "Began in 1985."
+        }, 
+        {
+          "note_type": "date/sequential designation", 
+          "value": "-1988."
+        }
+      ], 
+      "other_formats": [
+        {
+          "identifiers": [
+            {
+              "id_type": "local", 
+              "value": "(OCoLC)633494839"
+            }
+          ], 
+          "rec_class": "Document", 
+          "rec_id": "local:(OCoLC)633494839", 
+          "rec_type": "Document", 
+          "title": "Directory of computer assisted research in musicology"
+        }
+      ], 
+      "publication_places": [
+        "cau", 
+        "Menlo Park, CA"
+      ], 
+      "publishers": [
+        "Center for Computer Assisted Research in the Humanities"
+      ], 
+      "rec_cataloging_languages": [
+        null
+      ], 
+      "rec_cataloging_rules": [
+        "aacr"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "861202", 
+      "rec_id": "11315879", 
+      "rec_modified_date": "2013-11-06T18:31:57.399052", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "title": "Directory of computer assisted research in musicology", 
+      "title_alternative": {
+        "title": "Computer assisted research in musicology"
+      }
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=361&amp;rft.issue=2&amp;rft.epage=378&amp;rft.volume=24&amp;rft.atitle=Urban+Question+as+a+Scale+Question&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=International+Journal+of+Urban+and+Regional+Research&amp;rft.genre=article\"></span>\"<span class=\"title\">TheUrban Question as a Scale Question: Reflections on Henri Lefebre, Urban Theory and the Politics of Scale</span>.\" <span class=\"title\">International Journal of Urban and Regional Research</span>. <span class=\"part_volume\">24</span>.<span class=\"part_issue\">2</span> <span class=\"part_page_begin\">361</span>-<span class=\"part_page_end\">378</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Brenner", 
+            "name_given": "Neil", 
+            "rec_class": "Person"
+          }, 
+          "role": "cre"
+        }
+      ], 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "identifiers": [
+        {
+          "id_type": "local", 
+          "value": "BrennerN2000a"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "issuance": "continuing", 
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title": "International Journal of Urban and Regional Research"
+        }
+      ], 
+      "issuance": "monographic", 
+      "part_issue": "2", 
+      "part_page_begin": "361", 
+      "part_page_end": "378", 
+      "part_volume": "24", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-06T18:31:57.400377", 
+      "rec_id": "local:BrennerN2000a", 
+      "rec_modified_date": "2013-11-06T18:31:57.400383", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "title": "Urban Question as a Scale Question", 
+      "title_non_sort": "The", 
+      "title_sub": "Reflections on Henri Lefebre, Urban Theory and the Politics of Scale"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "\"<span class=\"title\">Fifth-Grade Boys' Decisions about Participation in Sports Activities</span>.\" <span class=\"title\">Non-subject-matter Outcomes of Schooling</span>. <span class=\"part_volume\">99</span>.<span class=\"part_issue\">5</span> <span class=\"part_page_begin\">131</span>-<span class=\"part_page_end\">146</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Conley", 
+            "name_given": "Alice", 
+            "rec_class": "Person"
+          }, 
+          "role": "cre"
+        }
+      ], 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "is_part_ofs": [
+        {
+          "creators": [
+            {
+              "role": "cre"
+            }
+          ], 
+          "issuance": "continuing", 
+          "notes": [
+            {
+              "note_type": "statement of responsibility", 
+              "value": "ed.  Thomas L. Good"
+            }
+          ], 
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title": "Non-subject-matter Outcomes of Schooling"
+        }
+      ], 
+      "part_issue": "5", 
+      "part_page_begin": "131", 
+      "part_page_end": "146", 
+      "part_volume": "99", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-06T18:31:57.401873", 
+      "rec_id": "55fab591-4709-11e3-8ec0-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.401880", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Document", 
+      "title": "Fifth-Grade Boys' Decisions about Participation in Sports Activities"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "\"<span class=\"title\">2700 MHz observations of 4c radio sources in the declination zone +4 to -4</span>.\" <span class=\"title\">Australian Journal of Physics and Astronphysics</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Wall", 
+            "name_given": "J. V.", 
+            "rec_class": "Person"
+          }, 
+          "role": "cre"
+        }
+      ], 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "is_part_ofs": [
+        {
+          "genres": [
+            {
+              "value": "academic journal"
+            }
+          ], 
+          "issuance": "continuing", 
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title": "Australian Journal of Physics and Astronphysics", 
+          "title_abbreviated": {
+            "title": "Australian J. Phys. Astronphys."
+          }
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-06T18:31:57.403058", 
+      "rec_id": "55fae3fa-4709-11e3-9ed8-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.403064", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Document", 
+      "title": "2700 MHz observations of 4c radio sources in the declination zone +4 to -4"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "\"<span class=\"title\">Emergence and Dissolvence in the Self-Organization of Complex Systems</span>.\" <span class=\"title\">Entropy</span>. <span class=\"part_volume\">2</span>.<span class=\"part_issue\">1</span> <span class=\"part_page_begin\">17</span>-<span class=\"part_page_end\">17</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Testa", 
+            "name_given": "Bernard", 
+            "rec_class": "Person"
+          }, 
+          "role": "cre"
+        }, 
+        {
+          "agent": {
+            "name_family": "Kier", 
+            "name_given": "Lamont B.", 
+            "rec_class": "Person"
+          }, 
+          "role": "cre"
+        }
+      ], 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "identifiers": [
+        {
+          "id_type": "uri", 
+          "value": "http://www.mdpi.org/entropy/papers/e2010001.pdf"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "issuance": "continuing", 
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title": "Entropy"
+        }
+      ], 
+      "part_issue": "1", 
+      "part_page_begin": "17", 
+      "part_page_end": "17", 
+      "part_volume": "2", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-06T18:31:57.404258", 
+      "rec_id": "uri:http://www.mdpi.org/entropy/papers/e2010001.pdf", 
+      "rec_modified_date": "2013-11-06T18:31:57.404264", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Document", 
+      "title": "Emergence and Dissolvence in the Self-Organization of Complex Systems"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"title\">TheAmerican ballroom companion: dance instruction manuals, ca. 1600-1920</span>. <span class=\"publication_places\">dcu</span>: <span class=\"publishers\">Library of Congress</span>, <span class=\"date\">1998</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://hdl.loc.gov/loc.music/collmus.mu000010\" target=\"_blank\">http://hdl.loc.gov/loc.music/collmus.mu000010</a>&gt;</span>"
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "793.3"
+        ], 
+        "lcc": [
+          "GV1623"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "Library of Congress", 
+            "rec_class": "Orgunit"
+          }
+        }, 
+        {
+          "agent": {
+            "name": "Library of Congress", 
+            "rec_class": "Orgunit"
+          }
+        }
+      ], 
+      "date_issued": "1998-]", 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "descriptions": [
+        {
+          "value": "Presents over two hundred social dance manuals, pocket-sized books with diagrams used by itinerant dancing masters to teach the American gentry the latest dance steps. Includes anti-dance manuals as well as treatises on etiquette. Offered as part of the American Memory online resource compiled by the National Digital Library Program of the Library of Congress."
+        }
+      ], 
+      "form": {
+        "authority": "marcform", 
+        "value": "electronic"
+      }, 
+      "identifiers": [
+        {
+          "id_type": "lccn", 
+          "value": "98801326"
+        }, 
+        {
+          "id_type": "hdl", 
+          "value": "hdl:loc.music/collmus.mu000010"
+        }, 
+        {
+          "id_type": "hdl", 
+          "value": "hdl:loc.music/collmus.mu000010"
+        }
+      ], 
+      "issuance": "monographic", 
+      "keywords": {
+        "und": []
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "notes": [
+        {
+          "note_type": "statement of responsibility", 
+          "value": "Music Division, Library of Congress."
+        }, 
+        {
+          "value": "Title from title screen dated Mar. 23, 1998."
+        }, 
+        {
+          "note_type": "system details", 
+          "value": "System requirements: World Wide Web (WWW) browser software."
+        }, 
+        {
+          "note_type": "system details", 
+          "value": "Mode of access: Internet."
+        }
+      ], 
+      "publication_places": [
+        "dcu", 
+        "Washington, D.C"
+      ], 
+      "publishers": [
+        "Library of Congress"
+      ], 
+      "rec_cataloging_rules": [
+        "aacr"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "980323", 
+      "rec_id": "5004836", 
+      "rec_modified_date": "2013-11-06T18:31:57.405474", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Software", 
+      "resources": [
+        {
+          "rec_class": "Resource", 
+          "rec_type": "remote", 
+          "url": "http://hdl.loc.gov/loc.music/collmus.mu000010"
+        }
+      ], 
+      "title": "American ballroom companion", 
+      "title_alternative": {
+        "title": "Dance instruction manuals, ca. 1600-1920"
+      }, 
+      "title_non_sort": "The", 
+      "title_sub": "dance instruction manuals, ca. 1600-1920"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "\"<span class=\"title\">Papers from the First International Workshop on Plasma-Based Ion Implantation: 4-6 August 1993, University of Wisconsin--Madison, Madison, Wisconsin</span>.\" <span class=\"title\">Journal of vacuum science & technology. B, Microelectronics and nanometer structures processing, measurement and phenomena</span>. <span class=\"publication_places\">nyu</span>: <span class=\"publishers\">Published for the American Vacuum Society by the American Institute of Physics</span>, <span class=\"date\">1994</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "621.3815/2"
+        ], 
+        "lcc": [
+          "TS695.25 .I57 1993"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "rec_class": "Event", 
+            "title": "International Workshop on Plasma-Based Ion Implantation 1993 : University of Wisconsin--Madison)"
+          }
+        }, 
+        {
+          "agent": {
+            "rec_class": "Person"
+          }
+        }, 
+        {
+          "agent": {
+            "rec_class": "Person"
+          }
+        }, 
+        {
+          "agent": {
+            "name": "Applied Science and Technology (ASTeX), Inc", 
+            "rec_class": "Orgunit"
+          }
+        }
+      ], 
+      "date_issued": "1994", 
+      "date_sort": {
+        "$date": 757382400000
+      }, 
+      "extent_pages": "p. 813-998 : ill. ; 30 cm.", 
+      "form": {
+        "authority": "marcform", 
+        "value": "print"
+      }, 
+      "genres": [
+        {
+          "authority": "marcgt", 
+          "value": "conference publication"
+        }
+      ], 
+      "identifiers": [
+        {
+          "id_type": "isbn", 
+          "value": "1563963442"
+        }, 
+        {
+          "id_type": "lccn", 
+          "value": "97129132"
+        }, 
+        {
+          "id_type": "oclc", 
+          "value": "35547175"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "identifiers": [
+            {
+              "id_type": "issn", 
+              "value": "1071-1023"
+            }, 
+            {
+              "id_type": "local", 
+              "value": "(OCoLC)23276603"
+            }, 
+            {
+              "id_type": "local", 
+              "value": "(DLC)sn 92021098"
+            }
+          ], 
+          "rec_class": "Document", 
+          "rec_id": "issn:1071-1023", 
+          "rec_type": "Document", 
+          "title": "Journal of vacuum science & technology. B, Microelectronics and nanometer structures processing, measurement and phenomena"
+        }
+      ], 
+      "issuance": "monographic", 
+      "keywords": {
+        "und": []
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "notes": [
+        {
+          "note_type": "statement of responsibility", 
+          "value": "sponsored by Applied Science and Technology (ASTeX), Inc. ... [et al.] ; editors for the workshop, John R. Conrad, Kumar Sridharan."
+        }, 
+        {
+          "value": "\"Published in both 1994 March/April issue of the Journal of vacuum science and technology B, vol. 12, no. 2\"--T.p. verso."
+        }, 
+        {
+          "note_type": "bibliography", 
+          "value": "Includes bibliographical references and index."
+        }
+      ], 
+      "publication_places": [
+        "nyu", 
+        "New York"
+      ], 
+      "publishers": [
+        "Published for the American Vacuum Society by the American Institute of Physics"
+      ], 
+      "rec_cataloging_rules": [
+        "aacr"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "940504", 
+      "rec_id": "4968605", 
+      "rec_modified_date": "2013-11-06T18:31:57.407104", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Bibliography", 
+      "title": "Papers from the First International Workshop on Plasma-Based Ion Implantation", 
+      "title_sub": "4-6 August 1993, University of Wisconsin--Madison, Madison, Wisconsin"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"title\">TheCast iron story</span>. <span class=\"publication_places\">ncu</span>: <span class=\"publishers\">W.J. Klein Co.</span>, <span class=\"date\">1978</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "683"
+        ], 
+        "lcc": [
+          "TH6493"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "Walter J. Klein Company", 
+            "rec_class": "Orgunit"
+          }
+        }
+      ], 
+      "date_issued": "1978", 
+      "date_sort": {
+        "$date": 252460800000
+      }, 
+      "descriptions": [
+        {
+          "value": "Shows how cast iron bathtubs are manufactured, illustrating each step from the sculpturing of the wood patterns through the casting and enameling processes."
+        }
+      ], 
+      "extent_pages": "1 film reel (15 min.) : sd., col. ; 16 mm.", 
+      "form": {
+        "authority": "gmd", 
+        "value": "motion picture"
+      }, 
+      "identifiers": [
+        {
+          "id_type": "lccn", 
+          "value": "80700998"
+        }
+      ], 
+      "issuance": "monographic", 
+      "keywords": {
+        "und": []
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "notes": [
+        {
+          "note_type": "statement of responsibility", 
+          "value": "Walter J. Klein Company."
+        }, 
+        {
+          "value": "Title from data sheet."
+        }, 
+        {
+          "value": "Intended audience: Junior high school students through adults."
+        }, 
+        {
+          "value": "Issued also as super 8 mm. and as videorecording."
+        }
+      ], 
+      "publication_places": [
+        "ncu", 
+        "Charlotte, N.C"
+      ], 
+      "publishers": [
+        "W.J. Klein Co."
+      ], 
+      "rec_cataloging_rules": [
+        "aacr"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "820106", 
+      "rec_id": "11510774", 
+      "rec_modified_date": "2013-11-06T18:31:57.408165", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Film", 
+      "target_audiences": [
+        {
+          "authority": "marctarget", 
+          "value": "adult"
+        }
+      ], 
+      "title": "Cast iron story", 
+      "title_non_sort": "The"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"title\">Campbell County, Wyoming</span>. <span class=\"publication_places\">wyu</span>: <span class=\"publishers\">Campbell County Chamber of Commerce</span>, <span class=\"date\">[1982?]</span>. "
+        }
+      }, 
+      "classifications": {
+        "lcc": [
+          "G4263.C3 1982  .C3"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "Campbell County Chamber of Commerce", 
+            "rec_class": "Orgunit"
+          }
+        }
+      ], 
+      "date_issued": "[1982?]", 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "extent_pages": "1 map ; 33 x 15 cm.", 
+      "identifiers": [
+        {
+          "id_type": "lccn", 
+          "value": "83691515"
+        }
+      ], 
+      "issuance": "monographic", 
+      "keywords": {
+        "und": []
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "notes": [
+        {
+          "note_type": "statement of responsibility", 
+          "value": "this map reproduced by Campbell County Chamber of Commerce."
+        }, 
+        {
+          "value": "In lower right corner: Kintzels-Casper."
+        }
+      ], 
+      "publication_places": [
+        "wyu", 
+        "Gillette, Wyo.]"
+      ], 
+      "publishers": [
+        "Campbell County Chamber of Commerce"
+      ], 
+      "rec_cataloging_rules": [
+        "aacr"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "830222", 
+      "rec_id": "5466714", 
+      "rec_modified_date": "2013-11-06T18:31:57.409119", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Map", 
+      "title": "Campbell County, Wyoming"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"title\">3 Viennese arias :: for soprano, obbligato clarinet in B flat, and piano</span>. <span class=\"publication_places\">London</span>: <span class=\"publishers\">Nova Music</span>, <span class=\"date\">c1984</span>. "
+        }
+      }, 
+      "classifications": {
+        "lcc": [
+          "M1506 .A14 1984"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "rec_class": "Person"
+          }
+        }
+      ], 
+      "date_issued": "c1984", 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "extent_pages": "1 score (12 p.) + 2 parts ; 31 cm.", 
+      "form": {
+        "authority": "marcform", 
+        "value": "print"
+      }, 
+      "has_parts": [
+        {
+          "creators": [
+            {
+              "agent": {
+                "date_birth": "1678", 
+                "date_death": "1711", 
+                "rec_class": "Person"
+              }
+            }
+          ], 
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title_uniform": {
+            "title": "Tutto in pianto il cor struggete"
+          }
+        }, 
+        {
+          "creators": [
+            {
+              "agent": {
+                "date_birth": "1670", 
+                "date_death": "1747", 
+                "rec_class": "Person"
+              }
+            }
+          ], 
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title_uniform": {
+            "part_name": "E sempre inquieto quel core infelice.", 
+            "title": "Endimione."
+          }
+        }, 
+        {
+          "creators": [
+            {
+              "agent": {
+                "date_birth": "1670", 
+                "date_death": "1747", 
+                "rec_class": "Person"
+              }
+            }
+          ], 
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title_uniform": {
+            "part_name": "Adorata genitrice.", 
+            "title": "Mutio Scevola."
+          }
+        }, 
+        {
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title": "Three Viennese arias."
+        }, 
+        {
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title": "Viennese arias."
+        }
+      ], 
+      "issuance": "monographic", 
+      "keywords": {
+        "und": []
+      }, 
+      "languages": [
+        "it", 
+        "en"
+      ], 
+      "notes": [
+        {
+          "note_type": "statement of responsibility", 
+          "value": "G.B. Bononcini and Emperor Joseph I ; edited by Colin\n        Lawson."
+        }, 
+        {
+          "value": "Opera excerpts."
+        }, 
+        {
+          "value": "Acc. arr. for piano; obbligato for the 2nd-3rd excerpts originally for chalumeau."
+        }, 
+        {
+          "value": "Italian words."
+        }, 
+        {
+          "value": "Cover title."
+        }, 
+        {
+          "value": "The 1st excerpt composed for inclusion in M.A. Ziani's Chilonida."
+        }, 
+        {
+          "value": "Texts with English translations on cover p. [2]."
+        }
+      ], 
+      "publication_countries": [
+        "GB"
+      ], 
+      "publication_places": [
+        "London"
+      ], 
+      "publishers": [
+        "Nova Music"
+      ], 
+      "rec_cataloging_rules": [
+        "aacr"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "850813", 
+      "rec_id": "5594130", 
+      "rec_modified_date": "2013-11-06T18:31:57.412137", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "MusicalScore", 
+      "seriess": [
+        {
+          "rec_class": "Document", 
+          "rec_type": "Document", 
+          "title": "Music for voice and instrument"
+        }
+      ], 
+      "table_of_contentss": [
+        {
+          "value": "Tutto in pianto il cor struggete / Emperor Joseph I -- E sempre inquieto quel\n        core infelice : from Endimione / G. Bononcini -- L'adorata genitrice : from Muzio [i.e.\n        Mutio] Scevola / G. Bononcini."
+        }
+      ], 
+      "title": "3 Viennese arias :", 
+      "title_sub": "for soprano, obbligato clarinet in B flat, and piano"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"title\">2001 bluegrass odyssey</span>. <span class=\"publication_places\">ncu</span>: <span class=\"publishers\">Lamon Records</span>, <span class=\"date\">p1980</span>. "
+        }
+      }, 
+      "classifications": {
+        "lcc": [
+          "Lamon Records LR-4280"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name": "Roustabouts (Musical group)", 
+            "rec_class": "Orgunit"
+          }, 
+          "role": "prf"
+        }
+      ], 
+      "date_issued": "p1980", 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "extent_duration": "1 sound disc : analog, 33 1/3 rpm ; 12 in.", 
+      "form": {
+        "authority": "gmd", 
+        "value": "sound recording"
+      }, 
+      "identifiers": [
+        {
+          "id_type": "lccn", 
+          "value": "94759273"
+        }, 
+        {
+          "id_type": "issue number", 
+          "value": "LR-4280 Lamon Records"
+        }, 
+        {
+          "id_type": "oclc", 
+          "value": "31023015"
+        }
+      ], 
+      "issuance": "monographic", 
+      "keywords": {
+        "und": []
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "notes": [
+        {
+          "value": "Brief record."
+        }, 
+        {
+          "note_type": "performers", 
+          "value": "Performed by the Roustabouts."
+        }
+      ], 
+      "publication_places": [
+        "ncu", 
+        "Charlotte, NC"
+      ], 
+      "publishers": [
+        "Lamon Records"
+      ], 
+      "rec_cataloging_rules": [
+        "aacr"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "940829", 
+      "rec_id": "5718053", 
+      "rec_modified_date": "2013-11-06T18:31:57.413107", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "MusicRecording", 
+      "table_of_contentss": [
+        {
+          "value": "Bluegrass odyssey -- Hills of Tennessee -- Sassafrass -- Muddy river -- Take your shoes off Moses -- Don't let Smokey Mountain smoke get in your eyes -- Farewell party -- Faded love -- Super sonic bluegrass -- Old love letters -- Will the circle be unbroken."
+        }
+      ], 
+      "title": "2001 bluegrass odyssey"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"title\">Massachusetts death and marriage records, 1837-1897</span>. "
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "descriptions": [
+        {
+          "value": "Records of deaths and marriages in Millbury and Springfield, Mass."
+        }
+      ], 
+      "extent_pages": "2 volumes.", 
+      "identifiers": [
+        {
+          "id_type": "lccn", 
+          "value": "mm 83001404"
+        }
+      ], 
+      "issuance": "monographic", 
+      "keywords": {
+        "und": []
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "notes": [
+        {
+          "note_type": "acquisition", 
+          "value": "Purchase, 1946."
+        }, 
+        {
+          "note_type": "language", 
+          "value": "Collection material in English."
+        }, 
+        {
+          "value": "Forms part of: Miscellaneous Manuscripts collection."
+        }
+      ], 
+      "rec_cataloging_rules": [
+        "aacr", 
+        "dacs"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "830926", 
+      "rec_id": "5810505", 
+      "rec_modified_date": "2013-11-06T18:31:57.414007", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "Manuscript", 
+      "resources": [
+        {
+          "rec_class": "Resource"
+        }
+      ], 
+      "title": "Massachusetts death and marriage records, 1837-1897"
     }, 
     {
       "citations": {
@@ -1146,9 +2594,9 @@
         "Ecole d'Economie de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.176530", 
-      "rec_id": "2c558d73-4216-11e3-8d30-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.176537", 
+      "rec_created_date": "2013-11-06T18:31:57.416184", 
+      "rec_id": "55fce3b0-4709-11e3-8314-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.416191", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "MasterThesis", 
@@ -1223,9 +2671,9 @@
       "part_issue": "69", 
       "part_volume": "2012/1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.179606", 
-      "rec_id": "2c56052b-4216-11e3-8127-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.179617", 
+      "rec_created_date": "2013-11-06T18:31:57.419104", 
+      "rec_id": "55fd5611-4709-11e3-b488-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.419112", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "PeriodicalIssue", 
@@ -1234,7 +2682,7 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=effects+at+home+of+initiating+production+abroad%3A+evidence+from+matched+french+firms&amp;rft.genre=unknown&amp;rft.date=2011\"></span><span class=\"creator\">Jean, Sébastien</span>, <span class=\"creator\">Alexander Hijzen</span>, and <span class=\"creator\">Thierry Mayer</span>. <span class=\"title\">The effects at home of initiating production abroad: evidence from matched french firms</span>. <span class=\"date\">2011</span>. "
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=effects+at+home+of+initiating+production+abroad%3A+evidence+from+matched+french+firms&amp;rft.genre=unknown&amp;rft.date=2011\"></span><span class=\"creator\">Jean, Sébastien</span>, <span class=\"creator\">Alexander Hijzen</span>, and <span class=\"creator\">Thierry Mayer</span>. <span class=\"title\">Theeffects at home of initiating production abroad: evidence from matched french firms</span>. <span class=\"date\">2011</span>. "
         }
       }, 
       "classifications": {
@@ -1317,14 +2765,14 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.182191", 
-      "rec_id": "2c566b33-4216-11e3-b738-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.182198", 
+      "rec_created_date": "2013-11-06T18:31:57.421705", 
+      "rec_id": "55fdbc4c-4709-11e3-82ff-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.421713", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Preprint", 
       "title": "effects at home of initiating production abroad: evidence from matched french firms", 
-      "title_non_sort": "The "
+      "title_non_sort": "The"
     }, 
     {
       "citations": {
@@ -1402,9 +2850,9 @@
         "CEE (Sciences Po)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.185292", 
-      "rec_id": "2c56e407-4216-11e3-9022-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.185299", 
+      "rec_created_date": "2013-11-06T18:31:57.424673", 
+      "rec_id": "55fe2feb-4709-11e3-a18e-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.424680", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Report", 
@@ -1501,9 +2949,9 @@
       "part_page_begin": "89", 
       "part_page_end": "98", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.188844", 
-      "rec_id": "2c576e07-4216-11e3-b4f3-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.188851", 
+      "rec_created_date": "2013-11-06T18:31:57.427932", 
+      "rec_id": "55feae70-4709-11e3-a925-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.427939", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ReportPart", 
@@ -1569,9 +3017,9 @@
         "Sciences Po - Atelier de cartographie"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.191098", 
-      "rec_id": "2c57c68c-4216-11e3-b12a-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.191105", 
+      "rec_created_date": "2013-11-06T18:31:57.430151", 
+      "rec_id": "55ff0599-4709-11e3-aef8-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.430158", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WebSite", 
@@ -1668,9 +3116,9 @@
         "Sciences Po - ECON"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-10-31T11:21:15.193894", 
-      "rec_id": "2c58341e-4216-11e3-8941-406c8f07170d", 
-      "rec_modified_date": "2013-10-31T11:21:15.193901", 
+      "rec_created_date": "2013-11-06T18:31:57.433040", 
+      "rec_id": "55ff76cc-4709-11e3-9320-406c8f07170d", 
+      "rec_modified_date": "2013-11-06T18:31:57.433047", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WorkingPaper", 
