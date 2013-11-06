@@ -199,22 +199,26 @@ def create_address(street, post_code, locality_city_town, country, preferred, re
     return address
 
 
-def create_affiliation(rec_id, name, role=None, date_begin=None, date_end=None, preferred=False):
+def create_affiliation(rec_id, name, role=None, date_begin=None, date_end=None, preferred=False, descriptions=None):
     affiliation = {}
-    if preferred:
-        affiliation["preferred"] = preferred
-    if role:
-        affiliation["role"] = role
     if date_begin:
         affiliation["date_begin"] = date_begin
     if date_end:
         affiliation["date_end"] = date_end
+    if descriptions:
+        affiliation["descriptions"] = descriptions
+    if preferred:
+        affiliation["preferred"] = preferred
+    if role:
+        affiliation["role"] = role
+    # agent
     agent = Orgunit()
     if rec_id:
         agent["rec_id"] = rec_id
     if name:
         agent["name"] = name
     affiliation["agent"] = agent
+
     return affiliation
 
 
@@ -237,6 +241,8 @@ def create_identifier(id_type, id_value):
         identifier["value"] = id_value
         if id_type:
             identifier["id_type"] = id_type
+        else:
+            identifier["id_type"] = "local"
         return identifier
 
 
@@ -294,16 +300,42 @@ def create_phone(formatted, phone_type, preferred, relation_type, visible):
         return phone
 
 
-def create_resource_remote(url, role=None, date_last_accessed=None):
+def create_resource_remote(url, date_last_accessed=None, relation_type=None, relation_version=None, access_rights=None, rec_state=None, format_mimetype=None, rec_created_date=None, rec_modified_date=None):
+    """
+    url: URL of the resource
+    date_last_accessed: Date last accessed on the web
+    relation_type: cv, picture, logo, backCover, frontCover, dataset, humanStartPage, publication
+    relation_version: authorVersion, publishedVersion
+    access_rights: closedAccess, embargoedAccess, openAccess, restrictedAccess
+    rec_state: private, pending, rejected, published, deleted
+    format_mimetype : MIME type of the resource
+    rec_created_date: Creation date of this resource inside the repository
+    rec_modified_date: Last modification date of this resource inside the repository
+    """
     if url is not None:
         resource = Resource()
         resource["rec_type"] = "ResourceRemote"
-        if role:
-            resource["role"] = role
+
+        if not rec_state:
+            rec_state = "published"
+        resource["rec_state"] = rec_state
+
+        resource["url"] = url
+
         if date_last_accessed:
             resource["date_last_accessed"] = date_last_accessed
-        resource["url"] = url
+
+        if relation_type:
+            resource["relation_type"] = relation_type
+
+        if relation_version:
+            resource["relation_version"] = relation_version
+
+        if access_rights:
+            resource["access_rights"] = access_rights
+        
         return resource
+
 
 
 def create_url(value, preferred, relation_type, label, date_last_accessed, visible):
