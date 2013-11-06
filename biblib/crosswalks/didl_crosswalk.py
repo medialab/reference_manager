@@ -2,9 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-from biblib.metajson import Resource
 from biblib.crosswalks import mods_crosswalk
-from biblib.util import constants
+from biblib.services import metajson_service
 from biblib.util import xmletree
 
 
@@ -58,27 +57,32 @@ def didl_xmletree_to_metajson(root_item, source):
             elif 'info:eu-repo/semantics/objectFile' in item_types:
                 # resource
                 #print "resource"
-                resource = Resource()
-                resource["rec_state"] = "published"
-                resource["rec_type"] = "remote"
-                resource["relation_type"] = "publication"
-                resource["rec_access_rights"] = "openAccess"
+                url = None
+                date_last_accessed = None
+                relation_type = "publication"
+                relation_version = None
+                access_rights = "openAccess"
+                rec_state = "published"
+                format_mimetype = None
+                rec_created_date = None
+                rec_modified_date = None
 
                 if 'info:eu-repo/semantics/publishedVersion' in item_types:
-                    resource["relation_version"] = "publishedVersion"
+                    relation_version = "publishedVersion"
                 elif 'info:eu-repo/semantics/authorVersion' in item_types:
-                    resource["relation_version"] = "authorVersion"
+                    relation_version = "authorVersion"
 
                 if item_date_modified:
-                    resource["rec_modified_date"] = item_date_modified
+                    rec_modified_date = item_date_modified
 
                 component = item.find(xmletree.prefixtag("didl", "Component"))
                 if component is not None:
                     didl_resource = component.find(xmletree.prefixtag("didl", "Resource"))
                     if didl_resource is not None:
-                        resource["url"] = didl_resource.get("ref")
-                        resource["format_mimetype"] = didl_resource.get("mimeType")
+                        url = didl_resource.get("ref")
+                        format_mimetype = didl_resource.get("mimeType")
 
+                resource = metajson_service.create_resource_remote(url, date_last_accessed, relation_type, relation_version, access_rights, rec_state, format_mimetype, rec_created_date, rec_modified_date)
                 resources.append(resource)
 
     if document and resources:
