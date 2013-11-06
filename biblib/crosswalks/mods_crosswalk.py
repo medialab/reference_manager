@@ -10,13 +10,15 @@ from biblib.metajson import Orgunit
 from biblib.metajson import Person
 from biblib.metajson import Resource
 from biblib.metajson import Rights
+from biblib.services import country_service
 from biblib.services import creator_service
+from biblib.services import date_service
 from biblib.services import language_service
 from biblib.services import metajson_service
 from biblib.util import constants
 from biblib.util import xmletree
 
-MODS_PART_FIELDS = ["part_chapter_number", "part_chapter_title", "part_chronology", "part_column", "part_issue", "part_month", "part_name", "part_number", "part_page_end", "part_page_begin", "part_paragraph", "part_quarter", "part_season", "part_section", "part_session", "part_track", "part_unit", "part_volume", "part_week"]
+MODS_PART_FIELDS = ["part_chapter_number", "part_chapter_title", "part_chronology", "part_column", "part_issue", "part_month", "part_name", "part_number", "part_page_begin", "part_page_end", "part_paragraph_number", "part_quarter", "part_season", "part_section_title", "part_session", "part_timecode_begin", "part_timecode_end", "part_track_number", "part_track_title", "part_volume", "part_week"]
 
 MODS_DATE_FIELDS = []
 
@@ -151,23 +153,44 @@ MODS_GENRE_MARCGT_TO_METAJSON_DOCUMENT_TYPE = {
     "websiteContribution": constants.DOC_TYPE_WEBPAGE
 }
 
+# Last chance...
+MODS_GENRE_FREE_TO_METAJSON_DOCUMENT_TYPE = {
+    "journal article": constants.DOC_TYPE_JOURNALARTICLE,
+    "Website": constants.DOC_TYPE_WEBSITE
+}
+
+MODS_TYPEOFRESOURCE_TO_METAJSON_DOCUMENT_TYPE = {
+    "text": constants.DOC_TYPE_DOCUMENT,
+    "cartographic": constants.DOC_TYPE_MAP,
+    "notated music": constants.DOC_TYPE_MUSICALSCORE,
+    "sound recording-musical": constants.DOC_TYPE_MUSICRECORDING,
+    "sound recording-nonmusical": constants.DOC_TYPE_MUSICRECORDING,
+    "sound recording": constants.DOC_TYPE_AUDIORECORDING,
+    "still image": constants.DOC_TYPE_IMAGE,
+    "moving image": constants.DOC_TYPE_VIDEORECORDING,
+    "three dimensional object": constants.DOC_TYPE_PHYSICALOBJECT,
+    "software, multimedia": constants.DOC_TYPE_SOFTWARE,
+    "mixed material": constants.DOC_TYPE_MIXEDMATERIAL
+}
 
 def mods_xmletree_to_metajson_list(mods_root, source, only_first_record):
+    """  MODS xmletree -> MetaJSON Document list"""
     if mods_root is not None:
         if mods_root.tag.endswith("mods"):
             yield mods_xmletree_to_metajson(mods_root, source)
         elif mods_root.tag.endswith("modsCollection"):
-            mods_list = mods_root.findall("mods")
+            mods_list = mods_root.findall(xmletree.prefixtag("mods", "mods"))
             if mods_list:
                 for mods in mods_list:
                     yield mods_xmletree_to_metajson(mods, source)
 
 
 def mods_xmletree_to_metajson(mods, source):
+    """ MODS xmletree -> MetaJSON Document """
     if mods is None:
         return None
 
-    # mods version
+    # @version -> null
     mods_version = mods.get("version")
     print "# mods_version: {}".format(mods_version)
 
@@ -185,178 +208,118 @@ def mods_xmletree_to_metajson(mods, source):
 
 
 def mods_root_or_related_item_to_metajson(mods, root_rec_type):
+    """ MODS root or relatedItem -> MetaJSON Document """
     if mods is None:
         return None
 
+    #print "root_rec_type: {}".format(root_rec_type)
+
     document = Document()
 
+    # related_item_type
+    related_item_type = mods.get("type")
+
     # typeOfResource, genre -> rec_type, genres
-    document.update(extract_mods_genres_type_of_resources(mods))
-    if root_rec_type is not None and root_rec_type in constants.root_rec_type_to_is_part_of_rec_type:
-        document["rec_type"] = constants.root_rec_type_to_is_part_of_rec_type[root_rec_type]
-    rec_type = document["rec_type"]
+    rec_type = None
+    document.update(get_mods_genres_type_of_resources(mods))
+    if "rec_type" not in document:
+        if related_item_type == "original":
+            # In case of original relatedItem
+            rec_type = root_rec_type
+        elif related_item_type == "host" and root_rec_type is not None and root_rec_type in constants.root_rec_type_to_is_part_of_rec_type:
+            # In case of host relatedItem
+            rec_type = constants.root_rec_type_to_is_part_of_rec_type[root_rec_type]
+        else:
+            # Default
+            rec_type = constants.DOC_TYPE_DOCUMENT
+        document["rec_type"] = rec_type
+    else:
+        rec_type = document["rec_type"]
 
-    # ID, identifiers -> rec_id, identifiers
-    document.update(extract_mods_identifiers_and_rec_id(mods))
+    # identifier, ID -> rec_id, identifiers
+    document.update(get_mods_identifiers_and_rec_id(mods))
 
-    # titleInfo
-    document.update(extract_mods_title_infos(mods))
+    # titleInfo -> title, title_non_sort, title_sub, part_number, part_name,
+    # title_abbreviated, title_alternative, title_translated, title_uniform
+    document.update(get_mods_title_infos(mods))
 
-    # name
-    document.update(extract_mods_names(mods))
+    # name, extension/daiList -> creators[]
+    document.update(get_mods_names(mods))
 
-    # originInfo
-    document.update(extract_mods_origin_info(mods))
+    # originInfo -> 
+    # date_issued, date_created, date_captured, date_valid, date_modified, date_copyrighted, date_other,
+    # edition, frequency, issuance, publication_countries, publication_places, publishers
+    document.update(get_mods_origin_info(mods))
 
-    # languages
-    document.update(extract_mods_languages(mods))
+    # language/languageTerm -> languages
+    document.update(get_mods_languages(mods))
 
-    # physicalDescription
-    document.update(extract_mods_physical_description(mods, rec_type))
+    # physicalDescription ->
+    # extent_duration, extent_dimension, extent_pages, form, physical_description_notes, reformatting_quality
+    document.update(get_mods_physical_description(mods, rec_type))
 
-    # abstract
-    document.update(extract_mods_abstracts(mods))
+    # abstract -> descriptions
+    document.update(get_mods_abstracts(mods))
 
-    # tableOfContents
-    document.update(extract_mods_table_of_contentss(mods))
+    # tableOfContents -> table_of_contentss
+    document.update(get_mods_table_of_contentss(mods))
 
-    # targetAudience
-    document.update(extract_mods_target_audiences(mods))
+    # targetAudience -> target_audiences
+    document.update(get_mods_target_audiences(mods))
 
-    # note
-    document.update(extract_mods_notes(mods))
+    # note -> notes
+    document.update(get_mods_notes(mods))
 
-    # subject
-    document.update(extract_mods_subjects(mods))
+    # subject -> keywords, subjects
+    document.update(get_mods_subjects(mods))
 
-    # classification
-    document.update(extract_mods_classifications(mods))
+    # classification -> classifications, peer_review, peer_review_geo, citation_databases, expert_committees
+    document.update(get_mods_classifications(mods))
 
-    # relatedItem
-    document.update(extract_mods_related_items(mods, rec_type))
+    # relatedItem ->
+    # is_part_ofs, has_parts, review_ofs, originals, seriess, is_referenced_bys, references,
+    # other_formats, other_versions, precedings, succeedings
+    document.update(get_mods_related_items(mods, rec_type))
 
-    # location
-    document.update(extract_mods_locations(mods))
+    # location -> resources
+    document.update(get_mods_locations(mods))
 
-    # accessCondition
-    document.update(extract_mods_access_conditions(mods))
+    # accessCondition -> rights
+    document.update(get_mods_access_conditions(mods))
 
-    # part
-    document.update(extract_mods_parts(mods))
+    # part/detail/number -> part_chapter_number, part_issue, part_paragraph_number, part_track_number, part_volume
+    # part/detail/title -> part_chapter_title, part_section_title, part_track_title
+    # part/extent/start -> part_page_begin, part_timecode_begin
+    # part/extent/end -> part_page_end, part_timecode_end
+    document.update(get_mods_parts(mods))
 
     # extension
-    # dailist is managed by the function extract_mods_names
+    # dailist is managed by the function get_mods_names
 
-    # recordInfo
-    document.update(extract_mods_record_info(mods))
+    # recordInfo -> rec_ 
+    document.update(get_mods_record_info(mods))
 
     return document
 
 
-def extract_mods_related_items(mods_root, root_rec_type):
-    mods_related_items = mods_root.findall(xmletree.prefixtag("mods", "relatedItem"))
-    result = Document()
-    if mods_related_items:
-        # mods related_items
+def get_mods_genres_type_of_resources(mods):
+    """ genre, typeOfResource -> rec_type, genres """
+    rec_type = None
+    genres = []
 
-        for mods_related_item in mods_related_items:
-            if mods_related_item is not None:
-                # extract the relatedItem type attribute
-                mods_related_item_type = mods_related_item.get("type")
-                # mods_related_item_type in : preceding, succeeding, original, host, constituent, series, otherVersion, otherFormat, isReferencedBy, references, reviewOf)
-
-                # convert like a mods record
-                related_item = mods_root_or_related_item_to_metajson(mods_related_item, root_rec_type)
-
-                if related_item is not None:
-                    # extract related_item rec_type
-                    related_item_rec_type = related_item["rec_type"]
-
-                    #print "root_rec_type: {} related_item_rec_type: {} mods_related_item_type: {} ".format(root_rec_type, related_item_rec_type, mods_related_item_type)
-
-                    if mods_related_item_type == "host":
-                        # move the part fields from the related item to the root document
-                        metajson_service.move_keys_between_dicts(MODS_PART_FIELDS, related_item, result)
-
-                        # copy the date fields from the related item to the root document
-                        if root_rec_type in MODS_ARTICLE_TYPES:
-                            metajson_service.copy_keys_between_dicts(MODS_DATE_FIELDS, related_item, result)
-
-                        # host -> is_part_ofs
-                        result.add_item_to_key(related_item, "is_part_ofs")
-
-                    elif mods_related_item_type == "original":
-
-                        if root_rec_type in ["BookReview", "ArticleReview"]:
-                            # original -> review_ofs
-                            result.add_item_to_key(related_item, "review_ofs")
-                        else:
-                            # original -> originals
-                            result.add_item_to_key(related_item, "originals")
-
-                    elif mods_related_item_type == "reviewOf":
-
-                        # reviewOf -> review_ofs
-                        result.add_item_to_key(related_item, "review_ofs")
-
-                    elif mods_related_item_type == "series":
-
-                        # series -> seriess
-                        result.add_item_to_key(related_item, "seriess")
-
-                    elif mods_related_item_type == "constituent":
-
-                        # constituent -> has_parts
-                        result.add_item_to_key(related_item, "has_parts")
-
-                    elif mods_related_item_type == "isReferencedBy":
-
-                        # isReferencedBy -> is_referenced_bys
-                        result.add_item_to_key(related_item, "is_referenced_bys")
-
-                    elif mods_related_item_type == "references":
-
-                        # references -> references
-                        result.add_item_to_key(related_item, "references")
-
-                    elif mods_related_item_type == "otherFormat":
-
-                        # otherFormat -> other_formats
-                        result.add_item_to_key(related_item, "other_formats")
-
-                    elif mods_related_item_type == "otherVersion":
-
-                        # otherVersion -> other_versions
-                        result.add_item_to_key(related_item, "other_versions")
-
-                    elif mods_related_item_type == "preceding":
-
-                        # preceding -> precedings
-                        result.add_item_to_key(related_item, "precedings")
-
-                    elif mods_related_item_type == "succeedings":
-
-                        # succeeding -> succeedings
-                        result.add_item_to_key(related_item, "succeedings")
-
-    return result
-
-
-def extract_mods_genres_type_of_resources(mods):
-    result = {}
     # genre
     mods_genres = mods.findall(xmletree.prefixtag("mods", "genre"))
     if mods_genres:
         genre_eurepo = None
         genre_eprint = None
         genre_marcgt = None
-        other_genres = []
+        genre_free = None
         for mods_genre in mods_genres:
-            genre_value = mods_genre.text.strip()
-            genre_authority = mods_genre.get("authority")
-            genre_type = mods_genre.get("type")
-            # text
-            if genre_value:
+            if mods_genre.text is not None:
+                genre_value = mods_genre.text.strip()
+                genre_authority = mods_genre.get("authority")
+                genre_type = mods_genre.get("type")
+                # text
                 if genre_value.startswith("info:eu-repo/semantics/"):
                     # last occurrence of eu-repo
                     genre_eurepo = genre_value
@@ -366,6 +329,9 @@ def extract_mods_genres_type_of_resources(mods):
                 elif genre_marcgt is None and genre_value in MODS_GENRE_MARCGT_TO_METAJSON_DOCUMENT_TYPE:
                     # first occurrence of marcgt
                     genre_marcgt = genre_value
+                elif genre_value in MODS_GENRE_FREE_TO_METAJSON_DOCUMENT_TYPE:
+                    # last chance...
+                    genre_free = genre_value
                 else:
                     genre = {}
                     genre["value"] = genre_value
@@ -375,43 +341,128 @@ def extract_mods_genres_type_of_resources(mods):
                     if genre_type:
                         # type (examples: class, work type, or style)
                         genre["type"] = genre_type
-                    other_genres.append(genre)
-        # rec_type is based on authorities: eu-repo, eprint, marcgt
-        rec_type = None
+                    genres.append(genre)
+        # rec_type is based on authorities by order: eu-repo, eprint, marcgt, free
         if genre_eurepo:
             rec_type = MODS_GENRE_EUREPO_TO_METAJSON_DOCUMENT_TYPE[genre_eurepo]
         elif rec_type is None and genre_eprint:
             rec_type = MODS_GENRE_EPRINT_TO_METAJSON_DOCUMENT_TYPE[genre_eprint]
         elif rec_type is None and genre_marcgt:
             rec_type = MODS_GENRE_MARCGT_TO_METAJSON_DOCUMENT_TYPE[genre_marcgt]
-        else:
-            rec_type = "Document"
-        result["rec_type"] = rec_type
-
-        if other_genres:
-            result["genres"] = other_genres
+        elif rec_type is None and genre_free:
+            rec_type = MODS_GENRE_FREE_TO_METAJSON_DOCUMENT_TYPE[genre_free]
 
     # typeOfResource
-    mods_type_of_resources = mods.findall(xmletree.prefixtag("mods", "typeOfResource"))
-    if mods_type_of_resources:
-        for mods_type_of_resource in mods_type_of_resources:
-            # todo
+    if rec_type is None:
+        rml_type_of_resource = mods.find(xmletree.prefixtag("mods", "typeOfResource"))
+        if rml_type_of_resource is not None:
+            type_of_resource_value = xmletree.get_element_text(rml_type_of_resource)
+            #type_of_resource_collection = xmletree.get_element_attribute(rml_type_of_resource, "collection")
+            type_of_resource_manuscript = xmletree.get_element_attribute(rml_type_of_resource, "manuscript")
+            if type_of_resource_manuscript == "yes":
+                rec_type = constants.DOC_TYPE_MANUSCRIPT
+            elif type_of_resource_value in MODS_TYPEOFRESOURCE_TO_METAJSON_DOCUMENT_TYPE:
+                rec_type = MODS_TYPEOFRESOURCE_TO_METAJSON_DOCUMENT_TYPE[type_of_resource_value]
 
-            # text values:
-            # text, cartographic, notated music, sound recording-musical, sound recording-nonmusical, sound recording,
-            # still image, moving image, three dimensional object, software, multimedia, mixed material
-
-            # collection
-            # value: yes
-
-            # manuscript
-            # value: yes
-            pass
-
+    result = {}
+    if rec_type:
+        result["rec_type"] = rec_type
+    else:
+        result["rec_type"] = constants.DOC_TYPE_DOCUMENT
+    if genres:
+        result["genres"] = genres
     return result
 
 
-def extract_mods_identifiers_and_rec_id(mods):
+def get_mods_abstracts(mods):
+    """ abstract -> descriptions """
+    result = {}
+    mods_abstracts = mods.findall(xmletree.prefixtag("mods", "abstract"))
+    if mods_abstracts is not None:
+        descriptions = convert_mods_string_langs(mods_abstracts)
+        if descriptions:
+            result["descriptions"] = descriptions
+    return result
+
+
+def get_mods_access_conditions(mods):
+    """ accessCondition -> rights """
+    result = {}
+    mods_access_conditions = mods.findall(xmletree.prefixtag("mods", "accessCondition"))
+    if mods_access_conditions is not None:
+        access_conditions = convert_mods_string_lang_types(mods_access_conditions, "rights_type")
+        if access_conditions:
+            rights = Rights()
+            for access_condition in access_conditions:
+                if "rights_type" in access_condition:
+                    if access_condition["rights_type"] == "restriction on access":
+                        del access_condition["rights_type"]
+                        if "restriction_on_access" not in rights:
+                            rights["restriction_on_access"] = []
+                        rights["restriction_on_access"].append(access_condition)
+                    elif access_condition["rights_type"] == "use and reproduction":
+                        del access_condition["rights_type"]
+                        if "use_and_reproduction" not in rights:
+                            rights["use_and_reproduction"] = []
+                        rights["use_and_reproduction"].append(access_condition)
+                else:
+                    if "other_conditions" not in rights:
+                        rights["other_conditions"] = []
+                    rights["other_conditions"].append(access_condition)
+            if rights:
+                result["rights"] = rights
+    return result
+
+
+def get_mods_classifications(mods):
+    """ classification -> classifications, peer_review, peer_review_geo, citation_databases, expert_committees """
+    result = {}
+    mods_classifications = mods.findall(xmletree.prefixtag("mods", "classification"))
+    if mods_classifications is not None:
+        classifications_dict = {}
+        peer_review = False
+        peer_review_geo = []
+        citation_databases = []
+        expert_committees = []
+        for mods_classification in mods_classifications:
+            if mods_classification is not None:
+                mods_classification_authority = mods_classification.get("authority")
+                #mods_classification_lang = mods_classification.get("lang")
+                if mods_classification.text is not None:
+                    if mods_classification_authority is None:
+                        mods_classification_authority = constants.CLASSIFICATION_UNDETERMINED
+                    if mods_classification_authority == "peer-review" and mods_classification.text == "yes":
+                        # peer_review
+                        peer_review = True
+                    elif mods_classification_authority == "peer-review-geo":
+                        # peer_review_geo
+                        peer_review_geo.append(mods_classification.text.strip())
+                    elif mods_classification_authority == "citation-databases":
+                        # citation_databases
+                        citation_databases.append(mods_classification.text.strip())
+                    elif mods_classification_authority == "expert-committee":
+                        # expert_committees
+                        expert_committees.append(mods_classification.text.strip())
+                    else:
+                        if mods_classification_authority not in classifications_dict:
+                            classifications_dict[mods_classification_authority] = []
+                        classifications_dict[mods_classification_authority].append(mods_classification.text.strip())
+
+        if classifications_dict:
+            result["classifications"] = classifications_dict
+        if peer_review:
+            result["peer_review"] = peer_review
+        if peer_review_geo:
+            result["peer_review_geo"] = peer_review_geo
+        if citation_databases:
+            result["citation_databases"] = citation_databases
+        if expert_committees:
+            result["expert_committees"] = expert_committees
+    return result
+
+
+def get_mods_identifiers_and_rec_id(mods):
+    """ identifier, ID -> rec_id, identifiers """
     result = {}
 
     # rec_id
@@ -419,6 +470,8 @@ def extract_mods_identifiers_and_rec_id(mods):
     mods_id = mods.get("ID")
     if mods_id is not None:
         rec_id = mods_id
+    else:
+        pass
 
     # identifiers
     mods_identifiers = mods.findall(xmletree.prefixtag("mods", "identifier"))
@@ -439,51 +492,83 @@ def extract_mods_identifiers_and_rec_id(mods):
     return result
 
 
-def extract_mods_title_infos(mods):
+def get_mods_languages(mods):
+    """ language/languageTerm -> languages """
     result = {}
-    mods_titleinfos = mods.findall(xmletree.prefixtag("mods", "titleInfo"))
-    if mods_titleinfos is not None:
-        for mods_titleinfo in mods_titleinfos:
-            if mods_titleinfo is not None:
-                title_dict = {}
-                # type
-                title_type = mods_titleinfo.get("type")
-                # title
-                if mods_titleinfo.find(xmletree.prefixtag("mods", "title")) is not None:
-                    title_dict["title"] = mods_titleinfo.find(xmletree.prefixtag("mods", "title")).text.strip()
-                # nonSort
-                if mods_titleinfo.find(xmletree.prefixtag("mods", "nonSort")) is not None:
-                    title_dict["title_non_sort"] = mods_titleinfo.find(xmletree.prefixtag("mods", "nonSort")).text
-                # subTitle
-                if mods_titleinfo.find(xmletree.prefixtag("mods", "subTitle")) is not None:
-                    title_dict["title_sub"] = mods_titleinfo.find(xmletree.prefixtag("mods", "subTitle")).text.strip()
-                # partNumber
-                if mods_titleinfo.find(xmletree.prefixtag("mods", "partNumber")) is not None:
-                    title_dict["part_number"] = mods_titleinfo.find(xmletree.prefixtag("mods", "partNumber")).text.strip()
-                # partName
-                if mods_titleinfo.find(xmletree.prefixtag("mods", "partName")) is not None:
-                    title_dict["part_name"] = mods_titleinfo.find(xmletree.prefixtag("mods", "partName")).text.strip()
+    mods_languages = mods.findall(xmletree.prefixtag("mods", "language"))
+    if mods_languages is not None:
+        languages = []
+        for mods_language in mods_languages:
+            if mods_language is not None:
+                mods_terms = mods_language.findall(xmletree.prefixtag("mods", "languageTerm"))
+                if mods_terms is not None:
+                    language = None
+                    for mods_term in mods_terms:
+                        # only one languageTerm by language is parsed
+                        if mods_term.text is not None and language is None:
+                            mods_term_value = mods_term.text.strip()
+                            if mods_term.get("type") == "code":
+                                # code
+                                if mods_term.get("authority") in ["rfc3066", "rfc4646", "rfc5646"]:
+                                    # rfc5646
+                                    language = language_service.extract_rfc5646_language(mods_term_value)
 
-                if title_type is None and "title" not in result:
-                    result.update(title_dict)
-                elif title_type == "abbreviated":
-                    result["title_abbreviated"] = title_dict
-                elif title_type == "alternative":
-                    result["title_alternative"] = title_dict
-                elif title_type == "translated":
-                    result["title_translated"] = title_dict
-                elif title_type == "uniform":
-                    result["title_uniform"] = title_dict
-                else:
-                    print "error convert_mods_titleinfos unknown type: {}".format(title_type)
+                                elif mods_term.get("authority") == "iso639-2b":
+                                    # iso639-2b
+                                    language = language_service.convert_iso639_2b_to_rfc5646(mods_term_value)
+
+                                elif mods_term.get("authority") == "iso639-3":
+                                    # iso639-3
+                                    # todo
+                                    language = language_service.convert_unknown_format_to_rfc5646(mods_term_value)
+                            else:
+                                # text: natural language like french or english
+                                language = language_service.convert_unknown_format_to_rfc5646(mods_term_value)
+                    if language:
+                        languages.append(language)
+        if languages:
+            result["languages"] = languages
     return result
 
 
-def extract_mods_names(mods):
+def get_mods_locations(mods):
+    """ location -> resources """
+    result = {}
+    locations = mods.findall(xmletree.prefixtag("mods", "location"))
+    if locations is not None:
+        resources = []
+        for location in locations:
+            if location is not None:
+                resource = Resource()
+                # url -> remote
+                mods_url = location.find(xmletree.prefixtag("mods", "url"))
+                if mods_url is not None:
+                    url = mods_url.text.strip()
+                    date_last_accessed = mods_url.get("dateLastAccessed")
+                    if url:
+                        resource["rec_type"] = "remote"
+                        resource["url"] = url
+                        if date_last_accessed is not None:
+                            resource["dateLastAccessed"] = date_last_accessed.strip()
+
+                # todo
+                # physicalLocation
+                # shelfLocator
+                # holdingSimple
+                # holdingExternal
+
+                resources.append(resource)
+        if resources:
+            result["resources"] = resources
+    return result
+
+
+def get_mods_names(mods):
+    """ name, extension/daiList -> creators list """
     result = {}
     mods_names = mods.findall(xmletree.prefixtag("mods", "name"))
     if mods_names:
-        dai_dict = extract_mods_dailist_to_dict(mods)
+        dai_dict = get_mods_dailist_as_dict(mods)
         creators = []
         for mods_name in mods_names:
             creator = convert_mods_name_dai_dict_to_creator(mods_name, dai_dict)
@@ -494,7 +579,8 @@ def extract_mods_names(mods):
     return result
 
 
-def extract_mods_dailist_to_dict(mods):
+def get_mods_dailist_as_dict(mods):
+    """ extension/daiList -> temporary dict """
     mods_extension = mods.find(xmletree.prefixtag("mods", "extension"))
     if mods_extension is not None:
         mods_dai_list = mods_extension.find(xmletree.prefixtag("dai", "daiList"))
@@ -510,6 +596,7 @@ def extract_mods_dailist_to_dict(mods):
 
 
 def convert_mods_name_dai_dict_to_creator(mods_name, dai_dict):
+    """ name, extension/daiList -> creator """
     if mods_name is not None:
         creator = Creator()
         # extract mods properties
@@ -636,6 +723,7 @@ def convert_mods_name_dai_dict_to_creator(mods_name, dai_dict):
 
 
 def convert_mods_name_roleterm(mods_roleterm):
+    """ role/roleTerm -> role """
     if mods_roleterm is not None:
         authority = mods_roleterm.get("authority")
         term_type = mods_roleterm.get("type")
@@ -660,55 +748,76 @@ def convert_mods_name_roleterm(mods_roleterm):
         return "cre"
 
 
-def extract_mods_origin_info(mods):
+def get_mods_notes(mods):
+    """ note -> notes  """
+    result = {}
+    mods_notes = mods.findall(xmletree.prefixtag("mods", "note"))
+    if mods_notes is not None:
+        notes = convert_mods_string_lang_types(mods_notes, "note_type")
+        if notes:
+            result["notes"] = notes
+    return result
+
+
+def get_mods_origin_info(mods):
+    """ originInfo -> 
+        date_issued, date_created, date_captured, date_valid, date_modified, date_copyrighted, date_other,
+        edition, frequency, issuance, publication_countries, publication_places, publishers
+    """
     mods_origin_info = mods.find(xmletree.prefixtag("mods", "originInfo"))
     result = {}
     if mods_origin_info is not None:
-        # dateIssued
+        # dateIssued -> date_issued
         date_issued = convert_mods_date(mods_origin_info.find(xmletree.prefixtag("mods", "dateIssued")))
         if date_issued:
             result["date_issued"] = date_issued
-        # dateCreated
+
+        # dateCreated -> date_created
         date_created = convert_mods_date(mods_origin_info.find(xmletree.prefixtag("mods", "dateCreated")))
         if date_created:
             result["date_created"] = date_created
-        # dateCaptured
+
+        # dateCaptured -> date_captured
         date_captured = convert_mods_date(mods_origin_info.find(xmletree.prefixtag("mods", "dateCaptured")))
         if date_captured:
             result["date_captured"] = date_captured
-        # dateValid
+
+        # dateValid -> date_valid
         date_valid = convert_mods_date(mods_origin_info.find(xmletree.prefixtag("mods", "dateValid")))
         if date_valid:
             result["date_valid"] = date_valid
-        # dateModified
+
+        # dateModified -> date_modified
         date_modified = convert_mods_date(mods_origin_info.find(xmletree.prefixtag("mods", "dateModified")))
         if date_modified:
             result["date_modified"] = date_modified
-        # copyrightDate
+
+        # copyrightDate -> date_copyrighted
         date_copyrighted = convert_mods_date(mods_origin_info.find(xmletree.prefixtag("mods", "copyrightDate")))
         if date_copyrighted:
             result["date_copyrighted"] = date_copyrighted
-        # dateOther
+
+        # dateOther -> date_other
         date_other = convert_mods_date(mods_origin_info.find(xmletree.prefixtag("mods", "dateOther")))
         if date_other:
             result["date_other"] = date_other
 
-        # edition
+        # edition -> edition
         mods_edition = mods_origin_info.find(xmletree.prefixtag("mods", "edition"))
         if mods_edition is not None:
             result["edition"] = mods_edition.text.strip()
 
-        # frequency
+        # frequency -> frequency
         mods_frequency = mods_origin_info.find(xmletree.prefixtag("mods", "frequency"))
         if mods_frequency is not None:
             result["frequency"] = mods_frequency.text.strip()
 
-        # issuance
+        # issuance -> issuance
         mods_issuance = mods_origin_info.find(xmletree.prefixtag("mods", "issuance"))
         if mods_issuance is not None:
             result["issuance"] = mods_issuance.text.strip()
 
-        # place
+        # place/placeTerm -> publication_countries, publication_places
         mods_places = mods_origin_info.findall(xmletree.prefixtag("mods", "place"))
         if mods_places is not None:
             publication_countries = []
@@ -718,24 +827,28 @@ def extract_mods_origin_info(mods):
                     mods_place_term = mods_place.find(xmletree.prefixtag("mods", "placeTerm"))
                     if mods_place_term is not None:
                         place_value = mods_place_term.text.strip()
-                        place_type = mods_place_term.get("type")
+                        #place_type = mods_place_term.get("type")
                         place_authority = mods_place_term.get("authority")
                         if place_value:
-                            if place_authority == "iso3166":
-                                pass
-                            # todo metajson: type : country, city
-                            # add type (code, text) and authority (marcgac, marccountry, iso3166)
-                            publication_places.append(place_value)
+                            if place_authority == "iso3166" and place_value in country_service.iso3166_alpha3_list:
+                                publication_countries.append(place_value)
+                            elif place_authority == "marccountry" and place_value in country_service.marccountry_to_iso3166_alpha2:
+                                publication_countries.append(country_service.marccountry_to_iso3166_alpha2[place_value])
+                            elif place_authority == "marcgac" and place_value in country_service.marcgac_to_iso3166_alpha2:
+                                publication_countries.append(country_service.marcgac_to_iso3166_alpha2[place_value])
+                            else:
+                                publication_places.append(place_value)
+            if publication_countries:
+                result["publication_countries"] = publication_countries
             if publication_places:
                 result["publication_places"] = publication_places
 
-        # publisher
+        # publisher -> publishers
         mods_publishers = mods_origin_info.findall(xmletree.prefixtag("mods", "publisher"))
         if mods_publishers is not None:
             publishers = []
             for mods_publisher in mods_publishers:
                 if mods_publisher is not None:
-                    # todo metajson: based on agent
                     publishers.append(mods_publisher.text.strip())
             if publishers:
                 result["publishers"] = publishers
@@ -743,88 +856,151 @@ def extract_mods_origin_info(mods):
     return result
 
 
-def convert_mods_date(mods_date):
-    if mods_date is not None:
-        encoding = mods_date.get("encoding")
-        #point = mods_date.get("point")
-        #key_date = mods_date.get("keyDate")
-        #qualifier = mods_date.get("qualifier")
-        value = mods_date.text.strip()
-        if encoding == "iso8601":
-            return value
-        else:
-            # todo
-            return value
-
-
-def extract_mods_physical_description(mods, rec_type):
+def get_mods_physical_description(mods, rec_type):
+    """ physicalDescription ->
+        extent_duration, extent_dimension, extent_pages, form, physical_description_notes, reformatting_quality
+    """
     result = {}
     mods_physical_description = mods.find(xmletree.prefixtag("mods", "physicalDescription"))
     if mods_physical_description is not None:
-        # digitalOrigin
-        mods_digital_origin = mods_physical_description.find(xmletree.prefixtag("mods", "digitalOrigin"))
-        if mods_digital_origin is not None:
-            result["digital_origin"] = mods_digital_origin
-        # extent
-        mods_extent = mods_physical_description.find(xmletree.prefixtag("mods", "extent"))
-        if mods_extent is not None:
-            extent_value = mods_extent.text.strip()
-            if extent_value:
-                if rec_type in ["AudioBook", "AudioBroadcast", "AudioRecording", "MusicRecording", "VideoBroadcast", "VideoRecording", "VideoPart"]:
-                    result["extent_duration"] = extent_value
-                elif rec_type in ["PhysicalObject"]:
-                    result["extent_dimension"] = extent_value
-                else:
-                    result["extent_pages"] = extent_value
-        # internetMediaType
-        mods_internet_media_type = mods_physical_description.find(xmletree.prefixtag("mods", "internetMediaType"))
-        # form
+
+        # digitalOrigin -> digital_origin
+        result.update(get_mods_element_text_and_set_key(mods_physical_description, "digitalOrigin", "digital_origin"))
+
+        # extent -> extent_duration, extent_dimension, extent_pages
+        extent = get_mods_element_text(mods_physical_description, "extent")
+        if extent:
+            if rec_type in ["AudioBook", "AudioBroadcast", "AudioRecording", "MusicRecording", "VideoBroadcast", "VideoRecording", "VideoPart"]:
+                result["extent_duration"] = extent
+            elif rec_type in ["PhysicalObject"]:
+                result["extent_dimension"] = extent
+            else:
+                result["extent_pages"] = extent
+
+        # form -> form
         mods_form = mods_physical_description.find(xmletree.prefixtag("mods", "form"))
-        # note
+        if mods_form is not None:
+            value = xmletree.get_element_text(mods_form)
+            if value:
+                # text -> value
+                form = {"value": value}
+                if mods_form.get("authority"):
+                    # authority -> authority
+                    form["authority"] = mods_form.get("authority")
+                if mods_form.get("type"):
+                    # type -> type
+                    form["type"] = mods_form.get("type")
+                result["form"] = form
+
+        # internetMediaType -> null
+
+        # note -> physical_description_notes
         mods_notes = mods_physical_description.findall(xmletree.prefixtag("mods", "note"))
-        # reformattingQuality
-        mods_reformatting_quality = mods_physical_description.find(xmletree.prefixtag("mods", "reformattingQuality"))
+        if mods_notes is not None:
+            notes = convert_mods_string_langs(mods_notes)
+            if notes:
+                result["physical_description_notes"] = notes
+
+        # reformattingQuality -> reformatting_quality
+        result.update(get_mods_element_text_and_set_key(mods_physical_description, "reformattingQuality", "reformatting_quality"))
     return result
 
 
-def extract_mods_languages(mods):
-    result = {}
-    mods_languages = mods.findall(xmletree.prefixtag("mods", "language"))
-    if mods_languages is not None:
-        languages = []
-        for mods_language in mods_languages:
-            if mods_language is not None:
-                mods_terms = mods_language.findall(xmletree.prefixtag("mods", "languageTerm"))
-                if mods_terms is not None:
-                    for mods_term in mods_terms:
-                        # todo use language_service
-                        if mods_term.get("type") == "code":
-                            if mods_term.get("authority") == "rfc3066":
-                                language = mods_term.text.strip()
-                                if language is not None:
-                                    languages.append(mods_term.text)
-                            else:
-                                # todo for iso639-2b and other authority
-                                pass
+def get_mods_related_items(mods_root, root_rec_type):
+    """ relatedItem ->
+        is_part_ofs, has_parts, review_ofs, originals, seriess, is_referenced_bys, references,
+        other_formats, other_versions, precedings, succeedings
+    """
+    mods_related_items = mods_root.findall(xmletree.prefixtag("mods", "relatedItem"))
+    result = Document()
+    if mods_related_items:
+        # mods related_items
+
+        for mods_related_item in mods_related_items:
+            if mods_related_item is not None:
+                # extract the relatedItem type attribute
+                mods_related_item_type = mods_related_item.get("type")
+                # mods_related_item_type in : preceding, succeeding, original, host, constituent, series, otherVersion, otherFormat, isReferencedBy, references, reviewOf)
+
+                # convert like a mods record
+                related_item = mods_root_or_related_item_to_metajson(mods_related_item, root_rec_type)
+
+                if related_item is not None:
+                    # extract related_item rec_type
+                    related_item_rec_type = related_item["rec_type"]
+
+                    #print "root_rec_type: {} related_item_rec_type: {} mods_related_item_type: {} ".format(root_rec_type, related_item_rec_type, mods_related_item_type)
+
+                    if mods_related_item_type == "host":
+                        # move the part fields from the related item to the root document
+                        metajson_service.move_keys_between_dicts(MODS_PART_FIELDS, related_item, result)
+
+                        # copy the date fields from the related item to the root document
+                        if root_rec_type in MODS_ARTICLE_TYPES:
+                            metajson_service.copy_keys_between_dicts(MODS_DATE_FIELDS, related_item, result)
+
+                        # host -> is_part_ofs
+                        result.add_item_to_key(related_item, "is_part_ofs")
+
+                    elif mods_related_item_type == "original":
+
+                        if root_rec_type in ["BookReview", "ArticleReview"]:
+                            # original -> review_ofs
+                            result.add_item_to_key(related_item, "review_ofs")
                         else:
-                            # todo for natural language like "French"
-                            pass
-        if languages:
-            result["languages"] = languages
+                            # original -> originals
+                            result.add_item_to_key(related_item, "originals")
+
+                    elif mods_related_item_type == "reviewOf":
+
+                        # reviewOf -> review_ofs
+                        result.add_item_to_key(related_item, "review_ofs")
+
+                    elif mods_related_item_type == "series":
+
+                        # series -> seriess
+                        result.add_item_to_key(related_item, "seriess")
+
+                    elif mods_related_item_type == "constituent":
+
+                        # constituent -> has_parts
+                        result.add_item_to_key(related_item, "has_parts")
+
+                    elif mods_related_item_type == "isReferencedBy":
+
+                        # isReferencedBy -> is_referenced_bys
+                        result.add_item_to_key(related_item, "is_referenced_bys")
+
+                    elif mods_related_item_type == "references":
+
+                        # references -> references
+                        result.add_item_to_key(related_item, "references")
+
+                    elif mods_related_item_type == "otherFormat":
+
+                        # otherFormat -> other_formats
+                        result.add_item_to_key(related_item, "other_formats")
+
+                    elif mods_related_item_type == "otherVersion":
+
+                        # otherVersion -> other_versions
+                        result.add_item_to_key(related_item, "other_versions")
+
+                    elif mods_related_item_type == "preceding":
+
+                        # preceding -> precedings
+                        result.add_item_to_key(related_item, "precedings")
+
+                    elif mods_related_item_type == "succeedings":
+
+                        # succeeding -> succeedings
+                        result.add_item_to_key(related_item, "succeedings")
+
     return result
 
 
-def extract_mods_abstracts(mods):
-    result = {}
-    mods_abstracts = mods.findall(xmletree.prefixtag("mods", "abstract"))
-    if mods_abstracts is not None:
-        descriptions = convert_mods_string_langs(mods_abstracts)
-        if descriptions:
-            result["descriptions"] = descriptions
-    return result
-
-
-def extract_mods_table_of_contentss(mods):
+def get_mods_table_of_contentss(mods):
+    """ tableOfContents -> table_of_contentss """
     result = {}
     mods_table_of_contentss = mods.findall(xmletree.prefixtag("mods", "tableOfContents"))
     if mods_table_of_contentss is not None:
@@ -834,22 +1010,8 @@ def extract_mods_table_of_contentss(mods):
     return result
 
 
-def convert_mods_string_langs(mods_string_langs):
-    if mods_string_langs is not None:
-        results = []
-        for mods_string_lang in mods_string_langs:
-            if mods_string_lang is not None:
-                language = mods_string_lang.get("lang")
-                value = mods_string_lang.text.strip()
-                if value is not None:
-                    result = {"value": value}
-                    if language is not None:
-                        result["language"] = language.strip()
-                    results.append(result)
-        return results
-
-
-def extract_mods_target_audiences(mods):
+def get_mods_target_audiences(mods):
+    """ targetAudience -> target_audiences """
     result = {}
     mods_target_audiences = mods.findall(xmletree.prefixtag("mods", "targetAudience"))
     if mods_target_audiences is not None:
@@ -859,7 +1021,251 @@ def extract_mods_target_audiences(mods):
     return result
 
 
+def get_mods_title_infos(mods):
+    """ titleInfo ->
+        title, title_non_sort, title_sub, part_number, part_name,
+        title_abbreviated, title_alternative, title_translated, title_uniform
+    """
+    result = {}
+    mods_titleinfos = mods.findall(xmletree.prefixtag("mods", "titleInfo"))
+    if mods_titleinfos is not None:
+        for mods_titleinfo in mods_titleinfos:
+            if mods_titleinfo is not None:
+                title_dict = {}
+                # type
+                title_type = mods_titleinfo.get("type")
+                # title -> title
+                title_dict.update(get_mods_element_text_and_set_key(mods_titleinfo, "title", "title"))
+                # nonSort -> title_non_sort
+                title_dict.update(get_mods_element_text_and_set_key(mods_titleinfo, "nonSort", "title_non_sort"))
+                # subTitle -> title_sub
+                title_dict.update(get_mods_element_text_and_set_key(mods_titleinfo, "subTitle", "title_sub"))
+                # partNumber -> part_number
+                title_dict.update(get_mods_element_text_and_set_key(mods_titleinfo, "partNumber", "part_number"))
+                # partName -> part_name
+                title_dict.update(get_mods_element_text_and_set_key(mods_titleinfo, "partName", "part_name"))
+
+                if title_type is None and "title" not in result:
+                    result.update(title_dict)
+                elif title_type == "abbreviated":
+                    result["title_abbreviated"] = title_dict
+                elif title_type == "alternative":
+                    result["title_alternative"] = title_dict
+                elif title_type == "translated":
+                    result["title_translated"] = title_dict
+                elif title_type == "uniform":
+                    result["title_uniform"] = title_dict
+                else:
+                    print "error get_mods_title_infos unknown type: {}".format(title_type)
+    return result
+
+
+def get_mods_subjects(mods):
+    """ subject -> keywords, subjects """
+    result = {}
+    mods_subjects = mods.findall(xmletree.prefixtag("mods", "subject"))
+    if mods_subjects is not None:
+        result_subjects = []
+        result_keywords_dict = {}
+        for mods_subject in mods_subjects:
+            if mods_subject is not None:
+                mods_subject_authority = mods_subject.get("authority")
+                mods_subject_lang = mods_subject.get("lang")
+                if mods_subject_lang is None:
+                    mods_subject_lang = constants.LANGUAGE_UNDETERMINED
+
+                # Verify that this key is in the dict
+                if mods_subject_lang is not None and mods_subject_lang not in result_keywords_dict:
+                    result_keywords_dict[mods_subject_lang] = []
+
+                if mods_subject_authority is None:
+                    # keywords
+                    mods_topics = mods_subject.findall(xmletree.prefixtag("mods", "topic"))
+                    if mods_topics is not None:
+                        for mods_topic in mods_topics:
+                            if mods_topic.text is not None:
+                                # in case of multiple keywords in the same topic, split it
+                                terms = None
+                                if mods_topic.text.find(";") != -1:
+                                    terms = mods_topic.text.split(";")
+                                elif mods_topic.text.find(",") != -1:
+                                    terms = mods_topic.text.split(",")
+                                else:
+                                    terms = [mods_topic.text]
+                                if terms is not None:
+                                    for term in terms:
+                                        result_keywords_dict[mods_subject_lang].append(term.strip())
+                else:
+                    # subjects
+                    # todo
+                    # topic
+                    # geographic
+                    # temporal
+                    # titleInfo
+                    # name
+                    # geographicCode
+                    # genre
+                    # hierarchicalGeographic
+                    # - continent
+                    # - country
+                    # - province
+                    # - region
+                    # - state
+                    # - territory
+                    # - county
+                    # - city
+                    # - island
+                    # - area
+                    # - extraterrestrialArea
+                    # - citySection
+                    # cartographics
+                    # - scale
+                    # - projection
+                    # - coordinates
+                    # occupation
+                    pass
+
+        if result_subjects:
+            result["subjects"] = result_subjects
+        if result_keywords_dict:
+            result["keywords"] = result_keywords_dict
+    return result
+
+
+def get_mods_parts(mods):
+    """ part/detail/number -> part_chapter_number, part_issue, part_paragraph_number, part_track_number, part_volume
+        part/detail/title -> part_chapter_title, part_section_title, part_track_title
+        part/extent/start -> part_page_begin, part_timecode_begin
+        part/extent/end -> part_page_end, part_timecode_end
+    """
+    result = {}
+    mods_parts = mods.findall(xmletree.prefixtag("mods", "part"))
+    if mods_parts is not None:
+        result = {}
+        for mods_part in mods_parts:
+            if mods_part is not None:
+                # detail
+                mods_part_details = mods_part.findall(xmletree.prefixtag("mods", "detail"))
+                if mods_part_details is not None:
+                    for mods_part_detail in mods_part_details:
+                        mods_part_detail_type = mods_part_detail.get("type")
+                        mods_part_detail_number = get_mods_element_text(mods_part_detail, "number")
+                        mods_part_detail_title = get_mods_element_text(mods_part_detail, "title")
+                        if mods_part_detail_type is not None:
+                            # number
+                            if mods_part_detail_number is not None:
+                                if mods_part_detail_type == "chapter":
+                                    # part/detail@type=chapter/number -> part_chapter_number
+                                    result["part_chapter_number"] = mods_part_detail_number
+                                elif mods_part_detail_type == "issue":
+                                    # part/detail@type=issue/number -> part_issue
+                                    result["part_issue"] = mods_part_detail_number
+                                elif mods_part_detail_type == "paragraph":
+                                    # part/detail@type=paragraph/number -> part_paragraph_number
+                                    result["part_paragraph_number"] = mods_part_detail_number
+                                elif mods_part_detail_type == "track":
+                                    # part/detail@type=track/number -> part_track_number
+                                    result["part_track_number"] = mods_part_detail_number
+                                elif mods_part_detail_type == "volume":
+                                    # part/detail@type=volume/number -> part_volume
+                                    result["part_volume"] = mods_part_detail_number
+                            # title
+                            if mods_part_detail_title is not None:
+                                if mods_part_detail_type == "chapter":
+                                    # part/detail@type=chapter/title -> part_chapter_title
+                                    result["part_chapter_title"] = mods_part_detail_title
+                                elif mods_part_detail_type == "section":
+                                    # part/detail@type=section/title -> part_section_title
+                                    result["part_section_title"] = mods_part_detail_title
+                                elif mods_part_detail_type == "track":
+                                    # part/detail@type=section/title -> part_track_title
+                                    result["part_track_title"] = mods_part_detail_title
+
+                # extent
+                mods_part_extents = mods_part.findall(xmletree.prefixtag("mods", "extent"))
+                if mods_part_extents is not None:
+                    for mods_part_extent in mods_part_extents:
+                        mods_part_extent_unit = mods_part_extent.get("unit")
+                        mods_part_extent_begin = get_mods_element_text(mods_part_extent, "start")
+                        mods_part_extent_end = get_mods_element_text(mods_part_extent, "end")
+                        if mods_part_extent_unit in ["page", "pages"]:
+                            if mods_part_extent_begin is not None:
+                                # part/extent@unit=[page|pages]/start
+                                result["part_page_begin"] = mods_part_extent_begin
+                            if mods_part_extent_end is not None:
+                                # part/extent@unit=[page|pages]/end
+                                result["part_page_end"] = mods_part_extent_end
+                        elif mods_part_extent_unit in ["minute", "minutes"]:
+                            if mods_part_extent_begin is not None:
+                                # part/extent@unit=[minute|minutes]/start
+                                result["part_timecode_begin"] = mods_part_extent_begin
+                            if mods_part_extent_end is not None:
+                                # part/extent@unit=[minute|minutes]/end
+                                result["part_timecode_end"] = mods_part_extent_end
+    return result
+
+
+def get_mods_record_info(mods):
+    """ recordInfo -> rec_ """
+    result = {}
+    mods_record_info = mods.find(xmletree.prefixtag("mods", "recordInfo"))
+    if mods_record_info is not None:
+        # todo
+        # descriptionStandard -> rec_cataloging_rules
+        rec_cataloging_rules = get_mods_elements_text(mods_record_info, "descriptionStandard")
+        if rec_cataloging_rules:
+            result["rec_cataloging_rules"] = rec_cataloging_rules
+        # languageOfCataloging -> rec_cataloging_languages
+        rec_cataloging_languages = get_mods_elements_text(mods_record_info, "languageOfCataloging")
+        if rec_cataloging_languages:
+            result["rec_cataloging_languages"] = rec_cataloging_languages
+        # recordContentSource -> rec_source
+        rec_source = get_mods_element_text(mods_record_info, "languageOfCataloging")
+        if rec_source:
+            result["rec_source"] = rec_source
+        # recordCreationDate -> rec_created_date
+        mods_record_creation_date = mods_record_info.find(xmletree.prefixtag("mods", "recordCreationDate"))
+        rec_created_date = convert_mods_date(mods_record_creation_date)
+        if rec_created_date:
+            result["rec_created_date"] = rec_created_date
+        # recordChangeDate -> rec_modified_date
+        mods_record_change_date = mods_record_info.find(xmletree.prefixtag("mods", "recordChangeDate"))
+        rec_modified_date = convert_mods_date(mods_record_change_date)
+        if rec_modified_date:
+            result["rec_modified_date"] = rec_modified_date
+        # recordIdentifier -> rec_id
+        rec_id = get_mods_element_text(mods_record_info, "recordIdentifier")
+        if rec_id:
+            result["rec_id"] = rec_id
+        # recordOrigin -> null
+
+    return result
+
+
+#########
+# Utils #
+#########
+
+def convert_mods_date(mods_date):
+    """ Extract and convert MODS date to ISO 8601 """
+    if mods_date is not None and mods_date.text is not None:
+        encoding = mods_date.get("encoding")
+        #point = mods_date.get("point")
+        #key_date = mods_date.get("keyDate")
+        #qualifier = mods_date.get("qualifier")
+        value = mods_date.text.strip()
+        if encoding in ["iso8601"]:
+            return value
+        else:
+            # todo
+            #parsed_date = date_service.parse_to_iso8601(value)
+            #if parsed_date:
+            #    return parsed_date
+            return value
+
+
 def convert_mods_string_authorities(mods_string_authorities):
+    """ text, authority -> value, authority """
     if mods_string_authorities is not None:
         results = []
         for mods_string_authority in mods_string_authorities:
@@ -874,45 +1280,27 @@ def convert_mods_string_authorities(mods_string_authorities):
         return results
 
 
-def extract_mods_notes(mods):
-    result = {}
-    mods_notes = mods.findall(xmletree.prefixtag("mods", "note"))
-    if mods_notes is not None:
-        notes = convert_mods_string_lang_types(mods_notes, "note_type")
-        if notes:
-            result["notes"] = notes
-    return result
-
-
-def extract_mods_access_conditions(mods):
-    result = {}
-    mods_access_conditions = mods.findall(xmletree.prefixtag("mods", "accessCondition"))
-    if mods_access_conditions is not None:
-        access_conditions = convert_mods_string_lang_types(mods_access_conditions, "rights_type")
-        if access_conditions:
-            rights = Rights()
-            for access_condition in access_conditions:
-                if "rights_type" in access_condition:
-                    if access_condition["rights_type"] == "restriction on access":
-                        del access_condition["rights_type"]
-                        if "restriction_on_access" not in rights:
-                            rights["restriction_on_access"] = []
-                        rights["restriction_on_access"].append(access_condition)
-                    elif access_condition["rights_type"] == "use and reproduction":
-                        del access_condition["rights_type"]
-                        if "use_and_reproduction" not in rights:
-                            rights["use_and_reproduction"] = []
-                        rights["use_and_reproduction"].append(access_condition)
-            if rights:
-                result["rights"] = rights
-    return result
+def convert_mods_string_langs(mods_string_langs):
+    """ lang, text -> language, value """
+    if mods_string_langs is not None:
+        results = []
+        for mods_string_lang in mods_string_langs:
+            if mods_string_lang is not None:
+                language = mods_string_lang.get("lang")
+                value = mods_string_lang.text.strip()
+                if value is not None:
+                    result = {"value": value}
+                    if language is not None:
+                        result["language"] = language.strip()
+                    results.append(result)
+        return results
 
 
 def convert_mods_string_lang_types(mods_string_lang_types, type_field):
     if mods_string_lang_types is not None:
         results = []
         for mods_string_lang_type in mods_string_lang_types:
-            if mods_string_lang_type is not None:
+            if mods_string_lang_type is not None and mods_string_lang_type.text is not None:
                 language = mods_string_lang_type.get("lang")
                 type_value = mods_string_lang_type.get("type")
                 value = mods_string_lang_type.text.strip()
@@ -926,156 +1314,69 @@ def convert_mods_string_lang_types(mods_string_lang_types, type_field):
         return results
 
 
-def extract_mods_subjects(mods):
+def get_mods_textlangs_as_list(rml, element):
+    """ @xml:lang -> language
+        text -> value """
+    rml_sls = rml.findall(xmletree.prefixtag("mods", element))
+    if rml_sls is not None:
+        sls = []
+        for rml_sl in rml_sls:
+            if rml_sl is not None and rml_sl.text is not None:
+                language = rml_sl.get(xmletree.prefixtag("xml", "lang"))
+                value = rml_sl.text.strip()
+                if value is not None:
+                    sl = {"value": value}
+                    if language is not None:
+                        sl["language"] = language.strip()
+                    sls.append(sl)
+        if sls:
+            return sls
+
+
+def get_mods_textlangs_and_set_key(rml, element, key):
+    """ element -> key
+        @xml:lang -> language
+        text -> value """
     result = {}
-    mods_subjects = mods.findall(xmletree.prefixtag("mods", "subject"))
-    if mods_subjects is not None:
-        result_subjects = []
-        result_keywords_dict = {}
-        for mods_subject in mods_subjects:
-            if mods_subject is not None:
-                mods_subject_authority = mods_subject.get("authority")
-                mods_subject_lang = mods_subject.get("lang")
-                if mods_subject_lang is not None and mods_subject_lang not in result_keywords_dict:
-                    result_keywords_dict[mods_subject_lang] = []
-                elif mods_subject_lang is None:
-                    result_keywords_dict[constants.LANGUAGE_UNDETERMINED] = []
-                if mods_subject_authority is None:
-                    # it's a keyword
-                    mods_topics = mods_subject.findall(xmletree.prefixtag("mods", "topic"))
-                    if mods_topics is not None:
-                        for mods_topic in mods_topics:
-                            if mods_topic.text is not None:
-                                terms = None
-                                if mods_topic.text.find(";") != -1:
-                                    terms = mods_topic.text.split(";")
-                                elif mods_topic.text.find(",") != -1:
-                                    terms = mods_topic.text.split(",")
-                                else:
-                                    terms = [mods_topic.text]
-                            if terms is not None:
-                                for term in terms:
-                                    if mods_subject_lang is not None:
-                                        result_keywords_dict[mods_subject_lang].append(term.strip())
-                                    else:
-                                        result_keywords_dict[constants.LANGUAGE_UNDETERMINED].append(term.strip())
-        if result_subjects:
-            result["subjects"] = result_subjects
-        if result_keywords_dict:
-            result["keywords"] = result_keywords_dict
+    sls = get_mods_textlangs_as_list(rml, element)
+    if sls:
+        result[key] = sls
     return result
 
 
-def extract_mods_classifications(mods):
-    result = {}
-    mods_classifications = mods.findall(xmletree.prefixtag("mods", "classification"))
-    if mods_classifications is not None:
-        classifications_dict = {}
-        peer_review = False
-        peer_review_geo = []
-        for mods_classification in mods_classifications:
-            if mods_classification is not None:
-                mods_classification_authority = mods_classification.get("authority")
-                #mods_classification_lang = mods_classification.get("lang")
-                if mods_classification.text is not None:
-                    if mods_classification_authority is not None:
-                        if mods_classification_authority == "peer-review":
-                            if mods_classification.text == "yes":
-                                peer_review = True
-                        else:
-                            if mods_classification_authority not in classifications_dict:
-                                classifications_dict[mods_classification_authority] = []
-                            classifications_dict[mods_classification_authority].append(mods_classification.text.strip())
-                    elif mods_classification_authority is None:
-                        if constants.CLASSIFICATION_UNDETERMINED not in classifications_dict:
-                            classifications_dict[constants.CLASSIFICATION_UNDETERMINED] = []
-                        classifications_dict[constants.CLASSIFICATION_UNDETERMINED].append(mods_classification.text.strip())
+def get_mods_element_text(rml, element):
+    element_xmletree = rml.find(xmletree.prefixtag("mods", element))
+    return xmletree.get_element_text(element_xmletree)
 
-        if classifications_dict:
-            result["classifications"] = classifications_dict
-        if peer_review:
-            result["peer_review"] = peer_review
-        if peer_review_geo:
-            result["peer_review_geo"] = peer_review_geo
+
+def get_mods_element_text_as_boolean(rml, element):    
+    element_xmletree = rml.find(xmletree.prefixtag("mods", element))
+    return xmletree.get_element_text_as_boolean(element_xmletree)
+
+
+def get_mods_element_text_and_set_key(rml, element, key):
+    result = {}
+    key_value = get_mods_element_text(rml, element)
+    if key_value is not None:
+        result[key] = key_value
     return result
 
 
-def extract_mods_parts(mods):
+def get_mods_elements_text(rml, element):
+    elements_xmletree = rml.findall(xmletree.prefixtag("mods", element))
+    if elements_xmletree is not None:
+        results = []
+        for element_xmletree in elements_xmletree:
+            if element_xmletree is not None:
+                results.append(xmletree.get_element_text(element_xmletree))
+        if results:
+            return results
+    return None
+
+
+def get_mods_elements_text_and_set_key(rml, element, key):
     result = {}
-    mods_parts = mods.findall(xmletree.prefixtag("mods", "part"))
-    if mods_parts is not None:
-        result = {}
-        for mods_part in mods_parts:
-            if mods_part is not None:
-                # detail
-                mods_part_details = mods_part.findall(xmletree.prefixtag("mods", "detail"))
-                if mods_part_details is not None:
-                    for mods_part_detail in mods_part_details:
-                        mods_part_detail_type = mods_part_detail.get("type")
-                        mods_part_detail_number = mods_part_detail.find(xmletree.prefixtag("mods", "number"))
-                        if mods_part_detail_type is not None and mods_part_detail_number is not None and mods_part_detail_number.text is not None:
-                            if mods_part_detail_type == "volume":
-                                result["part_volume"] = mods_part_detail_number.text
-                            elif mods_part_detail_type == "issue":
-                                result["part_issue"] = mods_part_detail_number.text
-
-                # extent
-                mods_part_extents = mods_part.findall(xmletree.prefixtag("mods", "extent"))
-                if mods_part_extents is not None:
-                    for mods_part_extent in mods_part_extents:
-                        mods_part_extent_unit = mods_part_extent.get("unit")
-                        mods_part_extent_begin = mods_part_extent.find(xmletree.prefixtag("mods", "start"))
-                        mods_part_extent_end = mods_part_extent.find(xmletree.prefixtag("mods", "end"))
-                        if mods_part_extent_unit is not None and (mods_part_extent_begin is not None or mods_part_extent_end is not None):
-                            if mods_part_extent_unit == "page" or mods_part_extent_unit == "pages":
-                                if mods_part_extent_begin is not None and mods_part_extent_begin.text is not None:
-                                    result["part_page_begin"] = mods_part_extent_begin.text
-                                if mods_part_extent_end is not None and mods_part_extent_end.text is not None:
-                                    result["part_page_end"] = mods_part_extent_end.text
-    return result
-
-
-def extract_mods_locations(mods):
-    result = {}
-    locations = mods.findall(xmletree.prefixtag("mods", "location"))
-    if locations is not None:
-        resources = []
-        for location in locations:
-            if location is not None:
-                resource = Resource()
-                # url -> remote
-                mods_url = location.find(xmletree.prefixtag("mods", "url"))
-                if mods_url is not None:
-                    url = mods_url.text.strip()
-                    date_last_accessed = mods_url.get("dateLastAccessed")
-                    if url:
-                        resource["rec_type"] = "remote"
-                        resource["url"] = url
-                        if date_last_accessed is not None:
-                            resource["dateLastAccessed"] = date_last_accessed.strip()
-
-                # physicalLocation
-                # shelfLocator
-                # holdingSimple
-                # holdingExternal
-
-                resources.append(resource)
-        if resources:
-            result["resources"] = resources
-    return result
-
-
-def extract_mods_record_info(mods):
-    result = {}
-    mods_record_info = mods.find(xmletree.prefixtag("mods", "recordInfo"))
-    if mods_record_info is not None:
-        # todo
-        # recordContentSource
-        # recordCreationDate
-        # recordChangeDate
-        # recordIdentifier
-        # recordOrigin
-        # languageOfCataloging
-        # descriptionStandard
-        pass
+    values = get_mods_elements_text(rml, element)
+    if values is not None:
+        result[key] = values
     return result
