@@ -9,13 +9,9 @@
       <funding>
         <identifier>anr</identifier>
         <name>Agence Nationale de la Recherche</name>
-        <programme>funding_programme</programme>
-        <scheme>funding_scheme</scheme>
-        <contribution currency="EUR">funding_contribution</contribution>
-      </funding>
-      <funding>
-        <identifier>eu</identifier>
-        <name>European Union</name>
+        <programme>programme</programme>
+        <scheme>scheme</scheme>
+        <contribution currency="EUR">contribution</contribution>
       </funding>
       <identifier>call_id</identifier>
       <title>call_title</title>
@@ -138,7 +134,7 @@
       <description xml:lang="fr">Une description française A</description>
     </ongoingResearch>
     <ongoingResearch>
-      <description xml:lang="en">A english description B</description>
+      <description xml:lang="en">An english description B</description>
       <description xml:lang="fr">Une description française B</description>
     </ongoingResearch>
     <skill xml:lang="en">skill example</skill>
@@ -148,12 +144,14 @@
       <relationType authority="rmlaffrole">president</relationType>
       <dateBegin encoding="iso8601">1990</dateBegin>
       <dateEnd encoding="iso8601" present="true"/>
-      <description>A description...</description>
+      <description xml:lang="en">A description...</description>
+      <description xml:lang="fr">Une description...</description>
     </affiliation>
     <relationship>
-      <relationType authority="rmlrelationship">collaboratesWith</relationType>
+      <relationType authority="rmlrelationship">thesisAdvisorOf</relationType>
       <identifier type="hdl">hdl:2441/63</identifier>
       <name>Martin, Paul</name>
+      <description>Une description sans langue</description>
     </relationship>
     <note xml:lang="en">note example</note>
   </person>
