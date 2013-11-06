@@ -77,6 +77,7 @@ month_decimal_to_month_mla = {
 
 
 def format_date(date_iso):
+    #print "format_date input: {}".format(date_iso)
     result = ""
     if date_iso:
         if date_iso == "?":
@@ -106,49 +107,75 @@ def format_date(date_iso):
                 # Do nothing
                 result = date_iso
 
+    #print "format_date output: {}".format(result)
     return result
 
 
-def parse_date(date_iso):
-    #print date_iso
+def parse_date(datestr):
+    """ Parse date and return datetime """
+    #print "parse_date input: {}".format(datestr)
 
     # Empty
-    if not date_iso:
-        date_iso = "1970-01-01"
+    if not datestr:
+        datestr = "1970-01-01"
 
     # YYYY? -> YYYY
     # ? -> default: 1970-01-01
-    if date_iso.endswith("?"):
-        date_iso = date_iso.replace("?", "")
-        if date_iso == "?":
-            date_iso = "1970-01-01"
+    if datestr.endswith("?"):
+        datestr = datestr.replace("?", "")
+        if datestr == "?":
+            datestr = "1970-01-01"
 
     # YYYY/YYYY -> YYYY
-    date_iso_part = date_iso.split("/")
-    if date_iso_part > 1:
-        date_iso = date_iso_part[0]
+    datestr_part = datestr.split("/")
+    if datestr_part > 1:
+        datestr = datestr_part[0]
 
     # YYxx -> YY00
-    date_iso = date_iso.replace("x", "0")
+    datestr = datestr.replace("x", "0")
 
     # YYYY -> YYYY-01-01
-    if len(date_iso) == 4:
-        date_iso += "-01-01"
+    if len(datestr) == 4:
+        datestr += "-01-01"
 
     # YYYYMM -> YYYYMM01
-    if len(date_iso) == 6:
-        date_iso += "01"
+    if len(datestr) == 6:
+        datestr += "01"
 
     # YYYY-MM -> YYYY-MM-01
-    if len(date_iso) == 7:
-        date_iso += "-01"
+    if len(datestr) == 7:
+        datestr += "-01"
 
     # YYYY-MM-DD
     try:
-        result = parser.parse(date_iso)
+        result = parser.parse(datestr)
     except:
         result = parser.parse("1970-01-01")
 
-    #print result
+    #print "parse_date output isoformat: {}".format(result)
     return result
 
+
+def format_iso8601(datepy):
+    result = []
+    result.append(str(datepy.year))
+    if datepy.month:
+        result.append("-")
+        month = str(datepy.month)
+        if len(month) == 1:
+            result.append("0")
+        result.append(month)
+        if datepy.day:
+            result.append("-")
+            day = str(datepy.day)
+            if len(day) == 1:
+                result.append("0")
+            result.append(day)
+    return "".join(result)
+
+
+def parse_to_iso8601(datestr):
+    #print "parse_to_iso8601 input: {}".format(datestr)
+    result = format_iso8601(parser.parse(datestr))
+    #print "parse_to_iso8601 output: {}".format(result)
+    return result
