@@ -11,8 +11,12 @@
       }, 
       "classifications": {
         "info:eu-repo/authority/jel": [
-          "F32", 
-          "F41"
+          {
+            "term_id": "F32"
+          }, 
+          {
+            "term_id": "F41"
+          }
         ]
       }, 
       "creators": [
@@ -115,9 +119,9 @@
       "part_page_end": "12", 
       "part_volume": "89", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.332850", 
+      "rec_created_date": "2013-11-07T09:46:42.450067", 
       "rec_id": "doi:10.1016/j.jinteco.2012.05.011", 
-      "rec_modified_date": "2013-11-06T18:31:57.332860", 
+      "rec_modified_date": "2013-11-07T09:46:42.450079", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -187,9 +191,9 @@
         "fr"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.335747", 
-      "rec_id": "55f09d97-4709-11e3-9c5e-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.335754", 
+      "rec_created_date": "2013-11-07T09:46:42.453334", 
+      "rec_id": "2004ef2b-4789-11e3-8d57-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.453341", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "VideoRecording", 
@@ -274,9 +278,9 @@
         "Oxford University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.338437", 
+      "rec_created_date": "2013-11-07T09:46:42.456422", 
       "rec_id": "isbn:9780199544837", 
-      "rec_modified_date": "2013-11-06T18:31:57.338444", 
+      "rec_modified_date": "2013-11-07T09:46:42.456431", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -422,9 +426,9 @@
       "part_page_begin": "186", 
       "part_page_end": "196", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.347956", 
-      "rec_id": "55f2798f-4709-11e3-8fe9-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.347971", 
+      "rec_created_date": "2013-11-07T09:46:42.462020", 
+      "rec_id": "200642dc-4789-11e3-ad53-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.462030", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -514,9 +518,9 @@
       "part_issue": "3", 
       "part_volume": "36", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.353066", 
-      "rec_id": "55f34302-4709-11e3-9dd0-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.353074", 
+      "rec_created_date": "2013-11-07T09:46:42.466935", 
+      "rec_id": "20070385-4789-11e3-956e-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.466943", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -633,9 +637,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.355411", 
-      "rec_id": "55f39e61-4709-11e3-a1d1-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.355418", 
+      "rec_created_date": "2013-11-07T09:46:42.469527", 
+      "rec_id": "20076891-4789-11e3-a828-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.469534", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferenceContribution", 
@@ -737,9 +741,9 @@
       "part_page_begin": "69", 
       "part_page_end": "86", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.358940", 
-      "rec_id": "55f42875-4709-11e3-8034-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.358947", 
+      "rec_created_date": "2013-11-07T09:46:42.473247", 
+      "rec_id": "2007fa1c-4789-11e3-89b1-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.473254", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferencePaper", 
@@ -832,9 +836,9 @@
         "Dalloz"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.362174", 
+      "rec_created_date": "2013-11-07T09:46:42.476752", 
       "rec_id": "isbn:9782247125265", 
-      "rec_modified_date": "2013-11-06T18:31:57.362182", 
+      "rec_modified_date": "2013-11-07T09:46:42.476760", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferenceProceedings", 
@@ -903,9 +907,9 @@
       "part_page_begin": "11", 
       "part_page_end": "00", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.364903", 
-      "rec_id": "55f510c2-4709-11e3-a6f6-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.364911", 
+      "rec_created_date": "2013-11-07T09:46:42.479799", 
+      "rec_id": "2008f947-4789-11e3-9bf2-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.479807", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -983,9 +987,9 @@
         "Institut d'Etudes Politiques de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.367338", 
-      "rec_id": "55f57045-4709-11e3-954e-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.367345", 
+      "rec_created_date": "2013-11-07T09:46:42.482615", 
+      "rec_id": "200967b3-4789-11e3-ba7a-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.482623", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -1041,7 +1045,9 @@
         {
           "classifications": {
             "ddc": [
-              "320.5"
+              {
+                "term_id": "320.5"
+              }
             ]
           }, 
           "date_issued": "1998", 
@@ -1075,9 +1081,9 @@
       "part_page_begin": "115", 
       "part_page_end": "131", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.370601", 
-      "rec_id": "55f5ef6b-4709-11e3-8665-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.370608", 
+      "rec_created_date": "2013-11-07T09:46:42.486262", 
+      "rec_id": "2009f5d9-4789-11e3-97c4-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.486270", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "InterviewArticle", 
@@ -1131,9 +1137,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.390260", 
-      "rec_id": "55f8ef63-4709-11e3-82ea-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.390270", 
+      "rec_created_date": "2013-11-07T09:46:42.506650", 
+      "rec_id": "200d1238-4789-11e3-9487-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.506662", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WebSite", 
@@ -1162,7 +1168,9 @@
       }, 
       "classifications": {
         "lcc": [
-          "E475.53 .A42"
+          {
+            "term_id": "E475.53 .A42"
+          }
         ]
       }, 
       "creators": [
@@ -1203,9 +1211,9 @@
         null
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.391658", 
-      "rec_id": "55f92633-4709-11e3-88ef-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.391666", 
+      "rec_created_date": "2013-11-07T09:46:42.508088", 
+      "rec_id": "200d4adc-4789-11e3-9d64-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.508095", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1314,7 +1322,7 @@
       "rec_class": "Document", 
       "rec_created_date": "2004-09-09", 
       "rec_id": "archives/cushman/P07803", 
-      "rec_modified_date": "2013-11-06T18:31:57.393516", 
+      "rec_modified_date": "2013-11-07T09:46:42.509987", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Image", 
@@ -1400,9 +1408,9 @@
         "Johns Hopkins University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.394848", 
-      "rec_id": "55f9a2f5-4709-11e3-aebe-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.394854", 
+      "rec_created_date": "2013-11-07T09:46:42.511352", 
+      "rec_id": "200dca66-4789-11e3-b1ec-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.511359", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -1416,10 +1424,14 @@
       }, 
       "classifications": {
         "ddc": [
-          "071/.3"
+          {
+            "term_id": "071/.3"
+          }
         ], 
         "lcc": [
-          "PN4888.P6 A48 1999"
+          {
+            "term_id": "PN4888.P6 A48 1999"
+          }
         ]
       }, 
       "creators": [
@@ -1478,7 +1490,7 @@
       "rec_class": "Document", 
       "rec_created_date": "990730", 
       "rec_id": "11761548", 
-      "rec_modified_date": "2013-11-06T18:31:57.396034", 
+      "rec_modified_date": "2013-11-07T09:46:42.512575", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Bibliography", 
@@ -1538,9 +1550,9 @@
       "part_page_begin": "23", 
       "part_page_end": "45", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.397240", 
+      "rec_created_date": "2013-11-07T09:46:42.513821", 
       "rec_id": "local:Amin1994a", 
-      "rec_modified_date": "2013-11-06T18:31:57.397246", 
+      "rec_modified_date": "2013-11-07T09:46:42.513827", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1554,10 +1566,14 @@
       }, 
       "classifications": {
         "ddc": [
-          "780/.01/02584"
+          {
+            "term_id": "780/.01/02584"
+          }
         ], 
         "lcc": [
-          "ML73 .D57"
+          {
+            "term_id": "ML73 .D57"
+          }
         ]
       }, 
       "creators": [
@@ -1570,7 +1586,7 @@
       ], 
       "date_issued": "-1988", 
       "date_sort": {
-        "$date": 594777600000
+        "$date": 594864000000
       }, 
       "extent_pages": "4 v. : ill., music ; 26 cm.", 
       "form": {
@@ -1635,7 +1651,7 @@
       "rec_class": "Document", 
       "rec_created_date": "861202", 
       "rec_id": "11315879", 
-      "rec_modified_date": "2013-11-06T18:31:57.399052", 
+      "rec_modified_date": "2013-11-07T09:46:42.515670", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -1683,9 +1699,9 @@
       "part_page_end": "378", 
       "part_volume": "24", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.400377", 
+      "rec_created_date": "2013-11-07T09:46:42.516977", 
       "rec_id": "local:BrennerN2000a", 
-      "rec_modified_date": "2013-11-06T18:31:57.400383", 
+      "rec_modified_date": "2013-11-07T09:46:42.516983", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -1736,9 +1752,9 @@
       "part_page_end": "146", 
       "part_volume": "99", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.401873", 
-      "rec_id": "55fab591-4709-11e3-8ec0-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.401880", 
+      "rec_created_date": "2013-11-07T09:46:42.518394", 
+      "rec_id": "200eddc0-4789-11e3-88ce-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.518400", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1780,9 +1796,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.403058", 
-      "rec_id": "55fae3fa-4709-11e3-9ed8-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.403064", 
+      "rec_created_date": "2013-11-07T09:46:42.519529", 
+      "rec_id": "200f0a28-4789-11e3-8b45-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.519534", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1834,9 +1850,9 @@
       "part_page_end": "17", 
       "part_volume": "2", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.404258", 
+      "rec_created_date": "2013-11-07T09:46:42.520675", 
       "rec_id": "uri:http://www.mdpi.org/entropy/papers/e2010001.pdf", 
-      "rec_modified_date": "2013-11-06T18:31:57.404264", 
+      "rec_modified_date": "2013-11-07T09:46:42.520680", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1850,10 +1866,14 @@
       }, 
       "classifications": {
         "ddc": [
-          "793.3"
+          {
+            "term_id": "793.3"
+          }
         ], 
         "lcc": [
-          "GV1623"
+          {
+            "term_id": "GV1623"
+          }
         ]
       }, 
       "creators": [
@@ -1934,7 +1954,7 @@
       "rec_class": "Document", 
       "rec_created_date": "980323", 
       "rec_id": "5004836", 
-      "rec_modified_date": "2013-11-06T18:31:57.405474", 
+      "rec_modified_date": "2013-11-07T09:46:42.521899", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Software", 
@@ -1960,10 +1980,14 @@
       }, 
       "classifications": {
         "ddc": [
-          "621.3815/2"
+          {
+            "term_id": "621.3815/2"
+          }
         ], 
         "lcc": [
-          "TS695.25 .I57 1993"
+          {
+            "term_id": "TS695.25 .I57 1993"
+          }
         ]
       }, 
       "creators": [
@@ -2074,7 +2098,7 @@
       "rec_class": "Document", 
       "rec_created_date": "940504", 
       "rec_id": "4968605", 
-      "rec_modified_date": "2013-11-06T18:31:57.407104", 
+      "rec_modified_date": "2013-11-07T09:46:42.523582", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Bibliography", 
@@ -2089,10 +2113,14 @@
       }, 
       "classifications": {
         "ddc": [
-          "683"
+          {
+            "term_id": "683"
+          }
         ], 
         "lcc": [
-          "TH6493"
+          {
+            "term_id": "TH6493"
+          }
         ]
       }, 
       "creators": [
@@ -2158,7 +2186,7 @@
       "rec_class": "Document", 
       "rec_created_date": "820106", 
       "rec_id": "11510774", 
-      "rec_modified_date": "2013-11-06T18:31:57.408165", 
+      "rec_modified_date": "2013-11-07T09:46:42.524661", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Film", 
@@ -2179,7 +2207,9 @@
       }, 
       "classifications": {
         "lcc": [
-          "G4263.C3 1982  .C3"
+          {
+            "term_id": "G4263.C3 1982  .C3"
+          }
         ]
       }, 
       "creators": [
@@ -2230,7 +2260,7 @@
       "rec_class": "Document", 
       "rec_created_date": "830222", 
       "rec_id": "5466714", 
-      "rec_modified_date": "2013-11-06T18:31:57.409119", 
+      "rec_modified_date": "2013-11-07T09:46:42.525639", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Map", 
@@ -2244,7 +2274,9 @@
       }, 
       "classifications": {
         "lcc": [
-          "M1506 .A14 1984"
+          {
+            "term_id": "M1506 .A14 1984"
+          }
         ]
       }, 
       "creators": [
@@ -2372,7 +2404,7 @@
       "rec_class": "Document", 
       "rec_created_date": "850813", 
       "rec_id": "5594130", 
-      "rec_modified_date": "2013-11-06T18:31:57.412137", 
+      "rec_modified_date": "2013-11-07T09:46:42.529025", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "MusicalScore", 
@@ -2399,7 +2431,9 @@
       }, 
       "classifications": {
         "lcc": [
-          "Lamon Records LR-4280"
+          {
+            "term_id": "Lamon Records LR-4280"
+          }
         ]
       }, 
       "creators": [
@@ -2463,7 +2497,7 @@
       "rec_class": "Document", 
       "rec_created_date": "940829", 
       "rec_id": "5718053", 
-      "rec_modified_date": "2013-11-06T18:31:57.413107", 
+      "rec_modified_date": "2013-11-07T09:46:42.530103", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "MusicRecording", 
@@ -2522,7 +2556,7 @@
       "rec_class": "Document", 
       "rec_created_date": "830926", 
       "rec_id": "5810505", 
-      "rec_modified_date": "2013-11-06T18:31:57.414007", 
+      "rec_modified_date": "2013-11-07T09:46:42.531046", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Manuscript", 
@@ -2594,9 +2628,9 @@
         "Ecole d'Economie de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.416184", 
-      "rec_id": "55fce3b0-4709-11e3-8314-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.416191", 
+      "rec_created_date": "2013-11-07T09:46:42.533575", 
+      "rec_id": "20112db3-4789-11e3-9334-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.533583", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "MasterThesis", 
@@ -2641,7 +2675,9 @@
         {
           "classifications": {
             "ddc": [
-              "980"
+              {
+                "term_id": "980"
+              }
             ]
           }, 
           "frequency": "3 n°s par an", 
@@ -2671,9 +2707,9 @@
       "part_issue": "69", 
       "part_volume": "2012/1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.419104", 
-      "rec_id": "55fd5611-4709-11e3-b488-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.419112", 
+      "rec_created_date": "2013-11-07T09:46:42.536900", 
+      "rec_id": "2011afdc-4789-11e3-9300-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.536908", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "PeriodicalIssue", 
@@ -2687,9 +2723,15 @@
       }, 
       "classifications": {
         "info:eu-repo/authority/jel": [
-          "F14", 
-          "F21", 
-          "F23"
+          {
+            "term_id": "F14"
+          }, 
+          {
+            "term_id": "F21"
+          }, 
+          {
+            "term_id": "F23"
+          }
         ]
       }, 
       "creators": [
@@ -2765,9 +2807,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.421705", 
-      "rec_id": "55fdbc4c-4709-11e3-82ff-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.421713", 
+      "rec_created_date": "2013-11-07T09:46:42.539827", 
+      "rec_id": "201222dc-4789-11e3-be50-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.539835", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Preprint", 
@@ -2850,9 +2892,9 @@
         "CEE (Sciences Po)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.424673", 
-      "rec_id": "55fe2feb-4709-11e3-a18e-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.424680", 
+      "rec_created_date": "2013-11-07T09:46:42.543188", 
+      "rec_id": "2012a5d4-4789-11e3-a192-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.543196", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Report", 
@@ -2949,9 +2991,9 @@
       "part_page_begin": "89", 
       "part_page_end": "98", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.427932", 
-      "rec_id": "55feae70-4709-11e3-a925-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.427939", 
+      "rec_created_date": "2013-11-07T09:46:42.546851", 
+      "rec_id": "20133419-4789-11e3-8f8e-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.546859", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ReportPart", 
@@ -3017,9 +3059,9 @@
         "Sciences Po - Atelier de cartographie"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.430151", 
-      "rec_id": "55ff0599-4709-11e3-aef8-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.430158", 
+      "rec_created_date": "2013-11-07T09:46:42.549435", 
+      "rec_id": "20139980-4789-11e3-a297-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.549442", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WebSite", 
@@ -3046,12 +3088,24 @@
       }, 
       "classifications": {
         "info:eu-repo/authority/jel": [
-          "D72", 
-          "D73", 
-          "L82", 
-          "R12", 
-          "R23", 
-          "R50"
+          {
+            "term_id": "D72"
+          }, 
+          {
+            "term_id": "D73"
+          }, 
+          {
+            "term_id": "L82"
+          }, 
+          {
+            "term_id": "R12"
+          }, 
+          {
+            "term_id": "R23"
+          }, 
+          {
+            "term_id": "R50"
+          }
         ]
       }, 
       "creators": [
@@ -3116,9 +3170,9 @@
         "Sciences Po - ECON"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-06T18:31:57.433040", 
-      "rec_id": "55ff76cc-4709-11e3-9320-406c8f07170d", 
-      "rec_modified_date": "2013-11-06T18:31:57.433047", 
+      "rec_created_date": "2013-11-07T09:46:42.552685", 
+      "rec_id": "201418d1-4789-11e3-83ae-1040f39c4fa4", 
+      "rec_modified_date": "2013-11-07T09:46:42.552693", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WorkingPaper", 

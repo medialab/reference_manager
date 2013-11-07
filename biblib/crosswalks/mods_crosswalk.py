@@ -446,7 +446,7 @@ def get_mods_classifications(mods):
                     else:
                         if mods_classification_authority not in classifications_dict:
                             classifications_dict[mods_classification_authority] = []
-                        classifications_dict[mods_classification_authority].append(mods_classification.text.strip())
+                        classifications_dict[mods_classification_authority].append({"term_id":mods_classification.text.strip()})
 
         if classifications_dict:
             result["classifications"] = classifications_dict
