@@ -1,0 +1,72 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Collection",
+                "fr": "Collection"
+            },
+            "type_id": "Collection"
+        },
+        {
+            "labels": {
+                "en": "Dataset",
+                "fr": "Jeux de données"
+            },
+            "type_id": "Dataset"
+        },
+        {
+            "labels": {
+                "en": "Still image",
+                "fr": "Image"
+            },
+            "type_id": "StillImage"
+        },
+        {
+            "labels": {
+                "en": "Interactive resource",
+                "fr": "Ressource web"
+            },
+            "type_id": "InteractiveResource"
+        },
+        {
+            "labels": {
+                "en": "Moving image",
+                "fr": "Enregistrement vidéo"
+            },
+            "type_id": "MovingImage"
+        },
+        {
+            "labels": {
+                "en": "Physical object",
+                "fr": "Objet"
+            },
+            "type_id": "PhysicalObject"
+        },
+        {
+            "labels": {
+                "en": "Software",
+                "fr": "Elément logiciel"
+            },
+            "type_id": "Software"
+        },
+        {
+            "labels": {
+                "en": "Sound",
+                "fr": "Enregistrement audio"
+            },
+            "type_id": "Sound"
+        },
+        {
+            "labels": {
+                "en": "Text",
+                "fr": "Texte"
+            },
+            "type_id": "Text"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "sort": false,
+    "type_id": "record_type"
+}

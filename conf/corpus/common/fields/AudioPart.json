@@ -114,6 +114,8 @@
             "property": "is_part_ofs",
             "required": true,
             "type_fields": [
+                "AudioBroadcast",
+                "AudioRecording",
                 "VideoBroadcast",
                 "VideoRecording"
             ],

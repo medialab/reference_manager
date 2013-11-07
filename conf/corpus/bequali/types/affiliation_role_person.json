@@ -1,0 +1,77 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Professor/Researcher",
+                "fr": "Enseignant/Chercheur"
+            },
+            "major": true,
+            "type_id": "academic-staff"
+        },
+        {
+            "labels": {
+                "en": "Associate researcher",
+                "fr": "Chercheur associ\u00e9"
+            },
+            "type_id": "associate-researcher"
+        },
+        {
+            "labels": {
+                "en": "Doctoral researcher",
+                "fr": "Doctorant"
+            },
+            "major": true,            
+            "type_id": "doctoral-researcher"
+        },
+        {
+            "labels": {
+                "en": "Guest researcher",
+                "fr": "Chercheur invit\u00e9"
+            },
+            "type_id": "guest-researcher"
+        },
+        {
+            "labels": {
+                "en": "Post doctoral researcher",
+                "fr": "Chercheur post-doctoral"
+            },
+            "major": true,
+            "type_id": "post-doctoral-researcher"
+        },
+        {
+            "labels": {
+                "en": "Engineer",
+                "fr": "Ingénieur"
+            },
+            "major": true,
+            "type_id": "engineer"
+        },
+        {
+            "labels": {
+                "en": "Research assistant",
+                "fr": "Assistant de recherche"
+            },
+            "type_id": "research-assistant"
+        },
+        {
+            "labels": {
+                "en": "Student",
+                "fr": "Étudiant"
+            },
+            "type_id": "student"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "Undetermined", 
+                "fr": "indéterminé"
+            }, 
+            "major": true,
+            "type_id": "undetermined"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "affiliation_role_person"
+}

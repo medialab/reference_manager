@@ -38,6 +38,17 @@
         },
         {
             "labels": {
+                "en": "Disciplinary classification",
+                "fr": "Classification disciplinaire"
+            },
+            "multiple": true,
+            "property": "classifications_topic",
+            "required": true,
+            "type_source": "classification_topic",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
                 "en": "Keywords",
                 "fr": "Mots-cl\u00e9s"
             },
@@ -48,33 +59,31 @@
         },
         {
             "labels": {
-                "en": "Time Period Covered",
-                "fr": "Période couverte"
+                "en": "Period covered begin",
+                "fr": "Début de la période couverte"
             },
-            "filter_date_begin": "date_period_covered_begin",
-            "filter_date_end": "date_period_covered_end",
+            "property": "coverage_temporal_begin",
             "required": true,
-            "type_ui": "YearRangeField"
+            "type_ui": "DateField"
         },
         {
             "labels": {
-                "en": "Author(s)",
-                "fr": "Auteur(s)"
+                "en": "Period covered end",
+                "fr": "Fin de la période couverte"
+            },
+            "property": "coverage_temporal_end",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Actors",
+                "fr": "Acteurs"
             },
             "multiple": true,
             "property": "creators",
             "required": true,
             "type_ui": "CreatorField"
-        },
-        {
-            "labels": {
-                "en": "Distributor",
-                "fr": "Diffuseur des données"
-            },
-            "multiple": false,
-            "property": "distributor",
-            "required": false,
-            "type_ui": "CharField"
         },
         {
             "labels": {
@@ -98,37 +107,37 @@
             "multiple": true,
             "property": "location_of_units_of_observations",
             "required": false,
-            "type_source": "location_of_units_of_observations",
+            "type_source": "location_of_units_of_observation",
             "type_ui": "TypeField"
         },
         {
             "labels": {
-                "en": "Covered countries",
-                "fr": "Pays couverts"
+                "en": "Geographic coverage (countries)",
+                "fr": "Couverture géographique (pays)"
             },
             "multiple": true,
-            "property": "coverage_countries",
+            "property": "coverage_spatial_countries",
             "required": true,
             "type_source": "country",
             "type_ui": "TypeField"
         },
         {
             "labels": {
-                "en": "Geographic coverage",
-                "fr": "Couverture géographique"
+                "en": "Geographic coverage (regions...)",
+                "fr": "Couverture géographique (régions...)"
             },
             "multiple": true,
-            "property": "coverage_geographics",
+            "property": "coverage_spatial_geographics",
             "required": false,
             "type_ui": "CharField"
         },
         {
             "labels": {
-                "en": "Spatial Units",
-                "fr": "Unités spatialisées"
+                "en": "Spatial Units (localities...)",
+                "fr": "Unités spatiales (localités...)"
             },
             "multiple": true,
-            "property": "coverage_spatialunits",
+            "property": "coverage_spatial_units",
             "required": false,
             "type_ui": "CharField"
         },
@@ -144,23 +153,39 @@
         },
         {
             "labels": {
-                "en": "Study documents dates",
-                "fr": "Dates des documents de l'enquête"
+                "en": "Oldest document date",
+                "fr": "Date du document le plus ancien"
             },
-            "filter_date_begin": "documents_date_begin",
-            "filter_date_end": "documents_date_end",
+            "property": "documents_date_begin",
             "required": true,
-            "type_ui": "YearRangeField"
+            "type_ui": "DateField"
         },
         {
             "labels": {
-                "en": "Data collection dates",
-                "fr": "Dates de collecte des données"
+                "en": "Newest document date",
+                "fr": "Date du document le plus récent"
             },
-            "filter_date_begin": "data_collection_date_begin",
-            "filter_date_end": "data_collection_date_end",
+            "property": "documents_date_end",
             "required": true,
-            "type_ui": "YearRangeField"
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Data collection start date",
+                "fr": "Date de début de la collecte des données"
+            },
+            "property": "data_collection_date_begin",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Data collection end date",
+                "fr": "Date de fin de la collecte des données"
+            },
+            "property": "data_collection_date_end",
+            "required": true,
+            "type_ui": "DateField"
         },
         {
             "labels": {
@@ -179,9 +204,9 @@
                 "fr": "Mode de collecte des données"
             },
             "multiple": true,
-            "property": "data_collection_mode",
+            "property": "data_collection_modes",
             "required": true,
-            "type_source": "data_collection_modes",
+            "type_source": "data_collection_mode",
             "type_ui": "TypeField"
         },
         {
@@ -190,7 +215,7 @@
                 "fr": "Procédure d'échantillonnage"
             },
             "multiple": true,
-            "property": "data_collection_sampling",
+            "property": "data_collection_samplings",
             "required": true,
             "type_ui": "CharField"
         },
@@ -200,7 +225,7 @@
                 "fr": "Protocole de collecte"
             },
             "multiple": true,
-            "property": "data_collection_method",
+            "property": "data_collection_methods",
             "required": true,
             "type_source": "data_collection_method",
             "type_ui": "TypeField"
@@ -213,7 +238,7 @@
             "multiple": true,
             "property": "documents_types",
             "required": true,
-            "type_source": "documents_types",
+            "type_source": "record_type",
             "type_ui": "TypeField"
         },
         {
@@ -249,12 +274,13 @@
         {
             "labels": {
                 "en": "Analysis",
-                "fr": "Analysis"
+                "fr": "Analyse"
             },
             "multiple": true,
-            "property": "analysis_type",
+            "property": "analysis_types",
             "required": false,
-            "type_ui": "CharField"
+            "type_source": "analysis_type",
+            "type_ui": "TypeField"
         },
         {
             "labels": {
@@ -262,7 +288,7 @@
                 "fr": "Langues des données"
             },
             "multiple": true,
-            "property": "data_langues",
+            "property": "data_languages",
             "required": false,
             "type_source": "language",
             "type_ui": "TypeField"
@@ -300,69 +326,29 @@
         },
         {
             "labels": {
-                "en": "Contacts",
-                "fr": "Contacts"
+                "en": "Date first edition",
+                "fr": "Date de la première édition"
+            },
+            "property": "edition_first_date",
+            "required": false,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Date last edition",
+                "fr": "Date de la derniére édition"
+            },
+            "property": "edition_last_date",
+            "required": false,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Softwares",
+                "fr": "Logiciels"
             },
             "multiple": true,
-            "property": "contacts",
-            "required": true,
-            "type_ui": "CreatorField"
-        },
-        {
-            "labels": {
-                "en": "Date First Edition",
-                "fr": "Date de la première version"
-            },
-            "property": "version_date_first",
-            "required": true,
-            "type_ui": "DateField"
-        },
-        {
-            "labels": {
-                "en": "Date Last Edition",
-                "fr": "Date de la derniére version"
-            },
-            "property": "version_date_last",
-            "required": true,
-            "type_ui": "DateField"
-        },
-        {
-            "labels": {
-                "en": "Copyright",
-                "fr": "Copyright"
-            },
-            "multiple": false,
-            "property": "copyright_statement",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Software",
-                "fr": "Logiciel"
-            },
-            "multiple": false,
-            "property": "software",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Editor",
-                "fr": "Editeur"
-            },
-            "multiple": false,
-            "property": "editor",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Depositer",
-                "fr": "Déposant"
-            },
-            "multiple": false,
-            "property": "submitter",
+            "property": "softwares",
             "required": false,
             "type_ui": "CharField"
         },
@@ -375,6 +361,31 @@
             "property": "observation_units",
             "required": true,
             "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Publications",
+                "fr": "Publications"
+            },
+            "multiple": true,
+            "only_one": false,
+            "property": "publications",
+            "required": true,
+            "type_fields": [
+                "Book",
+                "BookPart",
+                "ConferencePaper",
+                "DoctoralThesis",
+                "JournalArticle",
+                "PeriodicalIssue",
+                "ProfessoralThesis",
+                "Report",
+                "Software",
+                "VideoRecording",
+                "WebSite",
+                "WorkingPaper"
+            ],
+            "type_ui": "DocumentField"
         }
     ],
     "labels": {

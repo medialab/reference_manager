@@ -1,0 +1,57 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "default": true,
+            "labels": {
+                "en": "Interpretative",
+                "fr": "Analyse interprétative"
+            },
+            "major": true,
+            "type_id": "interpretative"
+        },
+        {
+            "labels": {
+                "en": "Typilogical",
+                "fr": "Analyse typologique"
+            },
+            "major": true,
+            "type_id": "typilogical"
+        },
+        {
+            "labels": {
+                "en": "Lexicometric",
+                "fr": "Analyse lexicométrique"
+            },
+            "major": true,
+            "type_id": "lexicometric"
+        },
+        {
+            "labels": {
+                "en": "Coding",
+                "fr": "Analyse par codification"
+            },
+            "major": true,
+            "type_id": "coding"
+        },
+        {
+            "labels": {
+                "en": "QCA",
+                "fr": "Analyse QCA"
+            },
+            "major": true,
+            "type_id": "qca"
+        },
+        {
+            "labels": {
+                "en": "Other",
+                "fr": "Autre"
+            },
+            "type_id": "other"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "sort": true,
+    "type_id": "analysis_type"
+}

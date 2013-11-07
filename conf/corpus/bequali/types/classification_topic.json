@@ -1,0 +1,42 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "sociology",
+                "fr": "sociologie"
+            },
+            "major": true,
+            "type_id": "sociology"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "political science",
+                "fr": "science politique"
+            },
+            "major": true,
+            "type_id": "political_science"
+        },
+        {
+            "labels": {
+                "en": "political sociology",
+                "fr": "sociologie politique"
+            },
+            "major": true,
+            "type_id": "political_sociology"
+        },
+        {
+            "labels": {
+                "en": "anthropology",
+                "fr": "anthropologie"
+            },
+            "major": true,
+            "type_id": "anthropology"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "sort": true,
+    "type_id": "classification_topic"
+}

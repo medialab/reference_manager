@@ -1,0 +1,115 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "default": true, 
+            "labels": {
+                "en": "Author", 
+                "fr": "Auteur"
+            }, 
+            "major": true, 
+            "type_id": "aut"
+        },
+        {
+            "labels": {
+                "en": "Contact", 
+                "fr": "Contact"
+            }, 
+            "major": true, 
+            "type_id": "con"
+        }, 
+        {
+            "labels": {
+                "en": "Contributor", 
+                "fr": "Collaborateur"
+            }, 
+            "major": true, 
+            "type_id": "ctb"
+        },
+        {
+            "labels": {
+                "en": "Copyright holder", 
+                "fr": "Détenteur de droits d'auteur"
+            }, 
+            "major": true, 
+            "type_id": "cph"
+        }, 
+        {
+            "labels": {
+                "en": "Depositor", 
+                "fr": "Déposant"
+            }, 
+            "major": true, 
+            "type_id": "dpt"
+        }, 
+        {
+            "labels": {
+                "en": "Distributor", 
+                "fr": "Distributeur des données"
+            }, 
+            "major": true, 
+            "type_id": "dst"
+        }, 
+        {
+            "labels": {
+                "en": "Editor", 
+                "fr": "Editeur"
+            }, 
+            "major": true, 
+            "type_id": "edt"
+        }, 
+        {
+            "labels": {
+                "en": "Interviewee", 
+                "fr": "Personne interviewée"
+            }, 
+            "type_id": "ive"
+        }, 
+        {
+            "labels": {
+                "en": "Interviewer", 
+                "fr": "Intervieweur"
+            }, 
+            "major": true, 
+            "type_id": "ivr"
+        }, 
+        {
+            "labels": {
+                "en": "Researcher", 
+                "fr": "Chercheur"
+            }, 
+            "type_id": "res"
+        }, 
+        {
+            "labels": {
+                "en": "Research team head", 
+                "fr": "Directeur d'équipe de recherche"
+            }, 
+            "type_id": "rth"
+        }, 
+        {
+            "labels": {
+                "en": "Research team member", 
+                "fr": "Membre d'équipe de recherche"
+            }, 
+            "type_id": "rtm"
+        }, 
+        {
+            "labels": {
+                "en": "Transcriber", 
+                "fr": "Transcripteur"
+            }, 
+            "type_id": "trc"
+        }, 
+        {
+            "labels": {
+                "en": "Translator", 
+                "fr": "Traducteur"
+            }, 
+            "type_id": "trl"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "creator_role"
+}

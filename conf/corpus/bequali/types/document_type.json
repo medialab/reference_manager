@@ -6,13 +6,6 @@
             "children": [
                 {
                     "labels": {
-                        "en": "Quantitative dataset",
-                        "fr": "Donn\u00e9es quantitatives"
-                    },
-                    "type_id": "DatasetQuanti"
-                },
-                {
-                    "labels": {
                         "en": "Qualitative dataset",
                         "fr": "Donn\u00e9es qualitatives"
                     },
