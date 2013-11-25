@@ -238,3 +238,11 @@ def get_field(entry, field):
         return tmp
     else:
         return None
+
+
+def metajson_list_to_bibtex_root():
+    pass
+
+
+def metajson_to_bibtex_entry():
+    pass

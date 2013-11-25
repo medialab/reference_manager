@@ -156,6 +156,8 @@ def search(corpus, search_query):
         collection = AGENTS
 
     # other filters
+    # todo: filter_peer_review, filter_with_full_text, filter_favorite
+
     filter_query = []
     if "filter_date_end" in search_query:
         filter_date_end = date_service.parse_date(search_query["filter_date_end"])

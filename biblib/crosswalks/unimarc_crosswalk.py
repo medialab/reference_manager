@@ -3,6 +3,7 @@
 # coding=utf-8
 
 import os
+import re
 
 from biblib.metajson import Creator
 from biblib.metajson import Document
@@ -12,6 +13,7 @@ from biblib.metajson import Orgunit
 from biblib.metajson import Person
 from biblib.metajson import Subject
 from biblib.services import creator_service
+from biblib.services import date_service
 from biblib.services import language_service
 from biblib.services import metajson_service
 from biblib.util import console
@@ -20,6 +22,18 @@ from biblib.util import jsonbson
 
 from pymarc import MARCReader
 
+isbn_regex = re.compile(r'([0-9\-xX]+)')
+
+target_audience_unimarc_to_marc21 = {
+    'a': "juvenile",  # a=jeunesse (général)
+    'b': "preschool",  # b=pré-scolaire, 0-5 ans
+    'c': "juvenile",  # c=scolaire, 5-10 ans
+    'd': "juvenile",  # d=enfant, 9-14 ans
+    'e': "adolescent",  # e=jeune adulte, 14-20 ans
+    'k': "specialized",  # k=adulte, haut niveau
+    'm': "adult"  # m=adulte, grand public
+    # u=inconnu
+}
 
 def unimarc_file_path_to_metasjon_list(unimarc_file_path, source, only_first_record):
     with open(unimarc_file_path) as unimarc_file:
@@ -67,25 +81,131 @@ def unimarc_record_to_metajson(record, source):
     # 0XX, 945 -> identifiers
     identifiers = []
     if record['001'] is not None and record['001'].data is not None:
+        # 001 -> identifier ppn
         identifiers.append({"id_type": "ppn", "value": record['001'].data})
     if record['010'] is not None and record['010']['a'] is not None:
+        # 010 -> identifier isbn
         identifiers.append({"id_type": "isbn", "value": record['010']['a']})
     if record['011'] is not None and record['011']['a'] is not None:
+        # 011 -> identifier issn
         identifiers.append({"id_type": "issn", "value": record['011']['a']})
     if record['013'] is not None and record['013']['a'] is not None:
+        # 013 -> identifier ismn
         identifiers.append({"id_type": "ismn", "value": record['013']['a']})
+    if record['014'] is not None and record['014']['a'] is not None and record['014']['2'] is not None:
+        # 014 -> identifier $2
+        identifiers.append({"id_type": record['014']['2'], "value": record['014']['a']})
+    if record['015'] is not None and record['015']['a'] is not None:
+        # 015 -> identifier isrn
+        identifiers.append({"id_type": "isrc", "value": record['015']['a']})
     if record['016'] is not None and record['016']['a'] is not None:
+        # 016 -> identifier isrc
         identifiers.append({"id_type": "isrc", "value": record['016']['a']})
     #if record['020'] is not None and record['020']['b'] is not None:
+        # 020 -> identifier lccn
     #    identifiers.append({"id_type": "lccn", "value": record['020']['b']})
     if record['040'] is not None and record['040']['a'] is not None:
+        # 040 -> identifier coden
         identifiers.append({"id_type": "coden", "value": record['040']['a']})
     if record['073'] is not None and record['073']['a'] is not None:
+        # 073 -> identifier ean
         identifiers.append({"id_type": "ean", "value": record['073']['a']})
     if record['945'] is not None and record['945']['b'] is not None:
+        # 945 -> identifier callnumber
         identifiers.append({"id_type": "callnumber", "value": record['945']['b']})
     if identifiers:
         document["identifiers"] = identifiers
+
+    # 100$a/0-7 -> rec_created_date
+    if record['100'] is not None and record['100']['a'] is not None:
+        rec_created_date = record['100']['a'][0:8]
+        if rec_created_date.strip():
+            document["rec_created_date"] = date_service.parse_to_iso8601(rec_created_date.strip())
+
+    # 100$a/8 -> date stuff
+    if record['100'] is not None and record['100']['a'] is not None:
+        date_type = record['100']['a'][8:9]
+        # a= ressource continue en cours
+        #    1:date_issued 2:None
+        # b= ressource continue morte
+        #    1:date_issued 2:date_issued_end
+        # c= ressource continue dont la situation est inconnue
+        #    1:date_issued 2:None
+        # d= monographie complète à la publication ou publiée dans une année civile
+        #    1:date_issued 2:None
+        # e= reproduction
+        #    1:date_issued 2:date_issued_origin
+        # f= monographie dont la date de publication est incertaine
+        #    1:date_issued 2:date_issued_end
+        # g= monographie dont la publication s’étend sur plus d’une année
+        #    1:date_issued 2:date_issued_end
+        # h= monographie ayant à la fois une date de publication et une date de copyright ou de privilège
+        #    1:date_issued 2:rights.date_copyright
+        # i= monographie ayant à la fois une date d’édition ou de diffusion et une date de production
+        #    1:date_issued 2:date_production
+        # j= monographie ayant une date de publication précise
+        #    1:date_issued 2:date_issued MMJJ
+        # k= monographie ayant à la fois une date de publication et une date d’impression
+        #    1:date_issued 2:date_printed
+        # u= date(s) de publication inconnue(s)
+        #    1:None 2:None
+
+        # 100$a/9-12 -> date_issued
+        date_issued = record['100']['a'][9:13]
+        if date_issued.strip():
+            document["date_issued"] = date_issued.strip()
+
+        # 100$a/13-16 -> date_issued_end, date_issued_origin, date_copyright, date_production, date_printed
+        date_issued_end = record['100']['a'][13:17]
+        if date_issued_end.strip() and date_issued_end.strip() != "9999":
+            if date_type in ['b','f','g']:
+                document["date_issued_end"] = date_issued_end.strip()
+            elif date_type == 'e':
+                document["date_issued_origin"] = date_issued_end.strip()
+            elif date_type == 'h':
+                # todo rights
+                document["date_copyright"] = date_issued_end.strip()
+            elif date_type == 'i':
+                document["date_production"] = date_issued_end.strip()
+            elif date_type == 'k':
+                document["date_printed"] = date_issued_end.strip()
+
+        # 100$a/17-20 -> target_audiences
+        targets = record['100']['a'][17:20]
+        if targets.strip():
+            target_audiences = []
+            for target in targets:
+                if target in target_audience_unimarc_to_marc21:
+                    target_audiences.append(target_audience_unimarc_to_marc21[target])
+            if target_audiences:
+                document["target_audiences"] = target_audiences
+
+        # 100$a/22-24 -> rec_cataloging_languages
+        rec_cataloging_languages = record['100']['a'][22:25]
+        # 100$a/25 -> rec_cataloging_transliteration
+        rec_cataloging_transliteration = record['100']['a'][25:26]
+        # 100$a/26-29 -> rec_cataloging_charactersets
+        rec_cataloging_charactersets = record['100']['a'][26:30]
+
+    # 101$a -> languages
+    if record.get_fields('101'):
+        languages = []
+        for field in record.get_fields('101'):
+            for lang_iso639_2b in field.get_subfields('a'):
+                lang_rfc5646 = language_service.convert_iso639_2b_to_rfc5646(lang_iso639_2b)
+                if lang_rfc5646:
+                    languages.append(lang_rfc5646)
+        if languages:
+            document["languages"] = languages
+
+    # 102$a -> publication_countries
+    publication_countries = []
+    if record.get_fields('102'):
+        for field in record.get_fields('102'):
+            for subfield in field.get_subfields('a'):
+                publication_countries.append(subfield)
+        if publication_countries:
+            document["publication_countries"] = publication_countries
 
     # 200 -> title
     if record['200'] is not None:
@@ -106,21 +226,6 @@ def unimarc_record_to_metajson(record, source):
         if record['200']['i'] is not None:
             document["part_name"] = record['200']['i']
 
-    # 100$a -> date_issued
-    if record['100'] is not None and record['100']['a'] is not None:
-        date_issued = record['100']['a'][9:13]
-        if date_issued:
-            document["date_issued"] = date_issued
-
-    # 102$a -> publication_countries
-    publication_countries = []
-    if record.get_fields('102'):
-        for field in record.get_fields('102'):
-            for subfield in field.get_subfields('a'):
-                publication_countries.append(subfield)
-        if publication_countries:
-            document["publication_countries"] = publication_countries
-
     # 210$a, 210$c -> publication_places, publishers
     publication_places = []
     publishers = []
@@ -135,28 +240,6 @@ def unimarc_record_to_metajson(record, source):
         document["publication_places"] = publication_places
     if publishers:
         document["publishers"] = publishers
-
-    # 7XX -> creators
-    creators = []
-    fields_creators = record.get_fields("700", "701", "702", "710", "711", "712", "716", "720", "721", "722", "730")
-    if fields_creators:
-        for field in fields_creators:
-            creator = extract_unimarc_creator(field)
-            if creator:
-                creators.append(creator)
-    if creators:
-        document["creators"] = creators
-
-    # 101$a -> languages
-    if record.get_fields('101'):
-        languages = []
-        for field in record.get_fields('101'):
-            for lang_iso639_2b in field.get_subfields('a'):
-                lang_rfc5646 = language_service.convert_iso639_2b_to_rfc5646(lang_iso639_2b)
-                if lang_rfc5646:
-                    languages.append(lang_rfc5646)
-        if languages:
-            document["languages"] = languages
 
     # 6XX -> subject<
     if record.get_fields('607'):
@@ -174,6 +257,17 @@ def unimarc_record_to_metajson(record, source):
             if "classifications" not in document:
                 document["classifications"] ={}
             document["classifications"]["ddc"] = deweys
+
+    # 7XX -> creators
+    creators = []
+    fields_creators = record.get_fields("700", "701", "702", "710", "711", "712", "716", "720", "721", "722", "730")
+    if fields_creators:
+        for field in fields_creators:
+            creator = extract_unimarc_creator(field)
+            if creator:
+                creators.append(creator)
+    if creators:
+        document["creators"] = creators
 
     # holdings / copies
     print record['995']

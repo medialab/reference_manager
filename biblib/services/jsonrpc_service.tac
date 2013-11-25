@@ -50,12 +50,13 @@ class References_repository(jsonrpc.JSONRPC):
 
     def render(self, request):
         request.setHeader("Access-Control-Allow-Origin", "*")
+        request.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS') 
         request.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-        print "REQUEST: %s" % request.content.read()
+        print "REQUEST: {}".format(request.content.read())
         return jsonrpc.JSONRPC.render(self, request)
 
     def _cbRender(self, result, request, id, version):
-        print "RESULT: %s" % jsonrpclib.dumps(result, id=id, version=version)
+        print "RESULT: {}".format(jsonrpclib.dumps(result, id=id, version=version))
         return jsonrpc.JSONRPC._cbRender(self, result, request, id, version=2.0)
 
     def jsonrpc_echo(self, x):
@@ -131,12 +132,12 @@ class References_repository(jsonrpc.JSONRPC):
         except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
-    def jsonrpc_metadata_by_rec_ids(self, corpus, rec_ids, format="metajson"):
+    def jsonrpc_metadata_by_rec_ids(self, corpus, rec_ids, output_format="metajson"):
         """ get metadata of a list of references
             params:
                 - corpus: the corpus 
                 - rec_ids: list of record ids (rec_id)
-                - format: the format wanted to describe references
+                - output_format: the format wanted to describe references
             return the asked references in the specified format
         """
         # default corpus management
@@ -146,15 +147,15 @@ class References_repository(jsonrpc.JSONRPC):
             metajson_documents = repository_service.get_documents_by_rec_ids(corpus, rec_ids)
             results = []
             for metajson_document in metajson_documents:
-                if format == "metajson":
+                if output_format == "metajson":
                     results.append(jsonbson.bson_to_json(metajson_document))
                 else:
-                    results.append(crosswalks_service.convert_document(metajson_document, "metajson", format))
+                    results.append(crosswalks_service.convert_native(metajson_document, "metajson", output_format, False, False))
             return results
         except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
-    def jsonrpc_metadata_by_mongo_ids(self, corpus, mongo_ids, format="metajson"):
+    def jsonrpc_metadata_by_mongo_ids(self, corpus, mongo_ids, output_format="metajson"):
         """ get metadata of a list of references
             params:
                 - corpus: the corpus 
@@ -170,10 +171,10 @@ class References_repository(jsonrpc.JSONRPC):
             metajson_documents = repository_service.get_documents_by_mongo_ids(corpus, mongo_ids)
             results = []
             for metajson_document in metajson_documents:
-                if format == "metajson":
+                if output_format == "metajson":
                     results.append(jsonbson.bson_to_json(metajson_document))
                 else:
-                    results.append(crosswalks_service.convert_document(metajson_document, "metajson", format))
+                    results.append(crosswalks_service.convert_native(metajson_document, "metajson", output_format, False, False))
             if results:
                 return results
             else:

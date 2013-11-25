@@ -1,0 +1,937 @@
+{
+  "rec_class": "Collection", 
+  "rec_metajson": 1, 
+  "records": [
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Garnier&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1848&amp;rft.btitle=Avertissement+aux+propri%C3%A9taires+ou+Lettres+%C3%A0+M.+Consid%C3%A9rant%2C...+sur+une+d%C3%A9fense+de+la+propri%C3%A9t%C3%A9&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Proudhon, Pierre-Joseph</span>. <span class=\"title\">Avertissement aux propriétaires ou Lettres à M. Considérant,... sur une défense de la propriété</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Garnier</span>, <span class=\"date\">1848</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "330.17"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "date_birth": "1809", 
+            "date_death": "1865", 
+            "name_family": "Proudhon", 
+            "name_given": "Pierre-Joseph", 
+            "rec_class": "Person"
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1848", 
+      "date_sort": {
+        "$date": -3849984000000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "05105924X"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "MEL8*028(13)"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Garnier"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2000-06-16", 
+      "rec_id": "sciencespo_catalog_0001071658", 
+      "rec_modified_date": "2013-11-25T11:04:47.432649", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "title": "Avertissement aux propriétaires ou Lettres à M. Considérant,... sur une défense de la propriété"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Lithographie+de+l%27Ecole+royale+des+Ponts+et+Chauss%C3%A9es&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1821&amp;rft.btitle=Recherches+statistiques+sur+la+ville+de+Paris+et+le+d%C3%A9partement+de+la+Seine&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"title\">Recherches statistiques sur la ville de Paris et le département de la Seine: recueil de tableaux dressés et réunis d'après les ordres de M. le Comte de Chabrol..</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Lithographie de l'Ecole royale des Ponts et Chaussées</span>; <span class=\"publishers\">impr. de C. Ballard</span>, <span class=\"date\">1821</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "944"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "date_birth": "1768", 
+            "date_death": "1830", 
+            "name_family": "Fourier", 
+            "name_given": "Jean-Baptiste-Joseph", 
+            "rec_class": "Person"
+          }, 
+          "role": "dub"
+        }, 
+        {
+          "agent": {
+            "date_birth": "1773", 
+            "date_death": "1843", 
+            "name_family": "Chabrol de Volvic", 
+            "name_given": "Gilbert-Joseph-Gaspard de", 
+            "rec_class": "Person"
+          }, 
+          "role": "pfr"
+        }
+      ], 
+      "date_issued": "1821", 
+      "date_sort": {
+        "$date": -4701974400000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "098401483"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "R8°006.607"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Lithographie de l'Ecole royale des Ponts et Chaussées", 
+        "impr. de C. Ballard"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2006-03-21", 
+      "rec_id": "sciencespo_catalog_0000838760", 
+      "rec_modified_date": "2013-11-25T11:04:47.434247", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "target_audiences": [
+        "specialized"
+      ], 
+      "title": "Recherches statistiques sur la ville de Paris et le département de la Seine", 
+      "title_sub": "recueil de tableaux dressés et réunis d'après les ordres de M. le Comte de Chabrol..."
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=Progr%C3%A8s+civique&amp;rft.genre=journal&amp;rft.date=1919\"></span><span class=\"creator\">Dumay, Henri, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">Le Progrès civique: journal de critique politique et de perfectionnement social</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">s.n.</span>, <span class=\"date\">1919</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "070.4"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Dumay", 
+            "name_given": "Henri", 
+            "rec_class": "Person"
+          }, 
+          "role": "pbd"
+        }
+      ], 
+      "date_issued": "1919", 
+      "date_issued_end": "1939", 
+      "date_sort": {
+        "$date": -1609459200000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "issn", 
+          "value": "1149-3887"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "s.n."
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "1990-01-01", 
+      "rec_id": "sciencespo_catalog_0000160883", 
+      "rec_modified_date": "2013-11-25T11:04:47.435587", 
+      "rec_status": "private", 
+      "rec_type": "Journal", 
+      "title": "Progrès civique", 
+      "title_non_sort": "Le ", 
+      "title_sub": "journal de critique politique et de perfectionnement social"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=M.+L%C3%A9vy&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1848&amp;rft.btitle=socialisme&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"title\">Le socialisme: droit au travail</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">M. Lévy</span>, <span class=\"date\">1848</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "date_birth": "1811", 
+            "date_death": "1882", 
+            "name_family": "Blanc", 
+            "name_given": "Louis", 
+            "rec_class": "Person"
+          }
+        }
+      ], 
+      "date_issued": "1848", 
+      "date_sort": {
+        "$date": -3849984000000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "014964910"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "RE.0064"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "M. Lévy"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:47.436819", 
+      "rec_id": "sciencespo_catalog_0000289276", 
+      "rec_modified_date": "2013-11-25T11:04:47.436825", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "title": "socialisme", 
+      "title_non_sort": "Le ", 
+      "title_sub": "droit au travail"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=chez+l%27auteur&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1850&amp;rft.btitle=Armanase%2C+ou+Le+r%C3%A8gne+de+la+capacit%C3%A9&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Mure, Benoît-Jules</span>. <span class=\"title\">Armanase, ou Le règne de la capacité</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">chez l'auteur</span>, <span class=\"date\">1850</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "321.07"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "date_birth": "1809", 
+            "date_death": "1858", 
+            "name_family": "Mure", 
+            "name_given": "Benoît-Jules", 
+            "rec_class": "Person"
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1850", 
+      "date_sort": {
+        "$date": -3786825600000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "142712604"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "RE.0064"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "chez l'auteur"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:47.438096", 
+      "rec_id": "sciencespo_catalog_0001187100", 
+      "rec_modified_date": "2013-11-25T11:04:47.438102", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "target_audiences": [
+        "specialized"
+      ], 
+      "title": "Armanase, ou Le règne de la capacité"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Delboy+et+Gimet%E2%80%8E&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Toulouse%E2%80%8E&amp;rft.date=1849&amp;rft.btitle=De+l%27Imp%C3%B4t+foncier%E2%80%8E%E2%80%8E&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"title\">De l'Impôt foncier‎‎</span>. <span class=\"publication_places\">Toulouse‎</span>: <span class=\"publishers\">Delboy et Gimet‎</span>; <span class=\"publishers\">Garnier frères‎</span>, <span class=\"date\">1849</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "336.2"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Puységur", 
+            "name_given": "Auguste de", 
+            "rec_class": "Person"
+          }
+        }
+      ], 
+      "date_issued": "1849", 
+      "date_sort": {
+        "$date": -3818361600000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "142710326"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "RE.0064"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Toulouse‎", 
+        "Paris‎"
+      ], 
+      "publishers": [
+        "Delboy et Gimet‎", 
+        "Garnier frères‎"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:47.439314", 
+      "rec_id": "sciencespo_catalog_0001187098", 
+      "rec_modified_date": "2013-11-25T11:04:47.439319", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "target_audiences": [
+        "specialized"
+      ], 
+      "title": "De l'Impôt foncier‎‎"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Assembl%C3%A9e+nationale&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1981&amp;rft.btitle=Programmes+et+engagements+%C3%A9lectoraux&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"title\">Programmes et engagements électoraux: élections générales des 14 et 21 juin 1981</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Assemblée nationale</span>, <span class=\"date\">1981</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "324"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "date_birth": "1823", 
+            "date_death": "1906", 
+            "name_family": "Barodet", 
+            "name_given": "Désiré", 
+            "rec_class": "Person"
+          }, 
+          "role": "ctb"
+        }, 
+        {
+          "agent": {
+            "date_foundation": "1958", 
+            "name": "France. Assemblée nationale", 
+            "rec_class": "Orgunit"
+          }
+        }
+      ], 
+      "date_issued": "1981", 
+      "date_sort": {
+        "$date": 347155200000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "001635549"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "COL4°1192(1981)"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Assemblée nationale"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:47.440744", 
+      "rec_id": "sciencespo_catalog_0000588913", 
+      "rec_modified_date": "2013-11-25T11:04:47.440751", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "target_audiences": [
+        "specialized"
+      ], 
+      "title": "Programmes et engagements électoraux", 
+      "title_sub": "élections générales des 14 et 21 juin 1981"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=%C3%A0+la+Librairie+centrale&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1829&amp;rft.btitle=Omnibus+du+nouveau+minist%C3%A8re%2C+ou+les+Six+mis+%C3%A0+la+port%C3%A9e+des+30+millions&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"title\">Les Omnibus du nouveau ministère, ou les Six mis à la portée des 30 millions</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">à la Librairie centrale</span>, <span class=\"date\">1829</span>. "
+        }
+      }, 
+      "date_issued": "1829", 
+      "date_sort": {
+        "$date": -4449513600000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "097533556"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "MEL12°101(02)"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "à la Librairie centrale"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2006-03-02", 
+      "rec_id": "sciencespo_catalog_0000957338", 
+      "rec_modified_date": "2013-11-25T11:04:47.441802", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "target_audiences": [
+        "specialized"
+      ], 
+      "title": "Omnibus du nouveau ministère, ou les Six mis à la portée des 30 millions", 
+      "title_non_sort": "Les "
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Garnier+fr%C3%A8res&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1849&amp;rft.btitle=confession+d%27un+r%C3%A9publicain+de+la+veille&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Berger‎, Louis‎</span>. <span class=\"title\">La confession d'un républicain de la veille</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Garnier frères</span>, <span class=\"date\">1849</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "320"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Berger‎", 
+            "name_given": "Louis‎", 
+            "rec_class": "Person"
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1849", 
+      "date_sort": {
+        "$date": -3818361600000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "142711322"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "RE.0064"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Garnier frères"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:47.443094", 
+      "rec_id": "sciencespo_catalog_0001187099", 
+      "rec_modified_date": "2013-11-25T11:04:47.443100", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "target_audiences": [
+        "specialized"
+      ], 
+      "title": "confession d'un républicain de la veille", 
+      "title_non_sort": "La "
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Impr.+nationale&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1904&amp;rft.btitle=Atlas+des+bailliages+ou+juridictions+assimil%C3%A9es+ayant+form%C3%A9+unit%C3%A9+%C3%A9lectorale+en+1789+dress%C3%A9+d%27apr%C3%A8s+les+actes+de+la+convocation+conserv%C3%A9s+aux+Archives+nationales&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Brette, Armand</span>. <span class=\"title\">Atlas des bailliages ou juridictions assimilées ayant formé unité électorale en 1789 dressé d'après les actes de la convocation conservés aux Archives nationales</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Impr. nationale</span>, <span class=\"date\">1904</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "944"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "date_birth": "1848", 
+            "date_death": "1912", 
+            "name_family": "Brette", 
+            "name_given": "Armand", 
+            "rec_class": "Person"
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1904", 
+      "date_sort": {
+        "$date": -2082844800000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "012383457"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "FOL.0047"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Impr. nationale"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "1993-08-30", 
+      "rec_id": "sciencespo_catalog_0001217924", 
+      "rec_modified_date": "2013-11-25T11:04:47.444698", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "target_audiences": [
+        "specialized"
+      ], 
+      "title": "Atlas des bailliages ou juridictions assimilées ayant formé unité électorale en 1789 dressé d'après les actes de la convocation conservés aux Archives nationales"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Impr.+nationale&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1904&amp;rft.btitle=Atlas+des+bailliages+ou+juridictions+assimil%C3%A9es+ayant+form%C3%A9+unit%C3%A9+%C3%A9lectorale+en+1789+dress%C3%A9+d%27apr%C3%A8s+les+actes+de+la+convocation+conserv%C3%A9s+aux+Archives+nationales&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Brette, Armand</span>. <span class=\"title\">Atlas des bailliages ou juridictions assimilées ayant formé unité électorale en 1789 dressé d'après les actes de la convocation conservés aux Archives nationales</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Impr. nationale</span>, <span class=\"date\">1904</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "944"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "date_birth": "1848", 
+            "date_death": "1912", 
+            "name_family": "Brette", 
+            "name_given": "Armand", 
+            "rec_class": "Person"
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1904", 
+      "date_sort": {
+        "$date": -2082844800000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "012383457"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "FOL.0047"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Impr. nationale"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "1993-08-30", 
+      "rec_id": "sciencespo_catalog_0001217924", 
+      "rec_modified_date": "2013-11-25T11:04:47.446225", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "target_audiences": [
+        "specialized"
+      ], 
+      "title": "Atlas des bailliages ou juridictions assimilées ayant formé unité électorale en 1789 dressé d'après les actes de la convocation conservés aux Archives nationales"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=M.+L%C3%A9vy&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1848&amp;rft.btitle=socialisme&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"title\">Le socialisme: droit au travail</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">M. Lévy</span>, <span class=\"date\">1848</span>. "
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "date_birth": "1811", 
+            "date_death": "1882", 
+            "name_family": "Blanc", 
+            "name_given": "Louis", 
+            "rec_class": "Person"
+          }
+        }
+      ], 
+      "date_issued": "1848", 
+      "date_sort": {
+        "$date": -3849984000000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "014964910"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "RE.0064"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "M. Lévy"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:47.447577", 
+      "rec_id": "sciencespo_catalog_0000289276", 
+      "rec_modified_date": "2013-11-25T11:04:47.447585", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "title": "socialisme", 
+      "title_non_sort": "Le ", 
+      "title_sub": "droit au travail"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Garnier+fr%C3%A8res&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1849&amp;rft.btitle=confession+d%27un+r%C3%A9publicain+de+la+veille&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Berger‎, Louis‎</span>. <span class=\"title\">La confession d'un républicain de la veille</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Garnier frères</span>, <span class=\"date\">1849</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "320"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Berger‎", 
+            "name_given": "Louis‎", 
+            "rec_class": "Person"
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1849", 
+      "date_sort": {
+        "$date": -3818361600000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "142711322"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "RE.0064"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Garnier frères"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:47.448870", 
+      "rec_id": "sciencespo_catalog_0001187099", 
+      "rec_modified_date": "2013-11-25T11:04:47.448876", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "target_audiences": [
+        "specialized"
+      ], 
+      "title": "confession d'un républicain de la veille", 
+      "title_non_sort": "La "
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Delboy+et+Gimet%E2%80%8E&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Toulouse%E2%80%8E&amp;rft.date=1849&amp;rft.btitle=De+l%27Imp%C3%B4t+foncier%E2%80%8E%E2%80%8E&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"title\">De l'Impôt foncier‎‎</span>. <span class=\"publication_places\">Toulouse‎</span>: <span class=\"publishers\">Delboy et Gimet‎</span>; <span class=\"publishers\">Garnier frères‎</span>, <span class=\"date\">1849</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "336.2"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Puységur", 
+            "name_given": "Auguste de", 
+            "rec_class": "Person"
+          }
+        }
+      ], 
+      "date_issued": "1849", 
+      "date_sort": {
+        "$date": -3818361600000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "142710326"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "RE.0064"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Toulouse‎", 
+        "Paris‎"
+      ], 
+      "publishers": [
+        "Delboy et Gimet‎", 
+        "Garnier frères‎"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:47.450122", 
+      "rec_id": "sciencespo_catalog_0001187098", 
+      "rec_modified_date": "2013-11-25T11:04:47.450128", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "target_audiences": [
+        "specialized"
+      ], 
+      "title": "De l'Impôt foncier‎‎"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=chez+l%27auteur&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Paris&amp;rft.date=1850&amp;rft.btitle=Armanase%2C+ou+Le+r%C3%A8gne+de+la+capacit%C3%A9&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Mure, Benoît-Jules</span>. <span class=\"title\">Armanase, ou Le règne de la capacité</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">chez l'auteur</span>, <span class=\"date\">1850</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "321.07"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "date_birth": "1809", 
+            "date_death": "1858", 
+            "name_family": "Mure", 
+            "name_given": "Benoît-Jules", 
+            "rec_class": "Person"
+          }, 
+          "role": "aut"
+        }
+      ], 
+      "date_issued": "1850", 
+      "date_sort": {
+        "$date": -3786825600000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "ppn", 
+          "value": "142712604"
+        }, 
+        {
+          "id_type": "callnumber", 
+          "value": "RE.0064"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "chez l'auteur"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:47.451395", 
+      "rec_id": "sciencespo_catalog_0001187100", 
+      "rec_modified_date": "2013-11-25T11:04:47.451401", 
+      "rec_status": "private", 
+      "rec_type": "Book", 
+      "target_audiences": [
+        "specialized"
+      ], 
+      "title": "Armanase, ou Le règne de la capacité"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=Progr%C3%A8s+civique&amp;rft.genre=journal&amp;rft.date=1919\"></span><span class=\"creator\">Dumay, Henri, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">Le Progrès civique: journal de critique politique et de perfectionnement social</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">s.n.</span>, <span class=\"date\">1919</span>. "
+        }
+      }, 
+      "classifications": {
+        "ddc": [
+          "070.4"
+        ]
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Dumay", 
+            "name_given": "Henri", 
+            "rec_class": "Person"
+          }, 
+          "role": "pbd"
+        }
+      ], 
+      "date_issued": "1919", 
+      "date_issued_end": "1939", 
+      "date_sort": {
+        "$date": -1609459200000
+      }, 
+      "identifiers": [
+        {
+          "id_type": "issn", 
+          "value": "1149-3887"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_countries": [
+        "FR"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "s.n."
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "1990-01-01", 
+      "rec_id": "sciencespo_catalog_0000160883", 
+      "rec_modified_date": "2013-11-25T11:04:47.452800", 
+      "rec_status": "private", 
+      "rec_type": "Journal", 
+      "title": "Progrès civique", 
+      "title_non_sort": "Le ", 
+      "title_sub": "journal de critique politique et de perfectionnement social"
+    }
+  ]
+}

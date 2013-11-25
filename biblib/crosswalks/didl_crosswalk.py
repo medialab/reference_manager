@@ -10,7 +10,7 @@ from biblib.util import xmletree
 def didl_xmletree_to_metajson_list(didl_root, source, only_first_record):
     if didl_root is not None:
         item_list = didl_root.findall(xmletree.prefixtag("didl", "Item"))
-        if item_list:
+        if item_list is not None:
             for item in item_list:
                 yield didl_xmletree_to_metajson(item, source)
 

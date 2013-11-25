@@ -1,0 +1,212 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Identifier",
+                "fr": "Identifiant"
+            },
+            "property": "rec_id",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Type",
+                "fr": "Type"
+            },
+            "property": "rec_type",
+            "type_ui": "StringField"
+        },
+        {
+            "labels": {
+                "en": "Title",
+                "fr": "Titre"
+            },
+            "property": "title",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Subtitle",
+                "fr": "Sous-titre"
+            },
+            "property": "title_sub",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "URL",
+                "fr": "URL"
+            },
+            "property": "url",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Date last accessed",
+                "fr": "Date de dernière consultation"
+            },
+            "property": "date_last_accessed",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "SitPol classification",
+                "fr": "Classification SitPol"
+            },
+            "multiple": true,
+            "property": "classification_sitpol",
+            "required": true,
+            "type_source": "classification_sitpol",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Dewey classification",
+                "fr": "Classification Dewey"
+            },
+            "multiple": true,
+            "property": "classification_dewey",
+            "required": true,
+            "type_source": "ddc",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Subject - people",
+                "fr": "Sujet - personnalité"
+            },
+            "multiple": true,
+            "property": "subject_creators",
+            "required": false,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "Actor type",
+                "fr": "Type d'acteur"
+            },
+            "multiple": false,
+            "property": "actor_type",
+            "required": true,
+            "type_source": "actor_type",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Description",
+                "fr": "Description"
+            },
+            "multiple": true,
+            "property": "descriptions",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        },
+        {
+            "labels": {
+                "en": "Keywords",
+                "fr": "Mots-cl\u00e9s"
+            },
+            "multiple": true,
+            "property": "keywords",
+            "required": false,
+            "type_ui": "KeywordField"
+        },
+        {
+            "labels": {
+                "en": "Specific or home page",
+                "fr": "Page d'accueil ou spécifique"
+            },
+            "multiple": false,
+            "property": "webentity_type",
+            "required": true,
+            "type_source": "webentity_type",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Intellectual property",
+                "fr": "Propriété intellectuelle"
+            },
+            "multiple": true,
+            "property": "creators",
+            "required": true,
+            "type_ui": "CreatorField"
+        },
+        {
+            "labels": {
+                "en": "Languages",
+                "fr": "Langues"
+            },
+            "multiple": true,
+            "property": "languages",
+            "required": true,
+            "type_source": "language",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Publication countries",
+                "fr": "Pays de publication"
+            },
+            "multiple": true,
+            "property": "publication_countries",
+            "required": true,
+            "type_source": "country",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "CERIMES type",
+                "fr": "Type de site CERIMES"
+            },
+            "multiple": false,
+            "property": "cerimes_type",
+            "required": true,
+            "type_source": "cerimes_type",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "CERIMES educational level",
+                "fr": "Niveau d'étude CERIMES"
+            },
+            "multiple": false,
+            "property": "cerimes_educational_level",
+            "required": true,
+            "type_source": "cerimes_educational_level",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Selected by",
+                "fr": "Sélectionné par"
+            },
+            "multiple": false,
+            "property": "rec_user",
+            "required": true,
+            "type_source": "sitpol_user",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Commentaires",
+                "fr": "Commentaires"
+            },
+            "multiple": true,
+            "property": "comments",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        }
+    ],
+    "labels": {
+        "en": "Web site",
+        "fr": "Site web"
+    },
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "WebSite"
+}

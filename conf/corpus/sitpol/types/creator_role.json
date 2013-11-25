@@ -1,0 +1,33 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "labels": {
+                "en": "Author",
+                "fr": "Auteur"
+            },
+            "major": true,
+            "type_id": "aut"
+        },
+        {
+            "labels": {
+                "en": "Contributor",
+                "fr": "Collaborateur"
+            },
+            "major": true,
+            "type_id": "ctb"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "Publisher : intellectual property",
+                "fr": "Editeur : propri\u00e9t\u00e9 intellectuelle"
+            },
+            "major": true,
+            "type_id": "pbl"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "creator_role"
+}

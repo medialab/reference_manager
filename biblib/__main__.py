@@ -8,8 +8,7 @@ import argparse
 from biblib.services import config_service
 from biblib.services import corpus_service
 from biblib.services import crosswalks_service
-from biblib.services import export_service
-from biblib.services import import_service
+from biblib.services import io_service
 from biblib.util import console
 from biblib.util import constants
 
@@ -26,7 +25,7 @@ default_corpus = config_service.config["default_corpus"]
 
 # Supported input and output formats
 INPUT_FORMATS = [constants.FORMAT_BIBTEX, constants.FORMAT_DIDL, constants.FORMAT_ENDNOTEXML, constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_RESEARCHERML, constants.FORMAT_RIS, constants.FORMAT_SUMMONJSON, constants.FORMAT_UNIXREF]
-OUTPUT_FORMATS = [constants.FORMAT_HTML, constants.FORMAT_METAJSON, constants.FORMAT_REPEC]
+OUTPUT_FORMATS = [constants.FORMAT_HTML, constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_REPEC]
 
 
 def clean_corpus(args):
@@ -56,10 +55,7 @@ def import_metadatas(args):
     print "input_format: {}".format(input_format)
     input_file_path = args.input_file_path
     print "input_file_path: {}".format(input_file_path)
-    error_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "data", "result", "result_import_errors.txt")
-    print "error_file_path: {}".format(error_file_path)
-    with open(error_file_path, "w") as error_file:
-        import_service.import_metadata_file(corpus, input_file_path, input_format, error_file, "EndNote XML File", True, None)
+    corpus_service.import_metadata_file(corpus, input_file_path, input_format, "EndNote XML File", True, None)
 
 
 def export_metadatas(args):
@@ -71,11 +67,8 @@ def export_metadatas(args):
     print "output_format: {}".format(output_format)
     output_file_path = args.output_file_path
     print "output_file_path: {}".format(output_file_path)
-    # error_file
-    error_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "data", "result", "result_export_errors.txt")
-    print "error_file_path: {}".format(error_file_path)
-    with open(error_file_path, "w") as error_file:
-        export_service.export_corpus(corpus, output_file_path, output_format, error_file)
+    all_in_one_file = True
+    corpus_service.export_corpus(corpus, output_file_path, output_format, all_in_one_file)
 
 
 def convert_metadatas(args):
@@ -88,13 +81,12 @@ def convert_metadatas(args):
     output_file_path = args.output_file_path
     print "output_file_path: {}".format(output_file_path)
     # error_file
-    error_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "data", "result", "result_export_errors.txt")
-    print "error_file_path: {}".format(error_file_path)
+    all_in_one_file = True
     # convert
-    results = crosswalks_service.convert_file(input_file_path, input_format, output_format, None, False)
+    results = crosswalks_service.parse_and_convert_file(input_file_path, input_format, output_format, None, False, all_in_one_file)
     # export
-    with open(error_file_path, "w") as error_file:
-        export_service.export(None, None, results, output_file_path, output_format, error_file)
+    # todo : all_in_one_file
+    io_service.write(None, None, results, output_file_path, output_format, all_in_one_file)
 
 
 # Doc :

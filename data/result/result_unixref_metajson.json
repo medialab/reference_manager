@@ -1,0 +1,111 @@
+{
+  "rec_class": "Collection", 
+  "rec_metajson": 1, 
+  "records": [
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1320&amp;rft.issue=5304&amp;rft.epage=1323&amp;rft.volume=275&amp;rft.date=1997-02-28&amp;rft_id=10.1126%2Fscience.275.5304.1320&amp;rft.atitle=Isolation+of+a+Common+Receptor+for+Coxsackie+B+Viruses+and+Adenoviruses+2+and+5&amp;rft.eissn=10959203&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Science&amp;rft.issn=00368075&amp;rft.genre=article\"></span>\"<span class=\"title\">Isolation of a Common Receptor for Coxsackie B Viruses and Adenoviruses 2 and 5</span>.\" <span class=\"title\">Science</span>. <span class=\"part_volume\">275</span>.<span class=\"part_issue\">5304</span> <span class=\"date\">(28 feb. 1997)</span>. <span class=\"part_page_begin\">1320</span>-<span class=\"part_page_end\">1323</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.sciencemag.org/cgi/doi/10.1126/science.275.5304.1320\" target=\"_blank\">http://www.sciencemag.org/cgi/doi/10.1126/science.275.5304.1320</a>&gt;</span>"
+        }
+      }, 
+      "date_issued": "1997-02-28", 
+      "date_sort": {
+        "$date": 857088000000
+      }, 
+      "identifiers": [
+        {
+          "type": "doi", 
+          "value": "10.1126/science.275.5304.1320"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "identifiers": [
+            {
+              "type": "issn", 
+              "value": "00368075"
+            }, 
+            {
+              "type": "eissn", 
+              "value": "10959203"
+            }
+          ], 
+          "rec_class": "Document", 
+          "rec_type": "Journal", 
+          "title": "Science"
+        }
+      ], 
+      "part_issue": "5304", 
+      "part_page_begin": "1320", 
+      "part_page_end": "1323", 
+      "part_volume": "275", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:47.465918", 
+      "rec_id": "03f09fee-55b9-11e3-b799-406c8f07170d", 
+      "rec_modified_date": "2013-11-25T11:04:47.465926", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "resources": [
+        {
+          "rec_class": "Resource", 
+          "url": "http://www.sciencemag.org/cgi/doi/10.1126/science.275.5304.1320"
+        }
+      ], 
+      "title": "Isolation of a Common Receptor for Coxsackie B Viruses and Adenoviruses 2 and 5"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=870&amp;rft.issue=3&amp;rft.epage=890&amp;rft.volume=32&amp;rft.date=2002-03&amp;rft_id=10.1175%2F1520-0485%282002%29032%3C0870%3ACT%3E2.0.CO%3B2&amp;rft.atitle=Chaotic+Tides%2A&amp;rft.eissn=1520-0485&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Journal+of+Physical+Oceanography&amp;rft.issn=0022-3670&amp;rft.genre=article\"></span>\"<span class=\"title\">Chaotic Tides*</span>.\" <span class=\"title\">Journal of Physical Oceanography</span>. <span class=\"part_volume\">32</span>.<span class=\"part_issue\">3</span> <span class=\"date\">(mar. 2002)</span>. <span class=\"part_page_begin\">870</span>-<span class=\"part_page_end\">890</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://journals.ametsoc.org/doi/abs/10.1175/1520-0485%282002%29032%3C0870%3ACT%3E2.0.CO%3B2\" target=\"_blank\">http://journals.ametsoc.org/doi/abs/10.1175/1520-0485%282002%29032%3C0870%3ACT%3E2.0.CO%3B2</a>&gt;</span>"
+        }
+      }, 
+      "date_issued": "2002-03", 
+      "date_sort": {
+        "$date": 1014940800000
+      }, 
+      "identifiers": [
+        {
+          "type": "doi", 
+          "value": "10.1175/1520-0485(2002)032<0870:CT>2.0.CO;2"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "identifiers": [
+            {
+              "type": "issn", 
+              "value": "0022-3670"
+            }, 
+            {
+              "type": "eissn", 
+              "value": "1520-0485"
+            }
+          ], 
+          "rec_class": "Document", 
+          "rec_type": "Journal", 
+          "title": "Journal of Physical Oceanography", 
+          "title_abbreviated": "J. Phys. Oceanogr."
+        }
+      ], 
+      "part_issue": "3", 
+      "part_page_begin": "870", 
+      "part_page_end": "890", 
+      "part_volume": "32", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:47.467784", 
+      "rec_id": "03f0e92e-55b9-11e3-b41e-406c8f07170d", 
+      "rec_modified_date": "2013-11-25T11:04:47.467791", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "JournalArticle", 
+      "resources": [
+        {
+          "rec_class": "Resource", 
+          "url": "http://journals.ametsoc.org/doi/abs/10.1175/1520-0485%282002%29032%3C0870%3ACT%3E2.0.CO%3B2"
+        }
+      ], 
+      "title": "Chaotic Tides*"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "Dinah Galligo", 
+                "fr": "Dinah Galligo"
+            }, 
+            "type_id": "DG"
+        },
+        {
+            "labels": {
+                "en": "Elise Chapoy", 
+                "fr": "Elise Chapoy"
+            }, 
+            "type_id": "EC"
+        },
+        {
+            "labels": {
+                "en": "Olesea Dubois", 
+                "fr": "Olesea Dubois"
+            }, 
+            "type_id": "OD"
+        },
+        {
+            "labels": {
+                "en": "Sylvie Thoré", 
+                "fr": "Sylvie Thoré"
+            }, 
+            "type_id": "ST"
+        },
+        {
+            "labels": {
+                "en": "Zohra Mechri", 
+                "fr": "Zohra Mechri"
+            }, 
+            "type_id": "ZM"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "sitpol_user"
+}

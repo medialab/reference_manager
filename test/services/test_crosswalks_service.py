@@ -5,47 +5,29 @@
 import os
 
 from biblib.services import crosswalks_service
-from biblib.services import export_service
+from biblib.services import io_service
 from biblib.util import constants
 from biblib.util import console
 
 
-def input_format_to_file_extension(input_format):
-    if input_format and input_format in constants.input_format_to_type:
-        input_type = constants.input_format_to_type[input_format]
-        if input_type and input_type in constants.type_to_file_extension:
-            return constants.type_to_file_extension[input_type]
-
-
-def relevant_file_list(dir_path, file_extension):
-    print "Relevant file list for path : {0}".format(dir_path)
-    if dir_path is None or not os.path.exists(dir_path):
-        print "Nonexistent directory path"
-    else:
-        files = os.listdir(dir_path)
-        if files:
-            for file_name in files:
-                print file_name
-                if not file_name.startswith('.') and file_name.endswith("." + file_extension):
-                    file_path = os.path.join(dir_path, file_name)
-                    print file_path
-                    yield file_path
-
-
-def test_crosswalk(input_format):
+def test_crosswalk(input_format, output_format=constants.FORMAT_METAJSON, all_in_one_file=True):
     print "*** Test crosswalk : {0}".format(input_format)
     base_dir = os.path.join(os.getcwd(), "data")
     input_dir = os.path.join(base_dir, input_format)
-    output_path = os.path.join(base_dir, "result", "result_" + input_format + "_metajon.json")
+    output_file_extension = io_service.guess_file_extension_from_format(output_format)
+    output_path = os.path.join(base_dir, "result", "result_" + input_format + "_" + output_format + "." + output_file_extension)
 
-    file_extension = input_format_to_file_extension(input_format)
-    file_list = relevant_file_list(input_dir, file_extension)
-    if file_list:
-        metajson_list = crosswalks_service.convert_file_list(file_list, input_format, "metajson", "test", False)
-        print export_service.export_metajson_collection("test_" + input_format, "Test " + input_format, metajson_list, output_path)
+    input_file_extension = io_service.guess_file_extension_from_format(input_format)
+    input_file_list = io_service.get_relevant_file_list(input_dir, input_file_extension)
+    if input_file_list:
+        results = crosswalks_service.parse_and_convert_file_list(input_file_list, input_format, output_format, "test", False, all_in_one_file)
+        col_id = "test_" + input_format + "_to_" + output_format
+        col_title = "Test " + input_format + " to " + output_format
+        io_service.write(col_id, col_title, results, output_path, output_format, all_in_one_file)
 
 
 def test():
+    # input_format to MetaJSON
     test_crosswalk(constants.FORMAT_BIBTEX)
     test_crosswalk(constants.FORMAT_DIDL)
     test_crosswalk(constants.FORMAT_DDI)
@@ -57,6 +39,10 @@ def test():
     test_crosswalk(constants.FORMAT_SUMMONJSON)
     test_crosswalk(constants.FORMAT_UNIMARC)
     test_crosswalk(constants.FORMAT_UNIXREF)
+
+    # MetaJSON to output_format
+    test_crosswalk(constants.FORMAT_METAJSON, constants.FORMAT_MODS)
+
 
 console.setup_console()
 test()

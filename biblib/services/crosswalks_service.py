@@ -2,13 +2,9 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import xml.etree.ElementTree as ET
-
-from pybtex.database.input import bibtex
-from pymarc import MARCReader
-
 from biblib.crosswalks import bibjson_crosswalk
 from biblib.crosswalks import bibtex_crosswalk
+from biblib.crosswalks import csv_crosswalk
 from biblib.crosswalks import ddi_crosswalk
 from biblib.crosswalks import didl_crosswalk
 from biblib.crosswalks import endnotexml_crosswalk
@@ -21,258 +17,331 @@ from biblib.crosswalks import ris_crosswalk
 from biblib.crosswalks import summonjson_crosswalk
 from biblib.crosswalks import unimarc_crosswalk
 from biblib.crosswalks import unixref_crosswalk
+from biblib.services import io_service
 from biblib.services import metajson_service
 from biblib.util import constants
-from biblib.util import jsonbson
-from biblib.util import xmletree
 
 
-def convert_native(input_data, input_format, output_format, source, only_first_record):
+###########
+# Convert #
+###########
+
+def convert_native(input_data, input_format, output_format, source, only_first_record, all_in_one_file):
+    """ Convert native format
+        xml : xmletree root element
+        json : dict
+        bibtex : bibtex root
+        txt : list of line
+    """
     if input_format is not None:
-        input_type = guess_format_type(input_format)
+        input_type = io_service.guess_type_from_format(input_format)
 
         if input_type is not None:
+            metajson_list = None
             if input_type == constants.FILE_TYPE_XMLETREE:
-                return convert_xmletree(input_data, input_format, output_format, source, only_first_record)
+                # xml
+                metajson_list = convert_xmletree(input_data, input_format, source, only_first_record)
+
             elif input_type == constants.FILE_TYPE_JSON:
-                return convert_json(input_data, input_format, output_format, source, only_first_record)
+                # json
+                metajson_list = convert_json(input_data, input_format, source, only_first_record)
+
             elif input_type == constants.FILE_TYPE_BIBTEX:
-                return convert_bibtex(input_data, input_format, output_format, source, only_first_record)
+                # bibtex
+                metajson_list = convert_bibtext(input_data, input_format, source, only_first_record)
+
             elif input_type == constants.FILE_TYPE_TXT:
-                print convert_txt_lines(input_data, input_format, output_format, source, only_first_record)
+                # txt
+                metajson_list = convert_txt_lines(input_data, input_format, source, only_first_record)
+
+            elif input_type == constants.FILE_TYPE_CSV:
+                # csv
+                metajson_list = convert_csv(input_data, input_format, source, only_first_record)
+
+            elif input_type == constants.FILE_TYPE_MARC:
+                # marc
+                metajson_list = convert_marc(input_data, input_format, source, only_first_record)
+
+            if metajson_list:
+                # enhance metajson list
+                metajson_list = metajson_service.enhance_metajson_list(metajson_list)
+                return convert_metajson_list(metajson_list, output_format, all_in_one_file)
 
 
-def convert_file_list(input_file_path_list, input_format, output_format, source, only_first_record):
-    print input_file_path_list
-    for input_file_path in input_file_path_list:
-        results = convert_file(input_file_path, input_format, output_format, source, only_first_record)
-        if results:
-            for result in results:
-                yield result
+def convert_bibtext(input_data, input_format, source, only_first_record):
+    return bibtex_crosswalk.bibtex_root_to_metasjon_list(input_data, source, only_first_record)
 
 
-def convert_file(input_file_path, input_format, output_format, source, only_first_record):
-    # input_format type determination
-    input_type = guess_format_type(input_format)
-    if input_type is None:
-        # file_extension type determination
-        input_type = guess_file_type(input_file_path)
-
-    if input_type is not None:
-        if input_type == constants.FILE_TYPE_XMLETREE:
-            xmlparser = ET.XMLParser(encoding="utf-8")
-            xmletree_tree = ET.parse(input_file_path, xmlparser)
-            xmletree_root = xmletree_tree.getroot()
-            return convert_xmletree(xmletree_root, input_format, output_format, source, only_first_record)
-
-        elif input_type == constants.FILE_TYPE_JSON:
-            with open(input_file_path) as json_file:
-                json_data = jsonbson.load_json_file(json_file)
-                return convert_json(json_data, input_format, output_format, source, only_first_record)
-
-        elif input_type == constants.FILE_TYPE_BIBTEX:
-            bibtex_parser = bibtex.Parser()
-            bibtex_root = bibtex_parser.parse_file(input_file_path)
-            return convert_bibtex(bibtex_root, input_format, output_format, source, only_first_record)
-
-        elif input_type == constants.FILE_TYPE_TXT:
-            with open(input_file_path) as txt_file:
-                txt_lines = list(txt_file)
-                return convert_txt_lines(txt_lines, input_format, output_format, source, only_first_record)
-
-        elif input_type == constants.FILE_TYPE_MARC:
-            return convert_marc(input_file_path, input_format, output_format, source, only_first_record)
+def convert_csv(input_data, input_format, source, only_first_record):
+    return csv_crosswalk.csv_dict_reader_to_metasjon_list(input_data, input_format, source, only_first_record)
 
 
-def convert_string(input_string, input_format, output_format, source, only_first_record):
-    # input_format type determination
-    input_type = guess_format_type(input_format)
-    if input_type is None:
-        # string type determination
-        input_type = guess_string_type(input_string)
-
-    if input_type is not None:
-        if input_type == constants.FILE_TYPE_XMLETREE:
-            xmletree.register_namespaces()
-            xmletree_element = ET.fromstring(input_string)
-            return convert_xmletree(xmletree_element, input_format, output_format, source, only_first_record)
-
-        elif input_type == constants.FILE_TYPE_JSON:
-            json_data = jsonbson.load_json_str(input_string)
-            return convert_json(json_data, input_format, output_format, source, only_first_record)
-
-        elif input_type == constants.FILE_TYPE_BIBTEX:
-            bibtexparser = bibtex.Parser()
-            bib_data = bibtexparser.parse_file(input_string)
-            return convert_bibtex(bib_data, input_format, output_format, source, only_first_record)
-
-        elif input_type == constants.FILE_TYPE_TXT:
-            return convert_txt_lines(input_string.splitlines(), input_format, output_format, source, only_first_record)
-
-
-def convert_bibtex(bibtex_root, input_format, output_format, source, only_first_record):
-    if bibtex_root:
-        # convert to metajson
-        metajson_list = bibtex_crosswalk.bibtex_root_to_metasjon_list(bibtex_root, source, only_first_record)
-
-        # enhance metajson list
-        metajson_list = metajson_service.enhance_metajson_list(metajson_list)
-        return convert_metajson_list(metajson_list, output_format)
-
-
-def convert_marc(input_file_path, input_format, output_format, source, only_first_record):
-    if input_file_path:
-        try:
-            marc_file = open(input_file_path)
-            marc_reader = MARCReader(marc_file, False, False)
-            metajson_list = unimarc_crosswalk.unimarc_marcreader_to_metasjon_list(marc_reader, source, only_first_record)
-
-            # enhance metajson list
-            metajson_list = metajson_service.enhance_metajson_list(metajson_list)
-
-            return convert_metajson_list(metajson_list, output_format)
-        finally:
-            pass
-
-
-def convert_txt_lines(txt_lines, input_format, output_format, source, only_first_record):
-    if txt_lines is not None:
-        #if input_format is None:
-        #    input_format = guess_txt_format(txt_lines)
-
-        if input_format is not None:
-            print "input_format: {0}".format(input_format)
-            metajson_list = None
-            if input_format == constants.FORMAT_RIS:
-                metajson_list = ris_crosswalk.ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record)
-            else:
-                print "Error: {} input_format not managed".format(input_format)
-
-            # enhance metajson list
-            metajson_list = metajson_service.enhance_metajson_list(metajson_list)
-
-            return convert_metajson_list(metajson_list, output_format)
-
-
-def convert_json(jsondict, input_format, output_format, source, only_first_record):
-    if jsondict is not None:
+def convert_json(input_data, input_format, source, only_first_record):
+    if input_data is not None:
         if input_format is None:
-            input_format = guess_json_format(jsondict)
+            input_format = io_service.guess_format_from_json(input_data)
 
         if input_format is not None:
             print "input_format: {0}".format(input_format)
-            metajson_list = None
+
             if input_format == constants.FORMAT_METAJSON:
-                metajson_list = [jsondict]
-            elif input_format == constants.FORMAT_SUMMONJSON:
-                metajson_list = summonjson_crosswalk.summonjson_to_metajson_list(jsondict, source, only_first_record)
+                # metajson
+                if input_data["rec_class"] == constants.CLASS_COLLECTION:
+                    return input_data["records"]
+                else:
+                    return [input_data]
+
             elif input_format == constants.FORMAT_BIBJSON:
-                metajson_list = bibjson_crosswalk.bibjson_to_metajson_list(jsondict, source, only_first_record)
+                # bibjson
+                return bibjson_crosswalk.bibjson_to_metajson_list(input_data, source, only_first_record)
+
+            elif input_format == constants.FORMAT_SUMMONJSON:
+                # summon
+                return summonjson_crosswalk.summonjson_to_metajson_list(input_data, source, only_first_record)
+ 
             else:
                 print "Error: {} input_format not managed".format(input_format)
 
-            # enhance metajson list
-            metajson_list = metajson_service.enhance_metajson_list(metajson_list)
 
-            return convert_metajson_list(metajson_list, output_format)
-
-
-def convert_xmletree(xmletree, input_format, output_format, source, only_first_record):
-    if xmletree is not None:
-        if input_format is None:
-            input_format = guess_xmletree_format(xmletree)
-
-        if input_format is not None:
-            print "# input_format: {0}".format(input_format)
-            metajson_list = None
-            # researcherml_crosswalk
-            if input_format == constants.FORMAT_DDI:
-                metajson_list = ddi_crosswalk.ddi_xmletree_to_metajson_list(xmletree, source, only_first_record)
-            elif input_format == constants.FORMAT_DIDL:
-                metajson_list = didl_crosswalk.didl_xmletree_to_metajson_list(xmletree, source, only_first_record)
-            elif input_format == constants.FORMAT_ENDNOTEXML:
-                metajson_list = endnotexml_crosswalk.endnotexml_xmletree_to_metajson_list(xmletree, source, only_first_record)
-            elif input_format == constants.FORMAT_METS:
-                metajson_list = mets_crosswalk.mets_xmletree_to_metajson_list(xmletree, source, only_first_record)
-            elif input_format == constants.FORMAT_MODS:
-                metajson_list = mods_crosswalk.mods_xmletree_to_metajson_list(xmletree, source, only_first_record)
-            elif input_format == constants.FORMAT_RESEARCHERML:
-                metajson_list = researcherml_crosswalk.researcherml_xmletree_to_metajson_list(xmletree, source, only_first_record)
-            elif input_format == constants.FORMAT_UNIXREF:
-                metajson_list = unixref_crosswalk.unixref_xmletree_to_metajson_list(xmletree, source, only_first_record)
-            else:
-                print "Error: {} input_format not managed".format(input_format)
-
-            # enhance metajson list
-            metajson_list = metajson_service.enhance_metajson_list(metajson_list)
-
-            return convert_metajson_list(metajson_list, output_format)
+def convert_marc(input_data, input_format, source, only_first_record):
+    return unimarc_crosswalk.unimarc_marcreader_to_metasjon_list(input_data, source, only_first_record)
 
 
-def convert_metajson_list(metajson_list, output_format):
+def convert_metajson_list(metajson_list, output_format, all_in_one_file):
     if metajson_list:
-        for metajson in metajson_list:
-            yield convert_metajson(metajson, output_format)
+        if all_in_one_file:
+            if output_format == constants.FORMAT_METAJSON or output_format == constants.FORMAT_HTML:
+                yield metajson_service.create_collection(None, None, metajson_list)
+
+            elif output_format == constants.FORMAT_MODS:
+                yield mods_crosswalk.metajson_list_to_mods_xmletree(metajson_list)
+
+            elif output_format == constants.FORMAT_REPEC:
+                yield repec_crosswalk.metajson_list_to_repec(metajson_list)
+
+            else:
+                print "ERROR Not managed format: {}".format(output_format)
+        else:
+            for metajson in metajson_list:
+                yield convert_metajson(metajson, output_format)
 
 
 def convert_metajson(metajson, output_format):
     if output_format == constants.FORMAT_METAJSON or output_format == constants.FORMAT_HTML:
         return metajson
+
     elif output_format == constants.FORMAT_OPENURL:
+        # openurl
         return openurl_crosswalk.metajson_to_openurl(metajson)
+
     elif output_format == constants.FORMAT_OPENURLCOINS:
+        # openurlcoins
         return openurl_crosswalk.metajson_to_openurlcoins(metajson)
+
     elif output_format == constants.FORMAT_REPEC:
+        # repec
         return repec_crosswalk.metajson_to_repec(metajson)
+
+    elif output_format == constants.FORMAT_MODS:
+        # mods
+        return mods_crosswalk.metajson_to_mods_xmletree(metajson)
+
     elif output_format == constants.FORMAT_BIBTEX:
+        # bibtex
+        return bibtex_crosswalk.metajson_to_bibtex_entry(metajson)
+
+    else:
+        print "ERROR Not managed format: {}".format(output_format)
+
+
+def convert_txt_lines(txt_lines, input_format, source, only_first_record):
+    if txt_lines is not None:
+        #if input_format is None:
+        #    input_format = io_service.guess_format_from_txt_lines(txt_lines)
+
+        if input_format is not None:
+            print "input_format: {0}".format(input_format)
+            if input_format == constants.FORMAT_RIS:
+                return ris_crosswalk.ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record)
+            else:
+                print "Error: {} input_format not managed".format(input_format)
+
+
+def convert_xmletree(xmletree_root, input_format, source, only_first_record):
+    if xmletree_root is not None:
+        if input_format is None:
+            input_format = io_service.guess_format_from_xmletree(xmletree_root)
+
+        if input_format is not None:
+            print "# input_format: {0}".format(input_format)
+
+            if input_format == constants.FORMAT_DDI:
+                # ddi
+                return ddi_crosswalk.ddi_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
+
+            elif input_format == constants.FORMAT_DIDL:
+                # didl
+                return didl_crosswalk.didl_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
+
+            elif input_format == constants.FORMAT_ENDNOTEXML:
+                # endnotexml
+                return endnotexml_crosswalk.endnotexml_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
+
+            elif input_format == constants.FORMAT_METS:
+                # mets
+                return mets_crosswalk.mets_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
+
+            elif input_format == constants.FORMAT_MODS:
+                # mods
+                return mods_crosswalk.mods_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
+
+            elif input_format == constants.FORMAT_RESEARCHERML:
+                return researcherml_crosswalk.researcherml_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
+
+            elif input_format == constants.FORMAT_UNIXREF:
+                # unixref
+                return unixref_crosswalk.unixref_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
+
+            else:
+                print "Error: {} input_format not managed".format(input_format)
+
+
+
+#########
+# Parse #
+#########
+
+def parse_and_convert_file_list(input_file_path_list, input_format, output_format, source, only_first_record, all_in_one_file):
+    """ Convert from a list of file path """
+    results = []
+    for input_file_path in input_file_path_list:
+        file_results = parse_and_convert_file(input_file_path, input_format, output_format, source, only_first_record, False)
+        if file_results:
+            results.extend(file_results)
+    if results:
+        if not all_in_one_file:
+            return results
+
+        else:
+            if output_format == constants.FORMAT_METAJSON or output_format == constants.FORMAT_HTML:
+                return metajson_service.create_collection(None, None, results)
+
+            elif output_format == constants.FORMAT_MODS:
+                return mods_crosswalk.create_mods_collection_xmletree(results)        
+            else:
+                print "ERROR Not managed format: {}".format(output_format)
+
+
+def parse_and_convert_file(input_file_path, input_format, output_format, source, only_first_record, all_in_one_file):
+    """ Convert from a file path """
+    # input_format type determination
+    input_type = io_service.guess_type_from_format(input_format)
+
+    if input_type is None:
+        # file_extension type determination
+        input_type = io_service.guess_type_from_file(input_file_path)
+
+    if input_type is not None:
+        metajson_list = None
+        if input_type == constants.FILE_TYPE_XMLETREE:
+            # xml
+            metajson_list = parse_and_convert_xmletree(input_file_path, input_format, source, only_first_record)
+
+        elif input_type == constants.FILE_TYPE_JSON:
+            # json
+            metajson_list = parse_and_convert_json(input_file_path, input_format, source, only_first_record)
+
+        elif input_type == constants.FILE_TYPE_BIBTEX:
+            # bibtex
+            metajson_list = parse_and_convert_bibtex(input_file_path, input_format, source, only_first_record)
+
+        elif input_type == constants.FILE_TYPE_TXT:
+            # txt
+            metajson_list = parse_and_convert_txt_lines(input_file_path, input_format, source, only_first_record)
+
+        elif input_type == constants.FILE_TYPE_MARC:
+            # marc
+            metajson_list = parse_and_convert_marc(input_file_path, input_format, source, only_first_record)
+
+        elif input_type == constants.FILE_TYPE_CSV:
+            # csv
+            metajson_list = parse_and_convert_csv(input_file_path, input_format, source, only_first_record)
+
+        if metajson_list:
+            # enhance metajson list
+            metajson_list = metajson_service.enhance_metajson_list(metajson_list)
+            return convert_metajson_list(metajson_list, output_format, all_in_one_file)
+
+
+def parse_and_convert_string(input_string, input_format, output_format, source, only_first_record, all_in_one_file):
+    # input_format type determination
+    input_type = io_service.guess_type_from_format(input_format)
+    if input_type is None:
+        # string type determination
+        input_type = io_service.guess_format_from_string(input_string)
+
+    if input_type is not None:
+        metajson_list = None
+        if input_type == constants.FILE_TYPE_XMLETREE:
+            # xml
+            metajson_list =  parse_and_convert_xmletree_str(input_string, input_format, source, only_first_record)
+
+        elif input_type == constants.FILE_TYPE_JSON:
+            # json
+            metajson_list = parse_and_convert_json_str(input_string, input_format, source, only_first_record)
+
+        elif input_type == constants.FILE_TYPE_BIBTEX:
+            # bibtex
+            metajson_list = parse_and_convert_bibtex(input_string, input_format, source, only_first_record)
+
+        elif input_type == constants.FILE_TYPE_TXT:
+            # txt
+            metajson_list = parse_and_convert_txt_lines(input_string.splitlines(), input_format, source, only_first_record)
+
+        if metajson_list:
+            # enhance metajson list
+            metajson_list = metajson_service.enhance_metajson_list(metajson_list)
+            return convert_metajson_list(metajson_list, output_format, all_in_one_file)
+
+
+def parse_and_convert_bibtex(input_file_path, input_format, source, only_first_record):
+    bibtex_root = io_service.parse_bibtex(input_file_path)
+    return convert_bibtext(bibtex_root, input_format, source, only_first_record)
+
+
+def parse_and_convert_csv(input_file_path, input_format, source, only_first_record):
+    csv_dict_reader = io_service.parse_csv(input_file_path)
+    return convert_csv(csv_dict_reader, input_format, source, only_first_record)
+
+
+def parse_and_convert_json(input_file_path, input_format, source, only_first_record):
+    json_data = io_service.parse_json(input_file_path)
+    return convert_json(json_data, input_format, source, only_first_record)
+
+
+def parse_and_convert_json_str(input_string, input_format, source, only_first_record):
+    json_data = io_service.parse_json_str(input_string)
+    return convert_json(json_data, input_format, source, only_first_record)
+
+
+def parse_and_convert_marc(input_file_path, input_format, source, only_first_record):
+    try:
+        marc_reader = io_service.parse_marc(input_file_path)
+        return convert_marc(marc_reader, input_format, source, only_first_record)
+    finally:
         pass
 
 
-def guess_format_type(input_format):
-    if input_format and input_format in constants.input_format_to_type:
-        return constants.input_format_to_type[input_format]
+def parse_and_convert_txt_lines(input_file_path, input_format, source, only_first_record):
+    txt_lines = io_service.parse_txt_lines(input_file_path)
+    return convert_txt_lines(txt_lines, input_format, source, only_first_record)
 
 
-def guess_file_type(input_file):
-    if input_file and input_file.rfind(".") != -1:
-        extention = input_file[input_file.rfind(".")+1:]
-        if extention in constants.file_extension_to_type:
-            return constants.file_extension_to_type[extention]
+def parse_and_convert_xmletree(input_file_path, input_format, source, only_first_record):
+    xmletree_root = io_service.parse_xmletree(input_file_path)
+    return convert_xmletree(xmletree_root, input_format, source, only_first_record)
 
 
-def guess_string_type(string):
-    if string.startswith("TY  -"):
-        return constants.FORMAT_RIS
-    else:
-        return None
-
-
-def guess_txt_format(txt):
-    # todo
-    return None
-
-
-def guess_json_format(jsondict):
-    if jsondict is not None:
-        if "rec_class" in jsondict:
-            return "metajson"
-        else:
-            print "Error: input_format can't be determined"
-
-
-def guess_xmletree_format(element):
-    if element is not None:
-        # input_format determination
-        print "element".format(element.tag)
-        if element.tag.find("{") != -1 and element.tag.rfind("}") != -1:
-            xmlns = element.tag[element.tag.find("{") + 1:element.tag.rfind("}")]
-            print "xmlns: {0}".format(xmlns)
-            if xmlns in constants.xmlns_to_input_format:
-                input_format = constants.xmlns_to_input_format[xmlns]
-        else:
-            if element.tag in constants.xmltag_to_input_format:
-                input_format = constants.xmltag_to_input_format[element.tag]
-        if input_format:
-            return input_format
-        else:
-            print "Error: input_format can't be determined"
+def parse_and_convert_xmletree_str(input_string, input_format, source, only_first_record):
+    xmletree_root = io_service.parse_xmletree_str(input_string)
+    return convert_xmletree(xmletree_root, input_format, source, only_first_record)

@@ -1,0 +1,26 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "default": true,
+            "labels": {
+                "en": "politics",
+                "fr": "politique"
+            },
+            "major": true,
+            "type_id": "323"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "other",
+                "fr": "autre"
+            },
+            "major": true,
+            "type_id": "999"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "ddc"
+}

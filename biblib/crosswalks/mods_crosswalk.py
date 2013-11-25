@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import xml.etree.ElementTree as ET
+
 from biblib.metajson import Creator
 from biblib.metajson import Document
 from biblib.metajson import Event
@@ -17,6 +19,11 @@ from biblib.services import language_service
 from biblib.services import metajson_service
 from biblib.util import constants
 from biblib.util import xmletree
+
+
+####################
+# MODS -> MetaJSON #
+####################
 
 MODS_PART_FIELDS = ["part_chapter_number", "part_chapter_title", "part_chronology", "part_column", "part_issue", "part_month", "part_name", "part_number", "part_page_begin", "part_page_end", "part_paragraph_number", "part_quarter", "part_season", "part_section_title", "part_session", "part_timecode_begin", "part_timecode_end", "part_track_number", "part_track_title", "part_volume", "part_week"]
 
@@ -1037,7 +1044,7 @@ def get_mods_title_infos(mods):
                 # title -> title
                 title_dict.update(get_mods_element_text_and_set_key(mods_titleinfo, "title", "title"))
                 # nonSort -> title_non_sort
-                title_dict.update(get_mods_element_text_and_set_key(mods_titleinfo, "nonSort", "title_non_sort"))
+                title_dict.update(get_mods_element_text_and_set_key(mods_titleinfo, "nonSort", "title_non_sort", False))
                 # subTitle -> title_sub
                 title_dict.update(get_mods_element_text_and_set_key(mods_titleinfo, "subTitle", "title_sub"))
                 # partNumber -> part_number
@@ -1242,6 +1249,63 @@ def get_mods_record_info(mods):
     return result
 
 
+####################
+# MetaJSON -> MODS #
+####################
+
+def create_mods_collection_xmletree(mods_root_list):
+    """ MODS xmletree list -> modsCollection xmletree """
+    xmletree.register_namespaces()
+    # mods collection root
+    mods_collection_root = ET.Element(xmletree.prefixtag("mods", "modsCollection"))
+
+    for mods_root in mods_root_list:
+        if mods_root is not None:
+            mods_collection_root.append(mods_root)
+    
+    return mods_collection_root
+
+
+def metajson_list_to_mods_xmletree(documents):
+    """ MetaJSON Document -> MODS xmletree """
+    xmletree.register_namespaces()
+    # mods collection root
+    mods_collection_root = ET.Element(xmletree.prefixtag("mods", "modsCollection"))
+
+    for document in documents:
+        mods_root = metajson_to_mods_xmletree(document)
+        if mods_root is not None:
+            mods_collection_root.append(mods_root)
+    
+    return mods_collection_root
+
+
+def metajson_to_mods_xmletree(document):
+    """ MetaJSON Document -> MODS xmletree """
+    xmletree.register_namespaces()
+    # mods root
+    mods_root = ET.Element(xmletree.prefixtag("mods", "mods"), version="3.5")
+
+    # titleInfoProper
+    titleInfoProper = ET.SubElement(mods_root, "titleInfo")
+    if "title" in document:
+        title = ET.SubElement(titleInfoProper, "title")
+        title.text = document["title"]
+    if "title_non_sort" in document:
+        nonSort = ET.SubElement(titleInfoProper, "nonSort")
+        nonSort.text = document["title_non_sort"]
+    if "title_sub" in document:
+        subTitle = ET.SubElement(titleInfoProper, "subTitle")
+        subTitle.text = document["title_sub"]
+    if "part_name" in document:
+        partName = ET.SubElement(titleInfoProper, "partName")
+        partName.text = document["part_name"]
+    if "part_number" in document:
+        partNumber = ET.SubElement(titleInfoProper, "partNumber")
+        partNumber.text = document["part_number"]
+
+    return mods_root
+
 #########
 # Utils #
 #########
@@ -1344,9 +1408,9 @@ def get_mods_textlangs_and_set_key(rml, element, key):
     return result
 
 
-def get_mods_element_text(rml, element):
+def get_mods_element_text(rml, element, strip=True):
     element_xmletree = rml.find(xmletree.prefixtag("mods", element))
-    return xmletree.get_element_text(element_xmletree)
+    return xmletree.get_element_text(element_xmletree, strip)
 
 
 def get_mods_element_text_as_boolean(rml, element):    
@@ -1354,9 +1418,9 @@ def get_mods_element_text_as_boolean(rml, element):
     return xmletree.get_element_text_as_boolean(element_xmletree)
 
 
-def get_mods_element_text_and_set_key(rml, element, key):
+def get_mods_element_text_and_set_key(rml, element, key, strip=True):
     result = {}
-    key_value = get_mods_element_text(rml, element)
+    key_value = get_mods_element_text(rml, element, strip)
     if key_value is not None:
         result[key] = key_value
     return result

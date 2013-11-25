@@ -14,6 +14,22 @@ from biblib.services import metajson_service
 from biblib.util import constants
 
 
+custom_namespaces = {
+    'oai-pmh': 'http://www.openarchives.org/OAI/2.0/',
+    'didl': 'urn:mpeg:mpeg21:2002:02-DIDL-NS',
+    'dii': 'urn:mpeg:mpeg21:2002:01-DII-NS',
+    'dip': 'urn:mpeg:mpeg21:2005:01-DIP-NS',
+    'rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+    'oai_dc': 'http://www.openarchives.org/OAI/2.0/oai_dc/',
+    'dc': 'http://purl.org/dc/elements/1.1/',
+    'dcterms': 'http://purl.org/dc/terms/',
+    'mods': 'http://www.loc.gov/mods/v3',
+    'marc': 'http://www.loc.gov/MARC21/slim',
+    'dai': 'info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd',
+    'xlink': 'http://www.w3.org/1999/xlink'
+}
+
+
 class CustomMetadataReader(MetadataReader):
 
     def __call__(self, element):
@@ -75,20 +91,6 @@ class CustomMetadataReader(MetadataReader):
             map[field_name] = value
         return Metadata(map)
 
-custom_namespaces = {
-    'oai-pmh': 'http://www.openarchives.org/OAI/2.0/',
-    'didl': 'urn:mpeg:mpeg21:2002:02-DIDL-NS',
-    'dii': 'urn:mpeg:mpeg21:2002:01-DII-NS',
-    'dip': 'urn:mpeg:mpeg21:2005:01-DIP-NS',
-    'rdf': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
-    'oai_dc': 'http://www.openarchives.org/OAI/2.0/oai_dc/',
-    'dc': 'http://purl.org/dc/elements/1.1/',
-    'dcterms': 'http://purl.org/dc/terms/',
-    'mods': 'http://www.loc.gov/mods/v3',
-    'marc': 'http://www.loc.gov/MARC21/slim',
-    'dai': 'info:eu-repo/dai http://www.surfgroepen.nl/sites/oai/metadata/Shared%20Documents/dai-extension.xsd',
-    'xlink': 'http://www.w3.org/1999/xlink'
-}
 
 oai_dc_reader = CustomMetadataReader(
     fields={'orig': ('xmlstring', 'oai_dc:dc')},
@@ -155,9 +157,12 @@ def convert_header(header):
 
 
 def convert_record(record, meta_orig_prefix, source):
+    print "convert_record"
     header = convert_header(record[0])
     meta_orig_value = record[1].getField("orig").encode('utf-8')
-    metajson_list = crosswalks_service.convert_string(meta_orig_value, meta_orig_prefix, constants.FORMAT_METAJSON, source, False)
+    print "meta_orig_value: {}".format(meta_orig_value)
+    metajson_list = crosswalks_service.parse_and_convert_string(meta_orig_value, meta_orig_prefix, constants.FORMAT_METAJSON, source, False, False)
+    print "metajson_list: {}".format(metajson_list)
     metajson = None
     if metajson_list:
         metajson = metajson_list.next()
@@ -177,6 +182,7 @@ def convert_record(record, meta_orig_prefix, source):
             metajson["rec_status"] = "deleted"
         else:
             metajson["rec_status"] = "published"
+        print "metajson: {}".format(metajson)
     return metajson
 
 
@@ -228,6 +234,7 @@ def get_record(target, identifier):
 
 
 def list_records(target, date_from, date_until, setspec):
+    print "list_records"
     if target is not None:
         client = Client(target['url'], registry)
         # todo : clean this, find simplified cases

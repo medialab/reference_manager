@@ -14,7 +14,8 @@ config = config_service.config["crossref_openurl"]
 
 def query_openurl_and_retrieve_metadata(openurl, only_first_record):
     unixref = query_openurl(openurl)
-    return crosswalks_service.convert_string(unixref, constants.FORMAT_UNIXREF, constants.FORMAT_METAJSON, "CrossRef", only_first_record)
+    all_in_one_file = True
+    return crosswalks_service.convert_string(unixref, constants.FORMAT_UNIXREF, constants.FORMAT_METAJSON, "CrossRef", only_first_record, all_in_one_file)
 
 
 def query_openurl(openurl):

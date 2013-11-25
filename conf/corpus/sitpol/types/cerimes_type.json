@@ -1,0 +1,54 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "Portal web site", 
+                "fr": "Site portail"
+            }, 
+            "type_id": "10"
+        },
+        {
+            "deprecated": true,
+            "labels": {
+                "en": "Web site selection", 
+                "fr": "Sélection de sites"
+            }, 
+            "type_id": "11"
+        },
+        {
+            "default": true,
+            "labels": {
+                "en": "Institutional web site", 
+                "fr": "Site institutionnel"
+            }, 
+            "major": true, 
+            "type_id": "12"
+        },
+        {
+            "labels": {
+                "en": "Personal web site", 
+                "fr": "Site personnel"
+            }, 
+            "major": true, 
+            "type_id": "13"
+        },
+        {
+            "labels": {
+                "en": "Online document", 
+                "fr": "Document en ligne"
+            }, 
+            "type_id": "14"
+        },
+        {
+            "labels": {
+                "en": "Online database", 
+                "fr": "Base de données"
+            }, 
+            "type_id": "15"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "cerimes_type"
+}

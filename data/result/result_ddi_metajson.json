@@ -1,0 +1,74 @@
+{
+  "rec_class": "Collection", 
+  "rec_metajson": 1, 
+  "records": [
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"title\">La boutique contre la gauche</span>. "
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:37.844522", 
+      "rec_id": "fe348478-55b8-11e3-90e3-406c8f07170d", 
+      "rec_modified_date": "2013-11-25T11:04:37.844531", 
+      "rec_status": "private", 
+      "rec_type": "DatasetQuali", 
+      "title": "La boutique contre la gauche"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"title\">Database regarding the North Indian MPs since 1952</span>. "
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:37.922440", 
+      "rec_id": "fe4067a1-55b8-11e3-92e7-406c8f07170d", 
+      "rec_modified_date": "2013-11-25T11:04:37.922465", 
+      "rec_status": "private", 
+      "rec_type": "DatasetQuali", 
+      "title": "Database regarding the North Indian MPs since 1952"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"title\">Baromètre Politique Français 2006-2007 Vague 1</span>. "
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:38.242228", 
+      "rec_id": "fe713314-55b8-11e3-bd13-406c8f07170d", 
+      "rec_modified_date": "2013-11-25T11:04:38.242241", 
+      "rec_status": "private", 
+      "rec_type": "DatasetQuali", 
+      "title": "Baromètre Politique Français 2006-2007 Vague 1"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": "<span class=\"title\">La socialisation professionnelle des gardiens de la paix 1992-2002 Questionnaire 1</span>. "
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-11-25T11:04:38.342158", 
+      "rec_id": "fe8072dc-55b8-11e3-8764-406c8f07170d", 
+      "rec_modified_date": "2013-11-25T11:04:38.342173", 
+      "rec_status": "private", 
+      "rec_type": "DatasetQuali", 
+      "title": "La socialisation professionnelle des gardiens de la paix 1992-2002 Questionnaire 1"
+    }
+  ]
+}

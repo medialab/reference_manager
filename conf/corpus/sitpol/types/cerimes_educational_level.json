@@ -1,0 +1,22 @@
+{
+    "bundle": true, 
+    "children": [
+        {
+            "labels": {
+                "en": "higher education", 
+                "fr": "enseignement supérieur et recherche"
+            }, 
+            "type_id": "10"
+        },
+        {
+            "labels": {
+                "en": "all public", 
+                "fr": "tous niveaux"
+            }, 
+            "type_id": "11"
+        }
+    ], 
+    "rec_class": "Type", 
+    "rec_metajson": 1, 
+    "type_id": "cerimes_educational_level"
+}

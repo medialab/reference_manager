@@ -4,7 +4,7 @@
 
 import os
 from biblib.cloud import crossref
-from biblib.services import export_service
+from biblib.services import io_service
 
 
 def test():
@@ -15,6 +15,6 @@ def test():
     metajson_list = crossref.query_openurl_and_retrieve_metadata(openurl, True)
     if metajson_list:
         output_path = os.path.join(base_dir, "result", "result_crossref_metajon.json")
-        print export_service.export_metajson_collection("test_crossref", "Crossref import test", metajson_list, output_path)
+        print io_service.export_metajson_collection("test_crossref", "Crossref import test", metajson_list, output_path)
     else:
         assert False

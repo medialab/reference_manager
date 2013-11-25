@@ -1,0 +1,25 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "default": true,
+            "labels": {
+                "en": "home page",
+                "fr": "page d'accueil"
+            },
+            "major": true,
+            "type_id": "home_page"
+        },
+        {
+            "labels": {
+                "en": "specific page",
+                "fr": "page sp\u00e9cifique"
+            },
+            "major": true,
+            "type_id": "specific_page"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "webentity_type"
+}

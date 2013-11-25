@@ -1,99 +1,98 @@
 Template-Type: ReDIF-Paper 1.0
-Title: L’Enquête et ses méthodes : l’entretien collectif
-File-URL: http://spire.sciences-po.fr/hdl:/2441/7467/resources/sd-haegel-entretiens-collectifs-ouv.-2004intro-et-conclusion.pdf
-File-Format: application/pdf
-Handle: 2441/7467
+Title: Member States of the European Union
+Handle: 2441/dambferfb7dfprc9m26c8c8o3
 
 Template-Type: ReDIF-Paper 1.0
-Title: Décrire et compter. Du bricolage à l'innovation : questions de méthodes
-Handle: 2441/eu4vqp9ompqllr09iig9of18l
+Title: Europeanization of Cities: Policies, Urban Change and Urban Networks
+X-PublishedAs-Volume: 36
+X-PublishedAs-Issue: 3
+Handle: 2441/dambferfb7dfprc9m2h2og5ig
 
 Template-Type: ReDIF-Paper 1.0
-Title: niveau des voix aux effets de seuil : comment se produisent en France les majorités électorales au scrutin majoritaire à deux tours
-Handle: 2441/9lk2v3v0pebejmo97cq880da4
+Title: Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy
+X-PublishedAs-Pages: 186-196
+File-URL: http://spire.sciences-po.fr/hdl:/2441/eo6779thqgm5r489makgoai85/resources/13.-just-another-roll-of-the-dice-revised.pdf
+Handle: 2441/eo6779thqgm5r489makgoai85
 
 Template-Type: ReDIF-Paper 1.0
-Title: Panel électoral français 2002 : le dispositif méthodologique
-Handle: 2441/53r60a8s3kup1vc9l21k82t9p
+Title: Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006
+File-URL: http://spire.sciences-po.fr/hdl:/2441/5l6uh8ogmqildh09h6m8hj429/resources/master2009antonin.pdf
+Handle: 2441/5l6uh8ogmqildh09h6m8hj429
 
 Template-Type: ReDIF-Paper 1.0
-Title: Annexes statistiques
-Handle: 2441/3cr7jj61bs68cvg99cpo5gob4
+Title: Peace Laboratories in Colombia: the European Approach to Peace-building
+File-URL: http://spire.sciences-po.fr/hdl:/2441/3fm4jv3k2s99lms9jb5i5asil/resources/these-castaneda-dorly-ri-2012.pdf
+Handle: 2441/3fm4jv3k2s99lms9jb5i5asil
 
 Template-Type: ReDIF-Paper 1.0
-Title: favoritisme à la corruption : les définitions concurrentes de la probité publique
-Handle: 2441/3cr7jj61bs68cvg998cj1i43p
+Title: Varieties and the transfer problem
+X-PublishedAs-Volume: 89
+X-PublishedAs-Issue: 1
+X-PublishedAs-Pages: 1-12
+Handle: 2441/f4rshpf3v1umfa09lb0joe5g5
 
 Template-Type: ReDIF-Paper 1.0
-Title: L’espace politique des électeurs français à la fin des années 1990 : nouveaux et anciens clivages, hétérogénéité des électorats
-File-URL: http://www.persee.fr/web/revues/home/prescript/article/rfsp_0035-2950_2000_num_50_3_395484
-Handle: 2441/f0uohitsgqh8dhk97j0a76i2o
+Title: Vers une révolution bureaucratique ?
+X-PublishedAs-Issue: 52
+X-PublishedAs-Pages: 115-131
+Handle: 2441/53r60a8s3kup1vc9k0skmec8o
 
 Template-Type: ReDIF-Paper 1.0
-Title: favoritisme à la corruption : les représentations sociales des Français en matière d’atteintes à la probité publique
-Handle: 2441/f0uohitsgqh8dhk97ip0kb5h6
+Title: Fonctionnaires, la fin du mérite républicain
+X-PublishedAs-Issue: 21144
+X-PublishedAs-Pages: 11-00
+Handle: 2441/eo6779thqgm5r489matggisrp
 
 Template-Type: ReDIF-Paper 1.0
-Title: « Effet patrimoine » : 30 ans après, le retour ?
-Handle: 2441/5k7940uimfdf9c89935s60a3p
+Title: Clientélisme en situation. Échanges politiques, politisation et conflits moraux
+X-PublishedAs-Volume: 2012/1
+X-PublishedAs-Issue: 69
+Handle: 2441/eo6779thqgm5r489m6ock14ik
 
 Template-Type: ReDIF-Paper 1.0
-Title: l’usage des perspectives interactionnistes en recherche
-Handle: 2441/c6t1fl36hv9s7q89j6si044k5
+Title: régime mixte des Modernes et la question de l’Histoire
+X-PublishedAs-Pages: 69-86
+Handle: 2441/eo6779thqgm5r489mam352ps9
 
 Template-Type: ReDIF-Paper 1.0
-Title: L’entretien biographique et la saisie des interactions avec autrui
-Handle: 2441/c6t1fl36hv9s7q89j81i2b416
+Title: Airport companies as silent partners?
+Handle: 2441/eo6779thqgm5r489m4m2k6d4l
 
 Template-Type: ReDIF-Paper 1.0
-Title: Introduction : "De l’usage des perspectives interactionnistes en recherche"
-Handle: 2441/c6t1fl36hv9s7q89j81ho6cpg
+Title: Raymond Saleilles et au-delà
+Handle: 2441/7t638g2jjsquujs9mcc0mcg2k
 
 Template-Type: ReDIF-Paper 1.0
-Title: Ethnographie de terrain et relation d’enquête. Observer les "communautés" de logiciels libres
-Handle: 2441/c6t1fl36hv9s7q89j81hi5490
+Title: Israël et l’Europe. Filiations et ruptures
+File-URL: http://vimeo.com/17810190
+Handle: 2441/eu4vqp9ompqllr09hh1amcck6
 
 Template-Type: ReDIF-Paper 1.0
-Title: Distant observation and in-depth ethnography in the study of free software 'communities'
-Handle: 2441/c6t1fl36hv9s7q89j6sj5j5rh
+Title: effects at home of initiating production abroad: evidence from matched french firms
+Handle: 2441/c8dmi8nm4pdjkuc9g8mb1088n
 
 Template-Type: ReDIF-Paper 1.0
-Title: Présentation : Méthodes d’analyse des discours
-Handle: 2441/c6t1fl36hv9s7q89j6sjpip2m
+Title: Green Growth in Asian Metropolis. Preliminary Literature Review and Research Design
+File-URL: http://spire.sciences-po.fr/hdl:/2441/5rkqqmvrn4tl22s9mc0sob64l/resources/greengram-x-spire.pdf
+Handle: 2441/5rkqqmvrn4tl22s9mc0sob64l
 
 Template-Type: ReDIF-Paper 1.0
-Title: qualité des enquêtes politiques
-Handle: 2441/3cr7jj61bs68cvg998cjh6a82
+Title: Famiglie, corsi di vita e accoglienza. Spazi e opportunità di solidarietà in contesto urbano
+X-PublishedAs-Pages: 89-98
+Handle: 2441/eu4vqp9ompqllr09hd5rha0il
 
 Template-Type: ReDIF-Paper 1.0
-Title: Annexes : résultats et cartes
-Handle: 2441/3cr7jj61bs68cvg99cpo348hn
+Title: Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)
+File-URL: http://ceriscope.sciences-po.fr/pauvrete
+Handle: 2441/eu4vqp9ompqllr09ij4jnag10
 
 Template-Type: ReDIF-Paper 1.0
-Title: L’espace politique français à la veille de la séquence électorale 2007 : opinions, attitudes et électorats potentiels
-Handle: 2441/3cr7jj61bs68cvg998co201ig
+Title: Isolated Capital Cities, Accountability and Corruption Evidence from US States
+File-URL: http://spire.sciences-po.fr/hdl:/2441/dambferfb7dfprc9lj6bo200k/resources/dp2013-01campantedo.pdf
+Handle: 2441/dambferfb7dfprc9lj6bo200k
 
 Template-Type: ReDIF-Paper 1.0
-Title: Political Space of the French Electorate on the Eve of the Presidential Elections 2007: Geometric Data Analysis Applied to the Baromètre politique français
-Handle: 2441/3cr7jj61bs68cvg998e9n6tql
-
-Template-Type: ReDIF-Paper 1.0
-Title: Annales de mathématiques 2000
-Handle: 2441/f0uohitsgqh8dhk982mcka495
-
-Template-Type: ReDIF-Paper 1.0
-Title: Annales de mathématiques 2001
-Handle: 2441/f0uohitsgqh8dhk982mci2ta8
-
-Template-Type: ReDIF-Paper 1.0
-Title: L’espace politique français à la veille de l’élection présidentielle, 2007 : analyse géométrique des données
-Handle: 2441/3cr7jj61bs68cvg998cj52588
-
-Template-Type: ReDIF-Paper 1.0
-Title: Forecasting the 2007 French Elections
-Handle: 2441/3cr7jj61bs68cvg998e9l8h3g
-
-Template-Type: ReDIF-Paper 1.0
-Title: Political Space of the French Electorate in 2007: Geometric Data Analysis Applied on the Presidential Election
-Handle: 2441/3cr7jj61bs68cvg998e9ja227
+Title: sème la restriction récolte la récession
+File-URL: http://spire.sciences-po.fr/hdl:/2441/c6t1fl36hv9s7q89j8pa2cp3i/resources/note16.pdf
+Handle: 2441/c6t1fl36hv9s7q89j8pa2cp3i
 

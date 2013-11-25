@@ -20,10 +20,10 @@ def prefixtag(ns_prefix, tagname):
         else:
             return tagname
 
-def get_element_text(element):
+def get_element_text(element, strip=True):
     if element is not None:
         element_text = element.text
-        if element_text:
+        if element_text and strip:
             element_text = element_text.strip()
         if element_text:
             return element_text

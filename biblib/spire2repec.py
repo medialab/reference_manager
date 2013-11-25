@@ -4,91 +4,66 @@
 
 import datetime
 import os
-from biblib.services import crosswalks_service
-from biblib.services import export_service
-from biblib.services import import_service
-from biblib.services import repository_service
+
+from biblib.services import corpus_service
 from biblib.util import chrono
 from biblib.util import console
 from biblib.util import constants
-from biblib import init_corpus
 from biblib.cloud import oaipmh_harvester
 from biblib.metajson import Target
 
 console.setup_console()
 
 
-def harvest_by_set(target_set):
+def harvest_by_set(corpus, target, target_set):
     print("harvest_by_set: {}".format(target_set))
-    # init corpus
     date_begin = datetime.datetime.now()
-
-    data_dir = os.path.join(os.path.dirname(__file__), os.pardir, "data")
-    print "data_dir: " + data_dir
-    error_file_path = os.path.join(data_dir, "result", "result_validation_errors.txt")
-    result_file_path = os.path.join(data_dir, "result", "result_repec.txt")
-
-    target = Target()
-    target['identifier'] = 'spire'
-    target['title'] = 'Sciences Po Institutional Repository'
-    target['type'] = 'oaipmh'
-    target['url'] = 'http://spire.sciences-po.fr/dissemination/oaipmh2-publications.xml'
-    target['metadata_prefix'] = 'didl'
-
-    corpus = "spire"
-    init_corpus.init(corpus)
-
-    date_init = datetime.datetime.now()
-    chrono.chrono_trace("Initialize corpus", date_begin, date_init, None)
-
-    # import
-    with open(error_file_path, "w") as error_file:
-        result_import = import_service.import_metajson_list(corpus, oaipmh_harvester.list_records(target, None, None, target_set), error_file, True, None)
-    date_import = datetime.datetime.now()
-    chrono.chrono_trace("harvest spire, convert metadata and save to MongoDB", date_init, date_import, len(result_import[0]))
-
-    # fetch MongoDB
-    metajson_list = repository_service.get_documents(corpus)
-    date_fetch = datetime.datetime.now()
-    chrono.chrono_trace("Fetch MongoDB", date_import, date_fetch, len(metajson_list))
-
-    # export RePEc template
-    export_service.export_textline(crosswalks_service.convert_metajson_list(metajson_list, constants.FORMAT_REPEC), result_file_path)
-    date_export = datetime.datetime.now()
-    chrono.chrono_trace("Export RePEc publications templates", date_fetch, date_export, None)
-
-
-def harvest_by_ids(ids):
-    print("harvest_by_ids: {}".format(ids))
-
-    date_begin = datetime.datetime.now()
-
-    data_dir = os.path.join(os.path.dirname(__file__), os.pardir, "data")
-    print "data_dir: " + data_dir
-    error_file_path = os.path.join(data_dir, "result", "result_validation_errors.txt")
-    result_file_path = os.path.join(data_dir, "result", "result_didl_metajson_spire.json")
-
-    target = Target()
-    target['identifier'] = 'spire'
-    target['title'] = 'Sciences Po Institutional Repository'
-    target['type'] = 'oaipmh'
-    target['url'] = 'http://spire.sciences-po.fr/dissemination/oaipmh2-publications.xml'
-    target['metadata_prefix'] = 'didl'
 
     # harvest
-    results = []
-    for identifier in ids:
-        results.append(oaipmh_harvester.get_record(target,identifier))
-
+    metajson_list = oaipmh_harvester.list_records(target, None, None, target_set)
+    date_harvest = datetime.datetime.now()
+    chrono.chrono_trace("harvest spire and convert to metajson", date_begin, date_harvest, len(ids))
+    
+    # import
+    result_import = corpus_service.import_metajson_list(corpus, metajson_list, True, None)
     date_import = datetime.datetime.now()
-    chrono.chrono_trace("harvest spire and convert to metajson", date_begin, date_import, len(ids))
+    chrono.chrono_trace("harvest spire, convert metadata and save to MongoDB", date_harvest, date_import, len(result_import[0]))
 
-    # export
-    export_service.export_metajson_collection("test", "test", results, result_file_path)
-    date_export = datetime.datetime.now()
-    chrono.chrono_trace("Export collection", date_import, date_export, len(ids))
+
+
+def harvest_by_ids(corpus, target, ids):
+    print("harvest_by_ids: {}".format(ids))
+    date_begin = datetime.datetime.now()
+
+    # harvest
+    metajson_list = []
+    for identifier in ids:
+        metajson_list.append(oaipmh_harvester.get_record(target, identifier))
+    date_harvest = datetime.datetime.now()
+    chrono.chrono_trace("harvest spire and convert to metajson", date_begin, date_harvest, len(ids))
+
+    # import
+    result_import = corpus_service.import_metajson_list(corpus, metajson_list, True, None)
+    date_import = datetime.datetime.now()
+    chrono.chrono_trace("import", date_harvest, date_import, len(result_import))
+
 
 if __name__ == "__main__":
+    date_begin = datetime.datetime.now()
+
+    # conf corpus
+    corpus = "spire"
+    corpus_service.clean_corpus(corpus)
+    date_clean = datetime.datetime.now()
+    chrono.chrono_trace("Initialize corpus", date_begin, date_clean, None)
+
+    target = Target()
+    target['identifier'] = 'spire'
+    target['title'] = 'Sciences Po Institutional Repository'
+    target['type'] = 'oaipmh'
+    target['url'] = 'http://spire.sciences-po.fr/dissemination/oaipmh2-publications.xml'
+    target['metadata_prefix'] = 'didl'
+
     ids = [
         "oai:spire.sciences-po.fr:2441/dambferfb7dfprc9m26c8c8o3",
         "oai:spire.sciences-po.fr:2441/eo6779thqgm5r489makgoai85",
@@ -110,4 +85,36 @@ if __name__ == "__main__":
         "oai:spire.sciences-po.fr:2441/dambferfb7dfprc9lj6bo200k",
         "oai:spire.sciences-po.fr:2441/c6t1fl36hv9s7q89j8pa2cp3i"
     ]
-    harvest_by_ids(ids)
+    harvest_by_ids(corpus, target, ids)
+    #harvest_by_set(corpus, target, "SHS:STAT")
+
+    # path
+    data_result_dir = os.path.join(os.path.dirname(__file__), os.pardir, "data", "result")
+    print "data_result_dir: " + data_result_dir
+    error_file_path = os.path.join(data_result_dir, "result_validation_errors.txt")
+    metajson_file_path = os.path.join(data_result_dir, "result_didl_metajson_spire.json")
+    mods_file_path = os.path.join(data_result_dir, "result_didl_mods_spire.json")
+    repec_file_path = os.path.join(data_result_dir, "result_repec.txt")
+
+    date_path = datetime.datetime.now()
+
+    # validate
+    corpus_service.validate_corpus(corpus, error_file_path)
+    date_validate = datetime.datetime.now()
+    chrono.chrono_trace("Validate corpus", date_path, date_validate, None)
+
+    # export MetaJSON
+    corpus_service.export_corpus(corpus, metajson_file_path, constants.FORMAT_METAJSON, True)
+    date_export_metajson = datetime.datetime.now()
+    chrono.chrono_trace("Export corpus as MetaJSON", date_validate, date_export_metajson, None)
+
+    # export MODS
+    corpus_service.export_corpus(corpus, mods_file_path, constants.FORMAT_MODS, True)
+    date_export_mods = datetime.datetime.now()
+    chrono.chrono_trace("Export corpus as MODS", date_export_metajson, date_export_mods, None)
+
+    # export RePEc
+    corpus_service.export_corpus(corpus, repec_file_path, constants.FORMAT_REPEC, True)
+    date_export_repec = datetime.datetime.now()
+    chrono.chrono_trace("Export corpus as RePEc", date_export_mods, date_export_repec, None)
+

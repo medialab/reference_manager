@@ -47,6 +47,7 @@ file_extension_to_type = {
     'marc': FILE_TYPE_MARC,
     'mrc': FILE_TYPE_MARC,
     'ris': FILE_TYPE_TXT,
+    'txt': FILE_TYPE_TXT,
     'xml': FILE_TYPE_XMLETREE
 }
 
@@ -156,6 +157,7 @@ xmltag_to_input_format = {
     'type': 'dc'
 }
 
+CLASS_COLLECTION = "Collection"
 CLASS_DOCUMENT = "Document"
 CLASS_EVENT = "Event"
 CLASS_FAMILY = "Family"

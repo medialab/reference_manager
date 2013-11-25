@@ -1,0 +1,17 @@
+{
+    "bundle": true,
+    "children": [
+         {
+            "default": true,
+            "labels": {
+                "en": "Undetermined", 
+                "fr": "indéterminé"
+            }, 
+            "major": true,
+            "type_id": "undetermined"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "affiliation_role_person"
+}

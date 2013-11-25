@@ -38,6 +38,13 @@ except:
 "Handle"
 
 
+def metajson_list_to_repec(documents):
+    repec = StringIO()
+    for document in documents:
+        repec.write(metajson_to_repec(document))
+    return repec.getvalue()
+
+
 def metajson_to_repec(document):
     repec = StringIO()
     write_key_value(repec, "Template-Type", "ReDIF-Paper 1.0")
@@ -63,7 +70,5 @@ def metajson_to_repec(document):
 
 
 def write_key_value(repec, key, value):
-    repec.write(key)
-    repec.write(": ")
-    repec.write(value)
-    repec.write("\n")
+    key_format = "".join([key, ": ", value, "\n"])
+    repec.write(key_format)

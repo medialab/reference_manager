@@ -1,0 +1,113 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "default": true,
+            "labels": {
+                "en": "association",
+                "fr": "association"
+            },
+            "major": true,
+            "type_id": "association"
+        },
+        {
+            "labels": {
+                "en": "blogger",
+                "fr": "blogueur"
+            },
+            "major": true,
+            "type_id": "blogger"
+        },
+        {
+            "labels": {
+                "en": "academic",
+                "fr": "expert/chercheur"
+            },
+            "major": true,
+            "type_id": "academic"
+        },
+        {
+            "labels": {
+                "en": "polling institute",
+                "fr": "institut de sondage"
+            },
+            "major": true,
+            "type_id": "polling_institute"
+        },
+        {
+            "labels": {
+                "en": "institution",
+                "fr": "institution"
+            },
+            "major": true,
+            "type_id": "institution"
+        },
+        {
+            "labels": {
+                "en": "journalist",
+                "fr": "journaliste"
+            },
+            "major": true,
+            "type_id": "journalist"
+        },
+        {
+            "labels": {
+                "en": "media",
+                "fr": "m\u00e9dia"
+            },
+            "major": true,
+            "type_id": "media"
+        },
+        {
+            "labels": {
+                "en": "activist",
+                "fr": "militant"
+            },
+            "major": true,
+            "type_id": "activist"
+        },
+        {
+            "labels": {
+                "en": "politicial party",
+                "fr": "parti politique"
+            },
+            "major": true,
+            "type_id": "political_party"
+        },
+        {
+            "labels": {
+                "en": "politician",
+                "fr": "politique"
+            },
+            "major": true,
+            "type_id": "politician"
+        },
+        {
+            "labels": {
+                "en": "trade union",
+                "fr": "syndicat"
+            },
+            "major": true,
+            "type_id": "trade_union"
+        },
+        {
+            "labels": {
+                "en": "think tank",
+                "fr": "think tank"
+            },
+            "major": true,
+            "type_id": "think_tank"
+        },
+        {
+            "labels": {
+                "en": "university",
+                "fr": "universit\u00e9/centre de recherche"
+            },
+            "major": true,
+            "type_id": "university"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "actor_type"
+}
