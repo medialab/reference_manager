@@ -215,21 +215,6 @@
         },
         {
             "labels": {
-                "en": "ResourceField",
-                "fr": "ResourceField"
-            },
-            "multiple": true,
-            "only_one": false,
-            "property": "resources",
-            "required": false,
-            "type_fields": [
-                "ResourceRemote",
-                "ResourceBitstream"
-            ],
-            "type_ui": "ResourceField"
-        },
-        {
-            "labels": {
                 "en": "StringField",
                 "fr": "StringField"
             },
