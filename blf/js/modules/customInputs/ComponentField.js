@@ -77,7 +77,10 @@
                 separator: true
               }
             ].concat(obj.type_fields.map(function(str) {
-              return (fields[str] || {}).label || str;
+              return {
+                id: str,
+                label: (fields[str] || {}).label || str
+              };
             }))
           }));
 
@@ -103,8 +106,10 @@
         $('.add-document', _dom).css('display', '');
 
       // Trigger event if only one type available:
-      if (!data.rec_type && obj.type_fields.length === 1)
+      if (!data.rec_type && obj.type_fields.length === 1) {
+        $('select.select-field', li).first().val(obj.type_fields[0]);
         addForm(li, obj.type_fields[0]);
+      }
     }
 
     // Bind events:
@@ -123,8 +128,10 @@
         delete _forms[id];
 
         // Trigger event if only one type available:
-        if (obj.type_fields.length === 1)
+        if (obj.type_fields.length === 1) {
+          $('select.select-field', li).first().val(obj.type_fields[0]);
           addForm(li, obj.type_fields[0]);
+        }
 
         // Check count:
         if (obj.only_one && _ul.children('li').length >= 1)

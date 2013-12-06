@@ -8,7 +8,7 @@
           {{#if this.separator }}
             <option class="disabled" disabled="disabled">---</option>
           {{else}}
-            <option value="{{ this }}">{{ this }}</option>
+            <option value="{{ this.id }}">{{ this.label }}</option>
           {{/if}}
         {{/if}}
       {{/each}}
