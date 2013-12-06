@@ -82,7 +82,7 @@
       "add":"ajouter"
     }
   },
-  "DocumentField": {
+  "ComponentField": {
     "messages": {
       "select_type": "Sélectionner un type"
     },

@@ -74,7 +74,7 @@
             "type_fields": [
                 "Series"
             ],
-            "type_ui": "DocumentField"
+            "type_ui": "ComponentField"
         },
         {
             "labels": {

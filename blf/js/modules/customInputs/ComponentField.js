@@ -4,8 +4,8 @@
 
   // Loading Handlebars templates:
   blf.templates.require([
-    'DocumentField',
-    'DocumentField.line'
+    'ComponentField',
+    'ComponentField.line'
   ]);
 
   /**
@@ -30,13 +30,13 @@
    *  >   type_fields: [
    *  >     "Series"
    *  >   ],
-   *  >   type_ui: "DocumentField"
+   *  >   type_ui: "ComponentField"
    *  > }
    */
-  blf.modules.customInputs.DocumentField = function(obj, controller) {
+  blf.modules.customInputs.ComponentField = function(obj, controller) {
     domino.module.call(this);
 
-    var _dom = $(blf.templates.get('DocumentField')({
+    var _dom = $(blf.templates.get('ComponentField')({
           label: obj.label || obj.labels[controller.get('assets_lang')]
         })),
         _ul = $('ul', _dom).first(),
@@ -65,11 +65,11 @@
     function addDocument(data) {
       data = data || {};
       var id = _lineID++,
-          li = $(blf.templates.get('DocumentField.line')({
+          li = $(blf.templates.get('ComponentField.line')({
             id: id,
             type_fields: [
               {
-                text: i18n.t('customInputs:DocumentField.messages.select_type'),
+                text: i18n.t('customInputs:ComponentField.messages.select_type'),
                 title: true
               },
               {
@@ -163,7 +163,7 @@
 
       $('.message', _dom).first().empty();
       if (obj.required && !(data || []).length) {
-        $('.message', _dom).first().text(i18n.t('customInputs:DocumentField.errors.exactly_one'));
+        $('.message', _dom).first().text(i18n.t('customInputs:ComponentField.errors.exactly_one'));
         return false;
       }
 

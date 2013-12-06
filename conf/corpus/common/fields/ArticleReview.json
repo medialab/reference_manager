@@ -56,7 +56,7 @@
             "type_fields": [
                 "Journal"
             ],
-            "type_ui": "DocumentField"
+            "type_ui": "ComponentField"
         },
         {
             "labels": {
@@ -158,7 +158,7 @@
             "type_fields": [
                 "JournalArticle"
             ],
-            "type_ui": "DocumentField"
+            "type_ui": "ComponentField"
         }
     ],
     "labels": {

@@ -138,7 +138,7 @@
             "type_fields": [
                 "Archive"
             ],
-            "type_ui": "DocumentField"
+            "type_ui": "ComponentField"
         },
         {
             "labels": {
@@ -156,7 +156,7 @@
                 "MagazineArticle",
                 "NewspaperArticle"
             ],
-            "type_ui": "DocumentField"
+            "type_ui": "ComponentField"
         },
         {
             "labels": {

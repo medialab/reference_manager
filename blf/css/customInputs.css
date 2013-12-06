@@ -38,8 +38,8 @@
   display: block;
 }
 
-/* DocumentField style */
-.DocumentField > .documents-container > ul > li .custom-container {
+/* ComponentField style */
+.ComponentField > .documents-container > ul > li .custom-container {
   left: -150px;
   position: relative;
 }

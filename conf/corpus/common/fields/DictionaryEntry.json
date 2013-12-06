@@ -56,7 +56,7 @@
             "type_fields": [
                 "Dictionary"
             ],
-            "type_ui": "DocumentField"
+            "type_ui": "ComponentField"
         },
         {
             "labels": {

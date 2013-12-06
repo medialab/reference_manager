@@ -97,7 +97,7 @@
             "type_fields": [
                 "Project"
             ],
-            "type_ui": "DocumentField"
+            "type_ui": "ComponentField"
         },
         {
             "labels": {
@@ -385,7 +385,7 @@
                 "WebSite",
                 "WorkingPaper"
             ],
-            "type_ui": "DocumentField"
+            "type_ui": "ComponentField"
         }
     ],
     "labels": {

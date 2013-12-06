@@ -92,7 +92,7 @@
                 "VideoRecording",
                 "WebSite"
             ],
-            "type_ui": "DocumentField"
+            "type_ui": "ComponentField"
         }
     ],
     "rec_class": "Field",
