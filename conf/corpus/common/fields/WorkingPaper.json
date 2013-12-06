@@ -104,6 +104,7 @@
         "fr": "Working paper"
     },
     "rec_class": "Field",
+    "rec_class_component": "Document",
     "rec_metajson": 1,
     "rec_type": "WorkingPaper"
 }

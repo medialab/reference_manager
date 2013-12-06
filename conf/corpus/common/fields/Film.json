@@ -122,6 +122,7 @@
         "fr": "Film"
     },
     "rec_class": "Field",
+    "rec_class_component": "Document",
     "rec_metajson": 1,
     "rec_type": "Film"
 }
