@@ -1,0 +1,37 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Copyright statement",
+                "fr": "Copyright statement"
+            },
+            "property": "copyright_statement",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Restriction on access",
+                "fr": "Restriction d'accès"
+            },
+            "property": "restriction_on_access",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Use and reproduction",
+                "fr": "Utilisation et reproduction"
+            },
+            "property": "use_and_reproduction",
+            "required": false,
+            "type_ui": "CharField"
+        }
+    ],
+    "labels": {
+        "en": "Rights",
+        "fr": "Rights"
+    },
+    "rec_class": "Field",
+    "rec_metajson": 1,
+}

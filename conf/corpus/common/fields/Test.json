@@ -85,6 +85,19 @@
         },
         {
             "labels": {
+                "en": "Rights",
+                "fr": "Rights"
+            },
+            "multiple": false,
+            "property": "rights",
+            "required": false,
+            "type_fields": [
+                "Rights"
+            ],
+            "type_ui": "ComponentField"
+        },
+        {
+            "labels": {
                 "en": "ComponentField simple one choice",
                 "fr": "ComponentField simple one choice"
             },
