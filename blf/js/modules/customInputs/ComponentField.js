@@ -64,7 +64,8 @@
     // not specified.
     function addDocument(data) {
       data = data || {};
-      var id = _lineID++,
+      var fields = controller.get('fields'),
+          id = _lineID++,
           li = $(blf.templates.get('ComponentField.line')({
             id: id,
             type_fields: [
@@ -75,7 +76,9 @@
               {
                 separator: true
               }
-            ].concat(obj.type_fields)
+            ].concat(obj.type_fields.map(function(str) {
+              return (fields[str] || {}).label || str;
+            }))
           }));
 
       if (data.rec_type) {

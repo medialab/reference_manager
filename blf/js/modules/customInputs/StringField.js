@@ -33,6 +33,7 @@
     }
 
     function _fill(data, fullData) {
+      console.log(data);debugger;
       $('.value', _dom).text(data);
     }
 
