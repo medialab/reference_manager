@@ -202,13 +202,17 @@
       // Parse line and form data:
       _ul.children('li').each(function() {
         var value,
+            field,
             li = $(this),
             id = li.data('id'),
             data = _forms[id].getData();
 
         data.rec_type = $('select.select-field', li).first().val();
-        if ('rec_class' in obj)
-          data.rec_class = obj.rec_class;
+        if (data.rec_type && (field = controller.get('fields')[data.rec_type])) {
+          if ('rec_class_component' in field)
+            data.rec_class = field.rec_class_component;
+        } else
+          delete data.rec_type;
 
         documents.push(data);
       });
