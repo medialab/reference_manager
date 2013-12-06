@@ -127,12 +127,6 @@
         li.remove();
         delete _forms[id];
 
-        // Trigger event if only one type available:
-        if (obj.type_fields.length === 1) {
-          $('select.select-field', li).first().val(obj.type_fields[0]);
-          addForm(li, obj.type_fields[0]);
-        }
-
         // Check count:
         if (obj.only_one && _ul.children('li').length >= 1)
           $('.add-document', _dom).css('display', 'none');
