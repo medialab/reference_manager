@@ -22,7 +22,7 @@
                 "fr": "Titre"
             },
             "property": "title",
-            "required": false,
+            "required": true,
             "type_ui": "CharField"
         },
         {
