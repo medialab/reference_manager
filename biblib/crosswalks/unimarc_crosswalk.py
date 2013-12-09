@@ -241,7 +241,15 @@ def unimarc_record_to_metajson(record, source):
     if publishers:
         document["publishers"] = publishers
 
-    # 6XX -> subject<
+    # 6XX -> subject
+    subjects = []
+    if record.get_fields('600', '601', '602'):
+        for field in record.get_fields('600', '601', '602'):
+            creator = extract_unimarc_creator(field)
+            if creator and "agent" in creator:
+                subject = {"agents": [creator["agent"]]}
+                suject_agents.append(subject)
+
     if record.get_fields('607'):
         subjects = []
         for field in record.get_fields('607'):
@@ -401,7 +409,7 @@ def extract_unimarc_creator(field):
             else:
                 creator["role"] = "ctb"
 
-        # 700, 701, 702 -> Person
+        # 600, 700, 701, 702 -> Person
         if field.tag in ["700", "701", "702"]:
             # Person
             person = Person()
@@ -421,7 +429,7 @@ def extract_unimarc_creator(field):
                 if person:
                     creator["agent"] = person
 
-        # 710, 711, 712 -> Orgunit, Event
+        # 601, 710, 711, 712 -> Orgunit, Event
         elif field.tag in ["710", "711", "712"]:
             if field.subfields:
                 if field.indicator1 == "1":
@@ -460,7 +468,7 @@ def extract_unimarc_creator(field):
             # Nom de marque
             print "WARNING: todo"
 
-        elif field.tag in ["720", "721", "722"]:
+        elif field.tag in ["602", "720", "721", "722"]:
             if field.subfields:
                 # Family
                 family = Family()
