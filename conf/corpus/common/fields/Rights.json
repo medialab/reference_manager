@@ -12,7 +12,7 @@
         {
             "labels": {
                 "en": "Restriction on access",
-                "fr": "Restriction d'accès"
+                "fr": "Restriction d'acc\u00e8s"
             },
             "property": "restriction_on_access",
             "required": false,
@@ -33,5 +33,6 @@
         "fr": "Rights"
     },
     "rec_class": "Field",
-    "rec_metajson": 1
+    "rec_metajson": 1,
+    "rec_type": "Rights"
 }
