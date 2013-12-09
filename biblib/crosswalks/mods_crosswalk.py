@@ -1076,19 +1076,51 @@ def get_mods_subjects(mods):
         result_keywords_dict = {}
         for mods_subject in mods_subjects:
             if mods_subject is not None:
+                # get mods data
                 mods_subject_authority = mods_subject.get("authority")
+                mods_subject_authority_uri = mods_subject.get("authorityURI")
                 mods_subject_lang = mods_subject.get("lang")
-                if mods_subject_lang is None:
-                    mods_subject_lang = constants.LANGUAGE_UNDETERMINED
+                mods_cartographicss = mods_subject.findall(xmletree.prefixtag("mods", "cartographics"))
+                mods_genres = mods_subject.findall(xmletree.prefixtag("mods", "genre"))
+                mods_geographics = mods_subject.findall(xmletree.prefixtag("mods", "geographic"))
+                mods_geographic_codes = mods_subject.findall(xmletree.prefixtag("mods", "geographicCode"))
+                mods_hierarchical_geographics = mods_subject.findall(xmletree.prefixtag("mods", "hierarchicalGeographic"))
+                mods_names = mods_subject.findall(xmletree.prefixtag("mods", "name"))
+                mods_occupations = mods_subject.findall(xmletree.prefixtag("mods", "occupation"))
+                mods_temporals = mods_subject.findall(xmletree.prefixtag("mods", "temporal"))
+                mods_title_infos = mods_subject.findall(xmletree.prefixtag("mods", "titleInfo"))
+                mods_topics = mods_subject.findall(xmletree.prefixtag("mods", "topic"))
 
-                # Verify that this key is in the dict
-                if mods_subject_lang is not None and mods_subject_lang not in result_keywords_dict:
-                    result_keywords_dict[mods_subject_lang] = []
+                # subject
+                subject = {}
+                # @authority -> authority
+                if mods_subject_authority is not None:
+                    subject["authority"] = mods_subject_authority
+                if mods_subject_authority_uri is not None:
+                    subject["authority"] = mods_subject_authority_uri
 
-                if mods_subject_authority is None:
-                    # keywords
-                    mods_topics = mods_subject.findall(xmletree.prefixtag("mods", "topic"))
-                    if mods_topics is not None:
+                # @lang -> language
+                if mods_subject_lang is not None:
+                    subject["language"] = mods_subject_lang
+
+                # @valueURI -> subject_id
+                subject_id = mods_subject.get("valueURI")
+                if subject_id is not None:
+                    subject["subject_id"] = subject_id
+
+                # topic -> keywords if authority and authorityURI is None
+                # topic -> subjects[] topics[]
+                if mods_topics is not None:
+                    if mods_subject_authority is None and mods_subject_authority_uri is None:
+
+                        # Undetermined language
+                        if mods_subject_lang is None:
+                            mods_subject_lang = constants.LANGUAGE_UNDETERMINED
+
+                        # Verify that this key is in the dict
+                        if mods_subject_lang is not None and mods_subject_lang not in result_keywords_dict:
+                            result_keywords_dict[mods_subject_lang] = []
+
                         for mods_topic in mods_topics:
                             if mods_topic.text is not None:
                                 # in case of multiple keywords in the same topic, split it
@@ -1102,35 +1134,137 @@ def get_mods_subjects(mods):
                                 if terms is not None:
                                     for term in terms:
                                         result_keywords_dict[mods_subject_lang].append(term.strip())
-                else:
-                    # subjects
-                    # todo
-                    # topic
-                    # geographic
-                    # temporal
-                    # titleInfo
-                    # name
-                    # geographicCode
-                    # genre
-                    # hierarchicalGeographic
-                    # - continent
-                    # - country
-                    # - province
-                    # - region
-                    # - state
-                    # - territory
-                    # - county
-                    # - city
-                    # - island
-                    # - area
-                    # - extraterrestrialArea
-                    # - citySection
-                    # cartographics
-                    # - scale
-                    # - projection
-                    # - coordinates
-                    # occupation
-                    pass
+                    else:
+                        topics = []
+                        for mods_topic in mods_topics:
+                            if mods_topic.text is not None:
+                                topics.append(mods_topic.text)
+                        if topics:
+                            subject["topics"] = topics
+
+                # cartographics -> cartographics[]
+                if mods_cartographicss is not None:
+                    cartographics = []
+                    for mods_cartographics in mods_cartographicss:
+                        cartographic = {}
+                        mods_coordinates = mods_cartographics.find(xmletree.prefixtag("mods", "coordinates"))
+                        mods_scale = mods_cartographics.find(xmletree.prefixtag("mods", "scale"))
+                        mods_projection = mods_cartographics.find(xmletree.prefixtag("mods", "projection"))
+
+                        # coordinates -> coordinates[].latitude, coordinates[].longitude, coordinates[].altitude
+                        if mods_coordinates is not None:
+                            # todo : extract coordinates latitude, longitude, altitude of each points
+                            coordinates = []
+                            coordinate = {"latitude" : mods_coordinates.text}
+                            coordinates.append(coordinate)
+                            cartographic["coordinates"] = coordinates
+
+                        # scale -> scale
+                        if mods_scale is not None:
+                            cartographic["scale"] = mods_scale.text
+
+                        # projection -> projection
+                        if mods_projection is not None:
+                            cartographic["projection"] = mods_projection.text
+
+                        if cartographic:
+                            cartographics.append(cartographic)
+
+                    if cartographics:
+                        subject["cartographics"] = cartographics
+
+                # genre -> genres
+                if mods_genres is not None:
+                    genres = []
+                    for mods_genre in mods_genres:
+                        genres.append(mods_genre.text)
+                    if genres:
+                        subject["genres"] = genres
+
+                geographics = []
+                # geographic
+                if mods_geographics is not None:
+                    for mods_geographic in mods_geographics:
+                        geographic = {}
+                        mods_geographic_authority = mods_geographic.get("authority")
+                        mods_geographic_authority_uri = mods_geographic.get("authorityURI")
+                        mods_geographic_value_uri = mods_geographic.get("valueURI")
+                        mods_geographic_value = mods_geographic.text
+
+                        if mods_geographic_authority is not None:
+                            geographic["authority"] = mods_geographic_authority
+                        if mods_geographic_authority_uri is not None:
+                            geographic["authority"] = mods_geographic_authority_uri
+                        if mods_geographic_value_uri is not None:
+                            geographic["geo_id"] = mods_geographic_value_uri
+                        if mods_geographic_value is not None:
+                            geographic["value"] = mods_geographic_value
+
+                        if geographic:
+                            geographics.append(geographic)
+
+                # geographicCode
+                if mods_geographic_codes is not None:
+                    for mods_geographic_code in mods_geographic_codes:
+                        geographic = {}
+                        mods_geographic_code_authority = mods_geographic_code.get("authority")
+                        mods_geographic_code_authority_uri = mods_geographic_code.get("authorityURI")
+                        mods_geographic_code_value_uri = mods_geographic_code.get("valueURI")
+                        mods_geographic_code_value = mods_geographic_code.text
+
+                        if mods_geographic_code_authority is not None:
+                            geographic["authority"] = mods_geographic_code_authority
+                        if mods_geographic_code_authority_uri is not None:
+                            geographic["authority"] = mods_geographic_code_authority_uri
+                        if mods_geographic_code_value is not None:
+                            geographic["geo_id"] = mods_geographic_code_value
+                        if mods_geographic_code_value_uri is not None:
+                            geographic["geo_id"] = mods_geographic_code_value_uri
+
+                        if geographic:
+                            geographics.append(geographic)
+
+                if geographics:
+                    subject["geographics"] = geographics
+
+
+                # hierarchicalGeographic
+                # - continent
+                # - country
+                # - province
+                # - region
+                # - state
+                # - territory
+                # - county
+                # - city
+                # - island
+                # - area
+                # - extraterrestrialArea
+                # - citySection
+                if mods_hierarchical_geographics is not None:
+                    for mods_hierarchical_geographic in mods_hierarchical_geographics:
+                        geographic = {}
+                        mods_hierarchical_geographic_authority = mods_hierarchical_geographic.get("authority")
+                        mods_hierarchical_geographic_authority_uri = mods_hierarchical_geographic.get("authorityURI")
+                        mods_hierarchical_geographic_value_uri = mods_hierarchical_geographic.get("valueURI")
+
+                        if mods_hierarchical_geographic_authority is not None:
+                            geographic["authority"] = mods_hierarchical_geographic_authority
+                        if mods_hierarchical_geographic_authority_uri is not None:
+                            geographic["authority"] = mods_hierarchical_geographic_authority_uri
+                        if mods_hierarchical_geographic_value_uri is not None:
+                            geographic["geo_id"] = mods_hierarchical_geographic_value_uri
+
+                        if geographic:
+                            geographics.append(geographic)
+
+                # name
+                # occupation
+                # temporal
+                # titleInfo
+
+                if subject and not (len(subject) == 1 and "language" in subject):
+                    result_subjects.append(subject)
 
         if result_subjects:
             result["subjects"] = result_subjects
