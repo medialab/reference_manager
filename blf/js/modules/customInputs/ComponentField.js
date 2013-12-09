@@ -84,6 +84,9 @@
             }))
           }));
 
+      if (obj.type_fields.length <= 1)
+        $('select.select-field', li).first().css('display', 'none');
+
       if (data.rec_type) {
         $('select.select-field', li).first().val(data.rec_type);
         _forms[id] = blf.modules.createPanel.generateForm(
@@ -100,7 +103,7 @@
 
       _ul.append(li);
       // Check count:
-      if (obj.only_one && _ul.children('li').length >= 1)
+      if ((!obj.multiple || obj.only_one) && _ul.children('li').length >= 1)
         $('.add-document', _dom).css('display', 'none');
       else
         $('.add-document', _dom).css('display', '');
