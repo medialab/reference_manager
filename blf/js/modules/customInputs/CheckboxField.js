@@ -67,8 +67,9 @@
     }
 
     function _getData() {
-      var result = Array.prototype.map.call($('[type="checkbox"]:checked', _dom), function() {
-        return $(this).attr('id');
+      var result = [];
+      $('[type="checkbox"]:checked', _dom).each(function() {
+        result.push($(this).data('type-id'));
       });
 
       return result.length ? result : undefined;
