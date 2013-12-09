@@ -122,7 +122,8 @@
 
       // Store data to keep:
       _currentToKeep = _toKeep.reduce(function(o, k) {
-        o[k] = domino.utils.clone(entry[k]);
+        if (k in o)
+          o[k] = domino.utils.clone(entry[k]);
         return o;
       }, {});
 

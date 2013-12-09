@@ -166,8 +166,14 @@
           data = _getData();
 
       $('.message', _dom).first().empty();
-      if (obj.required && !(data || []).length) {
+      if (!obj.multiple && obj.required && !data) {
         $('.message', _dom).first().text(i18n.t('customInputs:ComponentField.errors.exactly_one'));
+        return false;
+      } else if (obj.only_one && obj.required && (data || []).length !== 1) {
+        $('.message', _dom).first().text(i18n.t('customInputs:ComponentField.errors.exactly_one'));
+        return false;
+      } else if (!obj.only_one && obj.multiple && obj.required && !(data || []).length) {
+        $('.message', _dom).first().text(i18n.t('customInputs:ComponentField.errors.at_least_one'));
         return false;
       }
 
@@ -203,21 +209,36 @@
       _ul.children('li').each(function() {
         var value,
             field,
+            fieldName,
             li = $(this),
             id = li.data('id'),
             data = _forms[id].getData();
 
-        data.rec_type = $('select.select-field', li).first().val();
-        if (data.rec_type && (field = controller.get('fields')[data.rec_type])) {
-          if ('rec_class_component' in field)
-            data.rec_class = field.rec_class_component;
-        } else
+        fieldName = $('select.select-field', li).first().val();
+        if (
+          fieldName &&
+          (field = controller.get('fields')[fieldName]) &&
+          ('rec_class_component' in field)
+        ) {
+          data.rec_class = field.rec_class_component;
+          data.rec_type = field.rec_type;
+        } else {
+          delete data.rec_metajson;
+          delete data.rec_class;
           delete data.rec_type;
+          delete data.rec_source;
+          delete data.rec_type;
+          delete data.rec_id;
+        }
 
         documents.push(data);
       });
 
-      return documents.length ? documents : undefined;
+      return !obj.multiple ?
+        documents[0] :
+        documents.length ?
+          documents :
+          undefined;
     }
 
     /**
