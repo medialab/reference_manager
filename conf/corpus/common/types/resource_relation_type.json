@@ -17,7 +17,7 @@
                         "fr": "Photo d'identit\u00e9"
                     },
                     "type_id": "picture"
-                },
+                }
             ],
             "labels": {
                 "en": "Person resources",
@@ -48,14 +48,14 @@
                 {
                     "labels": {
                         "en": "Back cover",
-                        "fr": "Dernière de couverture"
+                        "fr": "Derni\u00e8re de couverture"
                     },
                     "type_id": "backCover"
                 },
                 {
                     "labels": {
                         "en": "Front cover",
-                        "fr": "Première de couverture"
+                        "fr": "Premi\u00e8re de couverture"
                     },
                     "type_id": "frontCover"
                 },
