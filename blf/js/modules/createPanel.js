@@ -222,6 +222,10 @@
     if (value === '')
       value = undefined;
 
+    // Check numbers:
+    if ($('input', this.dom).attr('type') === 'number')
+      value = +value;
+
     if (value !== undefined && this.propertyObject.multiple)
       value = [value];
 
