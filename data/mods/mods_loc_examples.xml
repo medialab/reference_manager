@@ -35,6 +35,37 @@
         <subject>
             <topic>Democratic Party (AK)</topic>
         </subject>
+        <subject>
+            <occupation>Migrant laborers</occupation>
+            <temporal>20e siècle</temporal>
+            <temporal encoding="w3cdtf" point="start">2001-09-11</temporal>
+            <temporal encoding="w3cdtf" point="end">2003-03-19</temporal>
+            <geographic>Washington (D.C.)</geographic>
+            <cartographics>
+                <scale>Scale [1:6,336,000]. 1" = 100 miles. Vertical scale [1:192,000]. 1/16" = approx. 1000'</scale>
+                <coordinates>6 00 S, 71 30 E</coordinates>
+                <projection>Conic proj</projection>
+            </cartographics>
+            <hierarchicalGeographic>
+                <country>France</country>
+                <province>British Columbia</province>
+                <region>Franche Comté</region>
+                <territory>British Indian Ocean Territory</territory>
+                <area>Intercontinental areas (Western Hemisphere)</area>
+                <city>Biloxi</city>
+                <county>Harrison</county>
+                <state>Mississippi</state>
+            </hierarchicalGeographic>
+            <titleInfo>
+                <title>Three Guineas</title>
+            </titleInfo>
+            <name type="personal" authority="naf">
+                <namePart>Woolf, Virginia</namePart>
+                <namePart type="date">1882-1941</namePart>
+            </name>
+            <geographicCode authority="iso3166">us</geographicCode>
+            <geographicCode authority="marcgac">n-us-md</geographicCode>
+        </subject>
         <relatedItem type="host">
             <titleInfo>
                 <title>Election 2002 Web Archive</title>

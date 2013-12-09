@@ -36,7 +36,7 @@ thesis_rec_type_to_degree = {
 # Tape Recording: Cassette, VHS, DVD, Videocassette, Filmstrip
 
 def cite(document, format):
-    result = ""
+    result = []
 
     if "rec_type" in document:
         rec_type = document["rec_type"]
@@ -69,24 +69,24 @@ def cite(document, format):
     # creators
     creators = format_creators_dict(document_creators_dict, 0)
     if creators:
-        result += creators
+        result.append(creators)
 
     # title
     title = format_title_of_document(document)
     if title:
-        result += title
+        result.append(title)
 
     # is_part_of
     if is_part_of:
 
         # "Review of"
         if rec_type in [constants.DOC_TYPE_ARTICLEREVIEW, constants.DOC_TYPE_BOOKREVIEW]:
-            result += "Rev. of "
+            result.append("Rev. of ")
 
         # is_part_of_title
         is_part_of_title = format_title_of_document(is_part_of)
         if is_part_of_title:
-            result += is_part_of_title
+            result.append(is_part_of_title)
 
         # extract the different kind of creators
         is_part_of_creators_dict = get_creators_role_dict(is_part_of)
@@ -94,7 +94,7 @@ def cite(document, format):
         # is_part_of_creators
         is_part_of_creators = format_creators_dict(is_part_of_creators_dict, 1)
         if is_part_of_creators:
-            result += is_part_of_creators
+            result.append(is_part_of_creators)
 
         # is_part_of_is_part_of
         if is_part_of_is_part_of:
@@ -105,39 +105,39 @@ def cite(document, format):
             # is_part_of_is_part_of_title
             is_part_of_is_part_of_title = format_title_of_document(is_part_of_is_part_of)
             if is_part_of_is_part_of_title:
-                result += is_part_of_is_part_of_title
+                result.append(is_part_of_is_part_of_title)
 
             # is_part_of_is_part_of_creators
             is_part_of_is_part_of_creators = format_creators_dict(is_part_of_is_part_of_creators_dict, 2)
             if is_part_of_is_part_of_creators:
-                result += is_part_of_is_part_of_creators
+                result.append(is_part_of_is_part_of_creators)
 
     # edition
     edition = document.get_edition()
     if edition:
-        result += u"<span class=\"edition\">{0}</span> ".format(edition + " ed.")
+        result.append(u"<span class=\"edition\">{0}</span> ".format(edition + " ed."))
 
     # extent_volumes
     extent_volumes = document.get_extent_volumes()
     if extent_volumes:
-        result += u"<span class=\"extent_volumes\">{0}</span>. ".format(extent_volumes)
+        result.append(u"<span class=\"extent_volumes\">{0}</span>. ".format(extent_volumes))
 
     # degree
     if rec_type in thesis_rec_type_to_degree:
         degree = thesis_rec_type_to_degree[rec_type]
-        result += u"<span class=\"thesis_degree\">{0}.</span> ".format(degree)
+        result.append(u"<span class=\"thesis_degree\">{0}.</span> ".format(degree))
 
     # date_issued_first
     # (example aime : 208)
     if "date_issued_first" in document and document["date_issued_first"]:
-        result += u"<span class=\"date\">{}</span>. ".format(date_service.format_date(document["date_issued_first"]))
+        result.append(u"<span class=\"date\">{}</span>. ".format(date_service.format_date(document["date_issued_first"])))
 
     # publication_places
     publication_places = document.get_publication_places()
     if publication_places:
-        result += u"<span class=\"publication_places\">{0}</span>: ".format(publication_places[0])
+        result.append(u"<span class=\"publication_places\">{0}</span>: ".format(publication_places[0]))
     elif rec_type in [constants.DOC_TYPE_BOOK, constants.DOC_TYPE_BOOKLET, constants.DOC_TYPE_BOOKPART, constants.DOC_TYPE_CONFERENCEPAPER, constants.DOC_TYPE_CONFERENCEPROCEEDINGS, constants.DOC_TYPE_DICTIONARY, constants.DOC_TYPE_DICTIONARYENTRY, constants.DOC_TYPE_DISSERTATION, constants.DOC_TYPE_DOCTORALTHESIS, constants.DOC_TYPE_EBOOK, constants.DOC_TYPE_EJOURNAL, constants.DOC_TYPE_EDITEDBOOK, constants.DOC_TYPE_ENCYCLOPEDIA, constants.DOC_TYPE_ENCYCLOPEDIAARTICLE, constants.DOC_TYPE_JOURNAL, constants.DOC_TYPE_MAGAZINE, constants.DOC_TYPE_MAP, constants.DOC_TYPE_MASTERTHESIS, constants.DOC_TYPE_MULTIVOLUMEBOOK, constants.DOC_TYPE_NEWSPAPER, constants.DOC_TYPE_PROFESSORALTHESIS, constants.DOC_TYPE_REPORT, constants.DOC_TYPE_REPORTPART, constants.DOC_TYPE_TECHREPORT]:
-        result += u"<span class=\"publication_places\">N.p.</span>: "
+        result.append(u"<span class=\"publication_places\">N.p.</span>: ")
 
     # publishers
     # Shorten the publisher's name; for example, omit articles, business abbreviations (Co., Inc.),
@@ -159,22 +159,22 @@ def cite(document, format):
         for position, publisher in enumerate(publishers):
             #print "position:{}".format(position)
             #print "publisher:{}".format(publisher)
-            result += u"<span class=\"publishers\">{0}</span>".format(publisher)
+            result.append(u"<span class=\"publishers\">{0}</span>".format(publisher))
             if publishers_count > 1 and position < publishers_count - 1:
-                result += u"; "
-        result += u", "
+                result.append(u"; ")
+        result.append(u", ")
 
     # part_volume, part_issue
     part_volume = document.get_part_volume()
     if part_volume:
-        result += u"<span class=\"part_volume\">{0}</span>.".format(part_volume)
+        result.append(u"<span class=\"part_volume\">{0}</span>.".format(part_volume))
 
     part_issue = document.get_part_issue()
     if part_issue:
-        result += u"<span class=\"part_issue\">{0}</span>".format(part_issue)
+        result.append(u"<span class=\"part_issue\">{0}</span>".format(part_issue))
 
     if part_volume or part_issue:
-        result += " "
+        result.append(u" ")
 
     # date
     date = document.get_date()
@@ -184,23 +184,23 @@ def cite(document, format):
             date_result = u"(" + date_result + u")"
 
         # todo : deux point au lieu d'un point
-        result += u"<span class=\"date\">{0}</span>".format(date_result)
+        result.append(u"<span class=\"date\">{0}</span>".format(date_result))
         if not date_result.endswith("."):
-            result += u". "
+            result.append(u". ")
         else:
-            result += u" "
+            result.append(u" ")
 
     # part_page_begin & part_page_end
     part_page_begin = document.get_part_page_begin()
     if part_page_begin:
-        result += u"<span class=\"part_page_begin\">{0}</span>".format(part_page_begin)
+        result.append(u"<span class=\"part_page_begin\">{0}</span>".format(part_page_begin))
 
     part_page_end = document.get_part_page_end()
     if part_page_end:
-        result += u"-<span class=\"part_page_end\">{0}</span>".format(part_page_end)
+        result.append(u"-<span class=\"part_page_end\">{0}</span>".format(part_page_end))
 
     if part_page_begin or part_page_end:
-        result += ". "
+        result.append(". ")
 
     # medium of publication, date_last_accessed, url
     medium_of_publication = None
@@ -221,20 +221,20 @@ def cite(document, format):
             date_last_accessed = document["resources"][0]["date_last_accessed"]
             date_last_accessed_formatted = date_service.format_date(date_last_accessed)
     if medium_of_publication:
-        result += u"<span class=\"medium_of_publication\">{0}</span>. ".format(medium_of_publication)
+        result.append(u"<span class=\"medium_of_publication\">{0}</span>. ".format(medium_of_publication))
 
     if date_last_accessed_formatted:
-        result += u"<span class=\"date_last_accessed\">{0}</span>. ".format(date_last_accessed_formatted)
+        result.append(u"<span class=\"date_last_accessed\">{0}</span>. ".format(date_last_accessed_formatted))
 
     if url:
-        result += u"<span class=\"url\">{0}</span>".format(format_url(url))
+        result.append(u"<span class=\"url\">{0}</span>".format(format_url(url)))
 
     #print result 
     #this print fires an encoding error when result contains non ascii characters
     #if print is needed :
     #   1- use python log command not print
     #   2- for encoding a result.ecnode("utf8") might solve the prb    
-    return result
+    return "".join(result)
 
 
 def remove_last_point(text):
@@ -254,16 +254,16 @@ def format_title_of_document(document):
     # Capitalize the first word and all other principal words of the titles and subtitles
     # of cited works listed. (Do not capitalize articles, prepositions, coordinating conjunctions, or the "to" in infinitives.)
     if document and "title" in document and document["title"] is not None:
-        result = u""
+        result = []
         if "title_non_sort" in document and document["title_non_sort"] is not None:
-            result += document["title_non_sort"]
-        result += remove_last_point(document["title"])
+            result.append(document["title_non_sort"])
+        result.append(remove_last_point(document["title"]))
         if "title_sub" in document and document["title_sub"]:
-            result += u": " + remove_last_point(document["title_sub"])
+            result.append(u": " + remove_last_point(document["title_sub"]))
         if "is_part_ofs" in document:
-            return u"\"<span class=\"title\">{0}</span>.\" ".format(result)
+            return u"\"<span class=\"title\">{0}</span>.\" ".format("".join(result))
         else:
-            return u"<span class=\"title\">{0}</span>. ".format(result)
+            return u"<span class=\"title\">{0}</span>. ".format("".join(result))
 
 
 def get_creators_role_dict(document):
@@ -299,7 +299,7 @@ def add_item_to_key_of_dict(item, key, dic):
 
 def format_creators_dict(creators_dict, level):
     if "authors" in creators_dict:
-        result = ""
+        result = []
 
         contri_count = len(creators_dict["authors"])
 
@@ -324,18 +324,17 @@ def format_creators_dict(creators_dict, level):
                     suffix = u"."
 
                 # formatted_name
-                result += u"{}<span class=\"creator\">{}</span>{}".format(prefix, formatted_name, suffix)
+                result.append(u"{}<span class=\"creator\">{}</span>{}".format(prefix, formatted_name, suffix))
                 
                 # et al
                 # deactivated
                 #if contri_count > 3:
-                #    result += u", <span class=\"creator\">et al.</span>"
+                #    result.append(u", <span class=\"creator\">et al.</span>")
                 #    print result
                 #    break
 
-
-        #print result
-        return result + " "
+        result.append(" ")
+        return "".join(result)
 
 
 def format_creator(creator, position, level):
@@ -344,15 +343,17 @@ def format_creator(creator, position, level):
         style = metajson.STYLE_GIVEN_FAMILY
     formatted_name = creator.formatted_name(style)
     if formatted_name:
+
         if level == 0:
             if creator["role"] in role_to_short_forms:
-                short_form = role_to_short_forms[creator["role"]][0]
-                if short_form:
-                    formatted_name = formatted_name + ", <span class=\"creator_role\">" + short_form + "</span>"
+                formatted_role = role_to_short_forms[creator["role"]][0]
+                if formatted_role:
+                    return "".join([formatted_name, ", <span class=\"creator_role\">", formatted_role, "</span>"])
         else:
             if creator["role"] in role_to_short_forms:
-                short_form = role_to_short_forms[creator["role"]][1]
-                if short_form:
-                    formatted_name = "<span class=\"creator_role\">" + short_form + "</span> " + formatted_name
+                formatted_role = role_to_short_forms[creator["role"]][1]
+                if formatted_role:
+                    return "".join(["<span class=\"creator_role\">", formatted_role, "</span> ", formatted_name])
         if formatted_name:
             return formatted_name
+

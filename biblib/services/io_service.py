@@ -82,8 +82,13 @@ def guess_format_from_xmletree(element):
 #############
 # File list #
 #############
-def get_relevant_file_list(dir_path, file_extension):
-    print "Relevant file list for path : {0}".format(dir_path)
+def get_relevant_file_list_by_format(dir_path, input_format):
+    file_extension = guess_file_extension_from_format(input_format)
+    return get_relevant_file_list_by_extension(dir_path, file_extension)
+
+
+def get_relevant_file_list_by_extension(dir_path, file_extension):
+    print "Relevant file list for path : {} and file extension: {}".format(dir_path, file_extension)
     if dir_path is None or not os.path.exists(dir_path):
         print "Nonexistent directory path"
     else:
