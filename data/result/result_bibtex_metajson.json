@@ -14,7 +14,9 @@
             "name": "AOSIS", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012", 
@@ -31,9 +33,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.766100", 
-      "rec_id": "fe27ac00-55b8-11e3-8be9-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.766111", 
+      "rec_created_date": "2013-12-10T15:19:33.689471", 
+      "rec_id": "176e9c97-61a6-11e3-9843-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.689483", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Alliance of Small Island States Leaders ’ Declaration , 2012"
@@ -50,7 +52,9 @@
             "name": "AOSIS", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2009", 
@@ -64,9 +68,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.766728", 
-      "rec_id": "fe28a5a3-55b8-11e3-986b-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.766734", 
+      "rec_created_date": "2013-12-10T15:19:33.690107", 
+      "rec_id": "176f948c-61a6-11e3-b628-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.690113", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "AOSIS DECLARATION ON CLIMATE CHANGE 2009"
@@ -83,7 +87,9 @@
             "name": "Climate Vulnerable Forum", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_sort": {
@@ -96,9 +102,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.767138", 
-      "rec_id": "fe28b5cf-55b8-11e3-8ac4-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.767144", 
+      "rec_created_date": "2013-12-10T15:19:33.690522", 
+      "rec_id": "176fa500-61a6-11e3-9a03-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.690528", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Climate Vulnerable Forum Declaration"
@@ -115,7 +121,9 @@
             "name": "Climate Vulnerable Forum", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011", 
@@ -131,9 +139,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.767550", 
-      "rec_id": "fe28c5e8-55b8-11e3-b002-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.767556", 
+      "rec_created_date": "2013-12-10T15:19:33.690939", 
+      "rec_id": "176fb54a-61a6-11e3-a964-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.690945", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Climate Vulnerable Forum - DHAKA DECLARATION"
@@ -150,7 +158,9 @@
             "name": "Climate Vulnerable Forum", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010", 
@@ -165,9 +175,9 @@
       ], 
       "part_issue": "November", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.767973", 
-      "rec_id": "fe28d66e-55b8-11e3-a5cd-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.767978", 
+      "rec_created_date": "2013-12-10T15:19:33.691366", 
+      "rec_id": "176fc5f8-61a6-11e3-9453-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.691372", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Climate Vulnerable Forum - AMBO DECLARATION"
@@ -184,7 +194,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1996", 
@@ -202,9 +214,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.768383", 
-      "rec_id": "fe28e673-55b8-11e3-804c-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.768388", 
+      "rec_created_date": "2013-12-10T15:19:33.691786", 
+      "rec_id": "176fd668-61a6-11e3-b5bc-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.691792", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "SUMMARY OF THE SECOND CONFERENCE OF THE PARTIES TO THE FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
@@ -221,7 +233,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1996", 
@@ -239,9 +253,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.768833", 
-      "rec_id": "fe28f805-55b8-11e3-83f0-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.768838", 
+      "rec_created_date": "2013-12-10T15:19:33.692230", 
+      "rec_id": "176fe7c2-61a6-11e3-85c4-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.692236", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "SUBSIDIARY BODIES OF THE UN FRAMEWORK CONVENTION ON CLIMATE CHANGE : A BRIEF HISTORY OF THE FCCC AND ITS"
@@ -258,7 +272,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012", 
@@ -276,9 +292,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.769278", 
-      "rec_id": "fe290973-55b8-11e3-b06b-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.769284", 
+      "rec_created_date": "2013-12-10T15:19:33.692681", 
+      "rec_id": "176ff961-61a6-11e3-86df-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.692687", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin"
@@ -295,7 +311,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1996", 
@@ -313,9 +331,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.769702", 
-      "rec_id": "fe291a00-55b8-11e3-88c1-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.769707", 
+      "rec_created_date": "2013-12-10T15:19:33.693109", 
+      "rec_id": "17700a17-61a6-11e3-ba45-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.693115", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "THE AD HOC GROUP ON THE BERLIN"
@@ -332,7 +350,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1997", 
@@ -349,9 +369,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.770124", 
-      "rec_id": "fe292a8a-55b8-11e3-a606-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.770130", 
+      "rec_created_date": "2013-12-10T15:19:33.693533", 
+      "rec_id": "17701aa6-61a6-11e3-b029-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.693538", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
@@ -368,7 +388,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -384,9 +406,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.770546", 
-      "rec_id": "fe293af0-55b8-11e3-92ab-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.770551", 
+      "rec_created_date": "2013-12-10T15:19:33.693954", 
+      "rec_id": "17702b19-61a6-11e3-b034-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.693960", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
@@ -403,7 +425,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2001", 
@@ -420,9 +444,9 @@
       "part_page_end": "", 
       "part_volume": "7", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.770971", 
-      "rec_id": "fe294b94-55b8-11e3-95cc-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.770978", 
+      "rec_created_date": "2013-12-10T15:19:33.694367", 
+      "rec_id": "17703b47-61a6-11e3-88a4-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.694373", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin"
@@ -439,7 +463,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010", 
@@ -457,9 +483,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.771391", 
-      "rec_id": "fe295bfa-55b8-11e3-9cad-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.771397", 
+      "rec_created_date": "2013-12-10T15:19:33.694788", 
+      "rec_id": "17704bae-61a6-11e3-ac0b-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.694793", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin"
@@ -476,7 +502,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011", 
@@ -492,9 +520,9 @@
       "part_issue": "534", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.771815", 
-      "rec_id": "fe296c97-55b8-11e3-95c2-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.771821", 
+      "rec_created_date": "2013-12-10T15:19:33.695207", 
+      "rec_id": "17705c17-61a6-11e3-afcd-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.695213", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin"
@@ -511,7 +539,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1995", 
@@ -529,9 +559,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.772231", 
-      "rec_id": "fe297ccc-55b8-11e3-a61b-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.772236", 
+      "rec_created_date": "2013-12-10T15:19:33.695623", 
+      "rec_id": "17706c4a-61a6-11e3-9e6b-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.695628", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "SESSION OF THE INC FOR A FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
@@ -548,7 +578,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1995", 
@@ -558,9 +590,9 @@
       "part_issue": "1", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.772652", 
-      "rec_id": "fe298d33-55b8-11e3-bf02-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.772657", 
+      "rec_created_date": "2013-12-10T15:19:33.696047", 
+      "rec_id": "17707ce6-61a6-11e3-95f2-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.696052", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "A BRIEF HISTORY OF THE FRAMEWORK CONVENTION ON"
@@ -577,7 +609,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2005", 
@@ -593,9 +627,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.773067", 
-      "rec_id": "fe299d73-55b8-11e3-bc64-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.773073", 
+      "rec_created_date": "2013-12-10T15:19:33.696450", 
+      "rec_id": "17708c99-61a6-11e3-b218-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.696455", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "A BRIEF HISTORY OF THE UNFCCC AND"
@@ -612,7 +646,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1995", 
@@ -630,9 +666,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.773478", 
-      "rec_id": "fe29ad82-55b8-11e3-8e3e-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.773483", 
+      "rec_created_date": "2013-12-10T15:19:33.696855", 
+      "rec_id": "17709c6b-61a6-11e3-a256-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.696860", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "CONFERENCE OF THE PARTIES FOR THE FRAMEWORK CONVENTION ON CLIMATE CHANGE :"
@@ -649,7 +685,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1998", 
@@ -665,9 +703,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.773907", 
-      "rec_id": "fe29be42-55b8-11e3-87e3-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.773912", 
+      "rec_created_date": "2013-12-10T15:19:33.697282", 
+      "rec_id": "1770ad23-61a6-11e3-b34a-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.697288", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Negotiations Bulletin"
@@ -684,7 +722,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2000", 
@@ -700,9 +740,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.774301", 
-      "rec_id": "fe29cdb0-55b8-11e3-9721-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.774306", 
+      "rec_created_date": "2013-12-10T15:19:33.697677", 
+      "rec_id": "1770bc91-61a6-11e3-9531-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.697683", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin"
@@ -719,7 +759,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2000", 
@@ -734,9 +776,9 @@
       ], 
       "part_issue": "November 1999", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.774696", 
-      "rec_id": "fe29dd21-55b8-11e3-9dbb-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.774702", 
+      "rec_created_date": "2013-12-10T15:19:33.698070", 
+      "rec_id": "1770cbeb-61a6-11e3-9698-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.698076", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin"
@@ -753,7 +795,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1997", 
@@ -771,9 +815,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.775117", 
-      "rec_id": "fe29ed87-55b8-11e3-bb62-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.775123", 
+      "rec_created_date": "2013-12-10T15:19:33.698473", 
+      "rec_id": "1770db9e-61a6-11e3-b1ae-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.698478", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "REPORT OF THE MEETINGS OF THE SUBSIDIARY BODIES TO THE FRAMEWORK"
@@ -790,7 +834,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2004", 
@@ -808,9 +854,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.775547", 
-      "rec_id": "fe29fe5e-55b8-11e3-a07c-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.775553", 
+      "rec_created_date": "2013-12-10T15:19:33.698899", 
+      "rec_id": "1770ec45-61a6-11e3-ba7b-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.698904", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin"
@@ -827,7 +873,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010", 
@@ -845,9 +893,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.775981", 
-      "rec_id": "fe2a0f2b-55b8-11e3-a1f0-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.775987", 
+      "rec_created_date": "2013-12-10T15:19:33.699327", 
+      "rec_id": "1770fcf3-61a6-11e3-a7dc-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.699332", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "HIGHLIGHTS FROM THE SIXTH SESSION OF THE AD HOC GROUP ON THE BERLIN MANDATE"
@@ -864,7 +912,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2005", 
@@ -882,9 +932,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.776436", 
-      "rec_id": "fe2a2105-55b8-11e3-bd3b-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.776442", 
+      "rec_created_date": "2013-12-10T15:19:33.699756", 
+      "rec_id": "17710dc0-61a6-11e3-aed2-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.699762", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin"
@@ -901,7 +951,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1995", 
@@ -919,9 +971,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.776865", 
-      "rec_id": "fe2a31cf-55b8-11e3-a5da-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.776871", 
+      "rec_created_date": "2013-12-10T15:19:33.700179", 
+      "rec_id": "17711e45-61a6-11e3-9043-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.700184", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "REPORT OF THE AD HOC GROUP ON THE BERLIN MANDATE"
@@ -938,7 +990,9 @@
             "name": "ENB (2011)", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011", 
@@ -960,9 +1014,9 @@
       ], 
       "part_volume": "7", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.777312", 
-      "rec_id": "fe2a4345-55b8-11e3-b69c-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.777317", 
+      "rec_created_date": "2013-12-10T15:19:33.700614", 
+      "rec_id": "17712f4a-61a6-11e3-9e7c-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.700620", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Summary of the Durban Climate Change Conference"
@@ -975,7 +1029,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2000", 
@@ -990,9 +1046,9 @@
       ], 
       "part_issue": "June", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.777757", 
-      "rec_id": "fe2a54a6-55b8-11e3-94c3-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.777762", 
+      "rec_created_date": "2013-12-10T15:19:33.701061", 
+      "rec_id": "177140b8-61a6-11e3-a85c-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.701066", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "GEF CONTRIBUTIONS TO AGENDA 21"
@@ -1005,7 +1061,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "200704", 
@@ -1029,9 +1087,9 @@
       "part_page_begin": "024002", 
       "part_volume": "2", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.778215", 
-      "rec_id": "fe2a6697-55b8-11e3-a8b2-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.778221", 
+      "rec_created_date": "2013-12-10T15:19:33.701522", 
+      "rec_id": "177152c5-61a6-11e3-ae78-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.701528", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Scientific reticence and sea level rise"
@@ -1044,7 +1102,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010", 
@@ -1059,9 +1119,9 @@
       ], 
       "part_issue": "July 2009", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.778658", 
-      "rec_id": "fe2a77dc-55b8-11e3-8b9a-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.778663", 
+      "rec_created_date": "2013-12-10T15:19:33.701967", 
+      "rec_id": "17716426-61a6-11e3-badc-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.701973", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Progress in Human Geography Progress reports Cultural ecology : adaptation – retrofi tting a concept ?"
@@ -1074,7 +1134,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010", 
@@ -1088,9 +1150,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.779094", 
-      "rec_id": "fe2a88e1-55b8-11e3-94f3-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.779099", 
+      "rec_created_date": "2013-12-10T15:19:33.702395", 
+      "rec_id": "177174dc-61a6-11e3-8cc6-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.702400", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Different perceptions of adaptation to climate change : a mental model approach applied to the evidence from expert interviews"
@@ -1103,7 +1165,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2002", 
@@ -1119,9 +1183,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.779548", 
-      "rec_id": "fe2a9aa8-55b8-11e3-a955-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.779554", 
+      "rec_created_date": "2013-12-10T15:19:33.702850", 
+      "rec_id": "17718699-61a6-11e3-8fd4-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.702855", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
@@ -1134,7 +1198,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012", 
@@ -1148,9 +1214,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.779993", 
-      "rec_id": "fe2aac0a-55b8-11e3-948c-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.779998", 
+      "rec_created_date": "2013-12-10T15:19:33.703289", 
+      "rec_id": "177197ca-61a6-11e3-92d3-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.703294", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin"
@@ -1163,7 +1229,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2006", 
@@ -1181,9 +1249,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.780425", 
-      "rec_id": "fe2abcd7-55b8-11e3-bdc9-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.780430", 
+      "rec_created_date": "2013-12-10T15:19:33.703725", 
+      "rec_id": "1771a8d1-61a6-11e3-b2b4-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.703730", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Earth Negotiations Bulletin"
@@ -1196,7 +1264,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2008", 
@@ -1205,9 +1275,9 @@
       }, 
       "part_issue": "Ivm", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.780871", 
-      "rec_id": "fe2ace57-55b8-11e3-9712-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.780877", 
+      "rec_created_date": "2013-12-10T15:19:33.704174", 
+      "rec_id": "1771ba5c-61a6-11e3-9714-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.704180", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Beyond the public and private divide : remapping transnational climate governance in the 21st century"
@@ -1220,7 +1290,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012", 
@@ -1234,9 +1306,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.781307", 
-      "rec_id": "fe2adf5c-55b8-11e3-97f2-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.781312", 
+      "rec_created_date": "2013-12-10T15:19:33.704608", 
+      "rec_id": "1771cb4f-61a6-11e3-b3b0-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.704613", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "title": "Southern voices on climate policy choices"
@@ -1249,7 +1321,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2006", 
@@ -1267,9 +1341,9 @@
       "part_page_end": "", 
       "part_volume": "15", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.781715", 
-      "rec_id": "fe2aef42-55b8-11e3-8533-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.781721", 
+      "rec_created_date": "2013-12-10T15:19:33.705010", 
+      "rec_id": "1771db05-61a6-11e3-b402-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.705015", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Conceptual History of Adaptation in the UNFCCC Process"
@@ -1282,7 +1356,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2001", 
@@ -1296,9 +1372,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.782163", 
-      "rec_id": "fe2b00c5-55b8-11e3-8ddf-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.782168", 
+      "rec_created_date": "2013-12-10T15:19:33.705454", 
+      "rec_id": "1771ec51-61a6-11e3-8615-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.705459", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Adaptation to Climate Change in the Context of Sustainable Development and Equity"
@@ -1311,7 +1387,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011", 
@@ -1325,9 +1403,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.782549", 
-      "rec_id": "fe2b0fd9-55b8-11e3-aa3b-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.782554", 
+      "rec_created_date": "2013-12-10T15:19:33.705839", 
+      "rec_id": "1771fb59-61a6-11e3-a673-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.705844", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "International climate change negotiations: key lessons and next steps"
@@ -1344,7 +1422,9 @@
             "name": "UNFCCC", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2007", 
@@ -1358,9 +1438,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.782957", 
-      "rec_id": "fe2b1fc7-55b8-11e3-be3d-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.782962", 
+      "rec_created_date": "2013-12-10T15:19:33.706247", 
+      "rec_id": "17720b57-61a6-11e3-82f5-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.706253", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Report of the Conference of the Parties on its thirteenth session , held in Bali Part Two : Action taken by the Conference of the Parties at its thirteenth session"
@@ -1377,7 +1457,9 @@
             "name": "WWF", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010", 
@@ -1393,9 +1475,9 @@
       "part_page_begin": "20", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.783384", 
-      "rec_id": "fe2b3075-55b8-11e3-af0c-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.783389", 
+      "rec_created_date": "2013-12-10T15:19:33.706679", 
+      "rec_id": "17721c35-61a6-11e3-8f4a-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.706685", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Scaling up investments in global climate solutions WWF recommendations for the G20"
@@ -1412,7 +1494,9 @@
             "name": "WWF", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010", 
@@ -1426,9 +1510,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.783800", 
-      "rec_id": "fe2b40b5-55b8-11e3-ba5c-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.783806", 
+      "rec_created_date": "2013-12-10T15:19:33.707089", 
+      "rec_id": "17722c45-61a6-11e3-84ef-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.707095", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "wwf RECOMMENDATIONs"
@@ -1445,7 +1529,9 @@
             "name": "WWF", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010", 
@@ -1461,9 +1547,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.784215", 
-      "rec_id": "fe2b50e1-55b8-11e3-a4dc-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.784220", 
+      "rec_created_date": "2013-12-10T15:19:33.707484", 
+      "rec_id": "17723ba6-61a6-11e3-a04f-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.707490", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "WWF 2010 RECOMMENDATIONS"
@@ -1480,7 +1566,9 @@
             "name": "WWF", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011", 
@@ -1495,9 +1583,9 @@
       ], 
       "part_issue": "May", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.784640", 
-      "rec_id": "fe2b6170-55b8-11e3-b4bc-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.784645", 
+      "rec_created_date": "2013-12-10T15:19:33.707895", 
+      "rec_id": "17724bb5-61a6-11e3-aaa2-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.707901", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "WWF Expectations for the UNFCCC Bonn Session"
@@ -1514,7 +1602,9 @@
             "name": "WWF", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013", 
@@ -1531,9 +1621,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.785080", 
-      "rec_id": "fe2b727a-55b8-11e3-aa11-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.785086", 
+      "rec_created_date": "2013-12-10T15:19:33.708315", 
+      "rec_id": "17725c14-61a6-11e3-9c45-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.708320", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "WWF Global Climate Policy WWF Expectations for a fair , ambitious and binding global climate deal in Copenhagen"
@@ -1550,7 +1640,9 @@
             "name": "WWF", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013", 
@@ -1566,9 +1658,9 @@
       "part_page_begin": "22", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.785542", 
-      "rec_id": "fe2b84c2-55b8-11e3-a1e9-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.785548", 
+      "rec_created_date": "2013-12-10T15:19:33.708760", 
+      "rec_id": "17726d75-61a6-11e3-baa8-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.708765", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "The Montreal Climate Conference , Results and Next Steps January 2006 Introduction What were the cornerstones of the Montreal outcomes ? Launch of negotiations for the future"
@@ -1585,7 +1677,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2000", 
@@ -1601,9 +1695,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.785988", 
-      "rec_id": "fe2b962e-55b8-11e3-b404-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.785994", 
+      "rec_created_date": "2013-12-10T15:19:33.709191", 
+      "rec_id": "17727e57-61a6-11e3-aa17-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.709197", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "OF CLIMATE CHANGE AND THE IMPACT OF"
@@ -1620,7 +1714,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2008", 
@@ -1638,9 +1734,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.786417", 
-      "rec_id": "fe2ba6e6-55b8-11e3-9854-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.786423", 
+      "rec_created_date": "2013-12-10T15:19:33.709608", 
+      "rec_id": "17728e97-61a6-11e3-a57f-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.709613", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "SUMMARY OF THE UNFCCC EXPERT GROUP A BRIEF HISTORY OF ADAPTATION TO CLIMATE"
@@ -1657,7 +1753,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2009", 
@@ -1675,9 +1773,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.786863", 
-      "rec_id": "fe2bb851-55b8-11e3-8932-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.786869", 
+      "rec_created_date": "2013-12-10T15:19:33.710037", 
+      "rec_id": "17729f61-61a6-11e3-8b30-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.710043", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "SUMMARY OF THE UNFCCC TECHNICAL"
@@ -1694,7 +1792,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2000", 
@@ -1712,9 +1812,9 @@
       "part_page_end": "", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.787297", 
-      "rec_id": "fe2bc959-55b8-11e3-89ca-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.787302", 
+      "rec_created_date": "2013-12-10T15:19:33.710459", 
+      "rec_id": "1772afdc-61a6-11e3-99f9-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.710464", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "SUMMARY OF THE WORKSHOP ON BEST"
@@ -1731,7 +1831,9 @@
             "name": "ENB", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2009", 
@@ -1747,9 +1849,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.787717", 
-      "rec_id": "fe2bd9c2-55b8-11e3-89fb-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.787722", 
+      "rec_created_date": "2013-12-10T15:19:33.710889", 
+      "rec_id": "1772c097-61a6-11e3-aa5d-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.710896", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "UNFCCC TECHNICAL WORKSHOP ON"
@@ -1762,7 +1864,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011", 
@@ -1778,9 +1882,9 @@
       "part_page_begin": "196", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.788162", 
-      "rec_id": "fe2beb23-55b8-11e3-873d-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.788167", 
+      "rec_created_date": "2013-12-10T15:19:33.711339", 
+      "rec_id": "1772d233-61a6-11e3-b14f-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.711344", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "Rethinking adaptation for a 4 ° C world"
@@ -1797,7 +1901,9 @@
             "name": "UNFCCC", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1996", 
@@ -1811,9 +1917,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.788581", 
-      "rec_id": "fe2bfb82-55b8-11e3-b05b-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.788586", 
+      "rec_created_date": "2013-12-10T15:19:33.711809", 
+      "rec_id": "1772e42e-61a6-11e3-931d-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.711820", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "REPORT OF THE CONFERENCE OF THE PARTIES ON ITS SECOND SESSION, HELD AT GENEVA FROM 8 TO 19 JULY 1996"
@@ -1830,7 +1936,9 @@
             "name": "WWF", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2008", 
@@ -1847,9 +1955,9 @@
       "part_page_begin": "1", 
       "part_page_end": "", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.789004", 
-      "rec_id": "fe2c0bfd-55b8-11e3-965c-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.789009", 
+      "rec_created_date": "2013-12-10T15:19:33.712300", 
+      "rec_id": "1772f7bd-61a6-11e3-b942-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.712306", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "A Global Financial Architecture for Climate Change"
@@ -1862,7 +1970,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -1887,9 +1997,9 @@
       "part_page_end": "213", 
       "part_volume": "4", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.797968", 
-      "rec_id": "fe2d69f5-55b8-11e3-9cf0-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.797976", 
+      "rec_created_date": "2013-12-10T15:19:33.721002", 
+      "rec_id": "17744b78-61a6-11e3-bd15-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.721010", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
       "title": "The title of the work"
@@ -1902,7 +2012,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -1925,9 +2037,9 @@
         "The name of the publisher"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.798459", 
-      "rec_id": "fe2d7d40-55b8-11e3-a39d-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.798464", 
+      "rec_created_date": "2013-12-10T15:19:33.721494", 
+      "rec_id": "17745ecf-61a6-11e3-8c6c-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.721500", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "title": "The title of the work"
@@ -1940,7 +2052,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -1958,9 +2072,9 @@
         "The address of the publisher"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.798875", 
-      "rec_id": "fe2d8d8a-55b8-11e3-a408-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.798880", 
+      "rec_created_date": "2013-12-10T15:19:33.721912", 
+      "rec_id": "17746f2b-61a6-11e3-bcb1-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.721918", 
       "rec_status": "private", 
       "rec_type": "Booklet", 
       "title": "The title of the work"
@@ -1973,13 +2087,19 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }, 
         {
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -2009,9 +2129,9 @@
         "The publisher"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.799407", 
-      "rec_id": "fe2da25c-55b8-11e3-8b56-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.799413", 
+      "rec_created_date": "2013-12-10T15:19:33.722449", 
+      "rec_id": "17748430-61a6-11e3-a0bc-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.722454", 
       "rec_status": "private", 
       "rec_type": "ConferencePaper", 
       "title": "The title of the work"
@@ -2024,7 +2144,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -2050,9 +2172,9 @@
         "The name of the publisher"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.799874", 
-      "rec_id": "fe2db491-55b8-11e3-bb1e-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.799879", 
+      "rec_created_date": "2013-12-10T15:19:33.722920", 
+      "rec_id": "17749694-61a6-11e3-85a7-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.722925", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
       "title": "The title of the work"
@@ -2065,13 +2187,19 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }, 
         {
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -2104,9 +2232,9 @@
         "The name of the publisher"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.800460", 
-      "rec_id": "fe2dcb7d-55b8-11e3-b071-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.800466", 
+      "rec_created_date": "2013-12-10T15:19:33.723508", 
+      "rec_id": "1774ad82-61a6-11e3-ae11-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.723513", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
       "title": "The title of the work"
@@ -2119,7 +2247,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -2137,9 +2267,9 @@
         "The address of the publisher"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.800932", 
-      "rec_id": "fe2dddee-55b8-11e3-b3ef-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.800938", 
+      "rec_created_date": "2013-12-10T15:19:33.723974", 
+      "rec_id": "1774bfca-61a6-11e3-9d5d-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.723980", 
       "rec_status": "private", 
       "rec_type": "Manuel", 
       "title": "The title of the work"
@@ -2152,7 +2282,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -2169,9 +2301,9 @@
         "The address of the publisher"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.801226", 
-      "rec_id": "fe2de975-55b8-11e3-8212-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.801232", 
+      "rec_created_date": "2013-12-10T15:19:33.724273", 
+      "rec_id": "1774cb78-61a6-11e3-9ab5-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.724278", 
       "rec_status": "private", 
       "rec_type": "MasterThesis", 
       "title": "The title of the work"
@@ -2184,7 +2316,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -2199,9 +2333,9 @@
       ], 
       "published_how": "How it was published", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.801598", 
-      "rec_id": "fe2df7fa-55b8-11e3-913e-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.801603", 
+      "rec_created_date": "2013-12-10T15:19:33.724649", 
+      "rec_id": "1774da1e-61a6-11e3-a9a3-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.724654", 
       "rec_status": "private", 
       "rec_type": "UnpublishedDocument", 
       "title": "The title of the work"
@@ -2214,7 +2348,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -2231,9 +2367,9 @@
         "The address of the publisher"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.801966", 
-      "rec_id": "fe2e065c-55b8-11e3-b266-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.801971", 
+      "rec_created_date": "2013-12-10T15:19:33.725020", 
+      "rec_id": "1774e8a8-61a6-11e3-a48d-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.725025", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
       "title": "The title of the work"
@@ -2246,10 +2382,14 @@
       }, 
       "creators": [
         {
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }, 
         {
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -2271,9 +2411,9 @@
         "The name of the publisher"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.802415", 
-      "rec_id": "fe2e17e6-55b8-11e3-8ec6-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.802420", 
+      "rec_created_date": "2013-12-10T15:19:33.725488", 
+      "rec_id": "1774faf0-61a6-11e3-b724-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.725494", 
       "rec_status": "private", 
       "rec_type": "ConferenceProceedings", 
       "title": "The title of the work"
@@ -2286,7 +2426,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -2307,9 +2449,9 @@
         "The institution that published"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.802817", 
-      "rec_id": "fe2e2799-55b8-11e3-8778-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.802822", 
+      "rec_created_date": "2013-12-10T15:19:33.725898", 
+      "rec_id": "17750af3-61a6-11e3-abbf-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.725904", 
       "rec_status": "private", 
       "rec_type": "TechReport", 
       "title": "The title of the work"
@@ -2322,7 +2464,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "199307", 
@@ -2336,9 +2480,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:37.803119", 
-      "rec_id": "fe2e3366-55b8-11e3-9ab6-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:37.803124", 
+      "rec_created_date": "2013-12-10T15:19:33.726201", 
+      "rec_id": "177516ca-61a6-11e3-bfe5-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:33.726206", 
       "rec_status": "private", 
       "rec_type": "UnpublishedDocument", 
       "title": "The title of the work"

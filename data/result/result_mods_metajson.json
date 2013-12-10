@@ -33,7 +33,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q5apa2"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -49,7 +51,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860lchjn"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -65,7 +69,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860lci21"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-01", 
@@ -118,9 +124,9 @@
       "part_page_end": "12", 
       "part_volume": "89", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.016932", 
+      "rec_created_date": "2013-12-10T15:19:42.894596", 
       "rec_id": "doi:10.1016/j.jinteco.2012.05.011", 
-      "rec_modified_date": "2013-11-25T11:04:47.016945", 
+      "rec_modified_date": "2013-12-10T15:19:42.894610", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -140,7 +146,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/eu4vqp9ompqllr09hh1aij5g1"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -156,7 +164,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54c93"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -172,7 +182,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010-12-16", 
@@ -190,9 +202,9 @@
         "fr"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.021465", 
-      "rec_id": "03acccbd-55b9-11e3-b1e6-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.021479", 
+      "rec_created_date": "2013-12-10T15:19:42.897394", 
+      "rec_id": "1cec7f38-61a6-11e3-b7f5-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.897404", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "VideoRecording", 
@@ -227,7 +239,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }, 
         {
           "affiliation": {
@@ -243,7 +257,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860j0h0m"
           }, 
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }
       ], 
       "date_issued": "2012-12", 
@@ -277,9 +293,9 @@
         "Oxford University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.026646", 
+      "rec_created_date": "2013-12-10T15:19:42.900397", 
       "rec_id": "isbn:9780199544837", 
-      "rec_modified_date": "2013-11-25T11:04:47.026662", 
+      "rec_modified_date": "2013-12-10T15:19:42.900404", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -313,7 +329,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/eo6779thqgm5r489makgk11ai"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -329,7 +347,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_sort": {
@@ -351,7 +371,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eo6779thqgm5r489makgmgk26"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -360,7 +382,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eo6779thqgm5r489makgn240p"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "affiliation": {
@@ -376,7 +400,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/3cr7jj61bs68cvg99a9b1e21k"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -385,7 +411,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eo6779thqgm5r489makgnal26"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }
           ], 
           "date_issued": "2013-05", 
@@ -425,9 +453,9 @@
       "part_page_begin": "186", 
       "part_page_end": "196", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.031924", 
-      "rec_id": "03ae6675-55b9-11e3-be32-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.031935", 
+      "rec_created_date": "2013-12-10T15:19:42.905475", 
+      "rec_id": "1cedbaee-61a6-11e3-ab96-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.905487", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -454,7 +482,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_created": "2011-05", 
@@ -517,9 +547,9 @@
       "part_issue": "3", 
       "part_volume": "36", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.036837", 
-      "rec_id": "03af2747-55b9-11e3-beb6-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.036844", 
+      "rec_created_date": "2013-12-10T15:19:42.910606", 
+      "rec_id": "1cee83a1-61a6-11e3-87ee-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.910631", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -533,7 +563,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/dambferfb7dfprc9m2h2pat0k"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -542,7 +574,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/dambferfb7dfprc9m2h2pi026"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }
           ], 
           "date_issued": "2010", 
@@ -589,7 +623,9 @@
             "rec_class": "Event", 
             "title": "Governing Paris and Mexico"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -605,7 +641,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_created": "2013-02-27", 
@@ -636,9 +674,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.039255", 
-      "rec_id": "03af857d-55b9-11e3-a51b-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.039262", 
+      "rec_created_date": "2013-12-10T15:19:42.913530", 
+      "rec_id": "1ceef65c-61a6-11e3-b1ae-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.913537", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferenceContribution", 
@@ -666,7 +704,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q5908j"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_sort": {
@@ -688,7 +728,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eo6779thqgm5r489mam2pgtr2"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -699,7 +741,9 @@
                 "rec_class": "Event", 
                 "title": "L’anthropologie de Marcel Gauchet : analyse et débats"
               }, 
-              "role": "aut"
+              "roles": [
+                "aut"
+              ]
             }
           ], 
           "date_issued": "2013-02", 
@@ -740,9 +784,9 @@
       "part_page_begin": "69", 
       "part_page_end": "86", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.042936", 
-      "rec_id": "03b01597-55b9-11e3-b127-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.042944", 
+      "rec_created_date": "2013-12-10T15:19:42.917151", 
+      "rec_id": "1cef8428-61a6-11e3-a4f4-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.917159", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferencePaper", 
@@ -770,7 +814,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5k7940uimfdf9c8990p900c2l"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -779,7 +825,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/7t638g2jjsquujs9mcc0jeu8l"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -788,7 +836,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/7t638g2jjsquujs9mcc0jii04"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -797,7 +847,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/7t638g2jjsquujs9mcc0k2e43"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -808,7 +860,9 @@
             "rec_class": "Event", 
             "title": "Raymond Saleilles et au-delà"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-03", 
@@ -835,9 +889,9 @@
         "Dalloz"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.046401", 
+      "rec_created_date": "2013-12-10T15:19:42.920473", 
       "rec_id": "isbn:9782247125265", 
-      "rec_modified_date": "2013-11-25T11:04:47.046411", 
+      "rec_modified_date": "2013-12-10T15:19:42.920481", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferenceProceedings", 
@@ -871,7 +925,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q56sp5"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-04-08", 
@@ -906,9 +962,9 @@
       "part_page_begin": "11", 
       "part_page_end": "00", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.049340", 
-      "rec_id": "03b10ecf-55b9-11e3-b7ff-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.049347", 
+      "rec_created_date": "2013-12-10T15:19:42.923269", 
+      "rec_id": "1cf07270-61a6-11e3-9412-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.923277", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -928,7 +984,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/3fm4jv3k2s99lms9jb5i1ag8p"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -944,7 +1002,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q568qo"
           }, 
-          "role": "ths"
+          "roles": [
+            "ths"
+          ]
         }
       ], 
       "date_issued": "2012-02", 
@@ -986,9 +1046,9 @@
         "Institut d'Etudes Politiques de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.051899", 
-      "rec_id": "03b17347-55b9-11e3-8c7d-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.051906", 
+      "rec_created_date": "2013-12-10T15:19:42.926242", 
+      "rec_id": "1cf0e691-61a6-11e3-8e80-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.926255", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -1011,7 +1071,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9k0sklgecj"
           }, 
-          "role": "ivr"
+          "roles": [
+            "ivr"
+          ]
         }, 
         {
           "affiliation": {
@@ -1027,7 +1089,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q58ub0"
           }, 
-          "role": "ive"
+          "roles": [
+            "ive"
+          ]
         }
       ], 
       "date_issued": "2007-11", 
@@ -1080,9 +1144,9 @@
       "part_page_begin": "115", 
       "part_page_end": "131", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.055276", 
-      "rec_id": "03b1f6f5-55b9-11e3-9b61-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.055283", 
+      "rec_created_date": "2013-12-10T15:19:42.929564", 
+      "rec_id": "1cf167fd-61a6-11e3-a9c6-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.929574", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "InterviewArticle", 
@@ -1136,9 +1200,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.075444", 
-      "rec_id": "03b50a80-55b9-11e3-a56d-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.075457", 
+      "rec_created_date": "2013-12-10T15:19:42.950922", 
+      "rec_id": "1cf4aa85-61a6-11e3-a1a4-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.950943", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WebSite", 
@@ -1152,6 +1216,48 @@
           "rec_class": "Resource", 
           "rec_type": "remote", 
           "url": "http://wayback-cgi1.alexa.com/e2002/*/http://www.franulmer.com/"
+        }
+      ], 
+      "subjects": [
+        {
+          "geographics": [
+            {
+              "value": "Alaska"
+            }
+          ]
+        }, 
+        {
+          "geographics": [
+            {
+              "value": "Alaska"
+            }
+          ]
+        }, 
+        {
+          "cartographics": [
+            {
+              "coordinates": [
+                {
+                  "latitude": "6 00 S, 71 30 E"
+                }
+              ], 
+              "projection": "Conic proj", 
+              "scale": "Scale [1:6,336,000]. 1\" = 100 miles. Vertical scale [1:192,000]. 1/16\" = approx. 1000'"
+            }
+          ], 
+          "geographics": [
+            {
+              "value": "Washington (D.C.)"
+            }, 
+            {
+              "authority": "iso3166", 
+              "geo_id": "us"
+            }, 
+            {
+              "authority": "marcgac", 
+              "geo_id": "n-us-md"
+            }
+          ]
         }
       ], 
       "title": "FranUlmer.com -- Home Page", 
@@ -1177,7 +1283,9 @@
           "agent": {
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1889", 
@@ -1194,9 +1302,6 @@
           }
         }
       ], 
-      "keywords": {
-        "und": []
-      }, 
       "languages": [
         "en"
       ], 
@@ -1210,9 +1315,9 @@
         null
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.076941", 
-      "rec_id": "03b5457a-55b9-11e3-8e85-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.076949", 
+      "rec_created_date": "2013-12-10T15:19:42.952622", 
+      "rec_id": "1cf4ed6e-61a6-11e3-9cbb-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.952629", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1230,6 +1335,26 @@
           }
         ]
       }, 
+      "subjects": [
+        {
+          "authority": "lcsh", 
+          "topics": [
+            "Gettysburg, Battle of, Gettysburg, Pa., 1863"
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "topics": [
+            "Gettysburg (Pa.) -- History -- Civil War, 1861-1865"
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "topics": [
+            "United States -- History -- Civil War, 1861-1865 -- Campaigns"
+          ]
+        }
+      ], 
       "title": "At Gettysburg, or, What a Girl Saw and Heard of the Battle: A True Narrative"
     }, 
     {
@@ -1247,7 +1372,9 @@
             "name_given": "Charles Weever", 
             "rec_class": "Person"
           }, 
-          "role": "pht"
+          "roles": [
+            "pht"
+          ]
         }
       ], 
       "date_copyrighted": "2003", 
@@ -1321,7 +1448,7 @@
       "rec_class": "Document", 
       "rec_created_date": "2004-09-09", 
       "rec_id": "archives/cushman/P07803", 
-      "rec_modified_date": "2013-11-25T11:04:47.078894", 
+      "rec_modified_date": "2013-12-10T15:19:42.954910", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Image", 
@@ -1339,6 +1466,20 @@
           }
         ]
       }, 
+      "subjects": [
+        {
+          "authority": "lctgm", 
+          "topics": [
+            "Mountains"
+          ]
+        }, 
+        {
+          "authority": "lctgm", 
+          "topics": [
+            "Snow"
+          ]
+        }
+      ], 
       "title": "Telescope Peak from Zabriskie Point", 
       "title_alternative": {
         "title": "Telescope PK from Zabriskie Pt."
@@ -1407,12 +1548,28 @@
         "Johns Hopkins University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.080306", 
-      "rec_id": "03b5c902-55b9-11e3-9d54-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.080313", 
+      "rec_created_date": "2013-12-10T15:19:42.956450", 
+      "rec_id": "1cf5830a-61a6-11e3-93dc-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.956456", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
+      "subjects": [
+        {
+          "geographics": [
+            {
+              "value": "United States"
+            }
+          ]
+        }, 
+        {
+          "geographics": [
+            {
+              "value": "United States"
+            }
+          ]
+        }
+      ], 
       "title": "Hiring and recruitment practices in academic libraries"
     }, 
     {
@@ -1438,7 +1595,9 @@
           "agent": {
             "rec_class": "Person"
           }, 
-          "role": "cre"
+          "roles": [
+            "cre"
+          ]
         }
       ], 
       "date_issued": "c1999", 
@@ -1461,9 +1620,6 @@
         }
       ], 
       "issuance": "monographic", 
-      "keywords": {
-        "und": []
-      }, 
       "languages": [
         "en"
       ], 
@@ -1489,10 +1645,90 @@
       "rec_class": "Document", 
       "rec_created_date": "990730", 
       "rec_id": "11761548", 
-      "rec_modified_date": "2013-11-25T11:04:47.081558", 
+      "rec_modified_date": "2013-12-10T15:19:42.958347", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Bibliography", 
+      "subjects": [
+        {
+          "authority": "http://id.loc.gov/authorities/subjects", 
+          "geographics": [
+            {
+              "geo_id": "http://id.loc.gov/authorities/names/n78095330", 
+              "value": "United States"
+            }
+          ], 
+          "topics": [
+            "Journalism", 
+            "Political aspects"
+          ]
+        }, 
+        {
+          "authority": "http://id.loc.gov/authorities/subjects", 
+          "geographics": [
+            {
+              "geo_id": "http://id.loc.gov/authorities/names/n78095330", 
+              "value": "United States"
+            }
+          ], 
+          "topics": [
+            "Politics and\n      government"
+          ]
+        }, 
+        {
+          "authority": "http://id.loc.gov/authorities/subjects", 
+          "geographics": [
+            {
+              "geo_id": "http://id.loc.gov/authorities/names/n78095330", 
+              "value": "United States"
+            }
+          ], 
+          "subject_id": "http://id.loc.gov/authorities/subjects/sh2008107507", 
+          "topics": [
+            "Mass media", 
+            "Political aspects"
+          ]
+        }, 
+        {
+          "authority": "http://id.loc.gov/authorities/subjects", 
+          "geographics": [
+            {
+              "geo_id": "http://id.loc.gov/authorities/names/n78095330", 
+              "value": "United States"
+            }
+          ], 
+          "subject_id": "http://id.loc.gov/authorities/subjects/sh2010115992", 
+          "topics": [
+            "Television and\n      politics"
+          ]
+        }, 
+        {
+          "authority": "http://id.loc.gov/authorities/subjects", 
+          "geographics": [
+            {
+              "geo_id": "http://id.loc.gov/authorities/names/n78095330", 
+              "value": "United States"
+            }
+          ], 
+          "subject_id": "http://id.loc.gov/authorities/subjects/sh2008109555", 
+          "topics": [
+            "Press and politics"
+          ]
+        }, 
+        {
+          "authority": "http://id.loc.gov/authorities/subjects", 
+          "geographics": [
+            {
+              "geo_id": "http://id.loc.gov/authorities/names/n78095330", 
+              "value": "United States"
+            }
+          ], 
+          "subject_id": "http://id.loc.gov/authorities/subjects/sh2010115993.html", 
+          "topics": [
+            "Television talk shows"
+          ]
+        }
+      ], 
       "title": "Sound and fury", 
       "title_sub": "the making of the punditocracy"
     }, 
@@ -1509,7 +1745,9 @@
             "name_given": "Ash", 
             "rec_class": "Person"
           }, 
-          "role": "cre"
+          "roles": [
+            "cre"
+          ]
         }
       ], 
       "date_sort": {
@@ -1530,7 +1768,9 @@
                 "name_given": "Ash", 
                 "rec_class": "Person"
               }, 
-              "role": "cre"
+              "roles": [
+                "cre"
+              ]
             }
           ], 
           "date_issued": "1994", 
@@ -1549,9 +1789,9 @@
       "part_page_begin": "23", 
       "part_page_end": "45", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.082832", 
+      "rec_created_date": "2013-12-10T15:19:42.959702", 
       "rec_id": "local:Amin1994a", 
-      "rec_modified_date": "2013-11-25T11:04:47.082838", 
+      "rec_modified_date": "2013-12-10T15:19:42.959708", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1585,7 +1825,7 @@
       ], 
       "date_issued": "-1988", 
       "date_sort": {
-        "$date": 596419200000
+        "$date": 597715200000
       }, 
       "extent_pages": "4 v. : ill., music ; 26 cm.", 
       "form": {
@@ -1604,9 +1844,6 @@
         }
       ], 
       "issuance": "serial", 
-      "keywords": {
-        "und": []
-      }, 
       "languages": [
         "en"
       ], 
@@ -1650,10 +1887,120 @@
       "rec_class": "Document", 
       "rec_created_date": "861202", 
       "rec_id": "11315879", 
-      "rec_modified_date": "2013-11-25T11:04:47.084818", 
+      "rec_modified_date": "2013-12-10T15:19:42.962926", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
+      "subjects": [
+        {
+          "authority": "lcsh", 
+          "genres": [
+            "Periodicals"
+          ], 
+          "topics": [
+            "Musicology", 
+            "Data processing"
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "genres": [
+            "Bibliography", 
+            "Periodicals"
+          ], 
+          "topics": [
+            "Music"
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "genres": [
+            "Directories"
+          ], 
+          "topics": [
+            "Musicians"
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "genres": [
+            "Directories"
+          ], 
+          "topics": [
+            "Musicologists"
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "genres": [
+            "Directories"
+          ], 
+          "topics": [
+            "Musicology", 
+            "Data processing"
+          ]
+        }, 
+        {
+          "authority": "rvm", 
+          "genres": [
+            "Périodiques"
+          ], 
+          "topics": [
+            "Musicologie", 
+            "Informatique"
+          ]
+        }, 
+        {
+          "authority": "rvm", 
+          "genres": [
+            "Bibliographie", 
+            "Périodiques"
+          ], 
+          "topics": [
+            "Musique"
+          ]
+        }, 
+        {
+          "authority": "rvm", 
+          "genres": [
+            "Répertoires"
+          ], 
+          "topics": [
+            "Musiciens"
+          ]
+        }, 
+        {
+          "authority": "rvm", 
+          "genres": [
+            "Répertoires"
+          ], 
+          "topics": [
+            "Musicologues"
+          ]
+        }, 
+        {
+          "authority": "rvm", 
+          "genres": [
+            "Répertoires"
+          ], 
+          "topics": [
+            "Musicologie", 
+            "Informatique"
+          ]
+        }, 
+        {
+          "authority": "swd", 
+          "topics": [
+            "Datenverarbeitung"
+          ]
+        }, 
+        {
+          "authority": "swd", 
+          "topics": [
+            "Musikwissenschaft"
+          ]
+        }
+      ], 
       "title": "Directory of computer assisted research in musicology", 
       "title_alternative": {
         "title": "Computer assisted research in musicology"
@@ -1672,7 +2019,9 @@
             "name_given": "Neil", 
             "rec_class": "Person"
           }, 
-          "role": "cre"
+          "roles": [
+            "cre"
+          ]
         }
       ], 
       "date_sort": {
@@ -1698,9 +2047,9 @@
       "part_page_end": "378", 
       "part_volume": "24", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.086205", 
+      "rec_created_date": "2013-12-10T15:19:42.964371", 
       "rec_id": "local:BrennerN2000a", 
-      "rec_modified_date": "2013-11-25T11:04:47.086211", 
+      "rec_modified_date": "2013-12-10T15:19:42.964378", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -1721,7 +2070,9 @@
             "name_given": "Alice", 
             "rec_class": "Person"
           }, 
-          "role": "cre"
+          "roles": [
+            "cre"
+          ]
         }
       ], 
       "date_sort": {
@@ -1731,7 +2082,9 @@
         {
           "creators": [
             {
-              "role": "cre"
+              "roles": [
+                "cre"
+              ]
             }
           ], 
           "issuance": "continuing", 
@@ -1751,9 +2104,9 @@
       "part_page_end": "146", 
       "part_volume": "99", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.087678", 
-      "rec_id": "03b6e935-55b9-11e3-9b41-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.087685", 
+      "rec_created_date": "2013-12-10T15:19:42.965895", 
+      "rec_id": "1cf6f333-61a6-11e3-94d3-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.965901", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1772,7 +2125,9 @@
             "name_given": "J. V.", 
             "rec_class": "Person"
           }, 
-          "role": "cre"
+          "roles": [
+            "cre"
+          ]
         }
       ], 
       "date_sort": {
@@ -1795,9 +2150,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.088940", 
-      "rec_id": "03b71a97-55b9-11e3-a267-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.088947", 
+      "rec_created_date": "2013-12-10T15:19:42.967145", 
+      "rec_id": "1cf72517-61a6-11e3-8163-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.967151", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1816,7 +2171,9 @@
             "name_given": "Bernard", 
             "rec_class": "Person"
           }, 
-          "role": "cre"
+          "roles": [
+            "cre"
+          ]
         }, 
         {
           "agent": {
@@ -1824,7 +2181,9 @@
             "name_given": "Lamont B.", 
             "rec_class": "Person"
           }, 
-          "role": "cre"
+          "roles": [
+            "cre"
+          ]
         }
       ], 
       "date_sort": {
@@ -1849,9 +2208,9 @@
       "part_page_end": "17", 
       "part_volume": "2", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.090236", 
+      "rec_created_date": "2013-12-10T15:19:42.968398", 
       "rec_id": "uri:http://www.mdpi.org/entropy/papers/e2010001.pdf", 
-      "rec_modified_date": "2013-11-25T11:04:47.090246", 
+      "rec_modified_date": "2013-12-10T15:19:42.968404", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1953,7 +2312,7 @@
       "rec_class": "Document", 
       "rec_created_date": "980323", 
       "rec_id": "5004836", 
-      "rec_modified_date": "2013-11-25T11:04:47.091563", 
+      "rec_modified_date": "2013-12-10T15:19:42.969875", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Software", 
@@ -1962,6 +2321,27 @@
           "rec_class": "Resource", 
           "rec_type": "remote", 
           "url": "http://hdl.loc.gov/loc.music/collmus.mu000010"
+        }
+      ], 
+      "subjects": [
+        {
+          "geographics": [
+            {
+              "authority": "marcgac", 
+              "geo_id": "n-us---"
+            }
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "geographics": [
+            {
+              "value": "United States"
+            }
+          ], 
+          "topics": [
+            "Ballroom dancing"
+          ]
         }
       ], 
       "title": "American ballroom companion", 
@@ -2065,9 +2445,6 @@
         }
       ], 
       "issuance": "monographic", 
-      "keywords": {
-        "und": []
-      }, 
       "languages": [
         "en"
       ], 
@@ -2097,10 +2474,19 @@
       "rec_class": "Document", 
       "rec_created_date": "940504", 
       "rec_id": "4968605", 
-      "rec_modified_date": "2013-11-25T11:04:47.093257", 
+      "rec_modified_date": "2013-12-10T15:19:42.971674", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Bibliography", 
+      "subjects": [
+        {
+          "authority": "lcsh", 
+          "topics": [
+            "Ion implantation", 
+            "Congresses"
+          ]
+        }
+      ], 
       "title": "Papers from the First International Workshop on Plasma-Based Ion Implantation", 
       "title_sub": "4-6 August 1993, University of Wisconsin--Madison, Madison, Wisconsin"
     }, 
@@ -2151,9 +2537,6 @@
         }
       ], 
       "issuance": "monographic", 
-      "keywords": {
-        "und": []
-      }, 
       "languages": [
         "en"
       ], 
@@ -2185,10 +2568,48 @@
       "rec_class": "Document", 
       "rec_created_date": "820106", 
       "rec_id": "11510774", 
-      "rec_modified_date": "2013-11-25T11:04:47.094368", 
+      "rec_modified_date": "2013-12-10T15:19:42.973422", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Film", 
+      "subjects": [
+        {
+          "authority": "lcsh", 
+          "topics": [
+            "Bathtubs"
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "topics": [
+            "Cast-iron"
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "topics": [
+            "Iron-founding"
+          ]
+        }, 
+        {
+          "authority": "lcshac", 
+          "topics": [
+            "Bathtubs"
+          ]
+        }, 
+        {
+          "authority": "lcshac", 
+          "topics": [
+            "Cast-iron"
+          ]
+        }, 
+        {
+          "authority": "lcshac", 
+          "topics": [
+            "Iron founding"
+          ]
+        }
+      ], 
       "target_audiences": [
         {
           "authority": "marctarget", 
@@ -2259,10 +2680,30 @@
       "rec_class": "Document", 
       "rec_created_date": "830222", 
       "rec_id": "5466714", 
-      "rec_modified_date": "2013-11-25T11:04:47.095366", 
+      "rec_modified_date": "2013-12-10T15:19:42.974716", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Map", 
+      "subjects": [
+        {
+          "cartographics": [
+            {
+              "scale": "Scale [ca. 1:510,000]."
+            }
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "geographics": [
+            {
+              "value": "Campbell County (Wyo.)"
+            }
+          ], 
+          "topics": [
+            "Maps"
+          ]
+        }
+      ], 
       "title": "Campbell County, Wyoming"
     }, 
     {
@@ -2357,9 +2798,6 @@
         }
       ], 
       "issuance": "monographic", 
-      "keywords": {
-        "und": []
-      }, 
       "languages": [
         "it", 
         "en"
@@ -2403,7 +2841,7 @@
       "rec_class": "Document", 
       "rec_created_date": "850813", 
       "rec_id": "5594130", 
-      "rec_modified_date": "2013-11-25T11:04:47.098673", 
+      "rec_modified_date": "2013-12-10T15:19:42.978263", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "MusicalScore", 
@@ -2412,6 +2850,28 @@
           "rec_class": "Document", 
           "rec_type": "Document", 
           "title": "Music for voice and instrument"
+        }
+      ], 
+      "subjects": [
+        {
+          "authority": "http://id.loc.gov/authorities/subjects", 
+          "genres": [
+            "Excerpts,\n            Arranged", 
+            "Scores and parts"
+          ], 
+          "subject_id": "http://id.loc.gov/authorities/subjects/sh2008108658", 
+          "topics": [
+            "Operas"
+          ]
+        }, 
+        {
+          "authority": "http://id.loc.gov/authorities/subjects", 
+          "genres": [
+            "Scores and parts"
+          ], 
+          "topics": [
+            "Songs (High voice) with\n            instrumental ensemble"
+          ]
         }
       ], 
       "table_of_contentss": [
@@ -2441,7 +2901,9 @@
             "name": "Roustabouts (Musical group)", 
             "rec_class": "Orgunit"
           }, 
-          "role": "prf"
+          "roles": [
+            "prf"
+          ]
         }
       ], 
       "date_issued": "p1980", 
@@ -2468,9 +2930,6 @@
         }
       ], 
       "issuance": "monographic", 
-      "keywords": {
-        "und": []
-      }, 
       "languages": [
         "en"
       ], 
@@ -2496,10 +2955,24 @@
       "rec_class": "Document", 
       "rec_created_date": "940829", 
       "rec_id": "5718053", 
-      "rec_modified_date": "2013-11-25T11:04:47.099910", 
+      "rec_modified_date": "2013-12-10T15:19:42.979641", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "MusicRecording", 
+      "subjects": [
+        {
+          "authority": "lcsh", 
+          "topics": [
+            "Country music"
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "topics": [
+            "Bluegrass music"
+          ]
+        }
+      ], 
       "table_of_contentss": [
         {
           "value": "Bluegrass odyssey -- Hills of Tennessee -- Sassafrass -- Muddy river -- Take your shoes off Moses -- Don't let Smokey Mountain smoke get in your eyes -- Farewell party -- Faded love -- Super sonic bluegrass -- Old love letters -- Will the circle be unbroken."
@@ -2529,9 +3002,6 @@
         }
       ], 
       "issuance": "monographic", 
-      "keywords": {
-        "und": []
-      }, 
       "languages": [
         "en"
       ], 
@@ -2555,13 +3025,43 @@
       "rec_class": "Document", 
       "rec_created_date": "830926", 
       "rec_id": "5810505", 
-      "rec_modified_date": "2013-11-25T11:04:47.100900", 
+      "rec_modified_date": "2013-12-10T15:19:42.980854", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Manuscript", 
       "resources": [
         {
           "rec_class": "Resource"
+        }
+      ], 
+      "subjects": [
+        {
+          "authority": "lcsh", 
+          "geographics": [
+            {
+              "value": "Massachusetts"
+            }, 
+            {
+              "value": "Millbury"
+            }
+          ], 
+          "topics": [
+            "Registers of births, etc"
+          ]
+        }, 
+        {
+          "authority": "lcsh", 
+          "geographics": [
+            {
+              "value": "Massachusetts"
+            }, 
+            {
+              "value": "Springfield"
+            }
+          ], 
+          "topics": [
+            "Registers of births, etc"
+          ]
         }
       ], 
       "title": "Massachusetts death and marriage records, 1837-1897"
@@ -2587,7 +3087,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860ngch2"
           }, 
-          "role": "ths"
+          "roles": [
+            "ths"
+          ]
         }, 
         {
           "affiliation": {
@@ -2603,7 +3105,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5l6uh8ogmqildh09h6l10gtqo"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2009-09", 
@@ -2627,9 +3131,9 @@
         "Ecole d'Economie de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.103151", 
-      "rec_id": "03b9446b-55b9-11e3-b13c-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.103160", 
+      "rec_created_date": "2013-12-10T15:19:42.983031", 
+      "rec_id": "1cf99075-61a6-11e3-8171-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.983039", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "MasterThesis", 
@@ -2656,7 +3160,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/eu4vqp9ompqllr09hga9pgk39"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012-12", 
@@ -2706,9 +3212,9 @@
       "part_issue": "69", 
       "part_volume": "2012/1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.106257", 
-      "rec_id": "03b9be66-55b9-11e3-9740-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.106265", 
+      "rec_created_date": "2013-12-10T15:19:42.986165", 
+      "rec_id": "1cfa0b45-61a6-11e3-b6d0-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.986172", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "PeriodicalIssue", 
@@ -2748,7 +3254,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/c8dmi8nm4pdjkuc9g8m3565k5"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -2764,7 +3272,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/c8dmi8nm4pdjkuc9g8m34i593"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -2780,7 +3290,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q5aqa5"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_created": "2011", 
@@ -2806,9 +3318,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.110436", 
-      "rec_id": "03ba61f5-55b9-11e3-a46a-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.110447", 
+      "rec_created_date": "2013-12-10T15:19:42.988745", 
+      "rec_id": "1cfa70c2-61a6-11e3-9f82-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.988752", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Preprint", 
@@ -2829,7 +3341,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860ig2b0"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -2838,7 +3352,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5rkqqmvrn4tl22s9mc0slh0gj"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -2854,7 +3370,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-04", 
@@ -2891,9 +3409,9 @@
         "CEE (Sciences Po)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.113542", 
-      "rec_id": "03badb47-55b9-11e3-8108-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.113557", 
+      "rec_created_date": "2013-12-10T15:19:42.992615", 
+      "rec_id": "1cfb07a6-61a6-11e3-800b-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.992622", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Report", 
@@ -2920,7 +3438,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_sort": {
@@ -2942,7 +3462,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eu4vqp9ompqllr09hd5rg8sg2"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -2951,7 +3473,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eu4vqp9ompqllr09hd5rge0oj"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -2960,7 +3484,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eu4vqp9ompqllr09hd5rg4t35"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }
           ], 
           "date_issued": "2011", 
@@ -2990,9 +3516,9 @@
       "part_page_begin": "89", 
       "part_page_end": "98", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.116924", 
-      "rec_id": "03bb5e94-55b9-11e3-9f04-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.116931", 
+      "rec_created_date": "2013-12-10T15:19:42.996042", 
+      "rec_id": "1cfb8cbd-61a6-11e3-bf5d-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.996049", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ReportPart", 
@@ -3019,7 +3545,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q571ko"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "affiliation": {
@@ -3035,7 +3563,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }
       ], 
       "date_created": "2012", 
@@ -3058,9 +3588,9 @@
         "Sciences Po - Atelier de cartographie"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.119201", 
-      "rec_id": "03bbb807-55b9-11e3-9027-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.119208", 
+      "rec_created_date": "2013-12-10T15:19:42.998465", 
+      "rec_id": "1cfbebdc-61a6-11e3-a5ac-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:42.998473", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WebSite", 
@@ -3122,7 +3652,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9kc6cl8m9l"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -3131,7 +3663,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/dambferfb7dfprc9lj6bkb4sj"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012-08", 
@@ -3169,9 +3703,9 @@
         "Sciences Po - ECON"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.122141", 
-      "rec_id": "03bc2b38-55b9-11e3-996f-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.122149", 
+      "rec_created_date": "2013-12-10T15:19:43.001324", 
+      "rec_id": "1cfc5bd9-61a6-11e3-bb92-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:43.001331", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WorkingPaper", 

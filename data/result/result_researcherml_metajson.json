@@ -40,9 +40,9 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-11-25T11:04:47.169763", 
+      "rec_created_date": "2013-12-10T15:19:43.053542", 
       "rec_id": "2441/dgsgfsdgf", 
-      "rec_modified_date": "2013-11-25T11:04:47.169775", 
+      "rec_modified_date": "2013-12-10T15:19:43.053553", 
       "rec_status": "private", 
       "title": "project_title"
     }, 
@@ -112,7 +112,9 @@
                 "rec_class": "Orgunit", 
                 "rec_id": "hdl:2441/32"
               }, 
-              "role": "dgg"
+              "roles": [
+                "dgg"
+              ]
             }
           ], 
           "descriptions": [
@@ -181,9 +183,9 @@
         ]
       }, 
       "rec_class": "Person", 
-      "rec_created_date": "2013-11-25T11:04:47.172307", 
-      "rec_id": "03c3d2c2-55b9-11e3-816b-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.172315", 
+      "rec_created_date": "2013-12-10T15:19:43.055956", 
+      "rec_id": "1d04b1cc-61a6-11e3-9e98-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:43.055964", 
       "rec_status": "private", 
       "relationships": [
         {
@@ -268,7 +270,9 @@
                 "rec_class": "Orgunit", 
                 "rec_id": "hdl:2441/32"
               }, 
-              "role": "dgg"
+              "roles": [
+                "dgg"
+              ]
             }
           ], 
           "date_begin": "1990", 
@@ -337,9 +341,9 @@
       "name_family": "Martin", 
       "name_given": "Paul", 
       "rec_class": "Person", 
-      "rec_created_date": "2013-11-25T11:04:47.172909", 
-      "rec_id": "03c3ead1-55b9-11e3-ac55-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.172915", 
+      "rec_created_date": "2013-12-10T15:19:43.056452", 
+      "rec_id": "1d04c5c0-61a6-11e3-80da-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:43.056458", 
       "rec_status": "private"
     }, 
     {
@@ -434,9 +438,9 @@
         }
       ], 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-11-25T11:04:47.174187", 
-      "rec_id": "03c41cc0-55b9-11e3-9cec-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.174193", 
+      "rec_created_date": "2013-12-10T15:19:43.057672", 
+      "rec_id": "1d04f519-61a6-11e3-9c41-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:43.057678", 
       "rec_status": "private", 
       "rec_type": "laboratory", 
       "research_coverage_classifications": {
@@ -504,9 +508,9 @@
       ], 
       "name": "Sciences Po", 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-11-25T11:04:47.174532", 
-      "rec_id": "03c42a42-55b9-11e3-96ed-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.174537", 
+      "rec_created_date": "2013-12-10T15:19:43.057989", 
+      "rec_id": "1d0501de-61a6-11e3-8a7c-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:43.057994", 
       "rec_status": "private", 
       "rec_type": "university"
     }, 
@@ -520,9 +524,9 @@
       ], 
       "nationality": "UN", 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-11-25T11:04:47.175251", 
+      "rec_created_date": "2013-12-10T15:19:43.058710", 
       "rec_id": "2441/9labe9r4se65i78968605ah42", 
-      "rec_modified_date": "2013-11-25T11:04:47.175256", 
+      "rec_modified_date": "2013-12-10T15:19:43.058715", 
       "rec_status": "private", 
       "rec_type": "publisher", 
       "self_archiving_policy": {
@@ -648,9 +652,9 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-11-25T11:04:47.175874", 
-      "rec_id": "03c45eae-55b9-11e3-988d-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.175879", 
+      "rec_created_date": "2013-12-10T15:19:43.059338", 
+      "rec_id": "1d05366b-61a6-11e3-b02d-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:43.059344", 
       "rec_status": "private", 
       "research_coverage_keywords": {
         "en": [
@@ -749,9 +753,9 @@
         }
       ], 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-11-25T11:04:47.177916", 
+      "rec_created_date": "2013-12-10T15:19:43.061245", 
       "rec_id": "2441/9labe9r4se65i789685q380gh", 
-      "rec_modified_date": "2013-11-25T11:04:47.177927", 
+      "rec_modified_date": "2013-12-10T15:19:43.061255", 
       "rec_status": "private", 
       "rec_type": "researchCenter", 
       "research_coverage_keywords": {
@@ -823,7 +827,9 @@
                 "rec_class": "Orgunit", 
                 "rec_id": "2441/9labe9r4se65i789685q021gm"
               }, 
-              "role": "dgg"
+              "roles": [
+                "dgg"
+              ]
             }
           ], 
           "descriptions": [
@@ -842,7 +848,9 @@
                 "rec_class": "Orgunit", 
                 "rec_id": "2441/9labe9r4se65i789685q021gm"
               }, 
-              "role": "dgg"
+              "roles": [
+                "dgg"
+              ]
             }
           ], 
           "descriptions": [
@@ -861,7 +869,9 @@
                 "rec_class": "Orgunit", 
                 "rec_id": "2441/9labe9r4se65i789685q021gm"
               }, 
-              "role": "dgg"
+              "roles": [
+                "dgg"
+              ]
             }
           ], 
           "descriptions": [
@@ -880,7 +890,9 @@
                 "rec_class": "Orgunit", 
                 "rec_id": "2441/d7a7evb2ctdg4i89gesag4t33"
               }, 
-              "role": "dgg"
+              "roles": [
+                "dgg"
+              ]
             }
           ], 
           "descriptions": [
@@ -953,9 +965,9 @@
         }
       ], 
       "rec_class": "Person", 
-      "rec_created_date": "2013-11-25T11:04:47.182428", 
+      "rec_created_date": "2013-12-10T15:19:43.065616", 
       "rec_id": "2441/9labe9r4se65i789685q591o2", 
-      "rec_modified_date": "2013-11-25T11:04:47.182437", 
+      "rec_modified_date": "2013-12-10T15:19:43.065628", 
       "rec_status": "private", 
       "research_coverage_keywords": {
         "fr": [
@@ -990,7 +1002,9 @@
                 "rec_class": "Orgunit", 
                 "rec_id": "2441/9labe9r4se65i789685q021gm"
               }, 
-              "role": "dgg"
+              "roles": [
+                "dgg"
+              ]
             }
           ], 
           "date_begin": "2009", 
@@ -1005,7 +1019,9 @@
                 "rec_class": "Orgunit", 
                 "rec_id": "2441/9labe9r4se65i789685q021gm"
               }, 
-              "role": "dgg"
+              "roles": [
+                "dgg"
+              ]
             }
           ], 
           "date_begin": "2009", 
@@ -1020,7 +1036,9 @@
                 "rec_class": "Orgunit", 
                 "rec_id": "2441/9labe9r4se65i789685q021gm"
               }, 
-              "role": "dgg"
+              "roles": [
+                "dgg"
+              ]
             }
           ], 
           "date_begin": "2010", 
@@ -1070,9 +1088,9 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-11-25T11:04:47.183388", 
+      "rec_created_date": "2013-12-10T15:19:43.066645", 
       "rec_id": "2441/d7a7evb2ctdg4i89gesb82lpp", 
-      "rec_modified_date": "2013-11-25T11:04:47.183395", 
+      "rec_modified_date": "2013-12-10T15:19:43.066652", 
       "rec_status": "private", 
       "title": "Concurrences de légitimité, types de contestation et transformations de la place de l'Etat dans les sociétés européennes"
     }, 
@@ -1102,9 +1120,9 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-11-25T11:04:47.184309", 
+      "rec_created_date": "2013-12-10T15:19:43.067559", 
       "rec_id": "2441/53r60a8s3kup1vc9jh5ki109i", 
-      "rec_modified_date": "2013-11-25T11:04:47.184315", 
+      "rec_modified_date": "2013-12-10T15:19:43.067565", 
       "rec_status": "private", 
       "title": "An Inquiry into Modes of Existence"
     }

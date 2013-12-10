@@ -11,7 +11,9 @@
       "copyright_statement": "Copyright American Periodicals Series II Jun 7, 1894", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1894-06-07", 
@@ -49,9 +51,9 @@
       "part_page_begin": "1", 
       "part_volume": "46", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.246290", 
+      "rec_created_date": "2013-12-10T15:19:43.130355", 
       "rec_id": "proquest_dll_8291154920", 
-      "rec_modified_date": "2013-11-25T11:04:47.246305", 
+      "rec_modified_date": "2013-12-10T15:19:43.130370", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -66,17 +68,23 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
             "name": "World Health Organization, Copenhagen (Denmark). Regional Office for Europe", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1989", 
@@ -122,9 +130,9 @@
         "World Health Organization, Regional Office of Europe, Scherfigsvej 8, DK-2100, Copenhagen, Denmark"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.246836", 
+      "rec_created_date": "2013-12-10T15:19:43.130941", 
       "rec_id": "eric_primary_ED3149880", 
-      "rec_modified_date": "2013-11-25T11:04:47.246842", 
+      "rec_modified_date": "2013-12-10T15:19:43.130951", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -139,13 +147,19 @@
       "copyright_statement": "CC-BY: Creative Commons Attribution 3.0 Unported Access constraints: unrestricted", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1991-02-20", 
@@ -197,9 +211,9 @@
         "PANGAEA"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.247267", 
+      "rec_created_date": "2013-12-10T15:19:43.131408", 
       "rec_id": "pangaea_primary_oai_pangaea_de_doi_10_1594_PANGAEA_8076820", 
-      "rec_modified_date": "2013-11-25T11:04:47.247272", 
+      "rec_modified_date": "2013-12-10T15:19:43.131414", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -213,7 +227,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -267,9 +283,9 @@
       "part_page_begin": "129", 
       "part_page_end": "138", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.247651", 
+      "rec_created_date": "2013-12-10T15:19:43.131795", 
       "rec_id": "asm_corrosion_5a279077a4838110VgnVCM100000701e010aRCRD0", 
-      "rec_modified_date": "2013-11-25T11:04:47.247656", 
+      "rec_modified_date": "2013-12-10T15:19:43.131801", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -284,7 +300,9 @@
       "copyright_statement": "CC-BY: Creative Commons Attribution 3.0 Unported Access constraints: unrestricted", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1979-02-04", 
@@ -340,9 +358,9 @@
         "PANGAEA"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.247990", 
+      "rec_created_date": "2013-12-10T15:19:43.132131", 
       "rec_id": "pangaea_primary_oai_pangaea_de_doi_10_1594_PANGAEA_8065810", 
-      "rec_modified_date": "2013-11-25T11:04:47.247995", 
+      "rec_modified_date": "2013-12-10T15:19:43.132136", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -363,7 +381,9 @@
       "copyright_statement": "Copyright City News Publishing Company Aug 15, 2005", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2005-08-15", 
@@ -426,9 +446,9 @@
       "part_page_begin": "645", 
       "part_volume": "71", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.248369", 
+      "rec_created_date": "2013-12-10T15:19:43.132507", 
       "rec_id": "proquest_dll_9245232110", 
-      "rec_modified_date": "2013-11-25T11:04:47.248375", 
+      "rec_modified_date": "2013-12-10T15:19:43.132513", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -443,10 +463,14 @@
       "copyright_statement": "CC-BY: Creative Commons Attribution 3.0 Unported Access constraints: unrestricted", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1991-02-19", 
@@ -499,9 +523,9 @@
         "PANGAEA"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.248756", 
+      "rec_created_date": "2013-12-10T15:19:43.132891", 
       "rec_id": "pangaea_primary_oai_pangaea_de_doi_10_1594_PANGAEA_8075790", 
-      "rec_modified_date": "2013-11-25T11:04:47.248762", 
+      "rec_modified_date": "2013-12-10T15:19:43.132896", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -579,9 +603,9 @@
       "part_page_begin": "130", 
       "part_volume": "365", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.249071", 
+      "rec_created_date": "2013-12-10T15:19:43.133207", 
       "rec_id": "proquest_dll_2427878510", 
-      "rec_modified_date": "2013-11-25T11:04:47.249076", 
+      "rec_modified_date": "2013-12-10T15:19:43.133213", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -597,7 +621,9 @@
       "copyright_statement": "Copyright (c) 2008. Centaur Communications Limited. Reproduced with permission of the copyright owner. Further reproduction or distribution is prohibited without permission.", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2008-09-08", 
@@ -658,9 +684,9 @@
       ], 
       "part_page_begin": "22", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.249432", 
+      "rec_created_date": "2013-12-10T15:19:43.133567", 
       "rec_id": "proquest_dll_15507818810", 
-      "rec_modified_date": "2013-11-25T11:04:47.249438", 
+      "rec_modified_date": "2013-12-10T15:19:43.133572", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -681,7 +707,9 @@
       "copyright_statement": "Copyright Statistics Canada Aug 2005", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2005-08", 
@@ -740,9 +768,9 @@
       "part_page_begin": "1", 
       "part_volume": "18", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.249801", 
+      "rec_created_date": "2013-12-10T15:19:43.133935", 
       "rec_id": "proquest_dll_8903483110", 
-      "rec_modified_date": "2013-11-25T11:04:47.249806", 
+      "rec_modified_date": "2013-12-10T15:19:43.133940", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -849,9 +877,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.250116", 
+      "rec_created_date": "2013-12-10T15:19:43.134252", 
       "rec_id": "proquest_dll_17341060510", 
-      "rec_modified_date": "2013-11-25T11:04:47.250121", 
+      "rec_modified_date": "2013-12-10T15:19:43.134257", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -869,7 +897,9 @@
             "name": "Association of Universities and Colleges of Canada, Ottawa (Ontario)", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1979-11", 
@@ -919,9 +949,9 @@
         "Association of Universities and Colleges of Canada"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.250414", 
+      "rec_created_date": "2013-12-10T15:19:43.134551", 
       "rec_id": "eric_primary_ED2022540", 
-      "rec_modified_date": "2013-11-25T11:04:47.250420", 
+      "rec_modified_date": "2013-12-10T15:19:43.134556", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -962,9 +992,9 @@
         "Pew Research Center"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.250682", 
+      "rec_created_date": "2013-12-10T15:19:43.134820", 
       "rec_id": "pewresearch_primary_February_17_20_2011_Weekly_Survey0", 
-      "rec_modified_date": "2013-11-25T11:04:47.250687", 
+      "rec_modified_date": "2013-12-10T15:19:43.134826", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -984,10 +1014,14 @@
       "copyright_statement": "Copyright Rogers Publishing Limited Jun 10, 2002", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2002-06-10", 
@@ -1048,9 +1082,9 @@
       "part_page_begin": "29", 
       "part_volume": "75", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.251088", 
+      "rec_created_date": "2013-12-10T15:19:43.135222", 
       "rec_id": "proquest_dll_6326610010", 
-      "rec_modified_date": "2013-11-25T11:04:47.251094", 
+      "rec_modified_date": "2013-12-10T15:19:43.135227", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1064,17 +1098,23 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
             "name": "Helmut Werner, Institute for Corrosion Protection", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2004", 
@@ -1128,9 +1168,9 @@
       "part_page_begin": "0", 
       "part_page_end": "0", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.251564", 
+      "rec_created_date": "2013-12-10T15:19:43.135805", 
       "rec_id": "asm_corrosion_3546cbe12baa3210VgnVCM100000701e010aRCRD0", 
-      "rec_modified_date": "2013-11-25T11:04:47.251569", 
+      "rec_modified_date": "2013-12-10T15:19:43.135811", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1151,7 +1191,9 @@
       "copyright_statement": "Copyright Statistics Canada Aug 2005", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2005-08", 
@@ -1210,9 +1252,9 @@
       "part_page_begin": "1", 
       "part_volume": "18", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.252070", 
+      "rec_created_date": "2013-12-10T15:19:43.136183", 
       "rec_id": "proquest_dll_8903482810", 
-      "rec_modified_date": "2013-11-25T11:04:47.252076", 
+      "rec_modified_date": "2013-12-10T15:19:43.136189", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1274,9 +1316,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.252397", 
+      "rec_created_date": "2013-12-10T15:19:43.136500", 
       "rec_id": "proquest_dll_20924473210", 
-      "rec_modified_date": "2013-11-25T11:04:47.252403", 
+      "rec_modified_date": "2013-12-10T15:19:43.136505", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1297,7 +1339,9 @@
       "copyright_statement": "Copyright Statistics Canada Dec 2005", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2005-12", 
@@ -1356,9 +1400,9 @@
       "part_page_begin": "2", 
       "part_volume": "18", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.252759", 
+      "rec_created_date": "2013-12-10T15:19:43.136869", 
       "rec_id": "proquest_dll_9588375010", 
-      "rec_modified_date": "2013-11-25T11:04:47.252765", 
+      "rec_modified_date": "2013-12-10T15:19:43.136874", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1406,9 +1450,9 @@
       "part_page_begin": "24", 
       "part_volume": "43", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.253056", 
+      "rec_created_date": "2013-12-10T15:19:43.137165", 
       "rec_id": "proquest_dll_8292484620", 
-      "rec_modified_date": "2013-11-25T11:04:47.253062", 
+      "rec_modified_date": "2013-12-10T15:19:43.137171", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1462,9 +1506,9 @@
       "part_issue": "1005", 
       "part_page_begin": "477", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.253372", 
+      "rec_created_date": "2013-12-10T15:19:43.137481", 
       "rec_id": "proquest_dll_8769173120", 
-      "rec_modified_date": "2013-11-25T11:04:47.253378", 
+      "rec_modified_date": "2013-12-10T15:19:43.137486", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1485,7 +1529,9 @@
       "copyright_statement": "Copyright Rogers Publishing Limited Apr 16, 2002", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2002-04-16", 
@@ -1536,9 +1582,9 @@
       "part_page_begin": "64", 
       "part_volume": "38", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.253755", 
+      "rec_created_date": "2013-12-10T15:19:43.137903", 
       "rec_id": "proquest_dll_3585071710", 
-      "rec_modified_date": "2013-11-25T11:04:47.253762", 
+      "rec_modified_date": "2013-12-10T15:19:43.137911", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1559,7 +1605,9 @@
       "copyright_statement": "Copyright Kluwer Academic Publishers Jun 1998", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1998-06", 
@@ -1613,9 +1661,9 @@
       "part_page_begin": "321", 
       "part_volume": "95", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.254159", 
+      "rec_created_date": "2013-12-10T15:19:43.138328", 
       "rec_id": "proquest_dll_6180577610", 
-      "rec_modified_date": "2013-11-25T11:04:47.254165", 
+      "rec_modified_date": "2013-12-10T15:19:43.138334", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1635,7 +1683,9 @@
       "copyright_statement": "Copyright Oxford University Press(England) Winter 1984", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1984", 
@@ -1693,9 +1743,9 @@
       "part_page_begin": "143", 
       "part_volume": "34", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.254532", 
+      "rec_created_date": "2013-12-10T15:19:43.138714", 
       "rec_id": "proquest_dll_6084710410", 
-      "rec_modified_date": "2013-11-25T11:04:47.254537", 
+      "rec_modified_date": "2013-12-10T15:19:43.138719", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1752,9 +1802,9 @@
       ], 
       "part_page_begin": "2", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.254844", 
+      "rec_created_date": "2013-12-10T15:19:43.139033", 
       "rec_id": "proquest_dll_6574388010", 
-      "rec_modified_date": "2013-11-25T11:04:47.254849", 
+      "rec_modified_date": "2013-12-10T15:19:43.139039", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1816,9 +1866,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.255150", 
+      "rec_created_date": "2013-12-10T15:19:43.139355", 
       "rec_id": "proquest_dll_20924484210", 
-      "rec_modified_date": "2013-11-25T11:04:47.255155", 
+      "rec_modified_date": "2013-12-10T15:19:43.139361", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1833,7 +1883,9 @@
       "copyright_statement": "Copyright (c) 2010. Centaur Communications Limited. Reproduced with permission of the copyright owner. Further reproduction or distribution is prohibited without permission.", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010-01-18", 
@@ -1879,9 +1931,9 @@
       ], 
       "part_page_begin": "8", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.255498", 
+      "rec_created_date": "2013-12-10T15:19:43.139711", 
       "rec_id": "proquest_dll_19625555310", 
-      "rec_modified_date": "2013-11-25T11:04:47.255503", 
+      "rec_modified_date": "2013-12-10T15:19:43.139716", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -1954,9 +2006,9 @@
       "part_page_begin": "44", 
       "part_volume": "52", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.255822", 
+      "rec_created_date": "2013-12-10T15:19:43.140038", 
       "rec_id": "proquest_dll_3933878210", 
-      "rec_modified_date": "2013-11-25T11:04:47.255827", 
+      "rec_modified_date": "2013-12-10T15:19:43.140044", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2030,9 +2082,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.256122", 
+      "rec_created_date": "2013-12-10T15:19:43.140343", 
       "rec_id": "proquest_dll_23005647010", 
-      "rec_modified_date": "2013-11-25T11:04:47.256128", 
+      "rec_modified_date": "2013-12-10T15:19:43.140348", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2052,7 +2104,9 @@
       "copyright_statement": "Copyright Wiley Periodicals Inc. Winter 1980", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1980", 
@@ -2106,9 +2160,9 @@
       "part_page_begin": "12", 
       "part_volume": "19", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.256479", 
+      "rec_created_date": "2013-12-10T15:19:43.140700", 
       "rec_id": "proquest_dll_6562400410", 
-      "rec_modified_date": "2013-11-25T11:04:47.256485", 
+      "rec_modified_date": "2013-12-10T15:19:43.140705", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2128,7 +2182,9 @@
       "copyright_statement": "Copyright Wiley Periodicals Inc. Summer 1980", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1980", 
@@ -2182,9 +2238,9 @@
       "part_page_begin": "9", 
       "part_volume": "19", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.256849", 
+      "rec_created_date": "2013-12-10T15:19:43.141069", 
       "rec_id": "proquest_dll_6562398010", 
-      "rec_modified_date": "2013-11-25T11:04:47.256854", 
+      "rec_modified_date": "2013-12-10T15:19:43.141074", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2257,9 +2313,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.257154", 
+      "rec_created_date": "2013-12-10T15:19:43.141375", 
       "rec_id": "proquest_dll_24070775610", 
-      "rec_modified_date": "2013-11-25T11:04:47.257159", 
+      "rec_modified_date": "2013-12-10T15:19:43.141381", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2332,9 +2388,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.257458", 
+      "rec_created_date": "2013-12-10T15:19:43.141667", 
       "rec_id": "proquest_dll_23984941610", 
-      "rec_modified_date": "2013-11-25T11:04:47.257464", 
+      "rec_modified_date": "2013-12-10T15:19:43.141673", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2407,9 +2463,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.257756", 
+      "rec_created_date": "2013-12-10T15:19:43.141957", 
       "rec_id": "proquest_dll_23554904610", 
-      "rec_modified_date": "2013-11-25T11:04:47.257761", 
+      "rec_modified_date": "2013-12-10T15:19:43.141963", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2482,9 +2538,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.258050", 
+      "rec_created_date": "2013-12-10T15:19:43.142249", 
       "rec_id": "proquest_dll_23299236910", 
-      "rec_modified_date": "2013-11-25T11:04:47.258056", 
+      "rec_modified_date": "2013-12-10T15:19:43.142254", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2557,9 +2613,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.258340", 
+      "rec_created_date": "2013-12-10T15:19:43.142538", 
       "rec_id": "proquest_dll_22671199710", 
-      "rec_modified_date": "2013-11-25T11:04:47.258345", 
+      "rec_modified_date": "2013-12-10T15:19:43.142544", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2579,10 +2635,14 @@
       "copyright_statement": "Copyright International Monetary Fund Mar 1979", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1979-03", 
@@ -2626,9 +2686,9 @@
       "part_page_begin": "22", 
       "part_volume": "16", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.258741", 
+      "rec_created_date": "2013-12-10T15:19:43.142942", 
       "rec_id": "proquest_dll_832945800", 
-      "rec_modified_date": "2013-11-25T11:04:47.258746", 
+      "rec_modified_date": "2013-12-10T15:19:43.142948", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2648,7 +2708,9 @@
       "copyright_statement": "Copyright Barclays Bank Ltd. Group Economics Dept. Fourth Quarter 1999", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1999", 
@@ -2703,9 +2765,9 @@
       ], 
       "part_page_begin": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.259108", 
+      "rec_created_date": "2013-12-10T15:19:43.143309", 
       "rec_id": "proquest_dll_461969220", 
-      "rec_modified_date": "2013-11-25T11:04:47.259114", 
+      "rec_modified_date": "2013-12-10T15:19:43.143314", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2725,7 +2787,9 @@
       "copyright_statement": "Copyright University of Western Ontario Spring 1988", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1988", 
@@ -2779,9 +2843,9 @@
       "part_page_begin": "SS40", 
       "part_volume": "52", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.259481", 
+      "rec_created_date": "2013-12-10T15:19:43.143680", 
       "rec_id": "proquest_dll_3891316910", 
-      "rec_modified_date": "2013-11-25T11:04:47.259486", 
+      "rec_modified_date": "2013-12-10T15:19:43.143686", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2801,7 +2865,9 @@
       "copyright_statement": "Copyright International Monetary Fund Jun 1983", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1983-06", 
@@ -2845,9 +2911,9 @@
       "part_page_begin": "24", 
       "part_volume": "20", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.259845", 
+      "rec_created_date": "2013-12-10T15:19:43.144045", 
       "rec_id": "proquest_dll_832920220", 
-      "rec_modified_date": "2013-11-25T11:04:47.259851", 
+      "rec_modified_date": "2013-12-10T15:19:43.144050", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -2932,9 +2998,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.260159", 
+      "rec_created_date": "2013-12-10T15:19:43.144355", 
       "rec_id": "proquest_dll_25822726110", 
-      "rec_modified_date": "2013-11-25T11:04:47.260165", 
+      "rec_modified_date": "2013-12-10T15:19:43.144360", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -3019,9 +3085,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.260459", 
+      "rec_created_date": "2013-12-10T15:19:43.144654", 
       "rec_id": "proquest_dll_20849894910", 
-      "rec_modified_date": "2013-11-25T11:04:47.260464", 
+      "rec_modified_date": "2013-12-10T15:19:43.144659", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -3118,9 +3184,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.260761", 
+      "rec_created_date": "2013-12-10T15:19:43.144953", 
       "rec_id": "proquest_dll_20871143910", 
-      "rec_modified_date": "2013-11-25T11:04:47.260766", 
+      "rec_modified_date": "2013-12-10T15:19:43.144959", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -3205,9 +3271,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.261059", 
+      "rec_created_date": "2013-12-10T15:19:43.145250", 
       "rec_id": "proquest_dll_20850303610", 
-      "rec_modified_date": "2013-11-25T11:04:47.261064", 
+      "rec_modified_date": "2013-12-10T15:19:43.145255", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -3304,9 +3370,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.261357", 
+      "rec_created_date": "2013-12-10T15:19:43.145546", 
       "rec_id": "proquest_dll_20843758110", 
-      "rec_modified_date": "2013-11-25T11:04:47.261362", 
+      "rec_modified_date": "2013-12-10T15:19:43.145551", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -3391,9 +3457,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.261655", 
+      "rec_created_date": "2013-12-10T15:19:43.145841", 
       "rec_id": "proquest_dll_20850303710", 
-      "rec_modified_date": "2013-11-25T11:04:47.261660", 
+      "rec_modified_date": "2013-12-10T15:19:43.145846", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -3414,7 +3480,9 @@
       "copyright_statement": "Copyright National Tax Association Mar 1981", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1981-03", 
@@ -3472,9 +3540,9 @@
       "part_page_begin": "75", 
       "part_volume": "34", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.262021", 
+      "rec_created_date": "2013-12-10T15:19:43.146219", 
       "rec_id": "proquest_dll_6183182610", 
-      "rec_modified_date": "2013-11-25T11:04:47.262026", 
+      "rec_modified_date": "2013-12-10T15:19:43.146225", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -3495,7 +3563,9 @@
       "copyright_statement": "Copyright Chamber of Commerce of the United States Aug 1917", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1917-08", 
@@ -3553,9 +3623,9 @@
       "part_page_begin": "11", 
       "part_volume": "5", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.262398", 
+      "rec_created_date": "2013-12-10T15:19:43.146601", 
       "rec_id": "proquest_dll_3934502510", 
-      "rec_modified_date": "2013-11-25T11:04:47.262403", 
+      "rec_modified_date": "2013-12-10T15:19:43.146606", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -3653,9 +3723,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.262717", 
+      "rec_created_date": "2013-12-10T15:19:43.146919", 
       "rec_id": "proquest_dll_20849630110", 
-      "rec_modified_date": "2013-11-25T11:04:47.262722", 
+      "rec_modified_date": "2013-12-10T15:19:43.146924", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -3740,9 +3810,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.263018", 
+      "rec_created_date": "2013-12-10T15:19:43.147218", 
       "rec_id": "proquest_dll_23790391010", 
-      "rec_modified_date": "2013-11-25T11:04:47.263023", 
+      "rec_modified_date": "2013-12-10T15:19:43.147223", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -3827,9 +3897,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.263316", 
+      "rec_created_date": "2013-12-10T15:19:43.147517", 
       "rec_id": "proquest_dll_22999673810", 
-      "rec_modified_date": "2013-11-25T11:04:47.263321", 
+      "rec_modified_date": "2013-12-10T15:19:43.147522", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DatasetQuanti", 
@@ -3851,7 +3921,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2001", 
@@ -3889,9 +3961,9 @@
         "The Federal Trust for Education and Research"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.263645", 
+      "rec_created_date": "2013-12-10T15:19:43.147848", 
       "rec_id": "sciencespo_catalog_00003942020", 
-      "rec_modified_date": "2013-11-25T11:04:47.263650", 
+      "rec_modified_date": "2013-12-10T15:19:43.147853", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -3942,9 +4014,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.264074", 
+      "rec_created_date": "2013-12-10T15:19:43.148271", 
       "rec_id": "proquest_dll_28285684510", 
-      "rec_modified_date": "2013-11-25T11:04:47.264079", 
+      "rec_modified_date": "2013-12-10T15:19:43.148277", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -3958,7 +4030,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2005", 
@@ -4012,9 +4086,9 @@
       "part_page_end": "589", 
       "part_volume": "12", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.264574", 
+      "rec_created_date": "2013-12-10T15:19:43.148730", 
       "rec_id": "sciencespo_catalog_00008627910", 
-      "rec_modified_date": "2013-11-25T11:04:47.264580", 
+      "rec_modified_date": "2013-12-10T15:19:43.148736", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -4072,9 +4146,9 @@
       ], 
       "part_page_begin": "23", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.265043", 
+      "rec_created_date": "2013-12-10T15:19:43.149195", 
       "rec_id": "proquest_dll_547246140", 
-      "rec_modified_date": "2013-11-25T11:04:47.265049", 
+      "rec_modified_date": "2013-12-10T15:19:43.149200", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -4133,9 +4207,9 @@
       ], 
       "part_page_begin": "23", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.265482", 
+      "rec_created_date": "2013-12-10T15:19:43.149629", 
       "rec_id": "proquest_dll_545999940", 
-      "rec_modified_date": "2013-11-25T11:04:47.265488", 
+      "rec_modified_date": "2013-12-10T15:19:43.149635", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -4150,7 +4224,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1940", 
@@ -4190,9 +4266,9 @@
         "M. Joseph"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.265939", 
+      "rec_created_date": "2013-12-10T15:19:43.150209", 
       "rec_id": "sciencespo_catalog_00009833610", 
-      "rec_modified_date": "2013-11-25T11:04:47.265945", 
+      "rec_modified_date": "2013-12-10T15:19:43.150215", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -4256,9 +4332,9 @@
       ], 
       "part_page_begin": "30", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.266350", 
+      "rec_created_date": "2013-12-10T15:19:43.150623", 
       "rec_id": "proquest_dll_894666490", 
-      "rec_modified_date": "2013-11-25T11:04:47.266356", 
+      "rec_modified_date": "2013-12-10T15:19:43.150629", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -4305,9 +4381,9 @@
       "part_page_begin": "112", 
       "part_volume": "81", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.266908", 
+      "rec_created_date": "2013-12-10T15:19:43.151054", 
       "rec_id": "chadwyckhealey_pio_q351212114540", 
-      "rec_modified_date": "2013-11-25T11:04:47.266914", 
+      "rec_modified_date": "2013-12-10T15:19:43.151059", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -4321,7 +4397,9 @@
       }, 
       "creators": [
         {
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }
       ], 
       "date_issued": "2006", 
@@ -4348,9 +4426,9 @@
         null
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.267369", 
+      "rec_created_date": "2013-12-10T15:19:43.151519", 
       "rec_id": "eui_dspace_oai_cadmus_eui_eu_1814_74570", 
-      "rec_modified_date": "2013-11-25T11:04:47.267374", 
+      "rec_modified_date": "2013-12-10T15:19:43.151525", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -4365,7 +4443,9 @@
       "copyright_statement": "Copyright (c) Times Newspapers Limited 2011", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011-09-08", 
@@ -4419,9 +4499,9 @@
       ], 
       "part_page_begin": "32", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.267821", 
+      "rec_created_date": "2013-12-10T15:19:43.151984", 
       "rec_id": "proquest_dll_24453817110", 
-      "rec_modified_date": "2013-11-25T11:04:47.267826", 
+      "rec_modified_date": "2013-12-10T15:19:43.151989", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -4437,7 +4517,9 @@
       "copyright_statement": "Copyright (c) Times Newspapers Limited 2011", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011-09-08", 
@@ -4491,9 +4573,9 @@
       ], 
       "part_page_begin": "20", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.268320", 
+      "rec_created_date": "2013-12-10T15:19:43.152553", 
       "rec_id": "proquest_dll_24453793110", 
-      "rec_modified_date": "2013-11-25T11:04:47.268326", 
+      "rec_modified_date": "2013-12-10T15:19:43.152559", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -4547,9 +4629,9 @@
       ], 
       "part_page_begin": "20", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.268759", 
+      "rec_created_date": "2013-12-10T15:19:43.152990", 
       "rec_id": "gale_primary_2664601460", 
-      "rec_modified_date": "2013-11-25T11:04:47.268764", 
+      "rec_modified_date": "2013-12-10T15:19:43.152996", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -4569,7 +4651,9 @@
       "copyright_statement": "Copyright Centre for World Dialogue Summer 2003", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -4628,9 +4712,9 @@
       "part_page_begin": "30", 
       "part_volume": "5", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.269249", 
+      "rec_created_date": "2013-12-10T15:19:43.153479", 
       "rec_id": "LOGICAL-p501-5a8962f7382e61efa12bc289d5a562d30e03baf204b3735f45e924272fef50b00", 
-      "rec_modified_date": "2013-11-25T11:04:47.269255", 
+      "rec_modified_date": "2013-12-10T15:19:43.153485", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -4652,7 +4736,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010", 
@@ -4695,9 +4781,9 @@
         "Montchrestien"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.269737", 
+      "rec_created_date": "2013-12-10T15:19:43.153966", 
       "rec_id": "sciencespo_catalog_00011805000", 
-      "rec_modified_date": "2013-11-25T11:04:47.269742", 
+      "rec_modified_date": "2013-12-10T15:19:43.153971", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -4719,7 +4805,9 @@
       "copyright_statement": "Copyright 2005 Independent Newspapers (UK) Limited", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2005-01-29", 
@@ -4767,9 +4855,9 @@
       ], 
       "part_page_begin": "39", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.270207", 
+      "rec_created_date": "2013-12-10T15:19:43.154432", 
       "rec_id": "proquest_dll_7858896810", 
-      "rec_modified_date": "2013-11-25T11:04:47.270212", 
+      "rec_modified_date": "2013-12-10T15:19:43.154438", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -4785,7 +4873,9 @@
       "copyright_statement": "Copyright Times Newspapers Ltd, 2003", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003-05-24", 
@@ -4833,9 +4923,9 @@
       ], 
       "part_page_begin": "21", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.270706", 
+      "rec_created_date": "2013-12-10T15:19:43.154938", 
       "rec_id": "proquest_dll_3399384710", 
-      "rec_modified_date": "2013-11-25T11:04:47.270711", 
+      "rec_modified_date": "2013-12-10T15:19:43.154943", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -4851,7 +4941,9 @@
       "copyright_statement": "Copyright 2004 Independent Newspapers (UK) Limited", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2004-04-20", 
@@ -4899,9 +4991,9 @@
       ], 
       "part_page_begin": "32", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.271215", 
+      "rec_created_date": "2013-12-10T15:19:43.155442", 
       "rec_id": "proquest_dll_6209332610", 
-      "rec_modified_date": "2013-11-25T11:04:47.271221", 
+      "rec_modified_date": "2013-12-10T15:19:43.155447", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -4917,7 +5009,9 @@
       "copyright_statement": "Copyright Guardian Newspapers, Limited May 29, 2001", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2001-05-29", 
@@ -4971,9 +5065,9 @@
       ], 
       "part_page_begin": "1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.271753", 
+      "rec_created_date": "2013-12-10T15:19:43.155968", 
       "rec_id": "LOGICAL-p427-80556e4e3a3f3936e1eb018fc3b7f6034dfb0d1cf60a260f8ee77c2ec54c021f0", 
-      "rec_modified_date": "2013-11-25T11:04:47.271759", 
+      "rec_modified_date": "2013-12-10T15:19:43.155973", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5025,9 +5119,9 @@
       ], 
       "part_page_begin": "2", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.272189", 
+      "rec_created_date": "2013-12-10T15:19:43.156412", 
       "rec_id": "proquest_dll_3454266510", 
-      "rec_modified_date": "2013-11-25T11:04:47.272195", 
+      "rec_modified_date": "2013-12-10T15:19:43.156417", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5080,9 +5174,9 @@
       ], 
       "part_page_begin": "17", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.272608", 
+      "rec_created_date": "2013-12-10T15:19:43.156834", 
       "rec_id": "proquest_dll_645994310", 
-      "rec_modified_date": "2013-11-25T11:04:47.272613", 
+      "rec_modified_date": "2013-12-10T15:19:43.156839", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5098,7 +5192,9 @@
       "copyright_statement": "Copyright Newspaper Publishing Plc Aug 6, 1999", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1999-08-06", 
@@ -5140,9 +5236,9 @@
       ], 
       "part_page_begin": "2", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.273077", 
+      "rec_created_date": "2013-12-10T15:19:43.157305", 
       "rec_id": "LOGICAL-p421-92cd47cd33a19ca948c459ec64633f8b0c26e83c4b5ec8005f8e92e4178f117d0", 
-      "rec_modified_date": "2013-11-25T11:04:47.273082", 
+      "rec_modified_date": "2013-12-10T15:19:43.157311", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5164,7 +5260,9 @@
       "copyright_statement": "Copyright Economist Newspaper Limited Nov 15, 1997", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1997-11-15", 
@@ -5230,9 +5328,9 @@
       "part_page_begin": "51", 
       "part_volume": "345", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.273581", 
+      "rec_created_date": "2013-12-10T15:19:43.157813", 
       "rec_id": "LOGICAL-p485-dcfb2ff55524beee3408462bee15079e64c5af5bbd8a0360b0b3b1815eb7ce60", 
-      "rec_modified_date": "2013-11-25T11:04:47.273586", 
+      "rec_modified_date": "2013-12-10T15:19:43.157818", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -5289,9 +5387,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.274040", 
+      "rec_created_date": "2013-12-10T15:19:43.158271", 
       "rec_id": "proquest_dll_696629220", 
-      "rec_modified_date": "2013-11-25T11:04:47.274045", 
+      "rec_modified_date": "2013-12-10T15:19:43.158276", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5339,9 +5437,9 @@
       ], 
       "part_page_begin": "5", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.274468", 
+      "rec_created_date": "2013-12-10T15:19:43.158699", 
       "rec_id": "proquest_dll_11784607020", 
-      "rec_modified_date": "2013-11-25T11:04:47.274473", 
+      "rec_modified_date": "2013-12-10T15:19:43.158705", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5395,9 +5493,9 @@
       ], 
       "part_page_begin": "9", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.274896", 
+      "rec_created_date": "2013-12-10T15:19:43.159120", 
       "rec_id": "proquest_dll_19138217720", 
-      "rec_modified_date": "2013-11-25T11:04:47.274901", 
+      "rec_modified_date": "2013-12-10T15:19:43.159125", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5413,7 +5511,9 @@
       "copyright_statement": "Copyright Christian Science Monitor Nov 4, 1936", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1936-11-04", 
@@ -5456,9 +5556,9 @@
       ], 
       "part_page_begin": "22", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.275363", 
+      "rec_created_date": "2013-12-10T15:19:43.159599", 
       "rec_id": "proquest_dll_2897047320", 
-      "rec_modified_date": "2013-11-25T11:04:47.275369", 
+      "rec_modified_date": "2013-12-10T15:19:43.159604", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5517,9 +5617,9 @@
       ], 
       "part_page_begin": "1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.275798", 
+      "rec_created_date": "2013-12-10T15:19:43.160037", 
       "rec_id": "proquest_dll_342347300", 
-      "rec_modified_date": "2013-11-25T11:04:47.275804", 
+      "rec_modified_date": "2013-12-10T15:19:43.160043", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5573,9 +5673,9 @@
       "part_issue": "4", 
       "part_volume": "21", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.276230", 
+      "rec_created_date": "2013-12-10T15:19:43.160466", 
       "rec_id": "LOGICAL-p511-4abcb6770079fa26bfd6f5534d1e5d2dabc1b6134239267958d3604916a46540", 
-      "rec_modified_date": "2013-11-25T11:04:47.276235", 
+      "rec_modified_date": "2013-12-10T15:19:43.160471", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -5638,9 +5738,9 @@
       ], 
       "part_page_begin": "4", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.276674", 
+      "rec_created_date": "2013-12-10T15:19:43.160908", 
       "rec_id": "proquest_dll_538414060", 
-      "rec_modified_date": "2013-11-25T11:04:47.276679", 
+      "rec_modified_date": "2013-12-10T15:19:43.160913", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5659,7 +5759,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1992-05-15", 
@@ -5699,9 +5801,9 @@
       "part_page_begin": "664", 
       "part_volume": "142", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.277149", 
+      "rec_created_date": "2013-12-10T15:19:43.161383", 
       "rec_id": "gale_legaltrac_123832680", 
-      "rec_modified_date": "2013-11-25T11:04:47.277154", 
+      "rec_modified_date": "2013-12-10T15:19:43.161388", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -5716,7 +5818,9 @@
       "copyright_statement": "Copyright Punch Publications, Limited Dec 4, 1991", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1991-12-04", 
@@ -5776,9 +5880,9 @@
       "part_page_begin": "61", 
       "part_volume": "300", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.277663", 
+      "rec_created_date": "2013-12-10T15:19:43.161897", 
       "rec_id": "proquest_dll_56664090", 
-      "rec_modified_date": "2013-11-25T11:04:47.277668", 
+      "rec_modified_date": "2013-12-10T15:19:43.161902", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -5793,16 +5897,24 @@
       "copyright_statement": "Copyright Times Mirror Company Jul 26, 1948", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1948-07-26", 
@@ -5855,9 +5967,9 @@
       ], 
       "part_page_begin": "A4", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.278327", 
+      "rec_created_date": "2013-12-10T15:19:43.162544", 
       "rec_id": "proquest_dll_4167063010", 
-      "rec_modified_date": "2013-11-25T11:04:47.278333", 
+      "rec_modified_date": "2013-12-10T15:19:43.162550", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5910,9 +6022,9 @@
       ], 
       "part_page_begin": "1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.278800", 
+      "rec_created_date": "2013-12-10T15:19:43.162999", 
       "rec_id": "proquest_dll_22270648120", 
-      "rec_modified_date": "2013-11-25T11:04:47.278805", 
+      "rec_modified_date": "2013-12-10T15:19:43.163004", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -5977,9 +6089,9 @@
       ], 
       "part_page_begin": "20", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.279232", 
+      "rec_created_date": "2013-12-10T15:19:43.163423", 
       "rec_id": "proquest_dll_26658980", 
-      "rec_modified_date": "2013-11-25T11:04:47.279238", 
+      "rec_modified_date": "2013-12-10T15:19:43.163428", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6032,9 +6144,9 @@
       ], 
       "part_page_begin": "1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.279664", 
+      "rec_created_date": "2013-12-10T15:19:43.163851", 
       "rec_id": "proquest_dll_11231468520", 
-      "rec_modified_date": "2013-11-25T11:04:47.279670", 
+      "rec_modified_date": "2013-12-10T15:19:43.163857", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6048,7 +6160,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2002", 
@@ -6093,9 +6207,9 @@
       "part_page_begin": "9", 
       "part_page_end": "24", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.280135", 
+      "rec_created_date": "2013-12-10T15:19:43.164321", 
       "rec_id": "sciencespo_catalog_00005056380", 
-      "rec_modified_date": "2013-11-25T11:04:47.280141", 
+      "rec_modified_date": "2013-12-10T15:19:43.164327", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -6111,7 +6225,9 @@
       "copyright_statement": "Copyright LE MONDE INTERACTIF Jul 2012", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012-07", 
@@ -6159,9 +6275,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.280634", 
+      "rec_created_date": "2013-12-10T15:19:43.164826", 
       "rec_id": "proquest_dll_27001373310", 
-      "rec_modified_date": "2013-11-25T11:04:47.280639", 
+      "rec_modified_date": "2013-12-10T15:19:43.164831", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6176,7 +6292,9 @@
       "copyright_statement": "Copyright The Tribune Company Nov 20, 1950", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1950-11-20", 
@@ -6217,9 +6335,9 @@
       ], 
       "part_page_begin": "13", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.281107", 
+      "rec_created_date": "2013-12-10T15:19:43.165299", 
       "rec_id": "proquest_dll_16809337020", 
-      "rec_modified_date": "2013-11-25T11:04:47.281112", 
+      "rec_modified_date": "2013-12-10T15:19:43.165304", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6235,7 +6353,9 @@
       "copyright_statement": "Copyright Financial Times Ltd. 2012. All rights reserved.", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012-02-15", 
@@ -6287,9 +6407,9 @@
       ], 
       "part_page_begin": "7", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.281598", 
+      "rec_created_date": "2013-12-10T15:19:43.165787", 
       "rec_id": "LOGICAL-g451-c866aade591cf79498f5999332e6c976af46a8498a0bc1bd8853da3531b5a5a90", 
-      "rec_modified_date": "2013-11-25T11:04:47.281603", 
+      "rec_modified_date": "2013-12-10T15:19:43.165793", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6347,9 +6467,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.282033", 
+      "rec_created_date": "2013-12-10T15:19:43.166221", 
       "rec_id": "proquest_dll_25318193510", 
-      "rec_modified_date": "2013-11-25T11:04:47.282038", 
+      "rec_modified_date": "2013-12-10T15:19:43.166227", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6364,7 +6484,9 @@
       "copyright_statement": "Copyright Guardian Newspapers Limited Jan 26, 1989", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1989-01-26", 
@@ -6421,9 +6543,9 @@
       ], 
       "part_page_begin": "2", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.282498", 
+      "rec_created_date": "2013-12-10T15:19:43.166686", 
       "rec_id": "LOGICAL-p434-829793d0d8a9c09bbfefc94530fa4be945777f40b411dbdaccf977182c27522b0", 
-      "rec_modified_date": "2013-11-25T11:04:47.282503", 
+      "rec_modified_date": "2013-12-10T15:19:43.166691", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6438,7 +6560,9 @@
       "copyright_statement": "Copyright Financial Times Information Limited May 17, 2001", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2001-05-17", 
@@ -6494,9 +6618,9 @@
       ], 
       "part_page_begin": "01", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.283001", 
+      "rec_created_date": "2013-12-10T15:19:43.167183", 
       "rec_id": "proquest_dll_730685420", 
-      "rec_modified_date": "2013-11-25T11:04:47.283006", 
+      "rec_modified_date": "2013-12-10T15:19:43.167189", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6512,7 +6636,9 @@
       "copyright_statement": "Copyright Post Gazette Publishing Company May 1, 2001", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2001-05-01", 
@@ -6560,9 +6686,9 @@
       ], 
       "part_page_begin": "A.3", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.283512", 
+      "rec_created_date": "2013-12-10T15:19:43.167692", 
       "rec_id": "proquest_dll_720072920", 
-      "rec_modified_date": "2013-11-25T11:04:47.283518", 
+      "rec_modified_date": "2013-12-10T15:19:43.167697", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6609,9 +6735,9 @@
       ], 
       "part_page_begin": "6", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.283948", 
+      "rec_created_date": "2013-12-10T15:19:43.168123", 
       "rec_id": "proquest_dll_538432690", 
-      "rec_modified_date": "2013-11-25T11:04:47.283953", 
+      "rec_modified_date": "2013-12-10T15:19:43.168128", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6627,7 +6753,9 @@
       "copyright_statement": "Copyright 1994 Newspaper Publishing PLC", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1994-06-02", 
@@ -6674,9 +6802,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.284436", 
+      "rec_created_date": "2013-12-10T15:19:43.168608", 
       "rec_id": "proquest_dll_1332895510", 
-      "rec_modified_date": "2013-11-25T11:04:47.284442", 
+      "rec_modified_date": "2013-12-10T15:19:43.168613", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6692,7 +6820,9 @@
       "copyright_statement": "Copyright 2001 Phoenix Newspapers, Inc.", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2001-05-08", 
@@ -6740,9 +6870,9 @@
       ], 
       "part_page_begin": "A.13", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.284939", 
+      "rec_created_date": "2013-12-10T15:19:43.169104", 
       "rec_id": "proquest_dll_726436590", 
-      "rec_modified_date": "2013-11-25T11:04:47.284944", 
+      "rec_modified_date": "2013-12-10T15:19:43.169109", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6758,7 +6888,9 @@
       "copyright_statement": "Copyright 2001 by the Chicago Tribune", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2001-05-01", 
@@ -6810,9 +6942,9 @@
       ], 
       "part_page_begin": "4", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.285466", 
+      "rec_created_date": "2013-12-10T15:19:43.169741", 
       "rec_id": "proquest_dll_720065960", 
-      "rec_modified_date": "2013-11-25T11:04:47.285472", 
+      "rec_modified_date": "2013-12-10T15:19:43.169747", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6828,10 +6960,14 @@
       "copyright_statement": "Copyright Guardian Newspapers Limited Oct 12, 1988", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1988-10-12", 
@@ -6874,9 +7010,9 @@
       ], 
       "part_page_begin": "6", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.286008", 
+      "rec_created_date": "2013-12-10T15:19:43.170288", 
       "rec_id": "proquest_dll_11267896620", 
-      "rec_modified_date": "2013-11-25T11:04:47.286013", 
+      "rec_modified_date": "2013-12-10T15:19:43.170294", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6892,7 +7028,9 @@
       "copyright_statement": "Copyright Times Mirror Company Oct 3, 1988", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1988-10-03", 
@@ -6945,9 +7083,9 @@
       ], 
       "part_page_begin": "C5", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.286524", 
+      "rec_created_date": "2013-12-10T15:19:43.170801", 
       "rec_id": "proquest_dll_21856191620", 
-      "rec_modified_date": "2013-11-25T11:04:47.286530", 
+      "rec_modified_date": "2013-12-10T15:19:43.170807", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -6963,7 +7101,9 @@
       "copyright_statement": "Copyright New York Times Company Jan 5, 1940", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1940-01-05", 
@@ -7016,9 +7156,9 @@
       ], 
       "part_page_begin": "1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.287044", 
+      "rec_created_date": "2013-12-10T15:19:43.171324", 
       "rec_id": "proquest_dll_947570110", 
-      "rec_modified_date": "2013-11-25T11:04:47.287050", 
+      "rec_modified_date": "2013-12-10T15:19:43.171329", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -7039,7 +7179,9 @@
       "copyright_statement": "Copyright Centre for World Dialogue Summer 2003", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -7098,9 +7240,9 @@
       "part_page_begin": "30", 
       "part_volume": "5", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.287677", 
+      "rec_created_date": "2013-12-10T15:19:43.171829", 
       "rec_id": "LOGICAL-p501-5a8962f7382e61efa12bc289d5a562d30e03baf204b3735f45e924272fef50b02", 
-      "rec_modified_date": "2013-11-25T11:04:47.287682", 
+      "rec_modified_date": "2013-12-10T15:19:43.171835", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -7126,7 +7268,9 @@
             "name_given": "FELIPE", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011", 
@@ -7199,9 +7343,9 @@
       "part_page_end": "69", 
       "part_volume": "28", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.288167", 
+      "rec_created_date": "2013-12-10T15:19:43.172314", 
       "rec_id": "LOGICAL-c1490-784e33614763eb92fbd32c70275ea09ada1c6525bcd904d89372c0d5a44270c22", 
-      "rec_modified_date": "2013-11-25T11:04:47.288173", 
+      "rec_modified_date": "2013-12-10T15:19:43.172320", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -7229,7 +7373,9 @@
             "name_given": "STEPHEN", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1996-7-1", 
@@ -7297,9 +7443,9 @@
       "part_page_end": "41", 
       "part_volume": "159", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.288672", 
+      "rec_created_date": "2013-12-10T15:19:43.172818", 
       "rec_id": "LOGICAL-j781-5fab598ae02f8ce43007f3e38b81f8d09fe3bbffd34462d107a4a046cbf6b9972", 
-      "rec_modified_date": "2013-11-25T11:04:47.288677", 
+      "rec_modified_date": "2013-12-10T15:19:43.172824", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -7325,7 +7471,9 @@
             "name_given": "Robert", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2002", 
@@ -7369,9 +7517,9 @@
       "part_page_end": "646", 
       "part_volume": "67", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.289151", 
+      "rec_created_date": "2013-12-10T15:19:43.173300", 
       "rec_id": "LOGICAL-c675-76a05dc7920b8e3da027004dc39c13a101f268af45b372bcd7970a5aa5d011fd2", 
-      "rec_modified_date": "2013-11-25T11:04:47.289156", 
+      "rec_modified_date": "2013-12-10T15:19:43.173305", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -7397,7 +7545,9 @@
             "name_given": "Paul", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1996-12", 
@@ -7446,9 +7596,9 @@
       "part_page_end": "304", 
       "part_volume": "30", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.289646", 
+      "rec_created_date": "2013-12-10T15:19:43.173793", 
       "rec_id": "LOGICAL-c1142-fe8faf72383f273eb7c2cd270450f6682c1290de6996dd43559be824741733e62", 
-      "rec_modified_date": "2013-11-25T11:04:47.289652", 
+      "rec_modified_date": "2013-12-10T15:19:43.173798", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -7468,7 +7618,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1986", 
@@ -7517,9 +7669,9 @@
       "part_page_end": "376", 
       "part_volume": "39", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.290191", 
+      "rec_created_date": "2013-12-10T15:19:43.174327", 
       "rec_id": "LOGICAL-c1091-f34f12da9bdcfee5f3cd296a722bcd44232a320322af8d808586eec395ed88d22", 
-      "rec_modified_date": "2013-11-25T11:04:47.290196", 
+      "rec_modified_date": "2013-12-10T15:19:43.174332", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -7540,10 +7692,14 @@
       "copyright_statement": "Cairn", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011-11-01", 
@@ -7587,9 +7743,9 @@
       "part_page_end": "12", 
       "part_volume": "n 47", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.290752", 
+      "rec_created_date": "2013-12-10T15:19:43.174887", 
       "rec_id": "cairn_primary_oai_cairn_info_MULT_047_00052", 
-      "rec_modified_date": "2013-11-25T11:04:47.290757", 
+      "rec_modified_date": "2013-12-10T15:19:43.174892", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -7653,9 +7809,9 @@
       "part_page_begin": "12", 
       "part_volume": "46", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.291221", 
+      "rec_created_date": "2013-12-10T15:19:43.175371", 
       "rec_id": "gale_primary_1925011532", 
-      "rec_modified_date": "2013-11-25T11:04:47.291227", 
+      "rec_modified_date": "2013-12-10T15:19:43.175377", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -7681,7 +7837,9 @@
             "name_given": "Eiko R", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2004-12", 
@@ -7747,9 +7905,9 @@
       "part_page_end": "374", 
       "part_volume": "2", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.291696", 
+      "rec_created_date": "2013-12-10T15:19:43.175847", 
       "rec_id": "LOGICAL-c1161-368b27fedf94cd664860f91be958c652bda00bee08c9ae92c8f1dd0a447e6d8f2", 
-      "rec_modified_date": "2013-11-25T11:04:47.291702", 
+      "rec_modified_date": "2013-12-10T15:19:43.175852", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -7824,9 +7982,9 @@
       "part_page_end": "107", 
       "part_volume": "2", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.292164", 
+      "rec_created_date": "2013-12-10T15:19:43.176313", 
       "rec_id": "wiley_primary_10_1111_j_1478_9299_2004_004_4_x_PSR4_42", 
-      "rec_modified_date": "2013-11-25T11:04:47.292170", 
+      "rec_modified_date": "2013-12-10T15:19:43.176318", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -7849,10 +8007,14 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2006", 
@@ -7901,9 +8063,9 @@
         "PIE-P. Lang"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.292721", 
+      "rec_created_date": "2013-12-10T15:19:43.176861", 
       "rec_id": "sciencespo_catalog_00009860260", 
-      "rec_modified_date": "2013-11-25T11:04:47.292727", 
+      "rec_modified_date": "2013-12-10T15:19:43.176866", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Dissertation", 
@@ -7926,14 +8088,18 @@
       "copyright_statement": "Copyright UMI - Dissertations Publishing 1926", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
             "name": "Universite de Paris (France)", 
             "rec_class": "Orgunit"
           }, 
-          "role": "dgg"
+          "roles": [
+            "dgg"
+          ]
         }
       ], 
       "date_issued": "1926", 
@@ -7981,9 +8147,9 @@
         "Universite de Paris (France)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.293211", 
+      "rec_created_date": "2013-12-10T15:19:43.177343", 
       "rec_id": "proquest_dll_9341014610", 
-      "rec_modified_date": "2013-11-25T11:04:47.293217", 
+      "rec_modified_date": "2013-12-10T15:19:43.177349", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Dissertation", 
@@ -7997,7 +8163,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2004", 
@@ -8036,9 +8204,9 @@
         null
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.293664", 
+      "rec_created_date": "2013-12-10T15:19:43.177790", 
       "rec_id": "ncirl_eprints_oai_trap_ncirl_ie_1620", 
-      "rec_modified_date": "2013-11-25T11:04:47.293669", 
+      "rec_modified_date": "2013-12-10T15:19:43.177795", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Dissertation", 
@@ -8052,7 +8220,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2004", 
@@ -8079,9 +8249,9 @@
         null
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.294073", 
+      "rec_created_date": "2013-12-10T15:19:43.178197", 
       "rec_id": "eui_dspace_oai_cadmus_eui_eu_1814_45670", 
-      "rec_modified_date": "2013-11-25T11:04:47.294079", 
+      "rec_modified_date": "2013-12-10T15:19:43.178202", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Dissertation", 
@@ -8096,14 +8266,18 @@
       "copyright_statement": "Copyright ProQuest, UMI Dissertations Publishing 2003", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
             "name": "The University of Buckingham (United Kingdom)", 
             "rec_class": "Orgunit"
           }, 
-          "role": "dgg"
+          "roles": [
+            "dgg"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -8140,9 +8314,9 @@
         "The University of Buckingham (United Kingdom)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.294547", 
+      "rec_created_date": "2013-12-10T15:19:43.178671", 
       "rec_id": "proquest_dll_17608731810", 
-      "rec_modified_date": "2013-11-25T11:04:47.294553", 
+      "rec_modified_date": "2013-12-10T15:19:43.178677", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Dissertation", 
@@ -8157,7 +8331,9 @@
       "copyright_statement": "Copyright is in accordance with U.S. Copyright law", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1995", 
@@ -8186,9 +8362,9 @@
         "Tulane University"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.295012", 
+      "rec_created_date": "2013-12-10T15:19:43.179129", 
       "rec_id": "ndltd_primary_oai_union_ndltd_org_TULANE_oai_www_louisianadigitallibrary_org_p16313coll12_27320", 
-      "rec_modified_date": "2013-11-25T11:04:47.295018", 
+      "rec_modified_date": "2013-12-10T15:19:43.179134", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Dissertation", 
@@ -8203,14 +8379,18 @@
       "copyright_statement": "Copyright UMI - Dissertations Publishing 1995", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
             "name": "Tulane University", 
             "rec_class": "Orgunit"
           }, 
-          "role": "dgg"
+          "roles": [
+            "dgg"
+          ]
         }
       ], 
       "date_issued": "1995", 
@@ -8256,9 +8436,9 @@
         "Tulane University"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.295491", 
+      "rec_created_date": "2013-12-10T15:19:43.179607", 
       "rec_id": "proquest_dll_7409078010", 
-      "rec_modified_date": "2013-11-25T11:04:47.295497", 
+      "rec_modified_date": "2013-12-10T15:19:43.179612", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Dissertation", 
@@ -8273,14 +8453,18 @@
       "copyright_statement": "Copyright UMI - Dissertations Publishing 1983", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
             "name": "University of California, Berkeley", 
             "rec_class": "Orgunit"
           }, 
-          "role": "dgg"
+          "roles": [
+            "dgg"
+          ]
         }
       ], 
       "date_issued": "1983", 
@@ -8324,9 +8508,9 @@
         "University of California, Berkeley"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.296029", 
+      "rec_created_date": "2013-12-10T15:19:43.180143", 
       "rec_id": "proquest_dll_7489600210", 
-      "rec_modified_date": "2013-11-25T11:04:47.296035", 
+      "rec_modified_date": "2013-12-10T15:19:43.180149", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Dissertation", 
@@ -8340,7 +8524,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2006", 
@@ -8374,9 +8560,9 @@
         "Berlin : Duncker & Humblot"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.296495", 
+      "rec_created_date": "2013-12-10T15:19:43.180606", 
       "rec_id": "ndltd_primary_oai_union_ndltd_org_OCLC_oai_xtcat_oclc_org_OCLCNo_4708436470", 
-      "rec_modified_date": "2013-11-25T11:04:47.296501", 
+      "rec_modified_date": "2013-12-10T15:19:43.180612", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Dissertation", 
@@ -8391,14 +8577,18 @@
       "copyright_statement": "Copyright ProQuest, UMI Dissertations Publishing 2008", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
             "name": "University of Oxford (United Kingdom)", 
             "rec_class": "Orgunit"
           }, 
-          "role": "dgg"
+          "roles": [
+            "dgg"
+          ]
         }
       ], 
       "date_issued": "2008", 
@@ -8441,9 +8631,9 @@
         "University of Oxford (United Kingdom)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.296988", 
+      "rec_created_date": "2013-12-10T15:19:43.181095", 
       "rec_id": "proquest_dll_24911705510", 
-      "rec_modified_date": "2013-11-25T11:04:47.296993", 
+      "rec_modified_date": "2013-12-10T15:19:43.181101", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Dissertation", 
@@ -8512,9 +8702,9 @@
       "part_page_end": "434", 
       "part_volume": "9", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.297416", 
+      "rec_created_date": "2013-12-10T15:19:43.181532", 
       "rec_id": "wiley_primary_10_1111_j_1478_9302_2011_00241_6_x_PSR241_60", 
-      "rec_modified_date": "2013-11-25T11:04:47.297422", 
+      "rec_modified_date": "2013-12-10T15:19:43.181538", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -8584,9 +8774,9 @@
       "part_page_end": "285", 
       "part_volume": "9", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.297853", 
+      "rec_created_date": "2013-12-10T15:19:43.181964", 
       "rec_id": "wiley_primary_10_1111_j_1478_9302_2011_00234_6_x_PSR234_60", 
-      "rec_modified_date": "2013-11-25T11:04:47.297858", 
+      "rec_modified_date": "2013-12-10T15:19:43.181969", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -8656,9 +8846,9 @@
       "part_page_end": "125", 
       "part_volume": "9", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.298286", 
+      "rec_created_date": "2013-12-10T15:19:43.182392", 
       "rec_id": "wiley_primary_10_1111_j_1478_9302_2010_00227_6_x_PSR227_60", 
-      "rec_modified_date": "2013-11-25T11:04:47.298292", 
+      "rec_modified_date": "2013-12-10T15:19:43.182398", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -8729,9 +8919,9 @@
       "part_issue": "5", 
       "part_volume": "LXXXI", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.298717", 
+      "rec_created_date": "2013-12-10T15:19:43.182819", 
       "rec_id": "proquest_dll_29013557410", 
-      "rec_modified_date": "2013-11-25T11:04:47.298723", 
+      "rec_modified_date": "2013-12-10T15:19:43.182824", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -8752,7 +8942,9 @@
       "copyright_statement": "2007 Blackwell Publishing Ltd.", 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2007-07-01", 
@@ -8823,9 +9015,9 @@
       "part_page_begin": "366", 
       "part_volume": "69", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.299207", 
+      "rec_created_date": "2013-12-10T15:19:43.183308", 
       "rec_id": "proquest_dll_12745258910", 
-      "rec_modified_date": "2013-11-25T11:04:47.299213", 
+      "rec_modified_date": "2013-12-10T15:19:43.183313", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -8896,9 +9088,9 @@
       "part_page_end": "399", 
       "part_volume": "6", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.299653", 
+      "rec_created_date": "2013-12-10T15:19:43.183752", 
       "rec_id": "wiley_primary_10_1111_j_1478_9302_2008_00165_3_x_PSR165_30", 
-      "rec_modified_date": "2013-11-25T11:04:47.299658", 
+      "rec_modified_date": "2013-12-10T15:19:43.183758", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -8968,9 +9160,9 @@
       "part_page_end": "247", 
       "part_volume": "6", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.300085", 
+      "rec_created_date": "2013-12-10T15:19:43.184191", 
       "rec_id": "wiley_primary_10_1111_j_1478_9302_2008_00156_4_x_PSR156_40", 
-      "rec_modified_date": "2013-11-25T11:04:47.300090", 
+      "rec_modified_date": "2013-12-10T15:19:43.184196", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -9039,9 +9231,9 @@
       "part_page_end": "109", 
       "part_volume": "6", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.300520", 
+      "rec_created_date": "2013-12-10T15:19:43.184617", 
       "rec_id": "wiley_primary_10_1111_j_1478_9299_2007_00147_4_x_PSR147_40", 
-      "rec_modified_date": "2013-11-25T11:04:47.300526", 
+      "rec_modified_date": "2013-12-10T15:19:43.184622", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -9110,9 +9302,9 @@
       "part_page_end": "431", 
       "part_volume": "5", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.300948", 
+      "rec_created_date": "2013-12-10T15:19:43.185040", 
       "rec_id": "wiley_primary_10_1111_j_1478_9299_2007_00137_4_x_PSR137_40", 
-      "rec_modified_date": "2013-11-25T11:04:47.300954", 
+      "rec_modified_date": "2013-12-10T15:19:43.185045", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -9181,9 +9373,9 @@
       "part_page_end": "285", 
       "part_volume": "5", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.301377", 
+      "rec_created_date": "2013-12-10T15:19:43.185463", 
       "rec_id": "wiley_primary_10_1111_j_1478_9299_2007_00132_4_x_PSR132_40", 
-      "rec_modified_date": "2013-11-25T11:04:47.301383", 
+      "rec_modified_date": "2013-12-10T15:19:43.185468", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookReview", 
@@ -9206,7 +9398,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012", 
@@ -9250,9 +9444,9 @@
         "Avant-Propos"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.301843", 
+      "rec_created_date": "2013-12-10T15:19:43.185925", 
       "rec_id": "sciencespo_catalog_00012285540", 
-      "rec_modified_date": "2013-11-25T11:04:47.301849", 
+      "rec_modified_date": "2013-12-10T15:19:43.185930", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -9276,10 +9470,14 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011", 
@@ -9329,9 +9527,9 @@
         "A. Colin"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.302331", 
+      "rec_created_date": "2013-12-10T15:19:43.186414", 
       "rec_id": "sciencespo_catalog_00012211230", 
-      "rec_modified_date": "2013-11-25T11:04:47.302337", 
+      "rec_modified_date": "2013-12-10T15:19:43.186419", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -9391,9 +9589,9 @@
         "Ed. techniques"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.302707", 
+      "rec_created_date": "2013-12-10T15:19:43.186788", 
       "rec_id": "sciencespo_catalog_00000524180", 
-      "rec_modified_date": "2013-11-25T11:04:47.302712", 
+      "rec_modified_date": "2013-12-10T15:19:43.186793", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Journal", 
@@ -9416,10 +9614,14 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2011", 
@@ -9469,9 +9671,9 @@
         "Bruylant"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.303170", 
+      "rec_created_date": "2013-12-10T15:19:43.187369", 
       "rec_id": "sciencespo_catalog_00012222040", 
-      "rec_modified_date": "2013-11-25T11:04:47.303176", 
+      "rec_modified_date": "2013-12-10T15:19:43.187375", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -9501,14 +9703,18 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
             "name": "Centre d'études, de recherches et d'éducation socialiste (France)", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010", 
@@ -9552,9 +9758,9 @@
         "B. Leprince"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.303667", 
+      "rec_created_date": "2013-12-10T15:19:43.187870", 
       "rec_id": "sciencespo_catalog_00011999340", 
-      "rec_modified_date": "2013-11-25T11:04:47.303672", 
+      "rec_modified_date": "2013-12-10T15:19:43.187876", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -9576,10 +9782,14 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010", 
@@ -9615,9 +9825,9 @@
         "Fondation Jean-Jaurès"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.304153", 
+      "rec_created_date": "2013-12-10T15:19:43.188361", 
       "rec_id": "sciencespo_catalog_00012005150", 
-      "rec_modified_date": "2013-11-25T11:04:47.304159", 
+      "rec_modified_date": "2013-12-10T15:19:43.188366", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -9640,10 +9850,14 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2008", 
@@ -9689,9 +9903,9 @@
         "Les quatre chemins"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.304659", 
+      "rec_created_date": "2013-12-10T15:19:43.188857", 
       "rec_id": "sciencespo_catalog_00011495120", 
-      "rec_modified_date": "2013-11-25T11:04:47.304664", 
+      "rec_modified_date": "2013-12-10T15:19:43.188862", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -9714,24 +9928,32 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
             "name": "Ecole supérieure de commerce (Grenoble)", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
             "name": "Association Anteios (France)", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2008", 
@@ -9777,9 +9999,9 @@
         "Presses Universitaires de France"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.305333", 
+      "rec_created_date": "2013-12-10T15:19:43.189409", 
       "rec_id": "sciencespo_catalog_00011548810", 
-      "rec_modified_date": "2013-11-25T11:04:47.305339", 
+      "rec_modified_date": "2013-12-10T15:19:43.189415", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -9852,9 +10074,9 @@
         "Denoe͏̈l"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.305741", 
+      "rec_created_date": "2013-12-10T15:19:43.189812", 
       "rec_id": "gbv_primary_1290709040", 
-      "rec_modified_date": "2013-11-25T11:04:47.305746", 
+      "rec_modified_date": "2013-12-10T15:19:43.189818", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Journal", 
@@ -9875,7 +10097,9 @@
       }, 
       "creators": [
         {
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2006", 
@@ -9920,9 +10144,9 @@
         "Parangon/Vs"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.306134", 
+      "rec_created_date": "2013-12-10T15:19:43.190200", 
       "rec_id": "sciencespo_catalog_00010384570", 
-      "rec_modified_date": "2013-11-25T11:04:47.306139", 
+      "rec_modified_date": "2013-12-10T15:19:43.190205", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 

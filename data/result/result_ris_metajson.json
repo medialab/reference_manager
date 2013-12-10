@@ -15,7 +15,9 @@
             "name_given": "J.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -23,7 +25,9 @@
             "name_given": "V.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -31,7 +35,9 @@
             "name_given": "P.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -39,7 +45,9 @@
             "name_given": "H.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1995", 
@@ -80,9 +88,9 @@
       "part_volume": "25", 
       "publication_status": "IN FILE", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.199447", 
-      "rec_id": "03c7f6b8-55b9-11e3-8314-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.199457", 
+      "rec_created_date": "2013-12-10T15:19:43.082760", 
+      "rec_id": "1d08c8ab-61a6-11e3-b2c7-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:43.082772", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -101,7 +109,9 @@
             "name_given": "K.M.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1975", 
@@ -124,9 +134,9 @@
         "Elsevier Scientific Publishing Company"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.200167", 
-      "rec_id": "03c81378-55b9-11e3-ba4b-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.200173", 
+      "rec_created_date": "2013-12-10T15:19:43.083457", 
+      "rec_id": "1d08e47d-61a6-11e3-b721-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:43.083463", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -145,7 +155,9 @@
             "name_given": "J.A.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -153,7 +165,9 @@
             "name_given": "A.A.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1995", 
@@ -169,7 +183,9 @@
                 "name_given": "J.H.", 
                 "rec_class": "Person"
               }, 
-              "role": "edt"
+              "roles": [
+                "edt"
+              ]
             }, 
             {
               "agent": {
@@ -177,7 +193,9 @@
                 "name_given": "B.M.", 
                 "rec_class": "Person"
               }, 
-              "role": "edt"
+              "roles": [
+                "edt"
+              ]
             }
           ], 
           "rec_class": "Document", 
@@ -233,9 +251,9 @@
         "Raven Press, Ltd."
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.201420", 
-      "rec_id": "03c84468-55b9-11e3-8748-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.201426", 
+      "rec_created_date": "2013-12-10T15:19:43.084717", 
+      "rec_id": "1d0915b5-61a6-11e3-8cbc-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:43.084723", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -254,7 +272,9 @@
             "name_given": "N.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -262,7 +282,9 @@
             "name_given": "U.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -311,9 +333,9 @@
         "Inter-Research"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.202312", 
-      "rec_id": "03c86742-55b9-11e3-94c1-406c8f07170d", 
-      "rec_modified_date": "2013-11-25T11:04:47.202318", 
+      "rec_created_date": "2013-12-10T15:19:43.085611", 
+      "rec_id": "1d0938ab-61a6-11e3-92d3-406c8f07170d", 
+      "rec_modified_date": "2013-12-10T15:19:43.085617", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -338,7 +360,9 @@
             "name_given": "WE", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -346,7 +370,9 @@
             "name_given": "J.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -354,7 +380,9 @@
             "name_given": "M.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1997", 
@@ -376,7 +404,9 @@
                 "name_given": "B.", 
                 "rec_class": "Person"
               }, 
-              "role": "edt"
+              "roles": [
+                "edt"
+              ]
             }, 
             {
               "agent": {
@@ -384,7 +414,9 @@
                 "name_given": "J.", 
                 "rec_class": "Person"
               }, 
-              "role": "edt"
+              "roles": [
+                "edt"
+              ]
             }, 
             {
               "agent": {
@@ -392,7 +424,9 @@
                 "name_given": "DWH", 
                 "rec_class": "Person"
               }, 
-              "role": "edt"
+              "roles": [
+                "edt"
+              ]
             }
           ], 
           "identifiers": [
@@ -424,9 +458,9 @@
         "Cambridge University Press (UK)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.203864", 
+      "rec_created_date": "2013-12-10T15:19:43.087151", 
       "rec_id": "Arntz++1997", 
-      "rec_modified_date": "2013-11-25T11:04:47.203870", 
+      "rec_modified_date": "2013-12-10T15:19:43.087157", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -445,7 +479,9 @@
             "name_given": "KR", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -461,7 +497,9 @@
                 "name_given": "DN", 
                 "rec_class": "Person"
               }, 
-              "role": "edt"
+              "roles": [
+                "edt"
+              ]
             }, 
             {
               "agent": {
@@ -469,7 +507,9 @@
                 "name_given": "GS", 
                 "rec_class": "Person"
               }, 
-              "role": "edt"
+              "roles": [
+                "edt"
+              ]
             }
           ], 
           "identifiers": [
@@ -492,9 +532,9 @@
         "Blackwell Science Ltd"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.204891", 
+      "rec_created_date": "2013-12-10T15:19:43.088172", 
       "rec_id": "Arrigo2003", 
-      "rec_modified_date": "2013-11-25T11:04:47.204897", 
+      "rec_modified_date": "2013-12-10T15:19:43.088179", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -513,7 +553,9 @@
             "name_given": "H.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -521,7 +563,9 @@
             "name_given": "M.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -529,7 +573,9 @@
             "name_given": "I.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -569,9 +615,9 @@
         "Springer-Verlag"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.205873", 
+      "rec_created_date": "2013-12-10T15:19:43.089121", 
       "rec_id": "Auel++2003", 
-      "rec_modified_date": "2013-11-25T11:04:47.205879", 
+      "rec_modified_date": "2013-12-10T15:19:43.089127", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -596,7 +642,9 @@
             "name_given": "A.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1994", 
@@ -622,9 +670,9 @@
         "Universität Kiel"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.206513", 
+      "rec_created_date": "2013-12-10T15:19:43.089744", 
       "rec_id": "Benthien1994", 
-      "rec_modified_date": "2013-11-25T11:04:47.206518", 
+      "rec_modified_date": "2013-12-10T15:19:43.089749", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -643,7 +691,9 @@
             "name_given": "A.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1996", 
@@ -680,9 +730,9 @@
         "Alfred-Wegener Institut für Meeres- und Polarforschung"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.207066", 
+      "rec_created_date": "2013-12-10T15:19:43.090297", 
       "rec_id": "Bochert1996", 
-      "rec_modified_date": "2013-11-25T11:04:47.207072", 
+      "rec_modified_date": "2013-12-10T15:19:43.090303", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -701,7 +751,9 @@
             "name_given": "C.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1997", 
@@ -738,9 +790,9 @@
         "Alfred-Wegener Institut für Meeres- und Polarforschung"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.207606", 
+      "rec_created_date": "2013-12-10T15:19:43.090853", 
       "rec_id": "Haas1997", 
-      "rec_modified_date": "2013-11-25T11:04:47.207612", 
+      "rec_modified_date": "2013-12-10T15:19:43.090861", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -759,7 +811,9 @@
             "name_given": "A.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -767,7 +821,9 @@
             "name_given": "C.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -775,7 +831,9 @@
             "name_given": "G.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -783,7 +841,9 @@
             "name_given": "A.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -791,7 +851,9 @@
             "name_given": "D.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -799,7 +861,9 @@
             "name_given": "GS", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -807,7 +871,9 @@
             "name_given": "DN", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -847,9 +913,9 @@
         "Springer-Verlag"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.209231", 
+      "rec_created_date": "2013-12-10T15:19:43.092552", 
       "rec_id": "Krell++2003", 
-      "rec_modified_date": "2013-11-25T11:04:47.209238", 
+      "rec_modified_date": "2013-12-10T15:19:43.092558", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -874,7 +940,9 @@
             "name_given": "A.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -882,7 +950,9 @@
             "name_given": "H.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -890,7 +960,9 @@
             "name_given": "D.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1997", 
@@ -912,7 +984,9 @@
                 "name_given": "B.", 
                 "rec_class": "Person"
               }, 
-              "role": "edt"
+              "roles": [
+                "edt"
+              ]
             }, 
             {
               "agent": {
@@ -920,7 +994,9 @@
                 "name_given": "J.", 
                 "rec_class": "Person"
               }, 
-              "role": "edt"
+              "roles": [
+                "edt"
+              ]
             }, 
             {
               "agent": {
@@ -928,7 +1004,9 @@
                 "name_given": "DWH", 
                 "rec_class": "Person"
               }, 
-              "role": "edt"
+              "roles": [
+                "edt"
+              ]
             }
           ], 
           "identifiers": [
@@ -959,9 +1037,9 @@
         "Cambridge University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.210879", 
+      "rec_created_date": "2013-12-10T15:19:43.094168", 
       "rec_id": "McMinn++1997", 
-      "rec_modified_date": "2013-11-25T11:04:47.210887", 
+      "rec_modified_date": "2013-12-10T15:19:43.094174", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -980,7 +1058,9 @@
             "name_given": "LK", 
             "rec_class": "Person"
           }, 
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }, 
         {
           "agent": {
@@ -988,7 +1068,9 @@
             "name_given": "J.", 
             "rec_class": "Person"
           }, 
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }
       ], 
       "date_issued": "1990", 
@@ -1014,9 +1096,9 @@
         "British Antarctic Survey"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.211749", 
+      "rec_created_date": "2013-12-10T15:19:43.094988", 
       "rec_id": "Medlin+Priddle1990", 
-      "rec_modified_date": "2013-11-25T11:04:47.211756", 
+      "rec_modified_date": "2013-12-10T15:19:43.094993", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -1035,7 +1117,9 @@
             "name_given": "T.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -1043,7 +1127,9 @@
             "name_given": "M.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -1051,7 +1137,9 @@
             "name_given": "GS", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -1122,9 +1210,9 @@
         "Inter-Research"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.212772", 
+      "rec_created_date": "2013-12-10T15:19:43.096002", 
       "rec_id": "Mock++2003", 
-      "rec_modified_date": "2013-11-25T11:04:47.212778", 
+      "rec_modified_date": "2013-12-10T15:19:43.096009", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -1149,7 +1237,9 @@
             "name_given": "I.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -1157,7 +1247,9 @@
             "name_given": "T.", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -1197,9 +1289,9 @@
         "Springer-Verlag"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.213612", 
+      "rec_created_date": "2013-12-10T15:19:43.096816", 
       "rec_id": "Schewe+Soltwedel2003", 
-      "rec_modified_date": "2013-11-25T11:04:47.213617", 
+      "rec_modified_date": "2013-12-10T15:19:43.096822", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -1224,7 +1316,9 @@
             "name_given": "DN", 
             "rec_class": "Person"
           }, 
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }, 
         {
           "agent": {
@@ -1232,7 +1326,9 @@
             "name_given": "GS", 
             "rec_class": "Person"
           }, 
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -1264,9 +1360,9 @@
         "Blackwell Science Ltd"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.214407", 
+      "rec_created_date": "2013-12-10T15:19:43.097583", 
       "rec_id": "Thomas+Dieckmann2003", 
-      "rec_modified_date": "2013-11-25T11:04:47.214413", 
+      "rec_modified_date": "2013-12-10T15:19:43.097589", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -1291,7 +1387,9 @@
             "name_given": "YuN", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -1299,7 +1397,9 @@
             "name_given": "VD", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2003", 
@@ -1352,9 +1452,9 @@
       "part_page_begin": "24", 
       "part_page_end": "31", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.215201", 
+      "rec_created_date": "2013-12-10T15:19:43.098362", 
       "rec_id": "Zhukov+Fedorov2003", 
-      "rec_modified_date": "2013-11-25T11:04:47.215207", 
+      "rec_modified_date": "2013-12-10T15:19:43.098368", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 

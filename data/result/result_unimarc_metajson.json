@@ -22,7 +22,9 @@
             "name_given": "Pierre-Joseph", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1848", 
@@ -54,7 +56,7 @@
       "rec_class": "Document", 
       "rec_created_date": "2000-06-16", 
       "rec_id": "sciencespo_catalog_0001071658", 
-      "rec_modified_date": "2013-11-25T11:04:47.432649", 
+      "rec_modified_date": "2013-12-10T15:19:43.317039", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "title": "Avertissement aux propriétaires ou Lettres à M. Considérant,... sur une défense de la propriété"
@@ -79,7 +81,9 @@
             "name_given": "Jean-Baptiste-Joseph", 
             "rec_class": "Person"
           }, 
-          "role": "dub"
+          "roles": [
+            "dub"
+          ]
         }, 
         {
           "agent": {
@@ -89,7 +93,9 @@
             "name_given": "Gilbert-Joseph-Gaspard de", 
             "rec_class": "Person"
           }, 
-          "role": "pfr"
+          "roles": [
+            "pfr"
+          ]
         }
       ], 
       "date_issued": "1821", 
@@ -122,7 +128,7 @@
       "rec_class": "Document", 
       "rec_created_date": "2006-03-21", 
       "rec_id": "sciencespo_catalog_0000838760", 
-      "rec_modified_date": "2013-11-25T11:04:47.434247", 
+      "rec_modified_date": "2013-12-10T15:19:43.318602", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "target_audiences": [
@@ -149,7 +155,9 @@
             "name_given": "Henri", 
             "rec_class": "Person"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }
       ], 
       "date_issued": "1919", 
@@ -178,7 +186,7 @@
       "rec_class": "Document", 
       "rec_created_date": "1990-01-01", 
       "rec_id": "sciencespo_catalog_0000160883", 
-      "rec_modified_date": "2013-11-25T11:04:47.435587", 
+      "rec_modified_date": "2013-12-10T15:19:43.319911", 
       "rec_status": "private", 
       "rec_type": "Journal", 
       "title": "Progrès civique", 
@@ -229,9 +237,9 @@
         "M. Lévy"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.436819", 
+      "rec_created_date": "2013-12-10T15:19:43.321160", 
       "rec_id": "sciencespo_catalog_0000289276", 
-      "rec_modified_date": "2013-11-25T11:04:47.436825", 
+      "rec_modified_date": "2013-12-10T15:19:43.321166", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "title": "socialisme", 
@@ -258,7 +266,9 @@
             "name_given": "Benoît-Jules", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1850", 
@@ -288,9 +298,9 @@
         "chez l'auteur"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.438096", 
+      "rec_created_date": "2013-12-10T15:19:43.322420", 
       "rec_id": "sciencespo_catalog_0001187100", 
-      "rec_modified_date": "2013-11-25T11:04:47.438102", 
+      "rec_modified_date": "2013-12-10T15:19:43.322426", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "target_audiences": [
@@ -347,9 +357,9 @@
         "Garnier frères‎"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.439314", 
+      "rec_created_date": "2013-12-10T15:19:43.323633", 
       "rec_id": "sciencespo_catalog_0001187098", 
-      "rec_modified_date": "2013-11-25T11:04:47.439319", 
+      "rec_modified_date": "2013-12-10T15:19:43.323639", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "target_audiences": [
@@ -377,7 +387,9 @@
             "name_given": "Désiré", 
             "rec_class": "Person"
           }, 
-          "role": "ctb"
+          "roles": [
+            "ctb"
+          ]
         }, 
         {
           "agent": {
@@ -414,9 +426,9 @@
         "Assemblée nationale"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.440744", 
+      "rec_created_date": "2013-12-10T15:19:43.325098", 
       "rec_id": "sciencespo_catalog_0000588913", 
-      "rec_modified_date": "2013-11-25T11:04:47.440751", 
+      "rec_modified_date": "2013-12-10T15:19:43.325105", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "target_audiences": [
@@ -460,7 +472,7 @@
       "rec_class": "Document", 
       "rec_created_date": "2006-03-02", 
       "rec_id": "sciencespo_catalog_0000957338", 
-      "rec_modified_date": "2013-11-25T11:04:47.441802", 
+      "rec_modified_date": "2013-12-10T15:19:43.326142", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "target_audiences": [
@@ -487,7 +499,9 @@
             "name_given": "Louis‎", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1849", 
@@ -517,9 +531,9 @@
         "Garnier frères"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.443094", 
+      "rec_created_date": "2013-12-10T15:19:43.327419", 
       "rec_id": "sciencespo_catalog_0001187099", 
-      "rec_modified_date": "2013-11-25T11:04:47.443100", 
+      "rec_modified_date": "2013-12-10T15:19:43.327425", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "target_audiences": [
@@ -548,7 +562,9 @@
             "name_given": "Armand", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1904", 
@@ -580,7 +596,7 @@
       "rec_class": "Document", 
       "rec_created_date": "1993-08-30", 
       "rec_id": "sciencespo_catalog_0001217924", 
-      "rec_modified_date": "2013-11-25T11:04:47.444698", 
+      "rec_modified_date": "2013-12-10T15:19:43.329014", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "target_audiences": [
@@ -608,7 +624,9 @@
             "name_given": "Armand", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1904", 
@@ -640,7 +658,7 @@
       "rec_class": "Document", 
       "rec_created_date": "1993-08-30", 
       "rec_id": "sciencespo_catalog_0001217924", 
-      "rec_modified_date": "2013-11-25T11:04:47.446225", 
+      "rec_modified_date": "2013-12-10T15:19:43.330539", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "target_audiences": [
@@ -692,9 +710,9 @@
         "M. Lévy"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.447577", 
+      "rec_created_date": "2013-12-10T15:19:43.331887", 
       "rec_id": "sciencespo_catalog_0000289276", 
-      "rec_modified_date": "2013-11-25T11:04:47.447585", 
+      "rec_modified_date": "2013-12-10T15:19:43.331894", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "title": "socialisme", 
@@ -719,7 +737,9 @@
             "name_given": "Louis‎", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1849", 
@@ -749,9 +769,9 @@
         "Garnier frères"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.448870", 
+      "rec_created_date": "2013-12-10T15:19:43.333172", 
       "rec_id": "sciencespo_catalog_0001187099", 
-      "rec_modified_date": "2013-11-25T11:04:47.448876", 
+      "rec_modified_date": "2013-12-10T15:19:43.333178", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "target_audiences": [
@@ -809,9 +829,9 @@
         "Garnier frères‎"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.450122", 
+      "rec_created_date": "2013-12-10T15:19:43.334387", 
       "rec_id": "sciencespo_catalog_0001187098", 
-      "rec_modified_date": "2013-11-25T11:04:47.450128", 
+      "rec_modified_date": "2013-12-10T15:19:43.334393", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "target_audiences": [
@@ -839,7 +859,9 @@
             "name_given": "Benoît-Jules", 
             "rec_class": "Person"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "1850", 
@@ -869,9 +891,9 @@
         "chez l'auteur"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T11:04:47.451395", 
+      "rec_created_date": "2013-12-10T15:19:43.335671", 
       "rec_id": "sciencespo_catalog_0001187100", 
-      "rec_modified_date": "2013-11-25T11:04:47.451401", 
+      "rec_modified_date": "2013-12-10T15:19:43.335677", 
       "rec_status": "private", 
       "rec_type": "Book", 
       "target_audiences": [
@@ -897,7 +919,9 @@
             "name_given": "Henri", 
             "rec_class": "Person"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }
       ], 
       "date_issued": "1919", 
@@ -926,7 +950,7 @@
       "rec_class": "Document", 
       "rec_created_date": "1990-01-01", 
       "rec_id": "sciencespo_catalog_0000160883", 
-      "rec_modified_date": "2013-11-25T11:04:47.452800", 
+      "rec_modified_date": "2013-12-10T15:19:43.337047", 
       "rec_status": "private", 
       "rec_type": "Journal", 
       "title": "Progrès civique", 

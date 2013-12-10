@@ -4,7 +4,7 @@
   "records": [
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2e97"
+        "$oid": "52a7239bf9d26d2b4a70b177"
       }, 
       "citations": {
         "html": {
@@ -26,7 +26,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860j0h0m"
           }, 
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }, 
         {
           "affiliation": {
@@ -42,7 +44,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }
       ], 
       "date_issued": "2012-12", 
@@ -80,9 +84,9 @@
         "Oxford University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.117829", 
+      "rec_created_date": "2013-12-10T15:22:16.396734", 
       "rec_id": "2441/dambferfb7dfprc9m26c8c8o3", 
-      "rec_modified_date": "2013-11-25T10:43:01.523264", 
+      "rec_modified_date": "2013-12-10T15:22:19.810389", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "Book", 
@@ -107,7 +111,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2e9c"
+        "$oid": "52a7239bf9d26d2b4a70b17c"
       }, 
       "citations": {
         "html": {
@@ -129,7 +133,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_created": "2011-05", 
@@ -198,9 +204,9 @@
       "part_issue": "3", 
       "part_volume": "36", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.621263", 
+      "rec_created_date": "2013-12-10T15:22:18.055118", 
       "rec_id": "2441/dambferfb7dfprc9m2h2og5ig", 
-      "rec_modified_date": "2013-11-25T10:43:01.527845", 
+      "rec_modified_date": "2013-12-10T15:22:19.815291", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "BookReview", 
@@ -214,7 +220,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/dambferfb7dfprc9m2h2pat0k"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -223,7 +231,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/dambferfb7dfprc9m2h2pi026"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }
           ], 
           "date_issued": "2010", 
@@ -259,7 +269,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2e98"
+        "$oid": "52a7239bf9d26d2b4a70b178"
       }, 
       "citations": {
         "html": {
@@ -274,7 +284,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/eo6779thqgm5r489makgk11ai"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -290,7 +302,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_sort": {
@@ -318,7 +332,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eo6779thqgm5r489makgmgk26"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -327,7 +343,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eo6779thqgm5r489makgn240p"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "affiliation": {
@@ -343,7 +361,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/3cr7jj61bs68cvg99a9b1e21k"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -352,7 +372,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eo6779thqgm5r489makgnal26"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }
           ], 
           "date_issued": "2013-05", 
@@ -392,9 +414,9 @@
       "part_page_begin": "186", 
       "part_page_end": "196", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.203194", 
+      "rec_created_date": "2013-12-10T15:22:16.746637", 
       "rec_id": "2441/eo6779thqgm5r489makgoai85", 
-      "rec_modified_date": "2013-11-25T10:43:01.524250", 
+      "rec_modified_date": "2013-12-10T15:22:19.811454", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "BookPart", 
@@ -416,7 +438,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2e99"
+        "$oid": "52a7239bf9d26d2b4a70b179"
       }, 
       "citations": {
         "html": {
@@ -438,7 +460,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860ngch2"
           }, 
-          "role": "ths"
+          "roles": [
+            "ths"
+          ]
         }, 
         {
           "affiliation": {
@@ -454,7 +478,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5l6uh8ogmqildh09h6l10gtqo"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2009-09", 
@@ -484,9 +510,9 @@
         "Ecole d'Economie de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.305440", 
+      "rec_created_date": "2013-12-10T15:22:17.094035", 
       "rec_id": "2441/5l6uh8ogmqildh09h6m8hj429", 
-      "rec_modified_date": "2013-11-25T10:43:01.525201", 
+      "rec_modified_date": "2013-12-10T15:22:19.812815", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "MasterThesis", 
@@ -509,7 +535,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2e9a"
+        "$oid": "52a7239bf9d26d2b4a70b17a"
       }, 
       "citations": {
         "html": {
@@ -524,7 +550,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/3fm4jv3k2s99lms9jb5i1ag8p"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -540,7 +568,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q568qo"
           }, 
-          "role": "ths"
+          "roles": [
+            "ths"
+          ]
         }
       ], 
       "date_issued": "2012-02", 
@@ -588,9 +618,9 @@
         "Institut d'Etudes Politiques de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.522330", 
+      "rec_created_date": "2013-12-10T15:22:17.856303", 
       "rec_id": "2441/3fm4jv3k2s99lms9jb5i5asil", 
-      "rec_modified_date": "2013-11-25T10:43:01.525990", 
+      "rec_modified_date": "2013-12-10T15:22:19.813646", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "DoctoralThesis", 
@@ -615,7 +645,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2e9b"
+        "$oid": "52a7239bf9d26d2b4a70b17b"
       }, 
       "citations": {
         "html": {
@@ -647,7 +677,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q5apa2"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -663,7 +695,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860lchjn"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -679,7 +713,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860lci21"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-01", 
@@ -736,9 +772,9 @@
       "part_page_end": "12", 
       "part_volume": "89", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.569248", 
+      "rec_created_date": "2013-12-10T15:22:17.923317", 
       "rec_id": "2441/f4rshpf3v1umfa09lb0joe5g5", 
-      "rec_modified_date": "2013-11-25T10:43:01.527014", 
+      "rec_modified_date": "2013-12-10T15:22:19.814394", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "JournalArticle", 
@@ -750,7 +786,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2e9d"
+        "$oid": "52a7239bf9d26d2b4a70b17d"
       }, 
       "citations": {
         "html": {
@@ -765,7 +801,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9k0sklgecj"
           }, 
-          "role": "ivr"
+          "roles": [
+            "ivr"
+          ]
         }, 
         {
           "affiliation": {
@@ -781,7 +819,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q58ub0"
           }, 
-          "role": "ive"
+          "roles": [
+            "ive"
+          ]
         }
       ], 
       "date_issued": "2007-11", 
@@ -840,9 +880,9 @@
       "part_page_begin": "115", 
       "part_page_end": "131", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.672593", 
+      "rec_created_date": "2013-12-10T15:22:18.156872", 
       "rec_id": "2441/53r60a8s3kup1vc9k0skmec8o", 
-      "rec_modified_date": "2013-11-25T10:43:01.528652", 
+      "rec_modified_date": "2013-12-10T15:22:19.816049", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "InterviewArticle", 
@@ -853,7 +893,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2e9e"
+        "$oid": "52a7239bf9d26d2b4a70b17e"
       }, 
       "citations": {
         "html": {
@@ -875,7 +915,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q56sp5"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-04-08", 
@@ -916,9 +958,9 @@
       "part_page_begin": "11", 
       "part_page_end": "00", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.716327", 
+      "rec_created_date": "2013-12-10T15:22:18.218309", 
       "rec_id": "2441/eo6779thqgm5r489matggisrp", 
-      "rec_modified_date": "2013-11-25T10:43:01.529424", 
+      "rec_modified_date": "2013-12-10T15:22:19.816755", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "NewspaperArticle", 
@@ -929,7 +971,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2e9f"
+        "$oid": "52a7239bf9d26d2b4a70b17f"
       }, 
       "citations": {
         "html": {
@@ -951,7 +993,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/eu4vqp9ompqllr09hga9pgk39"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012-12", 
@@ -1007,9 +1051,9 @@
       "part_issue": "69", 
       "part_volume": "2012/1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.758515", 
+      "rec_created_date": "2013-12-10T15:22:18.287944", 
       "rec_id": "2441/eo6779thqgm5r489m6ock14ik", 
-      "rec_modified_date": "2013-11-25T10:43:01.530190", 
+      "rec_modified_date": "2013-12-10T15:22:19.817496", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "PeriodicalIssue", 
@@ -1020,7 +1064,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2ea0"
+        "$oid": "52a7239bf9d26d2b4a70b180"
       }, 
       "citations": {
         "html": {
@@ -1042,7 +1086,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q5908j"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_sort": {
@@ -1070,7 +1116,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eo6779thqgm5r489mam2pgtr2"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -1081,7 +1129,9 @@
                 "rec_class": "Event", 
                 "title": "L’anthropologie de Marcel Gauchet : analyse et débats"
               }, 
-              "role": "aut"
+              "roles": [
+                "aut"
+              ]
             }
           ], 
           "date_issued": "2013-02", 
@@ -1122,9 +1172,9 @@
       "part_page_begin": "69", 
       "part_page_end": "86", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.856972", 
+      "rec_created_date": "2013-12-10T15:22:18.361143", 
       "rec_id": "2441/eo6779thqgm5r489mam352ps9", 
-      "rec_modified_date": "2013-11-25T10:43:01.530927", 
+      "rec_modified_date": "2013-12-10T15:22:19.818188", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "ConferencePaper", 
@@ -1138,11 +1188,11 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2ea1"
+        "$oid": "52a7239bf9d26d2b4a70b181"
       }, 
       "citations": {
         "html": {
-          "mla": "<span class=\"creator\">Governing Paris and Mexico</span>, and <span class=\"creator\">Charlotte Halpern</span>. <span class=\"title\">Airport companies as silent partners?: The slow awakening of Aéroports de Paris</span>. <span class=\"date\">27 feb. 2013</span>. "
+          "mla": "<span class=\"creator\">Governing Paris and Mexico</span>, and <span class=\"creator\">Charlotte Halpern</span>. <span class=\"title\">Airport companies as silent partners? The slow awakening of Aéroports de Paris</span>. <span class=\"date\">27 feb. 2013</span>. "
         }
       }, 
       "creators": [
@@ -1155,7 +1205,9 @@
             "rec_class": "Event", 
             "title": "Governing Paris and Mexico"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1171,7 +1223,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_created": "2013-02-27", 
@@ -1208,21 +1262,20 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.907157", 
+      "rec_created_date": "2013-12-10T15:22:18.434076", 
       "rec_id": "2441/eo6779thqgm5r489m4m2k6d4l", 
-      "rec_modified_date": "2013-11-25T10:43:01.531693", 
+      "rec_modified_date": "2013-12-10T15:22:19.819047", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "ConferenceContribution", 
       "sets": [
         "SHS:SCIPO"
       ], 
-      "title": "Airport companies as silent partners?", 
-      "title_sub": "The slow awakening of Aéroports de Paris"
+      "title": "Airport companies as silent partners? The slow awakening of Aéroports de Paris"
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2ea2"
+        "$oid": "52a7239bf9d26d2b4a70b182"
       }, 
       "citations": {
         "html": {
@@ -1244,7 +1297,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5k7940uimfdf9c8990p900c2l"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -1253,7 +1308,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/7t638g2jjsquujs9mcc0jeu8l"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -1262,7 +1319,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/7t638g2jjsquujs9mcc0jii04"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -1271,7 +1330,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/7t638g2jjsquujs9mcc0k2e43"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -1282,7 +1343,9 @@
             "rec_class": "Event", 
             "title": "Raymond Saleilles et au-delà"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-03", 
@@ -1313,9 +1376,9 @@
         "Dalloz"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:00.950667", 
+      "rec_created_date": "2013-12-10T15:22:18.491772", 
       "rec_id": "2441/7t638g2jjsquujs9mcc0mcg2k", 
-      "rec_modified_date": "2013-11-25T10:43:01.532311", 
+      "rec_modified_date": "2013-12-10T15:22:19.819637", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "ConferenceProceedings", 
@@ -1333,7 +1396,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2ea3"
+        "$oid": "52a7239bf9d26d2b4a70b183"
       }, 
       "citations": {
         "html": {
@@ -1348,7 +1411,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/eu4vqp9ompqllr09hh1aij5g1"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1364,7 +1429,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54c93"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1380,7 +1447,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010-12-16", 
@@ -1404,17 +1473,20 @@
         "fr"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:01.072676", 
+      "rec_created_date": "2013-12-10T15:22:18.583146", 
       "rec_id": "2441/eu4vqp9ompqllr09hh1amcck6", 
-      "rec_modified_date": "2013-11-25T10:43:01.533074", 
+      "rec_modified_date": "2013-12-10T15:22:19.820395", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "VideoRecording", 
       "resources": [
         {
-          "dateLastAccessed": "2011-10-17", 
+          "access_rights": "openAccess", 
           "rec_class": "Resource", 
-          "rec_type": "remote", 
+          "rec_state": "published", 
+          "rec_type": "ResourceRemote", 
+          "relation_type": "publication", 
+          "relation_version": "publishedVersion", 
           "url": "http://vimeo.com/17810190"
         }
       ], 
@@ -1425,7 +1497,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2ea4"
+        "$oid": "52a7239bf9d26d2b4a70b184"
       }, 
       "citations": {
         "html": {
@@ -1460,7 +1532,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/c8dmi8nm4pdjkuc9g8m3565k5"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1476,7 +1550,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/c8dmi8nm4pdjkuc9g8m34i593"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1492,7 +1568,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q5aqa5"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_created": "2011", 
@@ -1524,9 +1602,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:01.122223", 
+      "rec_created_date": "2013-12-10T15:22:18.646104", 
       "rec_id": "2441/c8dmi8nm4pdjkuc9g8mb1088n", 
-      "rec_modified_date": "2013-11-25T10:43:01.533697", 
+      "rec_modified_date": "2013-12-10T15:22:19.820961", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "Preprint", 
@@ -1539,7 +1617,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2ea5"
+        "$oid": "52a7239bf9d26d2b4a70b185"
       }, 
       "citations": {
         "html": {
@@ -1554,7 +1632,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860ig2b0"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -1563,7 +1643,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5rkqqmvrn4tl22s9mc0slh0gj"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1579,7 +1661,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-04", 
@@ -1622,9 +1706,9 @@
         "CEE (Sciences Po)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:01.182081", 
+      "rec_created_date": "2013-12-10T15:22:18.890173", 
       "rec_id": "2441/5rkqqmvrn4tl22s9mc0sob64l", 
-      "rec_modified_date": "2013-11-25T10:43:01.534476", 
+      "rec_modified_date": "2013-12-10T15:22:19.821722", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "Report", 
@@ -1646,7 +1730,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2ea6"
+        "$oid": "52a7239bf9d26d2b4a70b186"
       }, 
       "citations": {
         "html": {
@@ -1668,7 +1752,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_sort": {
@@ -1696,7 +1782,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eu4vqp9ompqllr09hd5rg8sg2"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -1705,7 +1793,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eu4vqp9ompqllr09hd5rge0oj"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -1714,7 +1804,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eu4vqp9ompqllr09hd5rg4t35"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }
           ], 
           "date_issued": "2011", 
@@ -1744,9 +1836,9 @@
       "part_page_begin": "89", 
       "part_page_end": "98", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:01.237484", 
+      "rec_created_date": "2013-12-10T15:22:19.008527", 
       "rec_id": "2441/eu4vqp9ompqllr09hd5rha0il", 
-      "rec_modified_date": "2013-11-25T10:43:01.535221", 
+      "rec_modified_date": "2013-12-10T15:22:19.822543", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "ReportPart", 
@@ -1757,7 +1849,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2ea7"
+        "$oid": "52a7239bf9d26d2b4a70b187"
       }, 
       "citations": {
         "html": {
@@ -1779,7 +1871,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q571ko"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "affiliation": {
@@ -1795,7 +1889,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }
       ], 
       "date_created": "2012", 
@@ -1824,9 +1920,9 @@
         "Sciences Po - Atelier de cartographie"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:01.283046", 
+      "rec_created_date": "2013-12-10T15:22:19.070509", 
       "rec_id": "2441/eu4vqp9ompqllr09ij4jnag10", 
-      "rec_modified_date": "2013-11-25T10:43:01.535891", 
+      "rec_modified_date": "2013-12-10T15:22:19.823220", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "WebSite", 
@@ -1853,7 +1949,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2ea8"
+        "$oid": "52a7239bf9d26d2b4a70b188"
       }, 
       "citations": {
         "html": {
@@ -1890,7 +1986,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/dambferfb7dfprc9lj6bkb4sj"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1906,7 +2004,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9kc6cl8m9l"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-01", 
@@ -1950,9 +2050,9 @@
         "Sciences Po - ECON"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:01.429339", 
+      "rec_created_date": "2013-12-10T15:22:19.477435", 
       "rec_id": "2441/dambferfb7dfprc9lj6bo200k", 
-      "rec_modified_date": "2013-11-25T10:43:01.536510", 
+      "rec_modified_date": "2013-12-10T15:22:19.823848", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "WorkingPaper", 
@@ -1985,7 +2085,7 @@
     }, 
     {
       "_id": {
-        "$oid": "52931ba53b71f303731c2ea9"
+        "$oid": "52a7239bf9d26d2b4a70b189"
       }, 
       "citations": {
         "html": {
@@ -2007,7 +2107,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q56d08"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -2023,7 +2125,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q572ci"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -2039,14 +2143,18 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q58l17"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
             "name": "Département analyse et prévision (OFCE)", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -2062,7 +2170,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5l6uh8ogmqildh09h6l10gtqo"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012-03-29", 
@@ -2096,9 +2206,9 @@
         "fr"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-25T10:43:01.522507", 
+      "rec_created_date": "2013-12-10T15:22:19.809722", 
       "rec_id": "2441/c6t1fl36hv9s7q89j8pa2cp3i", 
-      "rec_modified_date": "2013-11-25T10:43:01.537108", 
+      "rec_modified_date": "2013-12-10T15:22:19.824445", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "JournalArticle", 
