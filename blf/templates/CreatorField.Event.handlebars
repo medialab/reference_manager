@@ -17,7 +17,15 @@
   </fieldset>
   <fieldset>
     <label class="col-3">{{t "customInputs:CreatorField.event.country" }}</label>
-    <input data-attribute="country" class="col-3" type="text" />
+    <select class="col-3 select-event-country">
+      {{#each creatorCountries }}
+        {{#if this.separator }}
+          <option class="disabled" disabled="disabled">---</option>
+        {{else}}
+          <option value="{{ this.type_id }}">{{ this.label }}</option>
+        {{/if}}
+      {{/each}}
+    </select>
   </fieldset>
   <fieldset>
     <label class="col-3">{{t "customInputs:CreatorField.event.date_begin" }}</label>
