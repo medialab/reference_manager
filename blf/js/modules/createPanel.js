@@ -53,15 +53,17 @@
     var _currentToKeep = {},
         _propertiesToAdd = {
           rec_class: 'Document',
-          rec_metajson: 1
         },
         _toKeep = [
-          'rec_source',
+          '_id',
           'rec_class',
-          'rec_type',
+          'rec_created_date',
           'rec_id',
-          'nonce',
-          '_id'
+          'rec_modified_date',
+          'rec_source',
+          'rec_status',
+          'rec_type',
+          'nonce'
         ],
         _components = [];
 
@@ -89,6 +91,8 @@
         component = _components[i];
         value = blf.modules.createPanel.getData(component, data);
 
+        // todo : don't set empty value
+        controller.log('Property: "' + component.property + '" Value: "' + value + '"');
         if (value !== undefined && component.property !== undefined)
           data[component.property] = value;
       }
