@@ -221,7 +221,7 @@ def search(corpus, search_query):
                     obid = ObjectId(search_term["index"])
                     search_indexes.append({"_id": obid})
                 except (InvalidId, TypeError):
-                    search_indexes.append({"or": [{"rec_id": search_term["value"]}, {"identifiers.value": search_term["value"]}]})
+                    search_indexes.append({"$or": [{"rec_id": {"$regex": search_term["value"], "$options": 'i'}}, {"identifiers.value": {"$regex": search_term["value"], "$options": 'i'}}]})
 
             elif search_term["index"] == "title":
                 title_terms = []
