@@ -2695,6 +2695,7 @@ def convert_rfc5646_to_iso639_2b(rfc5646):
 
 def convert_unknown_format_to_rfc5646(unknown):
     if unknown:
+        unknown = unknown.lower()
         result = None
         if unknown in iso639_1_to_iso639_2b:
             result = unknown
