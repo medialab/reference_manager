@@ -226,8 +226,6 @@
           data.rec_class = field.rec_class_component;
           data.rec_type = field.rec_type;
         } else {
-          delete data.rec_metajson;
-          delete data.rec_source;
           delete data.rec_class;
           delete data.rec_type;
         }
