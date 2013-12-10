@@ -1,80 +1,102 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <collection>
-<record>
-<leader>02296ckm0 2200325   450 </leader>
-<controlfield tag="001">1/1197852</controlfield>
-<controlfield tag="005">20101015050253.0</controlfield>
-<datafield tag="035" ind1=" " ind2=" "><subfield code="a">ppn143421883</subfield>
-</datafield>
-<datafield tag="100" ind1=" " ind2=" "><subfield code="a">20100421f1679    k  |0frey0103    ba</subfield>
-</datafield>
-<datafield tag="101" ind1="0" ind2=" "><subfield code="a">fre</subfield>
-</datafield>
-<datafield tag="102" ind1=" " ind2=" "><subfield code="a">FR</subfield>
-</datafield>
-<datafield tag="105" ind1=" " ind2=" "><subfield code="a">y   |||||||||</subfield>
-</datafield>
-<datafield tag="116" ind1=" " ind2=" "><subfield code="a">ii|b||||||bh    ||</subfield>
-</datafield>
-<datafield tag="200" ind1="1" ind2=" "><subfield code="a">[Procession de la châsse de sainte Geneviève]</subfield>
-</datafield>
-<datafield tag="210" ind1=" " ind2=" "><subfield code="a">[Paris]</subfield>
-<subfield code="d">1679</subfield>
-</datafield>
-<datafield tag="215" ind1=" " ind2=" "><subfield code="a">2 est.</subfield>
-<subfield code="c">burin</subfield>
-<subfield code="d">23 x 30,8 cm (pl. du haut, élt d&apos;impr.) et 28 x 30,8 cm  (pl. du bas, élt d&apos;impr.)</subfield>
-</datafield>
-<datafield tag="300" ind1=" " ind2=" "><subfield code="a">Image pour la Confrérie des porteurs de la châsse de sainte Geneviève, en 2 estampes. En haut : Procession de la châsse sortant de Notre-Dame pour se rendre à l&apos;abbaye Sainte-Geneviève. En bas : texte d&apos;une bulle du pape Clément VIII, contresigné en 1621 par le cardinal François de La Rochefoucauld, surmonté du titre suivant : &quot;Pardons et indulgences pour les seize porteurs de la chasse de Madame Saincte Geneviefve et vingtquatre attendans tous confreres&quot;; de part et d&apos;autre, dans des niches, les statues gravées de saint Denis et sainte Geneviève</subfield>
-</datafield>
-<datafield tag="303" ind1=" " ind2=" "><subfield code="a">En haut, sur une banderole : &quot;Sancta Genovefa ora pro nobis&quot;. Dans la marge inférieure, à g. : &quot;Franc.s Blanchard Conf.r Dedit An 1679&quot;, et à dr. : &quot;I. le Pautre fecit&quot;</subfield>
-</datafield>
-<datafield tag="304" ind1=" " ind2=" "><subfield code="a">Estampe du haut ornée d&apos;une bordure de feuilles de lauriers avec aux quatre angles des médaillons portant les armes du pape Innocent XI (en haut, à g.), du roi de France (en haut, à dr.), du cardinal de La Rochefoucauld (en bas, à g.) et de l&apos;abbaye de Sainte-Geneviève (en bas, à dr.)</subfield>
-</datafield>
-<datafield tag="317" ind1=" " ind2=" "><subfield code="5">751052116:395932122</subfield>
-<subfield code="a">Ancienne cote : EST ENCADREE 93 RES</subfield>
-</datafield>
-<datafield tag="321" ind1=" " ind2=" "><subfield code="a">IFF, XVIIe s., Jean Lepautre, n 111 et François Jollain, n 34.</subfield>
-</datafield>
-<datafield tag="325" ind1="1" ind2=" "><subfield code="a">Procession de la châsse de Sainte-Geneviève</subfield>
-<subfield code="u">http://bsg-cyber.univ-paris1.fr/images/reserve/est192(57)res.jpg</subfield>
-<subfield code="2">image</subfield>
-</datafield>
-<datafield tag="601" ind1="0" ind2="2"><subfield code="1">050437577</subfield>
-<subfield code="a">Abbaye Sainte-Geneviève</subfield>
-<subfield code="c">Paris</subfield>
-<subfield code="2">rameau</subfield>
-</datafield>
-<datafield tag="606" ind1=" " ind2=" "><subfield code="a">Processions</subfield>
-<subfield code="x">Ouvrages avant 1800</subfield>
-</datafield>
-<datafield tag="606" ind1=" " ind2=" "><subfield code="1">02746248X</subfield>
-<subfield code="a">Processions</subfield>
-<subfield code="2">rameau</subfield>
-<subfield code="8">frefre</subfield>
-</datafield>
-<datafield tag="620" ind1=" " ind2=" "><subfield code="d">Paris</subfield>
-</datafield>
-<datafield tag="700" ind1=" " ind2="1"><subfield code="1">032512228</subfield>
-<subfield code="a">Lepautre</subfield>
-<subfield code="b">Jean</subfield>
-<subfield code="f">1618-1682</subfield>
-<subfield code="4">530</subfield>
-</datafield>
-<datafield tag="801" ind1=" " ind2="3"><subfield code="a">FR</subfield>
-<subfield code="b">Abes</subfield>
-<subfield code="c">20101014</subfield>
-<subfield code="g">AFNOR</subfield>
-</datafield>
-<datafield tag="852"><subfield code="a">BSG</subfield>
-<subfield code="b">RES</subfield>
-<subfield code="c">MFA</subfield>
-<subfield code="e">20100422</subfield>
-<subfield code="h">EST 192 RES (P.57)</subfield>
-<subfield code="p">9104889656</subfield>
-<subfield code="q">9104889656</subfield>
-<subfield code="t">RPR</subfield>
-<subfield code="y">0</subfield>
-</datafield>
-</record>
+    <record>
+        <leader>02296ckm0 2200325   450 </leader>
+        <controlfield tag="001">1/1197852</controlfield>
+        <controlfield tag="005">20101015050253.0</controlfield>
+        <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">ppn143421883</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="100">
+            <subfield code="a">20100421f1679    k  |0frey0103    ba</subfield>
+        </datafield>
+        <datafield ind1="0" ind2=" " tag="101">
+            <subfield code="a">fre</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="102">
+            <subfield code="a">FR</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="105">
+            <subfield code="a">y   |||||||||</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="116">
+            <subfield code="a">ii|b||||||bh    ||</subfield>
+        </datafield>
+        <datafield ind1="1" ind2=" " tag="200">
+            <subfield code="a">[Procession de la châsse de sainte Geneviève]</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="210">
+            <subfield code="a">[Paris]</subfield>
+            <subfield code="d">1679</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="215">
+            <subfield code="a">2 est.</subfield>
+            <subfield code="c">burin</subfield>
+            <subfield code="d">23 x 30,8 cm (pl. du haut, élt d'impr.) et 28 x 30,8 cm  (pl. du bas, élt d'impr.)</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="300">
+            <subfield code="a">Image pour la Confrérie des porteurs de la châsse de sainte Geneviève, en 2 estampes. En haut : Procession de la châsse sortant de Notre-Dame pour se rendre à l'abbaye Sainte-Geneviève. En bas : texte d'une bulle du pape Clément VIII, contresigné en 1621 par le cardinal François de La Rochefoucauld, surmonté du titre suivant : &quot;Pardons et indulgences pour les seize porteurs de la chasse de Madame Saincte Geneviefve et vingtquatre attendans tous confreres&quot;; de part et d'autre, dans des niches, les statues gravées de saint Denis et sainte Geneviève</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="303">
+            <subfield code="a">En haut, sur une banderole : &quot;Sancta Genovefa ora pro nobis&quot;. Dans la marge inférieure, à g. : &quot;Franc.s Blanchard Conf.r Dedit An 1679&quot;, et à dr. : &quot;I. le Pautre fecit&quot;</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="304">
+            <subfield code="a">Estampe du haut ornée d'une bordure de feuilles de lauriers avec aux quatre angles des médaillons portant les armes du pape Innocent XI (en haut, à g.), du roi de France (en haut, à dr.), du cardinal de La Rochefoucauld (en bas, à g.) et de l'abbaye de Sainte-Geneviève (en bas, à dr.)</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="317">
+            <subfield code="5">751052116:395932122</subfield>
+            <subfield code="a">Ancienne cote : EST ENCADREE 93 RES</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="321">
+            <subfield code="a">IFF, XVIIe s., Jean Lepautre, n 111 et François Jollain, n 34.</subfield>
+        </datafield>
+        <datafield ind1="1" ind2=" " tag="325">
+            <subfield code="a">Procession de la châsse de Sainte-Geneviève</subfield>
+            <subfield code="u">http://bsg-cyber.univ-paris1.fr/images/reserve/est192(57)res.jpg</subfield>
+            <subfield code="2">image</subfield>
+        </datafield>
+        <datafield ind1="0" ind2="2" tag="601">
+            <subfield code="1">050437577</subfield>
+            <subfield code="a">Abbaye Sainte-Geneviève</subfield>
+            <subfield code="c">Paris</subfield>
+            <subfield code="2">rameau</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="606">
+            <subfield code="a">Processions</subfield>
+            <subfield code="x">Ouvrages avant 1800</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="606">
+            <subfield code="1">02746248X</subfield>
+            <subfield code="a">Processions</subfield>
+            <subfield code="2">rameau</subfield>
+            <subfield code="8">frefre</subfield>
+        </datafield>
+        <datafield ind1=" " ind2=" " tag="620">
+            <subfield code="d">Paris</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="1" tag="700">
+            <subfield code="1">032512228</subfield>
+            <subfield code="a">Lepautre</subfield>
+            <subfield code="b">Jean</subfield>
+            <subfield code="f">1618-1682</subfield>
+            <subfield code="4">530</subfield>
+        </datafield>
+        <datafield ind1=" " ind2="3" tag="801">
+            <subfield code="a">FR</subfield>
+            <subfield code="b">Abes</subfield>
+            <subfield code="c">20101014</subfield>
+            <subfield code="g">AFNOR</subfield>
+        </datafield>
+        <datafield tag="852">
+            <subfield code="a">BSG</subfield>
+            <subfield code="b">RES</subfield>
+            <subfield code="c">MFA</subfield>
+            <subfield code="e">20100422</subfield>
+            <subfield code="h">EST 192 RES (P.57)</subfield>
+            <subfield code="p">9104889656</subfield>
+            <subfield code="q">9104889656</subfield>
+            <subfield code="t">RPR</subfield>
+            <subfield code="y">0</subfield>
+        </datafield>
+    </record>
 </collection>

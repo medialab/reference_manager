@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mets:mets OBJID="cdsp_bequali_sp4" PROFILE="http://www.sciencespo.fr/bibliotheque/standards/numer/bequali.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ddi="http://www.icpsr.umich.edu/DDI" xmlns:mets="http://www.loc.gov/METS/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd http://www.icpsr.umich.edu/DDI http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd">
-  <mets:metsHdr CREATEDATE="2013-10-17T14:15:35.5Z" LASTMODDATE="2013-10-17T17:15:35.5Z" RECORDSTATUS="Complete">
+  <mets:metsHdr CREATEDATE="2013-12-04T14:15:35.5Z" LASTMODDATE="2013-12-04T17:15:35.5Z" RECORDSTATUS="Complete">
     <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
       <mets:name>Sciences Po | CDSP | beQuali</mets:name>
     </mets:agent>

@@ -1,12 +1,14 @@
 {
-  "col_id": "test", 
   "rec_class": "Collection", 
   "rec_metajson": 1, 
   "records": [
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fccc"
+      }, 
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Oxford+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=480&amp;rft.edition=2e+%C3%A9d.&amp;rft.date=2012-12&amp;rft.series=The+New+European+Union+Series&amp;rft.btitle=Member+States+of+the+European+Union&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Bulmer, Simon, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Christian Lequesne, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">TheMember States of the European Union</span>. <span class=\"edition\">2e éd. ed.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">Oxford University Press</span>, <span class=\"date\">dec. 2012</span>. "
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Oxford+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=480&amp;rft.edition=2e+%C3%A9d.&amp;rft.date=2012-12&amp;rft.series=The+New+European+Union+Series&amp;rft.btitle=Member+States+of+the+European+Union&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Bulmer, Simon, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Christian Lequesne, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">The Member States of the European Union</span>. <span class=\"edition\">2e éd. ed.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">Oxford University Press</span>, <span class=\"date\">dec. 2012</span>. "
         }
       }, 
       "creators": [
@@ -24,7 +26,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860j0h0m"
           }, 
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }, 
         {
           "affiliation": {
@@ -40,7 +44,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
-          "role": "edt"
+          "roles": [
+            "edt"
+          ]
         }
       ], 
       "date_issued": "2012-12", 
@@ -78,9 +84,9 @@
         "Oxford University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:45.538522", 
+      "rec_created_date": "2013-12-09T13:30:17.315622", 
       "rec_id": "2441/dambferfb7dfprc9m26c8c8o3", 
-      "rec_modified_date": "2013-08-05T16:17:22", 
+      "rec_modified_date": "2013-12-09T13:30:20.472234", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "Book", 
@@ -101,491 +107,15 @@
         }
       ], 
       "title": "Member States of the European Union", 
-      "title_non_sort": "The"
+      "title_non_sort": "The "
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcd1"
+      }, 
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Edward+Elgar+Publishing2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=186&amp;rft.epage=196&amp;rft.place=Cheltenham&amp;rft.date=2013-05&amp;rft.btitle=The+International+Handbook+on+Social+Innovation%3A+Collective+Action%2C+Social+Learning+and+Transdisciplinary+Research&amp;rft.atitle=Just+another+roll+of+the+dice%3A+a+socially+creative+initiative+to+assure+Roma+housing+in+North+Western+Italy&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Membretti, Andrea</span>, and <span class=\"creator\">Tommaso Vitale</span>. \"<span class=\"title\">Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy</span>.\" <span class=\"title\">The International Handbook on Social Innovation: Collective Action, Social Learning and Transdisciplinary Research</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Diana Maccallum</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Abid Mehmood</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frank Moulaert</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Abdel Hamdouch</span>. <span class=\"publication_places\">Cheltenham</span>: <span class=\"publishers\">Edward Elgar Publishing2</span>, <span class=\"date\">may 2013</span>. <span class=\"part_page_begin\">186</span>-<span class=\"part_page_end\">196</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://spire.sciences-po.fr/hdl:/2441/eo6779thqgm5r489makgoai85/resources/13.-just-another-roll-of-the-dice-revised.pdf\" target=\"_blank\">http://spire.sciences-po.fr/hdl:/2441/eo6779thqgm5r489makgoai85/resources/13.-just-another-roll-of-the-dice-revised.pdf</a>&gt;</span>"
-        }
-      }, 
-      "creators": [
-        {
-          "agent": {
-            "name_family": "Membretti", 
-            "name_given": "Andrea", 
-            "rec_class": "Person", 
-            "rec_id": "2441/eo6779thqgm5r489makgk11ai"
-          }, 
-          "role": "aut"
-        }, 
-        {
-          "affiliation": {
-            "agent": {
-              "name": "Centre d'études européennes de Sciences Po", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q384oh"
-            }
-          }, 
-          "agent": {
-            "name_family": "Vitale", 
-            "name_given": "Tommaso", 
-            "rec_class": "Person", 
-            "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
-          }, 
-          "role": "aut"
-        }
-      ], 
-      "date_sort": {
-        "$date": 1367366400000
-      }, 
-      "descriptions": [
-        {
-          "language": "en", 
-          "value": "This chapter concerns how social innovation relates to the social production of space. Usually, the scholarly literature on local welfare, social work, and ‘social cohesion’ at the urban level mostly fails to consider the relevance of space. The spatial dimension of a socially creative strategy is constituted in physical and symbolic boundaries, in the built environment, in situated objects and relationships. Space can significantly contribute to stigma and exclusion, notably in segregated places. In fact, space performs: it has social effects on people’s opportunities and on their self-esteem . Nonetheless the space is itself a social product; it is the object of strategies. Most social innovators invest in space, trying to shape it, to modify it, to make it more inclusive. They aim to use it as a lever for social innovation. Some such innovations use art as a tool to produce change in the spatial configuration for deprived groups. In this chapter we observe a case of a socially creative strategy in which a par- ticularly difficult housing problem was solved thanks to a holistic approach to the production of space. More specifically, we observed how a network of NGOs was able to manage a situation of housing exclusion for some highly stigmatized roma families. Yet the true character of this social innovation lay precisely at the level of the production of space. The main problem that the network sought to address was the issue of segregation that housing for roma usually reproduces. Welfare provisions for roma in Italy are traditionally part of the problem they are supposed to solve: they maintain segregation and fail to support roma inclusion in broader urban life. This network therefore decided to design a project and implement it in a very collab- orative way. They did not provide a specialized shelter for evicted roma people, or for roma housing emergencies; rather, they invented a participative path within the Turin metropolitan area to produce a space that could also, but not exclusively, welcome Roma families, without labelling them and without separating them from the wider local community."
-        }
-      ], 
-      "identifiers": [
-        {
-          "id_type": "oai", 
-          "value": "oai:spire.sciences-po.fr:2441/eo6779thqgm5r489makgoai85"
-        }
-      ], 
-      "is_part_ofs": [
-        {
-          "creators": [
-            {
-              "agent": {
-                "name_family": "Maccallum", 
-                "name_given": "Diana", 
-                "rec_class": "Person", 
-                "rec_id": "2441/eo6779thqgm5r489makgmgk26"
-              }, 
-              "role": "pbd"
-            }, 
-            {
-              "agent": {
-                "name_family": "Mehmood", 
-                "name_given": "Abid", 
-                "rec_class": "Person", 
-                "rec_id": "2441/eo6779thqgm5r489makgn240p"
-              }, 
-              "role": "pbd"
-            }, 
-            {
-              "affiliation": {
-                "agent": {
-                  "name": "APL/GURU", 
-                  "rec_class": "Orgunit", 
-                  "rec_id": "2441/d7a7evb2ctdg4i89gesb1epb9"
-                }
-              }, 
-              "agent": {
-                "name_family": "Moulaert", 
-                "name_given": "Frank", 
-                "rec_class": "Person", 
-                "rec_id": "2441/3cr7jj61bs68cvg99a9b1e21k"
-              }, 
-              "role": "pbd"
-            }, 
-            {
-              "agent": {
-                "name_family": "Hamdouch", 
-                "name_given": "Abdel", 
-                "rec_class": "Person", 
-                "rec_id": "2441/eo6779thqgm5r489makgnal26"
-              }, 
-              "role": "pbd"
-            }
-          ], 
-          "date_issued": "2013-05", 
-          "identifiers": [
-            {
-              "id_type": "isbn", 
-              "value": "9781849809986"
-            }
-          ], 
-          "publication_places": [
-            "Cheltenham"
-          ], 
-          "publishers": [
-            "Edward Elgar Publishing2"
-          ], 
-          "rec_class": "Document", 
-          "rec_id": "isbn:9781849809986", 
-          "rec_type": "Book", 
-          "title": "The International Handbook on Social Innovation: Collective Action, Social Learning and Transdisciplinary Research"
-        }
-      ], 
-      "keywords": {
-        "fr": [
-          "Roma", 
-          "Urban Sociology", 
-          "Social Innovation", 
-          "Space", 
-          "Housing", 
-          "Art", 
-          "Urban Governance", 
-          "Urban Conflicts"
-        ]
-      }, 
-      "languages": [
-        "en"
-      ], 
-      "part_page_begin": "186", 
-      "part_page_end": "196", 
-      "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:45.723439", 
-      "rec_id": "2441/eo6779thqgm5r489makgoai85", 
-      "rec_modified_date": "2013-09-04T09:12:07", 
-      "rec_source": "Sciences Po Institutional Repository", 
-      "rec_status": "published", 
-      "rec_type": "BookPart", 
-      "resources": [
-        {
-          "access_rights": "openAccess", 
-          "rec_class": "Resource", 
-          "rec_state": "published", 
-          "rec_type": "ResourceRemote", 
-          "relation_type": "publication", 
-          "relation_version": "authorVersion", 
-          "url": "http://spire.sciences-po.fr/hdl:/2441/eo6779thqgm5r489makgoai85/resources/13.-just-another-roll-of-the-dice-revised.pdf"
-        }
-      ], 
-      "sets": [
-        "SHS:SCIPO"
-      ], 
-      "title": "Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy"
-    }, 
-    {
-      "citations": {
-        "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.tpages=75&amp;rft.au=Antonin%2C+C%C3%A9line&amp;rft.date=2009-09&amp;rft.atitle=Age%2C+revenu+et+comportements+d%27%C3%A9pargne+des+m%C3%A9nages+%3A+une+analyse+th%C3%A9orique+et+empirique+sur+la+p%C3%A9riode+1978-2006&amp;ctx_ver=Z39.88-2004\"></span><span class=\"creator\">Antonin, Céline</span>. <span class=\"title\">Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006</span>. <span class=\"thesis_degree\">MA thesis.</span> <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Ecole d'Economie de Paris</span>, <span class=\"date\">sep. 2009</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://spire.sciences-po.fr/hdl:/2441/5l6uh8ogmqildh09h6m8hj429/resources/master2009antonin.pdf\" target=\"_blank\">http://spire.sciences-po.fr/hdl:/2441/5l6uh8ogmqildh09h6m8hj429/resources/master2009antonin.pdf</a>&gt;</span>"
-        }
-      }, 
-      "creators": [
-        {
-          "affiliation": {
-            "agent": {
-              "name": "Paris-Jourdan Sciences Economiques", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/d7a7evb2ctdg4i89ges9oe5ao"
-            }
-          }, 
-          "agent": {
-            "name_family": "Piketty", 
-            "name_given": "Thomas", 
-            "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i7896860ngch2"
-          }, 
-          "role": "ths"
-        }, 
-        {
-          "affiliation": {
-            "agent": {
-              "name": "OFCE", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q38226"
-            }
-          }, 
-          "agent": {
-            "name_family": "Antonin", 
-            "name_given": "Céline", 
-            "rec_class": "Person", 
-            "rec_id": "2441/5l6uh8ogmqildh09h6l10gtqo"
-          }, 
-          "role": "aut"
-        }
-      ], 
-      "date_issued": "2009-09", 
-      "date_sort": {
-        "$date": 1251763200000
-      }, 
-      "descriptions": [
-        {
-          "language": "fr", 
-          "value": "Au cours des cinquante dernières années, des modèles successifs ont été élaborés pour rendre\ncompte du comportement d’épargne des ménages. Ces modèles diffèrent principalement par la\nlongueur de l’horizon décisionnel : après avoir supposé une vision de court terme, l’horizon s’est\nprogressivement élargi à la durée de vie du ménage, avant de devenir illimité ; on est ainsi passé\ndu modèle myope keynésien, au modèle de cycle de vie, puis au modèle dynastique. Ces modèles\nne sont pas exclusifs, et les théories développées récemment montrent que différents horizons\npeuvent coexister, par exemple dans le cadre d’une épargne de précaution avec volonté de transmission\nintergénérationnelle.\nL’objectif principal de cette étude est de tester la pertinence de ces différents cadres de pensée,\net de déterminer l’horizon pertinent d’épargne des ménages à partir des enquêtes INSEE\nBudget des Familles, sur la période 1979-2006.\nOn montre d’abord que l’hypothèse de cycle de vie constitue un cadre un peu simpliste pour\nrendre compte du comportement d’épargne des ménages, car l’on observe pas de décroissance\ndes taux d’épargne en fin de vie. Il s’agit ensuite de détailler les comportements par âge, en\ndistinguant les ménages d’âge actif des ménages retraités :\n– Les ménages d’âge actif sont essentiellement sensibles au motif de précaution (assurance\ncontre les chocs de revenu à court terme), et au motif cycle de vie (perspective de préparation\nde la retraite). Ils ont peu de considérations dynastiques, et épargnent davantage sur\nles revenus du travail que sur les revenus du capital.\n– Les ménages retraités ont un comportement dynastique quel que soit leur niveau de richesse,\navec une désaccumulation de capital très limitée.\nAutrement dit, au cours de leur vie active, les ménages se soucient essentiellement du lendemain,\net dans une certaine mesure de leur retraite ; la prise en compte des générations futures\nn’intervient qu’au moment de la retraite.\nLe second objectif de cette étude est d’analyser l’existence de taux d’épargne différents sur\nle capital et sur le travail, une question récurrente dans le débat économique. Le consensus des\nmacroéconomistes, selon lequel on épargne davantage sur le capital que sur le travail, est aujourd’hui\nbattu en brèche par les nouvelles théories de l’épargne, notamment les théories de l’épargne\nde précaution. L’étude empirique à partir des données Budget des Familles suggère, pour la population\nd’âge actif, l’existence de taux d’épargne plus élevés sur le travail que sur le capital, ce\nqui légitime le motif de précaution."
-        }
-      ], 
-      "extent_pages": "75", 
-      "identifiers": [
-        {
-          "id_type": "oai", 
-          "value": "oai:spire.sciences-po.fr:2441/5l6uh8ogmqildh09h6m8hj429"
-        }
-      ], 
-      "languages": [
-        "fr"
-      ], 
-      "publication_places": [
-        "Paris"
-      ], 
-      "publishers": [
-        "Ecole d'Economie de Paris"
-      ], 
-      "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:46.304138", 
-      "rec_id": "2441/5l6uh8ogmqildh09h6m8hj429", 
-      "rec_modified_date": "2012-12-13T09:35:48", 
-      "rec_source": "Sciences Po Institutional Repository", 
-      "rec_status": "published", 
-      "rec_type": "MasterThesis", 
-      "resources": [
-        {
-          "access_rights": "openAccess", 
-          "rec_class": "Resource", 
-          "rec_state": "published", 
-          "rec_type": "ResourceRemote", 
-          "relation_type": "publication", 
-          "relation_version": "publishedVersion", 
-          "url": "http://spire.sciences-po.fr/hdl:/2441/5l6uh8ogmqildh09h6m8hj429/resources/master2009antonin.pdf"
-        }
-      ], 
-      "sets": [
-        "SHS:ECO", 
-        "NEREUS:NEEO"
-      ], 
-      "title": "Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006"
-    }, 
-    {
-      "citations": {
-        "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.tpages=428&amp;rft.au=Casta%C3%B1eda+Lef%C3%A8vre%2C+Dorly&amp;rft.date=2012-02&amp;rft.atitle=Peace+Laboratories+in+Colombia%3A+the+European+Approach+to+Peace-building&amp;ctx_ver=Z39.88-2004\"></span><span class=\"creator\">Castañeda Lefèvre, Dorly</span>. <span class=\"title\">Peace Laboratories in Colombia: the European Approach to Peace-building</span>. <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Institut d'Etudes Politiques de Paris</span>, <span class=\"date\">feb. 2012</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://spire.sciences-po.fr/hdl:/2441/3fm4jv3k2s99lms9jb5i5asil/resources/these-castaneda-dorly-ri-2012.pdf\" target=\"_blank\">http://spire.sciences-po.fr/hdl:/2441/3fm4jv3k2s99lms9jb5i5asil/resources/these-castaneda-dorly-ri-2012.pdf</a>&gt;</span>"
-        }
-      }, 
-      "creators": [
-        {
-          "agent": {
-            "name_family": "Castañeda Lefèvre", 
-            "name_given": "Dorly", 
-            "rec_class": "Person", 
-            "rec_id": "2441/3fm4jv3k2s99lms9jb5i1ag8p"
-          }, 
-          "role": "aut"
-        }, 
-        {
-          "affiliation": {
-            "agent": {
-              "name": "Centre d'études et de recherches internationales", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q380gh"
-            }
-          }, 
-          "agent": {
-            "name_family": "Devin", 
-            "name_given": "Guillaume", 
-            "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q568qo"
-          }, 
-          "role": "ths"
-        }
-      ], 
-      "date_issued": "2012-02", 
-      "date_sort": {
-        "$date": 1328054400000
-      }, 
-      "descriptions": [
-        {
-          "language": "en", 
-          "value": "This dissertation is about the way an international actor, the EU, has supported local peace initiatives in the midst of war, the dilemmas it faces, and the achievements and limits of its approach to building peace. The central question is, is the EU proposing an original approach to peace-building in Colombia, or are the Peace Laboratories just another development program in a conflict-affected country? I argue that the EU is willing and able to propose an original approach to peace-building. The Peace Laboratories show how the EU followed a learning process leading to the definition of a peace-building program for Colombia, based on civil society organizations, and whose scope was determined by the openness to peace of the Colombian government. Thus, this study may contribute to the general reflection on the EU’s international action, as well as on the civil society organizations’ and recipient states’ roles in building peace in armed conflict situations. I propose a definition of peace-building like the intersection of three dimensions, security, development and democracy. Based on this I analyze both sides of the cooperation programs. Part I studies the EU as an international actor, part II analyses the main Colombian recipients of European official development aid (Colombian government and civil society organizations in conflict regions), and part III seizes the learning process of the EU and the scope of the Peace Laboratories as an approach to peace-building."
-        }, 
-        {
-          "language": "fr", 
-          "value": "La thèse analyse  comment un acteur international, l’Union Européenne (UE), soutient des initiatives de paix au milieu de la guerre en Colombie, les dilemmes auxquels il est confronté,  les limites et succès de son approche à la construction de la paix. Elle pose la question:  l’UE propose-t-elle une approche originale de la construction de la paix en Colombie au travers de ses programmes de coopération  appelés « Laboratoires de Paix », ou bien s’agit-il d’un programme de développement classique dans un pays en conflit ? La thèse affirme que l’UE s’est montrée soucieuse et capable de  développer son propre approche de la construction de la paix. Les Laboratoires de Paix reflètent un processus d’apprentissage de l’UE dans ses interactions avec l’Etat Central Colombien et les organisations de la société civile dans les zones en conflit armé (OSC). L’approche se base sur l’action des OSC et developpe des moyens de les rapprocher de l’Etat colombien. La thèse s’appuie sur une définition du « peace-building » comme l’intersection de trois dimensions - la sécurité, le développement et la démocratie -  pour l’analyse du donateur et des récepteurs de l’aide. La partie I étudie l’UE comme un acteur international en construction. La partie II  analyse les perspectives de paix des acteurs colombiens, tandis que la  partie III  étudie le processus d’apprentissage de l’UE et l’étendue des Laboratoires de paix en tant qu’approche à la construction de la paix.\nCette recherche  contribue à deux débats d’intérêt pour les relations internationales : 1) l’UE acteur international et, 2) le rôle des OSC et des Etats  dans les programmes de construction de la paix en contexte de conflit armé."
-        }
-      ], 
-      "extent_pages": "428", 
-      "identifiers": [
-        {
-          "id_type": "oai", 
-          "value": "oai:spire.sciences-po.fr:2441/3fm4jv3k2s99lms9jb5i5asil"
-        }
-      ], 
-      "keywords": {
-        "fr": [
-          "Peace-building", 
-          "Construction de la paix", 
-          "Organizations de la societé civile", 
-          "Colombie", 
-          "Union Européenne", 
-          "poltique étrangère", 
-          "Union Européenne acteur international", 
-          "Aide Publique au Développpement", 
-          "Etat en Amérique Latine", 
-          "Pays en conflit"
-        ]
-      }, 
-      "languages": [
-        "en"
-      ], 
-      "publication_places": [
-        "Paris"
-      ], 
-      "publishers": [
-        "Institut d'Etudes Politiques de Paris"
-      ], 
-      "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:47.229412", 
-      "rec_id": "2441/3fm4jv3k2s99lms9jb5i5asil", 
-      "rec_modified_date": "2013-03-01T08:39:12", 
-      "rec_source": "Sciences Po Institutional Repository", 
-      "rec_status": "published", 
-      "rec_type": "DoctoralThesis", 
-      "resources": [
-        {
-          "access_rights": "openAccess", 
-          "rec_class": "Resource", 
-          "rec_state": "published", 
-          "rec_type": "ResourceRemote", 
-          "relation_type": "publication", 
-          "relation_version": "authorVersion", 
-          "url": "http://spire.sciences-po.fr/hdl:/2441/3fm4jv3k2s99lms9jb5i5asil/resources/these-castaneda-dorly-ri-2012.pdf"
-        }
-      ], 
-      "sets": [
-        "SHS:SCIPO"
-      ], 
-      "title": "Peace Laboratories in Colombia: the European Approach to Peace-building", 
-      "title_translated": {
-        "title": "Les Laboratoires de paix en Colombie: L'approche européenne de la construction de la paix"
-      }
-    }, 
-    {
-      "citations": {
-        "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=1&amp;rft.epage=12&amp;rft.date=2013-01&amp;rft.volume=89&amp;rft.atitle=Varieties+and+the+transfer+problem&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Journal+of+International+Economics&amp;rft.genre=article\"></span><span class=\"creator\">Martin, Philippe</span>, <span class=\"creator\">Giancarlo Corsetti</span>, and <span class=\"creator\">Paolo Pesenti</span>. \"<span class=\"title\">Varieties and the transfer problem</span>.\" <span class=\"title\">Journal of International Economics</span>. <span class=\"part_volume\">89</span>.<span class=\"part_issue\">1</span> <span class=\"date\">(jan. 2013)</span>. <span class=\"part_page_begin\">1</span>-<span class=\"part_page_end\">12</span>. "
-        }
-      }, 
-      "classifications": {
-        "info:eu-repo/authority/jel": [
-          {
-            "term_id": "F32"
-          }, 
-          {
-            "term_id": "F41"
-          }
-        ]
-      }, 
-      "creators": [
-        {
-          "affiliation": {
-            "agent": {
-              "name": "Département d'économie", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/9labe9r4se65i789685q385c7"
-            }
-          }, 
-          "agent": {
-            "name_family": "Martin", 
-            "name_given": "Philippe", 
-            "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i789685q5apa2"
-          }, 
-          "role": "aut"
-        }, 
-        {
-          "affiliation": {
-            "agent": {
-              "name": "University of Rome", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/d7a7evb2ctdg4i89ges9micbn"
-            }
-          }, 
-          "agent": {
-            "name_family": "Corsetti", 
-            "name_given": "Giancarlo", 
-            "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i7896860lchjn"
-          }, 
-          "role": "aut"
-        }, 
-        {
-          "affiliation": {
-            "agent": {
-              "name": "International Research", 
-              "rec_class": "Orgunit", 
-              "rec_id": "2441/d7a7evb2ctdg4i89ges9mikg3"
-            }
-          }, 
-          "agent": {
-            "name_family": "Pesenti", 
-            "name_given": "Paolo", 
-            "rec_class": "Person", 
-            "rec_id": "2441/9labe9r4se65i7896860lci21"
-          }, 
-          "role": "aut"
-        }
-      ], 
-      "date_issued": "2013-01", 
-      "date_sort": {
-        "$date": 1356998400000
-      }, 
-      "descriptions": [
-        {
-          "language": "en", 
-          "value": "We revisit the classic transfer problem, accounting for two channels of adjustment: increased trade in existing goods and services (the intensive margin) and net creation and destruction of product varieties (the extensive margin). Over the medium term, the latter reduces the scope for real exchange rate and terms of trade variability in response to cross-border flows. We embed our transfer analysis in popular models of current account adjustment, where initial imbalances are driven by domestic demand for — or foreign supply of — net saving, possibly associated with over-optimistic expectations. Simulation exercises based on 2006 data suggest that a transfer of the size of the pre-crisis U.S. current account deficit may require only moderate trend depreciation in real terms, and that the aggregate welfare impact of the transfer is disconnected from the size of the relative price correction."
-        }
-      ], 
-      "identifiers": [
-        {
-          "id_type": "doi", 
-          "value": "10.1016/j.jinteco.2012.05.011"
-        }, 
-        {
-          "id_type": "oai", 
-          "value": "oai:spire.sciences-po.fr:2441/f4rshpf3v1umfa09lb0joe5g5"
-        }
-      ], 
-      "is_part_ofs": [
-        {
-          "identifiers": [
-            {
-              "id_type": "issn", 
-              "value": "00221996"
-            }
-          ], 
-          "issuance": "continuing", 
-          "languages": [
-            "en"
-          ], 
-          "peer_review": true, 
-          "rec_class": "Document", 
-          "rec_id": "issn:00221996", 
-          "rec_type": "Journal", 
-          "title": "Journal of International Economics"
-        }
-      ], 
-      "keywords": {
-        "fr": [
-          "Transfer problem", 
-          "Current account imbalances", 
-          "Extensive margin"
-        ]
-      }, 
-      "languages": [
-        "en"
-      ], 
-      "part_issue": "1", 
-      "part_page_begin": "1", 
-      "part_page_end": "12", 
-      "part_volume": "89", 
-      "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:47.293952", 
-      "rec_id": "2441/f4rshpf3v1umfa09lb0joe5g5", 
-      "rec_modified_date": "2013-05-15T14:07:30", 
-      "rec_source": "Sciences Po Institutional Repository", 
-      "rec_status": "published", 
-      "rec_type": "JournalArticle", 
-      "sets": [
-        "SHS:ECO", 
-        "NEREUS:NEEO"
-      ], 
-      "title": "Varieties and the transfer problem"
-    }, 
-    {
-      "citations": {
-        "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=3&amp;rft.date=2012-05&amp;rft.volume=36&amp;rft.atitle=Europeanization+of+Cities%3A+Policies%2C+Urban+Change+and+Urban+Networks&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=International+Journal+of+Urban+and+Regional+Research&amp;rft.genre=article\"></span><span class=\"creator\">Halpern, Charlotte</span>. \"<span class=\"title\">TheEuropeanization of Cities: Policies, Urban Change and Urban Networks</span>.\" Rev. of <span class=\"title\">International Journal of Urban and Regional Research</span>. <span class=\"publishers\">Wiley-Blackwell</span>, <span class=\"part_volume\">36</span>.<span class=\"part_issue\">3</span> <span class=\"date\">may 2012</span>. "
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=3&amp;rft.date=2012-05&amp;rft.volume=36&amp;rft.atitle=Europeanization+of+Cities%3A+Policies%2C+Urban+Change+and+Urban+Networks&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=International+Journal+of+Urban+and+Regional+Research&amp;rft.genre=article\"></span><span class=\"creator\">Halpern, Charlotte</span>. \"<span class=\"title\">The Europeanization of Cities: Policies, Urban Change and Urban Networks</span>.\" Rev. of <span class=\"title\">International Journal of Urban and Regional Research</span>. <span class=\"publishers\">Wiley-Blackwell</span>, <span class=\"part_volume\">36</span>.<span class=\"part_issue\">3</span> <span class=\"date\">may 2012</span>. "
         }
       }, 
       "creators": [
@@ -603,7 +133,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_created": "2011-05", 
@@ -672,9 +204,9 @@
       "part_issue": "3", 
       "part_volume": "36", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:47.483139", 
+      "rec_created_date": "2013-12-09T13:30:18.776540", 
       "rec_id": "2441/dambferfb7dfprc9m2h2og5ig", 
-      "rec_modified_date": "2013-08-06T16:12:33", 
+      "rec_modified_date": "2013-12-09T13:30:20.479353", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "BookReview", 
@@ -688,7 +220,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/dambferfb7dfprc9m2h2pat0k"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -697,7 +231,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/dambferfb7dfprc9m2h2pi026"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }
           ], 
           "date_issued": "2010", 
@@ -729,9 +265,529 @@
         "SHS:SCIPO"
       ], 
       "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks", 
-      "title_non_sort": "The"
+      "title_non_sort": "The "
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fccd"
+      }, 
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Edward+Elgar+Publishing2&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=186&amp;rft.epage=196&amp;rft.place=Cheltenham&amp;rft.date=2013-05&amp;rft.btitle=The+International+Handbook+on+Social+Innovation%3A+Collective+Action%2C+Social+Learning+and+Transdisciplinary+Research&amp;rft.atitle=Just+another+roll+of+the+dice%3A+a+socially+creative+initiative+to+assure+Roma+housing+in+North+Western+Italy&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Membretti, Andrea</span>, and <span class=\"creator\">Tommaso Vitale</span>. \"<span class=\"title\">Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy</span>.\" <span class=\"title\">The International Handbook on Social Innovation: Collective Action, Social Learning and Transdisciplinary Research</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Diana Maccallum</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Abid Mehmood</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frank Moulaert</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Abdel Hamdouch</span>. <span class=\"publication_places\">Cheltenham</span>: <span class=\"publishers\">Edward Elgar Publishing2</span>, <span class=\"date\">may 2013</span>. <span class=\"part_page_begin\">186</span>-<span class=\"part_page_end\">196</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://spire.sciences-po.fr/hdl:/2441/eo6779thqgm5r489makgoai85/resources/13.-just-another-roll-of-the-dice-revised.pdf\" target=\"_blank\">http://spire.sciences-po.fr/hdl:/2441/eo6779thqgm5r489makgoai85/resources/13.-just-another-roll-of-the-dice-revised.pdf</a>&gt;</span>"
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Membretti", 
+            "name_given": "Andrea", 
+            "rec_class": "Person", 
+            "rec_id": "2441/eo6779thqgm5r489makgk11ai"
+          }, 
+          "roles": [
+            "aut"
+          ]
+        }, 
+        {
+          "affiliation": {
+            "agent": {
+              "name": "Centre d'études européennes de Sciences Po", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q384oh"
+            }
+          }, 
+          "agent": {
+            "name_family": "Vitale", 
+            "name_given": "Tommaso", 
+            "rec_class": "Person", 
+            "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
+          }, 
+          "roles": [
+            "aut"
+          ]
+        }
+      ], 
+      "date_sort": {
+        "$date": 1367366400000
+      }, 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "This chapter concerns how social innovation relates to the social production of space. Usually, the scholarly literature on local welfare, social work, and ‘social cohesion’ at the urban level mostly fails to consider the relevance of space. The spatial dimension of a socially creative strategy is constituted in physical and symbolic boundaries, in the built environment, in situated objects and relationships. Space can significantly contribute to stigma and exclusion, notably in segregated places. In fact, space performs: it has social effects on people’s opportunities and on their self-esteem . Nonetheless the space is itself a social product; it is the object of strategies. Most social innovators invest in space, trying to shape it, to modify it, to make it more inclusive. They aim to use it as a lever for social innovation. Some such innovations use art as a tool to produce change in the spatial configuration for deprived groups. In this chapter we observe a case of a socially creative strategy in which a par- ticularly difficult housing problem was solved thanks to a holistic approach to the production of space. More specifically, we observed how a network of NGOs was able to manage a situation of housing exclusion for some highly stigmatized roma families. Yet the true character of this social innovation lay precisely at the level of the production of space. The main problem that the network sought to address was the issue of segregation that housing for roma usually reproduces. Welfare provisions for roma in Italy are traditionally part of the problem they are supposed to solve: they maintain segregation and fail to support roma inclusion in broader urban life. This network therefore decided to design a project and implement it in a very collab- orative way. They did not provide a specialized shelter for evicted roma people, or for roma housing emergencies; rather, they invented a participative path within the Turin metropolitan area to produce a space that could also, but not exclusively, welcome Roma families, without labelling them and without separating them from the wider local community."
+        }
+      ], 
+      "identifiers": [
+        {
+          "id_type": "oai", 
+          "value": "oai:spire.sciences-po.fr:2441/eo6779thqgm5r489makgoai85"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "creators": [
+            {
+              "agent": {
+                "name_family": "Maccallum", 
+                "name_given": "Diana", 
+                "rec_class": "Person", 
+                "rec_id": "2441/eo6779thqgm5r489makgmgk26"
+              }, 
+              "roles": [
+                "pbd"
+              ]
+            }, 
+            {
+              "agent": {
+                "name_family": "Mehmood", 
+                "name_given": "Abid", 
+                "rec_class": "Person", 
+                "rec_id": "2441/eo6779thqgm5r489makgn240p"
+              }, 
+              "roles": [
+                "pbd"
+              ]
+            }, 
+            {
+              "affiliation": {
+                "agent": {
+                  "name": "APL/GURU", 
+                  "rec_class": "Orgunit", 
+                  "rec_id": "2441/d7a7evb2ctdg4i89gesb1epb9"
+                }
+              }, 
+              "agent": {
+                "name_family": "Moulaert", 
+                "name_given": "Frank", 
+                "rec_class": "Person", 
+                "rec_id": "2441/3cr7jj61bs68cvg99a9b1e21k"
+              }, 
+              "roles": [
+                "pbd"
+              ]
+            }, 
+            {
+              "agent": {
+                "name_family": "Hamdouch", 
+                "name_given": "Abdel", 
+                "rec_class": "Person", 
+                "rec_id": "2441/eo6779thqgm5r489makgnal26"
+              }, 
+              "roles": [
+                "pbd"
+              ]
+            }
+          ], 
+          "date_issued": "2013-05", 
+          "identifiers": [
+            {
+              "id_type": "isbn", 
+              "value": "9781849809986"
+            }
+          ], 
+          "publication_places": [
+            "Cheltenham"
+          ], 
+          "publishers": [
+            "Edward Elgar Publishing2"
+          ], 
+          "rec_class": "Document", 
+          "rec_id": "isbn:9781849809986", 
+          "rec_type": "Book", 
+          "title": "The International Handbook on Social Innovation: Collective Action, Social Learning and Transdisciplinary Research"
+        }
+      ], 
+      "keywords": {
+        "fr": [
+          "Roma", 
+          "Urban Sociology", 
+          "Social Innovation", 
+          "Space", 
+          "Housing", 
+          "Art", 
+          "Urban Governance", 
+          "Urban Conflicts"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "part_page_begin": "186", 
+      "part_page_end": "196", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-12-09T13:30:17.523042", 
+      "rec_id": "2441/eo6779thqgm5r489makgoai85", 
+      "rec_modified_date": "2013-12-09T13:30:20.473314", 
+      "rec_source": "Sciences Po Institutional Repository", 
+      "rec_status": "published", 
+      "rec_type": "BookPart", 
+      "resources": [
+        {
+          "access_rights": "openAccess", 
+          "rec_class": "Resource", 
+          "rec_state": "published", 
+          "rec_type": "ResourceRemote", 
+          "relation_type": "publication", 
+          "relation_version": "authorVersion", 
+          "url": "http://spire.sciences-po.fr/hdl:/2441/eo6779thqgm5r489makgoai85/resources/13.-just-another-roll-of-the-dice-revised.pdf"
+        }
+      ], 
+      "sets": [
+        "SHS:SCIPO"
+      ], 
+      "title": "Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy"
+    }, 
+    {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcce"
+      }, 
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.tpages=75&amp;rft.au=Antonin%2C+C%C3%A9line&amp;rft.date=2009-09&amp;rft.atitle=Age%2C+revenu+et+comportements+d%27%C3%A9pargne+des+m%C3%A9nages+%3A+une+analyse+th%C3%A9orique+et+empirique+sur+la+p%C3%A9riode+1978-2006&amp;ctx_ver=Z39.88-2004\"></span><span class=\"creator\">Antonin, Céline</span>. <span class=\"title\">Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006</span>. <span class=\"thesis_degree\">MA thesis.</span> <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Ecole d'Economie de Paris</span>, <span class=\"date\">sep. 2009</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://spire.sciences-po.fr/hdl:/2441/5l6uh8ogmqildh09h6m8hj429/resources/master2009antonin.pdf\" target=\"_blank\">http://spire.sciences-po.fr/hdl:/2441/5l6uh8ogmqildh09h6m8hj429/resources/master2009antonin.pdf</a>&gt;</span>"
+        }
+      }, 
+      "creators": [
+        {
+          "affiliation": {
+            "agent": {
+              "name": "Paris-Jourdan Sciences Economiques", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9oe5ao"
+            }
+          }, 
+          "agent": {
+            "name_family": "Piketty", 
+            "name_given": "Thomas", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i7896860ngch2"
+          }, 
+          "roles": [
+            "ths"
+          ]
+        }, 
+        {
+          "affiliation": {
+            "agent": {
+              "name": "OFCE", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q38226"
+            }
+          }, 
+          "agent": {
+            "name_family": "Antonin", 
+            "name_given": "Céline", 
+            "rec_class": "Person", 
+            "rec_id": "2441/5l6uh8ogmqildh09h6l10gtqo"
+          }, 
+          "roles": [
+            "aut"
+          ]
+        }
+      ], 
+      "date_issued": "2009-09", 
+      "date_sort": {
+        "$date": 1251763200000
+      }, 
+      "descriptions": [
+        {
+          "language": "fr", 
+          "value": "Au cours des cinquante dernières années, des modèles successifs ont été élaborés pour rendre\ncompte du comportement d’épargne des ménages. Ces modèles diffèrent principalement par la\nlongueur de l’horizon décisionnel : après avoir supposé une vision de court terme, l’horizon s’est\nprogressivement élargi à la durée de vie du ménage, avant de devenir illimité ; on est ainsi passé\ndu modèle myope keynésien, au modèle de cycle de vie, puis au modèle dynastique. Ces modèles\nne sont pas exclusifs, et les théories développées récemment montrent que différents horizons\npeuvent coexister, par exemple dans le cadre d’une épargne de précaution avec volonté de transmission\nintergénérationnelle.\nL’objectif principal de cette étude est de tester la pertinence de ces différents cadres de pensée,\net de déterminer l’horizon pertinent d’épargne des ménages à partir des enquêtes INSEE\nBudget des Familles, sur la période 1979-2006.\nOn montre d’abord que l’hypothèse de cycle de vie constitue un cadre un peu simpliste pour\nrendre compte du comportement d’épargne des ménages, car l’on observe pas de décroissance\ndes taux d’épargne en fin de vie. Il s’agit ensuite de détailler les comportements par âge, en\ndistinguant les ménages d’âge actif des ménages retraités :\n– Les ménages d’âge actif sont essentiellement sensibles au motif de précaution (assurance\ncontre les chocs de revenu à court terme), et au motif cycle de vie (perspective de préparation\nde la retraite). Ils ont peu de considérations dynastiques, et épargnent davantage sur\nles revenus du travail que sur les revenus du capital.\n– Les ménages retraités ont un comportement dynastique quel que soit leur niveau de richesse,\navec une désaccumulation de capital très limitée.\nAutrement dit, au cours de leur vie active, les ménages se soucient essentiellement du lendemain,\net dans une certaine mesure de leur retraite ; la prise en compte des générations futures\nn’intervient qu’au moment de la retraite.\nLe second objectif de cette étude est d’analyser l’existence de taux d’épargne différents sur\nle capital et sur le travail, une question récurrente dans le débat économique. Le consensus des\nmacroéconomistes, selon lequel on épargne davantage sur le capital que sur le travail, est aujourd’hui\nbattu en brèche par les nouvelles théories de l’épargne, notamment les théories de l’épargne\nde précaution. L’étude empirique à partir des données Budget des Familles suggère, pour la population\nd’âge actif, l’existence de taux d’épargne plus élevés sur le travail que sur le capital, ce\nqui légitime le motif de précaution."
+        }
+      ], 
+      "extent_pages": "75", 
+      "identifiers": [
+        {
+          "id_type": "oai", 
+          "value": "oai:spire.sciences-po.fr:2441/5l6uh8ogmqildh09h6m8hj429"
+        }
+      ], 
+      "languages": [
+        "fr"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Ecole d'Economie de Paris"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-12-09T13:30:17.849976", 
+      "rec_id": "2441/5l6uh8ogmqildh09h6m8hj429", 
+      "rec_modified_date": "2013-12-09T13:30:20.474285", 
+      "rec_source": "Sciences Po Institutional Repository", 
+      "rec_status": "published", 
+      "rec_type": "MasterThesis", 
+      "resources": [
+        {
+          "access_rights": "openAccess", 
+          "rec_class": "Resource", 
+          "rec_state": "published", 
+          "rec_type": "ResourceRemote", 
+          "relation_type": "publication", 
+          "relation_version": "publishedVersion", 
+          "url": "http://spire.sciences-po.fr/hdl:/2441/5l6uh8ogmqildh09h6m8hj429/resources/master2009antonin.pdf"
+        }
+      ], 
+      "sets": [
+        "SHS:ECO", 
+        "NEREUS:NEEO"
+      ], 
+      "title": "Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006"
+    }, 
+    {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fccf"
+      }, 
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.tpages=428&amp;rft.au=Casta%C3%B1eda+Lef%C3%A8vre%2C+Dorly&amp;rft.date=2012-02&amp;rft.atitle=Peace+Laboratories+in+Colombia%3A+the+European+Approach+to+Peace-building&amp;ctx_ver=Z39.88-2004\"></span><span class=\"creator\">Castañeda Lefèvre, Dorly</span>. <span class=\"title\">Peace Laboratories in Colombia: the European Approach to Peace-building</span>. <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Institut d'Etudes Politiques de Paris</span>, <span class=\"date\">feb. 2012</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://spire.sciences-po.fr/hdl:/2441/3fm4jv3k2s99lms9jb5i5asil/resources/these-castaneda-dorly-ri-2012.pdf\" target=\"_blank\">http://spire.sciences-po.fr/hdl:/2441/3fm4jv3k2s99lms9jb5i5asil/resources/these-castaneda-dorly-ri-2012.pdf</a>&gt;</span>"
+        }
+      }, 
+      "creators": [
+        {
+          "agent": {
+            "name_family": "Castañeda Lefèvre", 
+            "name_given": "Dorly", 
+            "rec_class": "Person", 
+            "rec_id": "2441/3fm4jv3k2s99lms9jb5i1ag8p"
+          }, 
+          "roles": [
+            "aut"
+          ]
+        }, 
+        {
+          "affiliation": {
+            "agent": {
+              "name": "Centre d'études et de recherches internationales", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q380gh"
+            }
+          }, 
+          "agent": {
+            "name_family": "Devin", 
+            "name_given": "Guillaume", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q568qo"
+          }, 
+          "roles": [
+            "ths"
+          ]
+        }
+      ], 
+      "date_issued": "2012-02", 
+      "date_sort": {
+        "$date": 1328054400000
+      }, 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "This dissertation is about the way an international actor, the EU, has supported local peace initiatives in the midst of war, the dilemmas it faces, and the achievements and limits of its approach to building peace. The central question is, is the EU proposing an original approach to peace-building in Colombia, or are the Peace Laboratories just another development program in a conflict-affected country? I argue that the EU is willing and able to propose an original approach to peace-building. The Peace Laboratories show how the EU followed a learning process leading to the definition of a peace-building program for Colombia, based on civil society organizations, and whose scope was determined by the openness to peace of the Colombian government. Thus, this study may contribute to the general reflection on the EU’s international action, as well as on the civil society organizations’ and recipient states’ roles in building peace in armed conflict situations. I propose a definition of peace-building like the intersection of three dimensions, security, development and democracy. Based on this I analyze both sides of the cooperation programs. Part I studies the EU as an international actor, part II analyses the main Colombian recipients of European official development aid (Colombian government and civil society organizations in conflict regions), and part III seizes the learning process of the EU and the scope of the Peace Laboratories as an approach to peace-building."
+        }, 
+        {
+          "language": "fr", 
+          "value": "La thèse analyse  comment un acteur international, l’Union Européenne (UE), soutient des initiatives de paix au milieu de la guerre en Colombie, les dilemmes auxquels il est confronté,  les limites et succès de son approche à la construction de la paix. Elle pose la question:  l’UE propose-t-elle une approche originale de la construction de la paix en Colombie au travers de ses programmes de coopération  appelés « Laboratoires de Paix », ou bien s’agit-il d’un programme de développement classique dans un pays en conflit ? La thèse affirme que l’UE s’est montrée soucieuse et capable de  développer son propre approche de la construction de la paix. Les Laboratoires de Paix reflètent un processus d’apprentissage de l’UE dans ses interactions avec l’Etat Central Colombien et les organisations de la société civile dans les zones en conflit armé (OSC). L’approche se base sur l’action des OSC et developpe des moyens de les rapprocher de l’Etat colombien. La thèse s’appuie sur une définition du « peace-building » comme l’intersection de trois dimensions - la sécurité, le développement et la démocratie -  pour l’analyse du donateur et des récepteurs de l’aide. La partie I étudie l’UE comme un acteur international en construction. La partie II  analyse les perspectives de paix des acteurs colombiens, tandis que la  partie III  étudie le processus d’apprentissage de l’UE et l’étendue des Laboratoires de paix en tant qu’approche à la construction de la paix.\nCette recherche  contribue à deux débats d’intérêt pour les relations internationales : 1) l’UE acteur international et, 2) le rôle des OSC et des Etats  dans les programmes de construction de la paix en contexte de conflit armé."
+        }
+      ], 
+      "extent_pages": "428", 
+      "identifiers": [
+        {
+          "id_type": "oai", 
+          "value": "oai:spire.sciences-po.fr:2441/3fm4jv3k2s99lms9jb5i5asil"
+        }
+      ], 
+      "keywords": {
+        "fr": [
+          "Peace-building", 
+          "Construction de la paix", 
+          "Organizations de la societé civile", 
+          "Colombie", 
+          "Union Européenne", 
+          "poltique étrangère", 
+          "Union Européenne acteur international", 
+          "Aide Publique au Développpement", 
+          "Etat en Amérique Latine", 
+          "Pays en conflit"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "publication_places": [
+        "Paris"
+      ], 
+      "publishers": [
+        "Institut d'Etudes Politiques de Paris"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-12-09T13:30:18.613869", 
+      "rec_id": "2441/3fm4jv3k2s99lms9jb5i5asil", 
+      "rec_modified_date": "2013-12-09T13:30:20.477485", 
+      "rec_source": "Sciences Po Institutional Repository", 
+      "rec_status": "published", 
+      "rec_type": "DoctoralThesis", 
+      "resources": [
+        {
+          "access_rights": "openAccess", 
+          "rec_class": "Resource", 
+          "rec_state": "published", 
+          "rec_type": "ResourceRemote", 
+          "relation_type": "publication", 
+          "relation_version": "authorVersion", 
+          "url": "http://spire.sciences-po.fr/hdl:/2441/3fm4jv3k2s99lms9jb5i5asil/resources/these-castaneda-dorly-ri-2012.pdf"
+        }
+      ], 
+      "sets": [
+        "SHS:SCIPO"
+      ], 
+      "title": "Peace Laboratories in Colombia: the European Approach to Peace-building", 
+      "title_translated": {
+        "title": "Les Laboratoires de paix en Colombie: L'approche européenne de la construction de la paix"
+      }
+    }, 
+    {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcd0"
+      }, 
+      "citations": {
+        "html": {
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=1&amp;rft.epage=12&amp;rft.date=2013-01&amp;rft.volume=89&amp;rft.atitle=Varieties+and+the+transfer+problem&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Journal+of+International+Economics&amp;rft.genre=article\"></span><span class=\"creator\">Martin, Philippe</span>, <span class=\"creator\">Giancarlo Corsetti</span>, and <span class=\"creator\">Paolo Pesenti</span>. \"<span class=\"title\">Varieties and the transfer problem</span>.\" <span class=\"title\">Journal of International Economics</span>. <span class=\"part_volume\">89</span>.<span class=\"part_issue\">1</span> <span class=\"date\">(jan. 2013)</span>. <span class=\"part_page_begin\">1</span>-<span class=\"part_page_end\">12</span>. "
+        }
+      }, 
+      "classifications": {
+        "info:eu-repo/authority/jel": [
+          {
+            "term_id": "F32"
+          }, 
+          {
+            "term_id": "F41"
+          }
+        ]
+      }, 
+      "creators": [
+        {
+          "affiliation": {
+            "agent": {
+              "name": "Département d'économie", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/9labe9r4se65i789685q385c7"
+            }
+          }, 
+          "agent": {
+            "name_family": "Martin", 
+            "name_given": "Philippe", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i789685q5apa2"
+          }, 
+          "roles": [
+            "aut"
+          ]
+        }, 
+        {
+          "affiliation": {
+            "agent": {
+              "name": "University of Rome", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9micbn"
+            }
+          }, 
+          "agent": {
+            "name_family": "Corsetti", 
+            "name_given": "Giancarlo", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i7896860lchjn"
+          }, 
+          "roles": [
+            "aut"
+          ]
+        }, 
+        {
+          "affiliation": {
+            "agent": {
+              "name": "International Research", 
+              "rec_class": "Orgunit", 
+              "rec_id": "2441/d7a7evb2ctdg4i89ges9mikg3"
+            }
+          }, 
+          "agent": {
+            "name_family": "Pesenti", 
+            "name_given": "Paolo", 
+            "rec_class": "Person", 
+            "rec_id": "2441/9labe9r4se65i7896860lci21"
+          }, 
+          "roles": [
+            "aut"
+          ]
+        }
+      ], 
+      "date_issued": "2013-01", 
+      "date_sort": {
+        "$date": 1356998400000
+      }, 
+      "descriptions": [
+        {
+          "language": "en", 
+          "value": "We revisit the classic transfer problem, accounting for two channels of adjustment: increased trade in existing goods and services (the intensive margin) and net creation and destruction of product varieties (the extensive margin). Over the medium term, the latter reduces the scope for real exchange rate and terms of trade variability in response to cross-border flows. We embed our transfer analysis in popular models of current account adjustment, where initial imbalances are driven by domestic demand for — or foreign supply of — net saving, possibly associated with over-optimistic expectations. Simulation exercises based on 2006 data suggest that a transfer of the size of the pre-crisis U.S. current account deficit may require only moderate trend depreciation in real terms, and that the aggregate welfare impact of the transfer is disconnected from the size of the relative price correction."
+        }
+      ], 
+      "identifiers": [
+        {
+          "id_type": "doi", 
+          "value": "10.1016/j.jinteco.2012.05.011"
+        }, 
+        {
+          "id_type": "oai", 
+          "value": "oai:spire.sciences-po.fr:2441/f4rshpf3v1umfa09lb0joe5g5"
+        }
+      ], 
+      "is_part_ofs": [
+        {
+          "identifiers": [
+            {
+              "id_type": "issn", 
+              "value": "00221996"
+            }
+          ], 
+          "issuance": "continuing", 
+          "languages": [
+            "en"
+          ], 
+          "peer_review": true, 
+          "rec_class": "Document", 
+          "rec_id": "issn:00221996", 
+          "rec_type": "Journal", 
+          "title": "Journal of International Economics"
+        }
+      ], 
+      "keywords": {
+        "fr": [
+          "Transfer problem", 
+          "Current account imbalances", 
+          "Extensive margin"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "part_issue": "1", 
+      "part_page_begin": "1", 
+      "part_page_end": "12", 
+      "part_volume": "89", 
+      "rec_class": "Document", 
+      "rec_created_date": "2013-12-09T13:30:18.709873", 
+      "rec_id": "2441/f4rshpf3v1umfa09lb0joe5g5", 
+      "rec_modified_date": "2013-12-09T13:30:20.478256", 
+      "rec_source": "Sciences Po Institutional Repository", 
+      "rec_status": "published", 
+      "rec_type": "JournalArticle", 
+      "sets": [
+        "SHS:ECO", 
+        "NEREUS:NEEO"
+      ], 
+      "title": "Varieties and the transfer problem"
+    }, 
+    {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcd2"
+      }, 
       "citations": {
         "html": {
           "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=115&amp;rft.issue=52&amp;rft.epage=131&amp;rft.date=2007-11&amp;rft.atitle=Vers+une+r%C3%A9volution+bureaucratique+%3F&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Mouvements&amp;rft.genre=article\"></span>\"<span class=\"title\">Vers une révolution bureaucratique ?</span>.\" <span class=\"title\">Mouvements</span>. <span class=\"publishers\">La Découverte</span>, <span class=\"part_issue\">52</span> <span class=\"date\">nov. 2007</span>. <span class=\"part_page_begin\">115</span>-<span class=\"part_page_end\">131</span>. "
@@ -745,7 +801,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9k0sklgecj"
           }, 
-          "role": "ivr"
+          "roles": [
+            "ivr"
+          ]
         }, 
         {
           "affiliation": {
@@ -761,7 +819,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q58ub0"
           }, 
-          "role": "ive"
+          "roles": [
+            "ive"
+          ]
         }
       ], 
       "date_issued": "2007-11", 
@@ -820,9 +880,9 @@
       "part_page_begin": "115", 
       "part_page_end": "131", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:47.540598", 
+      "rec_created_date": "2013-12-09T13:30:18.880879", 
       "rec_id": "2441/53r60a8s3kup1vc9k0skmec8o", 
-      "rec_modified_date": "2013-03-28T01:13:39", 
+      "rec_modified_date": "2013-12-09T13:30:20.480135", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "InterviewArticle", 
@@ -832,6 +892,9 @@
       "title": "Vers une révolution bureaucratique ?"
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcd3"
+      }, 
       "citations": {
         "html": {
           "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=11&amp;rft.issue=21144&amp;rft.epage=00&amp;rft.date=2013-04-08&amp;rft.atitle=Fonctionnaires%2C+la+fin+du+m%C3%A9rite+r%C3%A9publicain&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=L%27Humanit%C3%A9&amp;rft.genre=article\"></span><span class=\"creator\">Rouban, Luc</span>. \"<span class=\"title\">Fonctionnaires, la fin du mérite républicain</span>.\" <span class=\"title\">L'Humanité</span>. <span class=\"part_issue\">21144</span> <span class=\"date\">8 apr. 2013</span>. <span class=\"part_page_begin\">11</span>-<span class=\"part_page_end\">00</span>. "
@@ -852,7 +915,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q56sp5"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-04-08", 
@@ -893,9 +958,9 @@
       "part_page_begin": "11", 
       "part_page_end": "00", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:47.616762", 
+      "rec_created_date": "2013-12-09T13:30:18.994947", 
       "rec_id": "2441/eo6779thqgm5r489matggisrp", 
-      "rec_modified_date": "2013-11-13T01:02:40", 
+      "rec_modified_date": "2013-12-09T13:30:20.480921", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "NewspaperArticle", 
@@ -905,6 +970,9 @@
       "title": "Fonctionnaires, la fin du mérite républicain"
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcd4"
+      }, 
       "citations": {
         "html": {
           "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=69&amp;rft.date=2012-12&amp;rft.volume=2012%2F1&amp;rft.atitle=Client%C3%A9lisme+en+situation.+%C3%89changes+politiques%2C+politisation+et+conflits+moraux&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Cahiers+des+Am%C3%A9riques+latines&amp;rft.genre=issue\"></span><span class=\"creator\">Combes, Hélène</span>. \"<span class=\"title\">Clientélisme en situation. Échanges politiques, politisation et conflits moraux</span>.\" <span class=\"title\">Cahiers des Amériques latines</span>. <span class=\"publication_places\">Paris</span>: <span class=\"part_volume\">2012/1</span>.<span class=\"part_issue\">69</span> <span class=\"date\">dec. 2012</span>. "
@@ -925,7 +993,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/eu4vqp9ompqllr09hga9pgk39"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012-12", 
@@ -981,9 +1051,9 @@
       "part_issue": "69", 
       "part_volume": "2012/1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:47.750152", 
+      "rec_created_date": "2013-12-09T13:30:19.051791", 
       "rec_id": "2441/eo6779thqgm5r489m6ock14ik", 
-      "rec_modified_date": "2013-08-05T15:00:13", 
+      "rec_modified_date": "2013-12-09T13:30:20.481746", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "PeriodicalIssue", 
@@ -993,9 +1063,12 @@
       "title": "Clientélisme en situation. Échanges politiques, politisation et conflits moraux"
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcd5"
+      }, 
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Lethielleux&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=69&amp;rft.epage=86&amp;rft.place=Paris&amp;rft.date=2013-02&amp;rft.series=Coll%C3%A8ge+des+Bernardins+-+Cours-colloques-conf%C3%A9rences&amp;rft.btitle=L%E2%80%99Anthropologie+de+Marcel+Gauchet+%3A+analyse+et+d%C3%A9bats&amp;rft.atitle=r%C3%A9gime+mixte+des+Modernes+et+la+question+de+l%E2%80%99Histoire&amp;ctx_ver=Z39.88-2004&amp;rft.genre=conference\"></span><span class=\"creator\">Escudier, Alexandre</span>. \"<span class=\"title\">Lerégime mixte des Modernes et la question de l’Histoire</span>.\" <span class=\"title\">L’Anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frédéric Louzeau</span>, and <span class=\"creator\">L’anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Lethielleux</span>, <span class=\"date\">feb. 2013</span>. <span class=\"part_page_begin\">69</span>-<span class=\"part_page_end\">86</span>. "
+          "mla": "<span class=\"Z3988\" title=\"rft.pub=Lethielleux&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=69&amp;rft.epage=86&amp;rft.place=Paris&amp;rft.date=2013-02&amp;rft.series=Coll%C3%A8ge+des+Bernardins+-+Cours-colloques-conf%C3%A9rences&amp;rft.btitle=L%E2%80%99Anthropologie+de+Marcel+Gauchet+%3A+analyse+et+d%C3%A9bats&amp;rft.atitle=r%C3%A9gime+mixte+des+Modernes+et+la+question+de+l%E2%80%99Histoire&amp;ctx_ver=Z39.88-2004&amp;rft.genre=conference\"></span><span class=\"creator\">Escudier, Alexandre</span>. \"<span class=\"title\">Le régime mixte des Modernes et la question de l’Histoire</span>.\" <span class=\"title\">L’Anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frédéric Louzeau</span>, and <span class=\"creator\">L’anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Lethielleux</span>, <span class=\"date\">feb. 2013</span>. <span class=\"part_page_begin\">69</span>-<span class=\"part_page_end\">86</span>. "
         }
       }, 
       "creators": [
@@ -1013,7 +1086,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q5908j"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_sort": {
@@ -1041,7 +1116,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eo6779thqgm5r489mam2pgtr2"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -1052,7 +1129,9 @@
                 "rec_class": "Event", 
                 "title": "L’anthropologie de Marcel Gauchet : analyse et débats"
               }, 
-              "role": "aut"
+              "roles": [
+                "aut"
+              ]
             }
           ], 
           "date_issued": "2013-02", 
@@ -1093,9 +1172,9 @@
       "part_page_begin": "69", 
       "part_page_end": "86", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:47.869392", 
+      "rec_created_date": "2013-12-09T13:30:19.154578", 
       "rec_id": "2441/eo6779thqgm5r489mam352ps9", 
-      "rec_modified_date": "2013-11-07T01:03:24", 
+      "rec_modified_date": "2013-12-09T13:30:20.482627", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "ConferencePaper", 
@@ -1105,12 +1184,15 @@
         "SHS:SCIPO"
       ], 
       "title": "régime mixte des Modernes et la question de l’Histoire", 
-      "title_non_sort": "Le"
+      "title_non_sort": "Le "
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcd6"
+      }, 
       "citations": {
         "html": {
-          "mla": "<span class=\"creator\">Governing Paris and Mexico</span>, and <span class=\"creator\">Charlotte Halpern</span>. <span class=\"title\">Airport companies as silent partners?: The slow awakening of Aéroports de Paris</span>. <span class=\"date\">27 feb. 2013</span>. "
+          "mla": "<span class=\"creator\">Governing Paris and Mexico</span>, and <span class=\"creator\">Charlotte Halpern</span>. <span class=\"title\">Airport companies as silent partners? The slow awakening of Aéroports de Paris</span>. <span class=\"date\">27 feb. 2013</span>. "
         }
       }, 
       "creators": [
@@ -1123,7 +1205,9 @@
             "rec_class": "Event", 
             "title": "Governing Paris and Mexico"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1139,7 +1223,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9kc4942gk9"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_created": "2013-02-27", 
@@ -1176,19 +1262,21 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:50.886872", 
+      "rec_created_date": "2013-12-09T13:30:19.208203", 
       "rec_id": "2441/eo6779thqgm5r489m4m2k6d4l", 
-      "rec_modified_date": "2013-08-06T16:12:32", 
+      "rec_modified_date": "2013-12-09T13:30:20.483436", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "ConferenceContribution", 
       "sets": [
         "SHS:SCIPO"
       ], 
-      "title": "Airport companies as silent partners?", 
-      "title_sub": "The slow awakening of Aéroports de Paris"
+      "title": "Airport companies as silent partners? The slow awakening of Aéroports de Paris"
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcd7"
+      }, 
       "citations": {
         "html": {
           "mla": "<span class=\"Z3988\" title=\"rft.pub=Dalloz&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=192&amp;rft.date=2013-03&amp;rft.series=Th%C3%A8mes+%26+commentaires&amp;rft.btitle=Raymond+Saleilles+et+au-del%C3%A0&amp;ctx_ver=Z39.88-2004&amp;rft.genre=proceeding\"></span><span class=\"creator\">Audren, Frédéric, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Christian Chêne, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Nicolas Mathey, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Arnaud Vergne, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Raymond Saleilles et au-delà</span>. <span class=\"title\">Raymond Saleilles et au-delà</span>. <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">Dalloz</span>, <span class=\"date\">mar. 2013</span>. "
@@ -1209,7 +1297,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5k7940uimfdf9c8990p900c2l"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -1218,7 +1308,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/7t638g2jjsquujs9mcc0jeu8l"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -1227,7 +1319,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/7t638g2jjsquujs9mcc0jii04"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -1236,7 +1330,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/7t638g2jjsquujs9mcc0k2e43"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
@@ -1247,7 +1343,9 @@
             "rec_class": "Event", 
             "title": "Raymond Saleilles et au-delà"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-03", 
@@ -1278,9 +1376,9 @@
         "Dalloz"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:50.941624", 
+      "rec_created_date": "2013-12-09T13:30:19.266213", 
       "rec_id": "2441/7t638g2jjsquujs9mcc0mcg2k", 
-      "rec_modified_date": "2013-04-18T16:22:18", 
+      "rec_modified_date": "2013-12-09T13:30:20.484028", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "ConferenceProceedings", 
@@ -1297,6 +1395,9 @@
       "title": "Raymond Saleilles et au-delà"
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcd8"
+      }, 
       "citations": {
         "html": {
           "mla": "<span class=\"creator\">Barnavie, Elie</span>, <span class=\"creator\">Alain Dieckhoff</span>, and <span class=\"creator\">Christian Lequesne</span>. <span class=\"title\">Israël et l’Europe. Filiations et ruptures</span>. <span class=\"date\">16 dec. 2010</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://vimeo.com/17810190\" target=\"_blank\">http://vimeo.com/17810190</a>&gt;</span>"
@@ -1310,7 +1411,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/eu4vqp9ompqllr09hh1aij5g1"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1326,7 +1429,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54c93"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1342,7 +1447,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2010-12-16", 
@@ -1366,17 +1473,20 @@
         "fr"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:51.010535", 
+      "rec_created_date": "2013-12-09T13:30:19.327288", 
       "rec_id": "2441/eu4vqp9ompqllr09hh1amcck6", 
-      "rec_modified_date": "2013-08-05T16:17:22", 
+      "rec_modified_date": "2013-12-09T13:30:20.485008", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "VideoRecording", 
       "resources": [
         {
-          "dateLastAccessed": "2011-10-17", 
+          "access_rights": "openAccess", 
           "rec_class": "Resource", 
-          "rec_type": "remote", 
+          "rec_state": "published", 
+          "rec_type": "ResourceRemote", 
+          "relation_type": "publication", 
+          "relation_version": "publishedVersion", 
           "url": "http://vimeo.com/17810190"
         }
       ], 
@@ -1386,9 +1496,12 @@
       "title": "Israël et l’Europe. Filiations et ruptures"
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcd9"
+      }, 
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=effects+at+home+of+initiating+production+abroad%3A+evidence+from+matched+french+firms&amp;rft.genre=unknown&amp;rft.date=2011\"></span><span class=\"creator\">Jean, Sébastien</span>, <span class=\"creator\">Alexander Hijzen</span>, and <span class=\"creator\">Thierry Mayer</span>. <span class=\"title\">Theeffects at home of initiating production abroad: evidence from matched french firms</span>. <span class=\"date\">2011</span>. "
+          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=effects+at+home+of+initiating+production+abroad%3A+evidence+from+matched+french+firms&amp;rft.genre=unknown&amp;rft.date=2011\"></span><span class=\"creator\">Jean, Sébastien</span>, <span class=\"creator\">Alexander Hijzen</span>, and <span class=\"creator\">Thierry Mayer</span>. <span class=\"title\">The effects at home of initiating production abroad: evidence from matched french firms</span>. <span class=\"date\">2011</span>. "
         }
       }, 
       "classifications": {
@@ -1419,7 +1532,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/c8dmi8nm4pdjkuc9g8m3565k5"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1435,7 +1550,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/c8dmi8nm4pdjkuc9g8m34i593"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1451,7 +1568,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q5aqa5"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_created": "2011", 
@@ -1483,9 +1602,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:51.099436", 
+      "rec_created_date": "2013-12-09T13:30:19.392926", 
       "rec_id": "2441/c8dmi8nm4pdjkuc9g8mb1088n", 
-      "rec_modified_date": "2013-05-16T08:42:06", 
+      "rec_modified_date": "2013-12-09T13:30:20.485659", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "Preprint", 
@@ -1494,9 +1613,12 @@
         "SHS:ECO"
       ], 
       "title": "effects at home of initiating production abroad: evidence from matched french firms", 
-      "title_non_sort": "The"
+      "title_non_sort": "The "
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcda"
+      }, 
       "citations": {
         "html": {
           "mla": "<span class=\"Z3988\" title=\"rft.pub=CEE+%28Sciences+Po%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=40&amp;rft.place=Paris&amp;rft.date=2013-04&amp;rft.btitle=Green+Growth+in+Asian+Metropolis.+Preliminary+Literature+Review+and+Research+Design&amp;ctx_ver=Z39.88-2004&amp;rft.genre=report\"></span><span class=\"creator\">Artigas, Alvaro</span>, <span class=\"creator\">Tadashi Matsumoto</span>, and <span class=\"creator\">Tommaso Vitale</span>. <span class=\"title\">Green Growth in Asian Metropolis. Preliminary Literature Review and Research Design</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">CEE (Sciences Po)</span>, <span class=\"date\">apr. 2013</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://spire.sciences-po.fr/hdl:/2441/5rkqqmvrn4tl22s9mc0sob64l/resources/greengram-x-spire.pdf\" target=\"_blank\">http://spire.sciences-po.fr/hdl:/2441/5rkqqmvrn4tl22s9mc0sob64l/resources/greengram-x-spire.pdf</a>&gt;</span>"
@@ -1510,7 +1632,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i7896860ig2b0"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "agent": {
@@ -1519,7 +1643,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5rkqqmvrn4tl22s9mc0slh0gj"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1535,7 +1661,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-04", 
@@ -1578,9 +1706,9 @@
         "CEE (Sciences Po)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:51.277750", 
+      "rec_created_date": "2013-12-09T13:30:19.593971", 
       "rec_id": "2441/5rkqqmvrn4tl22s9mc0sob64l", 
-      "rec_modified_date": "2013-07-16T14:46:21", 
+      "rec_modified_date": "2013-12-09T13:30:20.486581", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "Report", 
@@ -1601,6 +1729,9 @@
       "title": "Green Growth in Asian Metropolis. Preliminary Literature Review and Research Design"
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcdb"
+      }, 
       "citations": {
         "html": {
           "mla": "<span class=\"creator\">Vitale, Tommaso</span>. \"<span class=\"title\">Famiglie, corsi di vita e accoglienza. Spazi e opportunità di solidarietà in contesto urbano</span>.\" <span class=\"title\">Affidabile. La costruzione di un percorso per i bambini e le loro famiglie</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Silvia Amato</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Carmelita De Simone</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Silvia Zandrini</span>. <span class=\"publication_places\">Milan</span>: <span class=\"publishers\">Quaderno dell'Assessorato Famiglia Scuola e Politiche sociali del Comune di Milano</span>, <span class=\"date\">2011</span>. <span class=\"part_page_begin\">89</span>-<span class=\"part_page_end\">98</span>. "
@@ -1621,7 +1752,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5k7940uimfdf9c8990p8ph108"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_sort": {
@@ -1649,7 +1782,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eu4vqp9ompqllr09hd5rg8sg2"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -1658,7 +1793,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eu4vqp9ompqllr09hd5rge0oj"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }, 
             {
               "agent": {
@@ -1667,7 +1804,9 @@
                 "rec_class": "Person", 
                 "rec_id": "2441/eu4vqp9ompqllr09hd5rg4t35"
               }, 
-              "role": "pbd"
+              "roles": [
+                "pbd"
+              ]
             }
           ], 
           "date_issued": "2011", 
@@ -1697,9 +1836,9 @@
       "part_page_begin": "89", 
       "part_page_end": "98", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:51.351062", 
+      "rec_created_date": "2013-12-09T13:30:19.671225", 
       "rec_id": "2441/eu4vqp9ompqllr09hd5rha0il", 
-      "rec_modified_date": "2013-05-16T08:45:31", 
+      "rec_modified_date": "2013-12-09T13:30:20.487468", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "ReportPart", 
@@ -1709,6 +1848,9 @@
       "title": "Famiglie, corsi di vita e accoglienza. Spazi e opportunità di solidarietà in contesto urbano"
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcdc"
+      }, 
       "citations": {
         "html": {
           "mla": "<span class=\"creator\">Durand, Marie-Françoise, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Christian Lequesne, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)</span>. <span class=\"publishers\">Sciences Po - CERI</span>; <span class=\"publishers\">Sciences Po - Atelier de cartographie</span>, <span class=\"date\">2012</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://ceriscope.sciences-po.fr/pauvrete\" target=\"_blank\">http://ceriscope.sciences-po.fr/pauvrete</a>&gt;</span>"
@@ -1729,7 +1871,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q571ko"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "affiliation": {
@@ -1745,7 +1889,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q54lsl"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }
       ], 
       "date_created": "2012", 
@@ -1774,9 +1920,9 @@
         "Sciences Po - Atelier de cartographie"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:51.409687", 
+      "rec_created_date": "2013-12-09T13:30:19.731754", 
       "rec_id": "2441/eu4vqp9ompqllr09ij4jnag10", 
-      "rec_modified_date": "2013-08-05T16:17:21", 
+      "rec_modified_date": "2013-12-09T13:30:20.488394", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "WebSite", 
@@ -1802,6 +1948,9 @@
       "title": "Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)"
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcdd"
+      }, 
       "citations": {
         "html": {
           "mla": "<span class=\"creator\">Campante, Filipe R</span>, and <span class=\"creator\">Quoc-Anh Do</span>. <span class=\"title\">Isolated Capital Cities, Accountability and Corruption Evidence from US States: Evidence from US States</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Sciences Po - ECON</span>, <span class=\"date\">jan. 2013</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://spire.sciences-po.fr/hdl:/2441/dambferfb7dfprc9lj6bo200k/resources/dp2013-01campantedo.pdf\" target=\"_blank\">http://spire.sciences-po.fr/hdl:/2441/dambferfb7dfprc9lj6bo200k/resources/dp2013-01campantedo.pdf</a>&gt;</span>"
@@ -1837,7 +1986,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/dambferfb7dfprc9lj6bkb4sj"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1853,7 +2004,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/53r60a8s3kup1vc9kc6cl8m9l"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2013-01", 
@@ -1897,9 +2050,9 @@
         "Sciences Po - ECON"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:51.835856", 
+      "rec_created_date": "2013-12-09T13:30:20.216654", 
       "rec_id": "2441/dambferfb7dfprc9lj6bo200k", 
-      "rec_modified_date": "2013-08-08T15:48:47", 
+      "rec_modified_date": "2013-12-09T13:30:20.489002", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "WorkingPaper", 
@@ -1931,9 +2084,12 @@
       "title_sub": "Evidence from US States"
     }, 
     {
+      "_id": {
+        "$oid": "52a5b7dc3b71f30cb606fcde"
+      }, 
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.date=2012-03-29&amp;rft.atitle=s%C3%A8me+la+restriction+r%C3%A9colte+la+r%C3%A9cession&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Les+notes+du+blog&amp;rft.genre=article\"></span><span class=\"creator\">Péléraux, Hervé</span>, <span class=\"creator\">Mathieu Plane</span>, <span class=\"creator\">Xavier Timbeau, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Département analyse et prévision (OFCE)</span>, and <span class=\"creator\">Céline Antonin</span>. \"<span class=\"title\">Quisème la restriction récolte la récession: Perspectives économiques 2012-2013 pour l’économie mondiale</span>.\" <span class=\"title\">Les notes du blog</span>. <span class=\"date\">(29 mar. 2012)</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://spire.sciences-po.fr/hdl:/2441/c6t1fl36hv9s7q89j8pa2cp3i/resources/note16.pdf\" target=\"_blank\">http://spire.sciences-po.fr/hdl:/2441/c6t1fl36hv9s7q89j8pa2cp3i/resources/note16.pdf</a>&gt;</span>"
+          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.date=2012-03-29&amp;rft.atitle=s%C3%A8me+la+restriction+r%C3%A9colte+la+r%C3%A9cession&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Les+notes+du+blog&amp;rft.genre=article\"></span><span class=\"creator\">Péléraux, Hervé</span>, <span class=\"creator\">Mathieu Plane</span>, <span class=\"creator\">Xavier Timbeau, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Département analyse et prévision (OFCE)</span>, and <span class=\"creator\">Céline Antonin</span>. \"<span class=\"title\">Qui sème la restriction récolte la récession: Perspectives économiques 2012-2013 pour l’économie mondiale</span>.\" <span class=\"title\">Les notes du blog</span>. <span class=\"date\">(29 mar. 2012)</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://spire.sciences-po.fr/hdl:/2441/c6t1fl36hv9s7q89j8pa2cp3i/resources/note16.pdf\" target=\"_blank\">http://spire.sciences-po.fr/hdl:/2441/c6t1fl36hv9s7q89j8pa2cp3i/resources/note16.pdf</a>&gt;</span>"
         }
       }, 
       "creators": [
@@ -1951,7 +2107,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q56d08"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1967,7 +2125,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q572ci"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -1983,14 +2143,18 @@
             "rec_class": "Person", 
             "rec_id": "2441/9labe9r4se65i789685q58l17"
           }, 
-          "role": "pbd"
+          "roles": [
+            "pbd"
+          ]
         }, 
         {
           "agent": {
             "name": "Département analyse et prévision (OFCE)", 
             "rec_class": "Orgunit"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }, 
         {
           "affiliation": {
@@ -2006,7 +2170,9 @@
             "rec_class": "Person", 
             "rec_id": "2441/5l6uh8ogmqildh09h6l10gtqo"
           }, 
-          "role": "aut"
+          "roles": [
+            "aut"
+          ]
         }
       ], 
       "date_issued": "2012-03-29", 
@@ -2040,9 +2206,9 @@
         "fr"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-11-13T23:15:52.125057", 
+      "rec_created_date": "2013-12-09T13:30:20.471610", 
       "rec_id": "2441/c6t1fl36hv9s7q89j8pa2cp3i", 
-      "rec_modified_date": "2012-12-13T09:35:37", 
+      "rec_modified_date": "2013-12-09T13:30:20.489740", 
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "JournalArticle", 
@@ -2062,9 +2228,8 @@
         "SHS:ECO"
       ], 
       "title": "sème la restriction récolte la récession", 
-      "title_non_sort": "Qui", 
+      "title_non_sort": "Qui ", 
       "title_sub": "Perspectives économiques 2012-2013 pour l’économie mondiale"
     }
-  ], 
-  "title": "test"
+  ]
 }
