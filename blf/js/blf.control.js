@@ -256,7 +256,7 @@ blf.init = function(config) {
       hacks: [
         {
           triggers: 'successCallback',
-          description: 'trigged from services success function, execute config callbacks given in init()',
+          description: 'Triggered from services success function, execute config callbacks given in init()',
           method: function(e){
             /*
               Usage :
@@ -270,7 +270,7 @@ blf.init = function(config) {
                   }
                 },
                 ...
-              })
+              });
 
 
               e.data = {
@@ -628,8 +628,8 @@ blf.init = function(config) {
             this.update('mode', 'home');
             this.dispatchEvent('successCallback',{
               service: input.service || 'get_entry',
-              result:data.result,
-              params:input
+              result: data.result,
+              params: input
             });
           }
         },

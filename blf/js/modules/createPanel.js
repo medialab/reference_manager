@@ -57,6 +57,7 @@
         },
         _toKeep = [
           'rec_source',
+          'rec_class',
           'rec_type',
           'rec_id',
           'nonce',
@@ -122,7 +123,7 @@
 
       // Store data to keep:
       _currentToKeep = _toKeep.reduce(function(o, k) {
-        if (k in o)
+        if (k in entry)
           o[k] = domino.utils.clone(entry[k]);
         return o;
       }, {});

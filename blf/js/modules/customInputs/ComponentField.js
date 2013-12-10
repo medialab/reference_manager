@@ -227,11 +227,9 @@
           data.rec_type = field.rec_type;
         } else {
           delete data.rec_metajson;
+          delete data.rec_source;
           delete data.rec_class;
           delete data.rec_type;
-          delete data.rec_source;
-          delete data.rec_type;
-          delete data.rec_id;
         }
 
         documents.push(data);
