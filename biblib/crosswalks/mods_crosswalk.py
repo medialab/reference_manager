@@ -723,7 +723,7 @@ def convert_mods_name_dai_dict_to_creator(mods_name, dai_dict):
             creator["affiliation"] = affiliation
 
         if mods_name_roleterm is not None:
-            creator["role"] = convert_mods_name_roleterm(mods_name_roleterm)
+            creator["roles"] = convert_mods_name_roleterm(mods_name_roleterm)
 
         #print name_type, name_id, name_parts, name_affiliations, name_roleterm, name_descriptions
         return creator
@@ -738,21 +738,21 @@ def convert_mods_name_roleterm(mods_roleterm):
         # print authority, term_type, value
         if not value:
             # default creator role
-            return "cre"
+            return ["cre"]
         else:
             if authority == "marcrelator":
                 if term_type == "code":
-                    return value
+                    return [value]
                 elif value in creator_service.role_text_to_role_code:
-                    return creator_service.role_text_to_role_code[value]
+                    return [creator_service.role_text_to_role_code[value]]
                 else:
-                    return "cre"
+                    return ["cre"]
             elif authority == "unimarc" and value in creator_service.role_unimarc_to_role_code:
-                return creator_service.role_unimarc_to_role_code[value]
+                return [creator_service.role_unimarc_to_role_code[value]]
             else:
-                return "cre"
+                return ["cre"]
     else:
-        return "cre"
+        return ["cre"]
 
 
 def get_mods_notes(mods):

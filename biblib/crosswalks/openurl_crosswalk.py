@@ -280,7 +280,7 @@ def metajson_to_openurl(document):
         # au, aucorp
         if "creators" in document:
             for creator in document["creators"]:
-                if "role" in creator and creator["role"] in creator_service.creator_citable_roles:
+                if "roles" in creator and creator["roles"] and creator["roles"][0] in creator_service.creator_citable_roles:
                     if "rft.au" not in openurl and "person" in creator:
                         openurl["rft.au"] = creator.formatted_name()
                     elif "rft.aucorp" not in openurl and "orgunit" in creator:

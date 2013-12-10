@@ -554,7 +554,7 @@ def formatted_name_to_creator(formatted_name, rec_class, role):
 
         creator = Creator()
         if role:
-            creator["role"] = role
+            creator["roles"] = [role]
 
         if rec_class == constants.CLASS_EVENT:
             event = Event()
@@ -685,5 +685,5 @@ def formatted_name(creator, style=metajson.STYLE_FAMILY_COMMA_GIVEN):
 def change_contibutors_role(creators, role):
     if creators:
         for creator in creators:
-            creator.set_key_if_not_none("role", role)
+            creator.set_key_if_not_none("roles", [role])
     return creators

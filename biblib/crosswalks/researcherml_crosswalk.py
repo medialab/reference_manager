@@ -432,7 +432,7 @@ def get_rml_degrees(rml):
                 if creator is None:
                     creator = Creator()
                     creator["agent"] = Orgunit()
-                    creator["role"] = "dgg"
+                    creator["roles"] = ["dgg"]
 
                 # identifiers -> creators[0].agent.rec_id or creators[0].agent.identifiers
                 creator["agent"].update(get_rml_identifiers(rml_degree))
@@ -905,7 +905,7 @@ def get_rml_teachings(rml):
                 if creator is None:
                     creator = Creator()
                     creator["agent"] = Orgunit()
-                    creator["role"] = "dgg"
+                    creator["roles"] = "dgg"
 
                 # identifiers -> creators[0].agent.rec_id or creators[0].agent.identifiers
                 creator["agent"].update(get_rml_identifiers(rml_teaching))

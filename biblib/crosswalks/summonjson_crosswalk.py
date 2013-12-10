@@ -336,7 +336,7 @@ def convert_creators(sum_doc, sum_authors_key, sum_affiliations_key, creator_typ
                     person.set_key_if_not_none("name_given", author["givenname"])
                     creator["agent"] = person
                     if role:
-                        creator["role"] = role
+                        creator["roles"] = [role]
                 else:
                     formatted_name = ""
                     if "fullname" in author:

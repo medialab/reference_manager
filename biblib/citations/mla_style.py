@@ -274,16 +274,16 @@ def get_creators_role_dict(document):
         # publisher
         # contributor
         for creator in document["creators"]:
-            if "role" in creator:
-                role = creator["role"]
-                if role in ["act", "aut", "com", "drt", "edt", "pbd", "pro", "sce", "trl", "nrt"]:
-                    add_item_to_key_of_dict(creator, "authors", result)
-                elif role in ["dgg", "dst", "pbl"]:
-                    add_item_to_key_of_dict(creator, "publishers", result)
-                elif role in ["cph"]:
-                    add_item_to_key_of_dict(creator, "copyright", result)
-                else:
-                    add_item_to_key_of_dict(creator, "contributors", result)
+            if "roles" in creator:
+                for role in creator["roles"]:
+                    if role in ["act", "aut", "com", "drt", "edt", "pbd", "pro", "sce", "trl", "nrt"]:
+                        add_item_to_key_of_dict(creator, "authors", result)
+                    elif role in ["dgg", "dst", "pbl"]:
+                        add_item_to_key_of_dict(creator, "publishers", result)
+                    elif role in ["cph"]:
+                        add_item_to_key_of_dict(creator, "copyright", result)
+                    else:
+                        add_item_to_key_of_dict(creator, "contributors", result)
             else:
                 add_item_to_key_of_dict(creator, "contributors", result)
     return result
@@ -342,18 +342,21 @@ def format_creator(creator, position, level):
     if level > 0 or position > 0:
         style = metajson.STYLE_GIVEN_FAMILY
     formatted_name = creator.formatted_name(style)
-    if formatted_name:
 
-        if level == 0:
-            if creator["role"] in role_to_short_forms:
-                formatted_role = role_to_short_forms[creator["role"]][0]
-                if formatted_role:
-                    return "".join([formatted_name, ", <span class=\"creator_role\">", formatted_role, "</span>"])
-        else:
-            if creator["role"] in role_to_short_forms:
-                formatted_role = role_to_short_forms[creator["role"]][1]
-                if formatted_role:
-                    return "".join(["<span class=\"creator_role\">", formatted_role, "</span> ", formatted_name])
-        if formatted_name:
-            return formatted_name
+    if formatted_name:
+        formatted_roles = []
+        for role in creator["roles"]:
+            if level == 0:
+                formatted_role = role_to_short_forms[role][0]
+            else:
+                formatted_role = role_to_short_forms[role][1]
+            if formatted_role:
+                formatted_roles.append(formatted_role)
+
+        if formatted_roles:
+            if level == 0:
+                return "".join([formatted_name, ", <span class=\"creator_role\">", ", ".join(formatted_roles), "</span>"])
+            else:
+                return "".join(["<span class=\"creator_role\">", ", ".join(formatted_roles), "</span> ", formatted_name])
+        return formatted_name
 

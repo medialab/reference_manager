@@ -405,9 +405,9 @@ def extract_unimarc_creator(field):
             print "field['4']"
             print field['4']
             if field['4'] in creator_service.role_unimarc_to_role_code:
-                creator["role"] = creator_service.role_unimarc_to_role_code[field['4']]
+                creator["roles"] = [creator_service.role_unimarc_to_role_code[field['4']]]
             else:
-                creator["role"] = "ctb"
+                creator["roles"] = ["ctb"]
 
         # 600, 700, 701, 702 -> Person
         if field.tag in ["700", "701", "702"]:

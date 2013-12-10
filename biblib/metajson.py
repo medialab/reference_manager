@@ -205,7 +205,7 @@ class Document(Common):
         results = []
         if "creators" in self:
             for creator in self["creators"]:
-                if creator["role"] == role:
+                if role in creator["roles"]:
                     results.append(creator)
         return results
 

@@ -121,7 +121,7 @@ def validate_metajson_review_ofs(review_ofs):
 
 def validate_metajson_creator(creator):
     errors = []
-    if "role" not in creator or not creator["role"]:
+    if "roles" not in creator or not creator["roles"]:
         errors.append("No role for creator")
     if "agent" in creator:
         if "rec_class" in creator["agent"]:
