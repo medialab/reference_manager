@@ -39,6 +39,7 @@
         _linesHash = {},
         _classTemplates,
         _creatorRoles = blf.utils.extractMajors(controller.get('lists').creator_role || []),
+        _creatorCountries = blf.utils.extractMajors(controller.get('lists').country || []),
         _creatorAffiliationPersonRoles = blf.utils.extractMajors(controller.get('lists').affiliation_role_person || []);
 
     _dom = $(blf.templates.get('CreatorField')({
@@ -63,8 +64,8 @@
           }));
 
       var agent = data.agent || {};
-      if (data.role)
-        $('select.select-role', li).val(data.role);
+      if (data.roles)
+        $('select.select-role', li).val(data.roles[0]);
 
       if (data.affiliation_role)
         $('select.select-affiliation-role', li).val(data.affiliation_role);
@@ -110,8 +111,7 @@
           },
           getData: function(data, obj) {
             data.agent = data.agent || {
-              rec_class: 'Person',
-              rec_metajson: 1
+              rec_class: 'Person'
             };
 
             if (obj.dom.data('id'))
@@ -126,7 +126,6 @@
               data.affiliation = {
                 agent: {
                   rec_class: 'Orgunit',
-                  rec_metajson: 1,
                   name: aff_name
                 }
               };
@@ -153,8 +152,7 @@
           },
           getData: function(data, obj) {
             data.agent = data.agent || {
-              rec_class: 'Orgunit',
-              rec_metajson: 1
+              rec_class: 'Orgunit'
             };
 
             if (obj.dom.data('id'))
@@ -170,7 +168,16 @@
           }
         },
         Event: {
-          dom: $(blf.templates.get('CreatorField.Event')()),
+          dom: $(blf.templates.get('CreatorField.Event')({
+            creatorCountries: _creatorCountries.map(function(o) {
+              return o.separator ? {
+                separator: true
+              } : {
+                type_id: o.type_id,
+                label: o.label || o.labels[controller.get('assets_lang')]
+              };
+            })
+          })),
           fill: function(data, obj) {
             obj.dom.data('id', data.agent.rec_id || null);
 
@@ -181,12 +188,13 @@
             $('input[data-attribute="date_begin"]', obj.dom).val(data.agent.date_begin);
             $('input[data-attribute="date_end"]', obj.dom).val(data.agent.date_end);
             $('input[data-attribute="international"]', obj.dom).attr('checked', data.agent.international ? 'checked' : null);
+            if (data.agent.country !== undefined)
+              $('select.select-event-country', obj.dom).val((data.agent || {}).country);
             return this;
           },
           getData: function(data, obj) {
             data.agent = data.agent || {
-              rec_class: 'Event',
-              rec_metajson: 1
+              rec_class: 'Event'
             };
 
             if (obj.dom.data('id'))
@@ -195,10 +203,12 @@
             data.agent.title = $('input[data-attribute="title"]', obj.dom).val() || undefined;
             data.agent.number = $('input[data-attribute="number"]', obj.dom).val() || undefined;
             data.agent.place = $('input[data-attribute="place"]', obj.dom).val() || undefined;
-            data.agent.country = $('input[data-attribute="country"]', obj.dom).val() || undefined;
             data.agent.date_begin = $('input[data-attribute="date_begin"]', obj.dom).val() || undefined;
             data.agent.date_end = $('input[data-attribute="date_end"]', obj.dom).val() || undefined;
             data.agent.international = !!$('input[data-attribute="international"]', obj.dom).is(':checked');
+            var event_country = $('select.select-event-country', obj.dom).val();
+            if (event_country)
+              data.agent.country = event_country;
 
             for (var k in data.agent)
               if (data.agent[k] === undefined)
@@ -294,7 +304,7 @@
             id = li.data('id');
 
         creators.push(_linesHash[id].getData({
-          role: $('select.select-role', li).val()
+          roles: [$('select.select-role', li).val()]
         }, _linesHash[id]));
       });
 
