@@ -196,6 +196,7 @@ def convert_xmletree(xmletree_root, input_format, source, only_first_record):
                 return mods_crosswalk.mods_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
 
             elif input_format == constants.FORMAT_RESEARCHERML:
+                # researcherml
                 return researcherml_crosswalk.researcherml_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
 
             elif input_format == constants.FORMAT_UNIXREF:
