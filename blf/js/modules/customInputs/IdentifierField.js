@@ -88,7 +88,7 @@
       data = data || {};
 
       if (obj.multiple) {
-        res = [];
+        res = data[obj.property] || [];
         lis.each(function() {
           res.push({
             id_type: obj.id_type,
@@ -104,7 +104,7 @@
           null;
       }
 
-      if ((domino.struct.get(res) !== 'array') || (res.length))
+      if ((domino.struct.get(res) !== 'array') || res.length)
         data[obj.property] = (data[obj.property] || []).concat(res);
 
       return res;
