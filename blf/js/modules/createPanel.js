@@ -91,9 +91,14 @@
         component = _components[i];
         value = blf.modules.createPanel.getData(component, data);
 
-        // todo : don't set empty value
-        controller.log('Property: "' + component.property + '" Value: "' + value + '"');
-        if (value !== undefined && component.property !== undefined)
+        if (
+          component.property !== undefined &&
+          value !== undefined &&
+          value !== null &&
+          (!(value instanceof Array) || value.length) &&
+          (!(typeof value === 'number') || !isNaN(value)) &&
+          value !== ''
+        )
           data[component.property] = value;
       }
 

@@ -107,11 +107,10 @@
           if (val)
             res.push(val);
         });
-      } else {
+      } else
         res = lis.length ? $('li:first-child input', _dom).val() : undefined;
-      }
 
-      if ((domino.struct.get(res) !== 'array') || (res.length))
+      if ((domino.struct.get(res) === 'array') ? res.length : res)
         data[obj.property] = (data[obj.property] || []).concat(res);
 
       return res;
