@@ -62,7 +62,7 @@
       var index = mlab.array.index(data, null);
       $('[type="checkbox"]', _dom).each(function() {
         var t = $(this);
-        t.attr('checked', index[t.attr('id')] ? 'checked' : null);
+        t.attr('checked', index[t.data('type-id')] ? 'checked' : null);
       });
     }
 

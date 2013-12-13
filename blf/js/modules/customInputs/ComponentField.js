@@ -197,7 +197,10 @@
       _ul.empty();
 
       // Parse data and create lines:
-      (data || []).forEach(addDocument);
+      if (obj.multiple)
+        (data || []).forEach(addDocument);
+      else
+        addDocument(data);
     }
 
     /**
@@ -215,7 +218,13 @@
             fieldName,
             li = $(this),
             id = li.data('id'),
-            data = _forms[id].getData();
+            data;
+
+        if (_forms[id])
+          data = _forms[id].getData();
+        else
+          return undefined;
+
 
         fieldName = $('select.select-field', li).first().val();
         if (
