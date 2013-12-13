@@ -98,12 +98,12 @@
         },
         {
             "labels": {
-                "en": "ComponentField simple one choice",
-                "fr": "ComponentField simple one choice"
+                "en": "CF not in array one type",
+                "fr": "CF not in array one type"
             },
             "multiple": false,
             "property": "document_simple_one_choice",
-            "required": true,
+            "required": false,
             "type_fields": [
                 "WebSite"
             ],
@@ -111,14 +111,13 @@
         },
         {
             "labels": {
-                "en": "ComponentField simple many choice",
-                "fr": "ComponentField simple many choice"
+                "en": "CF not in array many types",
+                "fr": "CF not in array many types"
             },
             "multiple": false,
             "property": "document_simple_many_choice",
-            "required": true,
+            "required": false,
             "type_fields": [
-                "Test",
                 "Report",
                 "VideoRecording",
                 "WebSite"
@@ -127,13 +126,13 @@
         },
         {
             "labels": {
-                "en": "ComponentField multiple one choice",
-                "fr": "ComponentField multiple one choice"
+                "en": "CF in array one type",
+                "fr": "CF in array one type"
             },
             "multiple": true,
             "only_one": false,
             "property": "documents_multi_one_choice",
-            "required": true,
+            "required": false,
             "type_fields": [
                 "Report"
             ],
@@ -141,15 +140,14 @@
         },
         {
             "labels": {
-                "en": "ComponentField multiple many choice",
-                "fr": "ComponentField multiple many choice"
+                "en": "CF in array many types",
+                "fr": "CF in array many types"
             },
             "multiple": true,
             "only_one": false,
             "property": "documents_multi_many_choice",
-            "required": true,
+            "required": false,
             "type_fields": [
-                "Test",
                 "Report",
                 "VideoRecording",
                 "WebSite"
@@ -158,15 +156,28 @@
         },
         {
             "labels": {
-                "en": "ComponentField multiple only one many choice",
-                "fr": "ComponentField multiple only one many choice"
+                "en": "CF in array only one one type",
+                "fr": "CF in array only one one type"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "documents_multi_only_one_one_choice",
+            "required": false,
+            "type_fields": [
+                "WebSite"
+            ],
+            "type_ui": "ComponentField"
+        },
+        {
+            "labels": {
+                "en": "CF in array only one many types",
+                "fr": "CF in array only one many types"
             },
             "multiple": true,
             "only_one": true,
             "property": "documents_multi_only_one_many_choice",
-            "required": true,
+            "required": false,
             "type_fields": [
-                "Test",
                 "Report",
                 "VideoRecording",
                 "WebSite"
@@ -252,7 +263,7 @@
             },
             "filter_date_begin": "year_range_begin",
             "filter_date_end": "year_range_end",
-            "required": true,
+            "required": false,
             "type_ui": "YearRangeField"
         }
     ],
