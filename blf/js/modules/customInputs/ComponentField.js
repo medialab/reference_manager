@@ -64,8 +64,7 @@
     // not specified.
     function addDocument(data) {
       data = data || {};
-      var fields = controller.get('fields'),
-          id = _lineID++,
+      var id = _lineID++,
           li = $(blf.templates.get('ComponentField.line')({
             id: id,
             type_fields: [
@@ -79,7 +78,7 @@
             ].concat(obj.type_fields.map(function(str) {
               return {
                 id: str,
-                label: (fields[str] || {}).label || str
+                label: (_fields[str] || {}).label || str
               };
             }))
           }));
@@ -99,6 +98,18 @@
         }));
 
         _forms[id].fill(data);
+      } else if (Object.keys(data).length) {
+        $('select.select-field', li).first().val(obj.type_fields[0]);
+        _forms[id] = blf.modules.createPanel.generateForm(
+          controller,
+          _fields[obj.type_fields[0]].children
+        );
+
+        $('.custom-container', li).first().empty().append(_forms[id].components.map(function(o) {
+          return o.dom;
+        }));
+
+        _forms[id].fill(data);
       }
 
       _ul.append(li);
@@ -109,7 +120,7 @@
         $('.add-document', _dom).css('display', '');
 
       // Trigger event if only one type available:
-      if (!data.rec_type && obj.type_fields.length === 1) {
+      if (!data.rec_type && obj.type_fields.length === 1 && !Object.keys(data).length) {
         $('select.select-field', li).first().val(obj.type_fields[0]);
         addForm(li, obj.type_fields[0]);
       }
