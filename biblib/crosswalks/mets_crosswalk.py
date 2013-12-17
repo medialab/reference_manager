@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
+
 from biblib.metajson import Document
 from biblib.metajson import Resource
 from biblib.metajson import Warpper
@@ -62,7 +64,7 @@ def mets_xmletree_to_metajson(mets, source):
 
 
 def extract_dmdsecs(mets):
-    print "dmdsecs"
+    logging.debug("dmdsecs")
     dmdsecs = mets.findall(xmletree.prefixtag("mets", "dmdSec"))
     if dmdsecs:
         warppers = []

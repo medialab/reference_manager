@@ -371,7 +371,7 @@ class Orgunit(Common):
 
     def formatted_name(self):
         if "name" in self:
-            #print "Orgunit.formatted_name : {}".format(self["name"])
+            #logging.debug("Orgunit.formatted_name : {}".format(self["name"]))
             return self["name"]
 
 

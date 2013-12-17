@@ -4,6 +4,7 @@
 
 import collections
 import csv
+import logging
 import os
 import types
 import xml.etree.ElementTree as ET
@@ -59,7 +60,7 @@ def guess_format_from_json(json_data):
         if "rec_class" in json_data:
             return "metajson"
         else:
-            print "Error: input_format can't be determined"
+            logging.error("Error: input_format can't be determined")
 
 
 def guess_format_from_xmletree(element):
@@ -67,7 +68,7 @@ def guess_format_from_xmletree(element):
         # input_format determination
         if element.tag.find("{") != -1 and element.tag.rfind("}") != -1:
             xmlns = element.tag[element.tag.find("{") + 1:element.tag.rfind("}")]
-            print "xmlns: {0}".format(xmlns)
+            logging.debug("xmlns: {0}".format(xmlns))
             if xmlns in constants.xmlns_to_input_format:
                 input_format = constants.xmlns_to_input_format[xmlns]
         else:
@@ -76,7 +77,7 @@ def guess_format_from_xmletree(element):
         if input_format:
             return input_format
         else:
-            print "Error: input_format can't be determined"
+            logging.error("Error: input_format can't be determined")
 
 
 #############
@@ -88,16 +89,16 @@ def get_relevant_file_list_by_format(dir_path, input_format):
 
 
 def get_relevant_file_list_by_extension(dir_path, file_extension):
-    print "Relevant file list for path : {} and file extension: {}".format(dir_path, file_extension)
+    logging.debug("Relevant file list for path : {} and file extension: {}".format(dir_path, file_extension))
     if dir_path is None or not os.path.exists(dir_path):
-        print "Nonexistent directory path"
+        logging.debug("Nonexistent directory path")
     else:
         files = os.listdir(dir_path)
         if files:
             for file_name in files:
                 if not file_name.startswith('.') and file_name.endswith("." + file_extension):
                     file_path = os.path.join(dir_path, file_name)
-                    print "file_path: {}".format(file_path)
+                    logging.debug("file_path: {}".format(file_path))
                     yield file_path
 
 
@@ -169,7 +170,7 @@ def write(col_id, col_title, items, output_file_path, output_format, all_in_one_
     # items have to be a list of tuple ; rec_id, metadata
     # if not all_in_one_file : output_file_path = output_file_path + rec_id
     if all_in_one_file:
-        #print "type(items): {}".format(type(items))
+        logging.debug("type(items): {}".format(type(items)))
         if isinstance(items, Collection):
             write_item(items, output_file_path, output_format)
         elif isinstance(items, ET.Element):
@@ -205,7 +206,7 @@ def write_item(item, output_file_path, output_format):
         elif output_type == constants.FILE_TYPE_BIBTEX:
             write_bibtex(item, output_file_path)
         else:
-            print "Error: output_type is not managed: {}".format(output_type)
+            logging.error("Error: output_type is not managed: {}".format(output_type))
 
 
 def write_metajson_collection(col_id, col_title, items, output_file_path):
@@ -236,7 +237,7 @@ def write_xml(item, output_file_path):
 
 def write_bibtex(item, output_file_path):
     # todo
-    print "Error: write_bibtex is not working"
+    logging.error("Error: write_bibtex is not working")
     pass
 
 

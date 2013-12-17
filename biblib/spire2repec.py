@@ -3,6 +3,7 @@
 # coding=utf-8
 
 import datetime
+import logging
 import os
 
 from biblib.services import corpus_service
@@ -16,7 +17,7 @@ console.setup_console()
 
 
 def harvest_by_set(corpus, target, target_set):
-    print("harvest_by_set: {}".format(target_set))
+    logging.info("harvest_by_set: {}".format(target_set))
     date_begin = datetime.datetime.now()
 
     # harvest
@@ -32,7 +33,7 @@ def harvest_by_set(corpus, target, target_set):
 
 
 def harvest_by_ids(corpus, target, ids):
-    print("harvest_by_ids: {}".format(ids))
+    logging.info("harvest_by_ids: {}".format(ids))
     date_begin = datetime.datetime.now()
 
     # harvest
@@ -90,7 +91,7 @@ if __name__ == "__main__":
 
     # path
     data_result_dir = os.path.join(os.path.dirname(__file__), os.pardir, "data", "result")
-    print "data_result_dir: " + data_result_dir
+    logging.info("data_result_dir: {}".format(data_result_dir))
     error_file_path = os.path.join(data_result_dir, "result_validation_errors.txt")
     metajson_file_path = os.path.join(data_result_dir, "result_didl_metajson_spire.json")
     mods_file_path = os.path.join(data_result_dir, "result_didl_mods_spire.json")

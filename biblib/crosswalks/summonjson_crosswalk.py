@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
+
 from biblib.metajson import Collection
 from biblib.metajson import Document
 from biblib.metajson import Creator
@@ -117,9 +119,9 @@ def summonjson_document_to_metajson(sum_doc, source):
     creators = extract_creators(sum_doc)
     copyright_statement = extract_value(sum_doc, "Copyright")
     database_id = extract_value(sum_doc, "DBID")
-    #print "DBID: {}".format(database_id)
+    logging.debug("DBID: {}".format(database_id))
     database_xml = extract_dict_value(sum_doc, "Database_xml")
-    #print "database_xml: {}".format(database_xml)
+    logging.debug("database_xml: {}".format(database_xml))
     date_issued = extract_date_issued(sum_doc)
     degree = extract_value(sum_doc, "DissertationDegree")
     descriptions = extract_convert_languageValues(sum_doc, "Abstract", main_language)
@@ -183,7 +185,7 @@ def summonjson_document_to_metajson(sum_doc, source):
         elif rec_type == "Dataset":
             is_part_of_type = "Periodical"
         else:
-            print "unknown is_part_of_type for rec_type: %s" % rec_type
+            logging.debug("unknown is_part_of_type for rec_type: {}".format(rec_type))
 
     # is_part_of
     if is_part_of_type:
@@ -255,10 +257,8 @@ def summonjson_document_to_metajson(sum_doc, source):
     if keywords[main_language]:
         document["keywords"] = keywords
 
-    debug = True
-    if debug:
-        print "# Summon ContentType: {}".format(sum_type)
-        metajson_service.pretty_print_document(document)
+    logging.info("# Summon ContentType: {}".format(sum_type))
+    metajson_service.pretty_print_document(document)
     return document
 
 

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
 import xml.etree.ElementTree as ET
 
 from biblib.metajson import Document
@@ -475,6 +476,7 @@ def endnotexml_record_to_metajson(record, source):
     # resources[0]
     if url is not None:
         resource = Resource()
+        resource["rec_type"] = "ResourceRemote"
         resource.set_key_if_not_none("url", url)
         if endnote_type == TYPE_WEB_PAGE:
             resource.set_key_if_not_none("date_last_accessed", part_number)
@@ -494,10 +496,8 @@ def endnotexml_record_to_metajson(record, source):
     if title_abbreviated:
         document["title_abbreviated"] = [{"title": title_abbreviated}]
 
-    debug = True
-    if debug:
-        print "# endnote_type: {}".format(endnote_type)
-        metajson_service.pretty_print_document(document)
+    logging.info("# endnote_type: {}".format(endnote_type))
+    metajson_service.pretty_print_document(document)
     return document
 
 

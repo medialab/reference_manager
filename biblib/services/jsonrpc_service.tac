@@ -4,6 +4,7 @@
 
 import datetime
 import locale
+import logging
 import traceback
 
 from txjsonrpc.web import jsonrpc
@@ -52,11 +53,11 @@ class References_repository(jsonrpc.JSONRPC):
         request.setHeader("Access-Control-Allow-Origin", "*")
         request.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS') 
         request.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-        print "REQUEST: {}".format(request.content.read())
+        logging.debug("REQUEST: {}".format(request.content.read()))
         return jsonrpc.JSONRPC.render(self, request)
 
     def _cbRender(self, result, request, id, version):
-        print "RESULT: {}".format(jsonrpclib.dumps(result, id=id, version=version))
+        logging.debug("RESULT: {}".format(jsonrpclib.dumps(result, id=id, version=version)))
         return jsonrpc.JSONRPC._cbRender(self, result, request, id, version=2.0)
 
     def jsonrpc_echo(self, x):
@@ -291,7 +292,7 @@ class References_repository(jsonrpc.JSONRPC):
         if type_list:
             results = []
             for type_dict in type_list:
-                print "type_id: {}".format(type_dict["type_id"])
+                logging.debug("type_id: {}".format(type_dict["type_id"]))
                 self.type_adaptation(type_dict, language, True, None)
                 results.append(jsonbson.bson_to_json(type_dict))
             return results
@@ -335,15 +336,15 @@ class References_repository(jsonrpc.JSONRPC):
         if field_list:
             results = []
             for field_dict in field_list:
-                print "rec_type: {}".format(field_dict["rec_type"])
+                logging.debug("rec_type: {}".format(field_dict["rec_type"]))
                 self.type_adaptation(field_dict, language, False, role)
                 results.append(jsonbson.bson_to_json(field_dict))
             return results
 
     def locale_keyfunc(self, keyfunc):
         def locale_wrapper(obj):
-            #print locale.getlocale(locale.LC_COLLATE)
-            #return locale.strxfrm(keyfunc(obj)).lower()
+            #logging.debug(locale.getlocale(locale.LC_COLLATE))
+            #logging.debug(locale.strxfrm(keyfunc(obj)).lower())
             return locale.strxfrm(keyfunc(obj))
         return locale_wrapper
 

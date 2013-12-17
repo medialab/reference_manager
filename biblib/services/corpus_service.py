@@ -3,6 +3,7 @@
 # coding=utf-8
 
 import datetime
+import logging
 import os
 import uuid
 
@@ -21,9 +22,9 @@ from biblib.util import jsonbson
 
 def clean_corpus(corpus):
     if not corpus:
-        print("Error: empty corpus")
+        logging.error("Error: empty corpus")
     else:
-        print("clean corpus: {}".format(corpus))
+        logging.info("clean corpus: {}".format(corpus))
 
         date_begin = datetime.datetime.now()
 
@@ -41,9 +42,9 @@ def clean_corpus(corpus):
 
 def conf_corpus(corpus, corpus_conf_dir_name):
     if not corpus:
-        print("Error: empty corpus")
+        logging.error("Error: empty corpus")
     else:
-        print("init corpus: {}".format(corpus))
+        logging.info("init corpus: {}".format(corpus))
 
         if not corpus_conf_dir_name:
             corpus_conf_dir_name = corpus
@@ -55,20 +56,20 @@ def conf_corpus(corpus, corpus_conf_dir_name):
         results_types_corpus = conf_types(corpus, corpus_conf_dir_name)
         date_types = datetime.datetime.now()
         total_count = 0
-        print "# types common:"
+        logging.debug("# Import common types:")
         if results_types_common:
             for entry in results_types_common:
                 total_count += 1
-                print "type_id: {}, _id: {}".format(entry["type_id"], entry["_id"])
+                logging.info("type_id: {}, _id: {}".format(entry["type_id"], entry["_id"]))
         else:
-            print "Empty common types"
-        print "# types corpus:"
+            logging.debug("Empty common types")
+        logging.info("# Import {} types:".format(corpus))
         if results_types_corpus:
             for entry in results_types_corpus:
                 total_count += 1
-                print "type_id: {}, _id: {}".format(entry["type_id"], entry["_id"])
+                logging.info("type_id: {}, _id: {}".format(entry["type_id"], entry["_id"]))
         else:
-            print "Empty corpus types"
+            logging.info("Empty {} types".format(corpus))
         chrono.chrono_trace("conf_types", date_begin, date_types, total_count)
 
         # datafields
@@ -76,20 +77,20 @@ def conf_corpus(corpus, corpus_conf_dir_name):
         results_fields_corpus = conf_fields(corpus, corpus)
         date_fields = datetime.datetime.now()
         total_count = 0
-        print "# fields common:"
+        logging.info("# Import common fields:")
         if results_fields_common:
             for entry in results_fields_common:
                 total_count += 1
-                print "rec_type: {}, _id: {}".format(entry["rec_type"], entry["_id"])
+                logging.info("rec_type: {}, _id: {}".format(entry["rec_type"], entry["_id"]))
         else:
-            print "Empty common fields"
-        print "# fields corpus:"
+            logging.info("Empty common fields")
+        logging.info("# Import {} fields:".format(corpus))
         if results_fields_corpus:
             for entry in results_fields_corpus:
                 total_count += 1
-                print "rec_type: {}, _id: {}".format(entry["rec_type"], entry["_id"])
+                logging.info("rec_type: {}, _id: {}".format(entry["rec_type"], entry["_id"]))
         else:
-            print "Empty corpus fields"
+            logging.info("Empty {} fields".format(corpus))
         chrono.chrono_trace("conf_fields", date_types, date_fields, total_count)
 
 
@@ -119,17 +120,17 @@ def import_metadata_files(corpus, input_file_paths, input_format, error_file_pat
 
 
 def import_metadata_file(corpus, input_file_path, input_format, source, save, role):
-    print "import_metadata_file"
+    logging.info("import_metadata_file")
     if corpus and input_file_path:
-        print "corpus: {}".format(corpus)
-        print "input_file_path: {}".format(input_file_path)
-        print "input_format: {}".format(input_format)
+        logging.info("corpus: {}".format(corpus))
+        logging.info("input_file_path: {}".format(input_file_path))
+        logging.info("input_format: {}".format(input_format))
         document_list = crosswalks_service.parse_and_convert_file(input_file_path, input_format, "metajson", source, False, False)
         return import_metajson_list(corpus, document_list, save, role)
 
 
 def import_metajson_list(corpus, document_list, save, role):
-    print "import_metajson_list"
+    logging.info("import_metajson_list")
     results = []
     if document_list is not None:
         for document in document_list:
@@ -187,7 +188,7 @@ def conf_types(corpus, folder):
                             json_type = jsonbson.load_json_file(type_file)
                             results.append(repository_service.save_type(corpus, json_type))
                         except ValueError as e:
-                            print "ERROR: Type file is not valid JSON", folder, file_name, e
+                            logging.error("ERROR: Type file is not valid JSON : {} {} {}".format(folder, file_name, e))
             return results
 
 
@@ -208,5 +209,5 @@ def conf_fields(corpus, folder):
                             json_field = jsonbson.load_json_file(field_file)
                             results.append(repository_service.save_field(corpus, json_field))
                         except ValueError as e:
-                            print "ERROR: Field file is not valid JSON", folder, file_name, e
+                            logging.error("ERROR: Field file is not valid JSON : {} {} {}".format(folder, file_name, e))
             return results

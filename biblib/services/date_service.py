@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
+
 from datetime import date
 from dateutil import parser
 
@@ -77,7 +79,7 @@ month_decimal_to_month_mla = {
 
 
 def format_date(date_iso):
-    #print "format_date input: {}".format(date_iso)
+    logging.debug("format_date input: {}".format(date_iso))
     result = ""
     if date_iso:
         if date_iso == "?":
@@ -107,13 +109,13 @@ def format_date(date_iso):
                 # Do nothing
                 result = date_iso
 
-    #print "format_date output: {}".format(result)
+    logging.debug("format_date output: {}".format(result))
     return result
 
 
 def parse_date(datestr):
     """ Parse date and return datetime """
-    #print "parse_date input: {}".format(datestr)
+    logging.debug("parse_date input: {}".format(datestr))
 
     # Empty
     if not datestr:
@@ -152,7 +154,7 @@ def parse_date(datestr):
     except:
         result = parser.parse("1970-01-01")
 
-    #print "parse_date output isoformat: {}".format(result)
+    logging.debug("parse_date output isoformat: {}".format(result))
     return result
 
 
@@ -175,7 +177,7 @@ def format_iso8601(datepy):
 
 
 def parse_to_iso8601(datestr):
-    #print "parse_to_iso8601 input: {}".format(datestr)
+    logging.debug("parse_to_iso8601 input: {}".format(datestr))
     result = format_iso8601(parser.parse(datestr))
-    #print "parse_to_iso8601 output: {}".format(result)
+    logging.debug("parse_to_iso8601 output: {}".format(result))
     return result

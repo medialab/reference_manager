@@ -2,10 +2,13 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import base64
+import logging
 import urllib
 import urllib2
-import base64
+
 import phpserialize
+
 from biblib.services import config_service
 from biblib.util import jsonbson
 
@@ -22,49 +25,49 @@ FULLTEXT = "full-text"
 
 
 def authenticate(username, password):
-    print "\n" + AUTHENTICATE
+    logging.debug(AUTHENTICATE)
     auth = {"username": username, "password": password}
     auth_encoded = urllib.urlencode(auth)
     url = config["endpoint"] + AUTHENTICATE
-    print url
+    logging.debug(url)
     request = urllib2.Request(url, auth_encoded)
     response = urllib2.urlopen(request)
     result = jsonbson.load_json_str(response.read())
-    print result
+    logging.debug(result)
     anta_auth = {"token": result["token"], "user_id": username}
     return anta_auth
 
 
 def get_all_action(anta_auth):
-    print "\n" + GETALLACTION
+    logging.debug(GETALLACTION)
     auth = {"token": anta_auth["token"]}
     auth_encoded = urllib.urlencode(auth)
     url = config["endpoint_frog"] + GETALLACTION + USER + anta_auth["user_id"]
-    print url
+    logging.debug(url)
     request = urllib2.Request(url, auth_encoded)
     response = urllib2.urlopen(request)
     result = response.read()
-    print result
+    return result
 
 
 def get_documents(anta_auth):
-    print "\n" + GETDOCUMENTS
+    logging.debug(GETDOCUMENTS)
     auth = {"token": anta_auth["token"]}
     auth_encoded = urllib.urlencode(auth)
     url = config["endpoint_frog"]+GETDOCUMENTS + USER + anta_auth["user_id"]
-    print url
+    logging.debug(url)
     request = urllib2.Request(url, auth_encoded)
     response = urllib2.urlopen(request)
     result = response.read()
-    print result
+    logging.debug(result)
     return result
 
 
 def item_upload(anta_auth, item):
-    print "\n" + ITEMUPLOAD
+    logging.debug(ITEMUPLOAD)
     url = config["endpoint"] + ITEMUPLOAD + USER + anta_auth["user_id"]
-    print url
-    print item
+    logging.debug(url)
+    logging.debug(item)
     item_serialize = phpserialize.serialize(item)
     item_base64 = base64.b64encode(item_serialize)
     auth = {"token": anta_auth["token"], "item": item_base64}
@@ -73,31 +76,31 @@ def item_upload(anta_auth, item):
     try:
         response = urllib2.urlopen(request)
         result = response.read()
-        print result
+        logging.debug(result)
         return jsonbson.load_json_str(result)
     except:
-        print "*** Error uploading item to anta : %s" % item["title"]
+        logging.debug("*** Error uploading item to anta : %s", item["title"])
         return {"status": "ko"}
 
 
 def full_text(anta_auth, doc_id):
-    print "\n" + FULLTEXT
+    logging.debug(FULLTEXT)
     auth = {"token": anta_auth["token"], "document": doc_id}
     auth_encoded = urllib.urlencode(auth)
     url = config["endpoint_frog"] + FULLTEXT + USER + anta_auth["user_id"]
-    print url
+    logging.debug(url)
     request = urllib2.Request(config["endpoint_frog"] + FULLTEXT + USER + anta_auth["user_id"], auth_encoded)
     response = urllib2.urlopen(request)
     result = response.read()
-    print result
+    logging.debug(result)
     return result
 
 
 
 #anta_auth = authenticate(config["username"], config["password"])
-#print get_all_action(anta_auth)
-#print get_documents(anta_auth)
-#print full_text(anta_auth, "22")
+#logging.debug(get_all_action(anta_auth))
+#logging.debug(get_documents(anta_auth))
+#logging.debug(full_text(anta_auth, "22"))
 
 #item = {}
 #item["title"] = "test biblib"
@@ -111,4 +114,4 @@ def full_text(anta_auth, doc_id):
 #metadata["institution"] = ["Institution A"]
 
 
-#print item_upload(anta_auth, item)
+#logging.debug(item_upload(anta_auth, item))

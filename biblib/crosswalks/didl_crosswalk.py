@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
+
 from biblib.crosswalks import mods_crosswalk
 from biblib.services import metajson_service
 from biblib.util import xmletree
@@ -38,25 +40,25 @@ def didl_xmletree_to_metajson(root_item, source):
                             if dcterms_modified is not None:
                                 item_date_modified = dcterms_modified.text
 
-            #print "item_types: {}".format(item_types)
+            #logging.debug("item_types: {}".format(item_types))
 
             if 'info:eu-repo/semantics/descriptiveMetadata' in item_types:
                 # metadata
-                #print "metadata"
+                #logging.debug("metadata")
                 component = item.find(xmletree.prefixtag("didl", "Component"))
                 if component is not None:
                     resource = component.find(xmletree.prefixtag("didl", "Resource"))
                     if resource is not None:
                         mods = resource.find(xmletree.prefixtag("mods", "mods"))
                         if mods is not None:
-                            #print "mods"
+                            #logging.debug("mods")
                             document = mods_crosswalk.mods_xmletree_to_metajson(mods, source)
                             if item_date_modified:
                                 document["rec_modified_date"] = item_date_modified
 
             elif 'info:eu-repo/semantics/objectFile' in item_types:
                 # resource
-                #print "resource"
+                #logging.debug("resource")
                 url = None
                 date_last_accessed = None
                 relation_type = "publication"

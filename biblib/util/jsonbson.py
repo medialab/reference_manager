@@ -8,7 +8,7 @@ from bson import json_util
 
 def dumps_json(json_obj, pretty=False):
     if json_obj:
-        #print type(json_obj)
+        #logging.debug(type(json_obj))
         if pretty:
             return json.dumps(json_obj, ensure_ascii=False, indent=2, encoding="utf-8", sort_keys=True)
         else:
@@ -17,7 +17,7 @@ def dumps_json(json_obj, pretty=False):
 
 def dumps_bson(bson_obj, pretty=False):
     if bson_obj:
-        #print type(bson_obj)
+        #logging.debug(type(bson_obj))
         if pretty:
             return json_util.dumps(bson_obj, ensure_ascii=False, indent=2, encoding="utf-8", sort_keys=True)
         else:

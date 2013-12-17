@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
 import ldap
+
 from biblib.service import config_service
 
 config = config_service.config["ldap"]
@@ -15,7 +17,7 @@ def ldap_search(ldap_base_dn, ldap_filter, ldap_attrs):
     results = []
     for dn, entry in ldap_results:
         results.append(entry)
-    print results
+    logging.debug(results)
     return results
 
 

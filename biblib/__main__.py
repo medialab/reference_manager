@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import os
 import argparse
+import logging
 
 from biblib.services import config_service
 from biblib.services import corpus_service
@@ -32,7 +32,7 @@ def clean_corpus(args):
     corpus = args.corpus
     if not corpus:
         corpus = default_corpus
-    print "corpus: {}".format(corpus)
+    logging.info("corpus: {}".format(corpus))
     corpus_service.clean_corpus(corpus)
 
 
@@ -40,9 +40,9 @@ def conf_corpus(args):
     corpus = args.corpus
     if not corpus:
         corpus = default_corpus
-    print "corpus: {}".format(corpus)
+    logging.info("corpus: {}".format(corpus))
     corpus_conf_dir_name = args.corpus_conf_dir_name
-    print "corpus_conf_dir_name: {}".format(corpus_conf_dir_name)
+    logging.info("corpus_conf_dir_name: {}".format(corpus_conf_dir_name))
     corpus_service.conf_corpus(corpus, corpus_conf_dir_name)
 
 
@@ -50,11 +50,11 @@ def import_metadatas(args):
     corpus = args.corpus
     if not corpus:
         corpus = default_corpus
-    print "corpus: {}".format(corpus)
+    logging.info("corpus: {}".format(corpus))
     input_format = args.input_format
-    print "input_format: {}".format(input_format)
+    logging.info("input_format: {}".format(input_format))
     input_file_path = args.input_file_path
-    print "input_file_path: {}".format(input_file_path)
+    logging.info("input_file_path: {}".format(input_file_path))
     corpus_service.import_metadata_file(corpus, input_file_path, input_format, "EndNote XML File", True, None)
 
 
@@ -62,24 +62,24 @@ def export_metadatas(args):
     corpus = args.corpus
     if not corpus:
         corpus = default_corpus
-    print "corpus: {}".format(corpus)
+    logging.info("corpus: {}".format(corpus))
     output_format = args.output_format
-    print "output_format: {}".format(output_format)
+    logging.info("output_format: {}".format(output_format))
     output_file_path = args.output_file_path
-    print "output_file_path: {}".format(output_file_path)
+    logging.info("output_file_path: {}".format(output_file_path))
     all_in_one_file = True
     corpus_service.export_corpus(corpus, output_file_path, output_format, all_in_one_file)
 
 
 def convert_metadatas(args):
     input_format = args.input_format
-    print "input_format: {}".format(input_format)
+    logging.info("input_format: {}".format(input_format))
     input_file_path = args.input_file_path
-    print "input_file_path: {}".format(input_file_path)
+    logging.info("input_file_path: {}".format(input_file_path))
     output_format = args.output_format
-    print "output_format: {}".format(output_format)
+    logging.info("output_format: {}".format(output_format))
     output_file_path = args.output_file_path
-    print "output_file_path: {}".format(output_file_path)
+    logging.info("output_file_path: {}".format(output_file_path))
     # error_file
     all_in_one_file = True
     # convert

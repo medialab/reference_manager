@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import sys
 import codecs
 import locale
+import logging
+import sys
 
 
 # UTF-8 troubles...
@@ -39,7 +40,7 @@ def setup_console(sys_enc="utf-8"):
     except:
         pass
 
-    print("setup_console")
-    print("sys.getdefaultencoding() = {0}".format(sys.getdefaultencoding()))
-    print("locale.getdefaultlocale() = {0}".format(locale.getdefaultlocale()))
-    print("locale.getlocale() = {0}".format(locale.getlocale()))
+    logging.debug("setup_console")
+    logging.debug("sys.getdefaultencoding() = {0}".format(sys.getdefaultencoding()))
+    logging.debug("locale.getdefaultlocale() = {0}".format(locale.getdefaultlocale()))
+    logging.debug("locale.getlocale() = {0}".format(locale.getlocale()))

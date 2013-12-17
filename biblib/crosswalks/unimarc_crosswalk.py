@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
 import os
 import re
 
@@ -41,26 +42,26 @@ def unimarc_file_path_to_metasjon_list(unimarc_file_path, source, only_first_rec
 
 
 def unimarc_file_to_metasjon_list(unimarc_file, source, only_first_record):
-    print unimarc_file
+    logging.debug(unimarc_file)
     marc_reader = MARCReader(unimarc_file, False, False)
     return unimarc_marcreader_to_metasjon_list(marc_reader, source, only_first_record)
 
 
 def unimarc_marcreader_to_metasjon_list(marc_reader, source, only_first_record):
-    print "unimarc_marcreader_to_metasjon_list"
+    logging.debug("unimarc_marcreader_to_metasjon_list")
     count = 0
     for record in marc_reader:
         count += 1
         yield unimarc_record_to_metajson(record, source)
-    print count
+    logging.debug(count)
 
 
 def unimarc_record_to_metajson(record, source):
-    print "unimarc_record_to_metajson"
+    logging.debug("unimarc_record_to_metajson")
     document = Document()
 
     #record_dict = record.as_dict()
-    #print jsonbson.dumps_json(record_dict, True)
+    #logging.debug(jsonbson.dumps_json(record_dict, True))
 
     # 002, 991$e, 995$f -> rec_id
     rec_id = ""
@@ -71,7 +72,7 @@ def unimarc_record_to_metajson(record, source):
         rec_id += "_" + record['991']['e']
     # todo numer holding identifier
     if rec_id:
-        print "rec_id: {}".format(rec_id)
+        logging.debug("rec_id: {}".format(rec_id))
         document["rec_id"] = rec_id
 
     # leader -> rec_type
@@ -216,7 +217,7 @@ def unimarc_record_to_metajson(record, source):
                 document["title"] = record['200']['a'][title_non_sort_pos:]
             else:
                 document["title"] = record['200']['a']
-            #print "title: {}".format(document["title"])
+            logging.debug("title: {}".format(document["title"]))
         if record['200']['d'] is not None:
             document["title_alternative"] = {"title": record['200']['d']}
         if record['200']['e'] is not None:
@@ -278,11 +279,9 @@ def unimarc_record_to_metajson(record, source):
         document["creators"] = creators
 
     # holdings / copies
-    print record['995']
+    logging.debug(record['995'])
 
-    debug = True
-    if debug:
-        metajson_service.pretty_print_document(document)
+    metajson_service.pretty_print_document(document)
     return document
 
 
@@ -346,21 +345,19 @@ def extract_unimarc_type(record):
     if record['135'] is not None and record['135']['a'] is not None:
         field135ap0 = record['135']['a'][0:1]
 
-    debug = True
-    if debug:
-        print "leader6: {}".format(leader6)
-        print "leader7: {}".format(leader7)
-        print "100$a/17-19: {}".format(field100ap1719)
-        print "100$a/20: {}".format(field100ap20)
-        print "105/4-7: {}".format(field105ap48)
-        print "106$a: {}".format(field106a)
-        print "110$a/1: {}".format(field110ap1)
-        print "115$a/0: {}".format(field115ap0)
-        print "116/0: {}".format(field116ap0)
-        print "121$a/0: {}".format(field121ap0)
-        print "124$b: {}".format(field124b)
-        print "126$a/0: {}".format(field126ap0)
-        print "135/0: {}".format(field135ap0)
+    logging.debug("leader6: {}".format(leader6))
+    logging.debug("leader7: {}".format(leader7))
+    logging.debug("100$a/17-19: {}".format(field100ap1719))
+    logging.debug("100$a/20: {}".format(field100ap20))
+    logging.debug("105/4-7: {}".format(field105ap48))
+    logging.debug("106$a: {}".format(field106a))
+    logging.debug("110$a/1: {}".format(field110ap1))
+    logging.debug("115$a/0: {}".format(field115ap0))
+    logging.debug("116/0: {}".format(field116ap0))
+    logging.debug("121$a/0: {}".format(field121ap0))
+    logging.debug("124$b: {}".format(field124b))
+    logging.debug("126$a/0: {}".format(field126ap0))
+    logging.debug("135/0: {}".format(field135ap0))
 
     if leader6 == "a":
         if leader7 == "a":
@@ -402,8 +399,7 @@ def extract_unimarc_creator(field):
         creator = Creator()
         # $4 -> role
         if field['4']:
-            print "field['4']"
-            print field['4']
+            logging.debug("field['4'] = {}".format(field['4']))
             if field['4'] in creator_service.role_unimarc_to_role_code:
                 creator["roles"] = [creator_service.role_unimarc_to_role_code[field['4']]]
             else:
@@ -466,7 +462,7 @@ def extract_unimarc_creator(field):
 
         elif field.tag in ["716"]:
             # Nom de marque
-            print "WARNING: todo"
+            logging.warning("todo")
 
         elif field.tag in ["602", "720", "721", "722"]:
             if field.subfields:
@@ -486,7 +482,7 @@ def extract_unimarc_creator(field):
 
         elif field.tag == "730":
             # Intellectual responsability
-            print "WARNING: todo"
+            logging.warning("todo")
 
         if creator:
             return creator

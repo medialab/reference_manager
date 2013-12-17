@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
 import re
 
 from pybtex.database.input import bibtex
@@ -68,7 +69,7 @@ def bibtex_entry_to_metajson(entry, source):
     creators = []
     authors = extract_creators(entry, "author", "aut")
     if authors:
-        #print "authors: {}".format(authors)
+        #logging.debug("authors: {}".format(authors))
         creators.extend(authors)
 
     # editor -> creators
@@ -80,19 +81,19 @@ def bibtex_entry_to_metajson(entry, source):
     if editors_pbd:
         editors.extend(editors_pbd)
     if editors:
-        #print "editors: {}".format(editors)
+        #logging.debug("editors: {}".format(editors))
         creators.extend(editors)
 
     # organization -> creators
     organizations = extract_creators(entry, "organization", "???")
     if organizations:
-        #print "organizations: {}".format(organizations)
+        #logging.debug("organizations: {}".format(organizations))
         creators.extend(organizations)
 
     # school -> creators
     schools = extract_creators(entry, "school", "yyy")
     if schools:
-        #print "schools: {}".format(schools)
+        #logging.debug("schools: {}".format(schools))
         creators.extend(schools)
 
     if creators:
@@ -210,10 +211,8 @@ def bibtex_entry_to_metajson(entry, source):
     if keywords_field:
         keywords = re.split(r',', get_field(entry, 'keywords').lower())
 
-    debug = True
-    if debug:
-        print "# BibTeX type: {}".format(bibtex_type)
-        metajson_service.pretty_print_document(document)
+    logging.info("# BibTeX type: {}".format(bibtex_type))
+    metajson_service.pretty_print_document(document)
     return document
 
 

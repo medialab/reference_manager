@@ -4,9 +4,12 @@
 
 # mongod --dbpath /Users/jrault/Documents/SciencesPo/Projets/biblib/mongodb
 
+import logging
+
 import pymongo
 from bson.objectid import ObjectId
 from bson.errors import InvalidId
+
 from biblib.metajson import SearchResponse
 from biblib.services import config_service
 from biblib.services import date_service
@@ -25,7 +28,7 @@ default_corpus = config_service.config["default_corpus"]
 try:
     mongodb = pymongo.MongoClient(config['host'], config['port'])
 except pymongo.errors.ConnectionFailure as e:
-    print "ERROR: connexion failure to MongoDB : {}".format(e)
+    logging.error("ERROR: connexion failure to MongoDB : {}".format(e))
 
 # examples:
 # resdb = mongodb[config['mongo-scrapy']['jobListCol']].update({'_id': {'$in': update_ids}}, {'$set': {'crawling_status': crawling_statuses.RUNNING}}, multi=True, safe=True)
@@ -287,6 +290,7 @@ def search(corpus, search_query):
                     pass
 
     # result_sorts : how to with this index ? ...
+    sort = [("title",pymongo.ASCENDING), ("rec_type",pymongo.ASCENDING)]
 
     # combine filter_query and search_indexes
     mongo_args = filter_query
@@ -298,11 +302,11 @@ def search(corpus, search_query):
     else:
         # search all
         mongo_query = {}
-    print "mongo_query:"
-    print jsonbson.dumps_bson(mongo_query, True)
+    logging.debug("mongo_query:")
+    logging.debug(jsonbson.dumps_bson(mongo_query, True))
 
-    mongo_response = mongodb[corpus][collection].find(mongo_query)
-    print mongo_response
+    mongo_response = mongodb[corpus][collection].find(mongo_query).sort(sort)
+    logging.debug(mongo_response)
     if mongo_response:
         records = metajson_service.load_dict_list(mongo_response)
         records_total_count = len(records)

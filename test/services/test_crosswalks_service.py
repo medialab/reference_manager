@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
 import os
 
 from biblib.services import crosswalks_service
@@ -11,7 +12,7 @@ from biblib.util import console
 
 
 def test_crosswalk(input_format, output_format=constants.FORMAT_METAJSON, all_in_one_file=True):
-    print "*** Test crosswalk : {0}".format(input_format)
+    logging.warning("*** Test crosswalk : {0}".format(input_format))
     base_dir = os.path.join(os.getcwd(), "data")
     input_dir = os.path.join(base_dir, input_format)
     output_file_extension = io_service.guess_file_extension_from_format(output_format)

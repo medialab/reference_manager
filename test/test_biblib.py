@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
+
 from nose.tools import *
 
 #import biblib.__main__ as refman
@@ -15,11 +17,11 @@ from services import test_crosswalks_service
 
 
 def setup():
-    print "SETUP!"
+    logging.info("SETUP!")
 
 
 def teardown():
-    print "TEAR DOWN!"
+    logging.info("TEAR DOWN!")
 
 
 def test_all():

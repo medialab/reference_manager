@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
 import types
 import uuid
 from datetime import datetime
@@ -51,8 +52,8 @@ def load_dict(meta_dict):
     elif meta_dict["rec_class"] == "Collection":
         return Collection(meta_dict)
     else:
-        #print jsonbson.dumps_bson(meta_dict)
-        print "Unknown rec_class: {O}".format(meta_dict["rec_class"])
+        logging.debug(jsonbson.dumps_bson(meta_dict))
+        logging.warning("Unknown rec_class: {O}".format(meta_dict["rec_class"]))
         return Common(meta_dict)
 
 
@@ -79,17 +80,17 @@ def copy_keys_between_dicts(keys, dict_a, dict_b):
 
 
 def pretty_print_document(document):
-    print "# rec_source: {}".format(document.get_rec_source())
-    print "# rec_type: {}\trec_id: {}\ttitle: {}".format(document.get_rec_type(), document.get_rec_id(), document.get_title())
+    logging.info("# rec_source: {}".format(document.get_rec_source()))
+    logging.info("# rec_type: {}\trec_id: {}\ttitle: {}".format(document.get_rec_type(), document.get_rec_id(), document.get_title()))
     is_part_of = document.get_is_part_of()
     if is_part_of:
-        print "# is_part_ofs[0].rec_type: {}\tis_part_ofs[0].rec_id: {}\tis_part_ofs[0].title: {}".format(is_part_of.get_rec_type(), is_part_of.get_rec_id(), is_part_of.get_title())
+        logging.info("# is_part_ofs[0].rec_type: {}\tis_part_ofs[0].rec_id: {}\tis_part_ofs[0].title: {}".format(is_part_of.get_rec_type(), is_part_of.get_rec_id(), is_part_of.get_title()))
         is_part_of_is_part_of = is_part_of.get_is_part_of()
         if is_part_of_is_part_of:
-            print "# is_part_ofs[0].is_part_ofs[0].rec_type: {}\tis_part_ofs[0].is_part_ofs[0].rec_id: {}\tis_part_ofs[0].is_part_ofs[0].title: {}".format(is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of.get_rec_id(), is_part_of_is_part_of.get_title())
+            logging.info("# is_part_ofs[0].is_part_ofs[0].rec_type: {}\tis_part_ofs[0].is_part_ofs[0].rec_id: {}\tis_part_ofs[0].is_part_ofs[0].title: {}".format(is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of.get_rec_id(), is_part_of_is_part_of.get_title()))
             is_part_of_is_part_of_is_part_of = is_part_of_is_part_of.get_is_part_of()
             if is_part_of_is_part_of_is_part_of:
-                print "# is_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_type: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_id: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].title: {}".format(is_part_of_is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of_is_part_of.get_rec_id(), is_part_of_is_part_of_is_part_of.get_title())
+                logging.info("# is_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_type: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_id: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].title: {}".format(is_part_of_is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of_is_part_of.get_rec_id(), is_part_of_is_part_of_is_part_of.get_title()))
 
 
 def enhance_metajson_list(documents):
@@ -141,17 +142,17 @@ def enhance_metajson(document):
 
 
 def manage_title_non_sort(document):
-    #print("manage_title_non_sort")
+    logging.debug("manage_title_non_sort")
     if document and "title_non_sort" not in document and "title" in document:
         # debug
-        #print jsonbson.dumps_bson(document)
+        #logging.debug(jsonbson.dumps_bson(document))
         #if "rec_id" in document:
-        #    print "document[""rec_id""] = {}".format(document["rec_id"])
+        #    logging.debug("document[""rec_id""] = {}".format(document["rec_id"]))
         title = document["title"]
         language = None
         if "languages" in document:
             language = document["languages"][0]
-            #print("language: {}".format(language))
+            #logging.debug("language: {}".format(language))
             if language and language in constants.TITLE_NON_SORT:
                 non_sorts = constants.TITLE_NON_SORT[language]
                 title_words = title.split()
@@ -160,8 +161,8 @@ def manage_title_non_sort(document):
                     if first_title_word in non_sorts:
                         title_non_sort = first_title_word
                         title = " ".join(title_words[1:])
-                        #print("title_non_sort: '{}'".format(title_non_sort))
-                        #print("title: '{}'".format(title))
+                        #logging.debug("title_non_sort: '{}'".format(title_non_sort))
+                        #logging.debug("title: '{}'".format(title))
                         document["title_non_sort"] = title_non_sort
                         document["title"] = title
 

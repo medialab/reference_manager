@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
+
 from biblib.crosswalks import bibjson_crosswalk
 from biblib.crosswalks import bibtex_crosswalk
 from biblib.crosswalks import csv_crosswalk
@@ -82,7 +84,7 @@ def convert_json(input_data, input_format, source, only_first_record):
             input_format = io_service.guess_format_from_json(input_data)
 
         if input_format is not None:
-            print "input_format: {0}".format(input_format)
+            logging.info("input_format: {0}".format(input_format))
 
             if input_format == constants.FORMAT_METAJSON:
                 # metajson
@@ -100,7 +102,7 @@ def convert_json(input_data, input_format, source, only_first_record):
                 return summonjson_crosswalk.summonjson_to_metajson_list(input_data, source, only_first_record)
  
             else:
-                print "Error: {} input_format not managed".format(input_format)
+                logging.error("Error: {} input_format not managed".format(input_format))
 
 
 def convert_marc(input_data, input_format, source, only_first_record):
@@ -120,7 +122,7 @@ def convert_metajson_list(metajson_list, output_format, all_in_one_file):
                 yield repec_crosswalk.metajson_list_to_repec(metajson_list)
 
             else:
-                print "ERROR Not managed format: {}".format(output_format)
+                logging.error("ERROR Not managed format: {}".format(output_format))
         else:
             for metajson in metajson_list:
                 yield convert_metajson(metajson, output_format)
@@ -151,7 +153,7 @@ def convert_metajson(metajson, output_format):
         return bibtex_crosswalk.metajson_to_bibtex_entry(metajson)
 
     else:
-        print "ERROR Not managed format: {}".format(output_format)
+        logging.error("ERROR Not managed format: {}".format(output_format))
 
 
 def convert_txt_lines(txt_lines, input_format, source, only_first_record):
@@ -160,11 +162,11 @@ def convert_txt_lines(txt_lines, input_format, source, only_first_record):
         #    input_format = io_service.guess_format_from_txt_lines(txt_lines)
 
         if input_format is not None:
-            print "input_format: {0}".format(input_format)
+            logging.info("input_format: {0}".format(input_format))
             if input_format == constants.FORMAT_RIS:
                 return ris_crosswalk.ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record)
             else:
-                print "Error: {} input_format not managed".format(input_format)
+                logging.error("Error: {} input_format not managed".format(input_format))
 
 
 def convert_xmletree(xmletree_root, input_format, source, only_first_record):
@@ -173,7 +175,7 @@ def convert_xmletree(xmletree_root, input_format, source, only_first_record):
             input_format = io_service.guess_format_from_xmletree(xmletree_root)
 
         if input_format is not None:
-            print "# input_format: {0}".format(input_format)
+            logging.info("# input_format: {0}".format(input_format))
 
             if input_format == constants.FORMAT_DDI:
                 # ddi
@@ -204,7 +206,7 @@ def convert_xmletree(xmletree_root, input_format, source, only_first_record):
                 return unixref_crosswalk.unixref_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
 
             else:
-                print "Error: {} input_format not managed".format(input_format)
+                logging.error("Error: {} input_format not managed".format(input_format))
 
 
 
@@ -230,7 +232,7 @@ def parse_and_convert_file_list(input_file_path_list, input_format, output_forma
             elif output_format == constants.FORMAT_MODS:
                 return mods_crosswalk.create_mods_collection_xmletree(results)        
             else:
-                print "ERROR Not managed format: {}".format(output_format)
+                logging.error("ERROR Not managed format: {}".format(output_format))
 
 
 def parse_and_convert_file(input_file_path, input_format, output_format, source, only_first_record, all_in_one_file):

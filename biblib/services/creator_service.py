@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
+
 from biblib import metajson
 from biblib.metajson import Creator
 from biblib.metajson import Event
@@ -538,7 +540,7 @@ def formatted_name_to_creator(formatted_name, rec_class, role):
         orgunit = None
         person = None
 
-        #print("name: %s"%formatted_name)
+        logging.debug("name: {}".format(formatted_name))
         # rec_class determination
         if rec_class is None or rec_class not in [constants.CLASS_EVENT, constants.CLASS_FAMILY, constants.CLASS_ORGUNIT, constants.CLASS_PERSON]:
             for event_term in creator_event_terms:
@@ -603,8 +605,8 @@ def formatted_name_to_creator(formatted_name, rec_class, role):
             comma_index = formatted_name.find(",")
             if comma_index == -1:
                 space_index = formatted_name.rfind(" ")
-                #print formatted_name
-                #print space_index
+                logging.debug(formatted_name)
+                logging.debug(space_index)
                 if space_index != -1:
                     #like Given Family
                     name_given = formatted_name[:space_index].strip()
@@ -673,7 +675,7 @@ def formatted_name_to_creator(formatted_name, rec_class, role):
                 family.set_key_if_not_none("name_family", name_family)
                 creator["agent"] = family
 
-        #print jsonbson.dumps_json(creator, True)
+        logging.debug(jsonbson.dumps_json(creator, True))
         return creator
 
 

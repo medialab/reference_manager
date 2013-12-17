@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
+import logging.config
 import os
 
 from gspreadsheet import GSpreadsheet
@@ -24,23 +26,23 @@ def find_config_path():
         os.environ.get("BIBLIB_CONF")
     ]
     for location in locations:
-        print("location: {}".format(location))
+        logging.debug("location: {}".format(location))
         config_location = os.path.join(location, "conf", "config.json")
         if os.path.exists(config_location):
             return os.path.join(location, "conf")
 
 
 def load_config_json():
-    #print("config_service.load_config_json")
+    logging.info("config_service.load_config_json")
     try:
         config_location = os.path.join(config_path, "config.json")
         with open(config_location, 'r') as config_file:
-            print("config_location: {}".format(config_location))
+            logging.info("config_location: {}".format(config_location))
             return jsonbson.load_json_file(config_file)
     except IOError as e:
-        print "ERROR: Can' open config.json file", e
+        logging.error("ERROR: Can' open config.json file {}".format(e))
     except ValueError as e:
-        print "ERROR: Config file is not valid JSON", e
+        logging.error("ERROR: Config file is not valid JSON {}".format(e))
         return False
 
 
@@ -49,16 +51,16 @@ def retrieve_google_types(app):
     keys = {}
     type_worksheets = get_google_types_worksheets(spreadsheet)
     for ws_id, ws_name in type_worksheets:
-        print 'worksheet code: {}, name: {}'.format(ws_id, ws_name)
+        logging.debug('worksheet code: {}, name: {}'.format(ws_id, ws_name))
         worksheet = GSpreadsheet(worksheet=ws_id, key=config["google"]["conf_key"], email=config["google"]["email"], password=config["google"]["password"])
         type_bundle = google_worksheet_to_type(ws_name, worksheet, app, keys)
         type_bundle_id = type_bundle["type_id"]
         type_bundle_dump = jsonbson.dumps_json(type_bundle)
         type_bundle_path = os.path.abspath(os.path.join(os.getcwd(), 'biblib', 'conf', 'types', type_bundle_id + ".json"))
-        print type_bundle_dump
+        logging.debug(type_bundle_dump)
         with open(type_bundle_path, "w") as type_bundle_file:
             type_bundle_file.write(type_bundle_dump)
-    print jsonbson.jsonbson(keys)
+    logging.debug(jsonbson.jsonbson(keys))
 
 
 def get_google_types_worksheets(spreadsheet):
@@ -71,12 +73,12 @@ def get_google_types_worksheets(spreadsheet):
 
 
 def google_worksheet_to_type(ws_name, worksheet, app, keys):
-    #print type(worksheet)
-    #print dir(worksheet)
+    logging.debug(type(worksheet))
+    logging.debug(dir(worksheet))
 
     type_id_col = ""
     ws_name_key = ws_name.replace("_", "").replace(" ", "").strip().split('-', 1)[0]
-    print "ws_name_key: {}".format(ws_name_key)
+    logging.debug("ws_name_key: {}".format(ws_name_key))
     type_bundle = Type()
     type_bundle["type_id"] = ws_name.replace("type.", "")
     type_bundle["bundle"] = True
@@ -95,15 +97,15 @@ def google_worksheet_to_type(ws_name, worksheet, app, keys):
             type_id_col = col
             type_id_sign = "*"
 
-        print "col{}: {}".format(type_id_sign, col)
+        logging.debug("col{}: {}".format(type_id_sign, col))
 
     if not type_id_col:
-        print "Fixme! Can't find the type_id_col for worksheet: {}".format(ws_name)
+        logging.debug("Fixme! Can't find the type_id_col for worksheet: {}".format(ws_name))
         return None
     else:
-        print "type_id_col: {}".format(type_id_col)
+        logging.debug("type_id_col: {}".format(type_id_col))
         for row in worksheet:
-            #print row
+            logging.debug(row)
             type_row = {}
 
             # type.code -> type_id
@@ -145,7 +147,22 @@ def google_worksheet_to_type(ws_name, worksheet, app, keys):
         return type_bundle
 
 
+def configure_loggin(config):
+    if "logging" in config:
+        config_logging = config["logging"]
+        logging_level_numeric = getattr(logging, config_logging["level"].upper(), None)
+        if not isinstance(logging_level_numeric, int):
+            raise ValueError('Invalid log level: {}'.format(config_logging["level"]))
+        if "filename" in config_logging:
+            logging_filename = config_logging["filename"]
+        else:
+            logging_filename = None
+        #logging_filename
+        logging.basicConfig(format=config_logging["format"],level=logging_level_numeric)
+
+
 config_path = find_config_path()
 config = load_config_json()
-print "Default corpus : {}".format(config["default_corpus"])
+logging.config.dictConfig(config["logging"])
+logging.info("Default corpus: {}".format(config["default_corpus"]))
 #retrieve_google_types("spire")

@@ -155,10 +155,10 @@ def cite(document, format):
             publishers.append(creator.formatted_name())
     if publishers:
         publishers_count = len(publishers)
-        #print "publishers_count:{}".format(publishers_count)
+        #logging.debug("publishers_count:{}".format(publishers_count))
         for position, publisher in enumerate(publishers):
-            #print "position:{}".format(position)
-            #print "publisher:{}".format(publisher)
+            #logging.debug("position:{}".format(position))
+            #logging.debug("publisher:{}".format(publisher))
             result.append(u"<span class=\"publishers\">{0}</span>".format(publisher))
             if publishers_count > 1 and position < publishers_count - 1:
                 result.append(u"; ")
@@ -228,12 +228,7 @@ def cite(document, format):
 
     if url:
         result.append(u"<span class=\"url\">{0}</span>".format(format_url(url)))
-
-    #print result 
-    #this print fires an encoding error when result contains non ascii characters
-    #if print is needed :
-    #   1- use python log command not print
-    #   2- for encoding a result.ecnode("utf8") might solve the prb    
+ 
     return "".join(result)
 
 
@@ -303,11 +298,11 @@ def format_creators_dict(creators_dict, level):
 
         contri_count = len(creators_dict["authors"])
 
-        #print "level: {}".format(level)
-        #print "contri_count: {}".format(contri_count)
+        #logging.debug("level: {}".format(level))
+        #logging.debug("contri_count: {}".format(contri_count))
 
         for position, creator in enumerate(creators_dict["authors"]):
-            #print "position: {}".format(position)
+            #logging.debug("position: {}".format(position))
             # prefix
             formatted_name = format_creator(creator, position, level)
             if formatted_name:
@@ -330,7 +325,7 @@ def format_creators_dict(creators_dict, level):
                 # deactivated
                 #if contri_count > 3:
                 #    result.append(u", <span class=\"creator\">et al.</span>")
-                #    print result
+                #    logging.debug(result)
                 #    break
 
         result.append(" ")

@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
 import os
 import re
 import commands
@@ -21,8 +22,8 @@ def convert_rtf_to_txt(input_path, output_path, input_filename, output_filename)
     command += "'" + output_path + "/" + output_filename + "'"
     result = commands.getstatusoutput(command)
     if result[0] != 0:
-        print output_filename
-        print result
+        logging.debug(output_filename)
+        logging.debug(result)
     return result
 
 
@@ -132,13 +133,13 @@ def fetch_url(url):
         if result_info:
             result_dict["info"] = result_info
 
-        print "{0}\t\t: {1}".format(result_code, url)
+        logging.debug("{0}\t\t: {1}".format(result_code, url))
         #return result_dict, result_data
         return result_dict, result_data
 
 
-#print fetch_url("URL")
-#print fetch_url("http://bibliotheque.sciences-po.fr/")
-#print fetch_url("http://intranet.tdmu.edu.ua/data/kafedra/internal/ginecology2/classes_stud/en/med/lik/ptn/Obstetrics and gynecology/5 year/05_Operative obstetric. Lacerations of the birth canal.files/image008.jpg")
-#print fetch_url("http://commons.wikimedia.org/wiki/File:Saint-Menoux_debredinoire.JPG?uselang=fr")
-#print fetch_url("http://france.meteofrance.com/france/actu/archives/2009/2009?page_id=10320&document_id=21075&portlet_id=42233")
+#logging.debug(fetch_url("URL"))
+#logging.debug(fetch_url("http://bibliotheque.sciences-po.fr/"))
+#logging.debug(fetch_url("http://intranet.tdmu.edu.ua/data/kafedra/internal/ginecology2/classes_stud/en/med/lik/ptn/Obstetrics and gynecology/5 year/05_Operative obstetric. Lacerations of the birth canal.files/image008.jpg"))
+#logging.debug(fetch_url("http://commons.wikimedia.org/wiki/File:Saint-Menoux_debredinoire.JPG?uselang=fr"))
+#logging.debug(fetch_url("http://france.meteofrance.com/france/actu/archives/2009/2009?page_id=10320&document_id=21075&portlet_id=42233"))

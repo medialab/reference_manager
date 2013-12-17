@@ -25,12 +25,15 @@
 
 """
 
+import logging
 import random
 import re
 import urllib2
 import hashlib
+
 from htmlentitydefs import name2codepoint
 from bs4 import BeautifulSoup
+
 from biblib.services import config_service
 
 
@@ -62,7 +65,7 @@ def query_and_retrieve_metadata(q, only_first_record):
 
     cited_by_list = extract_cited_by_list(html)
     h = calcul_h_index(cited_by_list)
-    print h
+    logging.debug(h)
 
     metadata_links = extract_metadata_links(html, meta_format)
 
@@ -75,7 +78,7 @@ def query_and_retrieve_metadata(q, only_first_record):
 def query(query, meta_format):
     """Query Google Scholar and just return the html response"""
 
-    print "Google Sholar Query: {0} ; metadata format: {1}".format(query, meta_format)
+    logging.debug("Google Sholar Query: {0} ; metadata format: {1}".format(query, meta_format))
 
     query = '/scholar?q='+urllib2.quote(query)
     url = config["endpoint"] + query
@@ -87,7 +90,7 @@ def query(query, meta_format):
     response = urllib2.urlopen(request)
     html = response.read()
     html.decode('ascii', 'ignore')
-    #print html
+    #logging.debug(html)
     return html
 
 
@@ -120,9 +123,7 @@ def retrieve_metadata_list(links):
         request = urllib2.Request(url, headers=GOOGLE_HEADERS)
         response = urllib2.urlopen(request)
         metadata = response.read()
-        print
-        print
-        print metadata
+        logging.debug(metadata)
         results.append(metadata)
     return results
 
@@ -134,8 +135,7 @@ def extract_cited_by_list(html):
         match = re.search("Cited by ([^<]*)", str(record))
         if match is not None:
             cited_by = int(match.group(1))
-            print
-            print "Cited by %s" % cited_by
+            logging.debug("Cited by %s" % cited_by)
             cited_by_list.append(cited_by)
     return cited_by_list
 
@@ -148,5 +148,5 @@ def calcul_h_index(cited_by_list):
     for cited_by in cited_by_list:
         if cited_by > h:
             h += 1
-    print h
+    logging.debug(h)
     return h

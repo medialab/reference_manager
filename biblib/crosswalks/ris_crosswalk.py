@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
+
 from biblib.metajson import Document
 from biblib.metajson import Resource
 from biblib.services import creator_service
@@ -87,7 +89,7 @@ ris_document_type_to_metajson_document_type = {
     RIS_TYPE_DICT: constants.DOC_TYPE_DICTIONARY,
     RIS_TYPE_EBOOK: constants.DOC_TYPE_BOOKPART,
     RIS_TYPE_ECHAP: constants.DOC_TYPE_EBOOK,
-    RIS_TYPE_EDBOOK: constants.DOC_TYPE_EDITEDBOOK,
+    RIS_TYPE_EDBOOK: constants.DOC_TYPE_BOOK,  # constants.DOC_TYPE_EDITEDBOOK
     RIS_TYPE_EJOUR: constants.DOC_TYPE_JOURNALARTICLE,
     RIS_TYPE_ELEC: constants.DOC_TYPE_WEBPAGE,  # ?
     RIS_TYPE_ENCYC: constants.DOC_TYPE_ENCYCLOPEDIA,
@@ -147,7 +149,7 @@ def ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record):
     for line in txt_lines:
         if line:
             line = line.rstrip('\r\n')
-            #print "line: {}".format(line)
+            logging.debug("line: {}".format(line))
 
             # multi line management
             if previous_key:
@@ -159,14 +161,14 @@ def ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record):
                 key = line[:2].strip()
                 value = line[6:].strip()
             if value.endswith("/") and key not in ["Y1", "PY"]:
-                #print "multi line"
+                logging.debug("multi line")
                 previous_key = key
                 previous_value = value.rstrip('/')
                 continue
 
             if key is None or len(key) == 0:
                 # empty line -> continue
-                #print "empty line"
+                logging.debug("empty line")
                 continue
             elif key == RIS_KEY_BEGIN:
                 # record begin with document type -> create document
@@ -190,14 +192,13 @@ def ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record):
                 if "is_part_ofs" in document and "title" not in document["is_part_ofs"][0] and "title_abbreviated" in document["is_part_ofs"][0]:
                     document["is_part_ofs"][0]["title"] = document["is_part_ofs"][0]["title_abbreviated"]["title"]
                     del document["is_part_ofs"][0]["title_abbreviated"]
-                debug = True
-                if debug:
-                    print "# RIS type: {}".format(ris_type)
-                    metajson_service.pretty_print_document(document)
+
+                logging.info("# RIS type: {}".format(ris_type))
+                metajson_service.pretty_print_document(document)
                 yield document
             else:
                 # process key value
-                #print "key: {}; value: {}".format(key, value)
+                logging.debug("key: {}; value: {}".format(key, value))
                 if key == "ID":
                     document["rec_id"] = value
                 elif key in ["T1", "TI", "CT"] or (key == "BT" and ris_type in [RIS_TYPE_BOOK, RIS_TYPE_UNPB]):
@@ -292,4 +293,4 @@ def ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record):
                         document["keywords"] = {"und": []}
                     document["keywords"]["und"].append(value)
                 else:
-                    print "Not managed key: {} with value: {}".format(key, value)
+                    logging.debug("Not managed key: {} with value: {}".format(key, value))

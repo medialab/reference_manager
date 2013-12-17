@@ -8,6 +8,7 @@
 Search Summon API with Python.
 See Dough Chesnut's Code4Lib mailing list post: http://serials.infomotions.com/code4lib/archive/2010/201010/2408.html
 """
+import logging
 import httplib2
 import urllib
 from datetime import datetime
@@ -45,11 +46,11 @@ def summon_headers(query_string):
 def summon_query(query_string):
     url = "http://%s%s?%s" % (config["host"], config["path"], query_string)
     headers = summon_headers(query_string)
-    print "headers: {}".format(headers)
+    logging.debug("headers: {}".format(headers))
 
     http = httplib2.Http()
     response, content = http.request(url, 'GET', headers=headers)
-    print "content: {}".format(content)
+    logging.debug("content: {}".format(content))
     result = jsonbson.load_json_str(content)
-    print "result: {}".format(jsonbson.dumps_json(result, True))
+    logging.debug("result: {}".format(jsonbson.dumps_json(result, True)))
     return result

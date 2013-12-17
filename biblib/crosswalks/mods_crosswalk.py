@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
 import xml.etree.ElementTree as ET
 
 from biblib.metajson import Creator
@@ -199,7 +200,7 @@ def mods_xmletree_to_metajson(mods, source):
 
     # @version -> null
     mods_version = mods.get("version")
-    print "# mods_version: {}".format(mods_version)
+    logging.debug("# mods_version: {}".format(mods_version))
 
     document = mods_root_or_related_item_to_metajson(mods, None)
 
@@ -207,10 +208,7 @@ def mods_xmletree_to_metajson(mods, source):
     if source is not None:
         document["rec_source"] = source
 
-    debug = True
-    if debug:
-        #print "mods genres: {}".format()
-        metajson_service.pretty_print_document(document)
+    metajson_service.pretty_print_document(document)
     return document
 
 
@@ -219,7 +217,7 @@ def mods_root_or_related_item_to_metajson(mods, root_rec_type):
     if mods is None:
         return None
 
-    #print "root_rec_type: {}".format(root_rec_type)
+    #logging.debug("root_rec_type: {}".format(root_rec_type))
 
     document = Document()
 
@@ -653,7 +651,7 @@ def convert_mods_name_dai_dict_to_creator(mods_name, dai_dict):
             affiliation = metajson_service.create_affiliation(affiliation_rec_id, affiliation_name, None, None, None, False)
 
         if mods_name_type == "personal":
-            # print "personal"
+            # logging.debug("personal")
             person = Person()
 
             if agent_rec_id:
@@ -681,7 +679,7 @@ def convert_mods_name_dai_dict_to_creator(mods_name, dai_dict):
             creator["agent"] = person
 
         elif mods_name_type == "corporate":
-            # print "corporate"
+            # logging.debug("corporate")
             orgunit = Orgunit()
             creator["agent"] = orgunit
 
@@ -689,7 +687,7 @@ def convert_mods_name_dai_dict_to_creator(mods_name, dai_dict):
                 orgunit["name"] = mods_name_parts[0].text.strip()
 
         elif mods_name_type == "conference":
-            # print "conference"
+            # logging.debug("conference")
             event = Event()
             creator["agent"] = event
 
@@ -715,7 +713,7 @@ def convert_mods_name_dai_dict_to_creator(mods_name, dai_dict):
                             event["date_end"] = date[slash_index+1:]
 
         elif mods_name_type == "family":
-            # print "family"
+            # logging.debug("family")
             family = Family()
             creator["agent"] = family
 
@@ -725,7 +723,7 @@ def convert_mods_name_dai_dict_to_creator(mods_name, dai_dict):
         if mods_name_roleterm is not None:
             creator["roles"] = convert_mods_name_roleterm(mods_name_roleterm)
 
-        #print name_type, name_id, name_parts, name_affiliations, name_roleterm, name_descriptions
+        #logging.debug("{} {} {} {} {} {}".format(name_type, name_id, name_parts, name_affiliations, name_roleterm, name_descriptions))
         return creator
 
 
@@ -735,7 +733,7 @@ def convert_mods_name_roleterm(mods_roleterm):
         authority = mods_roleterm.get("authority")
         term_type = mods_roleterm.get("type")
         value = mods_roleterm.text.strip()
-        # print authority, term_type, value
+        # logging.debug("{} {} {}".format(authority, term_type, value))
         if not value:
             # default creator role
             return ["cre"]
@@ -936,7 +934,7 @@ def get_mods_related_items(mods_root, root_rec_type):
                     # extract related_item rec_type
                     related_item_rec_type = related_item["rec_type"]
 
-                    #print "root_rec_type: {} related_item_rec_type: {} mods_related_item_type: {} ".format(root_rec_type, related_item_rec_type, mods_related_item_type)
+                    #logging.debug("root_rec_type: {} related_item_rec_type: {} mods_related_item_type: {} ".format(root_rec_type, related_item_rec_type, mods_related_item_type))
 
                     if mods_related_item_type == "host":
                         # move the part fields from the related item to the root document
@@ -1063,7 +1061,7 @@ def get_mods_title_infos(mods):
                 elif title_type == "uniform":
                     result["title_uniform"] = title_dict
                 else:
-                    print "error get_mods_title_infos unknown type: {}".format(title_type)
+                    logging.error("error get_mods_title_infos unknown type: {}".format(title_type))
     return result
 
 

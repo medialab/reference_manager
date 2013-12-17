@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
+import logging
 import urllib
 from xml.sax.saxutils import quoteattr
 from biblib.services import creator_service
@@ -313,7 +314,7 @@ def metajson_to_openurl(document):
     for k, v in openurl.iteritems():
         openurl_str[k] = unicode(v).encode('utf-8')
     result = quoteattr(urllib.urlencode(openurl_str))
-    #print result
+    #logging.debug("{}".format(result))
     return result
 
 
