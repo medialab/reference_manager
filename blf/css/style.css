@@ -51,7 +51,7 @@ ul ul {
 }
 
 .container {
-  width: 550px;
+  width: 650px;
   margin: auto;
 }
 
@@ -101,7 +101,7 @@ ul.entries-list > li .buttons-container {
   position: absolute;
   padding-right: 15px;
   right: 100%;
-  width: 100px;
+  width: 80px;
 }
 
 ul.entries-list > li .buttons-container > button {
@@ -113,9 +113,14 @@ ul.entries-list > li:hover .buttons-container > button {
   visibility: visible;
 }
 
+ul.entries-list > li .entry-type {
+  float: left;
+  width: 140px;
+}
+
 ul.entries-list > li .entry-title {
   display: inline-block;
-  max-width: 600px;
+  max-width: 500px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
