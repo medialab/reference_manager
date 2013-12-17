@@ -120,6 +120,38 @@
                 "VideoRecording"
             ],
             "type_ui": "ComponentField"
+        },
+        {
+            "labels": {
+                "en": "Start timecode",
+                "fr": "Code temporel (timecode) de d\u00e9but"
+            },
+            "property": "part_timecode_begin",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "End timecode",
+                "fr": "Code temporel (timecode) de fin"
+            },
+            "property": "part_timecode_end",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Resources",
+                "fr": "Ressources"
+            },
+            "multiple": true,
+            "only_one": false,
+            "property": "resources",
+            "required": false,
+            "type_fields": [
+                "ResourceRemote"
+            ],
+            "type_ui": "ComponentField"
         }
     ],
     "labels": {

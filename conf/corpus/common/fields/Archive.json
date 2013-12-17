@@ -66,7 +66,7 @@
         {
             "labels": {
                 "en": "Accrual method",
-                "fr": "Méthode d'accroissement"
+                "fr": "M\u00e9thode d'accroissement"
             },
             "property": "accrual_method",
             "required": false,
@@ -75,8 +75,8 @@
         },
         {
             "labels": {
-                "en": "Accrual policy",
-                "fr": "Politique d'accroissement"
+                "en": "Accrual periodicity",
+                "fr": "P\u00e9riodicit\u00e9 d'accroissement"
             },
             "property": "accrual_periodicity",
             "required": false,
@@ -86,7 +86,7 @@
         {
             "labels": {
                 "en": "Abstracts",
-                "fr": "Resum\u00e9s"
+                "fr": "R\u00e9sum\u00e9s"
             },
             "multiple": true,
             "property": "descriptions",

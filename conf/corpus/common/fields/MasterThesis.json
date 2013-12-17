@@ -46,11 +46,20 @@
         },
         {
             "labels": {
+                "en": "Defence date",
+                "fr": "Date de soutenance"
+            },
+            "property": "date_defence",
+            "required": false,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
                 "en": "Date issued",
                 "fr": "Date de publication"
             },
             "property": "date_issued",
-            "required": true,
+            "required": false,
             "type_ui": "DateField"
         },
         {
@@ -113,6 +122,20 @@
             "property": "keywords",
             "required": false,
             "type_ui": "KeywordField"
+        },
+        {
+            "labels": {
+                "en": "Resources",
+                "fr": "Ressources"
+            },
+            "multiple": true,
+            "only_one": false,
+            "property": "resources",
+            "required": false,
+            "type_fields": [
+                "ResourceRemote"
+            ],
+            "type_ui": "ComponentField"
         }
     ],
     "labels": {

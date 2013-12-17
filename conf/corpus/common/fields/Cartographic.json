@@ -1,0 +1,42 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Projection",
+                "fr": "Projection"
+            },
+            "property": "projection",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Scale",
+                "fr": "Echelle"
+            },
+            "property": "scale",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Coordinates",
+                "fr": "Coordonn\u00e9es"
+            },
+            "multiple": true,
+            "property": "coordinates",
+            "required": false,
+            "type_fields": [
+                "Coordinate"
+            ],
+            "type_ui": "ComponentField"
+        }
+    ],
+    "labels": {
+        "en": "Cartographic",
+        "fr": "Cartographique"
+    },
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "Cartographic"
+}

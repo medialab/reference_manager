@@ -81,33 +81,6 @@
         },
         {
             "labels": {
-                "en": "Projection",
-                "fr": "Projection"
-            },
-            "property": "cartographic_projection",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Scale",
-                "fr": "Echelle"
-            },
-            "property": "cartographics_scale",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Coordinates",
-                "fr": "Coordonn\u00e9es"
-            },
-            "property": "cartographic_coordinates",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
                 "en": "Abstracts",
                 "fr": "Resum\u00e9s"
             },
@@ -154,7 +127,8 @@
                 "BookPart",
                 "JournalArticle",
                 "MagazineArticle",
-                "NewspaperArticle"
+                "NewspaperArticle",
+                "WebSite"
             ],
             "type_ui": "ComponentField"
         },
@@ -175,6 +149,20 @@
             "property": "part_page_end",
             "required": false,
             "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Resources",
+                "fr": "Ressources"
+            },
+            "multiple": true,
+            "only_one": false,
+            "property": "resources",
+            "required": false,
+            "type_fields": [
+                "ResourceRemote"
+            ],
+            "type_ui": "ComponentField"
         }
     ],
     "labels": {

@@ -78,6 +78,36 @@
         },
         {
             "labels": {
+                "en": "Season",
+                "fr": "Saison"
+            },
+            "property": "part_season",
+            "required": false,
+            "type_source": "part_season",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Quarter",
+                "fr": "Trimestre"
+            },
+            "property": "part_quarter",
+            "required": false,
+            "type_source": "part_quarter",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Month",
+                "fr": "Mois"
+            },
+            "property": "part_month",
+            "required": false,
+            "type_source": "part_month",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
                 "en": "Date issued",
                 "fr": "Date de publication"
             },
@@ -157,6 +187,20 @@
             "required": true,
             "type_fields": [
                 "Book"
+            ],
+            "type_ui": "ComponentField"
+        },
+        {
+            "labels": {
+                "en": "Resources",
+                "fr": "Ressources"
+            },
+            "multiple": true,
+            "only_one": false,
+            "property": "resources",
+            "required": false,
+            "type_fields": [
+                "ResourceRemote"
             ],
             "type_ui": "ComponentField"
         }

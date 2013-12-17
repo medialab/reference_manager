@@ -58,6 +58,17 @@
         },
         {
             "labels": {
+                "en": "Publication country",
+                "fr": "Pays de publication"
+            },
+            "multiple": true,
+            "property": "publication_countries",
+            "required": false,
+            "type_source": "country",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
                 "en": "Frequency",
                 "fr": "P\u00e9riodicit\u00e9"
             },
@@ -89,6 +100,20 @@
             "property": "identifiers",
             "required": false,
             "type_ui": "IdentifierField"
+        },
+        {
+            "labels": {
+                "en": "Resources",
+                "fr": "Ressources"
+            },
+            "multiple": true,
+            "only_one": false,
+            "property": "resources",
+            "required": false,
+            "type_fields": [
+                "ResourceRemote"
+            ],
+            "type_ui": "ComponentField"
         }
     ],
     "labels": {

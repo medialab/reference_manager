@@ -8,6 +8,15 @@
             "property": "url",
             "required": true,
             "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Date last accessed",
+                "fr": "Date de dernier accès"
+            },
+            "property": "date_last_accessed",
+            "required": false,
+            "type_ui": "DateField"
         }
     ],
     "labels": {

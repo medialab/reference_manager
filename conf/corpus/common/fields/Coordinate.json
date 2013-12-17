@@ -1,0 +1,38 @@
+{
+    "children": [
+        {
+            "labels": {
+                "en": "Latitude",
+                "fr": "Latitude"
+            },
+            "property": "latitude",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Longitude",
+                "fr": "Longitude"
+            },
+            "property": "scale",
+            "required": false,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Elevation",
+                "fr": "Altitude"
+            },
+            "property": "elevation",
+            "required": false,
+            "type_ui": "CharField"
+        }
+    ],
+    "labels": {
+        "en": "Coordinate",
+        "fr": "Coordonn\u00e9es"
+    },
+    "rec_class": "Field",
+    "rec_metajson": 1,
+    "rec_type": "Coordinate"
+}

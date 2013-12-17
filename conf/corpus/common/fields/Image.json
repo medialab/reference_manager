@@ -72,30 +72,16 @@
         },
         {
             "labels": {
-                "en": "Projection",
-                "fr": "Projection"
+                "en": "Cartographics data",
+                "fr": "Données cartographiques"
             },
-            "property": "cartographic_projection",
+            "multiple": true,
+            "property": "cartographics",
             "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Scale",
-                "fr": "Echelle"
-            },
-            "property": "cartographics_scale",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
-                "en": "Coordinates",
-                "fr": "Coordonn\u00e9es"
-            },
-            "property": "cartographic_coordinates",
-            "required": false,
-            "type_ui": "CharField"
+            "type_fields": [
+                "Cartographic"
+            ],
+            "type_ui": "ComponentField"
         },
         {
             "labels": {
@@ -167,6 +153,20 @@
             "property": "part_page_end",
             "required": false,
             "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Resources",
+                "fr": "Ressources"
+            },
+            "multiple": true,
+            "only_one": false,
+            "property": "resources",
+            "required": false,
+            "type_fields": [
+                "ResourceRemote"
+            ],
+            "type_ui": "ComponentField"
         }
     ],
     "labels": {

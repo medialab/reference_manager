@@ -78,6 +78,26 @@
         },
         {
             "labels": {
+                "en": "Month",
+                "fr": "Mois"
+            },
+            "property": "part_month",
+            "required": false,
+            "type_source": "part_month",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
+                "en": "Week",
+                "fr": "Semaine"
+            },
+            "property": "part_week",
+            "required": false,
+            "type_source": "part_week",
+            "type_ui": "TypeField"
+        },
+        {
+            "labels": {
                 "en": "Date issued",
                 "fr": "Date de publication"
             },
@@ -133,6 +153,20 @@
             "property": "keywords",
             "required": false,
             "type_ui": "KeywordField"
+        },
+        {
+            "labels": {
+                "en": "Resources",
+                "fr": "Ressources"
+            },
+            "multiple": true,
+            "only_one": false,
+            "property": "resources",
+            "required": false,
+            "type_fields": [
+                "ResourceRemote"
+            ],
+            "type_ui": "ComponentField"
         }
     ],
     "labels": {

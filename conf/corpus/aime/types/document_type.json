@@ -54,10 +54,10 @@
                         },
                         {
                             "labels": {
-                                "en": "Edited Book",
-                                "fr": "Ouvrage collectif"
+                                "en": "Audio book",
+                                "fr": "Livre audio"
                             },
-                            "type_id": "EditedBook"
+                            "type_id": "AudioBook"
                         },
                         {
                             "labels": {
@@ -272,7 +272,17 @@
                                 "fr": "Brevet"
                             },
                             "type_id": "Patent"
-                        },
+                        }
+                    ],
+                    "labels": {
+                        "en": "Technical text",
+                        "fr": "Document technique"
+                    },
+                    "type_id": "TechnicalTextBundle"
+                },
+                {
+                    "bundle": true,
+                    "children": [
                         {
                             "labels": {
                                 "en": "Statute",
@@ -289,10 +299,10 @@
                         }
                     ],
                     "labels": {
-                        "en": "Technical text",
-                        "fr": "Document technique"
+                        "en": "Administrative text",
+                        "fr": "Document administratif"
                     },
-                    "type_id": "TechnicalTextBundle"
+                    "type_id": "AdministrativeTextBundle"
                 }
             ],
             "labels": {
@@ -362,6 +372,13 @@
                         "fr": "Livre audio"
                     },
                     "type_id": "AudioBook"
+                },
+                {
+                    "labels": {
+                        "en": "Audio Part",
+                        "fr": "Extrait audio"
+                    },
+                    "type_id": "AudioPart"
                 }
             ],
             "labels": {
@@ -397,7 +414,7 @@
                 {
                     "labels": {
                         "en": "Video part",
-                        "fr": "Extrait vidéo"
+                        "fr": "Extrait vid\u00e9o"
                     },
                     "type_id": "VideoPart"
                 }
@@ -413,13 +430,6 @@
             "children": [
                 {
                     "labels": {
-                        "en": "Test",
-                        "fr": "Test"
-                    },
-                    "type_id": "Test"
-                },
-                {
-                    "labels": {
                         "en": "Computer program",
                         "fr": "Logiciel"
                     },
@@ -427,34 +437,12 @@
                 },
                 {
                     "labels": {
-                        "en": "Quantitative dataset",
-                        "fr": "Donn\u00e9es quantitatives"
-                    },
-                    "type_id": "DatasetQuanti"
-                },
-                {
-                    "labels": {
-                        "en": "Qualitative dataset",
-                        "fr": "Donn\u00e9es qualitatives"
-                    },
-                    "type_id": "DatasetQuali"
-                },
-                {
-                    "labels": {
                         "en": "PhysicalObject",
                         "fr": "Objet physique"
                     },
                     "type_id": "PhysicalObject"
-                },
-                {
-                    "labels": {
-                        "en": "Personal Communication",
-                        "fr": "Communication personnelle"
-                    },
-                    "type_id": "PersonalCommunication"
                 }
             ],
-            "deprecated": true,
             "labels": {
                 "en": "Others",
                 "fr": "Autres"
