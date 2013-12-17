@@ -1,4 +1,43 @@
 {
+    "logging": {
+        "version": 1,
+        "disable_existing_loggers": true,
+        "formatters": {
+            "detailed": {
+                "class": "logging.Formatter",
+                "format": "%(asctime)s %(levelname)-8s %(processName)-10s - %(message)s"
+            },
+            "simple": {
+                "class": "logging.Formatter",
+                "format": "%(levelname)-8s - %(message)s"
+            }
+        },
+        "handlers": {
+            "console": {
+                "class": "logging.StreamHandler",
+                "level": "DEBUG",
+                "formatter": "simple"
+            },
+            "file": {
+                "class": "logging.FileHandler",
+                "filename": "log/biblib.log",
+                "mode": "w",
+                "level": "INFO",
+                "formatter": "detailed"
+            },
+            "errors": {
+                "class": "logging.FileHandler",
+                "filename": "log/biblib-errors.log",
+                "mode": "w",
+                "level": "ERROR",
+                "formatter": "detailed"
+            }
+        },
+        "root": {
+            "level": "DEBUG",
+            "handlers": ["console", "file", "errors"]
+        }
+    },
     "mongodb": {
         "db": "biblib",
         "host": "localhost",
