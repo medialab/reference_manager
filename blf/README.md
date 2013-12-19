@@ -6,8 +6,8 @@ blf - BibLib front-end
 
 How to run it:
 
-  - Get **reference_manager** working (see the related [README](../../README.md))
-  - Go to the `biblib/front` folder
+  - Get **reference_manager** working (see the related [README](../README.md))
+  - Go to the `blf` folder
   - Start a HTTP server: `python -m SimpleHTTPServer 4000`
   - Go to the application: `http://localhost:4000`
 
@@ -22,8 +22,8 @@ How to build the production version:
 
 How to run the production version:
 
-  - Get **reference_manager** working (see the related [README](../../README.md))
-  - Go to the `biblib/front` folder
+  - Get **reference_manager** working (see the related [README](../README.md))
+  - Go to the `blf` folder
   - Start a HTTP server: `python -m SimpleHTTPServer 4000`
   - Go to the application: `http://localhost:4000/index.min.html`
 
