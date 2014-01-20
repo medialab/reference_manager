@@ -244,6 +244,7 @@ def parse_and_convert_file(input_file_path, input_format, output_format, source,
         # file_extension type determination
         input_type = io_service.guess_type_from_file(input_file_path)
 
+    logging.info("parse_and_convert_file input_file_path: {}; input_format: {}; input_type: {}".format(input_file_path, input_format, input_type))
     if input_type is not None:
         metajson_list = None
         if input_type == constants.FILE_TYPE_XMLETREE:
@@ -313,9 +314,11 @@ def parse_and_convert_bibtex(input_file_path, input_format, source, only_first_r
 
 
 def parse_and_convert_csv(input_file_path, input_format, source, only_first_record):
-    csv_dict_reader = io_service.parse_csv(input_file_path)
-    return convert_csv(csv_dict_reader, input_format, source, only_first_record)
-
+    try:
+        csv_dict_reader = io_service.parse_csv(input_file_path)
+        return convert_csv(csv_dict_reader, input_format, source, only_first_record)
+    finally:
+        pass
 
 def parse_and_convert_json(input_file_path, input_format, source, only_first_record):
     json_data = io_service.parse_json(input_file_path)
