@@ -240,7 +240,8 @@ def endnotexml_record_to_metajson(record, source):
 
     # rec_id, rec_source
     document["rec_id"] = rec_id
-    document["rec_source"] = source
+    if source:
+        document["rec_source"] = source
 
     # publishers_formatted, publication_places_formatted
     publishers = None
@@ -303,7 +304,8 @@ def endnotexml_record_to_metajson(record, source):
             #is_part_of_is_part_of.set_key_if_not_none("date_issued",date_year)
             is_part_of_is_part_of.set_key_if_not_none("publishers", publishers)
             is_part_of_is_part_of.set_key_if_not_none("publication_places", publication_places)
-            is_part_of_is_part_of.set_key_with_value_type_in_list("identifiers", isbn_or_issn, isbn_or_issn_type)
+            if isbn_or_issn:
+                is_part_of["identifiers"] = [metajson_service.create_identifier(isbn_or_issn_type, isbn_or_issn)]
 
             is_part_of.add_items_to_key([is_part_of_is_part_of], "is_part_ofs")
 
@@ -314,13 +316,15 @@ def endnotexml_record_to_metajson(record, source):
             #is_part_of.set_key_if_not_none("date_issued",date_year)
             is_part_of.set_key_if_not_none("publishers", publishers)
             is_part_of.set_key_if_not_none("publication_places", publication_places)
-            is_part_of.set_key_with_value_type_in_list("identifiers", isbn_or_issn, isbn_or_issn_type)
+            if isbn_or_issn:
+                is_part_of["identifiers"] = [metajson_service.create_identifier(isbn_or_issn_type, isbn_or_issn)]
 
         if "title" in is_part_of and is_part_of["title"]:
             document.add_items_to_key([is_part_of], "is_part_ofs")
 
     else:
-        document.set_key_with_value_type_in_list("identifiers", isbn_or_issn, isbn_or_issn_type)
+        if isbn_or_issn:
+            document["identifiers"] = [metajson_service.create_identifier(isbn_or_issn_type, isbn_or_issn)]
         if publishers:
             if endnote_type == TYPE_THESIS:
                 document.add_creators([creator_service.formatted_name_to_creator(publishers[0], "orgunit", "dgg")])
@@ -441,9 +445,15 @@ def endnotexml_record_to_metajson(record, source):
                 document.set_key_if_not_none("date_issued", date_issued)
 
     # identifiers[]
-    document.set_key_with_value_type_in_list("identifiers", accessionnumber, "accessionnumber")
-    document.set_key_with_value_type_in_list("identifiers", callnumber, "callnumber")
-    document.set_key_with_value_type_in_list("identifiers", doi, "doi")
+    identifiers = []
+    if accessionnumber:
+        identifiers.append(metajson_service.create_identifier("accessionnumber", accessionnumber))
+    if callnumber:
+        identifiers.append(metajson_service.create_identifier("callnumber", callnumber))
+    if doi:
+        identifiers.append(metajson_service.create_identifier("doi", doi))
+    if identifiers:
+        document["identifiers"] = identifiers
 
     # language
     if language:
