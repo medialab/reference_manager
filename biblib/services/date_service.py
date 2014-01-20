@@ -5,6 +5,7 @@
 import logging
 
 from datetime import date
+from datetime import datetime
 from dateutil import parser
 
 month_text_to_month_decimal = {
@@ -76,6 +77,10 @@ month_decimal_to_month_mla = {
     '11': 'nov.',
     '12': 'dec.'
 }
+
+
+def parse_timestamp(timestamp):
+    return datetime.fromtimestamp(int(timestamp))
 
 
 def format_date(date_iso):
