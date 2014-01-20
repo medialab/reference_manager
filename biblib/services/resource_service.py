@@ -11,6 +11,13 @@ import httplib
 import urllib2
 import cookielib
 
+from biblib.services import creator_service
+
+
+file_type_to_file_extension = {
+    "pdf": "pdf"
+}
+
 
 def convert_rtf_to_txt(input_path, output_path, input_filename, output_filename):
     if not os.path.exists(output_path):
@@ -43,28 +50,51 @@ def extract_title_from_txt(txt):
     return " ".join(words)
 
 
-def format_filename(matajson):
+def format_filename(matajson, file_extension):
     date_issued = None
     first_contrib = None
     title = None
-    if "date_issued" in matajson:
+    if "date_issued" in matajson and matajson["date_issued"]:
+        # todo get year
         date_issued = matajson["date_issued"]
-        # get year
-    first_contrib = ""
+    else:
+        date_issued = ""
+    if "creators" in matajson and matajson["creators"]:
+        first_contrib = creator_service.formatted_name(matajson["creators"][0])
+    else:
+        first_contrib = ""
 
     if "title" in matajson:
         title = matajson["title"]
-    l = []
+    else:
+        title = ""
+    result = []
     for i in date_issued, first_contrib, title:
         if i:
-            l.append(i)
-    return "-".join(l) + ".pdf"
+            result.append(i)
+    return ".".join("-".join(result), file_extension)
 
 
 def rename_file(file_path, matajson):
-    filename = format_filename(matajson)
-    new_file_path = file_path.replace(os.path.basename(file_path), filename)
+    old_filename = os.path.basename(file_path)
+    file_extension = get_file_extension_form_file_name(old_filename)
+    new_filename = format_filename(matajson, file_extension)
+    new_file_path = file_path.replace(old_filename, new_filename)
     os.rename(file_path, new_file_path)
+
+
+def get_file_extension_form_file_type(file_type):
+    if file_type and file_type in file_type_to_file_extension:
+        return file_type_to_file_extension[file_type]
+    return None
+
+
+def get_file_extension_form_file_name(file_name):
+    if file_name:
+        dot_index = file_name.find(".")
+        if dot_index != -1:
+            return file_name[dot_index + 1:]
+    return None
 
 
 def fetch_url(url):
