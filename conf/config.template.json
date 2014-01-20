@@ -51,6 +51,19 @@
         "formats": ["html"],
         "styles": ["mla"]
     },
+    "hyphe": {
+        "corpus_code": "corpus",
+        "corpus_name": "corpus name",
+        "jsonrpc_endpoint": "http://localhost:7991",
+        "mongodb": {
+            "db": "hci-corpus",
+            "host": "localhost",
+            "port": 27017
+        }
+    },
+    "tika": {
+        "endpoint": "http://localhost:9998/"
+    },
     "anta": {
         "endpoint": "http://anta.example.com/api/",
         "endpoint_frog": "http://anta.example.com/api-frog/",
