@@ -113,7 +113,8 @@ def parse_bibtex(input_file_path):
 
 def parse_csv(input_file_path):
     with open(input_file_path, 'rb') as csv_file:
-        return csv.DictReader(csv_file, delimiter=';', quotechar='', quoting=csv.QUOTE_NONE)
+        # , delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL
+        return list(csv.DictReader(csv_file, delimiter=';', quotechar='"'))
 
 
 def parse_json(input_file_path):
