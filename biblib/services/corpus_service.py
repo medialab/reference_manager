@@ -125,6 +125,7 @@ def import_metadata_file(corpus, input_file_path, input_format, source, save, ro
         logging.info("corpus: {}".format(corpus))
         logging.info("input_file_path: {}".format(input_file_path))
         logging.info("input_format: {}".format(input_format))
+        logging.info("source: {}".format(source))
         document_list = crosswalks_service.parse_and_convert_file(input_file_path, input_format, "metajson", source, False, False)
         return import_metajson_list(corpus, document_list, save, role)
 
@@ -137,9 +138,6 @@ def import_metajson_list(corpus, document_list, save, role):
             if document:
                 if "rec_id" not in document:
                     document["rec_id"] = str(uuid.uuid1())
-                if "rec_source" not in document:
-                    document["rec_source"] = "unknown"
-
                 results.append(repository_service.save_document(corpus, document, role))
 
     return results
