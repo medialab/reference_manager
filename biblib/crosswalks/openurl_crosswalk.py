@@ -139,10 +139,10 @@ def metajson_to_openurl(document):
         openurl["rft.genre"] = metajson_type_to_openurl_journal_genre[rec_type]
 
         # atitle, jtitle
-        if "is_part_ofs" in document and "title" in document["is_part_ofs"][0]:
+        if "is_part_ofs" in document and "title" in document["is_part_ofs"][0] and "title" in document:
             openurl["rft.atitle"] = document["title"]
             openurl["rft.jtitle"] = document["is_part_ofs"][0]["title"]
-        else:
+        elif "title" in document:
             openurl["rft.jtitle"] = document["title"]
 
         # chron
