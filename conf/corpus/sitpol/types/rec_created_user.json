@@ -17,6 +17,13 @@
         },
         {
             "labels": {
+                "en": "GV?", 
+                "fr": "GV?"
+            }, 
+            "type_id": "GV"
+        },
+        {
+            "labels": {
                 "en": "Olesea Dubois", 
                 "fr": "Olesea Dubois"
             }, 
@@ -39,5 +46,5 @@
     ], 
     "rec_class": "Type", 
     "rec_metajson": 1, 
-    "type_id": "sitpol_user"
+    "type_id": "rec_created_user"
 }

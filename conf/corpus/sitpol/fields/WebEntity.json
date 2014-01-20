@@ -27,21 +27,23 @@
         },
         {
             "labels": {
-                "en": "Subtitle",
-                "fr": "Sous-titre"
-            },
-            "property": "title_sub",
-            "required": false,
-            "type_ui": "CharField"
-        },
-        {
-            "labels": {
                 "en": "URL",
                 "fr": "URL"
             },
             "property": "url",
             "required": true,
             "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Specific or home page",
+                "fr": "Page d'accueil ou Page spécifique"
+            },
+            "multiple": false,
+            "property": "webentity_type",
+            "required": true,
+            "type_source": "webentity_type",
+            "type_ui": "TypeField"
         },
         {
             "labels": {
@@ -54,13 +56,13 @@
         },
         {
             "labels": {
-                "en": "SitPol classification",
-                "fr": "Classification SitPol"
+                "en": "SITPOL classification",
+                "fr": "Classification SITPOL"
             },
             "multiple": true,
-            "property": "classification_sitpol",
+            "property": "classifications_sitpol",
             "required": true,
-            "type_source": "classification_sitpol",
+            "type_source": "sitpol",
             "type_ui": "TypeField"
         },
         {
@@ -69,20 +71,20 @@
                 "fr": "Classification Dewey"
             },
             "multiple": true,
-            "property": "classification_dewey",
+            "property": "classifications_ddc",
             "required": true,
             "type_source": "ddc",
             "type_ui": "TypeField"
         },
         {
             "labels": {
-                "en": "Subject - people",
-                "fr": "Sujet - personnalité"
+                "en": "Subject - People",
+                "fr": "Sujet - Personnalité"
             },
             "multiple": true,
-            "property": "subject_creators",
+            "property": "specific_agent",
             "required": false,
-            "type_ui": "CreatorField"
+            "type_ui": "CharField"
         },
         {
             "labels": {
@@ -90,9 +92,9 @@
                 "fr": "Type d'acteur"
             },
             "multiple": false,
-            "property": "actor_type",
+            "property": "specific_actor_type",
             "required": true,
-            "type_source": "actor_type",
+            "type_source": "specific_actor_type",
             "type_ui": "TypeField"
         },
         {
@@ -114,17 +116,6 @@
             "property": "keywords",
             "required": false,
             "type_ui": "KeywordField"
-        },
-        {
-            "labels": {
-                "en": "Specific or home page",
-                "fr": "Page d'accueil ou spécifique"
-            },
-            "multiple": false,
-            "property": "webentity_type",
-            "required": true,
-            "type_source": "webentity_type",
-            "type_ui": "TypeField"
         },
         {
             "labels": {
@@ -164,9 +155,9 @@
                 "fr": "Type de site CERIMES"
             },
             "multiple": false,
-            "property": "cerimes_type",
+            "property": "rec_type_cerimes",
             "required": true,
-            "type_source": "cerimes_type",
+            "type_source": "rec_type_cerimes",
             "type_ui": "TypeField"
         },
         {
@@ -175,9 +166,9 @@
                 "fr": "Niveau d'étude CERIMES"
             },
             "multiple": false,
-            "property": "cerimes_educational_level",
+            "property": "target_audiences_cerimes",
             "required": true,
-            "type_source": "cerimes_educational_level",
+            "type_source": "target_audiences_cerimes",
             "type_ui": "TypeField"
         },
         {
@@ -186,28 +177,28 @@
                 "fr": "Sélectionné par"
             },
             "multiple": false,
-            "property": "rec_user",
+            "property": "rec_created_user",
             "required": true,
-            "type_source": "sitpol_user",
+            "type_source": "rec_created_user",
             "type_ui": "TypeField"
         },
         {
             "labels": {
-                "en": "Commentaires",
+                "en": "Comments",
                 "fr": "Commentaires"
             },
             "multiple": true,
-            "property": "comments",
+            "property": "notes",
             "required": false,
             "type_ui": "LanguageValueField"
         }
     ],
     "labels": {
-        "en": "Web site",
-        "fr": "Site web"
+        "en": "WebEntity",
+        "fr": "Entité web"
     },
     "rec_class": "Field",
     "rec_class_component": "Document",
     "rec_metajson": 1,
-    "rec_type": "WebSite"
+    "rec_type": "WebEntity"
 }

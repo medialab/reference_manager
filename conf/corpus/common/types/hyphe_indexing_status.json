@@ -1,0 +1,65 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "default": true,
+            "labels": {
+                "en": "UNINDEXED",
+                "fr": "UNINDEXED"
+            },
+            "major": true,
+            "type_id": "UNINDEXED"
+        },
+        {
+            "labels": {
+                "en": "PENDING",
+                "fr": "PENDING"
+            },
+            "major": true,
+            "type_id": "PENDING"
+        },
+        {
+            "labels": {
+                "en": "BATCH_RUNNING",
+                "fr": "BATCH_RUNNING"
+            },
+            "major": true,
+            "type_id": "BATCH_RUNNING"
+        },
+        {
+            "labels": {
+                "en": "BATCH_FINISHED",
+                "fr": "BATCH_FINISHED"
+            },
+            "major": true,
+            "type_id": "BATCH_FINISHED"
+        },
+        {
+            "labels": {
+                "en": "BATCH_CRASHED",
+                "fr": "BATCH_CRASHED"
+            },
+            "major": true,
+            "type_id": "BATCH_CRASHED"
+        },
+        {
+            "labels": {
+                "en": "FINISHED",
+                "fr": "FINISHED"
+            },
+            "major": true,
+            "type_id": "FINISHED"
+        },
+        {
+            "labels": {
+                "en": "CANCELED",
+                "fr": "CANCELED"
+            },
+            "major": true,
+            "type_id": "CANCELED"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "hyphe_indexing_status"
+}

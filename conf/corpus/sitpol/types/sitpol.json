@@ -1,0 +1,546 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "administration publique:administration locale",
+                        "fr": "administration publique:administration locale"
+                    },
+                    "major": true,
+                    "type_id": "administration publique:administration locale"
+                },
+                {
+                    "labels": {
+                        "en": "administration publique:administration publique",
+                        "fr": "administration publique:administration publique"
+                    },
+                    "major": true,
+                    "type_id": "administration publique:administration publique"
+                },
+                {
+                    "labels": {
+                        "en": "administration publique:am\u00e9nagement du territoire",
+                        "fr": "administration publique:am\u00e9nagement du territoire"
+                    },
+                    "major": true,
+                    "type_id": "administration publique:am\u00e9nagement du territoire"
+                },
+                {
+                    "labels": {
+                        "en": "administration publique:finances publiques",
+                        "fr": "administration publique:finances publiques"
+                    },
+                    "major": true,
+                    "type_id": "administration publique:finances publiques"
+                },
+                {
+                    "labels": {
+                        "en": "administration publique:service public",
+                        "fr": "administration publique:service public"
+                    },
+                    "major": true,
+                    "type_id": "administration publique:service public"
+                },
+                {
+                    "labels": {
+                        "en": "administration publique:urbanisme",
+                        "fr": "administration publique:urbanisme"
+                    },
+                    "major": true,
+                    "type_id": "administration publique:urbanisme"
+                }
+            ],
+            "labels": {
+                "en": "administration publique",
+                "fr": "administration publique"
+            },
+            "type_id": "administration publique"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "culture et communication:culture et communication",
+                        "fr": "culture et communication:culture et communication"
+                    },
+                    "major": true,
+                    "type_id": "culture et communication:culture et communication"
+                }
+            ],
+            "labels": {
+                "en": "culture et communication",
+                "fr": "culture et communication"
+            },
+            "type_id": "culture et communication"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "emploi:conditions de travail",
+                        "fr": "emploi:conditions de travail"
+                    },
+                    "major": true,
+                    "type_id": "emploi:conditions de travail"
+                },
+                {
+                    "labels": {
+                        "en": "emploi:emploi",
+                        "fr": "emploi:emploi"
+                    },
+                    "major": true,
+                    "type_id": "emploi:emploi"
+                }
+            ],
+            "labels": {
+                "en": "emploi",
+                "fr": "emploi"
+            },
+            "type_id": "emploi"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "environnement:d\u00e9veloppement durable",
+                        "fr": "environnement:d\u00e9veloppement durable"
+                    },
+                    "major": true,
+                    "type_id": "environnement:d\u00e9veloppement durable"
+                },
+                {
+                    "labels": {
+                        "en": "environnement:environnement",
+                        "fr": "environnement:environnement"
+                    },
+                    "major": true,
+                    "type_id": "environnement:environnement"
+                }
+            ],
+            "labels": {
+                "en": "environnement",
+                "fr": "environnement"
+            },
+            "type_id": "environnement"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "europe:europe",
+                        "fr": "europe:europe"
+                    },
+                    "major": true,
+                    "type_id": "europe:europe"
+                }
+            ],
+            "labels": {
+                "en": "europe",
+                "fr": "europe"
+            },
+            "type_id": "europe"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "justice:justice",
+                        "fr": "justice:justice"
+                    },
+                    "major": true,
+                    "type_id": "justice:justice"
+                }
+            ],
+            "labels": {
+                "en": "justice",
+                "fr": "justice"
+            },
+            "type_id": "justice"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "num\u00e9rique:donn\u00e9es publiques",
+                        "fr": "num\u00e9rique:donn\u00e9es publiques"
+                    },
+                    "major": true,
+                    "type_id": "num\u00e9rique:donn\u00e9es publiques"
+                },
+                {
+                    "labels": {
+                        "en": "num\u00e9rique:num\u00e9rique",
+                        "fr": "num\u00e9rique:num\u00e9rique"
+                    },
+                    "major": true,
+                    "type_id": "num\u00e9rique:num\u00e9rique"
+                }
+            ],
+            "labels": {
+                "en": "num\u00e9rique",
+                "fr": "num\u00e9rique"
+            },
+            "type_id": "num\u00e9rique"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "politique sociale:logement",
+                        "fr": "politique sociale:logement"
+                    },
+                    "major": true,
+                    "type_id": "politique sociale:logement"
+                },
+                {
+                    "labels": {
+                        "en": "politique sociale:politique sociale",
+                        "fr": "politique sociale:politique sociale"
+                    },
+                    "major": true,
+                    "type_id": "politique sociale:politique sociale"
+                },
+                {
+                    "labels": {
+                        "en": "politique sociale:retraite",
+                        "fr": "politique sociale:retraite"
+                    },
+                    "major": true,
+                    "type_id": "politique sociale:retraite"
+                },
+                {
+                    "labels": {
+                        "en": "politique sociale:santé",
+                        "fr": "politique sociale:santé"
+                    },
+                    "major": true,
+                    "type_id": "politique sociale:santé"
+                }
+            ],
+            "labels": {
+                "en": "politique sociale",
+                "fr": "politique sociale"
+            },
+            "type_id": "politique sociale"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "relations internationales:relations internationales",
+                        "fr": "relations internationales:relations internationales"
+                    },
+                    "major": true,
+                    "type_id": "relations internationales:relations internationales"
+                }
+            ],
+            "labels": {
+                "en": "relations internationales",
+                "fr": "relations internationales"
+            },
+            "type_id": "relations internationales"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "société:banlieues",
+                        "fr": "société:banlieues"
+                    },
+                    "major": true,
+                    "type_id": "société:banlieues"
+                },
+                {
+                    "labels": {
+                        "en": "société:bioéthique",
+                        "fr": "société:bioéthique"
+                    },
+                    "major": true,
+                    "type_id": "société:bioéthique"
+                },
+                {
+                    "labels": {
+                        "en": "société:discriminations",
+                        "fr": "société:discriminations"
+                    },
+                    "major": true,
+                    "type_id": "société:discriminations"
+                },
+                {
+                    "labels": {
+                        "en": "société:droits de l'homme",
+                        "fr": "société:droits de l'homme"
+                    },
+                    "major": true,
+                    "type_id": "société:droits de l'homme"
+                },
+                {
+                    "labels": {
+                        "en": "société:immigration",
+                        "fr": "société:immigration"
+                    },
+                    "major": true,
+                    "type_id": "société:immigration"
+                },
+                {
+                    "labels": {
+                        "en": "société:inégalité sociale",
+                        "fr": "société:inégalité sociale"
+                    },
+                    "major": true,
+                    "type_id": "société:inégalité sociale"
+                },
+                {
+                    "labels": {
+                        "en": "société:jeunesse",
+                        "fr": "société:jeunesse"
+                    },
+                    "major": true,
+                    "type_id": "société:jeunesse"
+                },
+                {
+                    "labels": {
+                        "en": "société:laïcité et religion",
+                        "fr": "société:laïcité et religion"
+                    },
+                    "major": true,
+                    "type_id": "société:laïcité et religion"
+                },
+                {
+                    "labels": {
+                        "en": "société:société",
+                        "fr": "société:société"
+                    },
+                    "major": true,
+                    "type_id": "société:société"
+                }
+            ],
+            "labels": {
+                "en": "société",
+                "fr": "société"
+            },
+            "type_id": "société"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "sécurité et défense:sécurité et défense",
+                        "fr": "sécurité et défense:sécurité et défense"
+                    },
+                    "major": true,
+                    "type_id": "sécurité et défense:sécurité et défense"
+                }
+            ],
+            "labels": {
+                "en": "sécurité et défense",
+                "fr": "sécurité et défense"
+            },
+            "type_id": "sécurité et défense"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "vie politique:campagne électorale",
+                        "fr": "vie politique:campagne électorale"
+                    },
+                    "major": true,
+                    "type_id": "vie politique:campagne électorale"
+                },
+                {
+                    "labels": {
+                        "en": "vie politique:citoyenneté",
+                        "fr": "vie politique:citoyenneté"
+                    },
+                    "major": true,
+                    "type_id": "vie politique:citoyenneté"
+                },
+                {
+                    "labels": {
+                        "en": "vie politique:droit de vote des étrangers",
+                        "fr": "vie politique:droit de vote des étrangers"
+                    },
+                    "major": true,
+                    "type_id": "vie politique:droit de vote des étrangers"
+                },
+                {
+                    "labels": {
+                        "en": "vie politique:identité nationale",
+                        "fr": "vie politique:identité nationale"
+                    },
+                    "major": true,
+                    "type_id": "vie politique:identité nationale"
+                },
+                {
+                    "labels": {
+                        "en": "vie politique:souveraineté",
+                        "fr": "vie politique:souveraineté"
+                    },
+                    "major": true,
+                    "type_id": "vie politique:souveraineté"
+                },
+                {
+                    "labels": {
+                        "en": "vie politique:vie politique",
+                        "fr": "vie politique:vie politique"
+                    },
+                    "major": true,
+                    "type_id": "vie politique:vie politique"
+                }
+            ],
+            "labels": {
+                "en": "vie politique",
+                "fr": "vie politique"
+            },
+            "type_id": "vie politique"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "économie:agriculture et pêche",
+                        "fr": "économie:agriculture et pêche"
+                    },
+                    "major": true,
+                    "type_id": "économie:agriculture et pêche"
+                },
+                {
+                    "labels": {
+                        "en": "économie:crise financière",
+                        "fr": "économie:crise financière"
+                    },
+                    "major": true,
+                    "type_id": "économie:crise financière"
+                },
+                {
+                    "labels": {
+                        "en": "économie:entreprise",
+                        "fr": "économie:entreprise"
+                    },
+                    "major": true,
+                    "type_id": "économie:entreprise"
+                },
+                {
+                    "labels": {
+                        "en": "économie:finances publiques",
+                        "fr": "économie:finances publiques"
+                    },
+                    "major": true,
+                    "type_id": "économie:finances publiques"
+                },
+                {
+                    "labels": {
+                        "en": "économie:innovation",
+                        "fr": "économie:innovation"
+                    },
+                    "major": true,
+                    "type_id": "économie:innovation"
+                },
+                {
+                    "labels": {
+                        "en": "économie:mondialisation",
+                        "fr": "économie:mondialisation"
+                    },
+                    "major": true,
+                    "type_id": "économie:mondialisation"
+                },
+                {
+                    "labels": {
+                        "en": "économie:transport",
+                        "fr": "économie:transport"
+                    },
+                    "major": true,
+                    "type_id": "économie:transport"
+                },
+                {
+                    "labels": {
+                        "en": "économie:économie",
+                        "fr": "économie:économie"
+                    },
+                    "major": true,
+                    "type_id": "économie:économie"
+                }
+            ],
+            "labels": {
+                "en": "économie",
+                "fr": "économie"
+            },
+            "type_id": "économie"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "éducation:enseignement supérieur et recherche",
+                        "fr": "éducation:enseignement supérieur et recherche"
+                    },
+                    "major": true,
+                    "type_id": "éducation:enseignement supérieur et recherche"
+                },
+                {
+                    "labels": {
+                        "en": "éducation:éducation",
+                        "fr": "éducation:éducation"
+                    },
+                    "major": true,
+                    "type_id": "éducation:éducation"
+                }
+            ],
+            "labels": {
+                "en": "éducation",
+                "fr": "éducation"
+            },
+            "type_id": "éducation"
+        },
+        {
+            "bundle": true,
+            "children": [
+                {
+                    "labels": {
+                        "en": "énergie:nucléaire",
+                        "fr": "énergie:nucléaire"
+                    },
+                    "major": true,
+                    "type_id": "énergie:nucléaire"
+                },
+                {
+                    "labels": {
+                        "en": "énergie:énergie",
+                        "fr": "énergie:énergie"
+                    },
+                    "major": true,
+                    "type_id": "énergie:énergie"
+                }
+            ],
+            "labels": {
+                "en": "énergie",
+                "fr": "énergie"
+            },
+            "type_id": "énergie"
+        }
+    ],
+    "labels": {
+        "en": "SITPOL Classification",
+        "fr": "Classification SITPOL"
+    },
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "sitpol"
+}

@@ -1,0 +1,41 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "default": true,
+            "labels": {
+                "en": "DISCOVERED",
+                "fr": "DISCOVERED"
+            },
+            "major": true,
+            "type_id": "DISCOVERED"
+        },
+        {
+            "labels": {
+                "en": "UNDECIDED",
+                "fr": "UNDECIDED"
+            },
+            "major": true,
+            "type_id": "UNDECIDED"
+        },
+        {
+            "labels": {
+                "en": "IN",
+                "fr": "IN"
+            },
+            "major": true,
+            "type_id": "IN"
+        },
+        {
+            "labels": {
+                "en": "OUT",
+                "fr": "OUT"
+            },
+            "major": true,
+            "type_id": "OUT"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "hyphe_status"
+}

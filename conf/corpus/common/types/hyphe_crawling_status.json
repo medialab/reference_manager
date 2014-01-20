@@ -1,0 +1,49 @@
+{
+    "bundle": true,
+    "children": [
+        {
+            "default": true,
+            "labels": {
+                "en": "UNCRAWLED",
+                "fr": "UNCRAWLED"
+            },
+            "major": true,
+            "type_id": "UNCRAWLED"
+        },
+        {
+            "labels": {
+                "en": "PENDING",
+                "fr": "PENDING"
+            },
+            "major": true,
+            "type_id": "PENDING"
+        },
+        {
+            "labels": {
+                "en": "RUNNING",
+                "fr": "RUNNING"
+            },
+            "major": true,
+            "type_id": "RUNNING"
+        },
+        {
+            "labels": {
+                "en": "FINISHED",
+                "fr": "FINISHED"
+            },
+            "major": true,
+            "type_id": "FINISHED"
+        },
+        {
+            "labels": {
+                "en": "CANCELED",
+                "fr": "CANCELED"
+            },
+            "major": true,
+            "type_id": "CANCELED"
+        }
+    ],
+    "rec_class": "Type",
+    "rec_metajson": 1,
+    "type_id": "hyphe_crawling_status"
+}

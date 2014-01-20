@@ -20,6 +20,10 @@
             "type_id": "999"
         }
     ],
+    "labels": {
+        "en": "Dewey Decimal Classification",
+        "fr": "Classification Décimale de Dewey"
+    },
     "rec_class": "Type",
     "rec_metajson": 1,
     "type_id": "ddc"

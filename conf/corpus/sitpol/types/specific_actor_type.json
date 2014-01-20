@@ -109,5 +109,5 @@
     ],
     "rec_class": "Type",
     "rec_metajson": 1,
-    "type_id": "actor_type"
+    "type_id": "specific_actor_type"
 }

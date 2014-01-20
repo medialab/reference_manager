@@ -2,44 +2,11 @@
     "bundle": true,
     "children": [
         {
-            "bundle": true,
-            "children": [
-                {
-                    "deprecated": true,
-                    "labels": {
-                        "en": "Web cluster",
-                        "fr": "Regroupement de sites"
-                    },
-                    "type_id": "WebCluster"
-                },
-                {
-                    "labels": {
-                        "en": "Web site",
-                        "fr": "Site web"
-                    },
-                    "type_id": "WebSite"
-                },
-                {
-                    "deprecated": true,
-                    "labels": {
-                        "en": "Web Section",
-                        "fr": "Partie d'un site web"
-                    },
-                    "type_id": "WebSection"
-                },
-                {
-                    "labels": {
-                        "en": "Web page",
-                        "fr": "Page web"
-                    },
-                    "type_id": "WebPage"
-                }
-            ],
             "labels": {
-                "en": "Web entities",
-                "fr": "Entit\u00e9s Web"
+                "en": "WebEntity",
+                "fr": "Entit\u00e9 web"
             },
-            "type_id": "WebEntityBundle"
+            "type_id": "WebEntity"
         }
     ],
     "rec_class": "Type",

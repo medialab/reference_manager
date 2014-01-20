@@ -3,64 +3,64 @@
     "children": [
         {
             "labels": {
-                "en": "", 
-                "fr": ""
+                "en": "normal*", 
+                "fr": "normal*"
             }, 
             "type_id": "normal*"
         }, 
         {
             "labels": {
-                "en": "", 
-                "fr": ""
+                "en": "normal, image flipped", 
+                "fr": "normal, image flipped"
             }, 
             "type_id": "normal, image flipped"
         }, 
         {
             "labels": {
-                "en": "", 
-                "fr": ""
+                "en": "normal, rotated 180°", 
+                "fr": "normal, rotated 180°"
             }, 
             "type_id": "normal, rotated 180°"
         }, 
         {
             "labels": {
-                "en": "", 
-                "fr": ""
+                "en": "normal, image flipped, rotated 180°", 
+                "fr": "normal, image flipped, rotated 180°"
             }, 
             "type_id": "normal, image flipped, rotated 180°"
         }, 
         {
             "labels": {
-                "en": "", 
-                "fr": ""
+                "en": "normal, image flipped, rotated cw 90°", 
+                "fr": "normal, image flipped, rotated cw 90°"
             }, 
             "type_id": "normal, image flipped, rotated cw 90°"
         }, 
         {
             "labels": {
-                "en": "", 
-                "fr": ""
+                "en": "normal, rotated ccw 90°", 
+                "fr": "normal, rotated ccw 90°"
             }, 
             "type_id": "normal, rotated ccw 90°"
         }, 
         {
             "labels": {
-                "en": "", 
-                "fr": ""
+                "en": "normal, image flipped, rotated ccw 90°", 
+                "fr": "normal, image flipped, rotated ccw 90°"
             }, 
             "type_id": "normal, image flipped, rotated ccw 90°"
         }, 
         {
             "labels": {
-                "en": "", 
-                "fr": ""
+                "en": "normal, rotated cw 90°", 
+                "fr": "normal, rotated cw 90°"
             }, 
             "type_id": "normal, rotated cw 90°"
         }, 
         {
             "labels": {
-                "en": "", 
-                "fr": ""
+                "en": "unknown", 
+                "fr": "unknown"
             }, 
             "type_id": "unknown"
         }
