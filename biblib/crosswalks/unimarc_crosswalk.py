@@ -60,13 +60,17 @@ def unimarc_record_to_metajson(record, source):
     logging.debug("unimarc_record_to_metajson")
     document = Document()
 
+    if source:
+        document["rec_source"] = source
+
     #record_dict = record.as_dict()
     #logging.debug(jsonbson.dumps_json(record_dict, True))
 
     # 002, 991$e, 995$f -> rec_id
     rec_id = ""
     if record['002'] is not None:
-        rec_id_prefix = "sciencespo_catalog_"
+        #rec_id_prefix = "sciencespo_catalog_"
+        rec_id_prefix = ""
         rec_id = rec_id_prefix + record['002'].data
     if record['991'] is not None and record['991']['e'] is not None:
         rec_id += "_" + record['991']['e']
@@ -89,6 +93,7 @@ def unimarc_record_to_metajson(record, source):
         identifiers.append({"id_type": "isbn", "value": record['010']['a']})
     if record['011'] is not None and record['011']['a'] is not None:
         # 011 -> identifier issn
+        # todo add $f
         identifiers.append({"id_type": "issn", "value": record['011']['a']})
     if record['013'] is not None and record['013']['a'] is not None:
         # 013 -> identifier ismn
@@ -210,6 +215,7 @@ def unimarc_record_to_metajson(record, source):
 
     # 200 -> title
     if record['200'] is not None:
+        logging.debug("record['200'] = {}".format(record['200']))
         if record['200']['a'] is not None:
             title_non_sort_pos = int(record['200'].indicator2)
             if title_non_sort_pos != 0:
@@ -398,12 +404,10 @@ def extract_unimarc_creator(field):
     if field:
         creator = Creator()
         # $4 -> role
-        if field['4']:
-            logging.debug("field['4'] = {}".format(field['4']))
-            if field['4'] in creator_service.role_unimarc_to_role_code:
-                creator["roles"] = [creator_service.role_unimarc_to_role_code[field['4']]]
-            else:
-                creator["roles"] = ["ctb"]
+        if field['4'] and field['4'] in creator_service.role_unimarc_to_role_code:
+            creator["roles"] = [creator_service.role_unimarc_to_role_code[field['4']]]
+        else:
+            creator["roles"] = ["ctb"]
 
         # 600, 700, 701, 702 -> Person
         if field.tag in ["700", "701", "702"]:
