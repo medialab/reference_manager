@@ -35,6 +35,10 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
     """ orgUnit -> orgunit """
     orgunit = Orgunit()
 
+    # source
+    if source:
+        orgunit["rec_source"] = source
+
     # acronym -> acronym
     orgunit.update(get_rml_element_text_and_set_key(rml_orgunit, "acronym", "acronym"))
 
@@ -113,6 +117,10 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
 def rml_person_to_metajson(rml_person, source):
     """ person -> person """
     person = Person()
+
+    # source
+    if source:
+        person["rec_source"] = source
 
     # academicTitle, honorificTitle -> titles
     person.update(get_rml_titles(rml_person))
@@ -216,6 +224,10 @@ def rml_person_to_metajson(rml_person, source):
 def rml_project_to_metajson(rml_project, source):
     """ project -> project """
     project = Project()
+
+    # source
+    if source:
+        project["rec_source"] = source
 
     # acronym -> acronym
     project.update(get_rml_element_text_and_set_key(rml_project, "acronym", "acronym"))

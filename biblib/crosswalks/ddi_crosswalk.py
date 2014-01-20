@@ -36,6 +36,9 @@ def ddi_xmletree_to_metajson(ddi_root, source):
 
     document["rec_type"] = constants.DOC_TYPE_DATASETQUALI
 
+    if source:
+        document["rec_source"] = source
+
     # stdyDscr/citation/titlStmt/titl
     ddi_stdydscr = ddi_root.find(xmletree.prefixtag("ddi", "stdyDscr"))
     ddi_stdydscr_citation = ddi_stdydscr.find(xmletree.prefixtag("ddi", "citation"))

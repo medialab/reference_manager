@@ -42,7 +42,8 @@ def mets_xmletree_to_metajson(mets, source):
     document = Document()
 
     # source
-    document["rec_source"] = source
+    if source:
+        document["rec_source"] = source
 
     # mets
 

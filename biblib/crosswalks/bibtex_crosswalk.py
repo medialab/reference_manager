@@ -60,10 +60,15 @@ def bibtex_root_to_metasjon_list(bibtex_root, source, only_first_record):
 
 def bibtex_entry_to_metajson(entry, source):
     document = Document()
+
     # rec_type
     bibtex_type = entry.type
     rec_type = bibtex_document_type_to_metajson_document_type[bibtex_type]
     document["rec_type"] = rec_type
+
+    # source
+    if source:
+        document["rec_source"] = source
 
     # author -> creators
     creators = []

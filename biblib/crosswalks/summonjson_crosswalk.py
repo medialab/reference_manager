@@ -100,7 +100,8 @@ def summonjson_document_to_metajson(sum_doc, source):
 
     # rec_id, rec_source, rec_type
     document["rec_id"] = rec_id
-    document["rec_source"] = source
+    if source:
+        document["rec_source"] = source
     document["rec_type"] = rec_type
 
     # languages

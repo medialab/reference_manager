@@ -60,7 +60,7 @@ def unixref_record_to_metajson(record, source):
         resource["url"] = resource_url.text
         document["resources"] = [resource]
 
-    if source is not None:
+    if source:
         document["rec_source"] = source
 
     if titles is not None and len(titles) > 0:

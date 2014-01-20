@@ -205,7 +205,7 @@ def mods_xmletree_to_metajson(mods, source):
     document = mods_root_or_related_item_to_metajson(mods, None)
 
     # source
-    if source is not None:
+    if source:
         document["rec_source"] = source
 
     metajson_service.pretty_print_document(document)
