@@ -15,6 +15,8 @@ FILE_TYPE_XMLETREE = 'xmletree'
 FORMAT_ALTO = 'alto'
 FORMAT_BIBJSON = 'bibjson'
 FORMAT_BIBTEX = 'bibtex'
+FORMAT_CSV_ARCHIPOLIS = 'csv_archipolis'
+FORMAT_CSV_SITPOL = 'csv_sitpol'
 FORMAT_DDI = 'ddi'
 FORMAT_DIDL = 'didl'
 FORMAT_EAD = 'ead'
@@ -41,6 +43,7 @@ CLASSIFICATION_UNDETERMINED = "und"
 
 file_extension_to_type = {
     'bib': FILE_TYPE_BIBTEX,
+    'csv': FILE_TYPE_CSV,
     'htm': FILE_TYPE_HTML,
     'html': FILE_TYPE_HTML,
     'json': FILE_TYPE_JSON,
@@ -53,6 +56,7 @@ file_extension_to_type = {
 
 type_to_file_extension = {
     FILE_TYPE_BIBTEX: 'bib',
+    FILE_TYPE_CSV: 'csv',
     FILE_TYPE_HTML: 'html',
     FILE_TYPE_JSON: 'json',
     FILE_TYPE_MARC: 'mrc',
@@ -64,6 +68,7 @@ input_format_to_type = {
     FORMAT_ALTO: FILE_TYPE_XMLETREE,
     FORMAT_BIBJSON: FILE_TYPE_JSON,
     FORMAT_BIBTEX: FILE_TYPE_BIBTEX,
+    FORMAT_CSV_SITPOL: FILE_TYPE_CSV,
     'dc': FILE_TYPE_XMLETREE,
     FORMAT_DDI: FILE_TYPE_XMLETREE,
     FORMAT_DIDL: FILE_TYPE_XMLETREE,
@@ -261,6 +266,7 @@ DOC_TYPE_VIDEOPART = "VideoPart"
 DOC_TYPE_VIDEORECORDING = "VideoRecording"
 DOC_TYPE_WEBARCHIVE = "WebArchive"
 DOC_TYPE_WEBCLUSTER = "WebCluster"
+DOC_TYPE_WEBENTITY = "WebEntity"
 DOC_TYPE_WEBPAGE = "WebPage"
 DOC_TYPE_WEBPOST = "WebPost"
 DOC_TYPE_WEBSECTION = "WebSection"
