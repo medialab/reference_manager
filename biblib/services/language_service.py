@@ -2489,7 +2489,7 @@ def find_language_authority(language):
         elif minus_index == 3 and language[:3] in iso639_2t_to_rfc5646:
             return "rfc5646"
         else:
-            logging.warning("Fixme ! Unknown language authority for language code: {}".format(language))
+            logging.error("Fixme ! Unknown language authority for language code: {}".format(language))
     return None
 
 
@@ -2603,7 +2603,7 @@ def extract_rfc5646_language(rfc5646):
                 if result:
                     return result
             else:
-                logging.warning("Fixme ! Unknown language format, not an iso639-2b or iso639-2t: {}".format(rfc5646))
+                logging.error("Fixme ! Unknown language format, not an iso639-2b or iso639-2t: {}".format(rfc5646))
 
         elif first_minus_index == 2 or len(rfc5646) == 2:
             lang = rfc5646[:2]
@@ -2611,22 +2611,22 @@ def extract_rfc5646_language(rfc5646):
                 # iso639-1 ?
                 return lang
             else:
-                logging.warning("Fixme ! Unknown language format, not an iso639-1: {}".format(rfc5646))
+                logging.error("Fixme ! Unknown language format, not an iso639-1: {}".format(rfc5646))
 
         elif first_minus_index == 1:
             first_char = rfc5646[:1]
             if first_char == "i":
                 # iana_registered_code
-                logging.warning("Fixme ! iana_registered_code is not managed for rfc5646: {}".format(rfc5646))
+                logging.error("Fixme ! iana_registered_code is not managed for rfc5646: {}".format(rfc5646))
             elif first_char == "x":
                 # private_use_code
-                logging.warning("Fixme ! private_use_code is not managed for rfc5646: {}".format(rfc5646))
+                logging.error("Fixme ! private_use_code is not managed for rfc5646: {}".format(rfc5646))
             else:
                 # unknown
-                logging.warning("Fixme ! Unknown prefix code for rfc5646: {}".format(rfc5646))
+                logging.error("Fixme ! Unknown prefix code for rfc5646: {}".format(rfc5646))
 
         else:
-            logging.warning("Fixme ! Unknown language format for rfc5646: {}".format(rfc5646))
+            logging.error("Fixme ! Unknown language format for rfc5646: {}".format(rfc5646))
 
 
 def convert_iso639_1_to_iso639_2b(iso639_1):
