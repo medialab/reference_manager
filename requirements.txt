@@ -1,5 +1,6 @@
 virtualenv
 virtualenvwrapper
+requests
 pymongo
 zope.interface
 Twisted
@@ -17,3 +18,4 @@ gspreadsheet
 ply
 pymarc
 python-dateutil < 2.0
+python-stdnum
