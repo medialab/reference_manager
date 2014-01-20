@@ -248,7 +248,7 @@ def format_url(url):
 def format_title_of_document(document):
     # Capitalize the first word and all other principal words of the titles and subtitles
     # of cited works listed. (Do not capitalize articles, prepositions, coordinating conjunctions, or the "to" in infinitives.)
-    if document and "title" in document and document["title"] is not None:
+    if document and "title" in document and document["title"]:
         result = []
         if "title_non_sort" in document and document["title_non_sort"] is not None:
             result.append(document["title_non_sort"])
