@@ -3,45 +3,54 @@
 # coding=utf-8
 
 import re
+
+from stdnum import ean
+from stdnum import isan
+from stdnum import isbn
+from stdnum import ismn
+from stdnum import issn
+
 from biblib.services import resource_service
 
 
-def validate_metajson_document(metajson):
+def validate_metajson_document(document):
     errors = []
     # common
-    if "rec_type" not in metajson or not metajson["rec_type"]:
+    if "rec_type" not in document or not document["rec_type"]:
         errors.append("Empty type")
-    if "title" not in metajson or not metajson["title"]:
+    if "title" not in document or not document["title"]:
         errors.append("Empty title")
-    date = metajson.get_date()
+    date = document.get_date()
     if date:
         errors.extend(validate_metajson_date(date))
     else:
         errors.append("Empty date_issued")
-    if "creators" in metajson and metajson["creators"]:
-        for creator in metajson["creators"]:
+    if "creators" in document and document["creators"]:
+        for creator in document["creators"]:
             errors.extend(validate_metajson_creator(creator))
     else:
         errors.append("No creator")
-
+    if "identifiers" in document:
+        for identifier in document["identifiers"]:
+            errors.extend(validate_identifier(identifier))
     # related_items
-    if "is_part_ofs" in metajson:
-        for is_part_of in metajson["is_part_ofs"]:
+    if "is_part_ofs" in document:
+        for is_part_of in document["is_part_ofs"]:
             errors.extend(validate_metajson_is_part_of(is_part_of))
-    if "series" in metajson:
-        for series in metajson["series"]:
+    if "series" in document:
+        for series in document["series"]:
             errors.extend(validate_metajson_series(series))
-    if "originals" in metajson:
-        for original in metajson["originals"]:
+    if "originals" in document:
+        for original in document["originals"]:
             errors.extend(validate_metajson_original(original))
-    if "review_ofs" in metajson:
-        for review_ofs in metajson["review_ofs"]:
+    if "review_ofs" in document:
+        for review_ofs in document["review_ofs"]:
             errors.extend(validate_metajson_review_ofs(review_ofs))
-    if "archives" in metajson:
-        for archive in metajson["archives"]:
+    if "archives" in document:
+        for archive in document["archives"]:
             errors.extend(validate_metajson_archive(archive))
-    #if "resources" in metajson:
-    #    for resource in metajson["resources"]:
+    #if "resources" in document:
+    #    for resource in document["resources"]:
     #        errors.extend(validate_metajson_resource(resource))
 
     return errors
@@ -58,6 +67,9 @@ def validate_metajson_is_part_of(is_part_of):
     if "creators" in is_part_of and is_part_of["creators"]:
         for creator in is_part_of["creators"]:
             errors.extend(validate_metajson_creator(creator))
+    if "identifiers" in is_part_of:
+        for identifier in is_part_of["identifiers"]:
+            errors.extend(validate_identifier(identifier))
     if "is_part_ofs" in is_part_of:
         for is_part_of_is_part_of in is_part_of["is_part_ofs"]:
             errors.extend(validate_metajson_is_part_of(is_part_of_is_part_of))
@@ -162,7 +174,38 @@ def validate_metajson_date(date):
     if date:
         date_regex = re.compile('^([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24\:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$')
         if not date_regex.match(date):
-            errors.append("Maybe malformed date: "+date)
+            errors.append("Maybe malformed date: {}".format(date))
     else:
         errors.append("Empty date")
+    return errors
+
+
+def validate_identifier(identifier):
+    errors = []
+    if identifier:
+        if identifier["id_type"] == "issn":
+            try:
+                issn.validate(identifier["value"])
+            except:
+                errors.append("Invalid ISSN: {}".format(identifier["value"]))
+        elif identifier["id_type"] == "isbn":
+            try:
+                isbn.validate(identifier["value"])
+            except:
+                errors.append("Invalid ISBN: {}".format(identifier["value"]))
+        elif identifier["id_type"] == "isan":
+            try:
+                isan.validate(identifier["value"])
+            except:
+                errors.append("Invalid ISAN: {}".format(identifier["value"]))
+        elif identifier["id_type"] == "ismn":
+            try:
+                ismn.validate(identifier["value"])
+            except:
+                errors.append("Invalid ISMN: {}".format(identifier["value"]))
+        elif identifier["id_type"] == "ean":
+            try:
+                ean.validate(identifier["value"])
+            except:
+                errors.append("Invalid EAN: {}".format(identifier["value"]))
     return errors
