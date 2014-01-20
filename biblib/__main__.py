@@ -4,6 +4,7 @@
 
 import argparse
 import logging
+import os
 
 from biblib.services import config_service
 from biblib.services import corpus_service
@@ -24,7 +25,7 @@ console.setup_console()
 default_corpus = config_service.config["default_corpus"]
 
 # Supported input and output formats
-INPUT_FORMATS = [constants.FORMAT_BIBTEX, constants.FORMAT_DIDL, constants.FORMAT_ENDNOTEXML, constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_RESEARCHERML, constants.FORMAT_RIS, constants.FORMAT_SUMMONJSON, constants.FORMAT_UNIXREF]
+INPUT_FORMATS = [constants.FORMAT_BIBTEX, constants.FORMAT_CSV_ARCHIPOLIS, constants.FORMAT_DIDL, constants.FORMAT_ENDNOTEXML, constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_RESEARCHERML, constants.FORMAT_RIS, constants.FORMAT_SUMMONJSON, constants.FORMAT_UNIMARC, constants.FORMAT_UNIXREF]
 OUTPUT_FORMATS = [constants.FORMAT_HTML, constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_REPEC]
 
 
@@ -46,6 +47,16 @@ def conf_corpus(args):
     corpus_service.conf_corpus(corpus, corpus_conf_dir_name)
 
 
+def validate_corpus(args):
+    corpus = args.corpus
+    if not corpus:
+        corpus = default_corpus
+    logging.info("corpus: {}".format(corpus))
+    error_file_name = "".join(["validation-", corpus, ".txt"])
+    error_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "log", error_file_name)
+    corpus_service.validate_corpus(corpus, error_file_path)
+
+
 def import_metadatas(args):
     corpus = args.corpus
     if not corpus:
@@ -55,7 +66,9 @@ def import_metadatas(args):
     logging.info("input_format: {}".format(input_format))
     input_file_path = args.input_file_path
     logging.info("input_file_path: {}".format(input_file_path))
-    corpus_service.import_metadata_file(corpus, input_file_path, input_format, "EndNote XML File", True, None)
+    source = args.source
+    logging.info("source: {}".format(source))
+    corpus_service.import_metadata_file(corpus, input_file_path, input_format, source, True, None)
 
 
 def export_metadatas(args):
@@ -144,6 +157,11 @@ import_parser.add_argument('-i',
                            #type=argparse.FileType('r'),
                            help='input file path')
 
+import_parser.add_argument('-s',
+                           '--source',
+                           dest='source',
+                           help='Source name')
+
 # export
 export_parser = subparsers.add_parser('export',
                                       help='Export as a metadata file')
@@ -187,6 +205,15 @@ convert_parser.add_argument('-o',
                             dest='output_file_path',
                             #type=argparse.FileType('r'),
                             help='output file path')
+
+# validate
+validate_parser = subparsers.add_parser('validate',
+                                     help="Validate the corpus metadata.")
+validate_parser.set_defaults(func=validate_corpus)
+validate_parser.add_argument('-c',
+                          '--corpus',
+                          dest='corpus',
+                          help='corpus identifier like : aime, forccast...')
 
 args = parser.parse_args()
 args.func(args)
