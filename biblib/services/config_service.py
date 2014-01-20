@@ -100,7 +100,7 @@ def google_worksheet_to_type(ws_name, worksheet, app, keys):
         logging.debug("col{}: {}".format(type_id_sign, col))
 
     if not type_id_col:
-        logging.debug("Fixme! Can't find the type_id_col for worksheet: {}".format(ws_name))
+        logging.error("Fixme! Can't find the type_id_col for worksheet: {}".format(ws_name))
         return None
     else:
         logging.debug("type_id_col: {}".format(type_id_col))
@@ -145,20 +145,6 @@ def google_worksheet_to_type(ws_name, worksheet, app, keys):
 
             type_bundle["children"].append(type_row)
         return type_bundle
-
-
-def configure_loggin(config):
-    if "logging" in config:
-        config_logging = config["logging"]
-        logging_level_numeric = getattr(logging, config_logging["level"].upper(), None)
-        if not isinstance(logging_level_numeric, int):
-            raise ValueError('Invalid log level: {}'.format(config_logging["level"]))
-        if "filename" in config_logging:
-            logging_filename = config_logging["filename"]
-        else:
-            logging_filename = None
-        #logging_filename
-        logging.basicConfig(format=config_logging["format"],level=logging_level_numeric)
 
 
 config_path = find_config_path()
