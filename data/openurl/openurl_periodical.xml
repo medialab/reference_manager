@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssopenurl:openURLResponse xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ssdiag="http://xml.serialssolutions.com/ns/diagnostics/v1.0" xmlns:ssopenurl="http://xml.serialssolutions.com/ns/openurl/v1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xml.serialssolutions.com/ns/openurl/v1.0 http://xml.serialssolutions.com/ns/openurl/v1.0/ssopenurl.xsd http://xml.serialssolutions.com/ns/diagnostics/v1.0 http://xml.serialssolutions.com/ns/diagnostics/v1.0/diagnostics.xsd">
+    <ssopenurl:version>1.0</ssopenurl:version>
+    <ssopenurl:results dbDate="2014-01-22">
+        <ssopenurl:result format="journal">
+            <ssopenurl:citation>
+                <dc:source>Urban studies (Edinburgh, Scotland)</dc:source>
+                <ssopenurl:issn type="print">0042-0980</ssopenurl:issn>
+                <ssopenurl:eissn type="electronic">1360-063X</ssopenurl:eissn>
+            </ssopenurl:citation>
+            <ssopenurl:linkGroups>
+                <ssopenurl:linkGroup type="holding">
+                    <ssopenurl:holdingData>
+                        <ssopenurl:startDate>08/01/1993</ssopenurl:startDate>
+                        <ssopenurl:endDate>12/31/2007</ssopenurl:endDate>
+                        <ssopenurl:providerId>PRVEBS</ssopenurl:providerId>
+                        <ssopenurl:providerName>EBSCOhost</ssopenurl:providerName>
+                        <ssopenurl:databaseId>ESI</ssopenurl:databaseId>
+                        <ssopenurl:databaseName>SocINDEX™ with Full Text</ssopenurl:databaseName>
+                        <ssopenurl:normalizedData>
+                            <ssopenurl:startDate>1993-08-01</ssopenurl:startDate>
+                            <ssopenurl:endDate>2007-12-31</ssopenurl:endDate>
+                        </ssopenurl:normalizedData>
+                    </ssopenurl:holdingData>
+                    <ssopenurl:url type="source">https://acces-distant.sciences-po.fr/fork?http://www.epnet.com/thisTopic.php?marketID=1&amp;topicID=139</ssopenurl:url>
+                    <ssopenurl:url type="journal">https://acces-distant.sciences-po.fr/fork?http://search.ebscohost.com/direct.asp?db=sih&amp;jid=UST&amp;scope=site</ssopenurl:url>
+                </ssopenurl:linkGroup>
+                <ssopenurl:linkGroup type="holding">
+                    <ssopenurl:holdingData>
+                        <ssopenurl:startDate>08/01/1993</ssopenurl:startDate>
+                        <ssopenurl:endDate>11/30/2007</ssopenurl:endDate>
+                        <ssopenurl:providerId>PRVEBS</ssopenurl:providerId>
+                        <ssopenurl:providerName>EBSCOhost</ssopenurl:providerName>
+                        <ssopenurl:databaseId>EBU</ssopenurl:databaseId>
+                        <ssopenurl:databaseName>Business Source Complete</ssopenurl:databaseName>
+                        <ssopenurl:normalizedData>
+                            <ssopenurl:startDate>1993-08-01</ssopenurl:startDate>
+                            <ssopenurl:endDate>2007-11-30</ssopenurl:endDate>
+                        </ssopenurl:normalizedData>
+                    </ssopenurl:holdingData>
+                    <ssopenurl:url type="source">https://acces-distant.sciences-po.fr/fork?http://search.ebscohost.com/login.aspx?authtype=ip,uid&amp;profile=ehost&amp;defaultdb=bth</ssopenurl:url>
+                    <ssopenurl:url type="journal">https://acces-distant.sciences-po.fr/fork?http://search.ebscohost.com/direct.asp?db=bth&amp;jid=UST&amp;scope=site</ssopenurl:url>
+                </ssopenurl:linkGroup>
+                <ssopenurl:linkGroup type="holding">
+                    <ssopenurl:holdingData>
+                        <ssopenurl:startDate>01/01/1999</ssopenurl:startDate>
+                        <ssopenurl:providerId>PRVSPB</ssopenurl:providerId>
+                        <ssopenurl:providerName>SAGE Publications</ssopenurl:providerName>
+                        <ssopenurl:databaseId>DG~</ssopenurl:databaseId>
+                        <ssopenurl:databaseName>SAGE Humanities and Social Science Package 2014</ssopenurl:databaseName>
+                        <ssopenurl:normalizedData>
+                            <ssopenurl:startDate>1999-01-01</ssopenurl:startDate>
+                        </ssopenurl:normalizedData>
+                    </ssopenurl:holdingData>
+                    <ssopenurl:url type="source">https://acces-distant.sciences-po.fr/fork?http://online.sagepub.com/</ssopenurl:url>
+                    <ssopenurl:url type="journal">https://acces-distant.sciences-po.fr/fork?http://online.sagepub.com/0042-0980</ssopenurl:url>
+                </ssopenurl:linkGroup>
+            </ssopenurl:linkGroups>
+        </ssopenurl:result>
+    </ssopenurl:results>
+    <ssopenurl:echoedQuery timeStamp="2014-01-23T02:27:09">
+        <ssopenurl:library id="GL5SM8UV5Q">
+            <ssopenurl:name>Sciences Po</ssopenurl:name>
+        </ssopenurl:library>
+        <ssopenurl:queryString>rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;version=1.0&amp;rft.genre=journal&amp;issn=0042-0980</ssopenurl:queryString>
+    </ssopenurl:echoedQuery>
+</ssopenurl:openURLResponse>

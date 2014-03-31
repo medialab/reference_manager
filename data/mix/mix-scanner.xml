@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mix:mix xmlns:mix="http://www.loc.gov/mix/v20" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd">
+  <mix:BasicDigitalObjectInformation>
+    <mix:FormatRegistry>
+      <mix:formatRegistryName>PRONOM</mix:formatRegistryName>
+      <mix:formatRegistryKey>x-fmt/392</mix:formatRegistryKey>
+    </mix:FormatRegistry>
+  </mix:BasicDigitalObjectInformation>
+  <mix:BasicImageInformation>
+    <mix:BasicImageCharacteristics>
+      <mix:imageWidth>3891</mix:imageWidth>
+      <mix:imageHeight>4903</mix:imageHeight>
+      <mix:PhotometricInterpretation>
+        <mix:colorSpace>RGB</mix:colorSpace>
+        <mix:ColorProfile>
+          <mix:IccProfile>
+            <mix:iccProfileName>sRGB IEC61966-2.1</mix:iccProfileName>
+            <mix:iccProfileVersion>2.1.0</mix:iccProfileVersion>
+          </mix:IccProfile>
+        </mix:ColorProfile>
+      </mix:PhotometricInterpretation>
+    </mix:BasicImageCharacteristics>
+    <mix:SpecialFormatCharacteristics/>
+  </mix:BasicImageInformation>
+  <mix:ImageCaptureMetadata>
+    <mix:GeneralCaptureInformation>
+      <mix:dateTimeCreated>2014-03-04T09:23:32</mix:dateTimeCreated>
+      <mix:imageProducer>Nom du prestataire</mix:imageProducer>
+      <mix:captureDevice>transmission scanner</mix:captureDevice>
+    </mix:GeneralCaptureInformation>
+    <mix:ScannerCapture>
+      <mix:scannerManufacturer>Zeutschel</mix:scannerManufacturer>
+      <mix:ScannerModel>
+        <mix:scannerModelName>OS 12000</mix:scannerModelName>
+      </mix:ScannerModel>
+      <mix:MaximumOpticalResolution>
+        <mix:xOpticalResolution>400</mix:xOpticalResolution>
+        <mix:yOpticalResolution>400</mix:yOpticalResolution>
+        <mix:opticalResolutionUnit>in.</mix:opticalResolutionUnit>
+      </mix:MaximumOpticalResolution>
+      <mix:ScanningSystemSoftware>
+        <mix:scanningSoftwareName>Omniscan</mix:scanningSoftwareName>
+        <mix:scanningSoftwareVersionNo>V11.10 SR1 (8)</mix:scanningSoftwareVersionNo>
+      </mix:ScanningSystemSoftware>
+    </mix:ScannerCapture>
+    <mix:orientation>normal*</mix:orientation>
+  </mix:ImageCaptureMetadata>
+  <mix:ImageAssessmentMetadata>
+    <mix:ImageColorEncoding>
+      <mix:BitsPerSample>
+        <mix:bitsPerSampleValue>24</mix:bitsPerSampleValue>
+        <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+      </mix:BitsPerSample>
+    </mix:ImageColorEncoding>
+  </mix:ImageAssessmentMetadata>
+  <mix:ChangeHistory>
+    <mix:ImageProcessing>
+      <mix:dateTimeProcessed>2014-03-04T11:42:12</mix:dateTimeProcessed>
+      <mix:processingAgency>Nom du prestataire</mix:processingAgency>
+      <mix:ProcessingSoftware>
+        <mix:processingSoftwareName>Adobe Photoshop</mix:processingSoftwareName>
+        <mix:processingSoftwareVersion>CS6 13.0 x64</mix:processingSoftwareVersion>
+        <mix:processingOperatingSystemName>OS X</mix:processingOperatingSystemName>
+        <mix:processingOperatingSystemVersion>10.8.3</mix:processingOperatingSystemVersion>
+      </mix:ProcessingSoftware>
+      <mix:processingActions>Conversion de l'image</mix:processingActions>
+    </mix:ImageProcessing>
+  </mix:ChangeHistory>
+</mix:mix>

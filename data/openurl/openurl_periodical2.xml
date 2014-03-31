@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssopenurl:openURLResponse xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ssdiag="http://xml.serialssolutions.com/ns/diagnostics/v1.0" xmlns:ssopenurl="http://xml.serialssolutions.com/ns/openurl/v1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xml.serialssolutions.com/ns/openurl/v1.0 http://xml.serialssolutions.com/ns/openurl/v1.0/ssopenurl.xsd http://xml.serialssolutions.com/ns/diagnostics/v1.0 http://xml.serialssolutions.com/ns/diagnostics/v1.0/diagnostics.xsd">
+    <ssopenurl:version>1.0</ssopenurl:version>
+    <ssopenurl:results dbDate="2014-01-31">
+        <ssopenurl:result format="journal">
+            <ssopenurl:citation>
+                <dc:source>20th century British history</dc:source>
+                <ssopenurl:issn type="print">0955-2359</ssopenurl:issn>
+                <ssopenurl:eissn type="electronic">1477-4674</ssopenurl:eissn>
+            </ssopenurl:citation>
+            <ssopenurl:linkGroups>
+                <ssopenurl:linkGroup type="holding">
+                    <ssopenurl:holdingData>
+                        <ssopenurl:startDate>1996</ssopenurl:startDate>
+                        <ssopenurl:providerId>PRVASL</ssopenurl:providerId>
+                        <ssopenurl:providerName>Oxford University Press</ssopenurl:providerName>
+                        <ssopenurl:databaseId>TJH</ssopenurl:databaseId>
+                        <ssopenurl:databaseName>Oxford Journals Humanities Collection</ssopenurl:databaseName>
+                        <ssopenurl:normalizedData>
+                            <ssopenurl:startDate>1996-01-01</ssopenurl:startDate>
+                        </ssopenurl:normalizedData>
+                    </ssopenurl:holdingData>
+                    <ssopenurl:url type="source">https://acces-distant.sciences-po.fr/fork?http://www.oxfordjournals.org/subject/humanities/</ssopenurl:url>
+                    <ssopenurl:url type="journal">https://acces-distant.sciences-po.fr/fork?http://tcbh.oxfordjournals.org/archive</ssopenurl:url>
+                    <ssopenurl:url type="issue">https://acces-distant.sciences-po.fr/fork?http://tcbh.oxfordjournals.org/content/vol/issue/index.dtl</ssopenurl:url>
+                </ssopenurl:linkGroup>
+            </ssopenurl:linkGroups>
+        </ssopenurl:result>
+    </ssopenurl:results>
+    <ssopenurl:echoedQuery timeStamp="2014-02-01T03:05:04">
+        <ssopenurl:library id="GL5SM8UV5Q">
+            <ssopenurl:name>Sciences Po</ssopenurl:name>
+        </ssopenurl:library>
+        <ssopenurl:queryString>rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;version=1.0&amp;rft.genre=journal&amp;issn=0955-2359</ssopenurl:queryString>
+    </ssopenurl:echoedQuery>
+</ssopenurl:openURLResponse>

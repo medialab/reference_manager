@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mets:mets OBJID="EL65_L_1973_03_013" PROFILE="http://www.sciencespo.fr/bibliotheque/standards/num/archelec.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:mets="http://www.loc.gov/METS/" xmlns:mix="http://www.loc.gov/mix/v20" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd    http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd   http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd">
+  <mets:metsHdr CREATEDATE="2014-02-19T16:40:35.5Z" LASTMODDATE="2014-02-19T18:40:35.5Z" RECORDSTATUS="complete">
+    <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+      <mets:name>Nom du prestataire</mets:name>
+    </mets:agent>
+    <mets:agent ROLE="EDITOR" TYPE="ORGANIZATION">
+      <mets:name>Sciences Po | la bibliothèque</mets:name>
+    </mets:agent>
+    <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+      <mets:name>Sciences Po | CEVIPOF</mets:name>
+    </mets:agent>
+  </mets:metsHdr>
+  <mets:dmdSec ID="EL65_L_1973_03_013_01_1_PF_dmd">
+    <mets:mdWrap MDTYPE="DC">
+      <mets:xmlData>
+        <oai_dc:dc>
+          <dc:coverage>France Bouches-du-Rhône</dc:coverage>
+          <dc:date>1973-03-04</dc:date>
+          <dc:identifier>EL65_L_1973_03_013_01_1_PF</dc:identifier>
+          <dc:language>fr</dc:language>
+          <dc:rights>domaine public</dc:rights>
+          <dc:rights>Creative Commons CC BY-SA 3.0 FR</dc:rights>
+          <dc:source>Sciences Po | CEVIPOF</dc:source>
+          <dc:subject>France élections législatives 1973 documents électoraux</dc:subject>
+          <dc:title>Élections législatives 1973 Bouches-du-Rhône 1ere circonscription 1er tour Professions de foi</dc:title>
+          <dc:type>Text</dc:type>
+        </oai_dc:dc>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:dmdSec ID="EL65_L_1973_03_013_01_2_PF_dmd">
+    <mets:mdWrap MDTYPE="DC">
+      <mets:xmlData>
+        <oai_dc:dc>
+          <dc:coverage>France Bouches-du-Rhône</dc:coverage>
+          <dc:date>1973-03-11</dc:date>
+          <dc:identifier>EL65_L_1973_03_013_01_2_PF</dc:identifier>
+          <dc:language>fr</dc:language>
+          <dc:rights>domaine public</dc:rights>
+          <dc:rights>Creative Commons CC BY-SA 3.0 FR</dc:rights>
+          <dc:source>Sciences Po | CEVIPOF</dc:source>
+          <dc:subject>France élections législatives 1973 documents électoraux</dc:subject>
+          <dc:title>Élections législatives 1973 Bouches-du-Rhône 1ere circonscription 2e tour Professions de foi</dc:title>
+          <dc:type>Text</dc:type>
+        </oai_dc:dc>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:dmdSec ID="EL65_L_1973_03_013_01_1_PF_01_dmd">
+    <mets:mdWrap MDTYPE="DC">
+      <mets:xmlData>
+        <oai_dc:dc>
+          <dc:title>todo</dc:title>
+          <dc:type>Professions de foi</dc:type>
+          <dc:type>Text</dc:type>
+        </oai_dc:dc>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:dmdSec ID="EL65_L_1973_03_013_01_1_PF_02_dmd">
+    <mets:mdWrap MDTYPE="DC">
+      <mets:xmlData>
+        <oai_dc:dc>
+          <dc:title>todo</dc:title>
+          <dc:type>Professions de foi</dc:type>
+          <dc:type>Text</dc:type>
+        </oai_dc:dc>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:amdSec>
+    <mets:techMD ID="EL65_L_1973_03_013_01_1_PF_01_01_master_techmd">
+      <mets:mdWrap MDTYPE="NISOIMG">
+        <mets:xmlData>
+          <mix:mix>
+            <mix:BasicDigitalObjectInformation>
+              <mix:FormatRegistry>
+                <mix:formatRegistryName>PRONOM</mix:formatRegistryName>
+                <mix:formatRegistryKey>x-fmt/392</mix:formatRegistryKey>
+              </mix:FormatRegistry>
+            </mix:BasicDigitalObjectInformation>
+            <mix:BasicImageInformation>
+              <mix:BasicImageCharacteristics>
+                <mix:imageWidth>3891</mix:imageWidth>
+                <mix:imageHeight>4903</mix:imageHeight>
+                <mix:PhotometricInterpretation>
+                  <mix:colorSpace>RGB</mix:colorSpace>
+                  <mix:ColorProfile>
+                    <mix:IccProfile>
+                      <mix:iccProfileName>sRGB IEC61966-2.1</mix:iccProfileName>
+                      <mix:iccProfileVersion>2.1.0</mix:iccProfileVersion>
+                    </mix:IccProfile>
+                  </mix:ColorProfile>
+                </mix:PhotometricInterpretation>
+              </mix:BasicImageCharacteristics>
+              <mix:SpecialFormatCharacteristics/>
+            </mix:BasicImageInformation>
+            <mix:ImageCaptureMetadata>
+              <mix:GeneralCaptureInformation>
+                <mix:dateTimeCreated>2014-03-04T09:23:32</mix:dateTimeCreated>
+                <mix:imageProducer>Nom du prestataire</mix:imageProducer>
+                <mix:captureDevice>transmission scanner</mix:captureDevice>
+              </mix:GeneralCaptureInformation>
+              <mix:DigitalCameraCapture>
+                <mix:digitalCameraManufacturer>Canon</mix:digitalCameraManufacturer>
+                <mix:DigitalCameraModel>
+                  <mix:digitalCameraModelName>EOS-1D X</mix:digitalCameraModelName>
+                </mix:DigitalCameraModel>
+                <mix:CameraCaptureSettings>
+                  <mix:fNumber>4.4</mix:fNumber>
+                  <mix:exposureTime>0.005</mix:exposureTime>
+                  <mix:exposureProgram>Manual</mix:exposureProgram>
+                  <mix:isoSpeedRatings>400</mix:isoSpeedRatings>
+                  <mix:meteringMode>Pattern</mix:meteringMode>
+                  <mix:lightSource>Cool white fluorescent (W 3900 - 4500K)</mix:lightSource>
+                  <mix:flash>Flash did not fire.</mix:flash>
+                  <mix:focalLength>0.0193</mix:focalLength>
+                  <mix:autoFocus>Manual</mix:autoFocus>
+                </mix:CameraCaptureSettings>
+              </mix:DigitalCameraCapture>
+              <mix:orientation>normal*</mix:orientation>
+            </mix:ImageCaptureMetadata>
+            <mix:ImageAssessmentMetadata>
+              <mix:ImageColorEncoding>
+                <mix:BitsPerSample>
+                  <mix:bitsPerSampleValue>24</mix:bitsPerSampleValue>
+                  <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+                </mix:BitsPerSample>
+              </mix:ImageColorEncoding>
+            </mix:ImageAssessmentMetadata>
+            <mix:ChangeHistory>
+              <mix:ImageProcessing>
+                <mix:dateTimeProcessed>2014-03-04T11:42:12</mix:dateTimeProcessed>
+                <mix:processingAgency>Nom du prestataire</mix:processingAgency>
+                <mix:ProcessingSoftware>
+                  <mix:processingSoftwareName>Adobe Photoshop</mix:processingSoftwareName>
+                  <mix:processingSoftwareVersion>CS6 13.0 x64</mix:processingSoftwareVersion>
+                  <mix:processingOperatingSystemName>OS X</mix:processingOperatingSystemName>
+                  <mix:processingOperatingSystemVersion>10.8.3</mix:processingOperatingSystemVersion>
+                </mix:ProcessingSoftware>
+                <mix:processingActions>Conversion de l'image</mix:processingActions>
+              </mix:ImageProcessing>
+            </mix:ChangeHistory>
+          </mix:mix>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:techMD>
+    <mets:techMD ID="EL65_L_1973_03_013_01_1_PF_01_02_master_techmd">
+      <mets:mdWrap MDTYPE="NISOIMG">
+        <mets:xmlData>
+          <mix:mix/>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:techMD>
+    <mets:techMD ID="EL65_L_1973_03_013_01_1_PF_02_01_master_techmd">
+      <mets:mdWrap MDTYPE="NISOIMG">
+        <mets:xmlData>
+          <mix:mix/>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:techMD>
+    <mets:techMD ID="EL65_L_1973_03_013_01_1_PF_02_02_master_techmd">
+      <mets:mdWrap MDTYPE="NISOIMG">
+        <mets:xmlData>
+          <mix:mix/>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:techMD>
+  </mets:amdSec>
+  <mets:fileSec>
+    <mets:fileGrp USE="master">
+      <mets:file ADMID="EL65_L_1973_03_013_01_1_PF_01_01_master_techmd" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_01_01_master" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/master/L65_L_1973_03_013_01_1_PF_01_01_master.jp2"/>
+      </mets:file>
+      <mets:file ADMID="EL65_L_1973_03_013_01_1_PF_01_02_master_techmd" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_01_02_master" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/master/L65_L_1973_03_013_01_1_PF_01_02_master.jp2"/>
+      </mets:file>
+      <mets:file ADMID="EL65_L_1973_03_013_01_1_PF_02_01_master_techmd" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_02_01_master" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/master/L65_L_1973_03_013_01_1_PF_02_01_master.jp2"/>
+      </mets:file>
+      <mets:file ADMID="EL65_L_1973_03_013_01_1_PF_02_02_master_techmd" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_02_02_master" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/master/L65_L_1973_03_013_01_1_PF_02_02_master.jp2"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="ocr">
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_01_01_ocr" MIMETYPE="image/xml" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/ocr/L65_L_1973_03_013_01_1_PF_01_01_ocr.xml"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_01_02_ocr" MIMETYPE="image/xml" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/ocr/L65_L_1973_03_013_01_1_PF_01_02_ocr.xml"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_02_01_ocr" MIMETYPE="image/xml" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/ocr/L65_L_1973_03_013_01_1_PF_02_01_ocr.xml"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_02_02_ocr" MIMETYPE="image/xml" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/ocr/L65_L_1973_03_013_01_1_PF_02_02_ocr.xml"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="view">
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_01_01_view" MIMETYPE="image/jpeg" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/view/L65_L_1973_03_013_01_1_PF_01_01_view.jpg"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_01_02_view" MIMETYPE="image/jpeg" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/view/L65_L_1973_03_013_01_1_PF_01_02_view.jpg"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_02_01_view" MIMETYPE="image/jpeg" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/view/L65_L_1973_03_013_01_1_PF_02_01_view.jpg"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_02_02_view" MIMETYPE="image/jpeg" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/view/L65_L_1973_03_013_01_1_PF_02_02_view.jpg"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="pdfmasterocr">
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_01_pdfmasterocr" MIMETYPE="application/pdf" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/pdfmasterocr/L65_L_1973_03_013_01_1_PF_01_pdfmasterocr.pdf"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="EL65_L_1973_03_013_01_1_PF_02_pdfmasterocr" MIMETYPE="application/pdf" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://EL65_L_1973_03_013_01_1_PF/pdfmasterocr/L65_L_1973_03_013_01_1_PF_02_pdfmasterocr.pdf"/>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap ID="structmap_image" TYPE="image">
+    <mets:div LABEL="Élections législatives 1973" TYPE="election">
+      <mets:div LABEL="Bouches-du-Rhône" TYPE="departement">
+        <mets:div LABEL="1ere circonscription" TYPE="circonscription">
+          <mets:div LABEL="1er tour" TYPE="tour">
+            <mets:div DMDID="EL65_L_1973_03_013_01_1_PF_dmd" LABEL="Professions de foi" TYPE="type">
+              <mets:div DMDID="EL65_L_1973_03_013_01_1_PF_01_dmd" TYPE="piece">
+                <mets:div ORDER="1" TYPE="page">
+                  <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_01_01_master"/>
+                  <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_01_01_ocr"/>
+                  <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_01_01_view"/>
+                </mets:div>
+                <mets:div ORDER="2" TYPE="page">
+                  <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_01_02_master"/>
+                  <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_01_02_ocr"/>
+                  <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_01_02_view"/>
+                </mets:div>
+                <mets:div DMDID="EL65_L_1973_03_013_01_1_PF_02_dmd" TYPE="piece">
+                  <mets:div ORDER="1" TYPE="page">
+                    <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_02_01_master"/>
+                    <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_02_01_ocr"/>
+                    <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_02_01_view"/>
+                  </mets:div>
+                  <mets:div ORDER="2" TYPE="page">
+                    <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_02_02_master"/>
+                    <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_02_02_ocr"/>
+                    <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_02_02_view"/>
+                  </mets:div>
+                </mets:div>
+              </mets:div>
+            </mets:div>
+          </mets:div>
+        </mets:div>
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+  <mets:structMap ID="structmap_logical" TYPE="logical">
+    <mets:div LABEL="Élections législatives 1973" TYPE="election">
+      <mets:div LABEL="Bouches-du-Rhône" TYPE="departement">
+        <mets:div LABEL="1ere circonscription" TYPE="circonscription">
+          <mets:div LABEL="1er tour" TYPE="tour">
+            <mets:div DMDID="EL65_L_1973_03_013_01_1_PF_dmd" LABEL="Professions de foi" TYPE="regroupement">
+              <mets:div DMDID="EL65_L_1973_03_013_01_1_PF_01_dmd" TYPE="piece">
+                <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_01_pdfmasterocr"/>
+              </mets:div>
+              <mets:div DMDID="EL65_L_1973_03_013_01_1_PF_02_dmd" TYPE="piece">
+                <mets:fptr FILEID="EL65_L_1973_03_013_01_1_PF_02_pdfmasterocr"/>
+              </mets:div>
+            </mets:div>
+          </mets:div>
+        </mets:div>
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>

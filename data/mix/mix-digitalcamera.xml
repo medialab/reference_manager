@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mix:mix xmlns:mix="http://www.loc.gov/mix/v20" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd">
+  <mix:BasicDigitalObjectInformation>
+    <mix:FormatRegistry>
+      <mix:formatRegistryName>PRONOM</mix:formatRegistryName>
+      <mix:formatRegistryKey>x-fmt/392</mix:formatRegistryKey>
+    </mix:FormatRegistry>
+  </mix:BasicDigitalObjectInformation>
+  <mix:BasicImageInformation>
+    <mix:BasicImageCharacteristics>
+      <mix:imageWidth>3891</mix:imageWidth>
+      <mix:imageHeight>4903</mix:imageHeight>
+      <mix:PhotometricInterpretation>
+        <mix:colorSpace>RGB</mix:colorSpace>
+        <mix:ColorProfile>
+          <mix:IccProfile>
+            <mix:iccProfileName>sRGB IEC61966-2.1</mix:iccProfileName>
+            <mix:iccProfileVersion>2.1.0</mix:iccProfileVersion>
+          </mix:IccProfile>
+        </mix:ColorProfile>
+      </mix:PhotometricInterpretation>
+    </mix:BasicImageCharacteristics>
+    <mix:SpecialFormatCharacteristics/>
+  </mix:BasicImageInformation>
+  <mix:ImageCaptureMetadata>
+    <mix:GeneralCaptureInformation>
+      <mix:dateTimeCreated>2014-03-04T09:23:32</mix:dateTimeCreated>
+      <mix:imageProducer>Nom du prestataire</mix:imageProducer>
+      <mix:captureDevice>transmission scanner</mix:captureDevice>
+    </mix:GeneralCaptureInformation>
+    <mix:DigitalCameraCapture>
+      <mix:digitalCameraManufacturer>Canon</mix:digitalCameraManufacturer>
+      <mix:DigitalCameraModel>
+        <mix:digitalCameraModelName>EOS-1D X</mix:digitalCameraModelName>
+      </mix:DigitalCameraModel>
+      <mix:CameraCaptureSettings>
+        <mix:fNumber>4.4</mix:fNumber>
+        <mix:exposureTime>0.005</mix:exposureTime>
+        <mix:exposureProgram>Manual</mix:exposureProgram>
+        <mix:isoSpeedRatings>400</mix:isoSpeedRatings>
+        <mix:meteringMode>Pattern</mix:meteringMode>
+        <mix:lightSource>Cool white fluorescent (W 3900 - 4500K)</mix:lightSource>
+        <mix:flash>Flash did not fire.</mix:flash>
+        <mix:focalLength>0.0193</mix:focalLength>
+        <mix:autoFocus>Manual</mix:autoFocus>
+      </mix:CameraCaptureSettings>
+    </mix:DigitalCameraCapture>
+    <mix:orientation>normal*</mix:orientation>
+  </mix:ImageCaptureMetadata>
+  <mix:ImageAssessmentMetadata>
+    <mix:ImageColorEncoding>
+      <mix:BitsPerSample>
+        <mix:bitsPerSampleValue>24</mix:bitsPerSampleValue>
+        <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+      </mix:BitsPerSample>
+    </mix:ImageColorEncoding>
+  </mix:ImageAssessmentMetadata>
+  <mix:ChangeHistory>
+    <mix:ImageProcessing>
+      <mix:dateTimeProcessed>2014-03-04T11:42:12</mix:dateTimeProcessed>
+      <mix:processingAgency>Nom du prestataire</mix:processingAgency>
+      <mix:ProcessingSoftware>
+        <mix:processingSoftwareName>Adobe Photoshop</mix:processingSoftwareName>
+        <mix:processingSoftwareVersion>CS6 13.0 x64</mix:processingSoftwareVersion>
+        <mix:processingOperatingSystemName>OS X</mix:processingOperatingSystemName>
+        <mix:processingOperatingSystemVersion>10.8.3</mix:processingOperatingSystemVersion>
+      </mix:ProcessingSoftware>
+      <mix:processingActions>Conversion de l'image</mix:processingActions>
+    </mix:ImageProcessing>
+  </mix:ChangeHistory>
+</mix:mix>
