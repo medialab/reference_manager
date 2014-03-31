@@ -12,6 +12,7 @@ from biblib.metajson import Event
 from biblib.metajson import Family
 from biblib.metajson import Orgunit
 from biblib.metajson import Person
+from biblib.metajson import Resource
 from biblib.metajson import Subject
 from biblib.services import creator_service
 from biblib.services import date_service
@@ -250,6 +251,7 @@ def unimarc_record_to_metajson(record, source):
 
     # 6XX -> subject
     subjects = []
+    suject_agents = []
     if record.get_fields('600', '601', '602'):
         for field in record.get_fields('600', '601', '602'):
             creator = extract_unimarc_creator(field)
@@ -284,7 +286,22 @@ def unimarc_record_to_metajson(record, source):
     if creators:
         document["creators"] = creators
 
-    # holdings / copies
+    resources = []
+    # 856 -> resources
+    fields_856 = record.get_fields('856')
+    if fields_856:
+        for field_856 in fields_856:
+            resource = Resource()
+            if field_856.get_subfields('u'):
+                resource["url"] = field_856.get_subfields('u')[0]
+            if field_856.get_subfields('z'):
+                resource["label"] = field_856.get_subfields('z')[0]
+            if resource:
+                resources.append(resource)
+    if resources:
+        document["resources"] = resources
+
+    # 995 -> holdings / copies
     logging.debug(record['995'])
 
     metajson_service.pretty_print_document(document)
@@ -317,8 +334,10 @@ def extract_unimarc_type(record):
         field106a = record['106']['a']
 
     # 110$a/1
+    field110ap0 = None
     field110ap1 = None
     if record['110'] is not None and record['110']['a'] is not None:
+        field110ap0 = record['110']['a'][0:1]
         field110ap1 = record['110']['a'][1:2]
 
     # 115$a/0
@@ -357,23 +376,57 @@ def extract_unimarc_type(record):
     logging.debug("100$a/20: {}".format(field100ap20))
     logging.debug("105/4-7: {}".format(field105ap48))
     logging.debug("106$a: {}".format(field106a))
+    logging.debug("110$a/0: {}".format(field110ap0))
     logging.debug("110$a/1: {}".format(field110ap1))
     logging.debug("115$a/0: {}".format(field115ap0))
     logging.debug("116/0: {}".format(field116ap0))
     logging.debug("121$a/0: {}".format(field121ap0))
     logging.debug("124$b: {}".format(field124b))
     logging.debug("126$a/0: {}".format(field126ap0))
-    logging.debug("135/0: {}".format(field135ap0))
+    logging.debug("135$a/0: {}".format(field135ap0))
 
     if leader6 == "a":
         if leader7 == "a":
             rec_type = constants.DOC_TYPE_JOURNALARTICLE
         elif leader7 == "c":
-            rec_type = "PressClipping"
+            rec_type = constants.DOC_TYPE_PRESSCLIPPING
         elif leader7 == "m":
             rec_type = constants.DOC_TYPE_BOOK
         elif leader7 == "s":
-            rec_type = constants.DOC_TYPE_JOURNAL
+            # 110 : Zone de données codées : Ressources continues
+            # 110$a/0 Type de ressource continue
+            if field110ap0 == "a":
+                # a: périodique
+                rec_type = constants.DOC_TYPE_JOURNAL
+            elif field110ap0 == "b":
+                # b: collection de monographies
+                rec_type = constants.DOC_TYPE_MULTIVOLUMEBOOK
+            elif field110ap0 == "c":
+                # c: journal
+                rec_type = constants.DOC_TYPE_NEWSPAPER
+            elif field110ap0 == "e":
+                # e: publication à feuillets mobiles et à mise à jour
+                rec_type = constants.DOC_TYPE_LOOSELEAFPUBLICATION
+            elif field110ap0 == "f":
+                # f: base de données
+                rec_type = constants.DOC_TYPE_DATABASE
+            elif field110ap0 == "g":
+                # g: site web à mise à jour
+                rec_type = constants.DOC_TYPE_WEBSITE
+            elif field110ap0 == "g":
+                # z: autre
+                rec_type = constants.DOC_TYPE_JOURNAL
+            else:
+                rec_type = constants.DOC_TYPE_JOURNAL
+
+            # 110$a/1 field110ap1 : Périodicité
+            if field110ap1 in ["a", "b", "c", "n"]:
+                # a: quotidienne
+                # b: bihebdomadaire
+                # c: hebdomadaire
+                # n: trois fois par semaine
+                rec_type = constants.DOC_TYPE_NEWSPAPER
+
     elif leader6 == "b":
         rec_type = constants.DOC_TYPE_MANUSCRIPT
     elif leader6 in ["c", "d"]:
@@ -389,7 +442,58 @@ def extract_unimarc_type(record):
     elif leader6 == "k":
         rec_type = constants.DOC_TYPE_IMAGE
     elif leader6 == "l":
-        rec_type = "ElectronicResource"
+        # 135$a/0 field135ap0 : Zone de données codées : ressources électroniques
+        if field135ap0 == "a":
+            # a: données numériques
+            rec_type = constants.DOC_TYPE_DATASETQUANTI
+        elif field135ap0 == "b":
+            # b: programme informatique
+            rec_type = constants.DOC_TYPE_SOFTWARE
+            # c: illustration
+        elif field135ap0 == "d":
+            # d: texte
+            if leader7 == "a":
+                rec_type = constants.DOC_TYPE_EJOURNALARTICLE
+            elif leader7 == "c":
+                rec_type = constants.DOC_TYPE_PRESSCLIPPING
+            elif leader7 == "m":
+                rec_type = constants.DOC_TYPE_EBOOK
+            elif leader7 == "s":
+                rec_type = constants.DOC_TYPE_EJOURNAL
+        elif field135ap0 == "e":
+            # e: données bibliographiques
+            rec_type = constants.DOC_TYPE_BIBLIOGRAPHY
+        elif field135ap0 == "f":
+            # f: polices de caractères
+            rec_type = constants.DOC_TYPE_FONT
+        elif field135ap0 == "g":
+            # g: jeu
+            rec_type = constants.DOC_TYPE_GAME
+        elif field135ap0 == "h":
+            # h: son
+            rec_type = constants.DOC_TYPE_AUDIORECORDING
+        elif field135ap0 == "i":
+            # i: multimédia interactif
+            rec_type = constants.DOC_TYPE_MULTIMEDIA
+        elif field135ap0 == "j":
+            # j: système ou service en ligne
+            rec_type = constants.DOC_TYPE_WEBSITE
+        elif field135ap0 == "u":
+            # u: inconnu
+            rec_type = constants.DOC_TYPE_ERESOURCE
+        elif field135ap0 == "v":
+            # v: combinaison de données
+            rec_type = constants.DOC_TYPE_DATASETQUANTI
+            # z: autre
+        else:
+            if leader7 == "a":
+                rec_type = constants.DOC_TYPE_EJOURNALARTICLE
+            elif leader7 == "c":
+                rec_type = constants.DOC_TYPE_PRESSCLIPPING
+            elif leader7 == "m":
+                rec_type = constants.DOC_TYPE_EBOOK
+            elif leader7 == "s":
+                rec_type = constants.DOC_TYPE_EJOURNAL
     elif leader6 == "m":
         rec_type = "Kit"
     elif leader6 == "r":
