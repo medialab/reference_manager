@@ -54,6 +54,7 @@ def validate_corpus(args):
     logging.info("corpus: {}".format(corpus))
     error_file_name = "".join(["validation-", corpus, ".txt"])
     error_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "log", error_file_name)
+    logging.info("error_file_path: {}".format(error_file_path))
     corpus_service.validate_corpus(corpus, error_file_path)
 
 
