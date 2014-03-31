@@ -29,14 +29,17 @@ def test_crosswalk(input_format, output_format=constants.FORMAT_METAJSON, all_in
 def test():
     # input_format to MetaJSON
     test_crosswalk(constants.FORMAT_BIBTEX)
+    #test_crosswalk(constants.FORMAT_CSV_SITPOL)
     test_crosswalk(constants.FORMAT_DIDL)
     test_crosswalk(constants.FORMAT_DDI)
     test_crosswalk(constants.FORMAT_ENDNOTEXML)
     test_crosswalk(constants.FORMAT_METS)
     test_crosswalk(constants.FORMAT_MODS)
+    test_crosswalk(constants.FORMAT_OPENURL)
     test_crosswalk(constants.FORMAT_RESEARCHERML)
     test_crosswalk(constants.FORMAT_RIS)
     test_crosswalk(constants.FORMAT_SUMMONJSON)
+    test_crosswalk(constants.FORMAT_TEI)
     test_crosswalk(constants.FORMAT_UNIMARC)
     test_crosswalk(constants.FORMAT_UNIMARC, constants.FORMAT_MODS)
     test_crosswalk(constants.FORMAT_UNIXREF)
