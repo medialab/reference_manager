@@ -11,8 +11,14 @@ import httplib
 import urllib2
 import cookielib
 
-from biblib.services import creator_service
+#import requests
 
+#from biblib.services import config_service
+from biblib.services import creator_service
+from biblib.util import console
+#from biblib.util import jsonbson
+
+console.setup_console()
 
 file_type_to_file_extension = {
     "pdf": "pdf"
@@ -148,12 +154,13 @@ def fetch_url(url):
         if url != response.geturl():
             result_redirect = True
             result_redirect_url = response.geturl()
-        #result_data = response.read()
+        result_data = response.read()
 
     finally:
         result_dict = {}
         result_dict["error"] = result_error
-        result_code = result_code.replace("''", "")
+        if result_code:
+            result_code = result_code.replace("''", "")
         if not result_code:
             result_code = "?"
         result_dict["code"] = result_code
@@ -164,7 +171,6 @@ def fetch_url(url):
             result_dict["info"] = result_info
 
         logging.debug("{0}\t\t: {1}".format(result_code, url))
-        #return result_dict, result_data
         return result_dict, result_data
 
 
@@ -173,3 +179,6 @@ def fetch_url(url):
 #logging.debug(fetch_url("http://intranet.tdmu.edu.ua/data/kafedra/internal/ginecology2/classes_stud/en/med/lik/ptn/Obstetrics and gynecology/5 year/05_Operative obstetric. Lacerations of the birth canal.files/image008.jpg"))
 #logging.debug(fetch_url("http://commons.wikimedia.org/wiki/File:Saint-Menoux_debredinoire.JPG?uselang=fr"))
 #logging.debug(fetch_url("http://france.meteofrance.com/france/actu/archives/2009/2009?page_id=10320&document_id=21075&portlet_id=42233"))
+#print jsonbson.dumps_json(fetch_url("https://acces-distant.sciences-po.fr/fork?http://abimperio.net/"))
+#print jsonbson.dumps_json(fetch_url("https://acces-distant.sciences-po.fr/fork?http://www.example.com/truc")[0])
+#print jsonbson.dumps_json(fetch_url("http://abimperio.net/toto")[0])
