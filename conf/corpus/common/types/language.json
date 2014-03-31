@@ -11,6 +11,14 @@
         }, 
         {
             "labels": {
+                "en": "Bengali", 
+                "fr": "bengali"
+            }, 
+            "major": true, 
+            "type_id": "bn"
+        }, 
+        {
+            "labels": {
                 "en": "German", 
                 "fr": "allemand"
             }, 
@@ -68,6 +76,14 @@
         }, 
         {
             "labels": {
+                "en": "Hindi", 
+                "fr": "hindi"
+            }, 
+            "major": true, 
+            "type_id": "hi"
+        }, 
+        {
+            "labels": {
                 "en": "Hungarian", 
                 "fr": "hongrois"
             }, 
@@ -92,11 +108,27 @@
         }, 
         {
             "labels": {
+                "en": "Javanese", 
+                "fr": "javanais"
+            }, 
+            "major": true, 
+            "type_id": "jv"
+        }, 
+        {
+            "labels": {
                 "en": "Korean", 
                 "fr": "coréen"
             }, 
             "major": true, 
             "type_id": "ko"
+        }, 
+        {
+            "labels": {
+                "en": "Multiple languages", 
+                "fr": "multilingue"
+            }, 
+            "major": true, 
+            "type_id": "mul"
         }, 
         {
             "labels": {
@@ -153,6 +185,22 @@
             }, 
             "major": true, 
             "type_id": "tr"
+        }, 
+        {
+            "labels": {
+                "en": "Undetermined", 
+                "fr": "indéterminée"
+            }, 
+            "major": true,
+            "type_id": "und"
+        }, 
+        {
+            "labels": {
+                "en": "Vietnamese", 
+                "fr": "vietnamien"
+            }, 
+            "major": true, 
+            "type_id": "vi"
         }, 
         {
             "labels": {
@@ -532,14 +580,6 @@
                 "fr": "bambara"
             }, 
             "type_id": "bm"
-        }, 
-        {
-            "labels": {
-                "en": "Bengali", 
-                "fr": "bengali"
-            }, 
-            "major": true, 
-            "type_id": "bn"
         }, 
         {
             "labels": {
@@ -1292,14 +1332,6 @@
         }, 
         {
             "labels": {
-                "en": "Hindi", 
-                "fr": "hindi"
-            }, 
-            "major": true, 
-            "type_id": "hi"
-        }, 
-        {
-            "labels": {
                 "en": "Hiligaynon", 
                 "fr": "hiligaynon"
             }, 
@@ -1514,14 +1546,6 @@
                 "fr": "judéo-arabe"
             }, 
             "type_id": "jrb"
-        }, 
-        {
-            "labels": {
-                "en": "Javanese", 
-                "fr": "javanais"
-            }, 
-            "major": true, 
-            "type_id": "jv"
         }, 
         {
             "labels": {
@@ -2103,13 +2127,6 @@
                 "fr": "maltais"
             }, 
             "type_id": "mt"
-        }, 
-        {
-            "labels": {
-                "en": "Multiple languages", 
-                "fr": "multilingue"
-            }, 
-            "type_id": "mul"
         }, 
         {
             "labels": {
@@ -3198,14 +3215,6 @@
         }, 
         {
             "labels": {
-                "en": "Undetermined", 
-                "fr": "indéterminée"
-            }, 
-            "major": true,
-            "type_id": "und"
-        }, 
-        {
-            "labels": {
                 "en": "Urdu", 
                 "fr": "ourdou"
             }, 
@@ -3231,14 +3240,6 @@
                 "fr": "venda"
             }, 
             "type_id": "ve"
-        }, 
-        {
-            "labels": {
-                "en": "Vietnamese", 
-                "fr": "vietnamien"
-            }, 
-            "major": true, 
-            "type_id": "vi"
         }, 
         {
             "labels": {
