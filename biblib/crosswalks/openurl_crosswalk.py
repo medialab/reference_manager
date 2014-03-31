@@ -5,8 +5,16 @@
 import logging
 import urllib
 from xml.sax.saxutils import quoteattr
+
+from biblib.metajson import Document
+from biblib.metajson import Identifier
+from biblib.metajson import Resource
 from biblib.services import creator_service
 from biblib.util import constants
+from biblib.util import xmletree
+from biblib.util import jsonbson
+
+CTX_VER = "Z39.88-2004"
 
 GENRE_BOOK_BOOK = "book"
 GENRE_BOOK_CONFERENCE = "conference"
@@ -22,8 +30,17 @@ GENRE_JOURNAL_ISSUE = "issue"
 GENRE_JOURNAL_JOURNAL = "journal"
 GENRE_JOURNAL_PROCEEDING = "proceeding"
 GENRE_JOURNAL_UNKNOWN = "unknown"
-
 GENRE_PATENT = "patent"
+
+# rft_val_fmt
+RFT_VAL_FMT_BOOK = "info:ofi/fmt:kev:mtx:book"
+# http://alcme.oclc.org/openurl/servlet/OAIHandler/extension?verb=GetMetadata&metadataPrefix=mtx&identifier=info:ofi/fmt:kev:mtx:book
+RFT_VAL_FMT_JOURNAL = "info:ofi/fmt:kev:mtx:journal"
+# http://alcme.oclc.org/openurl/servlet/OAIHandler/extension?verb=GetMetadata&metadataPrefix=mtx&identifier=info:ofi/fmt:kev:mtx:journal
+RFT_VAL_FMT_DISSERTATION = "info:ofi/fmt:kev:mtx:dissertation"
+# http://alcme.oclc.org/openurl/servlet/OAIHandler/extension?verb=GetMetadata&metadataPrefix=mtx&identifier=info:ofi/fmt:kev:mtx:dissertation
+RFT_VAL_FMT_PATENT = "info:ofi/fmt:kev:mtx:patent"
+# http://alcme.oclc.org/openurl/servlet/OAIHandler/extension?verb=GetMetadata&metadataPrefix=mtx&identifier=info:ofi/fmt:kev:mtx:patent
 
 metajson_type_to_openurl_book_genre = {
     constants.DOC_TYPE_BOOK: GENRE_BOOK_BOOK,
@@ -70,22 +87,9 @@ metajson_type_to_openurl_patent = {
 }
 
 
-def metajson_to_openurl(document):
+def metajson_to_openurl_params(document):
     # ctx_ver
-    openurl = {"ctx_ver": "Z39.88-2004"}
-
-    # rft_val_fmt
-    rft_val_fmt_book = "info:ofi/fmt:kev:mtx:book"
-    # http://alcme.oclc.org/openurl/servlet/OAIHandler/extension?verb=GetMetadata&metadataPrefix=mtx&identifier=info:ofi/fmt:kev:mtx:book
-
-    rft_val_fmt_journal = "info:ofi/fmt:kev:mtx:journal"
-    # http://alcme.oclc.org/openurl/servlet/OAIHandler/extension?verb=GetMetadata&metadataPrefix=mtx&identifier=info:ofi/fmt:kev:mtx:journal
-
-    rft_val_fmt_dissertation = "info:ofi/fmt:kev:mtx:dissertation"
-    # http://alcme.oclc.org/openurl/servlet/OAIHandler/extension?verb=GetMetadata&metadataPrefix=mtx&identifier=info:ofi/fmt:kev:mtx:dissertation
-
-    rft_val_fmt_patent = "info:ofi/fmt:kev:mtx:patent"
-    # http://alcme.oclc.org/openurl/servlet/OAIHandler/extension?verb=GetMetadata&metadataPrefix=mtx&identifier=info:ofi/fmt:kev:mtx:patent
+    openurl = {"ctx_ver": CTX_VER}
 
     if "rec_type" not in document:
         return
@@ -94,7 +98,7 @@ def metajson_to_openurl(document):
 
     if rec_type in metajson_type_to_openurl_book_genre:
         # book
-        openurl["rft_val_fmt"] = rft_val_fmt_book
+        openurl["rft_val_fmt"] = RFT_VAL_FMT_BOOK
 
         # genre
         openurl["rft.genre"] = metajson_type_to_openurl_book_genre[rec_type]
@@ -133,7 +137,7 @@ def metajson_to_openurl(document):
 
     elif rec_type in metajson_type_to_openurl_journal_genre:
         # journal
-        openurl["rft_val_fmt"] = rft_val_fmt_journal
+        openurl["rft_val_fmt"] = RFT_VAL_FMT_JOURNAL
 
         # genre
         openurl["rft.genre"] = metajson_type_to_openurl_journal_genre[rec_type]
@@ -188,7 +192,7 @@ def metajson_to_openurl(document):
 
     elif rec_type in metajson_type_to_openurl_dissertation_genre:
         # dissertation
-        openurl["rft_val_fmt"] = rft_val_fmt_dissertation
+        openurl["rft_val_fmt"] = RFT_VAL_FMT_DISSERTATION
 
         # title
         openurl["rft.atitle"] = document["title"]
@@ -220,7 +224,7 @@ def metajson_to_openurl(document):
 
     elif rec_type in metajson_type_to_openurl_patent:
         # patent
-        openurl["rft_val_fmt"] = rft_val_fmt_patent
+        openurl["rft_val_fmt"] = RFT_VAL_FMT_PATENT
 
         # title
         openurl["rft.atitle"] = document["title"]
@@ -267,7 +271,7 @@ def metajson_to_openurl(document):
     if date:
         openurl["rft.date"] = date
 
-    if openurl["rft_val_fmt"] in [rft_val_fmt_book, rft_val_fmt_dissertation, rft_val_fmt_journal]:
+    if openurl["rft_val_fmt"] in [RFT_VAL_FMT_BOOK, RFT_VAL_FMT_DISSERTATION, RFT_VAL_FMT_JOURNAL]:
         # common properties for book, dissertation and journal
 
         # isbn
@@ -275,7 +279,7 @@ def metajson_to_openurl(document):
         if isbn:
             openurl["rft.isbn"] = isbn
 
-    if openurl["rft_val_fmt"] in [rft_val_fmt_book, rft_val_fmt_journal]:
+    if openurl["rft_val_fmt"] in [RFT_VAL_FMT_BOOK, RFT_VAL_FMT_JOURNAL]:
         # common properties for book and journal
 
         # au, aucorp
@@ -302,7 +306,7 @@ def metajson_to_openurl(document):
         if epage:
             openurl["rft.epage"] = epage
 
-    if openurl["rft_val_fmt"] in [rft_val_fmt_book, rft_val_fmt_dissertation]:
+    if openurl["rft_val_fmt"] in [RFT_VAL_FMT_BOOK, RFT_VAL_FMT_DISSERTATION]:
         # common properties for book and dissertation
 
         # tpages
@@ -310,12 +314,23 @@ def metajson_to_openurl(document):
         if tpages:
             openurl["rft.tpages"] = tpages
 
+    return openurl
+
+
+def metajson_to_openurl(document):
+    openurl_dict = metajson_to_openurl_params(document)
+
     openurl_str = {}
-    for k, v in openurl.iteritems():
-        openurl_str[k] = unicode(v).encode('utf-8')
-    result = quoteattr(urllib.urlencode(openurl_str))
-    #logging.debug("{}".format(result))
-    return result
+    if openurl_dict:
+        for k, v in openurl_dict.iteritems():
+            openurl_str[k] = unicode(v).encode('utf-8')
+    if openurl_str:
+        result = quoteattr(urllib.urlencode(openurl_str))
+        #logging.debug("{}".format(result))
+        return result
+    else:
+        return None
+
 
 
 def metajson_to_openurlcoins(document):
@@ -324,3 +339,104 @@ def metajson_to_openurlcoins(document):
         return "<span class=\"Z3988\" title=" + result + "></span>"
     else:
         return ""
+
+
+def openurl_xmletree_to_metajson_list(openurl_response, source, only_first_record):
+    documents = []
+    if openurl_response is not None:
+        #logging.debug(type(openurl_response))
+        #logging.debug(openurl_response)
+        # results
+        openurl_results = openurl_response.find(xmletree.prefixtag("ssopenurl", "results"))
+        if openurl_results is not None:
+            # result
+            openurl_result_list = openurl_results.findall(xmletree.prefixtag("ssopenurl", "result"))
+            if openurl_result_list:
+                for openurl_result in openurl_result_list:
+                    document = Document()
+                    if source:
+                        document["source"] = source
+                    # citation
+                    openurl_citation = openurl_result.find(xmletree.prefixtag("ssopenurl", "citation"))
+                    if openurl_citation is not None:
+                        # issn
+                        openurl_issn = openurl_citation.find(xmletree.prefixtag("ssopenurl", "issn"))
+                        if openurl_issn is not None:
+                            identifier_issn = Identifier()
+                            identifier_issn["id_type"] = "issn"
+                            identifier_issn["value"] = openurl_issn.text
+                            document.add_item_to_key(identifier_issn, "identifiers")
+                        # eissn
+                        openurl_eissn = openurl_citation.find(xmletree.prefixtag("ssopenurl", "eissn"))
+                        if openurl_eissn is not None:
+                            identifier_eissn = Identifier()
+                            identifier_eissn["id_type"] = "eissn"
+                            identifier_eissn["value"] = openurl_eissn.text
+                            document.add_item_to_key(identifier_eissn, "identifiers")
+                    # linkGroups
+                    openurl_linkgroups = openurl_result.find(xmletree.prefixtag("ssopenurl", "linkGroups"))
+                    if openurl_linkgroups is not None:
+                        # linkGroup
+                        openurl_linkgroup_list = openurl_linkgroups.findall(xmletree.prefixtag("ssopenurl", "linkGroup"))
+                        if openurl_linkgroup_list is not None:
+                            for openurl_linkgroup in openurl_linkgroup_list:
+                                database_name = None
+                                provider_name = None
+                                period_begin = None
+                                period_end = None
+                                url = None
+                                # holdingData
+                                openurl_holdingdata = openurl_linkgroup.find(xmletree.prefixtag("ssopenurl", "holdingData"))
+                                if openurl_holdingdata is not None:
+                                    # providerName
+                                    openurl_providername = openurl_holdingdata.find(xmletree.prefixtag("ssopenurl", "providerName"))
+                                    if openurl_providername is not None:
+                                        provider_name = openurl_providername.text
+                                    # databaseName
+                                    openurl_databasename = openurl_holdingdata.find(xmletree.prefixtag("ssopenurl", "databaseName"))
+                                    if openurl_databasename is not None:
+                                        database_name = openurl_databasename.text
+                                    # normalizedData
+                                    openurl_normalizeddata = openurl_holdingdata.find(xmletree.prefixtag("ssopenurl", "normalizedData"))
+                                    if openurl_normalizeddata is not None:
+                                        # startDate
+                                        openurl_startdate = openurl_normalizeddata.find(xmletree.prefixtag("ssopenurl", "startDate"))
+                                        if openurl_startdate is not None:
+                                            period_begin = openurl_startdate.text
+                                        # endDate
+                                        openurl_enddate = openurl_normalizeddata.find(xmletree.prefixtag("ssopenurl", "endDate"))
+                                        if openurl_enddate is not None:
+                                            period_end = openurl_enddate.text
+                                # url
+                                openurl_url_list = openurl_linkgroup.findall(xmletree.prefixtag("ssopenurl", "url"))
+                                if openurl_url_list is not None:
+                                    for openurl_url in openurl_url_list:
+                                        if openurl_url.get("type") == "journal":
+                                            url = openurl_url.text
+                                        elif openurl_url.get("type") == "source":
+                                            url = openurl_url.text
+                                if url:
+                                    resource = Resource()
+                                    resource["rec_type"] = "ResourceRemote"
+                                    resource["rec_state"] = "published"
+                                    resource["relation_type"] = "eResource"
+                                    resource["relation_version"] = "publishedVersion"
+                                    resource["access_rights"] = "closedAccess"
+                                    resource["format_mimetype"] = "text/html"
+                                    resource["url"] = url
+                                    if database_name:
+                                        resource["database_name"] = database_name
+                                    if provider_name:
+                                        resource["provider_name"] = provider_name
+                                    if period_begin:
+                                        resource["period_begin"] = period_begin
+                                    if period_end:
+                                        resource["period_end"] = period_end
+                                    document.add_item_to_key(resource, "resources")
+                    documents.append(document)
+                    if only_first_record:
+                        break
+    logging.debug(jsonbson.dumps_json(documents))
+    return documents
+
+
