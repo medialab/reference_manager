@@ -17,6 +17,7 @@ from biblib.crosswalks import repec_crosswalk
 from biblib.crosswalks import researcherml_crosswalk
 from biblib.crosswalks import ris_crosswalk
 from biblib.crosswalks import summonjson_crosswalk
+from biblib.crosswalks import tei_crosswalk
 from biblib.crosswalks import unimarc_crosswalk
 from biblib.crosswalks import unixref_crosswalk
 from biblib.services import io_service
@@ -197,9 +198,17 @@ def convert_xmletree(xmletree_root, input_format, source, only_first_record):
                 # mods
                 return mods_crosswalk.mods_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
 
+            elif input_format == constants.FORMAT_OPENURL:
+                # openurl
+                return openurl_crosswalk.openurl_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
+
             elif input_format == constants.FORMAT_RESEARCHERML:
                 # researcherml
                 return researcherml_crosswalk.researcherml_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
+
+            elif input_format == constants.FORMAT_TEI:
+                # tei
+                return tei_crosswalk.tei_xmletree_to_metajson_list(xmletree_root, source, only_first_record)
 
             elif input_format == constants.FORMAT_UNIXREF:
                 # unixref
