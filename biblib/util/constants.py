@@ -35,6 +35,7 @@ FORMAT_REPEC = 'repec'
 FORMAT_RESEARCHERML = 'researcherml'
 FORMAT_RIS = 'ris'
 FORMAT_SUMMONJSON = 'summonjson'
+FORMAT_TEI = 'tei'
 FORMAT_UNIMARC = 'unimarc'
 FORMAT_UNIXREF = 'unixref'
 
@@ -80,11 +81,13 @@ input_format_to_type = {
     FORMAT_MIX: FILE_TYPE_XMLETREE,
     FORMAT_MODS: FILE_TYPE_XMLETREE,
     FORMAT_OAIDC: FILE_TYPE_XMLETREE,
+    FORMAT_OPENURL: FILE_TYPE_XMLETREE,
     FORMAT_PREMIS: FILE_TYPE_XMLETREE,
     FORMAT_REPEC: FILE_TYPE_TXT,
     FORMAT_RESEARCHERML: FILE_TYPE_XMLETREE,
     FORMAT_RIS: FILE_TYPE_TXT,
     FORMAT_SUMMONJSON: FILE_TYPE_JSON,
+    FORMAT_TEI: FILE_TYPE_XMLETREE,
     FORMAT_UNIMARC: FILE_TYPE_MARC,
     FORMAT_UNIXREF: FILE_TYPE_XMLETREE
 }
@@ -101,8 +104,11 @@ xmlns_map = {
     'dii': "urn:mpeg:mpeg21:2002:01-DII-NS",
     'dip': "urn:mpeg:mpeg21:2005:01-DIP-NS",
     'ddi': "http://www.icpsr.umich.edu/DDI",
+    'foaf': "http://xmlns.com/foaf/0.1/",
     'gd': "http://schemas.google.com/g/2005",
     'gdocs': "http://schemas.google.com/docs/2007",
+    'hal': "http://hal.archives-ouvertes.fr",
+    'mml': "http://www.w3.org/1998/Math/MathML",
     'media': "http://search.yahoo.com/mrss/",
     'mets': "http://www.loc.gov/METS/",
     'mix': "http://www.loc.gov/mix/v20",
@@ -111,12 +117,22 @@ xmlns_map = {
     'oai_rem_rdf': "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     'opensearch': "http://a9.com/-/spec/opensearch/1.1/",
     'opensearchrss': "http://a9.com/-/spec/opensearchrss/1.0/",
+    'ore': "http://www.openarchives.org/ore/terms/",
+    'org': "http://www.w3c.org/ns/org#",
+    'owl': "http://www.w3.org/2002/07/owl#",
     'premis': "info:lc/xmlns/premis-v2",
     'qualifieddc': "",
     'rml': "http://bibliotheque.sciences-po.fr/standards/researcherml/v1",
     'rdf': "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     'researcherml': "http://bibliotheque.sciences-po.fr/standards/researcherml/v1",
     'simpledc': "",
+    'sioc': "http://rdfs.org/sioc/ns#",
+    'ssdiag': "http://xml.serialssolutions.com/ns/diagnostics/v1.0",
+    'ssopenurl': "http://xml.serialssolutions.com/ns/openurl/v1.0",
+    'svg': "http://www.w3.org/2000/svg",
+    'tech': "http://ccsd.cnrs.fr",
+    'tei': "http://www.tei-c.org/ns/1.0",
+    'xi': "http://www.w3.org/2001/XInclude",
     'xml': "http://www.w3.org/XML/1998/namespace",
     'yt': "http://gdata.youtube.com/schemas/2007"
 }
@@ -130,6 +146,7 @@ xmlns_to_input_format = {
     'http://www.loc.gov/METS/': FORMAT_METS,
     'http://www.loc.gov/mix/v20': FORMAT_MIX,
     'http://www.loc.gov/mods/v3': FORMAT_MODS,
+    'http://www.tei-c.org/ns/1.0': FORMAT_TEI,
     'info:lc/xmlns/premis-v2': FORMAT_PREMIS,
     'http://bibliotheque.sciences-po.fr/standards/researcherml/v1': FORMAT_RESEARCHERML
 }
@@ -158,6 +175,7 @@ xmltag_to_input_format = {
     'rights': 'dc',
     'source': 'dc',
     'subject': 'dc',
+    'TEI': FORMAT_TEI,
     'title': 'dc',
     'type': 'dc'
 }
@@ -211,8 +229,11 @@ DOC_TYPE_ENCYCLOPEDIA = "Encyclopedia"
 DOC_TYPE_ENCYCLOPEDIAARTICLE = "EncyclopediaArticle"
 DOC_TYPE_ENGRAVE = "Engrave"
 DOC_TYPE_EQUATION = "Equation"
+DOC_TYPE_ERESOURCE = "EResource"
 DOC_TYPE_EXCERPT = "Excerpt"
 DOC_TYPE_FILM = "Film"
+DOC_TYPE_FONT = "Font"
+DOC_TYPE_GAME = "Game"
 DOC_TYPE_GOVERNMENTPUBLICATION = "GovernmentPublication"
 DOC_TYPE_GRANT = "Grant"
 DOC_TYPE_HEARING = "Hearing"
@@ -224,6 +245,7 @@ DOC_TYPE_JOURNALARTICLE = "JournalArticle"
 DOC_TYPE_LEGALCASE = "LegalCase"
 DOC_TYPE_LEGALDECISION = "LegalDecision"  # Judgment
 DOC_TYPE_LETTER = "Letter"
+DOC_TYPE_LOOSELEAFPUBLICATION = "LooseleafPublication"
 DOC_TYPE_MAGAZINE = "Magazine"
 DOC_TYPE_MAGAZINEARTICLE = "MagazineArticle"
 DOC_TYPE_MANUEL = "Manuel"
@@ -231,6 +253,7 @@ DOC_TYPE_MANUSCRIPT = "Manuscript"
 DOC_TYPE_MAP = "Map"
 DOC_TYPE_MASTERTHESIS = "MasterThesis"
 DOC_TYPE_MIXEDMATERIAL = "MixedMaterial"
+DOC_TYPE_MULTIMEDIA = "Multimedia"
 DOC_TYPE_MULTIVOLUMEBOOK = "MultiVolumeBook"
 DOC_TYPE_MUSICALSCORE = "MusicalScore"
 DOC_TYPE_MUSICRECORDING = "MusicRecording"
@@ -247,6 +270,7 @@ DOC_TYPE_PHOTOGRAPH = "Photograph"
 DOC_TYPE_PHYSICALOBJECT = "PhysicalObject"
 DOC_TYPE_POSTER = "Poster"
 DOC_TYPE_PREPRINT = "Preprint"
+DOC_TYPE_PRESSCLIPPING = "PressClipping"
 DOC_TYPE_PROFESSORALTHESIS = "ProfessoralThesis"
 DOC_TYPE_REPORT = "Report"
 DOC_TYPE_REPORTPART = "ReportPart"
