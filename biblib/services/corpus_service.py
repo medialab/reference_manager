@@ -158,7 +158,9 @@ def validate_corpus(corpus, error_file_path):
             for document in document_list:
 
                 rec_id = document["rec_id"]
-                rec_source = document["rec_source"]
+                rec_source = "empy"
+                if "rec_source" in document:
+                    rec_source = document["rec_source"]
 
                 errors = metajson_validation.validate_metajson_document(document)
                 for error in errors:
