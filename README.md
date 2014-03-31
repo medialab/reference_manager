@@ -30,7 +30,7 @@ Start MongoDB:
 
 #### Install pip
 
-    easy_install pip
+    sudo easy_install pip
 
 #### Install python VirtualEnv
 
