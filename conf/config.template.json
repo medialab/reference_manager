@@ -51,6 +51,16 @@
         "formats": ["html"],
         "styles": ["mla"]
     },
+    "hal": {
+        "ref_endpoint": "http://api-preprod.archives-ouvertes.fr/ref/",
+        "sword_endpoint": "http://api-preprod.archives-ouvertes.fr/sword/servicedocument",
+        "sword_username": "test_ws",
+        "sword_password": "test",
+        "sword_onbehalhof": "test"
+    },
+    "openurl": {
+        "endpoint": "http://www.example.org/?"
+    },
     "hyphe": {
         "corpus_code": "corpus",
         "corpus_name": "corpus name",
