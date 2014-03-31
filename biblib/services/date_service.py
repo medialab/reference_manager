@@ -84,7 +84,7 @@ def parse_timestamp(timestamp):
 
 
 def format_date(date_iso):
-    logging.debug("format_date input: {}".format(date_iso))
+    #logging.debug("format_date input: {}".format(date_iso))
     result = ""
     if date_iso:
         if date_iso == "?":
@@ -114,13 +114,13 @@ def format_date(date_iso):
                 # Do nothing
                 result = date_iso
 
-    logging.debug("format_date output: {}".format(result))
+    #logging.debug("format_date output: {}".format(result))
     return result
 
 
 def parse_date(datestr):
     """ Parse date and return datetime """
-    logging.debug("parse_date input: {}".format(datestr))
+    #logging.debug("parse_date input: {}".format(datestr))
 
     # Empty
     if not datestr:
@@ -159,7 +159,7 @@ def parse_date(datestr):
     except:
         result = parser.parse("1970-01-01")
 
-    logging.debug("parse_date output isoformat: {}".format(result))
+    #logging.debug("parse_date output isoformat: {}".format(result))
     return result
 
 

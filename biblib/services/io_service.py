@@ -171,7 +171,7 @@ def write(col_id, col_title, items, output_file_path, output_format, all_in_one_
     # items have to be a list of tuple ; rec_id, metadata
     # if not all_in_one_file : output_file_path = output_file_path + rec_id
     if all_in_one_file:
-        logging.debug("type(items): {}".format(type(items)))
+        #logging.debug("type(items): {}".format(type(items)))
         if isinstance(items, Collection):
             write_item(items, output_file_path, output_format)
         elif isinstance(items, ET.Element):
