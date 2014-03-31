@@ -93,6 +93,10 @@ def pretty_print_document(document):
                 logging.info("# is_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_type: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_id: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].title: {}".format(is_part_of_is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of_is_part_of.get_rec_id(), is_part_of_is_part_of_is_part_of.get_title()))
 
 
+def print_document(document):
+    logging.info("document : {}".format(jsonbson.dumps_bson(document)))
+
+
 def enhance_metajson_list(documents):
     if documents:
         for document in documents:
@@ -142,7 +146,7 @@ def enhance_metajson(document):
 
 
 def manage_title_non_sort(document):
-    logging.debug("manage_title_non_sort")
+    #logging.debug("manage_title_non_sort")
     if document and "title_non_sort" not in document and "title" in document:
         # debug
         #logging.debug(jsonbson.dumps_bson(document))
@@ -305,7 +309,7 @@ def create_resource_remote(url, date_last_accessed=None, relation_type=None, rel
     """
     url: URL of the resource
     date_last_accessed: Date last accessed on the web
-    relation_type: cv, picture, logo, backCover, frontCover, dataset, humanStartPage, publication
+    relation_type: cv, picture, logo, backCover, frontCover, dataset, humanStartPage, publication, eResource
     relation_version: authorVersion, publishedVersion
     access_rights: closedAccess, embargoedAccess, openAccess, restrictedAccess
     rec_state: private, pending, rejected, published, deleted
