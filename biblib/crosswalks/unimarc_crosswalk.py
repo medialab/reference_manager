@@ -100,13 +100,13 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     document["rec_id"] = rec_id
 
     # Debug
-    output_dir = os.path.join("data", "result", "pdcn")
-    output_file_path = os.path.join(output_dir, rec_id + ".marc.txt")
-    output_filexml_path = os.path.join(output_dir, rec_id + ".marcxml.xml")
-    with open(output_file_path, "w") as output_file:
-        output_file.write(str(record))
-    with open(output_filexml_path, "w") as output_filexml:
-        output_filexml.write(record_to_xml(record))
+    # output_dir = os.path.join("data", "num", "output")
+    # output_file_path = os.path.join(output_dir, rec_id + ".marc.txt")
+    # output_filexml_path = os.path.join(output_dir, rec_id + ".marcxml.xml")
+    # with open(output_file_path, "w") as output_file:
+    #     output_file.write(str(record))
+    # with open(output_filexml_path, "w") as output_filexml:
+    #     output_filexml.write(record_to_xml(record))
 
     # leader and 1XX -> rec_type
     rec_type = extract_unimarc_type(record)
