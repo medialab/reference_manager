@@ -25,8 +25,9 @@ console.setup_console()
 default_corpus = config_service.config["default_corpus"]
 
 # Supported input and output formats
-INPUT_FORMATS = [constants.FORMAT_BIBTEX, constants.FORMAT_CSV_ARCHIPOLIS, constants.FORMAT_DIDL, constants.FORMAT_ENDNOTEXML, constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_RESEARCHERML, constants.FORMAT_RIS, constants.FORMAT_SUMMONJSON, constants.FORMAT_UNIMARC, constants.FORMAT_UNIXREF]
-OUTPUT_FORMATS = [constants.FORMAT_HTML, constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_REPEC]
+INPUT_FORMATS = [constants.FORMAT_BIBTEX, constants.FORMAT_CSV_METAJSON, constants.FORMAT_DIDL, constants.FORMAT_ENDNOTEXML, constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_RESEARCHERML, constants.FORMAT_RIS, constants.FORMAT_SUMMONJSON, constants.FORMAT_UNIMARC, constants.FORMAT_UNIXREF]
+OUTPUT_FORMATS = [constants.FORMAT_METAJSON, constants.FORMAT_MODS, constants.FORMAT_REPEC]
+OUTPUT_STYLES = [constants.STYLE_MLA]
 
 
 def clean_corpus(args):
@@ -69,7 +70,9 @@ def import_metadatas(args):
     logging.info("input_file_path: {}".format(input_file_path))
     source = args.source
     logging.info("source: {}".format(source))
-    corpus_service.import_metadata_file(corpus, input_file_path, input_format, source, True, None)
+    rec_id_prefix = args.rec_id_prefix
+    logging.info("rec_id_prefix: {}".format(rec_id_prefix))
+    corpus_service.import_metadata_file(corpus, input_file_path, input_format, source, rec_id_prefix, True, None)
 
 
 def export_metadatas(args):
@@ -85,6 +88,20 @@ def export_metadatas(args):
     corpus_service.export_corpus(corpus, output_file_path, output_format, all_in_one_file)
 
 
+def format_metadatas(args):
+    corpus = args.corpus
+    if not corpus:
+        corpus = default_corpus
+    logging.info("corpus: {}".format(corpus))
+    output_style = args.output_style
+    logging.info("output_style: {}".format(output_style))
+    output_file_path = args.output_file_path
+    logging.info("output_file_path: {}".format(output_file_path))
+    output_title = args.output_title
+    logging.info("output_title: {}".format(output_title))
+    corpus_service.format_corpus(corpus, output_title, output_file_path, output_style)
+
+
 def convert_metadatas(args):
     input_format = args.input_format
     logging.info("input_format: {}".format(input_format))
@@ -97,10 +114,10 @@ def convert_metadatas(args):
     # error_file
     all_in_one_file = True
     # convert
-    results = crosswalks_service.parse_and_convert_file(input_file_path, input_format, output_format, None, False, all_in_one_file)
+    results = crosswalks_service.parse_and_convert_file(input_file_path, input_format, output_format, None, "", False, all_in_one_file)
     # export
     # todo : all_in_one_file
-    io_service.write(None, None, results, output_file_path, output_format, all_in_one_file)
+    io_service.write_items(None, None, results, output_file_path, output_format, all_in_one_file)
 
 
 # Doc :
@@ -163,6 +180,11 @@ import_parser.add_argument('-s',
                            dest='source',
                            help='Source name')
 
+import_parser.add_argument('-p',
+                           '--rec_id_prefix',
+                           dest='rec_id_prefix',
+                           help='Record Identifier Prefix')
+
 # export
 export_parser = subparsers.add_parser('export',
                                       help='Export as a metadata file')
@@ -177,6 +199,29 @@ export_parser.add_argument('-f',
                            choices=OUTPUT_FORMATS,
                            help='output file format')
 export_parser.add_argument('-o',
+                           '--output_file_path',
+                           dest='output_file_path',
+                           #type=argparse.FileType('r'),
+                           help='output file path')
+
+# format
+format_parser = subparsers.add_parser('format',
+                                      help='Format in an HTML file')
+format_parser.set_defaults(func=format_metadatas)
+format_parser.add_argument('-c',
+                           '--corpus',
+                           dest='corpus',
+                           help='corpus identifier like : aime, forccast...')
+format_parser.add_argument('-t',
+                           '--output_title',
+                           dest='output_title',
+                           help='output title')
+format_parser.add_argument('-s',
+                           '--output_style',
+                           dest='output_style',
+                           choices=OUTPUT_STYLES,
+                           help='output style')
+format_parser.add_argument('-o',
                            '--output_file_path',
                            dest='output_file_path',
                            #type=argparse.FileType('r'),
