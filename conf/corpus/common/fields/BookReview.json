@@ -183,7 +183,7 @@
             },
             "multiple": true,
             "only_one": true,
-            "property": "review_ofs",
+            "property": "is_review_ofs",
             "required": true,
             "type_fields": [
                 "Book"
