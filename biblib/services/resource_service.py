@@ -15,14 +15,8 @@ import cookielib
 
 #from biblib.services import config_service
 from biblib.services import creator_service
-from biblib.util import console
+from biblib.util import constants
 #from biblib.util import jsonbson
-
-console.setup_console()
-
-file_type_to_file_extension = {
-    "pdf": "pdf"
-}
 
 
 def convert_rtf_to_txt(input_path, output_path, input_filename, output_filename):
@@ -90,8 +84,8 @@ def rename_file(file_path, matajson):
 
 
 def get_file_extension_form_file_type(file_type):
-    if file_type and file_type in file_type_to_file_extension:
-        return file_type_to_file_extension[file_type]
+    if file_type and file_type in constants.file_type_to_file_extension:
+        return constants.file_type_to_file_extension[file_type]
     return None
 
 
