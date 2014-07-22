@@ -111,28 +111,110 @@ class Document(Common):
             self["rec_class"] = "Document"
         if "creators" in self:
             self["creators"] = [Creator(x) for x in self["creators"]]
+        if "absorbs" in self:
+            self["absorbs"] = [Document(x) for x in self["absorbs"]]
+        if "aggregates" in self:
+            self["aggregates"] = [Document(x) for x in self["aggregates"]]
+        if "becomes" in self:
+            self["becomes"] = [Document(x) for x in self["becomes"]]
+        if "conforms_tos" in self:
+            self["conforms_tos"] = [Document(x) for x in self["conforms_tos"]]
+        if "continues" in self:
+            self["continues"] = [Document(x) for x in self["continues"]]
+        if "describes" in self:
+            self["describes"] = [Document(x) for x in self["describes"]]
+        if "has_formats" in self:
+            self["has_formats"] = [Document(x) for x in self["has_formats"]]
+        if "has_offprints" in self:
+            self["has_offprints"] = [Document(x) for x in self["has_offprints"]]
         if "has_parts" in self:
             self["has_parts"] = [Document(x) for x in self["has_parts"]]
+        if "has_relation_withs" in self:
+            self["has_relation_withs"] = [Document(x) for x in self["has_relation_withs"]]
+        if "has_reviews" in self:
+            self["has_reviews"] = [Document(x) for x in self["has_reviews"]]
+        if "has_supplements" in self:
+            self["has_supplements"] = [Document(x) for x in self["has_supplements"]]
+        if "has_translations" in self:
+            self["has_translations"] = [Document(x) for x in self["has_translations"]]
+        if "has_versions" in self:
+            self["has_versions"] = [Document(x) for x in self["has_versions"]]
+        if "is_absorbed_intos" in self:
+            self["is_absorbed_intos"] = [Document(x) for x in self["is_absorbed_intos"]]
+        if "is_aggregated_bys" in self:
+            self["is_aggregated_bys"] = [Document(x) for x in self["is_aggregated_bys"]]
+        if "is_bound_afters" in self:
+            self["is_bound_afters"] = [Document(x) for x in self["is_bound_afters"]]
+        if "is_bound_withs" in self:
+            self["is_bound_withs"] = [Document(x) for x in self["is_bound_withs"]]
+        if "is_described_bys" in self:
+            self["is_described_bys"] = [Document(x) for x in self["is_described_bys"]]
+        if "is_format_ofs" in self:
+            self["is_format_ofs"] = [Document(x) for x in self["is_format_ofs"]]
+        if "is_merged_froms" in self:
+            self["is_merged_froms"] = [Document(x) for x in self["is_merged_froms"]]
+        if "is_offprint_ofs" in self:
+            self["is_offprint_ofs"] = [Document(x) for x in self["is_offprint_ofs"]]
         if "is_part_ofs" in self:
             self["is_part_ofs"] = [Document(x) for x in self["is_part_ofs"]]
+        if "is_partially_absorbed_intos" in self:
+            self["is_partially_absorbed_intos"] = [Document(x) for x in self["is_partially_absorbed_intos"]]
+        if "is_partially_replaced_bys" in self:
+            self["is_partially_replaced_bys"] = [Document(x) for x in self["is_partially_replaced_bys"]]
+        if "is_preceded_bys" in self:
+            self["is_preceded_bys"] = [Document(x) for x in self["is_preceded_bys"]]
+        if "is_published_withs" in self:
+            self["is_published_withs"] = [Document(x) for x in self["is_published_withs"]]
         if "is_referenced_bys" in self:
             self["is_referenced_bys"] = [Document(x) for x in self["is_referenced_bys"]]
+        if "is_replaced_bys" in self:
+            self["is_replaced_bys"] = [Document(x) for x in self["is_replaced_bys"]]
+        if "is_review_ofs" in self:
+            self["is_review_ofs"] = [Document(x) for x in self["is_review_ofs"]]
+        if "is_split_intos" in self:
+            self["is_split_intos"] = [Document(x) for x in self["is_split_intos"]]
+        if "is_splitted_froms" in self:
+            self["is_splitted_froms"] = [Document(x) for x in self["is_splitted_froms"]]
+        if "is_succeeded_bys" in self:
+            self["is_succeeded_bys"] = [Document(x) for x in self["is_succeeded_bys"]]
+        if "is_supplement_ofs" in self:
+            self["is_supplement_ofs"] = [Document(x) for x in self["is_supplement_ofs"]]
+        if "is_translation_ofs" in self:
+            self["is_translation_ofs"] = [Document(x) for x in self["is_translation_ofs"]]
+        if "is_updated_bys" in self:
+            self["is_updated_bys"] = [Document(x) for x in self["is_updated_bys"]]
+        if "merges_withs" in self:
+            self["merges_withs"] = [Document(x) for x in self["merges_withs"]]
         if "originals" in self:
             self["originals"] = [Document(x) for x in self["originals"]]
+        if "partially_absorbs" in self:
+            self["partially_absorbs"] = [Document(x) for x in self["partially_absorbs"]]
+        if "partially_becomes" in self:
+            self["partially_becomes"] = [Document(x) for x in self["partially_becomes"]]
+        if "partially_continues" in self:
+            self["partially_continues"] = [Document(x) for x in self["partially_continues"]]
+        if "partially_replaces" in self:
+            self["partially_replaces"] = [Document(x) for x in self["partially_replaces"]]
         if "projects" in self:
             self["projects"] = [Project(x) for x in self["projects"]]
+        if "re-becomes" in self:
+            self["re-becomes"] = [Document(x) for x in self["re-becomes"]]
         if "references" in self:
             self["references"] = [Document(x) for x in self["references"]]
+        if "replaces" in self:
+            self["replaces"] = [Document(x) for x in self["replaces"]]
         if "requires" in self:
             self["requires"] = [Document(x) for x in self["requires"]]
         if "resources" in self:
             self["resources"] = [Resource(x) for x in self["resources"]]
-        if "review_ofs" in self:
-            self["review_ofs"] = [Document(x) for x in self["review_ofs"]]
         if "rightss" in self:
             self["rightss"] = [Rights(x) for x in self["rightss"]]
         if "seriess" in self:
             self["seriess"] = [Document(x) for x in self["seriess"]]
+        if "sub_series" in self:
+            self["sub_series"] = [Document(x) for x in self["sub_series"]]
+        if "updates" in self:
+            self["updates"] = [Document(x) for x in self["updates"]]
 
     def get_rec_id(self):
         if "rec_id" in self:
