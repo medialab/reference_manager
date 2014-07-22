@@ -36,14 +36,14 @@ tika_endpoint_text = tika_endpoint + "tika"
 def extract_meta(file_path):
     response = request_tika(tika_endpoint_meta, file_path)
     meta = response.decode('utf-8')
-    logging.debug("tika meta: {}".format(meta))
+    #logging.debug("tika meta: {}".format(meta))
     return meta
 
 
 def extract_text(file_path):
     response = request_tika(tika_endpoint_text, file_path)
     text = response.decode('utf-8')
-    logging.debug("tika text: {}".format(text))
+    #logging.debug("tika text: {}".format(text))
     return text
 
 
@@ -53,7 +53,7 @@ def extract_all(file_path):
     myzipfile = zipfile.ZipFile(zipdata)
     metafile = myzipfile.open('__METADATA__')
     meta = metafile.read().decode('utf-8')
-    logging.debug("tika meta: {}".format(meta))
+    #logging.debug("tika meta: {}".format(meta))
     textfile = myzipfile.open('__TEXT__')
     text = textfile.read().decode('utf-8')
     logging.debug("tika text: {}".format(text))
@@ -77,9 +77,9 @@ def test():
     file_path = os.path.join(os.path.abspath(os.getcwd()), "data", "resources", "test2.pdf")
     meta = extract_meta(file_path)
     metajson = tika_crosswalk.tika_to_metajson(meta, None)
-    logging.info(metajson)
+    #logging.info(metajson)
     #extract_text(file_path)
     #extract_all(file_path)
 
 
-test()
+#test()

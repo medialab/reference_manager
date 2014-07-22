@@ -58,7 +58,7 @@ def request_by_document(document):
 def request_by_openurl_params(openurl_params):
     response = requests.get(openurl_endpoint, params=openurl_params)
     response.encoding = "utf-8"
-    logging.debug("url: {}".format(response.url))
+    #logging.debug("url: {}".format(response.url))
     #logging.debug(response.content)
     return response_to_xmletree(response)
 
@@ -67,7 +67,7 @@ def request_by_openurl_string(openurl_string):
     url = openurl_endpoint + openurl_string
     response = requests.get(url)
     response.encoding = "utf-8"
-    logging.debug("url: {}".format(response.url))
+    #logging.debug("url: {}".format(response.url))
     #logging.debug(response.content)
     return response_to_xmletree(response)
 

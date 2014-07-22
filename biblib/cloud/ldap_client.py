@@ -18,7 +18,7 @@ def ldap_search(ldap_base_dn, ldap_filter, ldap_attrs):
     results = []
     for dn, entry in ldap_results:
         results.append(entry)
-    logging.debug(results)
+    #logging.debug(results)
     return results
 
 

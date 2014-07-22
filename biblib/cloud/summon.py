@@ -46,11 +46,11 @@ def summon_headers(query_string):
 def summon_query(query_string):
     url = "http://%s%s?%s" % (config["host"], config["path"], query_string)
     headers = summon_headers(query_string)
-    logging.debug("headers: {}".format(headers))
+    #logging.debug("headers: {}".format(headers))
 
     http = httplib2.Http()
     response, content = http.request(url, 'GET', headers=headers)
-    logging.debug("content: {}".format(content))
+    #logging.debug("content: {}".format(content))
     result = jsonbson.load_json_str(content)
-    logging.debug("result: {}".format(jsonbson.dumps_json(result, True)))
+    #logging.debug("result: {}".format(jsonbson.dumps_json(result, True)))
     return result

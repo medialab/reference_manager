@@ -65,7 +65,7 @@ def query_and_retrieve_metadata(q, only_first_record):
 
     cited_by_list = extract_cited_by_list(html)
     h = calcul_h_index(cited_by_list)
-    logging.debug(h)
+    #logging.debug(h)
 
     metadata_links = extract_metadata_links(html, meta_format)
 
@@ -78,7 +78,7 @@ def query_and_retrieve_metadata(q, only_first_record):
 def query(query, meta_format):
     """Query Google Scholar and just return the html response"""
 
-    logging.debug("Google Sholar Query: {0} ; metadata format: {1}".format(query, meta_format))
+    #logging.debug("Google Sholar Query: {0} ; metadata format: {1}".format(query, meta_format))
 
     query = '/scholar?q='+urllib2.quote(query)
     url = config["endpoint"] + query

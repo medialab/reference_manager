@@ -25,7 +25,7 @@ FULLTEXT = "full-text"
 
 
 def authenticate(username, password):
-    logging.debug(AUTHENTICATE)
+    #logging.debug(AUTHENTICATE)
     auth = {"username": username, "password": password}
     auth_encoded = urllib.urlencode(auth)
     url = config["endpoint"] + AUTHENTICATE
@@ -39,7 +39,7 @@ def authenticate(username, password):
 
 
 def get_all_action(anta_auth):
-    logging.debug(GETALLACTION)
+    #logging.debug(GETALLACTION)
     auth = {"token": anta_auth["token"]}
     auth_encoded = urllib.urlencode(auth)
     url = config["endpoint_frog"] + GETALLACTION + USER + anta_auth["user_id"]
@@ -51,7 +51,7 @@ def get_all_action(anta_auth):
 
 
 def get_documents(anta_auth):
-    logging.debug(GETDOCUMENTS)
+    #logging.debug(GETDOCUMENTS)
     auth = {"token": anta_auth["token"]}
     auth_encoded = urllib.urlencode(auth)
     url = config["endpoint_frog"]+GETDOCUMENTS + USER + anta_auth["user_id"]
@@ -64,7 +64,7 @@ def get_documents(anta_auth):
 
 
 def item_upload(anta_auth, item):
-    logging.debug(ITEMUPLOAD)
+    #logging.debug(ITEMUPLOAD)
     url = config["endpoint"] + ITEMUPLOAD + USER + anta_auth["user_id"]
     logging.debug(url)
     logging.debug(item)
@@ -84,7 +84,7 @@ def item_upload(anta_auth, item):
 
 
 def full_text(anta_auth, doc_id):
-    logging.debug(FULLTEXT)
+    #logging.debug(FULLTEXT)
     auth = {"token": anta_auth["token"], "document": doc_id}
     auth_encoded = urllib.urlencode(auth)
     url = config["endpoint_frog"] + FULLTEXT + USER + anta_auth["user_id"]

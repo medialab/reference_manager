@@ -15,11 +15,11 @@ AUTHENTICATE = "authenticate/"
 
 
 def authenticate(username, password):
-    logging.debug(AUTHENTICATE)
+    #logging.debug(AUTHENTICATE)
     data = {"username": username, "password": password}
     data_encoded = urllib.urlencode(data)
     url = config["endpoint"] + AUTHENTICATE
-    logging.debug(url)
+    #logging.debug(url)
     request = urllib2.Request(url, data_encoded)
     response = urllib2.urlopen(request)
     result = jsonbson.load_json_str(response.read())
@@ -29,10 +29,10 @@ def authenticate(username, password):
 
 
 def document(item):
-    logging.debug(DOCUMENTS)
+    #logging.debug(DOCUMENTS)
     url = config["endpoint"] + DOCUMENTS
-    logging.debug(url)
-    logging.debug(item)
+    #logging.debug(url)
+    #logging.debug(item)
     if "tags" in item:
         tags = jsonbson.dumps_json(item["tags"])
         del item["tags"]
@@ -43,7 +43,7 @@ def document(item):
     request = urllib2.Request(url, params_encoded)
     response = urllib2.urlopen(request)
     result = response.read()
-    logging.debug(result)
+    #logging.debug(result)
     return jsonbson.load_json_str(result)
     try:
         pass
