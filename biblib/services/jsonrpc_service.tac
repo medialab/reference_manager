@@ -133,7 +133,7 @@ class References_repository(jsonrpc.JSONRPC):
         except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
-    def jsonrpc_metadata_by_rec_ids(self, corpus, rec_ids, output_format="metajson"):
+    def jsonrpc_metadata_by_rec_ids(self, corpus, rec_ids, output_format=constants.FORMAT_METAJSON):
         """ get metadata of a list of references
             params:
                 - corpus: the corpus 
@@ -148,15 +148,15 @@ class References_repository(jsonrpc.JSONRPC):
             metajson_documents = repository_service.get_documents_by_rec_ids(corpus, rec_ids)
             results = []
             for metajson_document in metajson_documents:
-                if output_format == "metajson":
+                if output_format == constants.FORMAT_METAJSON:
                     results.append(jsonbson.bson_to_json(metajson_document))
                 else:
-                    results.append(crosswalks_service.convert_native(metajson_document, "metajson", output_format, False, False))
+                    results.append(crosswalks_service.convert_native(metajson_document, constants.FORMAT_METAJSON, output_format, corpus, corpus, False, False))
             return results
         except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
 
-    def jsonrpc_metadata_by_mongo_ids(self, corpus, mongo_ids, output_format="metajson"):
+    def jsonrpc_metadata_by_mongo_ids(self, corpus, mongo_ids, output_format=constants.FORMAT_METAJSON):
         """ get metadata of a list of references
             params:
                 - corpus: the corpus 
@@ -172,10 +172,10 @@ class References_repository(jsonrpc.JSONRPC):
             metajson_documents = repository_service.get_documents_by_mongo_ids(corpus, mongo_ids)
             results = []
             for metajson_document in metajson_documents:
-                if output_format == "metajson":
+                if output_format == constants.FORMAT_METAJSON:
                     results.append(jsonbson.bson_to_json(metajson_document))
                 else:
-                    results.append(crosswalks_service.convert_native(metajson_document, "metajson", output_format, False, False))
+                    results.append(crosswalks_service.convert_native(metajson_document, constants.FORMAT_METAJSON, output_format, corpus, corpus, False, False))
             if results:
                 return results
             else:

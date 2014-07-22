@@ -6,6 +6,7 @@ import datetime
 import logging
 import os
 import uuid
+import copy
 
 from biblib.services import config_service
 from biblib.services import crosswalks_service
@@ -13,6 +14,7 @@ from biblib.services import io_service
 from biblib.services import repository_service
 from biblib.validation import metajson_validation
 from biblib.util import chrono
+from biblib.util import constants
 from biblib.util import jsonbson
 
 
@@ -98,35 +100,80 @@ def conf_corpus(corpus, corpus_conf_dir_name):
 # Export #
 ##########
 
-def export_corpus(corpus, output_file_path, output_format, all_in_one_file):
+def export_corpus(corpus, output_file_path, output_format, all_in_one_file, numer_export=False):
     if corpus and output_file_path:
         # fetch
         metajson_list = repository_service.get_documents(corpus)
+        
+        # one record per physical resource
+        if numer_export:
+            final_list = []
+            for document in metajson_list:
+                if document is not None and "resources" in document and document["resources"] is not None:
+                    res_phys_count = 0
+                    res_phys_numer_count = 0
+                    for resource in document["resources"]:
+                        # only for physical resources
+                        if "rec_type" in resource and resource["rec_type"] == "physical":
+                            res_phys_count += 1
+                            if "note" in resource and resource["note"][:5].lower() == "numer":
+                                res_phys_numer_count += 1
+                    if res_phys_count > 0:
+                        for resource in document["resources"]:
+                            if "rec_type" in resource and resource["rec_type"] == "physical":
+                                new_doc = copy.deepcopy(document)
+                                if "physical_copy_number" in resource and resource["physical_copy_number"] is not None:
+                                    new_doc["rec_id"] = new_doc["rec_id"] + "_" + resource["physical_copy_number"]
+                                if res_phys_numer_count == 0:
+                                    # Add all physical resources
+                                    new_doc["resources"] = [resource]
+                                    final_list.append(new_doc)
+                                else:
+                                    # Only numer physical resources
+                                    if "note" in resource and resource["note"][:5].lower() == "numer":
+                                        new_doc["resources"] = [resource]
+                                        final_list.append(new_doc)
+            metajson_list = final_list
+
         # convert
         results = crosswalks_service.convert_metajson_list(metajson_list, output_format, all_in_one_file)
+
         # export
-        io_service.write(corpus, corpus, results, output_file_path, output_format, all_in_one_file)
+        io_service.write_items(corpus, corpus, results, output_file_path, output_format, all_in_one_file)
+
+
+##########
+# Format #
+##########
+
+def format_corpus(corpus, output_title, output_file_path, output_style):
+    if corpus and output_file_path:
+        # fetch
+        metajson_list = repository_service.get_documents(corpus)
+        # format
+        io_service.write_html(corpus, output_title, metajson_list, output_file_path, output_style)
 
 
 ##########
 # Import #
 ##########
 
-def import_metadata_files(corpus, input_file_paths, input_format, error_file_path, source, save, role):
+def import_metadata_files(corpus, input_file_paths, input_format, source, rec_id_prefix, save, role):
     if corpus and input_file_paths:
-        with open(error_file_path, "w") as error_file:
-            for input_file_path in input_file_paths:
-                return import_metadata_file(corpus, input_file_path, input_format, error_file, source, save, role)
+        results = []
+        for input_file_path in input_file_paths:
+            results.extend(import_metadata_file(corpus, input_file_path, input_format, source, rec_id_prefix, save, role))
+        return results
 
 
-def import_metadata_file(corpus, input_file_path, input_format, source, save, role):
+def import_metadata_file(corpus, input_file_path, input_format, source, rec_id_prefix, save, role):
     logging.info("import_metadata_file")
     if corpus and input_file_path:
         logging.info("corpus: {}".format(corpus))
         logging.info("input_file_path: {}".format(input_file_path))
         logging.info("input_format: {}".format(input_format))
         logging.info("source: {}".format(source))
-        document_list = crosswalks_service.parse_and_convert_file(input_file_path, input_format, "metajson", source, False, False)
+        document_list = crosswalks_service.parse_and_convert_file(input_file_path, input_format, constants.FORMAT_METAJSON, source, rec_id_prefix, False, False)
         return import_metajson_list(corpus, document_list, save, role)
 
 

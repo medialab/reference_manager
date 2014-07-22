@@ -13,7 +13,6 @@ from pybtex.database.input import bibtex
 from pymarc import MARCReader
 
 from biblib.metajson import Collection
-from biblib.citations import citations_manager
 from biblib.services import metajson_service
 from biblib.util import constants
 from biblib.util import jsonbson
@@ -25,22 +24,22 @@ from biblib.util import xmletree
 #######################
 
 def guess_type_from_format(input_format):
-    if input_format and input_format in constants.input_format_to_type:
-        return constants.input_format_to_type[input_format]
+    if input_format and input_format in constants.format_to_file_type:
+        return constants.format_to_file_type[input_format]
 
 
 def guess_file_extension_from_format(input_format):
-    if input_format and input_format in constants.input_format_to_type:
-        input_type = constants.input_format_to_type[input_format]
-        if input_type and input_type in constants.type_to_file_extension:
-            return constants.type_to_file_extension[input_type]
+    if input_format and input_format in constants.format_to_file_type:
+        input_type = constants.format_to_file_type[input_format]
+        if input_type and input_type in constants.file_type_to_file_extension:
+            return constants.file_type_to_file_extension[input_type]
 
 
 def guess_type_from_file(input_file):
     if input_file and input_file.rfind(".") != -1:
         extention = input_file[input_file.rfind(".")+1:]
-        if extention in constants.file_extension_to_type:
-            return constants.file_extension_to_type[extention]
+        if extention in constants.file_extension_to_file_type:
+            return constants.file_extension_to_file_type[extention]
 
 
 def guess_format_from_string(string):
@@ -128,7 +127,7 @@ def parse_json_str(input_string):
 
 def parse_marc(input_file_path):
     marc_file = open(input_file_path)
-    return MARCReader(marc_file, False, False)
+    return MARCReader(marc_file, to_unicode=False, force_utf8=False)
 
 
 def parse_xmletree(input_file_path):
@@ -166,12 +165,12 @@ def parse_metajson_file(file_path):
 # Write #
 #########
 
-def write(col_id, col_title, items, output_file_path, output_format, all_in_one_file):
+def write_items(col_id, col_title, items, output_file_path, output_format, all_in_one_file):
     # todo: all_in_one_file
     # items have to be a list of tuple ; rec_id, metadata
     # if not all_in_one_file : output_file_path = output_file_path + rec_id
+    #logging.debug("write_items type(items): {}".format(type(items)))
     if all_in_one_file:
-        #logging.debug("type(items): {}".format(type(items)))
         if isinstance(items, Collection):
             write_item(items, output_file_path, output_format)
         elif isinstance(items, ET.Element):
@@ -185,16 +184,24 @@ def write(col_id, col_title, items, output_file_path, output_format, all_in_one_
 
 
 def write_list(col_id, col_title, items, output_file_path, output_format):
+    #logging.debug("write_list type(items): {}".format(type(items)))
     output_type = guess_type_from_format(output_format)
 
     if output_type == constants.FILE_TYPE_HTML:
-        write_html(col_id, col_title, items, output_file_path)
+        write_html(col_id, col_title, items, output_file_path, constants.STYLE_MLA)
     else:
+        count = 0
         for item in items:
-            write_item(item, output_file_path, output_format)
+            count += 1
+            file_name =  item[0] + "." + output_format + "." + guess_file_extension_from_format(output_format)
+            file_path = os.path.join(output_file_path, file_name)
+            if not os.path.exists(output_file_path):
+                os.mkdir(output_file_path)
+            write_item(item[1], file_path, output_format)
 
 
 def write_item(item, output_file_path, output_format):
+    #logging.debug("write_item type(item): {}".format(type(item)))
     output_type = guess_type_from_format(output_format)
 
     if output_type is not None:
@@ -206,17 +213,30 @@ def write_item(item, output_file_path, output_format):
             write_xml(item, output_file_path)
         elif output_type == constants.FILE_TYPE_BIBTEX:
             write_bibtex(item, output_file_path)
+        elif output_type == constants.FILE_TYPE_CSV:
+            write_csv(item, output_file_path)
         else:
             logging.error("Error: output_type is not managed: {}".format(output_type))
 
 
 def write_metajson_collection(col_id, col_title, items, output_file_path):
     if items:
+        #logging.debug("write_metajson_collection type(items): {}".format(type(items)))
         collection = metajson_service.create_collection(col_id, col_title, items)
         write_json(collection, output_file_path)
 
 
+def write_csv(item, output_file_path):
+    logging.debug("write_csv type(item): {}".format(type(item)))
+    with open(output_file_path, "w") as output_file:
+        csvwriter = csv.DictWriter(output_file, delimiter=',', fieldnames=constants.csv_metajson_fieldnames)
+        csvwriter.writeheader()
+        for csv_document in item:
+            csvwriter.writerow(csv_document)
+
+
 def write_json(item, output_file_path):
+    #logging.debug("write_json type(item): {}".format(type(item)))
     with open(output_file_path, "w") as output_file:
         dump = jsonbson.dumps_bson(item, True)
         if dump:
@@ -224,6 +244,7 @@ def write_json(item, output_file_path):
 
 
 def write_txt(item, output_file_path):
+    #logging.debug("write_txt type(item): {}".format(type(item)))
     with open(output_file_path, "w") as output_file:
         for txt in item:
             if txt:
@@ -231,47 +252,20 @@ def write_txt(item, output_file_path):
 
 
 def write_xml(item, output_file_path):
+    #logging.debug("write_xml type(item): {}".format(type(item)))
     with open(output_file_path, "w") as output_file:
         xmletree_tree = ET.ElementTree(item)
         xmletree_tree.write(output_file, "utf-8")
 
 
 def write_bibtex(item, output_file_path):
+    #logging.debug("write_bibtex type(item): {}".format(type(item)))
     # todo
     logging.error("Error: write_bibtex is not working")
     pass
 
 
-def write_html(col_id, col_title, items, output_file_path, style="mla"):
+def write_html(item, output_file_path):
+    #logging.debug("write_html type(item): {}".format(type(item)))
     with open(output_file_path, "w") as output_file:
-        header = "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n"
-        header += "<head>\n"
-        header += "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>"
-        if col_title:
-            header += "<title>" + col_title + "</title>\n"
-        else:
-            header += "<title>BibLib HTML export</title>\n"
-        header += "</head>\n"
-        header += "<body>\n"
-        output_file.write(header)
-
-        for document in items:
-            source_info = ""
-            if "rec_source" in document and document["rec_source"]:
-                source_info += document["rec_source"] + ":"
-            if "rec_id" in document and document["rec_id"]:
-                source_info += document["rec_id"] + ":"
-            citation = citations_manager.cite(document, style, "html")
-
-            debug = True
-            if debug:
-                meta = jsonbson.dumps_bson(document, True)
-                output_file.write("<pre>" + meta + "</pre>\n")
-
-                output_file.write("<xmp>" + citation + "</xmp>\n")
-
-            output_file.write("<div>" + citation + "</div>\n")
-
-        footer = "</body>\n"
-        footer += "</html>"
-        output_file.write(footer)
+        output_file.write(item)
