@@ -50,7 +50,7 @@ def validate_perios(documents):
                     logging.info("# Document index: {} and rec_id: {} - Starting verification".format(index, rec_id))
                     csvdict = {}
                     csvdict["rec_id"] = document["rec_id"]
-                    logging.debug(csvdict["rec_id"])
+                    #logging.debug(csvdict["rec_id"])
                     csvdict["rec_type"] = document["rec_type"]
                     if "title_non_sort" in document:
                         csvdict["title_non_sort"] = document["title_non_sort"]
