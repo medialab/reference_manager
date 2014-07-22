@@ -182,7 +182,7 @@ def format_iso8601(datepy):
 
 
 def parse_to_iso8601(datestr):
-    logging.debug("parse_to_iso8601 input: {}".format(datestr))
+    #logging.debug("parse_to_iso8601 input: {}".format(datestr))
     result = format_iso8601(parser.parse(datestr))
-    logging.debug("parse_to_iso8601 output: {}".format(result))
+    #logging.debug("parse_to_iso8601 output: {}".format(result))
     return result
