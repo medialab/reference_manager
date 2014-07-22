@@ -19,3 +19,4 @@ ply
 pymarc
 python-dateutil < 2.0
 python-stdnum
+smc.bibencodings
