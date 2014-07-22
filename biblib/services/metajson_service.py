@@ -80,7 +80,7 @@ def copy_keys_between_dicts(keys, dict_a, dict_b):
 
 
 def pretty_print_document(document):
-    logging.info("# rec_source: {}".format(document.get_rec_source()))
+    #logging.info("# rec_source: {}".format(document.get_rec_source()))
     logging.info("# rec_type: {}\trec_id: {}\ttitle: {}".format(document.get_rec_type(), document.get_rec_id(), document.get_title()))
     is_part_of = document.get_is_part_of()
     if is_part_of:
