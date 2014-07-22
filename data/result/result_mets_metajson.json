@@ -5,7 +5,71 @@
     {
       "citations": {
         "html": {
-          "mla": ""
+          "mla": [
+            "84476770-11a6-11e4-ad9f-10ddb1caecd6", 
+            ""
+          ]
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "dmds": [
+        {
+          "meta_type": "DC", 
+          "rec_class": "Warpper", 
+          "rec_id": "EL65_L_1973_03_013_01_1_PF_dmd", 
+          "rec_id_group": null, 
+          "rec_metajson": 1, 
+          "records": [
+            null
+          ]
+        }, 
+        {
+          "meta_type": "DC", 
+          "rec_class": "Warpper", 
+          "rec_id": "EL65_L_1973_03_013_01_2_PF_dmd", 
+          "rec_id_group": null, 
+          "rec_metajson": 1, 
+          "records": [
+            null
+          ]
+        }, 
+        {
+          "meta_type": "DC", 
+          "rec_class": "Warpper", 
+          "rec_id": "EL65_L_1973_03_013_01_1_PF_01_dmd", 
+          "rec_id_group": null, 
+          "rec_metajson": 1, 
+          "records": [
+            null
+          ]
+        }, 
+        {
+          "meta_type": "DC", 
+          "rec_class": "Warpper", 
+          "rec_id": "EL65_L_1973_03_013_01_1_PF_02_dmd", 
+          "rec_id_group": null, 
+          "rec_metajson": 1, 
+          "records": [
+            null
+          ]
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2014-07-22T15:46:00.947324", 
+      "rec_id": "84476770-11a6-11e4-ad9f-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:00.947332", 
+      "rec_source": "test", 
+      "rec_status": "private"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": [
+            "84482726-11a6-11e4-bab0-10ddb1caecd6", 
+            ""
+          ]
         }
       }, 
       "date_sort": {
@@ -54,16 +118,19 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:41.846253", 
-      "rec_id": "1c4c1bb3-61a6-11e3-a1c7-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:41.846264", 
+      "rec_created_date": "2014-07-22T15:46:00.952225", 
+      "rec_id": "84482726-11a6-11e4-bab0-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:00.952232", 
       "rec_source": "test", 
       "rec_status": "private"
     }, 
     {
       "citations": {
         "html": {
-          "mla": ""
+          "mla": [
+            "8453a5a8-11a6-11e4-93c2-10ddb1caecd6", 
+            ""
+          ]
         }
       }, 
       "date_sort": {
@@ -96,16 +163,19 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:41.927103", 
-      "rec_id": "1c587178-61a6-11e3-8393-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:41.927117", 
+      "rec_created_date": "2014-07-22T15:46:01.027571", 
+      "rec_id": "8453a5a8-11a6-11e4-93c2-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.027580", 
       "rec_source": "test", 
       "rec_status": "private"
     }, 
     {
       "citations": {
         "html": {
-          "mla": ""
+          "mla": [
+            "84718d3d-11a6-11e4-9d07-10ddb1caecd6", 
+            ""
+          ]
         }
       }, 
       "date_sort": {
@@ -140,16 +210,19 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.134202", 
-      "rec_id": "1c780b45-61a6-11e3-ad95-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.134215", 
+      "rec_created_date": "2014-07-22T15:46:01.223543", 
+      "rec_id": "84718d3d-11a6-11e4-9d07-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.223551", 
       "rec_source": "test", 
       "rec_status": "private"
     }, 
     {
       "citations": {
         "html": {
-          "mla": ""
+          "mla": [
+            "84815ff0-11a6-11e4-a882-10ddb1caecd6", 
+            ""
+          ]
         }
       }, 
       "date_sort": {
@@ -183,16 +256,19 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.251870", 
-      "rec_id": "1c89fff3-61a6-11e3-8a0c-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.251885", 
+      "rec_created_date": "2014-07-22T15:46:01.327243", 
+      "rec_id": "84815ff0-11a6-11e4-a882-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.327252", 
       "rec_source": "test", 
       "rec_status": "private"
     }, 
     {
       "citations": {
         "html": {
-          "mla": ""
+          "mla": [
+            "84a330d1-11a6-11e4-a507-10ddb1caecd6", 
+            ""
+          ]
         }
       }, 
       "date_sort": {
@@ -224,16 +300,19 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.473717", 
-      "rec_id": "1cabd994-61a6-11e3-b157-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.473730", 
+      "rec_created_date": "2014-07-22T15:46:01.548857", 
+      "rec_id": "84a330d1-11a6-11e4-a507-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.548865", 
       "rec_source": "test", 
       "rec_status": "private"
     }, 
     {
       "citations": {
         "html": {
-          "mla": ""
+          "mla": [
+            "84c15754-11a6-11e4-b094-10ddb1caecd6", 
+            ""
+          ]
         }
       }, 
       "date_sort": {
@@ -261,16 +340,19 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.732291", 
-      "rec_id": "1cd34e28-61a6-11e3-8692-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.732304", 
+      "rec_created_date": "2014-07-22T15:46:01.746453", 
+      "rec_id": "84c15754-11a6-11e4-b094-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.746462", 
       "rec_source": "test", 
       "rec_status": "private"
     }, 
     {
       "citations": {
         "html": {
-          "mla": ""
+          "mla": [
+            "84d28b51-11a6-11e4-b216-10ddb1caecd6", 
+            ""
+          ]
         }
       }, 
       "date_sort": {
@@ -1679,16 +1761,19 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.858341", 
-      "rec_id": "1ce68a3a-61a6-11e3-96af-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.858356", 
+      "rec_created_date": "2014-07-22T15:46:01.859195", 
+      "rec_id": "84d28b51-11a6-11e4-b216-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.859203", 
       "rec_source": "test", 
       "rec_status": "private"
     }, 
     {
       "citations": {
         "html": {
-          "mla": ""
+          "mla": [
+            "84d41da8-11a6-11e4-83f2-10ddb1caecd6", 
+            ""
+          ]
         }
       }, 
       "date_sort": {
@@ -1707,9 +1792,40 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.869124", 
-      "rec_id": "1ce82fab-61a6-11e3-9f07-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.869138", 
+      "rec_created_date": "2014-07-22T15:46:01.869495", 
+      "rec_id": "84d41da8-11a6-11e4-83f2-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.869503", 
+      "rec_source": "test", 
+      "rec_status": "private"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": [
+            "84d5cfcc-11a6-11e4-bb1a-10ddb1caecd6", 
+            ""
+          ]
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "dmds": [
+        {
+          "meta_type": "MODS", 
+          "rec_class": "Warpper", 
+          "rec_id": "dmd_000001", 
+          "rec_id_group": null, 
+          "rec_metajson": 1, 
+          "records": [
+            null
+          ]
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2014-07-22T15:46:01.880607", 
+      "rec_id": "84d5cfcc-11a6-11e4-bb1a-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.880615", 
       "rec_source": "test", 
       "rec_status": "private"
     }

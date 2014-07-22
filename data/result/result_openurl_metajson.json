@@ -1,0 +1,122 @@
+{
+  "rec_class": "Collection", 
+  "rec_metajson": 1, 
+  "records": [
+    {
+      "citations": {
+        "html": {
+          "mla": [
+            "84efd978-11a6-11e4-8cc3-10ddb1caecd6", 
+            "<span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"https://acces-distant.sciences-po.fr/fork?http://search.ebscohost.com/direct.asp?db=sih&jid=UST&scope=site\" target=\"_blank\">https://acces-distant.sciences-po.fr/fork?http://search.ebscohost.com/direct.asp?db=sih&jid=UST&scope=site</a>&gt;</span>"
+          ]
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "identifiers": [
+        {
+          "id_type": "issn", 
+          "value": "0042-0980"
+        }, 
+        {
+          "id_type": "eissn", 
+          "value": "1360-063X"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2014-07-22T15:46:02.051251", 
+      "rec_id": "84efd978-11a6-11e4-8cc3-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.051259", 
+      "rec_status": "private", 
+      "resources": [
+        {
+          "access_rights": "closedAccess", 
+          "database_name": "SocINDEX™ with Full Text", 
+          "format_mimetype": "text/html", 
+          "period_begin": "1993-08-01", 
+          "period_end": "2007-12-31", 
+          "provider_name": "EBSCOhost", 
+          "rec_class": "Resource", 
+          "rec_state": "published", 
+          "rec_type": "ResourceRemote", 
+          "relation_type": "eResource", 
+          "relation_version": "publishedVersion", 
+          "url": "https://acces-distant.sciences-po.fr/fork?http://search.ebscohost.com/direct.asp?db=sih&jid=UST&scope=site"
+        }, 
+        {
+          "access_rights": "closedAccess", 
+          "database_name": "Business Source Complete", 
+          "format_mimetype": "text/html", 
+          "period_begin": "1993-08-01", 
+          "period_end": "2007-11-30", 
+          "provider_name": "EBSCOhost", 
+          "rec_class": "Resource", 
+          "rec_state": "published", 
+          "rec_type": "ResourceRemote", 
+          "relation_type": "eResource", 
+          "relation_version": "publishedVersion", 
+          "url": "https://acces-distant.sciences-po.fr/fork?http://search.ebscohost.com/direct.asp?db=bth&jid=UST&scope=site"
+        }, 
+        {
+          "access_rights": "closedAccess", 
+          "database_name": "SAGE Humanities and Social Science Package 2014", 
+          "format_mimetype": "text/html", 
+          "period_begin": "1999-01-01", 
+          "provider_name": "SAGE Publications", 
+          "rec_class": "Resource", 
+          "rec_state": "published", 
+          "rec_type": "ResourceRemote", 
+          "relation_type": "eResource", 
+          "relation_version": "publishedVersion", 
+          "url": "https://acces-distant.sciences-po.fr/fork?http://online.sagepub.com/0042-0980"
+        }
+      ], 
+      "source": "test"
+    }, 
+    {
+      "citations": {
+        "html": {
+          "mla": [
+            "84f01640-11a6-11e4-819a-10ddb1caecd6", 
+            "<span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"https://acces-distant.sciences-po.fr/fork?http://tcbh.oxfordjournals.org/archive\" target=\"_blank\">https://acces-distant.sciences-po.fr/fork?http://tcbh.oxfordjournals.org/archive</a>&gt;</span>"
+          ]
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "identifiers": [
+        {
+          "id_type": "issn", 
+          "value": "0955-2359"
+        }, 
+        {
+          "id_type": "eissn", 
+          "value": "1477-4674"
+        }
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2014-07-22T15:46:02.052796", 
+      "rec_id": "84f01640-11a6-11e4-819a-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.052802", 
+      "rec_status": "private", 
+      "resources": [
+        {
+          "access_rights": "closedAccess", 
+          "database_name": "Oxford Journals Humanities Collection", 
+          "format_mimetype": "text/html", 
+          "period_begin": "1996-01-01", 
+          "provider_name": "Oxford University Press", 
+          "rec_class": "Resource", 
+          "rec_state": "published", 
+          "rec_type": "ResourceRemote", 
+          "relation_type": "eResource", 
+          "relation_version": "publishedVersion", 
+          "url": "https://acces-distant.sciences-po.fr/fork?http://tcbh.oxfordjournals.org/archive"
+        }
+      ], 
+      "source": "test"
+    }
+  ]
+}

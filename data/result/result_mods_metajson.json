@@ -5,7 +5,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=1&amp;rft.epage=12&amp;rft.date=2013-01&amp;rft.volume=89&amp;rft.atitle=Varieties+and+the+transfer+problem&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Journal+of+International+Economics&amp;rft.genre=article\"></span><span class=\"creator\">Martin, Philippe</span>, <span class=\"creator\">Giancarlo Corsetti</span>, and <span class=\"creator\">Paolo Pesenti</span>. \"<span class=\"title\">Varieties and the transfer problem</span>.\" <span class=\"title\">Journal of International Economics</span>. <span class=\"part_volume\">89</span>.<span class=\"part_issue\">1</span> <span class=\"date\">(jan. 2013)</span>. <span class=\"part_page_begin\">1</span>-<span class=\"part_page_end\">12</span>. "
+          "mla": [
+            "doi:10.1016/j.jinteco.2012.05.011", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=1&amp;rft.issue=1&amp;rft.epage=12&amp;rft.date=2013-01&amp;rft.volume=89&amp;rft.atitle=Varieties+and+the+transfer+problem&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Journal+of+International+Economics&amp;rft.genre=article\"></span><span class=\"creator\">Martin, Philippe</span>, <span class=\"creator\">Giancarlo Corsetti</span>, and <span class=\"creator\">Paolo Pesenti</span>. \"<span class=\"title\">Varieties and the transfer problem</span>.\" <span class=\"title\">Journal of International Economics</span>. <span class=\"part_volume\">89</span>.<span class=\"part_issue\">1</span> <span class=\"date\">(jan. 2013)</span>. <span class=\"part_page_begin\">1</span>-<span class=\"part_page_end\">12</span>. "
+          ]
         }
       }, 
       "classifications": {
@@ -124,9 +127,9 @@
       "part_page_end": "12", 
       "part_volume": "89", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.894596", 
+      "rec_created_date": "2014-07-22T15:46:01.904694", 
       "rec_id": "doi:10.1016/j.jinteco.2012.05.011", 
-      "rec_modified_date": "2013-12-10T15:19:42.894610", 
+      "rec_modified_date": "2014-07-22T15:46:01.904702", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -135,7 +138,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"creator\">Barnavie, Elie</span>, <span class=\"creator\">Alain Dieckhoff</span>, and <span class=\"creator\">Christian Lequesne</span>. <span class=\"title\">Israël et l’Europe. Filiations et ruptures</span>. <span class=\"date\">16 dec. 2010</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://vimeo.com/17810190\" target=\"_blank\">http://vimeo.com/17810190</a>&gt;</span>"
+          "mla": [
+            "84d9e328-11a6-11e4-bc5f-10ddb1caecd6", 
+            "<span class=\"creator\">Barnavie, Elie</span>, <span class=\"creator\">Alain Dieckhoff</span>, and <span class=\"creator\">Christian Lequesne</span>. <span class=\"title\">Israël et l’Europe. Filiations et ruptures</span>. <span class=\"date\">16 dec. 2010</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://vimeo.com/17810190\" target=\"_blank\">http://vimeo.com/17810190</a>&gt;</span>"
+          ]
         }
       }, 
       "creators": [
@@ -202,9 +208,9 @@
         "fr"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.897394", 
-      "rec_id": "1cec7f38-61a6-11e3-b7f5-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.897404", 
+      "rec_created_date": "2014-07-22T15:46:01.907330", 
+      "rec_id": "84d9e328-11a6-11e4-bc5f-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.907336", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "VideoRecording", 
@@ -221,7 +227,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Oxford+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=480&amp;rft.edition=2e+%C3%A9d.&amp;rft.date=2012-12&amp;rft.series=The+New+European+Union+Series&amp;rft.btitle=Member+States+of+the+European+Union&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Lequesne, Christian, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Simon Bulmer, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">The Member States of the European Union</span>. <span class=\"edition\">2e éd. ed.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">Oxford University Press</span>, <span class=\"date\">dec. 2012</span>. "
+          "mla": [
+            "isbn:9780199544837", 
+            "<span class=\"Z3988\" title=\"rft.pub=Oxford+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=480&amp;rft.edition=2e+%C3%A9d.&amp;rft.date=2012-12&amp;rft.series=The+New+European+Union+Series&amp;rft.btitle=Member+States+of+the+European+Union&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Lequesne, Christian, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Simon Bulmer, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">The Member States of the European Union</span>. <span class=\"edition\">2e éd. ed.</span> <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">Oxford University Press</span>, <span class=\"date\">dec. 2012</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -293,9 +302,9 @@
         "Oxford University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.900397", 
+      "rec_created_date": "2014-07-22T15:46:01.910281", 
       "rec_id": "isbn:9780199544837", 
-      "rec_modified_date": "2013-12-10T15:19:42.900404", 
+      "rec_modified_date": "2014-07-22T15:46:01.910287", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -318,7 +327,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Edward+Elgar+Publishing+Ltd&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=186&amp;rft.epage=196&amp;rft.place=Cheltenham&amp;rft.date=2013-05&amp;rft.btitle=The+International+Handbook+on+Social+Innovation%3A+Collective+Action%2C+Social+Learning+and+Transdisciplinary+Research&amp;rft.atitle=Just+another+roll+of+the+dice%3A+a+socially+creative+initiative+to+assure+Roma+housing+in+North+Western+Italy&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Membretti, Andrea</span>, and <span class=\"creator\">Tommaso Vitale</span>. \"<span class=\"title\">Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy</span>.\" <span class=\"title\">The International Handbook on Social Innovation: Collective Action, Social Learning and Transdisciplinary Research</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Diana Maccallum</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Abid Mehmood</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frank Moulaert</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Abdel Hamdouch</span>. <span class=\"publication_places\">Cheltenham</span>: <span class=\"publishers\">Edward Elgar Publishing Ltd</span>, <span class=\"date\">may 2013</span>. <span class=\"part_page_begin\">186</span>-<span class=\"part_page_end\">196</span>. "
+          "mla": [
+            "84db1b00-11a6-11e4-8f25-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft.pub=Edward+Elgar+Publishing+Ltd&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=186&amp;rft.epage=196&amp;rft.place=Cheltenham&amp;rft.date=2013-05&amp;rft.btitle=The+International+Handbook+on+Social+Innovation%3A+Collective+Action%2C+Social+Learning+and+Transdisciplinary+Research&amp;rft.atitle=Just+another+roll+of+the+dice%3A+a+socially+creative+initiative+to+assure+Roma+housing+in+North+Western+Italy&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Membretti, Andrea</span>, and <span class=\"creator\">Tommaso Vitale</span>. \"<span class=\"title\">Just another roll of the dice: a socially creative initiative to assure Roma housing in North Western Italy</span>.\" <span class=\"title\">The International Handbook on Social Innovation: Collective Action, Social Learning and Transdisciplinary Research</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Diana Maccallum</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Abid Mehmood</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frank Moulaert</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Abdel Hamdouch</span>. <span class=\"publication_places\">Cheltenham</span>: <span class=\"publishers\">Edward Elgar Publishing Ltd</span>, <span class=\"date\">may 2013</span>. <span class=\"part_page_begin\">186</span>-<span class=\"part_page_end\">196</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -453,9 +465,9 @@
       "part_page_begin": "186", 
       "part_page_end": "196", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.905475", 
-      "rec_id": "1cedbaee-61a6-11e3-ab96-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.905487", 
+      "rec_created_date": "2014-07-22T15:46:01.915309", 
+      "rec_id": "84db1b00-11a6-11e4-8f25-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.915317", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -464,7 +476,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=3&amp;rft.date=2012-05&amp;rft.volume=36&amp;rft.atitle=Europeanization+of+Cities%3A+Policies%2C+Urban+Change+and+Urban+Networks&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=International+Journal+of+Urban+and+Regional+Research&amp;rft.genre=article\"></span><span class=\"creator\">Halpern, Charlotte</span>. \"<span class=\"title\">The Europeanization of Cities: Policies, Urban Change and Urban Networks</span>.\" Rev. of <span class=\"title\">International Journal of Urban and Regional Research</span>. <span class=\"publishers\">Wiley-Blackwell</span>, <span class=\"part_volume\">36</span>.<span class=\"part_issue\">3</span> <span class=\"date\">may 2012</span>. "
+          "mla": [
+            "84dbe2ba-11a6-11e4-862c-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=3&amp;rft.date=2012-05&amp;rft.volume=36&amp;rft.atitle=Europeanization+of+Cities%3A+Policies%2C+Urban+Change+and+Urban+Networks&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=International+Journal+of+Urban+and+Regional+Research&amp;rft.genre=article\"></span><span class=\"creator\">Halpern, Charlotte</span>. \"<span class=\"title\">The Europeanization of Cities: Policies, Urban Change and Urban Networks</span>.\" Rev. of <span class=\"title\">International Journal of Urban and Regional Research</span>. <span class=\"publishers\">Wiley-Blackwell</span>, <span class=\"part_volume\">36</span>.<span class=\"part_issue\">3</span> <span class=\"date\">may 2012</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -528,32 +543,7 @@
           "title": "International Journal of Urban and Regional Research"
         }
       ], 
-      "keywords": {
-        "en": [
-          "Europeanization", 
-          "Urban policies", 
-          "cities"
-        ]
-      }, 
-      "languages": [
-        "en"
-      ], 
-      "notes": [
-        {
-          "note_type": "additional physical form", 
-          "value": "Note de lecture"
-        }
-      ], 
-      "part_issue": "3", 
-      "part_volume": "36", 
-      "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.910606", 
-      "rec_id": "1cee83a1-61a6-11e3-87ee-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.910631", 
-      "rec_source": "test", 
-      "rec_status": "private", 
-      "rec_type": "BookReview", 
-      "review_ofs": [
+      "is_review_ofs": [
         {
           "creators": [
             {
@@ -604,13 +594,41 @@
           "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks"
         }
       ], 
+      "keywords": {
+        "en": [
+          "Europeanization", 
+          "Urban policies", 
+          "cities"
+        ]
+      }, 
+      "languages": [
+        "en"
+      ], 
+      "notes": [
+        {
+          "note_type": "additional physical form", 
+          "value": "Note de lecture"
+        }
+      ], 
+      "part_issue": "3", 
+      "part_volume": "36", 
+      "rec_class": "Document", 
+      "rec_created_date": "2014-07-22T15:46:01.920414", 
+      "rec_id": "84dbe2ba-11a6-11e4-862c-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.920421", 
+      "rec_source": "test", 
+      "rec_status": "private", 
+      "rec_type": "BookReview", 
       "title": "Europeanization of Cities: Policies, Urban Change and Urban Networks", 
       "title_non_sort": "The "
     }, 
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"creator\">Governing Paris and Mexico</span>, and <span class=\"creator\">Charlotte Halpern</span>. <span class=\"title\">Airport companies as silent partners?: The slow awakening of Aéroports de Paris</span>. <span class=\"date\">27 feb. 2013</span>. "
+          "mla": [
+            "84dc5019-11a6-11e4-b1df-10ddb1caecd6", 
+            "<span class=\"creator\">Governing Paris and Mexico</span>, and <span class=\"creator\">Charlotte Halpern</span>. <span class=\"title\">Airport companies as silent partners?: The slow awakening of Aéroports de Paris</span>. <span class=\"date\">27 feb. 2013</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -674,9 +692,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.913530", 
-      "rec_id": "1ceef65c-61a6-11e3-b1ae-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.913537", 
+      "rec_created_date": "2014-07-22T15:46:01.923210", 
+      "rec_id": "84dc5019-11a6-11e4-b1df-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.923216", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferenceContribution", 
@@ -686,7 +704,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Lethielleux&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=69&amp;rft.epage=86&amp;rft.place=Paris&amp;rft.date=2013-02&amp;rft.series=Coll%C3%A8ge+des+Bernardins+-+Cours-colloques-conf%C3%A9rences&amp;rft.btitle=L%E2%80%99Anthropologie+de+Marcel+Gauchet+%3A+analyse+et+d%C3%A9bats&amp;rft.atitle=r%C3%A9gime+mixte+des+Modernes+et+la+question+de+l%E2%80%99Histoire&amp;ctx_ver=Z39.88-2004&amp;rft.genre=conference\"></span><span class=\"creator\">Escudier, Alexandre</span>. \"<span class=\"title\">Le régime mixte des Modernes et la question de l’Histoire</span>.\" <span class=\"title\">L’Anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frédéric Louzeau</span>, and <span class=\"creator\">L’anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Lethielleux</span>, <span class=\"date\">feb. 2013</span>. <span class=\"part_page_begin\">69</span>-<span class=\"part_page_end\">86</span>. "
+          "mla": [
+            "84dcdbde-11a6-11e4-a829-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft.pub=Lethielleux&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=69&amp;rft.epage=86&amp;rft.place=Paris&amp;rft.date=2013-02&amp;rft.series=Coll%C3%A8ge+des+Bernardins+-+Cours-colloques-conf%C3%A9rences&amp;rft.btitle=L%E2%80%99Anthropologie+de+Marcel+Gauchet+%3A+analyse+et+d%C3%A9bats&amp;rft.atitle=r%C3%A9gime+mixte+des+Modernes+et+la+question+de+l%E2%80%99Histoire&amp;ctx_ver=Z39.88-2004&amp;rft.genre=conference\"></span><span class=\"creator\">Escudier, Alexandre</span>. \"<span class=\"title\">Le régime mixte des Modernes et la question de l’Histoire</span>.\" <span class=\"title\">L’Anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Frédéric Louzeau</span>, and <span class=\"creator\">L’anthropologie de Marcel Gauchet : analyse et débats</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Lethielleux</span>, <span class=\"date\">feb. 2013</span>. <span class=\"part_page_begin\">69</span>-<span class=\"part_page_end\">86</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -784,9 +805,9 @@
       "part_page_begin": "69", 
       "part_page_end": "86", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.917151", 
-      "rec_id": "1cef8428-61a6-11e3-a4f4-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.917159", 
+      "rec_created_date": "2014-07-22T15:46:01.926780", 
+      "rec_id": "84dcdbde-11a6-11e4-a829-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.926786", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferencePaper", 
@@ -796,7 +817,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Dalloz&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=192&amp;rft.date=2013-03&amp;rft.series=Th%C3%A8mes+%26+commentaires&amp;rft.btitle=Raymond+Saleilles+et+au-del%C3%A0&amp;ctx_ver=Z39.88-2004&amp;rft.genre=proceeding\"></span><span class=\"creator\">Audren, Frédéric, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Christian Chêne, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Nicolas Mathey, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Arnaud Vergne, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Raymond Saleilles et au-delà</span>. <span class=\"title\">Raymond Saleilles et au-delà</span>. <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">Dalloz</span>, <span class=\"date\">mar. 2013</span>. "
+          "mla": [
+            "isbn:9782247125265", 
+            "<span class=\"Z3988\" title=\"rft.pub=Dalloz&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=192&amp;rft.date=2013-03&amp;rft.series=Th%C3%A8mes+%26+commentaires&amp;rft.btitle=Raymond+Saleilles+et+au-del%C3%A0&amp;ctx_ver=Z39.88-2004&amp;rft.genre=proceeding\"></span><span class=\"creator\">Audren, Frédéric, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Christian Chêne, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Nicolas Mathey, <span class=\"creator_role\">ed.</span></span>, <span class=\"creator\">Arnaud Vergne, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Raymond Saleilles et au-delà</span>. <span class=\"title\">Raymond Saleilles et au-delà</span>. <span class=\"publication_places\">N.p.</span>: <span class=\"publishers\">Dalloz</span>, <span class=\"date\">mar. 2013</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -889,9 +913,9 @@
         "Dalloz"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.920473", 
+      "rec_created_date": "2014-07-22T15:46:01.930085", 
       "rec_id": "isbn:9782247125265", 
-      "rec_modified_date": "2013-12-10T15:19:42.920481", 
+      "rec_modified_date": "2014-07-22T15:46:01.930092", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ConferenceProceedings", 
@@ -907,7 +931,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=11&amp;rft.issue=21144&amp;rft.epage=00&amp;rft.date=2013-04-08&amp;rft.atitle=Fonctionnaires%2C+la+fin+du+m%C3%A9rite+r%C3%A9publicain&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=L%27Humanit%C3%A9&amp;rft.genre=article\"></span><span class=\"creator\">Rouban, Luc</span>. \"<span class=\"title\">Fonctionnaires, la fin du mérite républicain</span>.\" <span class=\"title\">L'Humanité</span>. <span class=\"part_issue\">21144</span> <span class=\"date\">8 apr. 2013</span>. <span class=\"part_page_begin\">11</span>-<span class=\"part_page_end\">00</span>. "
+          "mla": [
+            "84ddcd33-11a6-11e4-9ee7-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=11&amp;rft.issue=21144&amp;rft.epage=00&amp;rft.date=2013-04-08&amp;rft.atitle=Fonctionnaires%2C+la+fin+du+m%C3%A9rite+r%C3%A9publicain&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=L%27Humanit%C3%A9&amp;rft.genre=article\"></span><span class=\"creator\">Rouban, Luc</span>. \"<span class=\"title\">Fonctionnaires, la fin du mérite républicain</span>.\" <span class=\"title\">L'Humanité</span>. <span class=\"part_issue\">21144</span> <span class=\"date\">8 apr. 2013</span>. <span class=\"part_page_begin\">11</span>-<span class=\"part_page_end\">00</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -962,9 +989,9 @@
       "part_page_begin": "11", 
       "part_page_end": "00", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.923269", 
-      "rec_id": "1cf07270-61a6-11e3-9412-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.923277", 
+      "rec_created_date": "2014-07-22T15:46:01.932977", 
+      "rec_id": "84ddcd33-11a6-11e4-9ee7-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.932983", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "NewspaperArticle", 
@@ -973,7 +1000,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.tpages=428&amp;rft.au=Casta%C3%B1eda+Lef%C3%A8vre%2C+Dorly&amp;rft.date=2012-02&amp;rft.atitle=Peace+Laboratories+in+Colombia%3A+the+European+Approach+to+Peace-building&amp;ctx_ver=Z39.88-2004\"></span><span class=\"creator\">Castañeda Lefèvre, Dorly</span>. <span class=\"title\">Peace Laboratories in Colombia: the European Approach to Peace-building</span>. <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Institut d'Etudes Politiques de Paris</span>, <span class=\"date\">feb. 2012</span>. "
+          "mla": [
+            "84de3799-11a6-11e4-9e1e-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.tpages=428&amp;rft.au=Casta%C3%B1eda+Lef%C3%A8vre%2C+Dorly&amp;rft.date=2012-02&amp;rft.atitle=Peace+Laboratories+in+Colombia%3A+the+European+Approach+to+Peace-building&amp;ctx_ver=Z39.88-2004\"></span><span class=\"creator\">Castañeda Lefèvre, Dorly</span>. <span class=\"title\">Peace Laboratories in Colombia: the European Approach to Peace-building</span>. <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Institut d'Etudes Politiques de Paris</span>, <span class=\"date\">feb. 2012</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -1046,9 +1076,9 @@
         "Institut d'Etudes Politiques de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.926242", 
-      "rec_id": "1cf0e691-61a6-11e3-8e80-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.926255", 
+      "rec_created_date": "2014-07-22T15:46:01.935691", 
+      "rec_id": "84de3799-11a6-11e4-9e1e-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.935697", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -1060,7 +1090,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=115&amp;rft.issue=52&amp;rft.epage=131&amp;rft.date=2007-11&amp;rft.atitle=Vers+une+r%C3%A9volution+bureaucratique+%3F&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Mouvements&amp;rft.genre=article\"></span>\"<span class=\"title\">Vers une révolution bureaucratique ?</span>.\" <span class=\"title\">Mouvements</span>. <span class=\"publishers\">La Découverte</span>, <span class=\"part_issue\">52</span> <span class=\"date\">nov. 2007</span>. <span class=\"part_page_begin\">115</span>-<span class=\"part_page_end\">131</span>. "
+          "mla": [
+            "84deb1d4-11a6-11e4-a6af-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=115&amp;rft.issue=52&amp;rft.epage=131&amp;rft.date=2007-11&amp;rft.atitle=Vers+une+r%C3%A9volution+bureaucratique+%3F&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Mouvements&amp;rft.genre=article\"></span>\"<span class=\"title\">Vers une révolution bureaucratique ?</span>.\" <span class=\"title\">Mouvements</span>. <span class=\"publishers\">La Découverte</span>, <span class=\"part_issue\">52</span> <span class=\"date\">nov. 2007</span>. <span class=\"part_page_begin\">115</span>-<span class=\"part_page_end\">131</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -1144,9 +1177,9 @@
       "part_page_begin": "115", 
       "part_page_end": "131", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.929564", 
-      "rec_id": "1cf167fd-61a6-11e3-a9c6-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.929574", 
+      "rec_created_date": "2014-07-22T15:46:01.938826", 
+      "rec_id": "84deb1d4-11a6-11e4-a6af-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.938832", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "InterviewArticle", 
@@ -1155,7 +1188,10 @@
     {
       "citations": {
         "html": {
-          "mla": "\"<span class=\"title\">FranUlmer.com -- Home Page</span>.\" <span class=\"title\">Election 2002 Web Archive</span>. <span class=\"date\">20020702</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.franulmer.com/\" target=\"_blank\">http://www.franulmer.com/</a>&gt;</span>"
+          "mla": [
+            "84e191d7-11a6-11e4-9449-10ddb1caecd6", 
+            "\"<span class=\"title\">FranUlmer.com -- Home Page</span>.\" <span class=\"title\">Election 2002 Web Archive</span>. <span class=\"date\">20020702</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.franulmer.com/\" target=\"_blank\">http://www.franulmer.com/</a>&gt;</span>"
+          ]
         }
       }, 
       "creators": [
@@ -1200,9 +1236,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.950922", 
-      "rec_id": "1cf4aa85-61a6-11e3-a1a4-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.950943", 
+      "rec_created_date": "2014-07-22T15:46:01.957674", 
+      "rec_id": "84e191d7-11a6-11e4-9449-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.957682", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WebSite", 
@@ -1268,7 +1304,10 @@
     {
       "citations": {
         "html": {
-          "mla": " \"<span class=\"title\">At Gettysburg, or, What a Girl Saw and Heard of the Battle: A True Narrative</span>.\" <span class=\"publication_places\">New York</span>: <span class=\"publishers\">W. Lake Borland</span>, <span class=\"date\">1889</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://digital.library.upenn.edu/women/alleman/gettysburg/gettysburg.html\" target=\"_blank\">http://digital.library.upenn.edu/women/alleman/gettysburg/gettysburg.html</a>&gt;</span>"
+          "mla": [
+            "84e1d999-11a6-11e4-bb8b-10ddb1caecd6", 
+            " \"<span class=\"title\">At Gettysburg, or, What a Girl Saw and Heard of the Battle: A True Narrative</span>.\" <span class=\"publication_places\">New York</span>: <span class=\"publishers\">W. Lake Borland</span>, <span class=\"date\">1889</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://digital.library.upenn.edu/women/alleman/gettysburg/gettysburg.html\" target=\"_blank\">http://digital.library.upenn.edu/women/alleman/gettysburg/gettysburg.html</a>&gt;</span>"
+          ]
         }
       }, 
       "classifications": {
@@ -1315,9 +1354,9 @@
         null
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.952622", 
-      "rec_id": "1cf4ed6e-61a6-11e3-9cbb-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.952629", 
+      "rec_created_date": "2014-07-22T15:46:01.959498", 
+      "rec_id": "84e1d999-11a6-11e4-bb8b-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.959504", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1360,7 +1399,10 @@
     {
       "citations": {
         "html": {
-          "mla": "\"<span class=\"title\">Telescope Peak from Zabriskie Point</span>.\" <span class=\"date\">22 mar. 1955</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://purl.dlib.indiana.edu/iudl/archives/cushman/P07803\" target=\"_blank\">http://purl.dlib.indiana.edu/iudl/archives/cushman/P07803</a>&gt;</span>"
+          "mla": [
+            "archives/cushman/P07803", 
+            "\"<span class=\"title\">Telescope Peak from Zabriskie Point</span>.\" <span class=\"date\">22 mar. 1955</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://purl.dlib.indiana.edu/iudl/archives/cushman/P07803\" target=\"_blank\">http://purl.dlib.indiana.edu/iudl/archives/cushman/P07803</a>&gt;</span>"
+          ]
         }
       }, 
       "creators": [
@@ -1448,7 +1490,7 @@
       "rec_class": "Document", 
       "rec_created_date": "2004-09-09", 
       "rec_id": "archives/cushman/P07803", 
-      "rec_modified_date": "2013-12-10T15:19:42.954910", 
+      "rec_modified_date": "2014-07-22T15:46:01.961827", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Image", 
@@ -1488,7 +1530,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=53&amp;rft.epage=57&amp;rft.date=2003&amp;rft.volume=3&amp;rft.atitle=Hiring+and+recruitment+practices+in+academic+libraries&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=portal%3A+libraries+and+the+academy&amp;rft.genre=article\"></span>\"<span class=\"title\">Hiring and recruitment practices in academic libraries</span>.\" <span class=\"title\">portal: libraries and the academy</span>. <span class=\"publication_places\">Baltimore, Md.</span>: <span class=\"publishers\">Johns Hopkins University Press</span>, <span class=\"part_volume\">3</span>. <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">53</span>-<span class=\"part_page_end\">57</span>. "
+          "mla": [
+            "84e2734f-11a6-11e4-8d69-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=53&amp;rft.epage=57&amp;rft.date=2003&amp;rft.volume=3&amp;rft.atitle=Hiring+and+recruitment+practices+in+academic+libraries&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=portal%3A+libraries+and+the+academy&amp;rft.genre=article\"></span>\"<span class=\"title\">Hiring and recruitment practices in academic libraries</span>.\" <span class=\"title\">portal: libraries and the academy</span>. <span class=\"publication_places\">Baltimore, Md.</span>: <span class=\"publishers\">Johns Hopkins University Press</span>, <span class=\"part_volume\">3</span>. <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">53</span>-<span class=\"part_page_end\">57</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -1548,9 +1593,9 @@
         "Johns Hopkins University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.956450", 
-      "rec_id": "1cf5830a-61a6-11e3-93dc-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.956456", 
+      "rec_created_date": "2014-07-22T15:46:01.963431", 
+      "rec_id": "84e2734f-11a6-11e4-8d69-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.963437", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -1575,7 +1620,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"title\">Sound and fury: the making of the punditocracy</span>. <span class=\"publication_places\">nyu</span>: <span class=\"publishers\">Cornell University Press</span>, <span class=\"date\">c1999</span>. "
+          "mla": [
+            "11761548", 
+            "<span class=\"title\">Sound and fury: the making of the punditocracy</span>. <span class=\"publication_places\">nyu</span>: <span class=\"publishers\">Cornell University Press</span>, <span class=\"date\">c1999</span>. "
+          ]
         }
       }, 
       "classifications": {
@@ -1645,7 +1693,7 @@
       "rec_class": "Document", 
       "rec_created_date": "990730", 
       "rec_id": "11761548", 
-      "rec_modified_date": "2013-12-10T15:19:42.958347", 
+      "rec_modified_date": "2014-07-22T15:46:01.965254", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Bibliography", 
@@ -1735,7 +1783,10 @@
     {
       "citations": {
         "html": {
-          "mla": "\"<span class=\"title\">Models, Fantasies and Phantoms of Transition</span>.\" <span class=\"title\">Post-Fordism: A Reader</span>. <span class=\"publication_places\">Oxford</span>: <span class=\"publishers\">Blackwell Publishers</span>, <span class=\"date\">1994</span>. <span class=\"part_page_begin\">23</span>-<span class=\"part_page_end\">45</span>. "
+          "mla": [
+            "local:Amin1994a", 
+            "\"<span class=\"title\">Models, Fantasies and Phantoms of Transition</span>.\" <span class=\"title\">Post-Fordism: A Reader</span>. <span class=\"publication_places\">Oxford</span>: <span class=\"publishers\">Blackwell Publishers</span>, <span class=\"date\">1994</span>. <span class=\"part_page_begin\">23</span>-<span class=\"part_page_end\">45</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -1789,9 +1840,9 @@
       "part_page_begin": "23", 
       "part_page_end": "45", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.959702", 
+      "rec_created_date": "2014-07-22T15:46:01.966613", 
       "rec_id": "local:Amin1994a", 
-      "rec_modified_date": "2013-12-10T15:19:42.959708", 
+      "rec_modified_date": "2014-07-22T15:46:01.966619", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -1800,7 +1851,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Center+for+Computer+Assisted+Research+in+the+Humanities&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=4+v.+%3A+ill.%2C+music+%3B+26+cm.&amp;rft.place=cau&amp;rft.date=-1988&amp;rft.btitle=Directory+of+computer+assisted+research+in+musicology&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"title\">Directory of computer assisted research in musicology</span>. <span class=\"publication_places\">cau</span>: <span class=\"publishers\">Center for Computer Assisted Research in the Humanities</span>, "
+          "mla": [
+            "11315879", 
+            "<span class=\"Z3988\" title=\"rft.pub=Center+for+Computer+Assisted+Research+in+the+Humanities&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=4+v.+%3A+ill.%2C+music+%3B+26+cm.&amp;rft.place=cau&amp;rft.date=-1988&amp;rft.btitle=Directory+of+computer+assisted+research+in+musicology&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"title\">Directory of computer assisted research in musicology</span>. <span class=\"publication_places\">cau</span>: <span class=\"publishers\">Center for Computer Assisted Research in the Humanities</span>, "
+          ]
         }
       }, 
       "classifications": {
@@ -1825,7 +1879,7 @@
       ], 
       "date_issued": "-1988", 
       "date_sort": {
-        "$date": 597715200000
+        "$date": 585532800000
       }, 
       "extent_pages": "4 v. : ill., music ; 26 cm.", 
       "form": {
@@ -1887,7 +1941,7 @@
       "rec_class": "Document", 
       "rec_created_date": "861202", 
       "rec_id": "11315879", 
-      "rec_modified_date": "2013-12-10T15:19:42.962926", 
+      "rec_modified_date": "2014-07-22T15:46:01.969626", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -2009,7 +2063,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=361&amp;rft.issue=2&amp;rft.epage=378&amp;rft.volume=24&amp;rft.atitle=Urban+Question+as+a+Scale+Question&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=International+Journal+of+Urban+and+Regional+Research&amp;rft.genre=article\"></span>\"<span class=\"title\">TheUrban Question as a Scale Question: Reflections on Henri Lefebre, Urban Theory and the Politics of Scale</span>.\" <span class=\"title\">International Journal of Urban and Regional Research</span>. <span class=\"part_volume\">24</span>.<span class=\"part_issue\">2</span> <span class=\"part_page_begin\">361</span>-<span class=\"part_page_end\">378</span>. "
+          "mla": [
+            "local:BrennerN2000a", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=361&amp;rft.issue=2&amp;rft.epage=378&amp;rft.volume=24&amp;rft.atitle=Urban+Question+as+a+Scale+Question&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=International+Journal+of+Urban+and+Regional+Research&amp;rft.genre=article\"></span>\"<span class=\"title\">TheUrban Question as a Scale Question: Reflections on Henri Lefebre, Urban Theory and the Politics of Scale</span>.\" <span class=\"title\">International Journal of Urban and Regional Research</span>. <span class=\"part_volume\">24</span>.<span class=\"part_issue\">2</span> <span class=\"part_page_begin\">361</span>-<span class=\"part_page_end\">378</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -2047,9 +2104,9 @@
       "part_page_end": "378", 
       "part_volume": "24", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.964371", 
+      "rec_created_date": "2014-07-22T15:46:01.971041", 
       "rec_id": "local:BrennerN2000a", 
-      "rec_modified_date": "2013-12-10T15:19:42.964378", 
+      "rec_modified_date": "2014-07-22T15:46:01.971046", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -2060,7 +2117,10 @@
     {
       "citations": {
         "html": {
-          "mla": "\"<span class=\"title\">Fifth-Grade Boys' Decisions about Participation in Sports Activities</span>.\" <span class=\"title\">Non-subject-matter Outcomes of Schooling</span>. <span class=\"part_volume\">99</span>.<span class=\"part_issue\">5</span> <span class=\"part_page_begin\">131</span>-<span class=\"part_page_end\">146</span>. "
+          "mla": [
+            "84e3d65c-11a6-11e4-afa9-10ddb1caecd6", 
+            "\"<span class=\"title\">Fifth-Grade Boys' Decisions about Participation in Sports Activities</span>.\" <span class=\"title\">Non-subject-matter Outcomes of Schooling</span>. <span class=\"part_volume\">99</span>.<span class=\"part_issue\">5</span> <span class=\"part_page_begin\">131</span>-<span class=\"part_page_end\">146</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -2104,9 +2164,9 @@
       "part_page_end": "146", 
       "part_volume": "99", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.965895", 
-      "rec_id": "1cf6f333-61a6-11e3-94d3-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.965901", 
+      "rec_created_date": "2014-07-22T15:46:01.972519", 
+      "rec_id": "84e3d65c-11a6-11e4-afa9-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.972525", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -2115,7 +2175,10 @@
     {
       "citations": {
         "html": {
-          "mla": "\"<span class=\"title\">2700 MHz observations of 4c radio sources in the declination zone +4 to -4</span>.\" <span class=\"title\">Australian Journal of Physics and Astronphysics</span>. "
+          "mla": [
+            "84e40935-11a6-11e4-a8e1-10ddb1caecd6", 
+            "\"<span class=\"title\">2700 MHz observations of 4c radio sources in the declination zone +4 to -4</span>.\" <span class=\"title\">Australian Journal of Physics and Astronphysics</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -2150,9 +2213,9 @@
         }
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.967145", 
-      "rec_id": "1cf72517-61a6-11e3-8163-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.967151", 
+      "rec_created_date": "2014-07-22T15:46:01.973816", 
+      "rec_id": "84e40935-11a6-11e4-a8e1-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.973821", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -2161,7 +2224,10 @@
     {
       "citations": {
         "html": {
-          "mla": "\"<span class=\"title\">Emergence and Dissolvence in the Self-Organization of Complex Systems</span>.\" <span class=\"title\">Entropy</span>. <span class=\"part_volume\">2</span>.<span class=\"part_issue\">1</span> <span class=\"part_page_begin\">17</span>-<span class=\"part_page_end\">17</span>. "
+          "mla": [
+            "uri:http://www.mdpi.org/entropy/papers/e2010001.pdf", 
+            "\"<span class=\"title\">Emergence and Dissolvence in the Self-Organization of Complex Systems</span>.\" <span class=\"title\">Entropy</span>. <span class=\"part_volume\">2</span>.<span class=\"part_issue\">1</span> <span class=\"part_page_begin\">17</span>-<span class=\"part_page_end\">17</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -2208,9 +2274,9 @@
       "part_page_end": "17", 
       "part_volume": "2", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.968398", 
+      "rec_created_date": "2014-07-22T15:46:01.975110", 
       "rec_id": "uri:http://www.mdpi.org/entropy/papers/e2010001.pdf", 
-      "rec_modified_date": "2013-12-10T15:19:42.968404", 
+      "rec_modified_date": "2014-07-22T15:46:01.975115", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Document", 
@@ -2219,7 +2285,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"title\">The American ballroom companion: dance instruction manuals, ca. 1600-1920</span>. <span class=\"publication_places\">dcu</span>: <span class=\"publishers\">Library of Congress</span>, <span class=\"date\">1998</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://hdl.loc.gov/loc.music/collmus.mu000010\" target=\"_blank\">http://hdl.loc.gov/loc.music/collmus.mu000010</a>&gt;</span>"
+          "mla": [
+            "5004836", 
+            "<span class=\"title\">The American ballroom companion: dance instruction manuals, ca. 1600-1920</span>. <span class=\"publication_places\">dcu</span>: <span class=\"publishers\">Library of Congress</span>, <span class=\"date\">1998</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://hdl.loc.gov/loc.music/collmus.mu000010\" target=\"_blank\">http://hdl.loc.gov/loc.music/collmus.mu000010</a>&gt;</span>"
+          ]
         }
       }, 
       "classifications": {
@@ -2312,7 +2381,7 @@
       "rec_class": "Document", 
       "rec_created_date": "980323", 
       "rec_id": "5004836", 
-      "rec_modified_date": "2013-12-10T15:19:42.969875", 
+      "rec_modified_date": "2014-07-22T15:46:01.976504", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Software", 
@@ -2354,7 +2423,10 @@
     {
       "citations": {
         "html": {
-          "mla": "\"<span class=\"title\">Papers from the First International Workshop on Plasma-Based Ion Implantation: 4-6 August 1993, University of Wisconsin--Madison, Madison, Wisconsin</span>.\" <span class=\"title\">Journal of vacuum science & technology. B, Microelectronics and nanometer structures processing, measurement and phenomena</span>. <span class=\"publication_places\">nyu</span>: <span class=\"publishers\">Published for the American Vacuum Society by the American Institute of Physics</span>, <span class=\"date\">1994</span>. "
+          "mla": [
+            "4968605", 
+            "\"<span class=\"title\">Papers from the First International Workshop on Plasma-Based Ion Implantation: 4-6 August 1993, University of Wisconsin--Madison, Madison, Wisconsin</span>.\" <span class=\"title\">Journal of vacuum science & technology. B, Microelectronics and nanometer structures processing, measurement and phenomena</span>. <span class=\"publication_places\">nyu</span>: <span class=\"publishers\">Published for the American Vacuum Society by the American Institute of Physics</span>, <span class=\"date\">1994</span>. "
+          ]
         }
       }, 
       "classifications": {
@@ -2474,7 +2546,7 @@
       "rec_class": "Document", 
       "rec_created_date": "940504", 
       "rec_id": "4968605", 
-      "rec_modified_date": "2013-12-10T15:19:42.971674", 
+      "rec_modified_date": "2014-07-22T15:46:01.978312", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Bibliography", 
@@ -2493,7 +2565,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"title\">The Cast iron story</span>. <span class=\"publication_places\">ncu</span>: <span class=\"publishers\">W.J. Klein Co.</span>, <span class=\"date\">1978</span>. "
+          "mla": [
+            "11510774", 
+            "<span class=\"title\">The Cast iron story</span>. <span class=\"publication_places\">ncu</span>: <span class=\"publishers\">W.J. Klein Co.</span>, <span class=\"date\">1978</span>. "
+          ]
         }
       }, 
       "classifications": {
@@ -2568,7 +2643,7 @@
       "rec_class": "Document", 
       "rec_created_date": "820106", 
       "rec_id": "11510774", 
-      "rec_modified_date": "2013-12-10T15:19:42.973422", 
+      "rec_modified_date": "2014-07-22T15:46:01.979951", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Film", 
@@ -2622,7 +2697,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"title\">Campbell County, Wyoming</span>. <span class=\"publication_places\">wyu</span>: <span class=\"publishers\">Campbell County Chamber of Commerce</span>, <span class=\"date\">[1982?]</span>. "
+          "mla": [
+            "5466714", 
+            "<span class=\"title\">Campbell County, Wyoming</span>. <span class=\"publication_places\">wyu</span>: <span class=\"publishers\">Campbell County Chamber of Commerce</span>, <span class=\"date\">[1982?]</span>. "
+          ]
         }
       }, 
       "classifications": {
@@ -2680,7 +2758,7 @@
       "rec_class": "Document", 
       "rec_created_date": "830222", 
       "rec_id": "5466714", 
-      "rec_modified_date": "2013-12-10T15:19:42.974716", 
+      "rec_modified_date": "2014-07-22T15:46:01.981151", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Map", 
@@ -2709,7 +2787,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"title\">3 Viennese arias :: for soprano, obbligato clarinet in B flat, and piano</span>. <span class=\"publication_places\">London</span>: <span class=\"publishers\">Nova Music</span>, <span class=\"date\">c1984</span>. "
+          "mla": [
+            "5594130", 
+            "<span class=\"title\">3 Viennese arias :: for soprano, obbligato clarinet in B flat, and piano</span>. <span class=\"publication_places\">London</span>: <span class=\"publishers\">Nova Music</span>, <span class=\"date\">c1984</span>. "
+          ]
         }
       }, 
       "classifications": {
@@ -2841,7 +2922,7 @@
       "rec_class": "Document", 
       "rec_created_date": "850813", 
       "rec_id": "5594130", 
-      "rec_modified_date": "2013-12-10T15:19:42.978263", 
+      "rec_modified_date": "2014-07-22T15:46:01.984336", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "MusicalScore", 
@@ -2885,7 +2966,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"title\">2001 bluegrass odyssey</span>. <span class=\"publication_places\">ncu</span>: <span class=\"publishers\">Lamon Records</span>, <span class=\"date\">p1980</span>. "
+          "mla": [
+            "5718053", 
+            "<span class=\"title\">2001 bluegrass odyssey</span>. <span class=\"publication_places\">ncu</span>: <span class=\"publishers\">Lamon Records</span>, <span class=\"date\">p1980</span>. "
+          ]
         }
       }, 
       "classifications": {
@@ -2955,7 +3039,7 @@
       "rec_class": "Document", 
       "rec_created_date": "940829", 
       "rec_id": "5718053", 
-      "rec_modified_date": "2013-12-10T15:19:42.979641", 
+      "rec_modified_date": "2014-07-22T15:46:01.985594", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "MusicRecording", 
@@ -2983,7 +3067,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"title\">Massachusetts death and marriage records, 1837-1897</span>. "
+          "mla": [
+            "5810505", 
+            "<span class=\"title\">Massachusetts death and marriage records, 1837-1897</span>. "
+          ]
         }
       }, 
       "date_sort": {
@@ -3025,7 +3112,7 @@
       "rec_class": "Document", 
       "rec_created_date": "830926", 
       "rec_id": "5810505", 
-      "rec_modified_date": "2013-12-10T15:19:42.980854", 
+      "rec_modified_date": "2014-07-22T15:46:01.986738", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Manuscript", 
@@ -3069,7 +3156,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.tpages=75&amp;rft.au=Antonin%2C+C%C3%A9line&amp;rft.date=2009-09&amp;rft.atitle=Age%2C+revenu+et+comportements+d%27%C3%A9pargne+des+m%C3%A9nages+%3A+une+analyse+th%C3%A9orique+et+empirique+sur+la+p%C3%A9riode+1978-2006&amp;ctx_ver=Z39.88-2004\"></span><span class=\"creator\">Antonin, Céline</span>. <span class=\"title\">Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006</span>. <span class=\"thesis_degree\">MA thesis.</span> <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Ecole d'Economie de Paris</span>, <span class=\"date\">sep. 2009</span>. "
+          "mla": [
+            "84e659b5-11a6-11e4-8bfd-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.tpages=75&amp;rft.au=Antonin%2C+C%C3%A9line&amp;rft.date=2009-09&amp;rft.atitle=Age%2C+revenu+et+comportements+d%27%C3%A9pargne+des+m%C3%A9nages+%3A+une+analyse+th%C3%A9orique+et+empirique+sur+la+p%C3%A9riode+1978-2006&amp;ctx_ver=Z39.88-2004\"></span><span class=\"creator\">Antonin, Céline</span>. <span class=\"title\">Age, revenu et comportements d'épargne des ménages : une analyse théorique et empirique sur la période 1978-2006</span>. <span class=\"thesis_degree\">MA thesis.</span> <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Ecole d'Economie de Paris</span>, <span class=\"date\">sep. 2009</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -3131,9 +3221,9 @@
         "Ecole d'Economie de Paris"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.983031", 
-      "rec_id": "1cf99075-61a6-11e3-8171-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.983039", 
+      "rec_created_date": "2014-07-22T15:46:01.989005", 
+      "rec_id": "84e659b5-11a6-11e4-8bfd-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.989012", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "MasterThesis", 
@@ -3142,7 +3232,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=69&amp;rft.date=2012-12&amp;rft.volume=2012%2F1&amp;rft.atitle=Client%C3%A9lisme+en+situation.+%C3%89changes+politiques%2C+politisation+et+conflits+moraux&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Cahiers+des+Am%C3%A9riques+latines&amp;rft.genre=issue\"></span><span class=\"creator\">Combes, Hélène</span>. \"<span class=\"title\">Clientélisme en situation. Échanges politiques, politisation et conflits moraux</span>.\" <span class=\"title\">Cahiers des Amériques latines</span>. <span class=\"publication_places\">Paris</span>: <span class=\"part_volume\">2012/1</span>.<span class=\"part_issue\">69</span> <span class=\"date\">dec. 2012</span>. "
+          "mla": [
+            "84e6d90c-11a6-11e4-b2ce-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.issue=69&amp;rft.date=2012-12&amp;rft.volume=2012%2F1&amp;rft.atitle=Client%C3%A9lisme+en+situation.+%C3%89changes+politiques%2C+politisation+et+conflits+moraux&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Cahiers+des+Am%C3%A9riques+latines&amp;rft.genre=issue\"></span><span class=\"creator\">Combes, Hélène</span>. \"<span class=\"title\">Clientélisme en situation. Échanges politiques, politisation et conflits moraux</span>.\" <span class=\"title\">Cahiers des Amériques latines</span>. <span class=\"publication_places\">Paris</span>: <span class=\"part_volume\">2012/1</span>.<span class=\"part_issue\">69</span> <span class=\"date\">dec. 2012</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -3212,9 +3305,9 @@
       "part_issue": "69", 
       "part_volume": "2012/1", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.986165", 
-      "rec_id": "1cfa0b45-61a6-11e3-b6d0-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.986172", 
+      "rec_created_date": "2014-07-22T15:46:01.992275", 
+      "rec_id": "84e6d90c-11a6-11e4-b2ce-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.992282", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "PeriodicalIssue", 
@@ -3223,7 +3316,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=effects+at+home+of+initiating+production+abroad%3A+evidence+from+matched+french+firms&amp;rft.genre=unknown&amp;rft.date=2011\"></span><span class=\"creator\">Jean, Sébastien</span>, <span class=\"creator\">Alexander Hijzen</span>, and <span class=\"creator\">Thierry Mayer</span>. <span class=\"title\">The effects at home of initiating production abroad: evidence from matched french firms</span>. <span class=\"date\">2011</span>. "
+          "mla": [
+            "84e7419e-11a6-11e4-b9b7-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.jtitle=effects+at+home+of+initiating+production+abroad%3A+evidence+from+matched+french+firms&amp;rft.genre=unknown&amp;rft.date=2011\"></span><span class=\"creator\">Jean, Sébastien</span>, <span class=\"creator\">Alexander Hijzen</span>, and <span class=\"creator\">Thierry Mayer</span>. <span class=\"title\">The effects at home of initiating production abroad: evidence from matched french firms</span>. <span class=\"date\">2011</span>. "
+          ]
         }
       }, 
       "classifications": {
@@ -3318,9 +3414,9 @@
         "en"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.988745", 
-      "rec_id": "1cfa70c2-61a6-11e3-9f82-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.988752", 
+      "rec_created_date": "2014-07-22T15:46:01.994921", 
+      "rec_id": "84e7419e-11a6-11e4-b9b7-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.994936", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Preprint", 
@@ -3330,7 +3426,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=CEE+%28Sciences+Po%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=29&amp;rft.place=Paris&amp;rft.date=2013-04&amp;rft.btitle=Greengram+-+Green+Growth+in+South+East+Asian+Metropolis&amp;ctx_ver=Z39.88-2004&amp;rft.genre=report\"></span><span class=\"creator\">Artigas, Alvaro</span>, <span class=\"creator\">Tadashi Matsumoto</span>, and <span class=\"creator\">Tommaso Vitale</span>. <span class=\"title\">Greengram - Green Growth in South East Asian Metropolis</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">CEE (Sciences Po)</span>, <span class=\"date\">apr. 2013</span>. "
+          "mla": [
+            "84e7d263-11a6-11e4-a787-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft.pub=CEE+%28Sciences+Po%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.tpages=29&amp;rft.place=Paris&amp;rft.date=2013-04&amp;rft.btitle=Greengram+-+Green+Growth+in+South+East+Asian+Metropolis&amp;ctx_ver=Z39.88-2004&amp;rft.genre=report\"></span><span class=\"creator\">Artigas, Alvaro</span>, <span class=\"creator\">Tadashi Matsumoto</span>, and <span class=\"creator\">Tommaso Vitale</span>. <span class=\"title\">Greengram - Green Growth in South East Asian Metropolis</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">CEE (Sciences Po)</span>, <span class=\"date\">apr. 2013</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -3409,9 +3508,9 @@
         "CEE (Sciences Po)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.992615", 
-      "rec_id": "1cfb07a6-61a6-11e3-800b-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.992622", 
+      "rec_created_date": "2014-07-22T15:46:01.998637", 
+      "rec_id": "84e7d263-11a6-11e4-a787-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:01.998643", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Report", 
@@ -3420,7 +3519,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"creator\">Vitale, Tommaso</span>. \"<span class=\"title\">Famiglie, corsi di vita e accoglienza. Spazi e opportunità di solidarietà in contesto urbano</span>.\" <span class=\"title\">Affidabile. La costruzione di un percorso per i bambini e le loro famiglie</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Silvia Amato</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Carmelita De Simone</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Silvia Zandrini</span>. <span class=\"publication_places\">Milan</span>: <span class=\"publishers\">Quaderno dell'Assessorato Famiglia Scuola e Politiche sociali del Comune di Milano</span>, <span class=\"date\">2011</span>. <span class=\"part_page_begin\">89</span>-<span class=\"part_page_end\">98</span>. "
+          "mla": [
+            "84e86500-11a6-11e4-aa34-10ddb1caecd6", 
+            "<span class=\"creator\">Vitale, Tommaso</span>. \"<span class=\"title\">Famiglie, corsi di vita e accoglienza. Spazi e opportunità di solidarietà in contesto urbano</span>.\" <span class=\"title\">Affidabile. La costruzione di un percorso per i bambini e le loro famiglie</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Silvia Amato</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Carmelita De Simone</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> Silvia Zandrini</span>. <span class=\"publication_places\">Milan</span>: <span class=\"publishers\">Quaderno dell'Assessorato Famiglia Scuola e Politiche sociali del Comune di Milano</span>, <span class=\"date\">2011</span>. <span class=\"part_page_begin\">89</span>-<span class=\"part_page_end\">98</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -3516,9 +3618,9 @@
       "part_page_begin": "89", 
       "part_page_end": "98", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.996042", 
-      "rec_id": "1cfb8cbd-61a6-11e3-bf5d-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.996049", 
+      "rec_created_date": "2014-07-22T15:46:02.002413", 
+      "rec_id": "84e86500-11a6-11e4-aa34-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.002420", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "ReportPart", 
@@ -3527,7 +3629,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"creator\">Durand, Marie-Françoise, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Christian Lequesne, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)</span>. <span class=\"publishers\">Sciences Po - CERI</span>; <span class=\"publishers\">Sciences Po - Atelier de cartographie</span>, <span class=\"date\">2012</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://ceriscope.sciences-po.fr/pauvrete\" target=\"_blank\">http://ceriscope.sciences-po.fr/pauvrete</a>&gt;</span>"
+          "mla": [
+            "84e8bf45-11a6-11e4-83f4-10ddb1caecd6", 
+            "<span class=\"creator\">Durand, Marie-Françoise, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">Christian Lequesne, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">Ceriscope - Pauvreté (changer d'échelle et de regard sur la pauvreté)</span>. <span class=\"publishers\">Sciences Po - CERI</span>; <span class=\"publishers\">Sciences Po - Atelier de cartographie</span>, <span class=\"date\">2012</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://ceriscope.sciences-po.fr/pauvrete\" target=\"_blank\">http://ceriscope.sciences-po.fr/pauvrete</a>&gt;</span>"
+          ]
         }
       }, 
       "creators": [
@@ -3588,9 +3693,9 @@
         "Sciences Po - Atelier de cartographie"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:42.998465", 
-      "rec_id": "1cfbebdc-61a6-11e3-a5ac-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:42.998473", 
+      "rec_created_date": "2014-07-22T15:46:02.004706", 
+      "rec_id": "84e8bf45-11a6-11e4-83f4-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.004712", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WebSite", 
@@ -3612,7 +3717,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"creator\">Do, Quoc-Anh</span>, and <span class=\"creator\">Filipe R Campante</span>. <span class=\"title\">Isolated Capital Cities, Accountability and Corruption Evidence from US States: Evidence from US States</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Sciences Po - ECON</span>, <span class=\"date\">aug. 2012</span>. "
+          "mla": [
+            "84e92ef0-11a6-11e4-8aaf-10ddb1caecd6", 
+            "<span class=\"creator\">Do, Quoc-Anh</span>, and <span class=\"creator\">Filipe R Campante</span>. <span class=\"title\">Isolated Capital Cities, Accountability and Corruption Evidence from US States: Evidence from US States</span>. <span class=\"publication_places\">Paris</span>: <span class=\"publishers\">Sciences Po - ECON</span>, <span class=\"date\">aug. 2012</span>. "
+          ]
         }
       }, 
       "classifications": {
@@ -3703,9 +3811,9 @@
         "Sciences Po - ECON"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.001324", 
-      "rec_id": "1cfc5bd9-61a6-11e3-bb92-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:43.001331", 
+      "rec_created_date": "2014-07-22T15:46:02.007558", 
+      "rec_id": "84e92ef0-11a6-11e4-8aaf-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.007564", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "WorkingPaper", 

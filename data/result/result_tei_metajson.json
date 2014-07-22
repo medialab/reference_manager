@@ -1,0 +1,35 @@
+{
+  "rec_class": "Collection", 
+  "rec_metajson": 1, 
+  "records": [
+    {
+      "citations": {
+        "html": {
+          "mla": [
+            "852458d9-11a6-11e4-98c8-10ddb1caecd6", 
+            "<span class=\"title\">%%META TITLE langue fr: %%META SOUS-TITRE</span>. "
+          ]
+        }
+      }, 
+      "date_sort": {
+        "$date": 0
+      }, 
+      "languages": [
+        "fr"
+      ], 
+      "rec_class": "Document", 
+      "rec_created_date": "2014-07-22T15:46:02.395327", 
+      "rec_id": "852458d9-11a6-11e4-98c8-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.395337", 
+      "rec_status": "private", 
+      "title": "%%META TITLE langue fr", 
+      "title_sub": "%%META SOUS-TITRE", 
+      "title_translateds": [
+        {
+          "language": "en", 
+          "title": "%%META TITLE langue en"
+        }
+      ]
+    }
+  ]
+}

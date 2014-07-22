@@ -40,9 +40,10 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-12-10T15:19:43.053542", 
+      "rec_created_date": "2014-07-22T15:46:02.061955", 
       "rec_id": "2441/dgsgfsdgf", 
-      "rec_modified_date": "2013-12-10T15:19:43.053553", 
+      "rec_modified_date": "2014-07-22T15:46:02.061962", 
+      "rec_source": "test", 
       "rec_status": "private", 
       "title": "project_title"
     }, 
@@ -183,9 +184,10 @@
         ]
       }, 
       "rec_class": "Person", 
-      "rec_created_date": "2013-12-10T15:19:43.055956", 
-      "rec_id": "1d04b1cc-61a6-11e3-9e98-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:43.055964", 
+      "rec_created_date": "2014-07-22T15:46:02.064070", 
+      "rec_id": "84f1ce85-11a6-11e4-9b9a-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.064076", 
+      "rec_source": "test", 
       "rec_status": "private", 
       "relationships": [
         {
@@ -341,9 +343,10 @@
       "name_family": "Martin", 
       "name_given": "Paul", 
       "rec_class": "Person", 
-      "rec_created_date": "2013-12-10T15:19:43.056452", 
-      "rec_id": "1d04c5c0-61a6-11e3-80da-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:43.056458", 
+      "rec_created_date": "2014-07-22T15:46:02.064459", 
+      "rec_id": "84f1de26-11a6-11e4-b510-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.064464", 
+      "rec_source": "test", 
       "rec_status": "private"
     }, 
     {
@@ -438,9 +441,10 @@
         }
       ], 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-12-10T15:19:43.057672", 
-      "rec_id": "1d04f519-61a6-11e3-9c41-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:43.057678", 
+      "rec_created_date": "2014-07-22T15:46:02.065649", 
+      "rec_id": "84f20c78-11a6-11e4-a770-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.065655", 
+      "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "laboratory", 
       "research_coverage_classifications": {
@@ -508,9 +512,10 @@
       ], 
       "name": "Sciences Po", 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-12-10T15:19:43.057989", 
-      "rec_id": "1d0501de-61a6-11e3-8a7c-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:43.057994", 
+      "rec_created_date": "2014-07-22T15:46:02.065949", 
+      "rec_id": "84f2184f-11a6-11e4-99d7-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.065954", 
+      "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "university"
     }, 
@@ -524,9 +529,10 @@
       ], 
       "nationality": "UN", 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-12-10T15:19:43.058710", 
+      "rec_created_date": "2014-07-22T15:46:02.066577", 
       "rec_id": "2441/9labe9r4se65i78968605ah42", 
-      "rec_modified_date": "2013-12-10T15:19:43.058715", 
+      "rec_modified_date": "2014-07-22T15:46:02.066583", 
+      "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "publisher", 
       "self_archiving_policy": {
@@ -652,9 +658,10 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-12-10T15:19:43.059338", 
-      "rec_id": "1d05366b-61a6-11e3-b02d-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:43.059344", 
+      "rec_created_date": "2014-07-22T15:46:02.067116", 
+      "rec_id": "84f245b3-11a6-11e4-a5e3-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.067121", 
+      "rec_source": "test", 
       "rec_status": "private", 
       "research_coverage_keywords": {
         "en": [
@@ -753,9 +760,10 @@
         }
       ], 
       "rec_class": "Orgunit", 
-      "rec_created_date": "2013-12-10T15:19:43.061245", 
+      "rec_created_date": "2014-07-22T15:46:02.068970", 
       "rec_id": "2441/9labe9r4se65i789685q380gh", 
-      "rec_modified_date": "2013-12-10T15:19:43.061255", 
+      "rec_modified_date": "2014-07-22T15:46:02.068976", 
+      "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "researchCenter", 
       "research_coverage_keywords": {
@@ -965,9 +973,10 @@
         }
       ], 
       "rec_class": "Person", 
-      "rec_created_date": "2013-12-10T15:19:43.065616", 
+      "rec_created_date": "2014-07-22T15:46:02.073009", 
       "rec_id": "2441/9labe9r4se65i789685q591o2", 
-      "rec_modified_date": "2013-12-10T15:19:43.065628", 
+      "rec_modified_date": "2014-07-22T15:46:02.073015", 
+      "rec_source": "test", 
       "rec_status": "private", 
       "research_coverage_keywords": {
         "fr": [
@@ -1088,9 +1097,10 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-12-10T15:19:43.066645", 
+      "rec_created_date": "2014-07-22T15:46:02.074163", 
       "rec_id": "2441/d7a7evb2ctdg4i89gesb82lpp", 
-      "rec_modified_date": "2013-12-10T15:19:43.066652", 
+      "rec_modified_date": "2014-07-22T15:46:02.074169", 
+      "rec_source": "test", 
       "rec_status": "private", 
       "title": "Concurrences de légitimité, types de contestation et transformations de la place de l'Etat dans les sociétés européennes"
     }, 
@@ -1120,9 +1130,10 @@
         }
       ], 
       "rec_class": "Project", 
-      "rec_created_date": "2013-12-10T15:19:43.067559", 
+      "rec_created_date": "2014-07-22T15:46:02.075139", 
       "rec_id": "2441/53r60a8s3kup1vc9jh5ki109i", 
-      "rec_modified_date": "2013-12-10T15:19:43.067565", 
+      "rec_modified_date": "2014-07-22T15:46:02.075145", 
+      "rec_source": "test", 
       "rec_status": "private", 
       "title": "An Inquiry into Modes of Existence"
     }

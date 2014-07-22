@@ -5,7 +5,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=2626&amp;rft.epage=2631&amp;rft.date=1995&amp;rft.volume=25&amp;rft.atitle=T-lymphocytes+from+normal+human+peritoneum+are+phenotypically+different+from+their+counterparts+in+peripheral+blood+and+CD3-+lymphocyte+subsets+contain+mRNA+for+the+recombination+activating+gene+RAG-1&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=European+Journal+of+Immunology&amp;rft.genre=article\"></span><span class=\"creator\">Hartmann, J.</span>, <span class=\"creator\">V. Maassen</span>, <span class=\"creator\">P. Rieber</span>, and <span class=\"creator\">H. Fricke</span>. \"<span class=\"title\">T-lymphocytes from normal human peritoneum are phenotypically different from their counterparts in peripheral blood and CD3- lymphocyte subsets contain mRNA for the recombination activating gene RAG-1</span>.\" <span class=\"title\">European Journal of Immunology</span>. <span class=\"part_volume\">25</span>. <span class=\"date\">(1995)</span>. <span class=\"part_page_begin\">2626</span>-<span class=\"part_page_end\">2631</span>. "
+          "mla": [
+            "84f5ada8-11a6-11e4-9815-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=2626&amp;rft.epage=2631&amp;rft.date=1995&amp;rft.volume=25&amp;rft.atitle=T-lymphocytes+from+normal+human+peritoneum+are+phenotypically+different+from+their+counterparts+in+peripheral+blood+and+CD3-+lymphocyte+subsets+contain+mRNA+for+the+recombination+activating+gene+RAG-1&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=European+Journal+of+Immunology&amp;rft.genre=article\"></span><span class=\"creator\">Hartmann, J.</span>, <span class=\"creator\">V. Maassen</span>, <span class=\"creator\">P. Rieber</span>, and <span class=\"creator\">H. Fricke</span>. \"<span class=\"title\">T-lymphocytes from normal human peritoneum are phenotypically different from their counterparts in peripheral blood and CD3- lymphocyte subsets contain mRNA for the recombination activating gene RAG-1</span>.\" <span class=\"title\">European Journal of Immunology</span>. <span class=\"part_volume\">25</span>. <span class=\"date\">(1995)</span>. <span class=\"part_page_begin\">2626</span>-<span class=\"part_page_end\">2631</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -88,9 +91,9 @@
       "part_volume": "25", 
       "publication_status": "IN FILE", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.082760", 
-      "rec_id": "1d08c8ab-61a6-11e3-b2c7-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:43.082772", 
+      "rec_created_date": "2014-07-22T15:46:02.089449", 
+      "rec_id": "84f5ada8-11a6-11e4-9815-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.089457", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -99,7 +102,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Elsevier+Scientific+Publishing+Company&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Amsterdam&amp;rft.date=1975&amp;rft.btitle=Porphyrins+and+metalloporphyrins&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Smith, K.M.</span> <span class=\"title\">Porphyrins and metalloporphyrins</span>. <span class=\"publication_places\">Amsterdam</span>: <span class=\"publishers\">Elsevier Scientific Publishing Company</span>, <span class=\"date\">1975</span>. "
+          "mla": [
+            "84f5d06b-11a6-11e4-97ad-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft.pub=Elsevier+Scientific+Publishing+Company&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Amsterdam&amp;rft.date=1975&amp;rft.btitle=Porphyrins+and+metalloporphyrins&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Smith, K.M.</span> <span class=\"title\">Porphyrins and metalloporphyrins</span>. <span class=\"publication_places\">Amsterdam</span>: <span class=\"publishers\">Elsevier Scientific Publishing Company</span>, <span class=\"date\">1975</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -134,9 +140,9 @@
         "Elsevier Scientific Publishing Company"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.083457", 
-      "rec_id": "1d08e47d-61a6-11e3-b721-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:43.083463", 
+      "rec_created_date": "2014-07-22T15:46:02.090326", 
+      "rec_id": "84f5d06b-11a6-11e4-97ad-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.090332", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -145,7 +151,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Raven+Press%2C+Ltd.&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=1029&amp;rft.epage=1053&amp;rft.place=New+York&amp;rft.date=1995&amp;rft.btitle=Hypertension%3A+Pathophysiology%2C+Diagnosis%2C+and+Management&amp;rft.atitle=Physiological+studies+of+the+natriuretic+peptide+family&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Lewicki, J.A.</span>, and <span class=\"creator\">A.A. Protter</span>. \"<span class=\"title\">Physiological studies of the natriuretic peptide family</span>.\" <span class=\"title\">Hypertension: Pathophysiology, Diagnosis, and Management</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> J.H. Laragh</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> B.M. Brenner</span>. <span class=\"publication_places\">New York</span>: <span class=\"publishers\">Raven Press, Ltd.</span>, <span class=\"part_volume\">2</span>.<span class=\"part_issue\">61</span> <span class=\"date\">1995</span>. <span class=\"part_page_begin\">1029</span>-<span class=\"part_page_end\">1053</span>. "
+          "mla": [
+            "84f61161-11a6-11e4-8127-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft.pub=Raven+Press%2C+Ltd.&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=1029&amp;rft.epage=1053&amp;rft.place=New+York&amp;rft.date=1995&amp;rft.btitle=Hypertension%3A+Pathophysiology%2C+Diagnosis%2C+and+Management&amp;rft.atitle=Physiological+studies+of+the+natriuretic+peptide+family&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Lewicki, J.A.</span>, and <span class=\"creator\">A.A. Protter</span>. \"<span class=\"title\">Physiological studies of the natriuretic peptide family</span>.\" <span class=\"title\">Hypertension: Pathophysiology, Diagnosis, and Management</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> J.H. Laragh</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> B.M. Brenner</span>. <span class=\"publication_places\">New York</span>: <span class=\"publishers\">Raven Press, Ltd.</span>, <span class=\"part_volume\">2</span>.<span class=\"part_issue\">61</span> <span class=\"date\">1995</span>. <span class=\"part_page_begin\">1029</span>-<span class=\"part_page_end\">1053</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -251,9 +260,9 @@
         "Raven Press, Ltd."
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.084717", 
-      "rec_id": "1d0915b5-61a6-11e3-8cbc-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:43.084723", 
+      "rec_created_date": "2014-07-22T15:46:02.091989", 
+      "rec_id": "84f61161-11a6-11e4-8127-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.091995", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -262,7 +271,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=37&amp;rft.epage=47&amp;rft.date=2003&amp;rft.volume=251&amp;rft.atitle=Deep-sea+macrofauna+exposed+to+a+simulated+sedimentation+event+in+the+abyssal+NE+Atlantic%3A+_in+situ_+pulse-chase+experiments+using+%5Bsuper%3A13%5DC-labelled+phytodetritus&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Marine+Ecology+Progress+Series&amp;rft.genre=article\"></span><span class=\"creator\">Aberle, N.</span>, and <span class=\"creator\">U. Witte</span>. \"<span class=\"title\">Deep-sea macrofauna exposed to a simulated sedimentation event in the abyssal NE Atlantic: _in situ_ pulse-chase experiments using [super:13]C-labelled phytodetritus</span>.\" <span class=\"title\">Marine Ecology Progress Series</span>. <span class=\"publication_places\">Oldendorf/Luhe</span>: <span class=\"publishers\">Inter-Research</span>, <span class=\"part_volume\">251</span>. <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">37</span>-<span class=\"part_page_end\">47</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.int-res.com/abstracts/meps/v251/p37-47ID  - Aberle+Witte2003\" target=\"_blank\">http://www.int-res.com/abstracts/meps/v251/p37-47ID  - Aberle+Witte2003</a>&gt;</span>"
+          "mla": [
+            "84f641d1-11a6-11e4-897e-10ddb1caecd6", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=37&amp;rft.epage=47&amp;rft.date=2003&amp;rft.volume=251&amp;rft.atitle=Deep-sea+macrofauna+exposed+to+a+simulated+sedimentation+event+in+the+abyssal+NE+Atlantic%3A+_in+situ_+pulse-chase+experiments+using+%5Bsuper%3A13%5DC-labelled+phytodetritus&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Marine+Ecology+Progress+Series&amp;rft.genre=article\"></span><span class=\"creator\">Aberle, N.</span>, and <span class=\"creator\">U. Witte</span>. \"<span class=\"title\">Deep-sea macrofauna exposed to a simulated sedimentation event in the abyssal NE Atlantic: _in situ_ pulse-chase experiments using [super:13]C-labelled phytodetritus</span>.\" <span class=\"title\">Marine Ecology Progress Series</span>. <span class=\"publication_places\">Oldendorf/Luhe</span>: <span class=\"publishers\">Inter-Research</span>, <span class=\"part_volume\">251</span>. <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">37</span>-<span class=\"part_page_end\">47</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.int-res.com/abstracts/meps/v251/p37-47ID  - Aberle+Witte2003\" target=\"_blank\">http://www.int-res.com/abstracts/meps/v251/p37-47ID  - Aberle+Witte2003</a>&gt;</span>"
+          ]
         }
       }, 
       "creators": [
@@ -333,9 +345,9 @@
         "Inter-Research"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.085611", 
-      "rec_id": "1d0938ab-61a6-11e3-92d3-406c8f07170d", 
-      "rec_modified_date": "2013-12-10T15:19:43.085617", 
+      "rec_created_date": "2014-07-22T15:46:02.093229", 
+      "rec_id": "84f641d1-11a6-11e4-897e-10ddb1caecd6", 
+      "rec_modified_date": "2014-07-22T15:46:02.093234", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -350,7 +362,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Cambridge+University+Press+%28UK%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=3&amp;rft.epage=14&amp;rft.place=Cambridge&amp;rft.date=1997&amp;rft.btitle=Antarctic+Communities%3A+Species%2C+Structure+and+Survival&amp;rft.atitle=Antarctic+marine+biodiversity%3A+an+overview&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Arntz, WE</span>, <span class=\"creator\">J. Gutt</span>, and <span class=\"creator\">M. Klages</span>. \"<span class=\"title\">Antarctic marine biodiversity: an overview</span>.\" <span class=\"title\">Antarctic Communities: Species, Structure and Survival</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> B. Battaglia</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> J. Valencia</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> DWH Walton</span>. <span class=\"publication_places\">Cambridge</span>: <span class=\"publishers\">Cambridge University Press (UK)</span>, <span class=\"date\">1997</span>. <span class=\"part_page_begin\">3</span>-<span class=\"part_page_end\">14</span>. "
+          "mla": [
+            "Arntz++1997", 
+            "<span class=\"Z3988\" title=\"rft.pub=Cambridge+University+Press+%28UK%29&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=3&amp;rft.epage=14&amp;rft.place=Cambridge&amp;rft.date=1997&amp;rft.btitle=Antarctic+Communities%3A+Species%2C+Structure+and+Survival&amp;rft.atitle=Antarctic+marine+biodiversity%3A+an+overview&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Arntz, WE</span>, <span class=\"creator\">J. Gutt</span>, and <span class=\"creator\">M. Klages</span>. \"<span class=\"title\">Antarctic marine biodiversity: an overview</span>.\" <span class=\"title\">Antarctic Communities: Species, Structure and Survival</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> B. Battaglia</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> J. Valencia</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> DWH Walton</span>. <span class=\"publication_places\">Cambridge</span>: <span class=\"publishers\">Cambridge University Press (UK)</span>, <span class=\"date\">1997</span>. <span class=\"part_page_begin\">3</span>-<span class=\"part_page_end\">14</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -458,9 +473,9 @@
         "Cambridge University Press (UK)"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.087151", 
+      "rec_created_date": "2014-07-22T15:46:02.095284", 
       "rec_id": "Arntz++1997", 
-      "rec_modified_date": "2013-12-10T15:19:43.087157", 
+      "rec_modified_date": "2014-07-22T15:46:02.095289", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -469,7 +484,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Blackwell+Science+Ltd&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=143&amp;rft.epage=183&amp;rft.place=Oxford&amp;rft.date=2003&amp;rft.btitle=Sea+ice+-+an+introduction+to+its+physics%2C+chemistry%2C+biology+and+geology&amp;rft.atitle=Primary+production+in+sea+ice&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Arrigo, KR</span>. \"<span class=\"title\">Primary production in sea ice</span>.\" <span class=\"title\">Sea ice - an introduction to its physics, chemistry, biology and geology</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> DN Thomas</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> GS Dieckmann</span>. <span class=\"publication_places\">Oxford</span>: <span class=\"publishers\">Blackwell Science Ltd</span>, <span class=\"date\">2003</span>. <span class=\"part_page_begin\">143</span>-<span class=\"part_page_end\">183</span>. "
+          "mla": [
+            "Arrigo2003", 
+            "<span class=\"Z3988\" title=\"rft.pub=Blackwell+Science+Ltd&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=143&amp;rft.epage=183&amp;rft.place=Oxford&amp;rft.date=2003&amp;rft.btitle=Sea+ice+-+an+introduction+to+its+physics%2C+chemistry%2C+biology+and+geology&amp;rft.atitle=Primary+production+in+sea+ice&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Arrigo, KR</span>. \"<span class=\"title\">Primary production in sea ice</span>.\" <span class=\"title\">Sea ice - an introduction to its physics, chemistry, biology and geology</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> DN Thomas</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> GS Dieckmann</span>. <span class=\"publication_places\">Oxford</span>: <span class=\"publishers\">Blackwell Science Ltd</span>, <span class=\"date\">2003</span>. <span class=\"part_page_begin\">143</span>-<span class=\"part_page_end\">183</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -532,9 +550,9 @@
         "Blackwell Science Ltd"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.088172", 
+      "rec_created_date": "2014-07-22T15:46:02.096674", 
       "rec_id": "Arrigo2003", 
-      "rec_modified_date": "2013-12-10T15:19:43.088179", 
+      "rec_modified_date": "2014-07-22T15:46:02.096679", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -543,7 +561,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=275&amp;rft.issue=2&amp;rft.epage=282&amp;rft.date=2003&amp;rft.volume=143&amp;rft.atitle=Respiration+and+lipid+content+of+the+Arctic+copepod+_Calanus+hyperboreus_+overwintering+1+m+above+the+seafloor+at+2%2C300+m+water+depth+in+the+Fram+Strait&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Marine+Biology&amp;rft.genre=article\"></span><span class=\"creator\">Auel, H.</span>, <span class=\"creator\">M. Klages</span>, and <span class=\"creator\">I. Werner</span>. \"<span class=\"title\">Respiration and lipid content of the Arctic copepod _Calanus hyperboreus_ overwintering 1 m above the seafloor at 2,300 m water depth in the Fram Strait</span>.\" <span class=\"title\">Marine Biology</span>. <span class=\"publication_places\">Heidelberg</span>: <span class=\"publishers\">Springer-Verlag</span>, <span class=\"part_volume\">143</span>.<span class=\"part_issue\">2</span> <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">275</span>-<span class=\"part_page_end\">282</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.springerlink.com/openurl.asp?genre=article&issn=0025-3162&volume=143&issue=2&spage=275\" target=\"_blank\">http://www.springerlink.com/openurl.asp?genre=article&issn=0025-3162&volume=143&issue=2&spage=275</a>&gt;</span>"
+          "mla": [
+            "Auel++2003", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=275&amp;rft.issue=2&amp;rft.epage=282&amp;rft.date=2003&amp;rft.volume=143&amp;rft.atitle=Respiration+and+lipid+content+of+the+Arctic+copepod+_Calanus+hyperboreus_+overwintering+1+m+above+the+seafloor+at+2%2C300+m+water+depth+in+the+Fram+Strait&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Marine+Biology&amp;rft.genre=article\"></span><span class=\"creator\">Auel, H.</span>, <span class=\"creator\">M. Klages</span>, and <span class=\"creator\">I. Werner</span>. \"<span class=\"title\">Respiration and lipid content of the Arctic copepod _Calanus hyperboreus_ overwintering 1 m above the seafloor at 2,300 m water depth in the Fram Strait</span>.\" <span class=\"title\">Marine Biology</span>. <span class=\"publication_places\">Heidelberg</span>: <span class=\"publishers\">Springer-Verlag</span>, <span class=\"part_volume\">143</span>.<span class=\"part_issue\">2</span> <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">275</span>-<span class=\"part_page_end\">282</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.springerlink.com/openurl.asp?genre=article&issn=0025-3162&volume=143&issue=2&spage=275\" target=\"_blank\">http://www.springerlink.com/openurl.asp?genre=article&issn=0025-3162&volume=143&issue=2&spage=275</a>&gt;</span>"
+          ]
         }
       }, 
       "creators": [
@@ -615,9 +636,9 @@
         "Springer-Verlag"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.089121", 
+      "rec_created_date": "2014-07-22T15:46:02.098007", 
       "rec_id": "Auel++2003", 
-      "rec_modified_date": "2013-12-10T15:19:43.089127", 
+      "rec_modified_date": "2014-07-22T15:46:02.098012", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -632,7 +653,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.atitle=Echographiekartierung+und+physikalische+Eigenschaften+der+oberfl%C3%A4chennahen+Sedimente+in+der+Laptevsee&amp;ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.au=Benthien%2C+A.&amp;rft.date=1994\"></span><span class=\"creator\">Benthien, A.</span> \"<span class=\"title\">Echographiekartierung und physikalische Eigenschaften der oberflächennahen Sedimente in der Laptevsee</span>.\" <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">Kiel</span>: <span class=\"publishers\">Universität Kiel</span>, <span class=\"date\">1994</span>. "
+          "mla": [
+            "Benthien1994", 
+            "<span class=\"Z3988\" title=\"rft.atitle=Echographiekartierung+und+physikalische+Eigenschaften+der+oberfl%C3%A4chennahen+Sedimente+in+der+Laptevsee&amp;ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.au=Benthien%2C+A.&amp;rft.date=1994\"></span><span class=\"creator\">Benthien, A.</span> \"<span class=\"title\">Echographiekartierung und physikalische Eigenschaften der oberflächennahen Sedimente in der Laptevsee</span>.\" <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">Kiel</span>: <span class=\"publishers\">Universität Kiel</span>, <span class=\"date\">1994</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -670,9 +694,9 @@
         "Universität Kiel"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.089744", 
+      "rec_created_date": "2014-07-22T15:46:02.098929", 
       "rec_id": "Benthien1994", 
-      "rec_modified_date": "2013-12-10T15:19:43.089749", 
+      "rec_modified_date": "2014-07-22T15:46:02.098935", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -681,7 +705,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.atitle=Klassifikation+von+Radarsatellitendaten+zur+Meereiserkennung+mit+Hilfe+von+Line-Scanner-Messungen&amp;ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.au=Bochert%2C+A.&amp;rft.date=1996\"></span><span class=\"creator\">Bochert, A.</span> \"<span class=\"title\">Klassifikation von Radarsatellitendaten zur Meereiserkennung mit Hilfe von Line-Scanner-Messungen</span>.\" <span class=\"title\">Berichte zur Polarforschung</span>. <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">Bremerhaven</span>: <span class=\"publishers\">Alfred-Wegener Institut für Meeres- und Polarforschung</span>, <span class=\"part_volume\">209</span>. <span class=\"date\">1996</span>. "
+          "mla": [
+            "Bochert1996", 
+            "<span class=\"Z3988\" title=\"rft.atitle=Klassifikation+von+Radarsatellitendaten+zur+Meereiserkennung+mit+Hilfe+von+Line-Scanner-Messungen&amp;ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.au=Bochert%2C+A.&amp;rft.date=1996\"></span><span class=\"creator\">Bochert, A.</span> \"<span class=\"title\">Klassifikation von Radarsatellitendaten zur Meereiserkennung mit Hilfe von Line-Scanner-Messungen</span>.\" <span class=\"title\">Berichte zur Polarforschung</span>. <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">Bremerhaven</span>: <span class=\"publishers\">Alfred-Wegener Institut für Meeres- und Polarforschung</span>, <span class=\"part_volume\">209</span>. <span class=\"date\">1996</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -730,9 +757,9 @@
         "Alfred-Wegener Institut für Meeres- und Polarforschung"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.090297", 
+      "rec_created_date": "2014-07-22T15:46:02.099825", 
       "rec_id": "Bochert1996", 
-      "rec_modified_date": "2013-12-10T15:19:43.090303", 
+      "rec_modified_date": "2014-07-22T15:46:02.099831", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -741,7 +768,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.atitle=Bestimmung+der+Meereisdicke+mit+seismischen+und+elektromagnetisch-induktiven+Verfahren&amp;ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.au=Haas%2C+C.&amp;rft.date=1997\"></span><span class=\"creator\">Haas, C.</span> \"<span class=\"title\">Bestimmung der Meereisdicke mit seismischen und elektromagnetisch-induktiven Verfahren</span>.\" <span class=\"title\">Berichte zur Polarforschung</span>. <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">Bremerhaven</span>: <span class=\"publishers\">Alfred-Wegener Institut für Meeres- und Polarforschung</span>, <span class=\"part_volume\">223</span>. <span class=\"date\">1997</span>. "
+          "mla": [
+            "Haas1997", 
+            "<span class=\"Z3988\" title=\"rft.atitle=Bestimmung+der+Meereisdicke+mit+seismischen+und+elektromagnetisch-induktiven+Verfahren&amp;ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&amp;rft.au=Haas%2C+C.&amp;rft.date=1997\"></span><span class=\"creator\">Haas, C.</span> \"<span class=\"title\">Bestimmung der Meereisdicke mit seismischen und elektromagnetisch-induktiven Verfahren</span>.\" <span class=\"title\">Berichte zur Polarforschung</span>. <span class=\"thesis_degree\">PhD thesis.</span> <span class=\"publication_places\">Bremerhaven</span>: <span class=\"publishers\">Alfred-Wegener Institut für Meeres- und Polarforschung</span>, <span class=\"part_volume\">223</span>. <span class=\"date\">1997</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -790,9 +820,9 @@
         "Alfred-Wegener Institut für Meeres- und Polarforschung"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.090853", 
+      "rec_created_date": "2014-07-22T15:46:02.100651", 
       "rec_id": "Haas1997", 
-      "rec_modified_date": "2013-12-10T15:19:43.090861", 
+      "rec_modified_date": "2014-07-22T15:46:02.100656", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "DoctoralThesis", 
@@ -801,7 +831,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=707&amp;rft.issue=11&amp;rft.epage=719&amp;rft.date=2003&amp;rft.volume=26&amp;rft.atitle=The+biology+and+chemistry+of+land+fast+ice+in+the+White+Sea%2C+Russia+-+A+comparison+of+winter+and+spring+conditions&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Polar+Biology&amp;rft.genre=article\"></span><span class=\"creator\">Krell, A.</span>, <span class=\"creator\">C. Ummenhofer</span>, <span class=\"creator\">G. Kattner</span>, <span class=\"creator\">A. Naumov</span>, <span class=\"creator\">D. Evans</span>, <span class=\"creator\">GS Dieckmann</span>, and <span class=\"creator\">DN Thomas</span>. \"<span class=\"title\">The biology and chemistry of land fast ice in the White Sea, Russia - A comparison of winter and spring conditions</span>.\" <span class=\"title\">Polar Biology</span>. <span class=\"publication_places\">Heidelberg</span>: <span class=\"publishers\">Springer-Verlag</span>, <span class=\"part_volume\">26</span>.<span class=\"part_issue\">11</span> <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">707</span>-<span class=\"part_page_end\">719</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.springerlink.com/openurl.asp?genre=article&issn=0722-4060&volume=26&issue=11&spage=707\" target=\"_blank\">http://www.springerlink.com/openurl.asp?genre=article&issn=0722-4060&volume=26&issue=11&spage=707</a>&gt;</span>"
+          "mla": [
+            "Krell++2003", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=707&amp;rft.issue=11&amp;rft.epage=719&amp;rft.date=2003&amp;rft.volume=26&amp;rft.atitle=The+biology+and+chemistry+of+land+fast+ice+in+the+White+Sea%2C+Russia+-+A+comparison+of+winter+and+spring+conditions&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Polar+Biology&amp;rft.genre=article\"></span><span class=\"creator\">Krell, A.</span>, <span class=\"creator\">C. Ummenhofer</span>, <span class=\"creator\">G. Kattner</span>, <span class=\"creator\">A. Naumov</span>, <span class=\"creator\">D. Evans</span>, <span class=\"creator\">GS Dieckmann</span>, and <span class=\"creator\">DN Thomas</span>. \"<span class=\"title\">The biology and chemistry of land fast ice in the White Sea, Russia - A comparison of winter and spring conditions</span>.\" <span class=\"title\">Polar Biology</span>. <span class=\"publication_places\">Heidelberg</span>: <span class=\"publishers\">Springer-Verlag</span>, <span class=\"part_volume\">26</span>.<span class=\"part_issue\">11</span> <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">707</span>-<span class=\"part_page_end\">719</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.springerlink.com/openurl.asp?genre=article&issn=0722-4060&volume=26&issue=11&spage=707\" target=\"_blank\">http://www.springerlink.com/openurl.asp?genre=article&issn=0722-4060&volume=26&issue=11&spage=707</a>&gt;</span>"
+          ]
         }
       }, 
       "creators": [
@@ -913,9 +946,9 @@
         "Springer-Verlag"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.092552", 
+      "rec_created_date": "2014-07-22T15:46:02.102843", 
       "rec_id": "Krell++2003", 
-      "rec_modified_date": "2013-12-10T15:19:43.092558", 
+      "rec_modified_date": "2014-07-22T15:46:02.102848", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -930,7 +963,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Cambridge+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=381&amp;rft.epage=387&amp;rft.place=Cambridge&amp;rft.date=1997&amp;rft.btitle=Antarctic+Communities%3A+Species%2C+Structure+and+Survival&amp;rft.atitle=Preliminary+sediment+core+evidence+against+short-term+UV-B+induced+changes+in+Antarctic+coastal+diatom+communities&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">McMinn, A.</span>, <span class=\"creator\">H. Heijnis</span>, and <span class=\"creator\">D. Hodgson</span>. \"<span class=\"title\">Preliminary sediment core evidence against short-term UV-B induced changes in Antarctic coastal diatom communities</span>.\" <span class=\"title\">Antarctic Communities: Species, Structure and Survival</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> B. Battaglia</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> J. Valencia</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> DWH Walton</span>. <span class=\"publication_places\">Cambridge</span>: <span class=\"publishers\">Cambridge University Press</span>, <span class=\"date\">1997</span>. <span class=\"part_page_begin\">381</span>-<span class=\"part_page_end\">387</span>. "
+          "mla": [
+            "McMinn++1997", 
+            "<span class=\"Z3988\" title=\"rft.pub=Cambridge+University+Press&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.spage=381&amp;rft.epage=387&amp;rft.place=Cambridge&amp;rft.date=1997&amp;rft.btitle=Antarctic+Communities%3A+Species%2C+Structure+and+Survival&amp;rft.atitle=Preliminary+sediment+core+evidence+against+short-term+UV-B+induced+changes+in+Antarctic+coastal+diatom+communities&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">McMinn, A.</span>, <span class=\"creator\">H. Heijnis</span>, and <span class=\"creator\">D. Hodgson</span>. \"<span class=\"title\">Preliminary sediment core evidence against short-term UV-B induced changes in Antarctic coastal diatom communities</span>.\" <span class=\"title\">Antarctic Communities: Species, Structure and Survival</span>. <span class=\"creator\"><span class=\"creator_role\">Ed.</span> B. Battaglia</span>, <span class=\"creator\"><span class=\"creator_role\">Ed.</span> J. Valencia</span>, and <span class=\"creator\"><span class=\"creator_role\">Ed.</span> DWH Walton</span>. <span class=\"publication_places\">Cambridge</span>: <span class=\"publishers\">Cambridge University Press</span>, <span class=\"date\">1997</span>. <span class=\"part_page_begin\">381</span>-<span class=\"part_page_end\">387</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -1037,9 +1073,9 @@
         "Cambridge University Press"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.094168", 
+      "rec_created_date": "2014-07-22T15:46:02.104963", 
       "rec_id": "McMinn++1997", 
-      "rec_modified_date": "2013-12-10T15:19:43.094174", 
+      "rec_modified_date": "2014-07-22T15:46:02.104969", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "BookPart", 
@@ -1048,7 +1084,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=British+Antarctic+Survey&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Cambridge&amp;rft.date=1990&amp;rft.btitle=Polar+marine+diatoms&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Medlin, LK, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">J. Priddle, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">Polar marine diatoms</span>. <span class=\"publication_places\">Cambridge</span>: <span class=\"publishers\">British Antarctic Survey</span>, <span class=\"date\">1990</span>. "
+          "mla": [
+            "Medlin+Priddle1990", 
+            "<span class=\"Z3988\" title=\"rft.pub=British+Antarctic+Survey&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Cambridge&amp;rft.date=1990&amp;rft.btitle=Polar+marine+diatoms&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Medlin, LK, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">J. Priddle, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">Polar marine diatoms</span>. <span class=\"publication_places\">Cambridge</span>: <span class=\"publishers\">British Antarctic Survey</span>, <span class=\"date\">1990</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -1096,9 +1135,9 @@
         "British Antarctic Survey"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.094988", 
+      "rec_created_date": "2014-07-22T15:46:02.106015", 
       "rec_id": "Medlin+Priddle1990", 
-      "rec_modified_date": "2013-12-10T15:19:43.094993", 
+      "rec_modified_date": "2014-07-22T15:46:02.106021", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -1107,7 +1146,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=197&amp;rft.issue=2&amp;rft.epage=205&amp;rft.date=2003&amp;rft.volume=30&amp;rft.atitle=A+new+microcosm+to+investigate+oxygen+dynamics+at+the+sea+ice+water+interface&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Aquatic+Microbial+Ecology&amp;rft.genre=article\"></span><span class=\"creator\">Mock, T.</span>, <span class=\"creator\">M. Kruse</span>, and <span class=\"creator\">GS Dieckmann</span>. \"<span class=\"title\">A new microcosm to investigate oxygen dynamics at the sea ice water interface</span>.\" <span class=\"title\">Aquatic Microbial Ecology</span>. <span class=\"publication_places\">Oldendorf/Luhe</span>: <span class=\"publishers\">Inter-Research</span>, <span class=\"part_volume\">30</span>.<span class=\"part_issue\">2</span> <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">197</span>-<span class=\"part_page_end\">205</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://int-res.com/abstracts/ame/v30/n2/p197-205.html\" target=\"_blank\">http://int-res.com/abstracts/ame/v30/n2/p197-205.html</a>&gt;</span>"
+          "mla": [
+            "Mock++2003", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=197&amp;rft.issue=2&amp;rft.epage=205&amp;rft.date=2003&amp;rft.volume=30&amp;rft.atitle=A+new+microcosm+to+investigate+oxygen+dynamics+at+the+sea+ice+water+interface&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Aquatic+Microbial+Ecology&amp;rft.genre=article\"></span><span class=\"creator\">Mock, T.</span>, <span class=\"creator\">M. Kruse</span>, and <span class=\"creator\">GS Dieckmann</span>. \"<span class=\"title\">A new microcosm to investigate oxygen dynamics at the sea ice water interface</span>.\" <span class=\"title\">Aquatic Microbial Ecology</span>. <span class=\"publication_places\">Oldendorf/Luhe</span>: <span class=\"publishers\">Inter-Research</span>, <span class=\"part_volume\">30</span>.<span class=\"part_issue\">2</span> <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">197</span>-<span class=\"part_page_end\">205</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://int-res.com/abstracts/ame/v30/n2/p197-205.html\" target=\"_blank\">http://int-res.com/abstracts/ame/v30/n2/p197-205.html</a>&gt;</span>"
+          ]
         }
       }, 
       "creators": [
@@ -1210,9 +1252,9 @@
         "Inter-Research"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.096002", 
+      "rec_created_date": "2014-07-22T15:46:02.107375", 
       "rec_id": "Mock++2003", 
-      "rec_modified_date": "2013-12-10T15:19:43.096009", 
+      "rec_modified_date": "2014-07-22T15:46:02.107380", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -1227,7 +1269,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=610&amp;rft.issue=9&amp;rft.epage=620&amp;rft.date=2003&amp;rft.volume=26&amp;rft.atitle=Benthic+response+to+ice-edge-induced+particle+flux+in+the+Arctic+Ocean&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Polar+Biology&amp;rft.genre=article\"></span><span class=\"creator\">Schewe, I.</span>, and <span class=\"creator\">T. Soltwedel</span>. \"<span class=\"title\">Benthic response to ice-edge-induced particle flux in the Arctic Ocean</span>.\" <span class=\"title\">Polar Biology</span>. <span class=\"publication_places\">Heidelberg</span>: <span class=\"publishers\">Springer-Verlag</span>, <span class=\"part_volume\">26</span>.<span class=\"part_issue\">9</span> <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">610</span>-<span class=\"part_page_end\">620</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.springerlink.com/openurl.asp?genre=article&issn=0722-4060&volume=26&issue=9&spage=610\" target=\"_blank\">http://www.springerlink.com/openurl.asp?genre=article&issn=0722-4060&volume=26&issue=9&spage=610</a>&gt;</span>"
+          "mla": [
+            "Schewe+Soltwedel2003", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=610&amp;rft.issue=9&amp;rft.epage=620&amp;rft.date=2003&amp;rft.volume=26&amp;rft.atitle=Benthic+response+to+ice-edge-induced+particle+flux+in+the+Arctic+Ocean&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Polar+Biology&amp;rft.genre=article\"></span><span class=\"creator\">Schewe, I.</span>, and <span class=\"creator\">T. Soltwedel</span>. \"<span class=\"title\">Benthic response to ice-edge-induced particle flux in the Arctic Ocean</span>.\" <span class=\"title\">Polar Biology</span>. <span class=\"publication_places\">Heidelberg</span>: <span class=\"publishers\">Springer-Verlag</span>, <span class=\"part_volume\">26</span>.<span class=\"part_issue\">9</span> <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">610</span>-<span class=\"part_page_end\">620</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.springerlink.com/openurl.asp?genre=article&issn=0722-4060&volume=26&issue=9&spage=610\" target=\"_blank\">http://www.springerlink.com/openurl.asp?genre=article&issn=0722-4060&volume=26&issue=9&spage=610</a>&gt;</span>"
+          ]
         }
       }, 
       "creators": [
@@ -1289,9 +1334,9 @@
         "Springer-Verlag"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.096816", 
+      "rec_created_date": "2014-07-22T15:46:02.108520", 
       "rec_id": "Schewe+Soltwedel2003", 
-      "rec_modified_date": "2013-12-10T15:19:43.096822", 
+      "rec_modified_date": "2014-07-22T15:46:02.108525", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
@@ -1306,7 +1351,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft.pub=Blackwell+Science+Ltd&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Oxford&amp;rft.date=2003&amp;rft.btitle=Sea+ice+-+an+introduction+to+its+physics%2C+chemistry%2C+biology+and+geology&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Thomas, DN, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">GS Dieckmann, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">Sea ice - an introduction to its physics, chemistry, biology and geology</span>. <span class=\"publication_places\">Oxford</span>: <span class=\"publishers\">Blackwell Science Ltd</span>, <span class=\"date\">2003</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.blackwellpublishing.com/book.asp?ref=0632058080&site=1\" target=\"_blank\">http://www.blackwellpublishing.com/book.asp?ref=0632058080&site=1</a>&gt;</span>"
+          "mla": [
+            "Thomas+Dieckmann2003", 
+            "<span class=\"Z3988\" title=\"rft.pub=Blackwell+Science+Ltd&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&amp;rft.place=Oxford&amp;rft.date=2003&amp;rft.btitle=Sea+ice+-+an+introduction+to+its+physics%2C+chemistry%2C+biology+and+geology&amp;ctx_ver=Z39.88-2004&amp;rft.genre=book\"></span><span class=\"creator\">Thomas, DN, <span class=\"creator_role\">ed.</span></span>, and <span class=\"creator\">GS Dieckmann, <span class=\"creator_role\">ed.</span></span> <span class=\"title\">Sea ice - an introduction to its physics, chemistry, biology and geology</span>. <span class=\"publication_places\">Oxford</span>: <span class=\"publishers\">Blackwell Science Ltd</span>, <span class=\"date\">2003</span>. <span class=\"medium_of_publication\">Web</span>. <span class=\"url\">&lt;<a href=\"http://www.blackwellpublishing.com/book.asp?ref=0632058080&site=1\" target=\"_blank\">http://www.blackwellpublishing.com/book.asp?ref=0632058080&site=1</a>&gt;</span>"
+          ]
         }
       }, 
       "creators": [
@@ -1360,9 +1408,9 @@
         "Blackwell Science Ltd"
       ], 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.097583", 
+      "rec_created_date": "2014-07-22T15:46:02.109544", 
       "rec_id": "Thomas+Dieckmann2003", 
-      "rec_modified_date": "2013-12-10T15:19:43.097589", 
+      "rec_modified_date": "2014-07-22T15:46:02.109550", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "Book", 
@@ -1377,7 +1425,10 @@
     {
       "citations": {
         "html": {
-          "mla": "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=24&amp;rft.issue=1&amp;rft.epage=31&amp;rft.date=2003&amp;rft.atitle=Ice+planktonic+algae+of+the+strand+White+Sea&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Vestnik+Moskovskogo+universiteta&amp;rft.genre=article\"></span><span class=\"creator\">Zhukov, YuN</span>, and <span class=\"creator\">VD Fedorov</span>. \"<span class=\"title\">Ice planktonic algae of the strand White Sea</span>.\" <span class=\"title\">Vestnik Moskovskogo universiteta</span>. <span class=\"part_issue\">1</span> <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">24</span>-<span class=\"part_page_end\">31</span>. "
+          "mla": [
+            "Zhukov+Fedorov2003", 
+            "<span class=\"Z3988\" title=\"rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&amp;rft.spage=24&amp;rft.issue=1&amp;rft.epage=31&amp;rft.date=2003&amp;rft.atitle=Ice+planktonic+algae+of+the+strand+White+Sea&amp;ctx_ver=Z39.88-2004&amp;rft.jtitle=Vestnik+Moskovskogo+universiteta&amp;rft.genre=article\"></span><span class=\"creator\">Zhukov, YuN</span>, and <span class=\"creator\">VD Fedorov</span>. \"<span class=\"title\">Ice planktonic algae of the strand White Sea</span>.\" <span class=\"title\">Vestnik Moskovskogo universiteta</span>. <span class=\"part_issue\">1</span> <span class=\"date\">(2003)</span>. <span class=\"part_page_begin\">24</span>-<span class=\"part_page_end\">31</span>. "
+          ]
         }
       }, 
       "creators": [
@@ -1452,9 +1503,9 @@
       "part_page_begin": "24", 
       "part_page_end": "31", 
       "rec_class": "Document", 
-      "rec_created_date": "2013-12-10T15:19:43.098362", 
+      "rec_created_date": "2014-07-22T15:46:02.110657", 
       "rec_id": "Zhukov+Fedorov2003", 
-      "rec_modified_date": "2013-12-10T15:19:43.098368", 
+      "rec_modified_date": "2014-07-22T15:46:02.110662", 
       "rec_source": "test", 
       "rec_status": "private", 
       "rec_type": "JournalArticle", 
