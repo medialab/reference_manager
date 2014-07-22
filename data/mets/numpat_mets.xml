@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mets:mets OBJID="sciencespo_catalog_0000588971" PROFILE="http://www.sciencespo.fr/bibliotheque/standards/numer/afaire.xml" xmlns:mets="http://www.loc.gov/METS/" xmlns:mix="http://www.loc.gov/mix/v20" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:premis="info:lc/xmlns/premis-v2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd    http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/mods.xsd   http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd    info:lc/xmlns/premis-v2 http://www.loc.gov/standards/premis/v2/premis.xsd">
+  <mets:metsHdr CREATEDATE="2013-05-17T14:40:35.5Z" LASTMODDATE="2013-06-14T18:40:35.5Z" RECORDSTATUS="complete">
+    <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+      <mets:name>Nom du prestataire</mets:name>
+    </mets:agent>
+    <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+      <mets:name>Sciences Po | la bibliothèque</mets:name>
+    </mets:agent>
+  </mets:metsHdr>
+  <mets:dmdSec ID="dmd_000001">
+    <mets:mdWrap MDTYPE="MODS">
+      <mets:xmlData>
+        <mods:mods version="3.4">
+          <mods:titleInfo>
+            <mods:title>Programmes, professions de foi et engagements électoraux</mods:title>
+            <mods:subTitle>élections législatives des 22 septembre et 6 octobre 1889</mods:subTitle>
+          </mods:titleInfo>
+          <mods:name type="personal">
+            <mods:namePart type="given">Désiré</mods:namePart>
+            <mods:namePart type="family">Barodet</mods:namePart>
+            <mods:namePart type="date">1823-1906</mods:namePart>
+            <mods:role>
+              <mods:roleTerm authority="marcrelator" type="code">ctb</mods:roleTerm>
+            </mods:role>
+          </mods:name>
+          <mods:name type="corporate">
+            <mods:namePart>France</mods:namePart>
+            <mods:namePart>Chambre des députés</mods:namePart>
+            <mods:namePart type="date">1876-1940</mods:namePart>
+            <mods:role>
+              <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+            </mods:role>
+          </mods:name>
+          <mods:typeOfResource>text</mods:typeOfResource>
+          <mods:genre authority="marc">book</mods:genre>
+          <mods:originInfo>
+            <mods:place>
+              <mods:placeTerm type="text">Paris</mods:placeTerm>
+            </mods:place>
+            <mods:publisher>Impr. de la Chambre des députés</mods:publisher>
+            <mods:dateIssued>1890</mods:dateIssued>
+          </mods:originInfo>
+          <mods:language>
+            <mods:languageTerm authority="iso639-2b" type="code">fre</mods:languageTerm>
+          </mods:language>
+          <mods:abstract lang="fr">Annexe au procés-verbal de la séance du 25 mars 1890, n? 493 précédé du rapport de la Commission de 11 membres chargée de réunir et de publier les textes authentiques des programmes et engagements électoraux et du projet de résolution</mods:abstract>
+          <mods:physicalDescription>
+            <mods:form authority="marcform">print</mods:form>
+            <mods:extent>1149-166 p. ; 27 cm.</mods:extent>
+          </mods:physicalDescription>
+          <mods:subject authority="ram">
+            <mods:name type="corporate">
+              <mods:namePart>France</mods:namePart>
+              <mods:namePart>Chambre des députés</mods:namePart>
+              <mods:namePart type="date">1876-1940</mods:namePart>
+            </mods:name>
+            <mods:temporal>Elections (1889)</mods:temporal>
+          </mods:subject>
+          <mods:classification authority="ddc" edition="21a">324</mods:classification>
+          <mods:identifier type="sudoc">097170526</mods:identifier>
+          <mods:location>
+            <mods:physicalLocation>Sciences Po | la bibliothèque</mods:physicalLocation>
+            <mods:holdingSimple>
+              <mods:copyInformation>
+                <mods:subLocation>Paris Bibliothèque - Annexe</mods:subLocation>
+                <mods:shelfLocator>COL4°1192(1890)</mods:shelfLocator>
+                <mods:note>Livre Annexe - Disponible</mods:note>
+              </mods:copyInformation>
+            </mods:holdingSimple>
+          </mods:location>
+          <mods:recordInfo>
+            <mods:recordChangeDate encoding="iso8601">2012-06-13T14:23:45</mods:recordChangeDate>
+            <mods:recordIdentifier>0000588971</mods:recordIdentifier>
+          </mods:recordInfo>
+        </mods:mods>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:amdSec>
+    <mets:techMD ID="admtech_color_000001">
+      <mets:mdWrap MDTYPE="NISOIMG">
+        <mets:xmlData>
+          <mix:mix>
+            <mix:BasicDigitalObjectInformation>
+              <mix:FormatRegistry>
+                <mix:formatRegistryName>PRONOM</mix:formatRegistryName>
+                <mix:formatRegistryKey>x-fmt/392</mix:formatRegistryKey>
+              </mix:FormatRegistry>
+            </mix:BasicDigitalObjectInformation>
+            <mix:BasicImageInformation>
+              <mix:BasicImageCharacteristics>
+                <mix:imageWidth>3891</mix:imageWidth>
+                <mix:imageHeight>4903</mix:imageHeight>
+                <mix:PhotometricInterpretation>
+                  <mix:colorSpace>RGB</mix:colorSpace>
+                  <mix:ColorProfile>
+                    <mix:IccProfile>
+                      <mix:iccProfileName>sRGB IEC61966-2.1</mix:iccProfileName>
+                      <mix:iccProfileVersion>2.1.0</mix:iccProfileVersion>
+                    </mix:IccProfile>
+                  </mix:ColorProfile>
+                </mix:PhotometricInterpretation>
+              </mix:BasicImageCharacteristics>
+              <mix:SpecialFormatCharacteristics/>
+            </mix:BasicImageInformation>
+            <mix:ImageCaptureMetadata>
+              <mix:GeneralCaptureInformation>
+                <mix:dateTimeCreated>2013-07-24T09:23:32</mix:dateTimeCreated>
+                <mix:imageProducer>Nom du prestataire</mix:imageProducer>
+                <mix:captureDevice>transmission scanner</mix:captureDevice>
+              </mix:GeneralCaptureInformation>
+              <mix:ScannerCapture>
+                <mix:scannerManufacturer>Zeutschel</mix:scannerManufacturer>
+                <mix:ScannerModel>
+                  <mix:scannerModelName>OS 12000</mix:scannerModelName>
+                </mix:ScannerModel>
+                <mix:MaximumOpticalResolution>
+                  <mix:xOpticalResolution>400</mix:xOpticalResolution>
+                  <mix:yOpticalResolution>400</mix:yOpticalResolution>
+                  <mix:opticalResolutionUnit>in.</mix:opticalResolutionUnit>
+                </mix:MaximumOpticalResolution>
+                <mix:ScanningSystemSoftware>
+                  <mix:scanningSoftwareName>Omniscan</mix:scanningSoftwareName>
+                  <mix:scanningSoftwareVersionNo>V11.10 SR1 (8)</mix:scanningSoftwareVersionNo>
+                </mix:ScanningSystemSoftware>
+              </mix:ScannerCapture>
+              <mix:orientation>normal*</mix:orientation>
+            </mix:ImageCaptureMetadata>
+            <mix:ImageAssessmentMetadata>
+              <mix:ImageColorEncoding>
+                <mix:BitsPerSample>
+                  <mix:bitsPerSampleValue>24</mix:bitsPerSampleValue>
+                  <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+                </mix:BitsPerSample>
+              </mix:ImageColorEncoding>
+            </mix:ImageAssessmentMetadata>
+            <mix:ChangeHistory>
+              <mix:ImageProcessing>
+                <mix:dateTimeProcessed>2013-07-24T11:42:12</mix:dateTimeProcessed>
+                <mix:processingAgency>Nom du prestataire</mix:processingAgency>
+                <mix:ProcessingSoftware>
+                  <mix:processingSoftwareName>Adobe Photoshop</mix:processingSoftwareName>
+                  <mix:processingSoftwareVersion>CS6 13.0 x64</mix:processingSoftwareVersion>
+                  <mix:processingOperatingSystemName>OS X</mix:processingOperatingSystemName>
+                  <mix:processingOperatingSystemVersion>10.8.3</mix:processingOperatingSystemVersion>
+                </mix:ProcessingSoftware>
+                <mix:processingActions>Conversion de l'image</mix:processingActions>
+              </mix:ImageProcessing>
+            </mix:ChangeHistory>
+          </mix:mix>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:techMD>
+    <mets:techMD ID="admtech_master_000001">
+      <mets:mdWrap MDTYPE="NISOIMG">
+        <mets:xmlData>
+          <mix:mix>
+            <mix:BasicDigitalObjectInformation>
+              <mix:FormatRegistry>
+                <mix:formatRegistryName>PRONOM</mix:formatRegistryName>
+                <mix:formatRegistryKey>x-fmt/392</mix:formatRegistryKey>
+              </mix:FormatRegistry>
+            </mix:BasicDigitalObjectInformation>
+            <mix:BasicImageInformation>
+              <mix:BasicImageCharacteristics>
+                <mix:imageWidth>3891</mix:imageWidth>
+                <mix:imageHeight>4903</mix:imageHeight>
+                <mix:PhotometricInterpretation>
+                  <mix:colorSpace>RGB</mix:colorSpace>
+                  <mix:ColorProfile>
+                    <mix:IccProfile>
+                      <mix:iccProfileName>sRGB IEC61966-2.1</mix:iccProfileName>
+                      <mix:iccProfileVersion>2.1.0</mix:iccProfileVersion>
+                    </mix:IccProfile>
+                  </mix:ColorProfile>
+                </mix:PhotometricInterpretation>
+              </mix:BasicImageCharacteristics>
+              <mix:SpecialFormatCharacteristics/>
+            </mix:BasicImageInformation>
+            <mix:ImageCaptureMetadata>
+              <mix:GeneralCaptureInformation>
+                <mix:dateTimeCreated>2013-07-24T09:23:32</mix:dateTimeCreated>
+                <mix:imageProducer>Nom du prestataire</mix:imageProducer>
+                <mix:captureDevice>transmission scanner</mix:captureDevice>
+              </mix:GeneralCaptureInformation>
+              <mix:ScannerCapture>
+                <mix:scannerManufacturer>Zeutschel</mix:scannerManufacturer>
+                <mix:ScannerModel>
+                  <mix:scannerModelName>OS 12000</mix:scannerModelName>
+                </mix:ScannerModel>
+                <mix:MaximumOpticalResolution>
+                  <mix:xOpticalResolution>400</mix:xOpticalResolution>
+                  <mix:yOpticalResolution>400</mix:yOpticalResolution>
+                  <mix:opticalResolutionUnit>in.</mix:opticalResolutionUnit>
+                </mix:MaximumOpticalResolution>
+                <mix:ScanningSystemSoftware>
+                  <mix:scanningSoftwareName>Omniscan</mix:scanningSoftwareName>
+                  <mix:scanningSoftwareVersionNo>V11.10 SR1 (8)</mix:scanningSoftwareVersionNo>
+                </mix:ScanningSystemSoftware>
+              </mix:ScannerCapture>
+              <mix:orientation>normal*</mix:orientation>
+            </mix:ImageCaptureMetadata>
+            <mix:ImageAssessmentMetadata>
+              <mix:ImageColorEncoding>
+                <mix:BitsPerSample>
+                  <mix:bitsPerSampleValue>24</mix:bitsPerSampleValue>
+                  <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+                </mix:BitsPerSample>
+              </mix:ImageColorEncoding>
+            </mix:ImageAssessmentMetadata>
+            <mix:ChangeHistory>
+              <mix:ImageProcessing>
+                <mix:dateTimeProcessed>2013-07-24T11:42:12</mix:dateTimeProcessed>
+                <mix:processingAgency>Nom du prestataire</mix:processingAgency>
+                <mix:ProcessingSoftware>
+                  <mix:processingSoftwareName>Adobe Photoshop</mix:processingSoftwareName>
+                  <mix:processingSoftwareVersion>CS6 13.0 x64</mix:processingSoftwareVersion>
+                  <mix:processingOperatingSystemName>OS X</mix:processingOperatingSystemName>
+                  <mix:processingOperatingSystemVersion>10.8.3</mix:processingOperatingSystemVersion>
+                </mix:ProcessingSoftware>
+                <mix:processingActions>Conversion de l'image</mix:processingActions>
+              </mix:ImageProcessing>
+            </mix:ChangeHistory>
+          </mix:mix>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:techMD>
+    <mets:techMD ID="admtech_ill_000001">
+      <mets:mdWrap MDTYPE="NISOIMG">
+        <mets:xmlData>
+          <mix:mix>
+            <mix:BasicDigitalObjectInformation>
+              <mix:FormatRegistry>
+                <mix:formatRegistryName>PRONOM</mix:formatRegistryName>
+                <mix:formatRegistryKey>x-fmt/392</mix:formatRegistryKey>
+              </mix:FormatRegistry>
+            </mix:BasicDigitalObjectInformation>
+            <mix:BasicImageInformation>
+              <mix:BasicImageCharacteristics>
+                <mix:imageWidth>3891</mix:imageWidth>
+                <mix:imageHeight>4903</mix:imageHeight>
+                <mix:PhotometricInterpretation>
+                  <mix:colorSpace>RGB</mix:colorSpace>
+                  <mix:ColorProfile>
+                    <mix:IccProfile>
+                      <mix:iccProfileName>sRGB IEC61966-2.1</mix:iccProfileName>
+                      <mix:iccProfileVersion>2.1.0</mix:iccProfileVersion>
+                    </mix:IccProfile>
+                  </mix:ColorProfile>
+                </mix:PhotometricInterpretation>
+              </mix:BasicImageCharacteristics>
+              <mix:SpecialFormatCharacteristics/>
+            </mix:BasicImageInformation>
+            <mix:ImageCaptureMetadata>
+              <mix:GeneralCaptureInformation>
+                <mix:dateTimeCreated>2013-07-24T09:23:32</mix:dateTimeCreated>
+                <mix:imageProducer>Nom du prestataire</mix:imageProducer>
+                <mix:captureDevice>transmission scanner</mix:captureDevice>
+              </mix:GeneralCaptureInformation>
+              <mix:ScannerCapture>
+                <mix:scannerManufacturer>Zeutschel</mix:scannerManufacturer>
+                <mix:ScannerModel>
+                  <mix:scannerModelName>OS 12000</mix:scannerModelName>
+                </mix:ScannerModel>
+                <mix:MaximumOpticalResolution>
+                  <mix:xOpticalResolution>400</mix:xOpticalResolution>
+                  <mix:yOpticalResolution>400</mix:yOpticalResolution>
+                  <mix:opticalResolutionUnit>in.</mix:opticalResolutionUnit>
+                </mix:MaximumOpticalResolution>
+                <mix:ScanningSystemSoftware>
+                  <mix:scanningSoftwareName>Omniscan</mix:scanningSoftwareName>
+                  <mix:scanningSoftwareVersionNo>V11.10 SR1 (8)</mix:scanningSoftwareVersionNo>
+                </mix:ScanningSystemSoftware>
+              </mix:ScannerCapture>
+              <mix:orientation>normal*</mix:orientation>
+            </mix:ImageCaptureMetadata>
+            <mix:ImageAssessmentMetadata>
+              <mix:ImageColorEncoding>
+                <mix:BitsPerSample>
+                  <mix:bitsPerSampleValue>24</mix:bitsPerSampleValue>
+                  <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+                </mix:BitsPerSample>
+              </mix:ImageColorEncoding>
+            </mix:ImageAssessmentMetadata>
+            <mix:ChangeHistory>
+              <mix:ImageProcessing>
+                <mix:dateTimeProcessed>2013-07-24T11:42:12</mix:dateTimeProcessed>
+                <mix:processingAgency>Nom du prestataire</mix:processingAgency>
+                <mix:ProcessingSoftware>
+                  <mix:processingSoftwareName>Adobe Photoshop</mix:processingSoftwareName>
+                  <mix:processingSoftwareVersion>CS6 13.0 x64</mix:processingSoftwareVersion>
+                  <mix:processingOperatingSystemName>OS X</mix:processingOperatingSystemName>
+                  <mix:processingOperatingSystemVersion>10.8.3</mix:processingOperatingSystemVersion>
+                </mix:ProcessingSoftware>
+                <mix:processingActions>Conversion de l'image</mix:processingActions>
+              </mix:ImageProcessing>
+            </mix:ChangeHistory>
+          </mix:mix>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:techMD>
+    <mets:rightsMD ID="admrights_000001">
+      <mets:mdWrap MDTYPE="PREMIS:RIGHTS">
+        <mets:xmlData>
+          <premis:rightsStatement>
+            <premis:rightsStatementIdentifier>
+              <premis:rightsStatementIdentifierType>local</premis:rightsStatementIdentifierType>
+              <premis:rightsStatementIdentifierValue>sciencespo_catalog_0000588971:rights</premis:rightsStatementIdentifierValue>
+            </premis:rightsStatementIdentifier>
+            <premis:rightsBasis>copyright</premis:rightsBasis>
+            <premis:copyrightInformation>
+              <premis:copyrightStatus>publicdomain</premis:copyrightStatus>
+              <premis:copyrightJurisdiction>fr</premis:copyrightJurisdiction>
+              <premis:copyrightStatusDeterminationDate>2013-06-14</premis:copyrightStatusDeterminationDate>
+              <premis:copyrightNote>Commentaires sur la détermination des droits et sur les droits d'auteurs applicables</premis:copyrightNote>
+            </premis:copyrightInformation>
+          </premis:rightsStatement>
+        </mets:xmlData>
+      </mets:mdWrap>
+    </mets:rightsMD>
+  </mets:amdSec>
+  <mets:fileSec>
+    <mets:fileGrp USE="color">
+      <mets:file ADMID="admtech_color_000001" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="color_000001" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/sciencespo_catalog_0000588971_color_000001.jp2"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="master">
+      <mets:file ADMID="admtech_master_000001" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="master_000001" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/sciencespo_catalog_0000588971_master_000001.jp2"/>
+      </mets:file>
+      <mets:file ADMID="admtech_master_000002" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="master_000002" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/sciencespo_catalog_0000588971_master_000002.jp2"/>
+      </mets:file>
+      <mets:file ADMID="admtech_master_000003" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="master_000003" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/sciencespo_catalog_0000588971_master_000003.jp2"/>
+      </mets:file>
+      <mets:file ADMID="admtech_master_000004" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="master_000004" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/sciencespo_catalog_0000588971_master_000004.jp2"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="ocr">
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="ocr_000001" MIMETYPE="image/xml" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://ocr/sciencespo_catalog_0000588971_ocr_000001.xml"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="ocr_000002" MIMETYPE="image/xml" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://ocr/sciencespo_catalog_0000588971_ocr_000002.xml"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="ocr_000003" MIMETYPE="image/xml" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://ocr/sciencespo_catalog_0000588971_ocr_000003.xml"/>
+      </mets:file>
+      <mets:file CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="ocr_000004" MIMETYPE="image/xml" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://ocr/sciencespo_catalog_0000588971_ocr_000004.xml"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="view">
+      <mets:file ID="view_000001" MIMETYPE="image/jpeg">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://view/sciencespo_catalog_0000588971_view_000001.jpg"/>
+      </mets:file>
+      <mets:file ID="view_000002" MIMETYPE="image/jpeg">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://view/sciencespo_catalog_0000588971_view_000002.jpg"/>
+      </mets:file>
+      <mets:file ID="view_000003" MIMETYPE="image/jpeg">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://view/sciencespo_catalog_0000588971_view_000003.jpg"/>
+      </mets:file>
+      <mets:file ID="view_000004" MIMETYPE="image/jpeg">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://view/sciencespo_catalog_0000588971_view_000004.jpg"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="ill">
+      <mets:file ADMID="admtech_ill_000001" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="ill_000001" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://ill/sciencespo_catalog_0000588971_ill_000001.jp2"/>
+      </mets:file>
+      <mets:file ADMID="admtech_ill_000002" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="ill_000002" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/sciencespo_catalog_0000588971_ill_000002.jp2"/>
+      </mets:file>
+      <mets:file ADMID="admtech_ill_000003" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="ill_000003" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/sciencespo_catalog_0000588971_ill_000003.jp2"/>
+      </mets:file>
+      <mets:file ADMID="admtech_ill_000004" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="ill_000004" MIMETYPE="image/jp2" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://master/sciencespo_catalog_0000588971_ill_000004.jp2"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="illview">
+      <mets:file ID="illview_000001" MIMETYPE="image/jpeg">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://view/sciencespo_catalog_0000588971_illview_000001.jpg"/>
+      </mets:file>
+      <mets:file ID="illview_000002" MIMETYPE="image/jpeg">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://view/sciencespo_catalog_0000588971_illview_000002.jpg"/>
+      </mets:file>
+      <mets:file ID="illview_000003" MIMETYPE="image/jpeg">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://view/sciencespo_catalog_0000588971_illview_000003.jpg"/>
+      </mets:file>
+      <mets:file ID="illview_000004" MIMETYPE="image/jpeg">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://view/sciencespo_catalog_0000588971_illview_000004.jpg"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="derivative">
+      <mets:file ADMID="admtech_derivative_000001" CHECKSUM="ff4659e8a9cfc527a0322ac46b5497bc" CHECKSUMTYPE="MD5" ID="derivative_000001" MIMETYPE="application/pdf" SIZE="3242342">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://derivative/sciencespo_catalog_0000588971_derivative_000001.pdf"/>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap ID="structmap_physical" TYPE="physical">
+    <mets:div DMDID="dmd_000001" LABEL="Programmes, professions de foi et engagements électoraux : élections législatives des 22 septembre et 6 octobre 1889" TYPE="book">
+      <mets:div LABEL="Dos" ORDER="0" ORDERLABEL="" TYPE="binding">
+        <mets:fptr FILEID="master_000001"/>
+        <mets:fptr FILEID="ocr_000001"/>
+        <mets:fptr FILEID="view_000001"/>
+      </mets:div>
+      <mets:div LABEL="Première de couverture" ORDER="1" ORDERLABEL="" TYPE="frontcover">
+        <mets:fptr FILEID="master_000002"/>
+        <mets:fptr FILEID="ocr_000002"/>
+        <mets:fptr FILEID="view_000002"/>
+      </mets:div>
+      <mets:div LABEL="Deuxième de couverture" ORDER="2" ORDERLABEL="" TYPE="page">
+        <mets:fptr FILEID="master_000003"/>
+        <mets:fptr FILEID="ocr_000003"/>
+        <mets:fptr FILEID="view_000003"/>
+      </mets:div>
+      <mets:div LABEL="" ORDER="3" ORDERLABEL="" TYPE="page">
+        <mets:fptr FILEID="master_000004"/>
+        <mets:fptr FILEID="ocr_000004"/>
+        <mets:fptr FILEID="view_000004"/>
+      </mets:div>
+      <mets:div LABEL="" ORDER="4" ORDERLABEL="" TYPE="page">
+        <mets:fptr FILEID="master_000005"/>
+        <mets:fptr FILEID="ocr_000005"/>
+        <mets:fptr FILEID="view_000005"/>
+      </mets:div>
+      <mets:div LABEL="Titre" ORDER="5" ORDERLABEL="" TYPE="titlepage">
+        <mets:fptr FILEID="master_000006"/>
+        <mets:fptr FILEID="ocr_000006"/>
+        <mets:fptr FILEID="view_000006"/>
+      </mets:div>
+      <mets:div LABEL="" ORDER="6" ORDERLABEL="" TYPE="page">
+        <mets:fptr FILEID="master_000007"/>
+        <mets:fptr FILEID="ocr_000007"/>
+        <mets:fptr FILEID="view_000007"/>
+      </mets:div>
+      <mets:div LABEL="" ORDER="7" ORDERLABEL="i" TYPE="page">
+        <mets:fptr FILEID="master_000008"/>
+        <mets:fptr FILEID="ocr_000008"/>
+        <mets:fptr FILEID="view_000008"/>
+      </mets:div>
+      <mets:div LABEL="" ORDER="8" ORDERLABEL="ii" TYPE="page">
+        <mets:fptr FILEID="master_000009"/>
+        <mets:fptr FILEID="ocr_000009"/>
+        <mets:fptr FILEID="view_000009"/>
+      </mets:div>
+      <mets:div DMDID="dmd_000002" LABEL="Titre partie 1" ORDER="9" ORDERLABEL="[1]" TYPE="page">
+        <mets:fptr FILEID="master_000010"/>
+        <mets:fptr FILEID="ocr_000010"/>
+        <mets:fptr FILEID="view_000010"/>
+      </mets:div>
+      <mets:div LABEL="" ORDER="10" ORDERLABEL="2" TYPE="page">
+        <mets:fptr FILEID="master_000011"/>
+        <mets:fptr FILEID="ocr_000011"/>
+        <mets:fptr FILEID="view_000011"/>
+      </mets:div>
+      <mets:div LABEL="" ORDER="11" ORDERLABEL="3" TYPE="page">
+        <mets:fptr FILEID="master_000012"/>
+        <mets:fptr FILEID="ocr_000012"/>
+        <mets:fptr FILEID="view_000012"/>
+      </mets:div>
+      <mets:div LABEL="Troisième de couverture" ORDER="97" ORDERLABEL="" TYPE="page">
+        <mets:fptr FILEID="master_000098"/>
+        <mets:fptr FILEID="ocr_000098"/>
+        <mets:fptr FILEID="view_000098"/>
+      </mets:div>
+      <mets:div LABEL="Quatrième de couverture" ORDER="98" ORDERLABEL="" TYPE="backcover">
+        <mets:fptr FILEID="master_000099"/>
+        <mets:fptr FILEID="ocr_000099"/>
+        <mets:fptr FILEID="view_000099"/>
+      </mets:div>
+      <mets:div LABEL="Mire colorimétrique " ORDER="99" ORDERLABEL="" TYPE="color">
+        <mets:fptr FILEID="color_000001"/>
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+  <mets:structMap ID="structmap_logical" TYPE="logical">
+    <mets:div DMDID="dmd_000001" LABEL="Programmes, professions de foi et engagements électoraux : élections législatives des 22 septembre et 6 octobre 1889" TYPE="book">
+      <mets:div LABEL="Reliure" ORDER="1" TYPE="section">
+        <mets:div LABEL="Dos" ORDER="0" ORDERLABEL="" TYPE="binding">
+          <mets:fptr FILEID="master_000001"/>
+          <mets:fptr FILEID="ocr_000001"/>
+          <mets:fptr FILEID="view_000001"/>
+        </mets:div>
+        <mets:div LABEL="Première de couverture" ORDER="1" ORDERLABEL="" TYPE="frontcover">
+          <mets:fptr FILEID="master_000002"/>
+          <mets:fptr FILEID="ocr_000002"/>
+          <mets:fptr FILEID="view_000002"/>
+        </mets:div>
+        <mets:div LABEL="Deuxième de couverture" ORDER="2" ORDERLABEL="" TYPE="page">
+          <mets:fptr FILEID="master_000003"/>
+          <mets:fptr FILEID="ocr_000003"/>
+          <mets:fptr FILEID="view_000003"/>
+        </mets:div>
+        <mets:div LABEL="Page de garde" ORDER="3" ORDERLABEL="" TYPE="page">
+          <mets:fptr FILEID="master_000004"/>
+          <mets:fptr FILEID="ocr_000003"/>
+          <mets:fptr FILEID="view_000004"/>
+        </mets:div>
+        <mets:div LABEL="Page de garde" ORDER="4" ORDERLABEL="" TYPE="page">
+          <mets:fptr FILEID="master_000005"/>
+          <mets:fptr FILEID="ocr_000005"/>
+          <mets:fptr FILEID="view_000005"/>
+        </mets:div>
+      </mets:div>
+      <mets:div LABEL="Page de titre" ORDER="2" TYPE="section">
+        <mets:div LABEL="" ORDER="1" ORDERLABEL="" TYPE="page">
+          <mets:fptr FILEID="master_000004"/>
+          <mets:fptr FILEID="ocr_000004"/>
+          <mets:fptr FILEID="view_000004"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="2" ORDERLABEL="" TYPE="page">
+          <mets:fptr FILEID="master_000005"/>
+          <mets:fptr FILEID="ocr_000005"/>
+          <mets:fptr FILEID="view_000005"/>
+        </mets:div>
+        <mets:div LABEL="Titre du document" ORDER="3" ORDERLABEL="" TYPE="titlepage">
+          <mets:fptr FILEID="master_000006"/>
+          <mets:fptr FILEID="ocr_000006"/>
+          <mets:fptr FILEID="view_000006"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="4" ORDERLABEL="" TYPE="page">
+          <mets:fptr FILEID="master_000007"/>
+          <mets:fptr FILEID="ocr_000007"/>
+          <mets:fptr FILEID="view_000007"/>
+        </mets:div>
+      </mets:div>
+      <mets:div DMDID="dmd_000002" LABEL="Introduction" ORDER="3" TYPE="section">
+        <mets:div LABEL="" ORDER="1" ORDERLABEL="i" TYPE="page">
+          <mets:fptr FILEID="master_000008"/>
+          <mets:fptr FILEID="ocr_000008"/>
+          <mets:fptr FILEID="view_000008"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="2" ORDERLABEL="ii" TYPE="page">
+          <mets:fptr FILEID="master_000009"/>
+          <mets:fptr FILEID="ocr_000009"/>
+          <mets:fptr FILEID="view_000009"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="3" ORDERLABEL="iii" TYPE="page">
+          <mets:fptr FILEID="master_000010"/>
+          <mets:fptr FILEID="ocr_000010"/>
+          <mets:fptr FILEID="view_000010"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="4" ORDERLABEL="iv" TYPE="page">
+          <mets:fptr FILEID="master_000011"/>
+          <mets:fptr FILEID="ocr_000011"/>
+          <mets:fptr FILEID="view_000011"/>
+        </mets:div>
+      </mets:div>
+      <mets:div DMDID="dmd_000003" LABEL="Titre partie 1" ORDER="3" ORDERLABEL="" TYPE="section">
+        <mets:div LABEL="" ORDER="1" ORDERLABEL="[1]" TYPE="page">
+          <mets:fptr FILEID="master_000010"/>
+          <mets:fptr FILEID="ocr_000010"/>
+          <mets:fptr FILEID="view_000010"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="2" ORDERLABEL="2" TYPE="page">
+          <mets:fptr FILEID="master_000011"/>
+          <mets:fptr FILEID="ocr_000011"/>
+          <mets:fptr FILEID="view_000011"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="3" ORDERLABEL="3" TYPE="page">
+          <mets:fptr FILEID="master_000012"/>
+          <mets:fptr FILEID="ocr_000012"/>
+          <mets:fptr FILEID="view_000012"/>
+        </mets:div>
+      </mets:div>
+      <mets:div DMDID="dmd_000004" LABEL="Titre partie 2" ORDER="4" ORDERLABEL="" TYPE="section">
+        <mets:div LABEL="" ORDER="1" ORDERLABEL="23" TYPE="page">
+          <mets:fptr FILEID="master_000022"/>
+          <mets:fptr FILEID="ocr_000022"/>
+          <mets:fptr FILEID="view_000022"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="2" ORDERLABEL="24" TYPE="page">
+          <mets:fptr FILEID="master_000023"/>
+          <mets:fptr FILEID="ocr_000023"/>
+          <mets:fptr FILEID="view_000023"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="3" ORDERLABEL="25" TYPE="page">
+          <mets:fptr FILEID="master_000024"/>
+          <mets:fptr FILEID="ocr_000024"/>
+          <mets:fptr FILEID="view_000024"/>
+        </mets:div>
+      </mets:div>
+      <mets:div LABEL="Table des matières" ORDER="33" ORDERLABEL="" TYPE="section">
+        <mets:div LABEL="" ORDER="1" ORDERLABEL="94" TYPE="page">
+          <mets:fptr FILEID="master_000093"/>
+          <mets:fptr FILEID="ocr_000093"/>
+          <mets:fptr FILEID="view_000093"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="2" ORDERLABEL="95" TYPE="page">
+          <mets:fptr FILEID="master_000094"/>
+          <mets:fptr FILEID="ocr_000094"/>
+          <mets:fptr FILEID="view_000094"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="3" ORDERLABEL="96" TYPE="page">
+          <mets:fptr FILEID="master_000095"/>
+          <mets:fptr FILEID="ocr_000095"/>
+          <mets:fptr FILEID="view_000095"/>
+        </mets:div>
+        <mets:div LABEL="" ORDER="4" ORDERLABEL="97" TYPE="page">
+          <mets:fptr FILEID="master_000096"/>
+          <mets:fptr FILEID="ocr_000096"/>
+          <mets:fptr FILEID="view_000096"/>
+        </mets:div>
+      </mets:div>
+      <mets:div LABEL="Reliure" ORDER="34" TYPE="section">
+        <mets:div LABEL="Page de garde" ORDER="1" ORDERLABEL="" TYPE="page">
+          <mets:fptr FILEID="master_000097"/>
+          <mets:fptr FILEID="ocr_000097"/>
+          <mets:fptr FILEID="view_000097"/>
+        </mets:div>
+        <mets:div LABEL="Page de garde" ORDER="2" ORDERLABEL="" TYPE="page">
+          <mets:fptr FILEID="master_000097"/>
+          <mets:fptr FILEID="ocr_000097"/>
+          <mets:fptr FILEID="view_000097"/>
+        </mets:div>
+        <mets:div LABEL="Troisième de couverture" ORDER="3" ORDERLABEL="" TYPE="page">
+          <mets:fptr FILEID="master_000098"/>
+          <mets:fptr FILEID="ocr_000098"/>
+          <mets:fptr FILEID="view_000098"/>
+        </mets:div>
+        <mets:div LABEL="Quatrième de couverture" ORDER="4" ORDERLABEL="" TYPE="backcover">
+          <mets:fptr FILEID="master_000099"/>
+          <mets:fptr FILEID="ocr_000099"/>
+          <mets:fptr FILEID="view_000099"/>
+        </mets:div>
+      </mets:div>
+    </mets:div>
+  </mets:structMap>
+</mets:mets>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Template version 060120091630 -->
+
+<!-- Generator version RefNumGenerator 1.1.3306.18759 -->
+<refNum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://bibnum.bnf.fr/ns/refNum http://bibnum.bnf.fr/ns/refNum.xsd http://bibnum.bnf.fr/ns/detailsOperation http://bibnum.bnf.fr/ns/detailsOperation.xsd" xmlns="http://bibnum.bnf.fr/ns/refNum">
+  <document identifiant="5838768">
+    <bibliographie>
+      <genre>PERIODIQUE</genre>
+      <titre>La Presse littéraire. Échos de la littérature, des sciences et des arts</titre>
+      <editeur>[s.n.?]</editeur>
+      <dateEdition>1857/04/26</dateEdition>
+      <tomaison>
+        <type>Année</type>
+        <valeur>6</valeur>
+      </tomaison>
+      <tomaison>
+        <type>Série</type>
+        <valeur>2</valeur>
+      </tomaison>
+      <tomaison>
+        <type>Numéro</type>
+        <valeur>17</valeur>
+      </tomaison>
+      <nombrePages>32</nombrePages>
+      <reference type="NOTICEBIBLIOGRAPHIQUE">ark:/12148/cb328426349</reference>
+      <reference type="CADRECLASSEMENTDEWEY">800</reference>
+      <reference type="CODEBARREPROVENANCE">37511006260932/17/26</reference>
+    </bibliographie>
+    <production>
+      <dateNumerisation>2010-04-08</dateNumerisation>
+      <nombreVueObjets>32</nombreVueObjets>
+      <nombreImages>32</nombreImages>
+      <identifiantSupport />
+      <objetAssocie date="2010-04-27T08:24:39Z">ALTO</objetAssocie>
+      <historique>
+        <traitement ordre="1">
+          <agentOperation>Groupement Safig</agentOperation>
+          <operation ordre="1" type="numerisation">
+            <entree type="PRODUCT" date="2010-04-07T23:23:34Z">
+              <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+                <agent type="SOCIETE" role="NUMERISATIONPATRIMOINE">SAFIG La Châtre</agent>
+                <outil type="NUMERISEUR">
+                  <nom>k1</nom>
+                  <origine>APT Manager</origine>
+                  <version>V3.2</version>
+                </outil>
+              </detailsOperation>
+              <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+                <agent type="SOCIETE" role="NUMERISATIONPATRIMOINE">SAFIG La Châtre</agent>
+                <outil type="LOGICIELTRAITEMENTDIMAGE">
+                  <nom>SpiFactory</nom>
+                  <origine>SPIGRAPH</origine>
+                  <version>3.2.12</version>
+                </outil>
+              </detailsOperation>
+              <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+                <agent type="SOCIETE" role="NUMERISATIONPATRIMOINE">SAFIG La Châtre</agent>
+                <outil type="LOGICIELTRAITEMENTDIMAGE">
+                  <nom>SpiFactory</nom>
+                  <origine>SPIGRAPH</origine>
+                  <version>3.2.12</version>
+                </outil>
+              </detailsOperation>
+            </entree>
+            <resultat type="PRODUCT" date="2010-04-09T15:07:00Z" />
+          </operation>
+          <operation ordre="2" type="exemplarisation">
+            <entree type="PRODUCT" date="2010-04-20T09:49:12.8600000+03:00">
+              <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+                <agent type="ATELIER" role="TYPAGE">SAFIG Madagascar</agent>
+                <outil type="LOGICIELTYPAGE">
+                  <nom>Document Conversion System</nom>
+                  <origine>ISAKO</origine>
+                  <version>DOCVIEW 1.43.3315.27462</version>
+                </outil>
+              </detailsOperation>
+            </entree>
+            <resultat type="PRODUCT" date="2010-04-23T15:58:05.9730000+03:00" />
+          </operation>
+          <operation ordre="3" type="ocerisation">
+            <entree type="PRODUCT" date="2010-04-27T08:48:51.0Z">
+              <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+                <agent type="ATELIER" role="SEGMENTATIONOCR">SAFIG Madagascar</agent>
+                <outil type="LOGICIELOCR">
+                  <nom>Document Conversion System</nom>
+                  <origine>ISAKO</origine>
+                  <version>PAGEVIEW 1.4.3632.27576</version>
+                </outil>
+              </detailsOperation>
+              <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+                <agent type="ATELIER" role="CONVERSIONOCR">SAFIG Madagascar</agent>
+                <outil type="LOGICIELOCR">
+                  <nom>FineReader Engine</nom>
+                  <origine>ABBYY</origine>
+                  <version>8.1</version>
+                </outil>
+              </detailsOperation>
+              <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+                <agent type="ATELIER" role="CORRECTIONOCRHQ">SAFIG Madagascar</agent>
+                <outil type="LOGICIELOCR">
+                  <nom>Document Conversion System</nom>
+                  <origine>ISAKO</origine>
+                  <version>OCRVIEW 2.0.0.28988</version>
+                </outil>
+              </detailsOperation>
+              <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+                <agent type="ATELIER" role="CONVERSIONALTO">SAFIG Madagascar</agent>
+                <outil type="LOGICIELAUTRE">
+                  <nom>Document Conversion System</nom>
+                  <origine>ISAKO</origine>
+                  <version>ALTOGEN v1.0.5.3</version>
+                </outil>
+              </detailsOperation>
+            </entree>
+            <resultat type="PRODUCT" date="2010-04-27T08:48:51.0Z">
+              <resultat type="NQAMOYEN" xmlns="http://bibnum.bnf.fr/ns/detailsOperation">ocr brut 99.985%</resultat>
+              <resultat type="TAUXOCRDEBASE" xmlns="http://bibnum.bnf.fr/ns/detailsOperation">100.000%</resultat>
+              <resultat type="TAUXOCRDEBASECORRIGE" xmlns="http://bibnum.bnf.fr/ns/detailsOperation">100.000%</resultat>
+            </resultat>
+          </operation>
+        </traitement>
+      </historique>
+    </production>
+    <structure>
+      <vueObjet typePagination="A" typePage="P" ordre="1" numeroPage="513">
+        <image profondeur="1" dimension="1729,2740" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000001" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:29Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.4000000000000057]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="2" numeroPage="514">
+        <image profondeur="1" dimension="1729,2740" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000002" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:32Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.4000000000000057]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="3" numeroPage="515">
+        <image profondeur="1" dimension="1724,2737" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000003" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:33Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.30000000000001137]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="4" numeroPage="516">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000004" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:38Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][-0.19999999999998863]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="5" numeroPage="517">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000005" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:40Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.10000000000000853]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="6" numeroPage="518">
+        <image profondeur="1" dimension="1738,2748" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000006" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:43Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.6000000000000085]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="7" numeroPage="519">
+        <image profondeur="1" dimension="1728,2741" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000007" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:44Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][-0.3999999999999915]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="8" numeroPage="520">
+        <image profondeur="1" dimension="1743,2751" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000008" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:45Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.7000000000000028]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="9" numeroPage="521">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000009" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:47Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.10000000000000853]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="10" numeroPage="522">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000010" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:49Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][-0.09999999999999432]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="11" numeroPage="523">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000011" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="12" numeroPage="524">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000012" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:53Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.10000000000000853]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="13" numeroPage="525">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000013" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:55Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.10000000000000853]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="14" numeroPage="526">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000014" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:50:57Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][-0.09999999999999432]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="15" numeroPage="527">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000015" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="16" numeroPage="528">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000016" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:02Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.20000000000000284]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="17" numeroPage="529">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000017" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:03Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][-0.19999999999998863]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="18" numeroPage="530">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000018" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:06Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.10000000000000853]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="19" numeroPage="531">
+        <image profondeur="1" dimension="1709,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000019" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:09Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][-0.09999999999999432]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="20" numeroPage="532">
+        <image profondeur="1" dimension="1724,2737" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000020" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:12Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.30000000000001137]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="21" numeroPage="533">
+        <image profondeur="1" dimension="1741,2741" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000021" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:15Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][-0.3999999999999915]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="22" numeroPage="534">
+        <image profondeur="1" dimension="1722,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000022" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:18Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.20000000000000284]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="23" numeroPage="535">
+        <image profondeur="1" dimension="1756,2738" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000023" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:21Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][-0.29999999999999716]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="24" numeroPage="536">
+        <image profondeur="1" dimension="1771,2748" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000024" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:24Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.6000000000000085]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="25" numeroPage="537">
+        <image profondeur="1" dimension="1766,2745" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000025" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:27Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][-0.5]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="26" numeroPage="538">
+        <image profondeur="1" dimension="1742,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000026" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:30Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.20000000000000284]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="27" numeroPage="539">
+        <image profondeur="1" dimension="1742,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000027" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="28" numeroPage="540">
+        <image profondeur="1" dimension="1742,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000028" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:38Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][-0.09999999999999432]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="29" numeroPage="541">
+        <image profondeur="1" dimension="1742,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000029" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:48Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.10000000000000853]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="30" numeroPage="542">
+        <image profondeur="1" dimension="1742,2727" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000030" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:51:52Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.20000000000000284]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="31" numeroPage="543">
+        <image profondeur="1" dimension="1781,2755" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000031" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:52:04Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][0.8000000000000114]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+      <vueObjet typePagination="A" typePage="N" ordre="32" numeroPage="544">
+        <image profondeur="1" dimension="1766,2745" codeResolution="T" resolution="0300,0300" typeFichier="TIF" nomImage="T0000032" supportOrigine="PAPIER REL NB" cadrage="vueObjet" traitement="AUTO" />
+        <commentaire type="PRODUCT" date="2010-04-09T13:52:07Z">
+          <detailsOperation xmlns="http://bibnum.bnf.fr/ns/detailsOperation">
+            <agent type="SOCIETE" role="CONTROLEIMAGES">SAFIG La Châtre</agent>
+            <entree>Contenu tourné [REDRESSEMENT][-0.5]</entree>
+            <description>REDRESSEMENT</description>
+          </detailsOperation>
+        </commentaire>
+      </vueObjet>
+    </structure>
+  </document>
+</refNum>

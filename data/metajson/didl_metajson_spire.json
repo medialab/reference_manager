@@ -210,7 +210,7 @@
       "rec_source": "Sciences Po Institutional Repository", 
       "rec_status": "published", 
       "rec_type": "BookReview", 
-      "review_ofs": [
+      "is_review_ofs": [
         {
           "creators": [
             {
