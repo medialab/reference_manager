@@ -43,15 +43,15 @@ def validate_metajson_document(document):
     if "originals" in document:
         for original in document["originals"]:
             errors.extend(validate_metajson_original(original))
-    if "review_ofs" in document:
-        for review_ofs in document["review_ofs"]:
-            errors.extend(validate_metajson_review_ofs(review_ofs))
+    if "is_review_ofs" in document:
+        for is_review_of in document["is_review_ofs"]:
+            errors.extend(validate_metajson_is_review_of(is_review_of))
     if "archives" in document:
         for archive in document["archives"]:
             errors.extend(validate_metajson_archive(archive))
-    #if "resources" in document:
-    #    for resource in document["resources"]:
-    #        errors.extend(validate_metajson_resource(resource))
+    if "resources" in document:
+        for resource in document["resources"]:
+           errors.extend(validate_metajson_resource(resource))
 
     return errors
 
@@ -117,16 +117,16 @@ def validate_metajson_series(series):
     return errors
 
 
-def validate_metajson_review_ofs(review_ofs):
+def validate_metajson_is_review_of(is_review_of):
     errors = []
-    if not review_ofs:
-        review_ofs.append("Empty review_ofs")
-    if "rec_type" not in review_ofs or not review_ofs["rec_type"]:
-        errors.append("Empty type in review_ofs")
-    if "title" not in review_ofs or not review_ofs["title"]:
-        errors.append("Empty title in review_ofs")
-    if "creators" in review_ofs and review_ofs["creators"]:
-        for creator in review_ofs["creators"]:
+    if not is_review_of:
+        is_review_of.append("Empty is_review_of")
+    if "rec_type" not in is_review_of or not is_review_of["rec_type"]:
+        errors.append("Empty type in is_review_of")
+    if "title" not in is_review_of or not is_review_of["title"]:
+        errors.append("Empty title in is_review_of")
+    if "creators" in is_review_of and is_review_of["creators"]:
+        for creator in is_review_of["creators"]:
             errors.extend(validate_metajson_creator(creator))
     return errors
 
@@ -160,12 +160,21 @@ def validate_metajson_creator(creator):
 
 def validate_metajson_resource(resource):
     errors = []
-    if "url" in resource:
-        url_dict = resource_service.fetch_url(resource["url"])
-        if url_dict["error"]:
-            errors.append("Error {} with URL: {}".format(url_dict["code"], resource["url"]))
-        elif "redirect" in url_dict:
-            errors.append("Redirected URL: {}".format(url_dict["redirect_url"]))
+    if resource["rec_type"] == "remote":
+        # temporally deactivate
+        pass
+        #if "url" in resource:
+        #    url_dict = resource_service.fetch_url(resource["url"])[0]
+        #    print url_dict
+        #    if url_dict["error"]:
+        #        errors.append("Error {} with URL: {}".format(url_dict["code"], resource["url"]))
+        #    elif url_dict["redirect"]:
+        #        errors.append("Redirected URL: {}".format(url_dict["redirect_url"]))
+        #else:
+        #    errors.append("Missing URL in resource")
+    elif resource["rec_type"] == "physical":
+        if "physical_copy_number" not in resource:
+            errors.append("Missing physical_copy_number")
     return errors
 
 
