@@ -191,13 +191,14 @@ def write_list(col_id, col_title, items, output_file_path, output_format):
         write_html(col_id, col_title, items, output_file_path, constants.STYLE_MLA)
     else:
         count = 0
-        for item in items:
-            count += 1
-            file_name =  item[0] + "." + output_format + "." + guess_file_extension_from_format(output_format)
-            file_path = os.path.join(output_file_path, file_name)
-            if not os.path.exists(output_file_path):
-                os.mkdir(output_file_path)
-            write_item(item[1], file_path, output_format)
+        if items is not None:
+            for item in items:
+                count += 1
+                file_name =  item[0] + "." + output_format + "." + guess_file_extension_from_format(output_format)
+                file_path = os.path.join(output_file_path, file_name)
+                if not os.path.exists(output_file_path):
+                    os.mkdir(output_file_path)
+                write_item(item[1], file_path, output_format)
 
 
 def write_item(item, output_file_path, output_format):
