@@ -21,13 +21,13 @@ from biblib.util import constants
 from biblib.util import xmletree
 
 
-def ddi_xmletree_to_metajson_list(ddi_root, source, only_first_record):
+def ddi_xmletree_to_metajson_list(ddi_root, source, rec_id_prefix, only_first_record):
     """  DDI xmletree -> MetaJSON Document list"""
     if ddi_root is not None:
-        yield ddi_xmletree_to_metajson(ddi_root, source)
+        yield ddi_xmletree_to_metajson(ddi_root, source, rec_id_prefix)
 
 
-def ddi_xmletree_to_metajson(ddi_root, source):
+def ddi_xmletree_to_metajson(ddi_root, source, rec_id_prefix):
     """ DDI xmletree -> MetaJSON Document """
     if ddi_root is None:
         return None

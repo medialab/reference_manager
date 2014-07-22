@@ -139,7 +139,7 @@ RIS_KEY_BEGIN = "TY"
 RIS_KEY_END = "ER"
 
 
-def ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record):
+def ris_txt_lines_to_metajson_list(txt_lines, source, rec_id_prefix, only_first_record):
     document = None
     ris_type = None
     rec_type = None
@@ -149,7 +149,7 @@ def ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record):
     for line in txt_lines:
         if line:
             line = line.rstrip('\r\n')
-            logging.debug("line: {}".format(line))
+            #logging.debug("line: {}".format(line))
 
             # multi line management
             if previous_key:
@@ -161,14 +161,14 @@ def ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record):
                 key = line[:2].strip()
                 value = line[6:].strip()
             if value.endswith("/") and key not in ["Y1", "PY"]:
-                logging.debug("multi line")
+                #logging.debug("multi line")
                 previous_key = key
                 previous_value = value.rstrip('/')
                 continue
 
             if key is None or len(key) == 0:
                 # empty line -> continue
-                logging.debug("empty line")
+                #logging.debug("empty line")
                 continue
             elif key == RIS_KEY_BEGIN:
                 # record begin with document type -> create document
@@ -198,7 +198,7 @@ def ris_txt_lines_to_metajson_list(txt_lines, source, only_first_record):
                 yield document
             else:
                 # process key value
-                logging.debug("key: {}; value: {}".format(key, value))
+                #logging.debug("key: {}; value: {}".format(key, value))
                 if key == "ID":
                     document["rec_id"] = value
                 elif key in ["T1", "TI", "CT"] or (key == "BT" and ris_type in [RIS_TYPE_BOOK, RIS_TYPE_UNPB]):

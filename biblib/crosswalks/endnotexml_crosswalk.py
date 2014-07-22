@@ -152,16 +152,16 @@ unpublished_types = [
     constants.DOC_TYPE_WORKSHOP
 ]
 
-def endnotexml_xmletree_to_metajson_list(endnotexml_root, source, only_first_record):
+def endnotexml_xmletree_to_metajson_list(endnotexml_root, source, rec_id_prefix, only_first_record):
     records_elements = endnotexml_root.find("records")
     records = records_elements.findall("record")
 
     if records:
         for record in records:
-            yield endnotexml_record_to_metajson(record, source)
+            yield endnotexml_record_to_metajson(record, source, rec_id_prefix)
 
 
-def endnotexml_record_to_metajson(record, source):
+def endnotexml_record_to_metajson(record, source, rec_id_prefix):
     document = Document()
 
     # TODO
@@ -371,12 +371,12 @@ def endnotexml_record_to_metajson(record, source):
             original.add_item_to_key(original_is_part_of, "is_part_ofs")
             document.add_item_to_key(original, "originals")
 
-    # review_ofs[]
+    # is_review_ofs[]
     if reviewed_item and endnote_type in [TYPE_BOOK_SECTION, TYPE_JOURNAL_ARTICLE]:
-        review_ofs = Document()
-        review_ofs.set_key_if_not_none("title", reviewed_item)
-        review_ofs.set_key_if_not_none("rec_type", "Book")
-        document.add_items_to_key([review_ofs], "review_ofs")
+        is_review_ofs = Document()
+        is_review_ofs.set_key_if_not_none("title", reviewed_item)
+        is_review_ofs.set_key_if_not_none("rec_type", "Book")
+        document.add_items_to_key([is_review_ofs], "is_review_ofs")
 
     # abstracts[0].value
     if abstract:

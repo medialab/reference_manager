@@ -46,6 +46,7 @@ def metajson_list_to_repec(documents):
 
 
 def metajson_to_repec(document):
+    rec_id = document["rec_id"]
     repec = StringIO()
     write_key_value(repec, "Template-Type", "ReDIF-Paper 1.0")
     write_key_value(repec, "Title", document["title"])
@@ -66,7 +67,7 @@ def metajson_to_repec(document):
                 write_key_value(repec, "File-Format", resource["format_mimetype"])
     write_key_value(repec, "Handle", document["rec_id"])
     repec.write("\n")
-    return repec.getvalue()
+    return (rec_id, repec.getvalue())
 
 
 def write_key_value(repec, key, value):

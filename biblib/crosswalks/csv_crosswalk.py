@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-import logging
+import csv
 from datetime import datetime
+import logging
 
 from biblib.metajson import Document
 from biblib.services import creator_service
@@ -11,19 +12,21 @@ from biblib.util import constants
 from biblib.util import jsonbson
 
 
-def csv_dict_reader_to_metasjon_list(csv_dict_reader, input_format, source, only_first_record):
+def csv_dict_reader_to_metasjon_list(csv_dict_reader, input_format, source, rec_id_prefix, only_first_record):
     logging.info(csv_dict_reader)
     for csv_row in csv_dict_reader:
-        yield csv_dict_reader_to_metasjon(csv_row, input_format, source)
+        yield csv_dict_reader_to_metasjon(csv_row, input_format, source, rec_id_prefix)
 
 
-def csv_dict_reader_to_metasjon(csv_row, input_format, source):
+def csv_dict_reader_to_metasjon(csv_row, input_format, source, rec_id_prefix):
     document = Document()
 
     if source:
         document["rec_source"] = source
 
     if input_format == constants.FORMAT_CSV_SITPOL:
+        #logging.debug("csv_dict_reader_to_metasjon type(csv_row): {}".format(type(csv_row)))
+        #print csv_row
         document["title"] = csv_row["title"]
         classifications_sitpol = [x.strip() for x in csv_row["classifications_sitpol"].split(";") if x.strip()]
         if classifications_sitpol:
@@ -68,7 +71,7 @@ def csv_dict_reader_to_metasjon(csv_row, input_format, source):
         document["url"] = csv_row["url"]
         document["rec_type"] = constants.DOC_TYPE_WEBENTITY
         document["webentity_type"] = csv_row["webentity_type"]
-    elif input_format == constants.FORMAT_CSV_ARCHIPOLIS:
+    elif input_format == constants.FORMAT_CSV_METAJSON:
         document["rec_type"] = "DatasetQuali"
         creators = []
         if "Laboratoire d'inventaire" in csv_row:
@@ -93,4 +96,9 @@ def csv_dict_reader_to_metasjon(csv_row, input_format, source):
     logging.info(jsonbson.dumps_json(document, True))
     return document
 
+def metajson_list_to_csv_metajson(documents):
+    csvwriter = csv.DictWriter(csv_file, delimiter=',', fieldnames=constants.fieldnames)
+    csvwriter.writeheader()
+    for key in sorted(results.iterkeys()):
+        row = results[key]
 

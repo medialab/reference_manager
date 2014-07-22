@@ -107,7 +107,7 @@ def metajson_to_openurl_params(document):
         if "is_part_ofs" in document and "title" in document["is_part_ofs"][0]:
             openurl["rft.atitle"] = document["title"]
             openurl["rft.btitle"] = document["is_part_ofs"][0]["title"]
-        else:
+        elif "title" in document:
             openurl["rft.btitle"] = document["title"]
 
         # place
@@ -318,30 +318,33 @@ def metajson_to_openurl_params(document):
 
 
 def metajson_to_openurl(document):
+    rec_id = document["rec_id"]
     openurl_dict = metajson_to_openurl_params(document)
 
     openurl_str = {}
     if openurl_dict:
         for k, v in openurl_dict.iteritems():
+            #logging.debug("{}: '{}'".format(k, v))
             openurl_str[k] = unicode(v).encode('utf-8')
     if openurl_str:
         result = quoteattr(urllib.urlencode(openurl_str))
         #logging.debug("{}".format(result))
-        return result
+        return (rec_id, result)
     else:
-        return None
+        return (rec_id, None)
 
 
 
 def metajson_to_openurlcoins(document):
+    rec_id = document["rec_id"]
     result = metajson_to_openurl(document)
-    if result:
-        return "<span class=\"Z3988\" title=" + result + "></span>"
+    if result[1]:
+        return (rec_id, "<span class=\"Z3988\" title=" + result[1] + "></span>")
     else:
-        return ""
+        return (rec_id, "")
 
 
-def openurl_xmletree_to_metajson_list(openurl_response, source, only_first_record):
+def openurl_xmletree_to_metajson_list(openurl_response, source, rec_id_prefix, only_first_record):
     documents = []
     if openurl_response is not None:
         #logging.debug(type(openurl_response))

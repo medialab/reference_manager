@@ -15,7 +15,7 @@ from biblib.util import xmletree
 mdtype_to_format = {
     'MODS': constants.FORMAT_MODS,
     'EAD': constants.FORMAT_EAD,
-    'DC': constants.FORMAT_OAIDC,
+    'DC': constants.FORMAT_OAI_DC,
     'NISOIMG': constants.FORMAT_MIX,
     'LC-AV': None,
     'VRA': None,
@@ -34,11 +34,11 @@ mdtype_to_format = {
 }
 
 
-def mets_xmletree_to_metajson_list(mets, source, only_first_record):
-    yield mets_xmletree_to_metajson(mets, source)
+def mets_xmletree_to_metajson_list(mets, source, rec_id_prefix, only_first_record):
+    yield mets_xmletree_to_metajson(mets, source, rec_id_prefix)
 
 
-def mets_xmletree_to_metajson(mets, source):
+def mets_xmletree_to_metajson(mets, source, rec_id_prefix):
     document = Document()
 
     # source
@@ -65,7 +65,7 @@ def mets_xmletree_to_metajson(mets, source):
 
 
 def extract_dmdsecs(mets):
-    logging.debug("dmdsecs")
+    #logging.debug("dmdsecs")
     dmdsecs = mets.findall(xmletree.prefixtag("mets", "dmdSec"))
     if dmdsecs:
         warppers = []
@@ -81,8 +81,8 @@ def extract_dmdsecs(mets):
             if xmldatas is not None:
                 warpper['records'] = []
                 for xmldata in xmldatas:
-                    metajson = convert_xmldata(xmldata, warpper['meta_type'])
-                    warpper['records'].append(metajson)
+                    document = convert_xmldata(xmldata, warpper['meta_type'])
+                    warpper['records'].append(document)
 
             warppers.append(warpper)
 
@@ -93,3 +93,8 @@ def convert_xmldata(xmlData, mdtype):
     # mdtype to input_format
     # xmlData to metajson
     return None
+
+
+def metajson_to_mets_xmletree(document):
+    rec_id = document["rec_id"]
+    return (rec_id, None)

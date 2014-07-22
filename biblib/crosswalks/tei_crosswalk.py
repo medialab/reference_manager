@@ -23,7 +23,7 @@ from biblib.util import constants
 from biblib.util import xmletree
 
 
-def tei_xmletree_to_metajson_list(tei_root, source, only_first_record):
+def tei_xmletree_to_metajson_list(tei_root, source, rec_id_prefix, only_first_record):
     """  TEI xmletree -> MetaJSON Document list"""
     if tei_root is not None:
         # TEI/text

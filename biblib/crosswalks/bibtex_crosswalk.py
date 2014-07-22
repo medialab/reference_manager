@@ -5,6 +5,7 @@
 import logging
 import re
 
+from pybtex.backends import latex
 from pybtex.database.input import bibtex
 from pybtex.database import BibliographyData
 from pybtex.database import Person
@@ -51,14 +52,73 @@ bibtex_document_type_to_metajson_document_type = {
     TYPE_UNPUBLISHED: constants.DOC_TYPE_UNPUBLISHEDDOCUMENT
 }
 
+special_to_u = [("{",           u""),
+                ("}",           u""),
+                ("\\",          u""),
+                ("\emph",       u""),
+                ("\textsc",     u""),
+                ("\texttt",     u""),
+                ("\AA",         u"Å"),
+                ("\aa",         u"å"),
+                ("\AE",         u"Æ"),
+                ("\ae",         u"æ"),
+                ("\'A",         u"Á"),
+                ("\'a",         u"á"),
+                ('\"A',         u"Ä"),
+                ('\"a',         u"ä"),
+                ('\`A',         u"À"),
+                ('\`a',         u"à"),
+                ('\cC',         u"Ç"),
+                ('\cc',         u"ç"),
+                ('\vC',         u"Č"),
+                ('\vc',         u"č"),
+                ("\'E",         u"É"),
+                ("\'e",         u"é"),
+                ('\"E',         u"Ë"),
+                ('\"e',         u"ë"),
+                ("\`E",         u"È"),
+                ("\`e",         u"è"),
+                ("\kE",         u"Ę"),
+                ("\ke",         u"ę"),
+                ("\'I",         u"Í"),
+                ("\'i",         u"í"),
+                ('\"I',         u"Ï"),
+                ('\"i',         u"ï"),
+                ("\`I",         u"Ì"),
+                ("\`i",         u"ì"),
+                ("\L",          u"Ł"),
+                ("\l",          u"ł"),
+                ("\tildeN",     u"Ñ"),
+                ("\tilden",     u"ñ"),
+                ("\OE",         u"Œ"),
+                ("\oe",         u"œ"),
+                ("\'O",         u"Ó"),
+                ("\'o",         u"ó"),
+                ('\"O',         u"Ö"),
+                ('\"o',         u"ö"),
+                ("\^O",         u"Ô"),
+                ("\^o",         u"ô"),
+                ('\~O',         u"Õ"),
+                ('\~o',         u"õ"),
+                ("\`O",         u"Ò"),
+                ("\`o",         u"ò"),
+                ("\O",          u"Ø"),
+                ("\o",          u"ø"),
+                ("\'U",         u"Ú"),
+                ('\"U',         u"Ü"),
+                ('\"u',         u"ü"),
+                ("\'u",         u"ú"),
+                ("\&",          u"&"),
+                ("\ss",         u"ß")]
 
-def bibtex_root_to_metasjon_list(bibtex_root, source, only_first_record):
+
+def bibtex_root_to_metasjon_list(bibtex_root, source, rec_id_prefix, only_first_record):
     for entry_key in bibtex_root.entries.keys():
         bibtex_entry = bibtex_root.entries[entry_key]
-        yield bibtex_entry_to_metajson(bibtex_entry, source)
+        yield bibtex_entry_to_metajson(bibtex_entry, source, rec_id_prefix)
 
 
-def bibtex_entry_to_metajson(entry, source):
+def bibtex_entry_to_metajson(entry, source, rec_id_prefix):
     document = Document()
 
     # rec_type
@@ -222,13 +282,15 @@ def bibtex_entry_to_metajson(entry, source):
 
 
 def extract_creators(entry, key, role):
+    #logging.debug("extract_creators")
     if key in entry.persons:
+        #logging.debug("key: {}".format(key))
         creators = []
         authors = entry.persons[key]
         for author in authors:
             formatted_name = unicode(author).encode('utf-8')
-            formatted_name = formatted_name.replace("{", "").replace("}", "")
-            creator = creator_service.formatted_name_to_creator(formatted_name, "person", role)
+            formatted_name = replace_special_characters(formatted_name)
+            creator = creator_service.formatted_name_to_creator(formatted_name, constants.CLASS_PERSON, role)
             creators.append(creator)
             return creators
     else:
@@ -238,15 +300,30 @@ def extract_creators(entry, key, role):
 def get_field(entry, field):
     if field in entry.fields and entry.fields[field]:
         tmp = unicode(entry.fields[field]).encode('utf-8')
-        tmp = tmp.replace("{", "").replace("}", "").replace("\&", "and").replace("\\", "")
+        #logging.debug(tmp)
+        tmp = replace_special_characters(tmp)
+        #logging.debug(tmp)
         return tmp
     else:
         return None
+
+
+def replace_special_characters(text):
+    for key, value in special_to_u:
+        #logging.debug("{} : {}".format(key, value))
+        text = text.replace(key, value)
+    return text
 
 
 def metajson_list_to_bibtex_root():
     pass
 
 
-def metajson_to_bibtex_entry():
-    pass
+def metajson_to_bibtex_entry(document):
+    rec_id = document["rec_id"]
+    return (rec_id, None)
+
+#test = u"syst\`{e}mes"
+#logging.debug(test)
+#test = replace_special_characters(test)
+#logging.debug(test)

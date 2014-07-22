@@ -14,24 +14,24 @@ from biblib.util import constants
 from biblib.util import xmletree
 
 
-def researcherml_xmletree_to_metajson_list(rml_root, source, only_first_record):
+def researcherml_xmletree_to_metajson_list(rml_root, source, rec_id_prefix, only_first_record):
     """ researcherml (xmletree) -> metajson_list """
     if rml_root is not None:
         for child in rml_root:
             # person -> person
             if child.tag.endswith("person"):
-                yield rml_person_to_metajson(child, source)
+                yield rml_person_to_metajson(child, source, rec_id_prefix)
 
             # orgUnit -> orgunit
             elif child.tag.endswith("orgUnit"):
-                yield rml_orgunit_to_metajson(child, source)
+                yield rml_orgunit_to_metajson(child, source, rec_id_prefix)
 
             # project -> project
             elif child.tag.endswith("project"):
-                yield rml_project_to_metajson(child, source)
+                yield rml_project_to_metajson(child, source, rec_id_prefix)
 
 
-def rml_orgunit_to_metajson(rml_orgunit, source):
+def rml_orgunit_to_metajson(rml_orgunit, source, rec_id_prefix):
     """ orgUnit -> orgunit """
     orgunit = Orgunit()
 
@@ -114,7 +114,7 @@ def rml_orgunit_to_metajson(rml_orgunit, source):
     return orgunit
 
 
-def rml_person_to_metajson(rml_person, source):
+def rml_person_to_metajson(rml_person, source, rec_id_prefix):
     """ person -> person """
     person = Person()
 
@@ -221,7 +221,7 @@ def rml_person_to_metajson(rml_person, source):
     return person
 
 
-def rml_project_to_metajson(rml_project, source):
+def rml_project_to_metajson(rml_project, source, rec_id_prefix):
     """ project -> project """
     project = Project()
 

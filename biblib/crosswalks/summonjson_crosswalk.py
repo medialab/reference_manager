@@ -80,17 +80,17 @@ summon_identifier_type_to_metajson_identifier_type = {
 }
 
 
-def summonjson_to_metajson_list(summon_result, source, only_first_record=False):
+def summonjson_to_metajson_list(summon_result, source, rec_id_prefix, only_first_record=False):
     if "documents" in summon_result:
-        return summonjson_document_list_to_metajson_list(summon_result["documents"], source, only_first_record)
+        return summonjson_document_list_to_metajson_list(summon_result["documents"], source, rec_id_prefix, only_first_record)
 
 
-def summonjson_document_list_to_metajson_list(sum_doc_list, source, only_first_record=False):
+def summonjson_document_list_to_metajson_list(sum_doc_list, source, rec_id_prefix, only_first_record=False):
     for sum_doc in sum_doc_list:
-        yield summonjson_document_to_metajson(sum_doc, source)
+        yield summonjson_document_to_metajson(sum_doc, source, rec_id_prefix)
 
 
-def summonjson_document_to_metajson(sum_doc, source):
+def summonjson_document_to_metajson(sum_doc, source, rec_id_prefix):
     document = Document()
 
     # Extract Summon properties
@@ -120,9 +120,9 @@ def summonjson_document_to_metajson(sum_doc, source):
     creators = extract_creators(sum_doc)
     copyright_statement = extract_value(sum_doc, "Copyright")
     database_id = extract_value(sum_doc, "DBID")
-    logging.debug("DBID: {}".format(database_id))
+    #logging.debug("DBID: {}".format(database_id))
     database_xml = extract_dict_value(sum_doc, "Database_xml")
-    logging.debug("database_xml: {}".format(database_xml))
+    #logging.debug("database_xml: {}".format(database_xml))
     date_issued = extract_date_issued(sum_doc)
     degree = extract_value(sum_doc, "DissertationDegree")
     descriptions = extract_convert_languageValues(sum_doc, "Abstract", main_language)

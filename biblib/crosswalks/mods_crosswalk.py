@@ -181,26 +181,26 @@ MODS_TYPEOFRESOURCE_TO_METAJSON_DOCUMENT_TYPE = {
     "mixed material": constants.DOC_TYPE_MIXEDMATERIAL
 }
 
-def mods_xmletree_to_metajson_list(mods_root, source, only_first_record):
+def mods_xmletree_to_metajson_list(mods_root, source, rec_id_prefix, only_first_record):
     """  MODS xmletree -> MetaJSON Document list"""
     if mods_root is not None:
         if mods_root.tag.endswith("mods"):
-            yield mods_xmletree_to_metajson(mods_root, source)
+            yield mods_xmletree_to_metajson(mods_root, source, rec_id_prefix)
         elif mods_root.tag.endswith("modsCollection"):
             mods_list = mods_root.findall(xmletree.prefixtag("mods", "mods"))
             if mods_list:
                 for mods in mods_list:
-                    yield mods_xmletree_to_metajson(mods, source)
+                    yield mods_xmletree_to_metajson(mods, source, rec_id_prefix)
 
 
-def mods_xmletree_to_metajson(mods, source):
+def mods_xmletree_to_metajson(mods, source, rec_id_prefix):
     """ MODS xmletree -> MetaJSON Document """
     if mods is None:
         return None
 
     # @version -> null
-    mods_version = mods.get("version")
-    logging.debug("# mods_version: {}".format(mods_version))
+    #mods_version = mods.get("version")
+    #logging.debug("# mods_version: {}".format(mods_version))
 
     document = mods_root_or_related_item_to_metajson(mods, None)
 
@@ -281,9 +281,7 @@ def mods_root_or_related_item_to_metajson(mods, root_rec_type):
     # classification -> classifications, peer_review, peer_review_geo, citation_databases, expert_committees
     document.update(get_mods_classifications(mods))
 
-    # relatedItem ->
-    # is_part_ofs, has_parts, review_ofs, originals, seriess, is_referenced_bys, references,
-    # other_formats, other_versions, precedings, succeedings
+    # relatedItem -> ...
     document.update(get_mods_related_items(mods, rec_type))
 
     # location -> resources
@@ -913,8 +911,8 @@ def get_mods_physical_description(mods, rec_type):
 
 def get_mods_related_items(mods_root, root_rec_type):
     """ relatedItem ->
-        is_part_ofs, has_parts, review_ofs, originals, seriess, is_referenced_bys, references,
-        other_formats, other_versions, precedings, succeedings
+        is_part_ofs, has_parts, is_review_ofs, originals, seriess, is_referenced_bys, references,
+        is_format_ofs, is_version_ofs, is_preceded_bys, is_succeeded_bys
     """
     mods_related_items = mods_root.findall(xmletree.prefixtag("mods", "relatedItem"))
     result = Document()
@@ -950,16 +948,16 @@ def get_mods_related_items(mods_root, root_rec_type):
                     elif mods_related_item_type == "original":
 
                         if root_rec_type in ["BookReview", "ArticleReview"]:
-                            # original -> review_ofs
-                            result.add_item_to_key(related_item, "review_ofs")
+                            # original -> is_review_ofs
+                            result.add_item_to_key(related_item, "is_review_ofs")
                         else:
                             # original -> originals
                             result.add_item_to_key(related_item, "originals")
 
                     elif mods_related_item_type == "reviewOf":
 
-                        # reviewOf -> review_ofs
-                        result.add_item_to_key(related_item, "review_ofs")
+                        # reviewOf -> is_review_ofs
+                        result.add_item_to_key(related_item, "is_review_ofs")
 
                     elif mods_related_item_type == "series":
 
@@ -988,18 +986,18 @@ def get_mods_related_items(mods_root, root_rec_type):
 
                     elif mods_related_item_type == "otherVersion":
 
-                        # otherVersion -> other_versions
-                        result.add_item_to_key(related_item, "other_versions")
+                        # otherVersion -> has_versions
+                        result.add_item_to_key(related_item, "has_versions")
 
                     elif mods_related_item_type == "preceding":
 
-                        # preceding -> precedings
-                        result.add_item_to_key(related_item, "precedings")
+                        # preceding -> is_preceded_bys
+                        result.add_item_to_key(related_item, "is_preceded_bys")
 
                     elif mods_related_item_type == "succeedings":
 
-                        # succeeding -> succeedings
-                        result.add_item_to_key(related_item, "succeedings")
+                        # succeeding -> is_succeeded_bys
+                        result.add_item_to_key(related_item, "is_succeeded_bys")
 
     return result
 
@@ -1390,10 +1388,11 @@ def create_mods_collection_xmletree(mods_root_list):
     xmletree.register_namespaces()
     # mods collection root
     mods_collection_root = ET.Element(xmletree.prefixtag("mods", "modsCollection"))
+    mods_collection_root.set(xmletree.prefixtag("xsi", "schemaLocation"), constants.xmlns_map["mods"] + " " + constants.xmlns_schema_map["mods"])
 
     for mods_root in mods_root_list:
-        if mods_root is not None:
-            mods_collection_root.append(mods_root)
+        if mods_root[1] is not None:
+            mods_collection_root.append(mods_root[1])
     
     return mods_collection_root
 
@@ -1403,20 +1402,24 @@ def metajson_list_to_mods_xmletree(documents):
     xmletree.register_namespaces()
     # mods collection root
     mods_collection_root = ET.Element(xmletree.prefixtag("mods", "modsCollection"))
+    mods_collection_root.set(xmletree.prefixtag("xsi", "schemaLocation"), constants.xmlns_map["mods"] + " " + constants.xmlns_schema_map["mods"])
 
     for document in documents:
-        mods_root = metajson_to_mods_xmletree(document)
+        mods_root = metajson_to_mods_xmletree(document, False)
         if mods_root is not None:
             mods_collection_root.append(mods_root)
     
     return mods_collection_root
 
 
-def metajson_to_mods_xmletree(document):
+def metajson_to_mods_xmletree(document, with_schema_location=False):
     """ MetaJSON Document -> MODS xmletree """
+    rec_id = document["rec_id"]
     xmletree.register_namespaces()
     # mods root
     mods_root = ET.Element(xmletree.prefixtag("mods", "mods"), version="3.5")
+    if with_schema_location:
+        mods_root.set(xmletree.prefixtag("xsi", "schemaLocation"), constants.xmlns_map["mods"] + " " + constants.xmlns_schema_map["mods"])
 
     # titleInfoProper
     titleInfoProper = ET.SubElement(mods_root, "titleInfo")
@@ -1436,7 +1439,48 @@ def metajson_to_mods_xmletree(document):
         partNumber = ET.SubElement(titleInfoProper, "partNumber")
         partNumber.text = document["part_number"]
 
-    return mods_root
+    # name
+    if "creators" in document:
+        for creator in document["creators"]:
+            if "agent" in creator:
+                # agent -> name
+                agent = creator["agent"]
+                mods_name = ET.SubElement(mods_root, "name")
+                if agent["rec_class"] == "Person":
+                    if "name_family" in agent:
+                        namePart_family = ET.SubElement(mods_name, "namePart", type="family")
+                        namePart_family.text = agent["name_family"]
+                    if "name_given" in agent:
+                        namePart_given = ET.SubElement(mods_name, "namePart", type="given")
+                        namePart_given.text = agent["name_given"]
+                    date = ""
+                    if "date_birth" in agent:
+                        date += agent["date_birth"]
+                    date += "-"
+                    if "date_death" in agent:
+                        date += agent["date_death"]
+                    if date != "-":
+                        namePart_date = ET.SubElement(mods_name, "namePart", type="date")
+                        namePart_date.text = date
+                elif agent["rec_class"] == "Orgunit":
+                    if "name" in agent:
+                        namePart_main = ET.SubElement(mods_name, "namePart")
+                        namePart_main.text = agent["name"]
+                elif agent["rec_class"] == "Event":
+                    if "name" in agent:
+                        namePart_main = ET.SubElement(mods_name, "namePart")
+                        namePart_main.text = agent["name"]
+                # affiliation -> affiliation
+                if "affiliation" in agent and "agent" in agent["affiliation"] and "name" in agent["affiliation"]["agent"]:
+                    mods_affiliation = ET.SubElement(mods_name, "affiliation")
+                    mods_affiliation.text = agent["affiliation"]["agent"]["name"]
+                # role -> role/roleTerm
+                if "roles" in creator and creator["roles"]:
+                    for role in creator["roles"]:
+                        mods_role = ET.SubElement(mods_name, "role")
+                        mods_roleTerm = ET.SubElement(mods_role, "roleTerm")
+                        #affiliation.text = agent["affiliation"]["agent"]["name"]
+    return (rec_id, mods_root)
 
 #########
 # Utils #

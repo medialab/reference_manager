@@ -9,18 +9,18 @@ from biblib.metajson import Resource
 import xml.etree.ElementTree as ET
 
 
-def unixref_xmletree_to_metajson_list(unixref_xmletree, source, only_first_record=False):
+def unixref_xmletree_to_metajson_list(unixref_xmletree, source, rec_id_prefix, only_first_record=False):
     if unixref_xmletree is not None:
         records = unixref_xmletree.findall('doi_record')
         if records:
             if only_first_record:
-                yield unixref_record_to_metajson(records[0], source)
+                yield unixref_record_to_metajson(records[0], source, rec_id_prefix)
             else:
                 for record in records:
-                    yield unixref_record_to_metajson(record, source)
+                    yield unixref_record_to_metajson(record, source, rec_id_prefix)
 
 
-def unixref_record_to_metajson(record, source):
+def unixref_record_to_metajson(record, source, rec_id_prefix):
     journal_metadata = record.find("./crossref/journal/journal_metadata")
     if journal_metadata is not None:
         journal_title = journal_metadata.find("full_title")

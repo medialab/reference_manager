@@ -9,15 +9,15 @@ from biblib.services import metajson_service
 from biblib.util import xmletree
 
 
-def didl_xmletree_to_metajson_list(didl_root, source, only_first_record):
+def didl_xmletree_to_metajson_list(didl_root, source, rec_id_prefix, only_first_record):
     if didl_root is not None:
         item_list = didl_root.findall(xmletree.prefixtag("didl", "Item"))
         if item_list is not None:
             for item in item_list:
-                yield didl_xmletree_to_metajson(item, source)
+                yield didl_xmletree_to_metajson(item, source, rec_id_prefix)
 
 
-def didl_xmletree_to_metajson(root_item, source):
+def didl_xmletree_to_metajson(root_item, source, rec_id_prefix):
     document = None
     resources = []
 
@@ -52,7 +52,7 @@ def didl_xmletree_to_metajson(root_item, source):
                         mods = resource.find(xmletree.prefixtag("mods", "mods"))
                         if mods is not None:
                             #logging.debug("mods")
-                            document = mods_crosswalk.mods_xmletree_to_metajson(mods, source)
+                            document = mods_crosswalk.mods_xmletree_to_metajson(mods, source, rec_id_prefix)
                             if item_date_modified:
                                 document["rec_modified_date"] = item_date_modified
 
