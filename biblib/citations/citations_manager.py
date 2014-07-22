@@ -5,6 +5,8 @@
 from biblib.crosswalks import openurl_crosswalk
 from biblib.citations import mla_style
 from biblib.services import config_service
+from biblib.util import constants
+
 
 default_citations_formats = config_service.config["citations"]["formats"]
 default_citations_styles = config_service.config["citations"]["styles"]
@@ -14,8 +16,8 @@ def cite(metajson_document, style, format):
     if format == "html":
         result = openurl_crosswalk.metajson_to_openurlcoins(metajson_document)
 
-    if style == "mla":
-        result += mla_style.cite(metajson_document, format)
+    if style == constants.STYLE_MLA:
+        result = (result[0], result[1] + mla_style.cite(metajson_document, format))
     return result
 
 
