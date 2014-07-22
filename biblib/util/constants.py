@@ -6,6 +6,7 @@ VERSION = '0.8'
 
 FILE_TYPE_BIBTEX = 'bibtex'
 FILE_TYPE_CSV = 'csv'
+FILE_TYPE_PDF = 'pdf'
 FILE_TYPE_HTML = 'html'
 FILE_TYPE_JSON = 'json'
 FILE_TYPE_MARC = 'marc'
@@ -15,7 +16,7 @@ FILE_TYPE_XMLETREE = 'xmletree'
 FORMAT_ALTO = 'alto'
 FORMAT_BIBJSON = 'bibjson'
 FORMAT_BIBTEX = 'bibtex'
-FORMAT_CSV_ARCHIPOLIS = 'csv_archipolis'
+FORMAT_CSV_METAJSON = 'csv_metajson'
 FORMAT_CSV_SITPOL = 'csv_sitpol'
 FORMAT_DDI = 'ddi'
 FORMAT_DIDL = 'didl'
@@ -27,7 +28,7 @@ FORMAT_METAJSON = 'metajson'
 FORMAT_METS = 'mets'
 FORMAT_MIX = 'mix'
 FORMAT_MODS = 'mods'
-FORMAT_OAIDC = 'oai_dc'
+FORMAT_OAI_DC = 'oai_dc'
 FORMAT_OPENURL = 'openurl'
 FORMAT_OPENURLCOINS = 'openurlcoins'
 FORMAT_PREMIS = 'premis'
@@ -39,10 +40,14 @@ FORMAT_TEI = 'tei'
 FORMAT_UNIMARC = 'unimarc'
 FORMAT_UNIXREF = 'unixref'
 
+
+STYLE_MLA = 'mla'
+
+
 LANGUAGE_UNDETERMINED = "und"
 CLASSIFICATION_UNDETERMINED = "und"
 
-file_extension_to_type = {
+file_extension_to_file_type = {
     'bib': FILE_TYPE_BIBTEX,
     'csv': FILE_TYPE_CSV,
     'htm': FILE_TYPE_HTML,
@@ -55,9 +60,10 @@ file_extension_to_type = {
     'xml': FILE_TYPE_XMLETREE
 }
 
-type_to_file_extension = {
+file_type_to_file_extension = {
     FILE_TYPE_BIBTEX: 'bib',
     FILE_TYPE_CSV: 'csv',
+    FILE_TYPE_PDF: 'pdf',
     FILE_TYPE_HTML: 'html',
     FILE_TYPE_JSON: 'json',
     FILE_TYPE_MARC: 'mrc',
@@ -65,10 +71,11 @@ type_to_file_extension = {
     FILE_TYPE_XMLETREE: 'xml'
 }
 
-input_format_to_type = {
+format_to_file_type = {
     FORMAT_ALTO: FILE_TYPE_XMLETREE,
     FORMAT_BIBJSON: FILE_TYPE_JSON,
     FORMAT_BIBTEX: FILE_TYPE_BIBTEX,
+    FORMAT_CSV_METAJSON: FILE_TYPE_CSV,
     FORMAT_CSV_SITPOL: FILE_TYPE_CSV,
     'dc': FILE_TYPE_XMLETREE,
     FORMAT_DDI: FILE_TYPE_XMLETREE,
@@ -80,7 +87,7 @@ input_format_to_type = {
     FORMAT_METS: FILE_TYPE_XMLETREE,
     FORMAT_MIX: FILE_TYPE_XMLETREE,
     FORMAT_MODS: FILE_TYPE_XMLETREE,
-    FORMAT_OAIDC: FILE_TYPE_XMLETREE,
+    FORMAT_OAI_DC: FILE_TYPE_XMLETREE,
     FORMAT_OPENURL: FILE_TYPE_XMLETREE,
     FORMAT_PREMIS: FILE_TYPE_XMLETREE,
     FORMAT_REPEC: FILE_TYPE_TXT,
@@ -134,13 +141,20 @@ xmlns_map = {
     'tei': "http://www.tei-c.org/ns/1.0",
     'xi': "http://www.w3.org/2001/XInclude",
     'xml': "http://www.w3.org/XML/1998/namespace",
+    'xsi': "http://www.w3.org/2001/XMLSchema-instance",
     'yt': "http://gdata.youtube.com/schemas/2007"
+}
+
+xmlns_schema_map = {
+    'dc': "http://dublincore.org/schemas/xmls/simpledc20021212.xsd",
+    'mods': "http://www.loc.gov/standards/mods/v3/mods-3-5.xsd",
+    'oai_dc': "http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
 }
 
 xmlns_to_input_format = {
     'http://schema.ccs-gmbh.com/ALTO': FORMAT_ALTO,
     'http://purl.org/dc/elements/1.1/': 'dc',
-    'http://www.openarchives.org/OAI/2.0/oai_dc/': FORMAT_OAIDC,
+    'http://www.openarchives.org/OAI/2.0/oai_dc/': FORMAT_OAI_DC,
     'urn:mpeg:mpeg21:2002:02-DIDL-NS': FORMAT_DIDL,
     'http://www.icpsr.umich.edu/DDI': FORMAT_DDI,
     'http://www.loc.gov/METS/': FORMAT_METS,
@@ -153,18 +167,18 @@ xmlns_to_input_format = {
 
 xmltag_to_input_format = {
     'alto': FORMAT_ALTO,
-    'dc': FORMAT_OAIDC,
+    'dc': FORMAT_OAI_DC,
     'codeBook': FORMAT_DDI,
     'DIDL': FORMAT_DIDL,
     'mets': FORMAT_METS,
     'mix': FORMAT_MIX,
     'mods': FORMAT_MODS,
     'modsCollection': FORMAT_MODS,
-    'oai_dc': FORMAT_OAIDC,
+    'oai_dc': FORMAT_OAI_DC,
     'premis': FORMAT_PREMIS,
-    'qualifieddc': FORMAT_OAIDC,
+    'qualifieddc': FORMAT_OAI_DC,
     'researcherml': FORMAT_RESEARCHERML,
-    'simpledc': FORMAT_OAIDC,
+    'simpledc': FORMAT_OAI_DC,
     'contributor': 'dc',
     'coverage': 'dc',
     'creator': 'dc',
@@ -205,6 +219,7 @@ DOC_TYPE_BOOKREVIEW = "BookReview"
 DOC_TYPE_CASEBRIEF = "CaseBrief"
 DOC_TYPE_CHART = "Chart"
 DOC_TYPE_CODE = "Code"
+DOC_TYPE_COLLECTION = "Collection"
 DOC_TYPE_CONFERENCECONTRIBUTION = "ConferenceContribution"
 DOC_TYPE_CONFERENCEPAPER = "ConferencePaper"
 DOC_TYPE_CONFERENCEPOSTER = "ConferencePoster"
@@ -212,6 +227,7 @@ DOC_TYPE_CONFERENCEPROCEEDINGS = "ConferenceProceedings"
 DOC_TYPE_COURTREPORTER = "CourtReporter"
 DOC_TYPE_CURRICULUMVITAE = "CurriculumVitae"
 DOC_TYPE_DATABASE = "Database"
+DOC_TYPE_DATASET = "Dataset"
 DOC_TYPE_DATASETQUALI = "DatasetQuali"
 DOC_TYPE_DATASETQUANTI = "DatasetQuanti"
 DOC_TYPE_DICTIONARY = "Dictionary"
@@ -230,6 +246,7 @@ DOC_TYPE_ENCYCLOPEDIAARTICLE = "EncyclopediaArticle"
 DOC_TYPE_ENGRAVE = "Engrave"
 DOC_TYPE_EQUATION = "Equation"
 DOC_TYPE_ERESOURCE = "EResource"
+DOC_TYPE_EVENT = "Event"
 DOC_TYPE_EXCERPT = "Excerpt"
 DOC_TYPE_FILM = "Film"
 DOC_TYPE_FONT = "Font"
@@ -276,6 +293,7 @@ DOC_TYPE_REPORT = "Report"
 DOC_TYPE_REPORTPART = "ReportPart"
 DOC_TYPE_RESEARCHPROPOSAL = "ResearchProposal"
 DOC_TYPE_SERIES = "Series"
+DOC_TYPE_SERVICE = "Service"
 DOC_TYPE_SLIDE = "Slide"
 DOC_TYPE_SOFTWARE = "Software"
 DOC_TYPE_SPEECH = "Speech"
@@ -322,6 +340,23 @@ root_rec_type_to_is_part_of_rec_type = {
     DOC_TYPE_VIDEOPART: DOC_TYPE_VIDEORECORDING,
     DOC_TYPE_WEBSITE: DOC_TYPE_WEBARCHIVE
 }
+
+DOC_TYPES_LIST_ARTICLES = [
+    DOC_TYPE_ANNOTATIONARTICLE,
+    DOC_TYPE_ARTICLEREVIEW,
+    DOC_TYPE_BOOKREVIEW,
+    DOC_TYPE_EJOURNALARTICLE,
+    DOC_TYPE_INTERVIEWARTICLE,
+    DOC_TYPE_JOURNALARTICLE,
+    DOC_TYPE_MAGAZINEARTICLE,
+    DOC_TYPE_NEWSPAPERARTICLE,
+    DOC_TYPE_PERIODICALISSUE
+]
+
+csv_metajson_fieldnames = [
+    "rec_id",
+    "title"
+]
 
 TITLE_NON_SORT = {
     "en": [
