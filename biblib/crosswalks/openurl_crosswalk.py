@@ -437,7 +437,7 @@ def openurl_xmletree_to_metajson_list(openurl_response, source, rec_id_prefix, o
                     documents.append(document)
                     if only_first_record:
                         break
-    logging.debug(jsonbson.dumps_json(documents))
+    #logging.debug(jsonbson.dumps_json(documents))
     return documents
 
 
