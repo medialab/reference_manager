@@ -1631,6 +1631,7 @@ french_to_rfc5646 = {
     "finno-ougriennes, autres langues": "fiu",
     "finnois": "fi",
     "fon": "fon",
+    "france": "fr",
     "français": "fr",
     "français ancien (842-ca.1400)": "fro",
     "français moyen (1400-1600)": "frm",
