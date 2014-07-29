@@ -245,7 +245,7 @@ def mods_root_or_related_item_to_metajson(mods, root_rec_type):
     document.update(get_mods_identifiers_and_rec_id(mods))
 
     # titleInfo -> title, title_non_sort, title_sub, part_number, part_name,
-    # title_abbreviated, title_alternative, title_translated, title_uniform
+    # title_abbreviateds, title_alternatives, title_translateds, title_uniforms
     document.update(get_mods_title_infos(mods))
 
     # name, extension/daiList -> creators[]
@@ -1027,11 +1027,15 @@ def get_mods_target_audiences(mods):
 def get_mods_title_infos(mods):
     """ titleInfo ->
         title, title_non_sort, title_sub, part_number, part_name,
-        title_abbreviated, title_alternative, title_translated, title_uniform
+        title_abbreviateds, title_alternatives, title_translateds, title_uniforms
     """
     result = {}
     mods_titleinfos = mods.findall(xmletree.prefixtag("mods", "titleInfo"))
     if mods_titleinfos is not None:
+        title_abbreviateds = []
+        title_alternatives = []
+        title_translateds = []
+        title_uniforms = []
         for mods_titleinfo in mods_titleinfos:
             if mods_titleinfo is not None:
                 title_dict = {}
@@ -1051,15 +1055,23 @@ def get_mods_title_infos(mods):
                 if title_type is None and "title" not in result:
                     result.update(title_dict)
                 elif title_type == "abbreviated":
-                    result["title_abbreviated"] = title_dict
+                    title_abbreviateds.append(title_dict)
                 elif title_type == "alternative":
-                    result["title_alternative"] = title_dict
+                    title_alternatives.append(title_dict)
                 elif title_type == "translated":
-                    result["title_translated"] = title_dict
+                    title_translateds.append(title_dict)
                 elif title_type == "uniform":
-                    result["title_uniform"] = title_dict
+                    title_uniforms.append(title_dict)
                 else:
                     logging.error("error get_mods_title_infos unknown type: {}".format(title_type))
+        if title_abbreviateds:
+            result["title_abbreviateds"] = title_abbreviateds
+        if title_alternatives:
+            result["title_alternatives"] = title_alternatives
+        if title_translateds:
+            result["title_translateds"] = title_translateds
+        if title_uniforms:
+            result["title_uniforms"] = title_uniforms
     return result
 
 
@@ -1532,6 +1544,8 @@ def convert_mods_string_langs(mods_string_langs):
                     result = {"value": value}
                     if language is not None:
                         result["language"] = language.strip()
+                    else:
+                        result["language"] = "und"
                     results.append(result)
         return results
 

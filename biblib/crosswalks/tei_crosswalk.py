@@ -163,7 +163,7 @@ def get_tei_titles_to_metason(tei_element, doc_language):
     if title_translated_dict.values():
         result["title_translateds"] = title_translated_dict.values()
     if title_abbreviated_list:
-        result["title_translateds"] = title_translated_dict.values()
+        result["title_abbreviateds"] = title_abbreviated_list
     return result
 
 

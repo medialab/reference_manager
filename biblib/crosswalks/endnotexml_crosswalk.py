@@ -378,9 +378,9 @@ def endnotexml_record_to_metajson(record, source, rec_id_prefix):
         is_review_ofs.set_key_if_not_none("rec_type", "Book")
         document.add_items_to_key([is_review_ofs], "is_review_ofs")
 
-    # abstracts[0].value
+    # descriptions[0].value
     if abstract:
-        document["abstracts"] = [{"value": abstract}]
+        document["descriptions"] = [{"value": abstract, "language": "und"}]
 
     # archive
     if endnote_type == TYPE_FIGURE and remote_database_provider:
@@ -502,9 +502,9 @@ def endnotexml_record_to_metajson(record, source, rec_id_prefix):
     # title, title_alternative, title_abbreviated, title_translated
     document["title"] = title
     if title_alternative:
-        document["title_alternative"] = [{"title": title_alternative}]
+        document["title_alternatives"] = [{"title": title_alternative}]
     if title_abbreviated:
-        document["title_abbreviated"] = [{"title": title_abbreviated}]
+        document["title_abbreviateds"] = [{"title": title_abbreviated}]
 
     logging.info("# endnote_type: {}".format(endnote_type))
     metajson_service.pretty_print_document(document)

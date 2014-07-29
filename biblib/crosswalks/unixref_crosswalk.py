@@ -100,7 +100,7 @@ def unixref_record_to_metajson(record, source, rec_id_prefix):
     if journal_title is not None:
         is_part_of["title"] = journal_title.text
     if journal_title_abbreviated is not None:
-        is_part_of["title_abbreviated"] = journal_title_abbreviated.text
+        is_part_of["title_abbreviateds"] = [{"title":journal_title_abbreviated.text}]
     if journal_issn is not None:
         is_part_of.set_key_with_value_type_in_list("identifiers", journal_issn.text, "issn")
     if journal_eissn is not None:

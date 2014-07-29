@@ -189,9 +189,9 @@ def ris_txt_lines_to_metajson_list(txt_lines, source, rec_id_prefix, only_first_
             elif key == RIS_KEY_END:
                 # record end -> return the result
                 # verify the is_part_ofs[0]["title"]
-                if "is_part_ofs" in document and "title" not in document["is_part_ofs"][0] and "title_abbreviated" in document["is_part_ofs"][0]:
-                    document["is_part_ofs"][0]["title"] = document["is_part_ofs"][0]["title_abbreviated"]["title"]
-                    del document["is_part_ofs"][0]["title_abbreviated"]
+                if "is_part_ofs" in document and "title" not in document["is_part_ofs"][0] and "title_abbreviateds" in document["is_part_ofs"][0]:
+                    document["is_part_ofs"][0]["title"] = document["is_part_ofs"][0]["title_abbreviateds"][0]["title"]
+                    del document["is_part_ofs"][0]["title_abbreviateds"]
 
                 logging.info("# RIS type: {}".format(ris_type))
                 metajson_service.pretty_print_document(document)
@@ -208,7 +208,7 @@ def ris_txt_lines_to_metajson_list(txt_lines, source, rec_id_prefix, only_first_
                     # Title Secondary -> is_part_of["title"]
                     document.add_is_part_of_title(value)
                 elif key in ["JA", "J1", "J2", "T2"]:
-                    # Title Secondary -> is_part_of["title_abbreviated"]["title"]
+                    # Title Secondary -> is_part_of["title_abbreviateds"][O]["title"]
                     document.add_is_part_of_title_abbreviated(value)
                 elif key == "T3":
                     # Title Series
