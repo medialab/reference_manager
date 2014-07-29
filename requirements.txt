@@ -4,7 +4,7 @@ requests
 pymongo
 zope.interface
 Twisted
-txJSON-RPC
+#git+git@github.com:medialab/txjsonrpc.git
 nose
 coverage
 httplib2
@@ -17,6 +17,8 @@ gdata
 gspreadsheet
 ply
 pymarc
+#git+git@github.com:asl2/PyZ3950.git
 python-dateutil < 2.0
 python-stdnum
 smc.bibencodings
+jsonrpclib

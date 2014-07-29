@@ -61,7 +61,8 @@ def csv_dict_reader_to_metasjon(csv_row, input_format, source, rec_id_prefix):
         if note:
             document["notes"] = note
         document["publication_countries"] = [x.strip() for x in csv_row["publication_countries"].split(";") if x.strip()]
-        document["rec_created_user"] = csv_row["rec_created_user"]
+        if "rec_created_user" in csv_row:
+            document["rec_created_user"] = csv_row["rec_created_user"]
         document["rec_type_cerimes"] = csv_row["rec_type_cerimes"]
         specific_agents = [x.strip() for x in csv_row["specific_agents"].split(";") if x.strip()]
         if specific_agents:
