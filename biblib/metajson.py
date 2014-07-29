@@ -267,7 +267,7 @@ class Document(Common):
     def add_is_part_of_title_abbreviated(self, title_abbreviated):
         if "is_part_ofs" not in self:
             self["is_part_ofs"] = [Document()]
-        self["is_part_ofs"][0]["title_abbreviated"] = {"title": title_abbreviated}
+        self["is_part_ofs"][0]["title_abbreviateds"] = [{"title": title_abbreviated}]
 
     def add_series_creator(self, creator):
         if "seriess" not in self:
