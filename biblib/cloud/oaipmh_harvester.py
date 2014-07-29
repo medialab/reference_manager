@@ -162,7 +162,7 @@ def convert_record(record, meta_orig_prefix, source):
     header = convert_header(record[0])
     meta_orig_value = record[1].getField("orig").encode('utf-8')
     logging.debug("meta_orig_value: {}".format(meta_orig_value))
-    metajson_list = crosswalks_service.parse_and_convert_string(meta_orig_value, meta_orig_prefix, constants.FORMAT_METAJSON, source, False, False)
+    metajson_list = crosswalks_service.parse_and_convert_string(meta_orig_value, meta_orig_prefix, constants.FORMAT_METAJSON, source, "", False, False)
     logging.debug("metajson_list: {}".format(metajson_list))
     metajson = None
     if metajson_list:
