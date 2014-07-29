@@ -19,7 +19,7 @@ console.setup_console()
 if __name__ == "__main__":
     date_begin = datetime.datetime.now()
 
-    # conf
+    # conf params
     corpus = "num"
     source = "Sciences Po | la bibliothèque"
     rec_id_prefix = "sc"
@@ -63,4 +63,3 @@ if __name__ == "__main__":
     #corpus_service.export_corpus(corpus, output_dir_path, constants.FORMAT_CSV_METAJSON, True, True)
     #date_export_csv = datetime.datetime.now()
     #chrono.chrono_trace("Export corpus csv", date_export_mods, date_export_csv, None)
-
