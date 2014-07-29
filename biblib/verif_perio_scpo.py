@@ -16,16 +16,15 @@ from biblib.services import repository_service
 from biblib.services import resource_service
 from biblib.util import chrono
 from biblib.util import console
+from biblib.util import constants
 
 
 console.setup_console()
 
 
-def validate_perios(documents):
+def validate_perios(documents, csv_file_path):
     if documents:
         issn_duplicated = {}
-        csv_file_name = "".join(["validation-", corpus, ".csv"])
-        csv_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "data", "result", csv_file_name)
         # restore of the previous state
         previously_dict = {}
         if os.path.isfile(csv_file_path):
@@ -132,29 +131,28 @@ def validate_perios(documents):
 if __name__ == "__main__":
     date_begin = datetime.datetime.now()
 
-    # conf corpus
+    # conf params
     corpus = "perio"
+    source = "Sciences Po | la bibliothèque"
+    rec_id_prefix = ""
+    input_file_path = os.path.join("data", "unimarc", "periouni.mrc")
+    input_format = constants.FORMAT_UNIMARC
+    csv_file_name = "".join(["validation-", corpus, ".csv"])
+    csv_file_path = os.path.join("data", "result", csv_file_name)
+
+    # conf corpus
     corpus_service.clean_corpus(corpus)
     corpus_service.conf_corpus(corpus, "aime")
     date_clean = datetime.datetime.now()
     chrono.chrono_trace("Clean and conf corpus", date_begin, date_clean, None)
 
     # import
-    input_file_path = "data/unimarc/periouni.mrc"
-    input_format = "unimarc"
-    corpus_service.import_metadata_file(corpus, input_file_path, input_format, "sciencespo_catalogue", True, None)
+    corpus_service.import_metadata_file(corpus, input_file_path, input_format, source, rec_id_prefix, True, None)
     date_import = datetime.datetime.now()
     chrono.chrono_trace("Import corpus", date_clean, date_import, None)
 
-    # Validate
-    #error_file_name = "".join(["validation-", corpus, ".txt"])
-    #error_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "log", error_file_name)
-    #corpus_service.validate_corpus(corpus, error_file_path)
-    #date_validate = datetime.datetime.now()
-    #chrono.chrono_trace("Validate corpus", date_import, date_validate, None)
-
     # Validate perio
     documents = repository_service.get_documents(corpus)
-    validate_perios(documents)
+    validate_perios(documents, csv_file_path)
     date_validate = datetime.datetime.now()
     chrono.chrono_trace("Validate perio", date_import, date_validate, None)
