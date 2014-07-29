@@ -358,3 +358,19 @@ def create_url(value, preferred, relation_type, label, date_last_accessed, visib
         if visible is not None:
             url["visible"] = visible
         return url
+
+
+def get_is_part_of_rec_type_from_root_rec_type(root_rec_type):
+    if root_rec_type not in constants.root_rec_type_to_is_part_of_rec_type:
+        logging.error("No IsPartOf rec_type from root rec_type : {}".format(root_rec_type))
+        return constants.DOC_TYPE_DOCUMENT
+    else:
+        return constants.root_rec_type_to_is_part_of_rec_type[root_rec_type]
+
+
+def get_has_part_rec_type_from_root_rec_type(root_rec_type):
+    if root_rec_type not in constants.root_rec_type_to_has_part_rec_type:
+        logging.error("No HasPart rec_type from root rec_type : {}".format(root_rec_type))
+        return constants.DOC_TYPE_DOCUMENT
+    else:
+        return constants.root_rec_type_to_has_part_rec_type[root_rec_type]
