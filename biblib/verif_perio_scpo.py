@@ -24,6 +24,8 @@ console.setup_console()
 
 def validate_perios(documents, csv_file_path):
     if documents:
+        source = "Serials Solutions"
+        rec_id_prefix = ""
         issn_duplicated = {}
         # restore of the previous state
         previously_dict = {}
@@ -92,8 +94,8 @@ def validate_perios(documents, csv_file_path):
                     # revues en ligne / openurl
                     if csvdict["issn_status"] == "OK":
                         openurl_response = openurl_client.request_periodical_by_issn(csvdict["issn"])
-                        if openurl_response:
-                            openurl_documents = openurl_crosswalk.openurl_xmletree_to_metajson_list(openurl_response, "Serials Solutions", True)
+                        if openurl_response is not None:
+                            openurl_documents = openurl_crosswalk.openurl_xmletree_to_metajson_list(openurl_response, source, rec_id_prefix, True)
                             if openurl_documents:
                                 openurl_document = openurl_documents[0]
                                 if "identifiers" in openurl_document:
