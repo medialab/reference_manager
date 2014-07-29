@@ -97,8 +97,11 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
         rec_id_prefix = ""
     if record['002'] is not None:
         rec_id = rec_id_prefix + record['002'].data
+    elif record['001'] is not None:
+        rec_id = rec_id_prefix + record['001'].data
+    #logging.debug("rec_id: {}".format(rec_id))
     document["rec_id"] = rec_id
-    logging.debug("rec_id: {}".format(rec_id))
+    
 
     # Debug
     #output_dir = os.path.join("data", "num", "output")
@@ -110,13 +113,273 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     #     output_filexml.write(record_to_xml(record))
 
     # leader and 1XX -> rec_type
-    rec_type = extract_unimarc_type(record)
+    rec_type = None
+
+    # leader
+    leader6 = record.leader[6]
+    leader7 = record.leader[7]
+
+    # 100$a/17-19
+    # 100$a/20
+    field100ap1719 = None
+    field100ap20 = None
+    if record['100'] is not None and record['100']['a'] is not None:
+        field100ap1719 = record['100']['a'][17:20]
+        field100ap20 = record['100']['a'][20:21]
+
+    # 105/4-7
+    field105ap48 = None
+    if record['105'] is not None and record['105']['a'] is not None:
+        field105ap48 = record['105']['a'][4:8]
+
+    # 106$a
+    field106a = None
+    if record['106'] is not None and record['106']['a'] is not None:
+        field106a = record['106']['a']
+
+    # 110$a/1
+    field110ap0 = None
+    field110ap1 = None
+    if record['110'] is not None and record['110']['a'] is not None:
+        field110ap0 = record['110']['a'][0:1]
+        field110ap1 = record['110']['a'][1:2]
+
+    # 115$a/0
+    field115ap0 = None
+    if record['115'] is not None and record['115']['a'] is not None:
+        field115ap0 = record['115']['a'][0:1]
+
+    # 116$a/0
+    field116ap0 = None
+    if record['116'] is not None and record['116']['a'] is not None:
+        field116ap0 = record['116']['a'][0:1]
+        #d = impression en gros caractères
+        #e = journal
+        #f = caractères Braille ou Moon
+        #g = micro-impression
+        #h = manuscrit
+        #i = multimédia multisupport (Par exemple : un volume imprimé accompagné d’un supplément sur microfiches.)
+        #j = impression en réduction
+        #r = impression normale
+        #s = ressource électronique
+        #t = microforme
+        #z = autres formes de présentation
+
+    # 121$a/0
+    field121ap0 = None
+    if record['121'] is not None and record['121']['a'] is not None:
+        field121ap0 = record['121']['a'][0:1]
+
+    # 124$b
+    field124b = None
+    if record['124'] is not None and record['124']['b'] is not None:
+        field124b = record['124']['b']
+
+    # 126$a/0
+    field126ap0 = None
+    if record['126'] is not None and record['126']['a'] is not None:
+        field126ap0 = record['126']['a'][0:1]
+
+    # 135/0
+    field135ap0 = None
+    if record['135'] is not None and record['135']['a'] is not None:
+        field135ap0 = record['135']['a'][0:1]
+
+    # 300$a
+    field300a = None
+    if record['300'] is not None and record['300']['a'] is not None:
+        field300a = record['300']['a']
+
+    # logging.debug("leader6: {}".format(leader6))
+    # logging.debug("leader7: {}".format(leader7))
+    # logging.debug("100$a/17-19: {}".format(field100ap1719))
+    # logging.debug("100$a/20: {}".format(field100ap20))
+    # logging.debug("105/4-7: {}".format(field105ap48))
+    # logging.debug("106$a: {}".format(field106a))
+    # logging.debug("110$a/0: {}".format(field110ap0))
+    # logging.debug("110$a/1: {}".format(field110ap1))
+    # logging.debug("115$a/0: {}".format(field115ap0))
+    # logging.debug("116/0: {}".format(field116ap0))
+    # logging.debug("121$a/0: {}".format(field121ap0))
+    # logging.debug("124$b: {}".format(field124b))
+    # logging.debug("126$a/0: {}".format(field126ap0))
+    # logging.debug("135$a/0: {}".format(field135ap0))
+
+    if leader6 == "a":
+        if leader7 == "a":
+            if field300a == "Numéro spécial":
+                rec_type = constants.DOC_TYPE_PERIODICALISSUE
+            else:
+                rec_type = constants.DOC_TYPE_JOURNALARTICLE
+        elif leader7 == "c":
+            rec_type = constants.DOC_TYPE_PRESSCLIPPING
+        elif leader7 == "m":
+            rec_type = constants.DOC_TYPE_BOOK
+        elif leader7 == "s":
+            # 110 : Zone de données codées : Ressources continues
+            # 110$a/0 Type de ressource continue
+            if field110ap0 == "a":
+                # a: périodique
+                rec_type = constants.DOC_TYPE_JOURNAL
+            elif field110ap0 == "b":
+                # b: collection de monographies
+                rec_type = constants.DOC_TYPE_MULTIVOLUMEBOOK
+            elif field110ap0 == "c":
+                # c: journal
+                rec_type = constants.DOC_TYPE_NEWSPAPER
+            elif field110ap0 == "e":
+                # e: publication à feuillets mobiles et à mise à jour
+                rec_type = constants.DOC_TYPE_LOOSELEAFPUBLICATION
+            elif field110ap0 == "f":
+                # f: base de données
+                rec_type = constants.DOC_TYPE_DATABASE
+            elif field110ap0 == "g":
+                # g: site web à mise à jour
+                rec_type = constants.DOC_TYPE_WEBSITE
+            elif field110ap0 == "g":
+                # z: autre
+                rec_type = constants.DOC_TYPE_JOURNAL
+            else:
+                rec_type = constants.DOC_TYPE_JOURNAL
+
+            # 110$a/1 field110ap1 : Périodicité
+            if field110ap1 in ["a", "b", "c", "n"]:
+                # a: quotidienne
+                # b: bihebdomadaire
+                # c: hebdomadaire
+                # n: trois fois par semaine
+                rec_type = constants.DOC_TYPE_NEWSPAPER
+
+        else:
+            rec_type = constants.DOC_TYPE_DOCUMENT
+
+    elif leader6 == "b":
+        rec_type = constants.DOC_TYPE_MANUSCRIPT
+    elif leader6 in ["c", "d"]:
+        rec_type = constants.DOC_TYPE_MUSICALSCORE
+    elif leader6 in ["e", "f"]:
+        rec_type = constants.DOC_TYPE_MAP
+    elif leader6 == "g":
+        rec_type = constants.DOC_TYPE_VIDEORECORDING
+    elif leader6 == "i":
+        rec_type = constants.DOC_TYPE_AUDIORECORDING
+    elif leader6 == "j":
+        rec_type = constants.DOC_TYPE_MUSICRECORDING
+    elif leader6 == "k":
+        rec_type = constants.DOC_TYPE_IMAGE
+    elif leader6 == "l":
+        # 135$a/0 field135ap0 : Zone de données codées : ressources électroniques
+        if field135ap0 == "a":
+            # a: données numériques
+            rec_type = constants.DOC_TYPE_DATASETQUANTI
+        elif field135ap0 == "b":
+            # b: programme informatique
+            rec_type = constants.DOC_TYPE_SOFTWARE
+            # c: illustration
+        elif field135ap0 == "d":
+            # d: texte
+            if leader7 == "a":
+                rec_type = constants.DOC_TYPE_EJOURNALARTICLE
+            elif leader7 == "c":
+                rec_type = constants.DOC_TYPE_PRESSCLIPPING
+            elif leader7 == "m":
+                rec_type = constants.DOC_TYPE_EBOOK
+            elif leader7 == "s":
+                rec_type = constants.DOC_TYPE_EJOURNAL
+        elif field135ap0 == "e":
+            # e: données bibliographiques
+            rec_type = constants.DOC_TYPE_BIBLIOGRAPHY
+        elif field135ap0 == "f":
+            # f: polices de caractères
+            rec_type = constants.DOC_TYPE_FONT
+        elif field135ap0 == "g":
+            # g: jeu
+            rec_type = constants.DOC_TYPE_GAME
+        elif field135ap0 == "h":
+            # h: son
+            rec_type = constants.DOC_TYPE_AUDIORECORDING
+        elif field135ap0 == "i":
+            # i: multimédia interactif
+            rec_type = constants.DOC_TYPE_MULTIMEDIA
+        elif field135ap0 == "j":
+            # j: système ou service en ligne
+            rec_type = constants.DOC_TYPE_WEBSITE
+        elif field135ap0 == "u":
+            # u: inconnu
+            rec_type = constants.DOC_TYPE_ERESOURCE
+        elif field135ap0 == "v":
+            # v: combinaison de données
+            rec_type = constants.DOC_TYPE_DATASETQUANTI
+            # z: autre
+        else:
+            if leader7 == "a":
+                if field300a == "Numéro spécial":
+                    rec_type = constants.DOC_TYPE_PERIODICALISSUE
+                else:
+                    rec_type = constants.DOC_TYPE_EJOURNALARTICLE
+            elif leader7 == "c":
+                rec_type = constants.DOC_TYPE_PRESSCLIPPING
+            elif leader7 == "m":
+                rec_type = constants.DOC_TYPE_EBOOK
+            elif leader7 == "s":
+                rec_type = constants.DOC_TYPE_EJOURNAL
+            else:
+                rec_type = constants.DOC_TYPE_DOCUMENT
+    elif leader6 == "m":
+        rec_type = constants.DOC_TYPE_KIT
+    elif leader6 == "r":
+        rec_type = constants.DOC_TYPE_PHYSICALOBJECT
+    else:
+        rec_type = constants.DOC_TYPE_DOCUMENT
     document["rec_type"] = rec_type
 
+
     # 0XX and 945$b -> identifiers
-    identifiers = extract_unimarc_identifiers(record)
+    identifiers = []
+    # 001 -> identifier ppn
+    extract_unimarc_identifier(record, '001', 'data', 'ppn', identifiers)
+    # 010 -> identifier isbn
+    extract_unimarc_identifier(record, '010', 'a', 'isbn', identifiers)
+    # 011 -> identifier issn
+    # todo add $f
+    extract_unimarc_identifier(record, '011', 'a', 'issn', identifiers)
+    # 012 -> identifier imprint
+    extract_unimarc_identifier(record, '012', 'a', 'imprint', identifiers)
+    # 013 -> identifier ismn
+    extract_unimarc_identifier(record, '013', 'a', 'ismn', identifiers)
+    # 014 -> identifier sici or $2
+    extract_unimarc_identifier(record, '014', 'a', 'sici', identifiers)
+    # 015 -> identifier isrn
+    extract_unimarc_identifier(record, '015', 'a', 'isrn', identifiers)
+    # 016 -> identifier isrc
+    extract_unimarc_identifier(record, '016', 'a', 'isrc', identifiers)
+    # 017 -> identifier other
+    extract_unimarc_identifier(record, '017', 'a', 'other', identifiers)
+    # 020 -> identifier lccn
+    extract_unimarc_identifier(record, '020', 'b', 'lccn', identifiers)
+    # 021 -> identifier copyright
+    extract_unimarc_identifier(record, '021', 'b', 'copyright', identifiers)
+    # 022 -> identifier officialpub
+    extract_unimarc_identifier(record, '022', 'b', 'officialpub', identifiers)
+    # 029 -> identifier copyright
+    extract_unimarc_identifier(record, '029', 'b', 'copyright', identifiers)
+    # 035 -> identifier external
+    extract_unimarc_identifier(record, '035', 'a', 'external', identifiers)
+    # 036 -> identifier incipit
+    extract_unimarc_identifier(record, '036', 'a', 'incipit', identifiers)
+    # 040 -> identifier coden
+    extract_unimarc_identifier(record, '040', 'a', 'coden', identifiers)
+    # 071 -> identifier editref
+    extract_unimarc_identifier(record, '071', 'a', 'editref', identifiers)
+    # 072 -> identifier upc
+    extract_unimarc_identifier(record, '072', 'a', 'upc', identifiers)
+    # 073 -> identifier ean
+    extract_unimarc_identifier(record, '073', 'a', 'ean', identifiers)
+    # 945 -> identifier callnumber
+    extract_unimarc_identifier(record, '945', 'b', 'callnumber', identifiers)
     if identifiers:
         document["identifiers"] = identifiers
+
 
     # 100$a stuff
     if record['100'] is not None and record['100']['a'] is not None:
@@ -881,9 +1144,9 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
                 related["resources"] = resources
             if related:
                 # debug
-                logging.debug("document.rec_type: {}".format(document["rec_type"]))
-                logging.debug("document.title: {}".format(document["title"]))
-                logging.debug("field: {}".format(field))
+                #logging.debug("document.rec_type: {}".format(document["rec_type"]))
+                #logging.debug("document.title: {}".format(document["title"]))
+                #logging.debug("field: {}".format(field))
                 # rec_type
                 if relateditems_dict[field.tag][1] == "same":
                     related["rec_type"] = document["rec_type"]
@@ -900,12 +1163,12 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
                 if related["rec_type"] == constants.DOC_TYPE_DOCUMENT and "rec_type_description" in related:
                     if related["rec_type_description"] == "Images animées":
                         related["rec_type"] = constants.DOC_TYPE_VIDEORECORDING
-                logging.debug("related.rec_type: {}".format(related["rec_type"]))
+                #logging.debug("related.rec_type: {}".format(related["rec_type"]))
                 # title
                 if "title" not in related:
                     related["title"] = ""
-                logging.debug("related.title: {}".format(related["title"]))
-                logging.debug("related property: {}".format(relateditems_dict[field.tag][0]))
+                #logging.debug("related.title: {}".format(related["title"]))
+                #logging.debug("related property: {}".format(relateditems_dict[field.tag][0]))
                 # add to document properties
                 if relateditems_dict[field.tag][0] not in document:
                     document[relateditems_dict[field.tag][0]] = []
@@ -989,38 +1252,39 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     # 660 -> Code d’aire géographique
 
     # 670 -> PRECIS
-
+    if subjects:
+        document["subjects"] = subjects
 
     # 328$c, 675$a, 676$a, 680$a, 686$a -> classifications
     if record.get_fields('328','675','676','680','686'):
-        thesis = []
-        udc = []
-        ddc = []
-        lcc = []
+        class_thesis = []
+        class_udc = []
+        class_ddc = []
+        class_lcc = []
         classifications = {}
         for field in record.get_fields('328','675','676','680','686'):
             if field.tag == '328' and field['c'] is not None and field['c'].strip():
-                thesis.append(field['c'].strip())
+                class_thesis.append(field['c'].strip())
             if field['a'] is not None and field['a'].strip():
                 if field.tag == '675':
-                    udc.append(field['a'].strip())
+                    class_udc.append(field['a'].strip())
                 elif field.tag == '676':
-                    ddc.append(field['a'].strip())
+                    class_ddc.append(field['a'].strip())
                 elif field.tag == '680':
-                    lcc.append(field['a'].strip())
+                    class_lcc.append(field['a'].strip())
                 elif field.tag == '686':
                     if field['2']:
                         if field['2'] not in classifications:
                             classifications[field['2']] = []
                         classifications[field['2']].append(field['a'].strip())
-        if thesis:
-            classifications["thesis"] = thesis
-        if udc:
-            classifications["udc"] = udc
-        if ddc:
-            classifications["ddc"] = ddc
-        if lcc:
-            classifications["lcc"] = lcc
+        if class_thesis:
+            classifications["thesis"] = class_thesis
+        if class_udc:
+            classifications["udc"] = class_udc
+        if class_ddc:
+            classifications["ddc"] = class_ddc
+        if class_lcc:
+            classifications["lcc"] = class_lcc
         if classifications:
             document["classifications"] = classifications
 
@@ -1047,10 +1311,10 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     if record.get_fields('801'):
         if record['801']['a'] is not None:
             document["rec_source_country"] = record['801']['a']
-        if "rec_source" not in document and record['801']['b'] is not None:
+        if record['801']['b'] is not None:
             document["rec_source"] = record['801']['b']
         if record['801']['c'] is not None:
-            document["rec_source_date"] = record['801']['c']
+            document["rec_source_date"] = date_service.parse_to_iso8601(record['801']['c'])
         if record['801']['g'] is not None:
             document["rec_source_cataloging_rule"] = record['801']['g']
         if record['801']['2'] is not None:
@@ -1128,276 +1392,6 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
 
     metajson_service.pretty_print_document(document)
     return document
-
-
-def extract_unimarc_type(record):
-    rec_type = None
-
-    # leader
-    leader6 = record.leader[6]
-    leader7 = record.leader[7]
-
-    # 100$a/17-19
-    # 100$a/20
-    field100ap1719 = None
-    field100ap20 = None
-    if record['100'] is not None and record['100']['a'] is not None:
-        field100ap1719 = record['100']['a'][17:20]
-        field100ap20 = record['100']['a'][20:21]
-
-    # 105/4-7
-    field105ap48 = None
-    if record['105'] is not None and record['105']['a'] is not None:
-        field105ap48 = record['105']['a'][4:8]
-
-    # 106$a
-    field106a = None
-    if record['106'] is not None and record['106']['a'] is not None:
-        field106a = record['106']['a']
-
-    # 110$a/1
-    field110ap0 = None
-    field110ap1 = None
-    if record['110'] is not None and record['110']['a'] is not None:
-        field110ap0 = record['110']['a'][0:1]
-        field110ap1 = record['110']['a'][1:2]
-
-    # 115$a/0
-    field115ap0 = None
-    if record['115'] is not None and record['115']['a'] is not None:
-        field115ap0 = record['115']['a'][0:1]
-
-    # 116$a/0
-    field116ap0 = None
-    if record['116'] is not None and record['116']['a'] is not None:
-        field116ap0 = record['116']['a'][0:1]
-        #d = impression en gros caractères
-        #e = journal
-        #f = caractères Braille ou Moon
-        #g = micro-impression
-        #h = manuscrit
-        #i = multimédia multisupport (Par exemple : un volume imprimé accompagné d’un supplément sur microfiches.)
-        #j = impression en réduction
-        #r = impression normale
-        #s = ressource électronique
-        #t = microforme
-        #z = autres formes de présentation
-
-    # 121$a/0
-    field121ap0 = None
-    if record['121'] is not None and record['121']['a'] is not None:
-        field121ap0 = record['121']['a'][0:1]
-
-    # 124$b
-    field124b = None
-    if record['124'] is not None and record['124']['b'] is not None:
-        field124b = record['124']['b']
-
-    # 126$a/0
-    field126ap0 = None
-    if record['126'] is not None and record['126']['a'] is not None:
-        field126ap0 = record['126']['a'][0:1]
-
-    # 135/0
-    field135ap0 = None
-    if record['135'] is not None and record['135']['a'] is not None:
-        field135ap0 = record['135']['a'][0:1]
-
-    # 300$a
-    field300a = None
-    if record['300'] is not None and record['300']['a'] is not None:
-        field300a = record['300']['a']
-
-    # logging.debug("leader6: {}".format(leader6))
-    # logging.debug("leader7: {}".format(leader7))
-    # logging.debug("100$a/17-19: {}".format(field100ap1719))
-    # logging.debug("100$a/20: {}".format(field100ap20))
-    # logging.debug("105/4-7: {}".format(field105ap48))
-    # logging.debug("106$a: {}".format(field106a))
-    # logging.debug("110$a/0: {}".format(field110ap0))
-    # logging.debug("110$a/1: {}".format(field110ap1))
-    # logging.debug("115$a/0: {}".format(field115ap0))
-    # logging.debug("116/0: {}".format(field116ap0))
-    # logging.debug("121$a/0: {}".format(field121ap0))
-    # logging.debug("124$b: {}".format(field124b))
-    # logging.debug("126$a/0: {}".format(field126ap0))
-    # logging.debug("135$a/0: {}".format(field135ap0))
-
-    if leader6 == "a":
-        if leader7 == "a":
-            if field300a == "Numéro spécial":
-                rec_type = constants.DOC_TYPE_PERIODICALISSUE
-            else:
-                rec_type = constants.DOC_TYPE_JOURNALARTICLE
-        elif leader7 == "c":
-            rec_type = constants.DOC_TYPE_PRESSCLIPPING
-        elif leader7 == "m":
-            rec_type = constants.DOC_TYPE_BOOK
-        elif leader7 == "s":
-            # 110 : Zone de données codées : Ressources continues
-            # 110$a/0 Type de ressource continue
-            if field110ap0 == "a":
-                # a: périodique
-                rec_type = constants.DOC_TYPE_JOURNAL
-            elif field110ap0 == "b":
-                # b: collection de monographies
-                rec_type = constants.DOC_TYPE_MULTIVOLUMEBOOK
-            elif field110ap0 == "c":
-                # c: journal
-                rec_type = constants.DOC_TYPE_NEWSPAPER
-            elif field110ap0 == "e":
-                # e: publication à feuillets mobiles et à mise à jour
-                rec_type = constants.DOC_TYPE_LOOSELEAFPUBLICATION
-            elif field110ap0 == "f":
-                # f: base de données
-                rec_type = constants.DOC_TYPE_DATABASE
-            elif field110ap0 == "g":
-                # g: site web à mise à jour
-                rec_type = constants.DOC_TYPE_WEBSITE
-            elif field110ap0 == "g":
-                # z: autre
-                rec_type = constants.DOC_TYPE_JOURNAL
-            else:
-                rec_type = constants.DOC_TYPE_JOURNAL
-
-            # 110$a/1 field110ap1 : Périodicité
-            if field110ap1 in ["a", "b", "c", "n"]:
-                # a: quotidienne
-                # b: bihebdomadaire
-                # c: hebdomadaire
-                # n: trois fois par semaine
-                rec_type = constants.DOC_TYPE_NEWSPAPER
-
-        else:
-            rec_type = constants.DOC_TYPE_DOCUMENT
-
-    elif leader6 == "b":
-        rec_type = constants.DOC_TYPE_MANUSCRIPT
-    elif leader6 in ["c", "d"]:
-        rec_type = constants.DOC_TYPE_MUSICALSCORE
-    elif leader6 in ["e", "f"]:
-        rec_type = constants.DOC_TYPE_MAP
-    elif leader6 == "g":
-        rec_type = constants.DOC_TYPE_VIDEORECORDING
-    elif leader6 == "i":
-        rec_type = constants.DOC_TYPE_AUDIORECORDING
-    elif leader6 == "j":
-        rec_type = constants.DOC_TYPE_MUSICRECORDING
-    elif leader6 == "k":
-        rec_type = constants.DOC_TYPE_IMAGE
-    elif leader6 == "l":
-        # 135$a/0 field135ap0 : Zone de données codées : ressources électroniques
-        if field135ap0 == "a":
-            # a: données numériques
-            rec_type = constants.DOC_TYPE_DATASETQUANTI
-        elif field135ap0 == "b":
-            # b: programme informatique
-            rec_type = constants.DOC_TYPE_SOFTWARE
-            # c: illustration
-        elif field135ap0 == "d":
-            # d: texte
-            if leader7 == "a":
-                rec_type = constants.DOC_TYPE_EJOURNALARTICLE
-            elif leader7 == "c":
-                rec_type = constants.DOC_TYPE_PRESSCLIPPING
-            elif leader7 == "m":
-                rec_type = constants.DOC_TYPE_EBOOK
-            elif leader7 == "s":
-                rec_type = constants.DOC_TYPE_EJOURNAL
-        elif field135ap0 == "e":
-            # e: données bibliographiques
-            rec_type = constants.DOC_TYPE_BIBLIOGRAPHY
-        elif field135ap0 == "f":
-            # f: polices de caractères
-            rec_type = constants.DOC_TYPE_FONT
-        elif field135ap0 == "g":
-            # g: jeu
-            rec_type = constants.DOC_TYPE_GAME
-        elif field135ap0 == "h":
-            # h: son
-            rec_type = constants.DOC_TYPE_AUDIORECORDING
-        elif field135ap0 == "i":
-            # i: multimédia interactif
-            rec_type = constants.DOC_TYPE_MULTIMEDIA
-        elif field135ap0 == "j":
-            # j: système ou service en ligne
-            rec_type = constants.DOC_TYPE_WEBSITE
-        elif field135ap0 == "u":
-            # u: inconnu
-            rec_type = constants.DOC_TYPE_ERESOURCE
-        elif field135ap0 == "v":
-            # v: combinaison de données
-            rec_type = constants.DOC_TYPE_DATASETQUANTI
-            # z: autre
-        else:
-            if leader7 == "a":
-                if field300a == "Numéro spécial":
-                    rec_type = constants.DOC_TYPE_PERIODICALISSUE
-                else:
-                    rec_type = constants.DOC_TYPE_EJOURNALARTICLE
-            elif leader7 == "c":
-                rec_type = constants.DOC_TYPE_PRESSCLIPPING
-            elif leader7 == "m":
-                rec_type = constants.DOC_TYPE_EBOOK
-            elif leader7 == "s":
-                rec_type = constants.DOC_TYPE_EJOURNAL
-            else:
-                rec_type = constants.DOC_TYPE_DOCUMENT
-    elif leader6 == "m":
-        rec_type = constants.DOC_TYPE_KIT
-    elif leader6 == "r":
-        rec_type = constants.DOC_TYPE_PHYSICALOBJECT
-    else:
-        rec_type = constants.DOC_TYPE_DOCUMENT
-
-    return rec_type
-
-
-def extract_unimarc_identifiers(record):
-    # 0XX, 945 -> identifiers
-    identifiers = []
-    # 001 -> identifier ppn
-    extract_unimarc_identifier(record, '001', 'data', 'ppn', identifiers)
-    # 010 -> identifier isbn
-    extract_unimarc_identifier(record, '010', 'a', 'isbn', identifiers)
-    # 011 -> identifier issn
-    # todo add $f
-    extract_unimarc_identifier(record, '011', 'a', 'issn', identifiers)
-    # 012 -> identifier imprint
-    extract_unimarc_identifier(record, '012', 'a', 'imprint', identifiers)
-    # 013 -> identifier ismn
-    extract_unimarc_identifier(record, '013', 'a', 'ismn', identifiers)
-    # 014 -> identifier sici or $2
-    extract_unimarc_identifier(record, '014', 'a', 'sici', identifiers)
-    # 015 -> identifier isrn
-    extract_unimarc_identifier(record, '015', 'a', 'isrn', identifiers)
-    # 016 -> identifier isrc
-    extract_unimarc_identifier(record, '016', 'a', 'isrc', identifiers)
-    # 017 -> identifier other
-    extract_unimarc_identifier(record, '017', 'a', 'other', identifiers)
-    # 020 -> identifier lccn
-    extract_unimarc_identifier(record, '020', 'b', 'lccn', identifiers)
-    # 021 -> identifier copyright
-    extract_unimarc_identifier(record, '021', 'b', 'copyright', identifiers)
-    # 022 -> identifier officialpub
-    extract_unimarc_identifier(record, '022', 'b', 'officialpub', identifiers)
-    # 029 -> identifier copyright
-    extract_unimarc_identifier(record, '029', 'b', 'copyright', identifiers)
-    # 035 -> identifier external
-    extract_unimarc_identifier(record, '035', 'a', 'external', identifiers)
-    # 036 -> identifier incipit
-    extract_unimarc_identifier(record, '036', 'a', 'incipit', identifiers)
-    # 040 -> identifier coden
-    extract_unimarc_identifier(record, '040', 'a', 'coden', identifiers)
-    # 071 -> identifier editref
-    extract_unimarc_identifier(record, '071', 'a', 'editref', identifiers)
-    # 072 -> identifier upc
-    extract_unimarc_identifier(record, '072', 'a', 'upc', identifiers)
-    # 073 -> identifier ean
-    extract_unimarc_identifier(record, '073', 'a', 'ean', identifiers)
-    # 945 -> identifier callnumber
-    extract_unimarc_identifier(record, '945', 'b', 'callnumber', identifiers)
-    return identifiers
 
 
 def extract_unimarc_identifier(record, field, subfield, id_type, identifiers):
@@ -1515,12 +1509,6 @@ def extract_unimarc_creator(field):
         if creator:
             return creator
 
-# get fields with encoding
-def get_field_encoded():
-    # as_key, with_dict, multiple, fields, subfields, positions, marc_charactersets
-    string = "toto"
-    string.decode("mab2")
-    string.decode("utf8")
 
 def format_dates_as_list(dates):
     if dates:
