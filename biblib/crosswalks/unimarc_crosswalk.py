@@ -98,13 +98,14 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     if record['002'] is not None:
         rec_id = rec_id_prefix + record['002'].data
     document["rec_id"] = rec_id
+    logging.debug("rec_id: {}".format(rec_id))
 
     # Debug
-    # output_dir = os.path.join("data", "num", "output")
-    # output_file_path = os.path.join(output_dir, rec_id + ".marc.txt")
+    #output_dir = os.path.join("data", "num", "output")
+    #output_file_path = os.path.join(output_dir, rec_id + ".marc.txt")
+    #with open(output_file_path, "w") as output_file:
+    #    output_file.write(str(record))
     # output_filexml_path = os.path.join(output_dir, rec_id + ".marcxml.xml")
-    # with open(output_file_path, "w") as output_file:
-    #     output_file.write(str(record))
     # with open(output_filexml_path, "w") as output_filexml:
     #     output_filexml.write(record_to_xml(record))
 
@@ -256,7 +257,7 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
         tmp_charsets.append(record['100']['a'][30:32].strip())
         tmp_charsets.append(record['100']['a'][32:34].strip())
         for charset in tmp_charsets:
-            if charset:
+            if charset and charset in charsets_dict:
                 rec_cataloging_charactersets.append({"charset_id": charset, "label": charsets_dict[charset]})
         if rec_cataloging_charactersets:
             document["rec_cataloging_charactersets"] = rec_cataloging_charactersets
@@ -301,9 +302,9 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     if record['200'] is not None:
         #logging.debug("record['200'] = {}".format(record['200']))
         if record['200']['a'] is not None:
-            title_indicator2 = record['200'].indicator2.strip()
-            if title_indicator2:
-                title_non_sort_pos = int(record['200'].indicator2)
+            ind2 = record['200'].indicator2.strip()
+            if ind2:
+                title_non_sort_pos = int(ind2)
             else:
                 title_non_sort_pos = 0
             if title_non_sort_pos != 0:
@@ -312,13 +313,15 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
             else:
                 document["title"] = record['200']['a']
         if record['200']['d'] is not None:
-            document["title_alternative"] = {"title": record['200']['d']}
+            document["title_alternatives"] = [{"title": record['200']['d']}]
         if record['200']['e'] is not None:
             document["title_sub"] = record['200']['e']
         if record['200']['h'] is not None:
             document["part_number"] = record['200']['h'].replace(",", "")
         if record['200']['i'] is not None:
             document["part_name"] = record['200']['i']
+    if "title" not in document:
+        document["title"] = ""
 
     # 205$a -> edition
     if record['205'] is not None and record['205']['a'] is not None:
@@ -390,22 +393,22 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     # 215$d -> extent_dimension
     # 215$e -> extent_accompanying_material
     if record['215'] is not None:
-        part_volume = None
-        part_issue = None
-        part_page_begin = None
-        part_page_end = None
-        extent_accompanying_material = None
-        extent_description_final = None
-        extent_description = None
-        extent_dimension = None
-        extent_duration = None
+        part_volume = ""
+        part_issue = ""
+        part_page_begin = ""
+        part_page_end = ""
+        extent_accompanying_material = ""
+        extent_description_final = ""
+        extent_description = ""
+        extent_dimension = ""
+        extent_duration = ""
         extent_pages = ""
         extent_volumes = ""
         if record['215']['a'] is not None:
             extent_description_final = record['215']['a']
 
             # debug: insert 215$a in extent_description_original
-            document["extent_description_original"] = extent_description_final
+            #document["extent_description_original"] = extent_description_final
 
             if rec_type in constants.DOC_TYPES_LIST_ARTICLES:
                 # Articles types
@@ -550,8 +553,8 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
             for desc_term in desc_terms:
                 index = extent_description_final.find(desc_term.encode('utf-8'))
                 if index != -1:
-                    length = len(volumesform.encode('utf-8'))
-                    extent_description = extent_volumes + extent_description_final.encode('utf-8')[index:index+length].strip()
+                    length = len(desc_term.encode('utf-8'))
+                    extent_description = extent_description + extent_description_final.encode('utf-8')[index:index+length].strip()
                     extent_description_final = extent_description_final[index+length:].strip()
             
         if record['215']['c'] is not None:
@@ -576,8 +579,6 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
             document["extent_accompanying_material"] = extent_accompanying_material
         if extent_description:
             document["extent_description"] = extent_description
-        if extent_description_final:
-            document["extent_description_final"] = extent_description_final
         if extent_dimension:
             document["extent_dimension"] = extent_dimension
         if extent_duration:
@@ -586,6 +587,9 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
             document["extent_pages"] = extent_pages
         if extent_volumes:
             document["extent_volumes"] = extent_volumes
+        #if extent_description_final:
+        #    document["extent_description_final"] = extent_description_final
+
 
     # 3XX -> notes and physical_description_notes
     notes = []
@@ -682,78 +686,275 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     if rec_type_description.strip():
         document["rec_type_description"] = rec_type_description.strip()
 
+    # 326$a -> frequency
     if record['326'] is not None and record['326']['a'] is not None:
         document["frequency"] = record['326']['a'].strip()
 
     # 327 & 359 -> table_of_contentss[i]
-    # value ($a)
-    # content_type : undefined ($a), title1 ($b), title2 ($c), title3 ($d), title4 ($e), title5 ($f), title6 ($g), title7 ($h), title8 ($i)
-    # part_page_begin ($p)
-    # part_number ($v)
-    # url ($u)
-    # creators[i] ($z)
+    table_of_contentss = []
+    for field in record.get_fields('327','359'):
+        for subfield in field:
+            if subfield[1] is not None and subfield[1].strip() is not None:
+                if subfield[0] == "a":
+                    table_of_contentss.append({"content_type":"content","value":subfield[1].strip()})
+                elif subfield[0] == "b":
+                    table_of_contentss.append({"content_type":"h1","value":subfield[1].strip()})
+                elif subfield[0] == "c":
+                    table_of_contentss.append({"content_type":"h2","value":subfield[1].strip()})
+                elif subfield[0] == "d":
+                    table_of_contentss.append({"content_type":"h3","value":subfield[1].strip()})
+                elif subfield[0] == "e":
+                    table_of_contentss.append({"content_type":"h4","value":subfield[1].strip()})
+                elif subfield[0] == "f":
+                    table_of_contentss.append({"content_type":"h5","value":subfield[1].strip()})
+                elif subfield[0] == "g":
+                    table_of_contentss.append({"content_type":"h6","value":subfield[1].strip()})
+                elif subfield[0] == "h":
+                    table_of_contentss.append({"content_type":"h7","value":subfield[1].strip()})
+                elif subfield[0] == "i":
+                    table_of_contentss.append({"content_type":"h8","value":subfield[1].strip()})
+                elif subfield[0] == "p":
+                    table_of_contentss.append({"content_type":"part_page_begin","value":subfield[1].strip()})
+                elif subfield[0] == "u":
+                    table_of_contentss.append({"content_type":"url","value":subfield[1].strip()})
+                elif subfield[0] == "v":
+                    table_of_contentss.append({"content_type":"part_number","value":subfield[1].strip()})
+                elif subfield[0] == "z":
+                    table_of_contentss.append({"content_type":"author","value":subfield[1].strip()})
+    if table_of_contentss:
+        document["table_of_contentss"] = table_of_contentss
 
-
-
+    # 328$d -> date_defence
+    if record['328'] is not None and record['328']['d'] is not None:
+        document["date_defence"] = record['328']['d'].strip()
 
     # 330 -> descriptions[i]/value
+    if record['330'] is not None:
+        descriptions = []
+        for field in record.get_fields('330'):
+            if field.get_subfields('a'):
+                for subfield_value in field.get_subfields('a'):
+                    descriptions.append({"value": subfield_value, "language": "und"})
+        if descriptions:
+            document["descriptions"] = descriptions
 
-    # 359
+    # 332 -> citations[i]
 
-    # 410 or 225 -> seriess[i]
-    # 410$t or 225$a -> seriess[i]/title
-    # 410$o or 225$e -> seriess[i]/title_sub
-    # 410$h or 410$v or 225$v -> seriess[i]/part_number
-    # 410$a -> seriess[i]/creators[i]@role=edt
-    # 410$c -> seriess[i]/publication_places[i]
-    # 410$d -> seriess[i]/date_issued
-    # 410$e -> seriess[i]/edition
-    # 410$h -> seriess[i]/part_number
-    # 410$i -> seriess[i]/part_name
-    # 410$l -> seriess[i]/title_alternative
-    # 410$m -> seriess[i]/identifiers[i]@id_type=ismn
-    # 410$n -> seriess[i]/publishers[i]
-    # 410$u -> seriess[i]/resources[i]/url
-    # 410$x -> seriess[i]/identifiers[i]@id_type=issn
-    # 410$y -> seriess[i]/identifiers[i]@id_type=isbn
-    # 410$z -> seriess[i]/identifiers[i]@id_type=coden
-    # 410$0 or 410$3 -> seriess[i]/rec_id
+    # 333 -> target_audiences
 
-    # 454 -> originals[i]
+    # 334 -> awards
 
-    # 454$a -> originals[i]/creators[i]@role=aut
+    # 337 -> requirements
 
-    # 454$c -> originals[i]/publisherPlace
+    # 345 -> acquisitions[i]
 
-    # 454$d -> originals[i]/dateIssued
+    # 4XX -> Related items
+    relateditems_dict = {
+        '410': ("seriess", constants.DOC_TYPE_SERIES),
+        '411': ("sub_series", constants.DOC_TYPE_SERIES),
+        '412': ("is_offprint_ofs", "same"),
+        '413': ("has_offprints", "same"),
+        '421': ("has_supplements", "same"),
+        '422': ("is_supplement_ofs", "same"),
+        '423': ("is_published_withs", "same"),
+        '424': ("is_updated_bys", "same"),
+        '425': ("updates", "same"),
+        '430': ("continues", "same"),
+        '431': ("partially_continues", "same"),
+        '432': ("replaces", "same"),
+        '433': ("partially_replaces", "same"),
+        '434': ("absorbs", "same"),
+        '435': ("partially_absorbs", "same"),
+        '436': ("is_merged_froms", "same"),
+        '437': ("is_splitted_froms", "same"),
+        '440': ("becomes", "same"),
+        '441': ("partially_becomes", "same"),
+        '442': ("is_replaced_bys", "same"),
+        '443': ("is_partially_replaced_bys", "same"),
+        '444': ("is_absorbed_intos", "same"),
+        '445': ("is_partially_absorbed_intos", "same"),
+        '446': ("is_split_intos", "same"),
+        '447': ("merges_withs", "same"),
+        '448': ("rebecomes", "same"),
+        '451': ("has_formats", "same"),
+        '452': ("has_formats", "same"),
+        '453': ("has_translations", "same"),
+        '454': ("is_translation_ofs", "same"),
+        '455': ("is_version_ofs", "same"),
+        '456': ("has_versions", "same"),
+        '461': ("is_part_ofs", "is_part_ofs"),
+        '462': ("has_parts", "has_parts"),
+        '463': ("is_part_ofs", "is_part_ofs"),
+        '464': ("has_parts", "has_parts"),
+        '470': ("is_review_ofs", "is_review_ofs"),
+        '481': ("is_bound_withs", "same"),
+        '482': ("is_bound_afters", "same"),
+        '488': ("has_relation_withs", "same")
+    }
+    if record.get_fields(*relateditems_dict.keys()):
+        for field in record.get_fields(*relateditems_dict.keys()):
+            related = Document()
+            has_t = False
+            if field.get_subfields('t'):
+                has_t = True
+            creators = []
+            publication_places = []
+            title_alternatives = []
+            identifiers = []
+            publishers = []
+            seriess = []
+            resources = []
+            for subfield in field:
+                # todo : trouble with "Technique des zones imbriquées"
+                if subfield[1] is not None and subfield[1].strip() is not None:
+                    if subfield[0] == "0":
+                        related["rec_id"] = subfield[1].strip()
+                    elif subfield[0] == "3":
+                        related["rec_id"] = subfield[1].strip()
+                    elif subfield[0] in ["a", "f", "g"]:
+                        if not has_t and subfield[0] == "a" and "title" not in related:
+                            related["title"] = subfield[1].strip()
+                        else :
+                            role = "aut"
+                            formatted_name = subfield[1].strip().replace(",...","")
+                            # toto : insert this to formatted_name_to_creator
+                            if formatted_name.startswith("par "):
+                                formatted_name = formatted_name[4:]
+                            elif formatted_name.startswith("publ. sous la dir. de "):
+                                formatted_name = formatted_name[22:]
+                                role = "pbd"
+                            creator = creator_service.formatted_name_to_creator(formatted_name, None, role)
+                            if creator:
+                                creators.append(creator)
+                    elif subfield[0] == "b":
+                        related["rec_type_description"] = subfield[1].strip()
+                    elif subfield[0] == "c":
+                        publication_places.append(subfield[1].strip())
+                    elif subfield[0] == "d":
+                        related["date_issued"] = subfield[1].strip()
+                    elif subfield[0] == "e":
+                        related["edition"] = subfield[1].strip()
+                    elif subfield[0] in ["h", "v"]:
+                        related["part_number"] = subfield[1].strip()
+                    elif subfield[0] == "i":
+                        related["part_name"] = subfield[1].strip()
+                    elif subfield[0] == "l":
+                        title_alternatives.append(subfield[1].strip())
+                    elif subfield[0] == "m":
+                        identifiers.append({"id_type": "ismn", "value": subfield[1].strip()})
+                    elif subfield[0] == "n":
+                        publishers.append(subfield[1].strip())
+                    elif subfield[0] == "o":
+                        related["title_sub"] = subfield[1].strip()
+                    elif subfield[0] == "p":
+                        related["extent_description"] = subfield[1].strip()
+                    elif subfield[0] == "s":
+                        series = Document()
+                        series["rec_type"] = constants.DOC_TYPE_SERIES
+                        series["title"] = subfield[1].strip()
+                        seriess.append(series)
+                    elif subfield[0] == "t":
+                        related["title"] = subfield[1].strip()
+                    elif subfield[0] == "u":
+                        resource = Resource()
+                        resource["url"] = subfield[1].strip()
+                        resources.append(resource)
+                    elif subfield[0] == "x":
+                        identifiers.append({"id_type": "issn", "value": subfield[1].strip()})
+                    elif subfield[0] == "y":
+                        identifiers.append({"id_type": "isbn", "value": subfield[1].strip()})
+                    elif subfield[0] == "z":
+                        identifiers.append({"id_type": "coden", "value": subfield[1].strip()})
+            if creators:
+                related["creators"] = creators
+            if publication_places:
+                related["publication_places"] = publication_places
+            if title_alternatives:
+                related["title_alternatives"] = title_alternatives
+            if identifiers:
+                related["identifiers"] = identifiers
+            if publishers:
+                related["publishers"] = publishers
+            if seriess:
+                related["seriess"] = seriess
+            if resources:
+                related["resources"] = resources
+            if related:
+                # debug
+                logging.debug("document.rec_type: {}".format(document["rec_type"]))
+                logging.debug("document.title: {}".format(document["title"]))
+                logging.debug("field: {}".format(field))
+                # rec_type
+                if relateditems_dict[field.tag][1] == "same":
+                    related["rec_type"] = document["rec_type"]
+                elif relateditems_dict[field.tag][1] == constants.DOC_TYPE_SERIES:
+                    related["rec_type"] = constants.DOC_TYPE_SERIES
+                elif relateditems_dict[field.tag][1] == "is_part_ofs":
+                    related["rec_type"] = metajson_service.get_is_part_of_rec_type_from_root_rec_type(document["rec_type"])
+                elif relateditems_dict[field.tag][1] == "has_parts":
+                    related["rec_type"] = metajson_service.get_has_part_rec_type_from_root_rec_type(document["rec_type"])
+                elif relateditems_dict[field.tag][1] == "is_review_ofs":
+                    related["rec_type"] = constants.DOC_TYPE_BOOK
+                else:
+                    related["rec_type"] = constants.DOC_TYPE_DOCUMENT
+                if related["rec_type"] == constants.DOC_TYPE_DOCUMENT and "rec_type_description" in related:
+                    if related["rec_type_description"] == "Images animées":
+                        related["rec_type"] = constants.DOC_TYPE_VIDEORECORDING
+                logging.debug("related.rec_type: {}".format(related["rec_type"]))
+                # title
+                if "title" not in related:
+                    related["title"] = ""
+                logging.debug("related.title: {}".format(related["title"]))
+                logging.debug("related property: {}".format(relateditems_dict[field.tag][0]))
+                # add to document properties
+                if relateditems_dict[field.tag][0] not in document:
+                    document[relateditems_dict[field.tag][0]] = []
+                document[relateditems_dict[field.tag][0]].append(related)
 
-    # 454$n -> originals[i]/publisher
 
-    # 454$o -> originals[i]/title_sub
+    # 500 -> title_uniforms[i]
+    # 503 -> title_forms[i]
+    # 510 -> title_alternatives[i]
+    # 517 -> title_alternatives[i]
+    # 531 -> title_abbreviateds[i]
+    # 541 -> title_translateds[i]
+    # $a -> title, title_non_sort
+    # $e -> title_sub
+    # $h -> part_number
+    # $i -> part_name
+    # $m -> language
+    titles_dict = {
+        '500': "title_uniforms",
+        '503': "title_forms",
+        '510': "title_alternatives",
+        '517': "title_alternatives",
+        '531': "title_abbreviateds",
+        '541': "title_translateds"
+    }
+    if record.get_fields(*titles_dict.keys()):
+        for field in record.get_fields(*titles_dict.keys()):
+            title_info = {}
+            for subfield in field:
+                if subfield[1] is not None and subfield[1].strip() is not None:
+                    if subfield[0] == "a":
+                        title_info["title"] = subfield[1].strip()
+                    elif subfield[0] == "e":
+                        title_info["title_sub"] = subfield[1].strip()
+                    elif subfield[0] == "h":
+                        title_info["part_number"] = subfield[1].strip().replace(",", "")
+                    elif subfield[0] == "i":
+                        title_info["part_name"] = subfield[1].strip()
+                    elif subfield[0] in ["m", "z"]:
+                        lang = language_service.convert_unknown_format_to_rfc5646(subfield[1].strip())
+                        if lang:
+                            title_info["language"] = lang
+            if title_info:
+                if titles_dict[field.tag] not in document:
+                    document[titles_dict[field.tag]] = []
+                document[titles_dict[field.tag]].append(title_info)
 
-    # 454$t -> originals[i]/title
 
-    # 461, 463 -> is_part_ofs[i]
-
-    # 461$a, 463$a -> is_part_ofs[i]/title
-
-    # 461$e, 463$e -> is_part_ofs[i]/title_sub
-
-    # 463$n -> part_issue
-
-    # 463$v -> part_volume
-
-    # 464$a -> has_parts[i]/creators[i]@role=aut/agent/@rec_type=Person name_given name_family
-
-    # 488
-
-    # 500
-
-    # 503
-
-    # 517
-
-    # 6XX -> subject
+    # 600, 601, 602 -> subject agents
     subjects = []
     suject_agents = []
     if record.get_fields('600', '601', '602'):
@@ -763,30 +964,68 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
                 subject = {"agents": [creator["agent"]]}
                 suject_agents.append(subject)
 
-    # 605
+    # 604, 605 -> subject documents
 
-    # 606
+    # 606 -> Nom commun
 
-    # 607
-    if record.get_fields('607'):
-        subjects = []
-        for field in record.get_fields('607'):
-            subject = {}
-            # todo
+    # 607 -> Nom géographique
 
-    # 620
+    # 608 -> Forme, genre ou caractéristiques matérielles
 
-    # 676$a -> classifications ddc
-    if record.get_fields('676'):
-        deweys = []
-        for field in record.get_fields('676'):
-            deweys.extend(field.get_subfields('a'))
-        if deweys:
-            if "classifications" not in document:
-                document["classifications"] ={}
-            document["classifications"]["ddc"] = deweys
+    # 610 -> keywords
+
+    # 615 -> Catégorie sujet (provisoire)
+
+    # 616 -> Vedette matière - Nom de marque
+
+    # 617 -> Vedette matière - Nom géographique hiérarchisé
+
+    # 620 -> Lieu et date de publication, de représentation ou d’enregistrement, etc.
+
+    # 621 -> Lieu et date de provenance
+
+    # 626 -> Accès par les données techniques (ressources électroniques) [zone obsolète]
+
+    # 660 -> Code d’aire géographique
+
+    # 670 -> PRECIS
+
+
+    # 328$c, 675$a, 676$a, 680$a, 686$a -> classifications
+    if record.get_fields('328','675','676','680','686'):
+        thesis = []
+        udc = []
+        ddc = []
+        lcc = []
+        classifications = {}
+        for field in record.get_fields('328','675','676','680','686'):
+            if field.tag == '328' and field['c'] is not None and field['c'].strip():
+                thesis.append(field['c'].strip())
+            if field['a'] is not None and field['a'].strip():
+                if field.tag == '675':
+                    udc.append(field['a'].strip())
+                elif field.tag == '676':
+                    ddc.append(field['a'].strip())
+                elif field.tag == '680':
+                    lcc.append(field['a'].strip())
+                elif field.tag == '686':
+                    if field['2']:
+                        if field['2'] not in classifications:
+                            classifications[field['2']] = []
+                        classifications[field['2']].append(field['a'].strip())
+        if thesis:
+            classifications["thesis"] = thesis
+        if udc:
+            classifications["udc"] = udc
+        if ddc:
+            classifications["ddc"] = ddc
+        if lcc:
+            classifications["lcc"] = lcc
+        if classifications:
+            document["classifications"] = classifications
 
     # 7XX -> creators
+    # 328$e -> creators dgg
     creators = []
     fields_creators = record.get_fields("700", "701", "702", "710", "711", "712", "716", "720", "721", "722", "730")
     if fields_creators:
@@ -794,12 +1033,31 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
             creator = extract_unimarc_creator(field)
             if creator:
                 creators.append(creator)
+    if record['328'] is not None and record['328']['e'] is not None and record['328']['e'].strip():
+        orgunit = Orgunit()
+        orgunit["name"] = record['328']['e'].strip()
+        creator = Creator()
+        creator["agent"] = orgunit
+        creator["roles"] = ["dgg"]
+        creators.append(creator)
     if creators:
         document["creators"] = creators
 
-    # 801
+    # 801 -> rec_source
+    if record.get_fields('801'):
+        if record['801']['a'] is not None:
+            document["rec_source_country"] = record['801']['a']
+        if "rec_source" not in document and record['801']['b'] is not None:
+            document["rec_source"] = record['801']['b']
+        if record['801']['c'] is not None:
+            document["rec_source_date"] = record['801']['c']
+        if record['801']['g'] is not None:
+            document["rec_source_cataloging_rule"] = record['801']['g']
+        if record['801']['2'] is not None:
+            document["rec_source_cataloging_rule"] = record['801']['2']
+        if record['801']['h'] is not None:
+            document["rec_source_rec_id"] = record['801']['h']
 
-    # 830 
     # resources
     # 856 : links -> resources
     resources = []
@@ -821,9 +1079,9 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
         for field_995 in fields_995:
             resource = Resource()
             resource["rec_type"] = "physical"
-            # $b -> physical_library ex: 751072303
+            # $b -> physical_library_identifier ex: 751072303
             if field_995.get_subfields('b'):
-                resource["physical_library"] = field_995.get_subfields('b')[0]
+                resource["physical_library_identifier"] = field_995.get_subfields('b')[0]
             # $c -> physical_location ex: BIB01
             if field_995.get_subfields('c'):
                 resource["physical_location"] = field_995.get_subfields('c')[0]
@@ -846,7 +1104,7 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
             if field_995.get_subfields('o'):
                 resource["physical_category"] = field_995.get_subfields('o')[0]
             # $p -> physical_is_periodical ex: p
-            if field_995.get_subfields('o') and field_995.get_subfields('o')[0] == "p":
+            if field_995.get_subfields('p') and field_995.get_subfields('p')[0] == "p":
                 resource["physical_is_periodical"] = True
             # $r -> physical_availability ex: DI
             if field_995.get_subfields('r'):
@@ -945,6 +1203,11 @@ def extract_unimarc_type(record):
     if record['135'] is not None and record['135']['a'] is not None:
         field135ap0 = record['135']['a'][0:1]
 
+    # 300$a
+    field300a = None
+    if record['300'] is not None and record['300']['a'] is not None:
+        field300a = record['300']['a']
+
     # logging.debug("leader6: {}".format(leader6))
     # logging.debug("leader7: {}".format(leader7))
     # logging.debug("100$a/17-19: {}".format(field100ap1719))
@@ -962,7 +1225,10 @@ def extract_unimarc_type(record):
 
     if leader6 == "a":
         if leader7 == "a":
-            rec_type = constants.DOC_TYPE_JOURNALARTICLE
+            if field300a == "Numéro spécial":
+                rec_type = constants.DOC_TYPE_PERIODICALISSUE
+            else:
+                rec_type = constants.DOC_TYPE_JOURNALARTICLE
         elif leader7 == "c":
             rec_type = constants.DOC_TYPE_PRESSCLIPPING
         elif leader7 == "m":
@@ -1065,7 +1331,10 @@ def extract_unimarc_type(record):
             # z: autre
         else:
             if leader7 == "a":
-                rec_type = constants.DOC_TYPE_EJOURNALARTICLE
+                if field300a == "Numéro spécial":
+                    rec_type = constants.DOC_TYPE_PERIODICALISSUE
+                else:
+                    rec_type = constants.DOC_TYPE_EJOURNALARTICLE
             elif leader7 == "c":
                 rec_type = constants.DOC_TYPE_PRESSCLIPPING
             elif leader7 == "m":
@@ -1075,7 +1344,7 @@ def extract_unimarc_type(record):
             else:
                 rec_type = constants.DOC_TYPE_DOCUMENT
     elif leader6 == "m":
-        rec_type = "Kit"
+        rec_type = constants.DOC_TYPE_KIT
     elif leader6 == "r":
         rec_type = constants.DOC_TYPE_PHYSICALOBJECT
     else:
@@ -1194,14 +1463,24 @@ def extract_unimarc_creator(field):
                     # Orgunit
                     orgunit = Orgunit()
                     name = []
+                    if field.get_subfields('3'):
+                        orgunit["identifiers"] = field.get_subfields('3')[0]
                     if field.get_subfields('a'):
                         name.extend(field.get_subfields('a'))
                     if field.get_subfields('b'):
+                        # todo division
                         name.append(". ")
                         name.extend(field.get_subfields('b'))
                     if name:
                         orgunit["name"] = "".join(name)
-                    dates = format_dates_as_list(field.get_subfields('c'))
+                    if field.get_subfields('c'):
+                        addresses = []
+                        for locality in field.get_subfields('c'):
+                            address = {"locality_city_town" : locality.replace("(","").replace(")","").strip()}
+                            addresses.append(address)
+                        if addresses:
+                            orgunit["addresses"] = addresses
+                    dates = format_dates_as_list(field.get_subfields('f'))
                     if dates:
                         orgunit["date_foundation"] = dates[0]
                         if len(dates) > 1:
