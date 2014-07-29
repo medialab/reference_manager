@@ -17,6 +17,7 @@ from biblib.services import metajson_service
 from biblib.util import exceptions
 from biblib.util import jsonbson
 
+DB_PREFIX = "biblib-"
 DOCUMENTS = "documents"
 AGENTS = "agents"
 TYPES = "types"
@@ -37,23 +38,26 @@ except pymongo.errors.ConnectionFailure as e:
 # return db[config['mongo-scrapy']['jobLogsCol']].insert([{'_job': _id, 'timestamp': timestamp, 'log': msg} for _id in jobid])
 
 
+def database_name(corpus):
+    return DB_PREFIX + corpus
+
 def list_corpora():
-    return [x for x in mongodb.database_names() if x != "local"]
+    return [x for x in mongodb.database_names() if x != "local" and x.startswith(DB_PREFIX)]
 
 
 def create_corpus(corpus):
-    mongodb[corpus]
+    mongodb[database_name(corpus)]
 
 
 def delete_corpus(corpus):
-    mongodb.drop_database(corpus)
+    mongodb.drop_database(database_name(corpus))
 
 
 def empty_corpus(corpus):
-    mongodb[corpus][DOCUMENTS].drop()
-    mongodb[corpus][AGENTS].drop()
-    mongodb[corpus][TYPES].drop()
-    mongodb[corpus][FIELDS].drop()
+    mongodb[database_name(corpus)][DOCUMENTS].drop()
+    mongodb[database_name(corpus)][AGENTS].drop()
+    mongodb[database_name(corpus)][TYPES].drop()
+    mongodb[database_name(corpus)][FIELDS].drop()
 
 
 def init_corpus_indexes(corpus):
@@ -64,18 +68,18 @@ def init_corpus_indexes(corpus):
     index_name_family = ('name_family', pymongo.ASCENDING)
     index_name_family = ('name_given', pymongo.ASCENDING)
 
-    mongodb[corpus][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
+    mongodb[database_name(corpus)][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
 
-    mongodb[corpus][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
-    mongodb[corpus][AGENTS].ensure_index([index_id, index_rec_id, index_name, index_name_family], safe=True)
-    mongodb[corpus][TYPES].ensure_index([index_id], safe=True)
-    mongodb[corpus][FIELDS].ensure_index([index_id], safe=True)
+    mongodb[database_name(corpus)][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
+    mongodb[database_name(corpus)][AGENTS].ensure_index([index_id, index_rec_id, index_name, index_name_family], safe=True)
+    mongodb[database_name(corpus)][TYPES].ensure_index([index_id], safe=True)
+    mongodb[database_name(corpus)][FIELDS].ensure_index([index_id], safe=True)
 
 
 def get_document_by_mongo_id(corpus, mongo_id):
     if not corpus:
         corpus = default_corpus
-    result = mongodb[corpus][DOCUMENTS].find_one({'_id': ObjectId(mongo_id)})
+    result = mongodb[database_name(corpus)][DOCUMENTS].find_one({'_id': ObjectId(mongo_id)})
     if result:
         return metajson_service.load_dict(result)
     else:
@@ -88,7 +92,7 @@ def get_documents_by_mongo_ids(corpus, mongo_ids):
     mongo_object_ids = []
     for mongo_id in mongo_ids:
         mongo_object_ids.append(ObjectId(mongo_id))
-    results = mongodb[corpus][DOCUMENTS].find({"_id": {"$in": mongo_object_ids}})
+    results = mongodb[database_name(corpus)][DOCUMENTS].find({"_id": {"$in": mongo_object_ids}})
     if results:
         return metajson_service.load_dict_list(results)
     else:
@@ -105,7 +109,7 @@ def set_document_property(corpus, rec_id, key, value, role):
 def get_document_by_rec_id(corpus, rec_id):
     if not corpus:
         corpus = default_corpus
-    result = mongodb[corpus][DOCUMENTS].find_one({"rec_id": rec_id})
+    result = mongodb[database_name(corpus)][DOCUMENTS].find_one({"rec_id": rec_id})
     if result:
         return metajson_service.load_dict(result)
     else:
@@ -115,7 +119,7 @@ def get_document_by_rec_id(corpus, rec_id):
 def get_documents_by_rec_ids(corpus, rec_ids):
     if not corpus:
         corpus = default_corpus
-    results = mongodb[corpus][DOCUMENTS].find({"rec_id": {"$in": rec_ids}})
+    results = mongodb[database_name(corpus)][DOCUMENTS].find({"rec_id": {"$in": rec_ids}})
     # results is a pymongo.cursor.Cursor
     if results:
         return metajson_service.load_dict_list(results)
@@ -126,7 +130,7 @@ def get_documents_by_rec_ids(corpus, rec_ids):
 def get_documents(corpus):
     if not corpus:
         corpus = default_corpus
-    results = mongodb[corpus][DOCUMENTS].find()
+    results = mongodb[database_name(corpus)][DOCUMENTS].find()
     if results:
         return metajson_service.load_dict_list(results)
     else:
@@ -136,7 +140,7 @@ def get_documents(corpus):
 def get_documents_count(corpus):
     if not corpus:
         corpus = default_corpus
-    return mongodb[corpus][DOCUMENTS].count()
+    return mongodb[database_name(corpus)][DOCUMENTS].count()
 
 
 def search(corpus, search_query):
@@ -305,7 +309,7 @@ def search(corpus, search_query):
     logging.debug("mongo_query:")
     logging.debug(jsonbson.dumps_bson(mongo_query, True))
 
-    mongo_response = mongodb[corpus][collection].find(mongo_query).sort(sort)
+    mongo_response = mongodb[database_name(corpus)][collection].find(mongo_query).sort(sort)
     logging.debug(mongo_response)
     if mongo_response:
         records = metajson_service.load_dict_list(mongo_response)
@@ -336,7 +340,7 @@ def search_mongo(corpus, mongo_query):
     # {"creators.agent.name_family":"Latour"}
     # {"is_part_ofs.creators.agent.name_family":"Latour"}
     # {"is_part_ofs.creators.agent.name_family":"Latour", "is_part_of.creators.agent.name_given":"Bruno"}
-    results = mongodb[corpus][DOCUMENTS].find(mongo_query)
+    results = mongodb[database_name(corpus)][DOCUMENTS].find(mongo_query)
     if results:
         return metajson_service.load_dict_list(results)
     else:
@@ -368,13 +372,13 @@ def save_document(corpus, document, role):
     # Enhance MetaJSON
     document = metajson_service.enhance_metajson(document)
     rec_id = document["rec_id"]
-    return mongodb[corpus][DOCUMENTS].save(document), rec_id
+    return mongodb[database_name(corpus)][DOCUMENTS].save(document), rec_id
 
 
 def delete_document(corpus, rec_id):
     if not corpus:
         corpus = default_corpus
-    result = mongodb[corpus][DOCUMENTS].remove({"rec_id": rec_id})
+    result = mongodb[database_name(corpus)][DOCUMENTS].remove({"rec_id": rec_id})
     # todo clarify the response
     # result example :
     #{
@@ -389,7 +393,7 @@ def delete_document(corpus, rec_id):
 def get_field(corpus, rec_type):
     if not corpus:
         corpus = default_corpus
-    result = mongodb[corpus][FIELDS].find_one({"rec_type": rec_type})
+    result = mongodb[database_name(corpus)][FIELDS].find_one({"rec_type": rec_type})
     if result:
         return metajson_service.load_dict(result)
     else:
@@ -399,7 +403,7 @@ def get_field(corpus, rec_type):
 def get_fields(corpus):
     if not corpus:
         corpus = default_corpus
-    results = mongodb[corpus][FIELDS].find()
+    results = mongodb[database_name(corpus)][FIELDS].find()
     if results:
         return metajson_service.load_dict_list(results)
     else:
@@ -414,13 +418,13 @@ def save_field(corpus, field):
     existing_field = get_field(corpus, rec_type)
     if existing_field:
         field["_id"] = existing_field["_id"]
-    return {"rec_type": rec_type, "_id": str(mongodb[corpus][FIELDS].save(field))}
+    return {"rec_type": rec_type, "_id": str(mongodb[database_name(corpus)][FIELDS].save(field))}
 
 
 def get_type(corpus, type_id):
     if not corpus:
         corpus = default_corpus
-    result = mongodb[corpus][TYPES].find_one({"type_id": type_id})
+    result = mongodb[database_name(corpus)][TYPES].find_one({"type_id": type_id})
     if result:
         return metajson_service.load_dict(result)
     else:
@@ -430,7 +434,7 @@ def get_type(corpus, type_id):
 def get_types(corpus):
     if not corpus:
         corpus = default_corpus
-    results = mongodb[corpus][TYPES].find()
+    results = mongodb[database_name(corpus)][TYPES].find()
     if results:
         return metajson_service.load_dict_list(results)
     else:
@@ -445,5 +449,5 @@ def save_type(corpus, metatype):
     existing_type = get_type(corpus, type_id)
     if existing_type:
         metatype["_id"] = existing_type["_id"]
-    return {"type_id": type_id, "_id": str(mongodb[corpus][TYPES].save(metatype))}
+    return {"type_id": type_id, "_id": str(mongodb[database_name(corpus)][TYPES].save(metatype))}
 
