@@ -233,11 +233,16 @@ def cite(document, format):
 
 
 def remove_last_point(text):
-    if text and (isinstance(text, unicode) or isinstance(text, str)):
+    if text:
         if text.endswith("."):
-            return text[:-1]
+            return rreplace(text,".","",1)
         else:
             return text
+
+
+def rreplace(s, old, new, occurrence):
+    li = s.rsplit(old, occurrence)
+    return new.join(li)
 
 
 def format_url(url):
@@ -251,14 +256,15 @@ def format_title_of_document(document):
     if document and "title" in document and document["title"]:
         result = []
         if "title_non_sort" in document and document["title_non_sort"] is not None:
-            result.append(document["title_non_sort"])
-        result.append(remove_last_point(document["title"]))
+            result.append(unicode(document["title_non_sort"], errors='ignore').encode('utf-8'))
+        result.append(remove_last_point(unicode(document["title"], errors='ignore').encode('utf-8')))
         if "title_sub" in document and document["title_sub"]:
-            result.append(u": " + remove_last_point(document["title_sub"]))
+            result.append(u": ")
+            result.append(remove_last_point(unicode(document["title_sub"], errors='ignore').encode('utf-8')))
         if "is_part_ofs" in document:
-            return u"\"<span class=\"title\">{0}</span>.\" ".format("".join(result))
+            return u"\"<span class=\"title\">{0}</span>.\" ".format(u"".join(result))
         else:
-            return u"<span class=\"title\">{0}</span>. ".format("".join(result))
+            return u"<span class=\"title\">{0}</span>. ".format(u"".join(result))
 
 
 def get_creators_role_dict(document):
