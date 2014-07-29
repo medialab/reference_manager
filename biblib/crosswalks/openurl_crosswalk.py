@@ -320,12 +320,10 @@ def metajson_to_openurl_params(document):
 def metajson_to_openurl(document):
     rec_id = document["rec_id"]
     openurl_dict = metajson_to_openurl_params(document)
-
     openurl_str = {}
     if openurl_dict:
         for k, v in openurl_dict.iteritems():
-            #logging.debug("{}: '{}'".format(k, v))
-            openurl_str[k] = unicode(v).encode('utf-8')
+            openurl_str[k] = unicode(v, errors='ignore').encode('utf-8')
     if openurl_str:
         result = quoteattr(urllib.urlencode(openurl_str))
         #logging.debug("{}".format(result))
