@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     # conf params
     corpus = "num"
-    source = "Sciences Po | la bibliothèque"
+    source = "FNSP"
     rec_id_prefix = "sc"
     input_dir_path = os.path.join("data", "num", "input")
     input_format = constants.FORMAT_UNIMARC

@@ -100,46 +100,50 @@ def conf_corpus(corpus, corpus_conf_dir_name):
 # Export #
 ##########
 
-def export_corpus(corpus, output_file_path, output_format, all_in_one_file, numer_export=False):
+def export_corpus(corpus, output_file_path, output_format, all_in_one_file, one_record_per_copy=False):
     if corpus and output_file_path:
         # fetch
         metajson_list = repository_service.get_documents(corpus)
         
         # one record per physical resource
-        if numer_export:
-            final_list = []
-            for document in metajson_list:
-                if document is not None and "resources" in document and document["resources"] is not None:
-                    res_phys_count = 0
-                    res_phys_numer_count = 0
-                    for resource in document["resources"]:
-                        # only for physical resources
-                        if "rec_type" in resource and resource["rec_type"] == "physical":
-                            res_phys_count += 1
-                            if "note" in resource and resource["note"][:5].lower() == "numer":
-                                res_phys_numer_count += 1
-                    if res_phys_count > 0:
-                        for resource in document["resources"]:
-                            if "rec_type" in resource and resource["rec_type"] == "physical":
-                                new_doc = copy.deepcopy(document)
-                                if "physical_copy_number" in resource and resource["physical_copy_number"] is not None:
-                                    new_doc["rec_id"] = new_doc["rec_id"] + "_" + resource["physical_copy_number"]
-                                if res_phys_numer_count == 0:
-                                    # Add all physical resources
-                                    new_doc["resources"] = [resource]
-                                    final_list.append(new_doc)
-                                else:
-                                    # Only numer physical resources
-                                    if "note" in resource and resource["note"][:5].lower() == "numer":
-                                        new_doc["resources"] = [resource]
-                                        final_list.append(new_doc)
-            metajson_list = final_list
+        if one_record_per_copy:
+            metajson_tmp = export_one_record_per_copy(metajson_list)
+        else:
+            metajson_tmp = metajson_list
 
         # convert
-        results = crosswalks_service.convert_metajson_list(metajson_list, output_format, all_in_one_file)
+        results = crosswalks_service.convert_metajson_list(metajson_tmp, output_format, all_in_one_file)
 
         # export
         io_service.write_items(corpus, corpus, results, output_file_path, output_format, all_in_one_file)
+
+
+def export_one_record_per_copy(metajson_list):
+    for document in metajson_list:
+        if document is not None and "resources" in document and document["resources"] is not None:
+            res_phys_count = 0
+            res_phys_numer_count = 0
+            for resource in document["resources"]:
+                # only for physical resources
+                if "rec_type" in resource and resource["rec_type"] == "physical":
+                    res_phys_count += 1
+                    if "note" in resource and resource["note"][:5].lower() == "numer":
+                        res_phys_numer_count += 1
+            if res_phys_count > 0:
+                for resource in document["resources"]:
+                    if "rec_type" in resource and resource["rec_type"] == "physical":
+                        new_doc = copy.deepcopy(document)
+                        if "physical_copy_number" in resource and resource["physical_copy_number"] is not None:
+                            new_doc["rec_id"] = new_doc["rec_id"] + "_" + resource["physical_copy_number"]
+                        if res_phys_numer_count == 0:
+                            # Add all physical resources
+                            new_doc["resources"] = [resource]
+                            yield new_doc
+                        else:
+                            # Only numer physical resources
+                            if "note" in resource and resource["note"][:5].lower() == "numer":
+                                new_doc["resources"] = [resource]
+                                yield new_doc
 
 
 ##########
@@ -150,6 +154,7 @@ def format_corpus(corpus, output_title, output_file_path, output_style):
     if corpus and output_file_path:
         # fetch
         metajson_list = repository_service.get_documents(corpus)
+        # convert to html
         # format
         io_service.write_html(corpus, output_title, metajson_list, output_file_path, output_style)
 
@@ -185,8 +190,10 @@ def import_metajson_list(corpus, document_list, save, role):
             if document:
                 if "rec_id" not in document:
                     document["rec_id"] = str(uuid.uuid1())
-                results.append(repository_service.save_document(corpus, document, role))
-
+                try:
+                    results.append(repository_service.save_document(corpus, document, role))
+                except Exception as err:
+                    logging.exception("Error while saving document {} : {}".format(document["rec_id"], err))
     return results
 
 

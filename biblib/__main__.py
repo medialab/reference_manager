@@ -48,17 +48,6 @@ def conf_corpus(args):
     corpus_service.conf_corpus(corpus, corpus_conf_dir_name)
 
 
-def validate_corpus(args):
-    corpus = args.corpus
-    if not corpus:
-        corpus = default_corpus
-    logging.info("corpus: {}".format(corpus))
-    error_file_name = "".join(["validation-", corpus, ".txt"])
-    error_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "log", error_file_name)
-    logging.info("error_file_path: {}".format(error_file_path))
-    corpus_service.validate_corpus(corpus, error_file_path)
-
-
 def import_metadatas(args):
     corpus = args.corpus
     if not corpus:
@@ -73,6 +62,17 @@ def import_metadatas(args):
     rec_id_prefix = args.rec_id_prefix
     logging.info("rec_id_prefix: {}".format(rec_id_prefix))
     corpus_service.import_metadata_file(corpus, input_file_path, input_format, source, rec_id_prefix, True, None)
+
+
+def validate_corpus(args):
+    corpus = args.corpus
+    if not corpus:
+        corpus = default_corpus
+    logging.info("corpus: {}".format(corpus))
+    error_file_name = "".join(["validation-", corpus, ".txt"])
+    error_file_path = os.path.join(os.path.dirname(__file__), os.pardir, "log", error_file_name)
+    logging.info("error_file_path: {}".format(error_file_path))
+    corpus_service.validate_corpus(corpus, error_file_path)
 
 
 def export_metadatas(args):

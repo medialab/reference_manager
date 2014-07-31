@@ -127,7 +127,7 @@ def parse_json_str(input_string):
 
 def parse_marc(input_file_path):
     marc_file = open(input_file_path)
-    return MARCReader(marc_file, to_unicode=False, force_utf8=False)
+    return MARCReader(marc_file, to_unicode=True, force_utf8=True, hide_utf8_warnings=False, utf8_handling='ignore')
 
 
 def parse_xmletree(input_file_path):
@@ -165,57 +165,45 @@ def parse_metajson_file(file_path):
 # Write #
 #########
 
-def write_items(col_id, col_title, items, output_file_path, output_format, all_in_one_file):
-    # todo: all_in_one_file
-    # items have to be a list of tuple ; rec_id, metadata
-    # if not all_in_one_file : output_file_path = output_file_path + rec_id
+def write_items(col_id, col_title, items, output_dir_path, output_format, all_in_one_file):
     #logging.debug("write_items type(items): {}".format(type(items)))
     if all_in_one_file:
         if isinstance(items, Collection):
-            write_item(items, output_file_path, output_format)
+            write_item(items, output_dir_path, output_format)
         elif isinstance(items, ET.Element):
-            write_item(items, output_file_path, output_format)
+            write_item(items, output_dir_path, output_format)
         elif isinstance(items, types.GeneratorType):
-            write_item(items.next(), output_file_path, output_format)
+            write_item(items.next(), output_dir_path, output_format)
         elif isinstance(items, collections.Iterable):
-            write_item(items[0], output_file_path, output_format)
+            write_item(items[0], output_dir_path, output_format)
     else:
-        write_list(col_id, col_title, items, output_file_path, output_format)
-
-
-def write_list(col_id, col_title, items, output_file_path, output_format):
-    #logging.debug("write_list type(items): {}".format(type(items)))
-    output_type = guess_type_from_format(output_format)
-
-    if output_type == constants.FILE_TYPE_HTML:
-        write_html(col_id, col_title, items, output_file_path, constants.STYLE_MLA)
-    else:
-        count = 0
         if items is not None:
             for item in items:
-                count += 1
-                file_name =  item[0] + "." + output_format + "." + guess_file_extension_from_format(output_format)
-                file_path = os.path.join(output_file_path, file_name)
-                if not os.path.exists(output_file_path):
-                    os.mkdir(output_file_path)
-                write_item(item[1], file_path, output_format)
+                write_item(item, output_dir_path, output_format)
 
 
-def write_item(item, output_file_path, output_format):
+def write_item(item, output_dir_path, output_format):
     #logging.debug("write_item type(item): {}".format(type(item)))
     output_type = guess_type_from_format(output_format)
 
-    if output_type is not None:
+    if output_type is None:
+        logging.error("Error: output_type is None")
+    else:
+        if not os.path.exists(output_dir_path):
+            os.mkdir(output_dir_path)
+        file_name =  item[0] + "." + output_format + "." + guess_file_extension_from_format(output_format)
+        file_path = os.path.join(output_dir_path, file_name)
+        
         if output_type == constants.FILE_TYPE_JSON:
-            write_json(item, output_file_path)
+            write_json(item[1], file_path)
         elif output_type == constants.FILE_TYPE_TXT:
-            write_txt(item, output_file_path)
+            write_txt(item[1], file_path)
         elif output_type == constants.FILE_TYPE_XMLETREE:
-            write_xml(item, output_file_path)
+            write_xml(item[1], file_path)
         elif output_type == constants.FILE_TYPE_BIBTEX:
-            write_bibtex(item, output_file_path)
+            write_bibtex(item[1], file_path)
         elif output_type == constants.FILE_TYPE_CSV:
-            write_csv(item, output_file_path)
+            write_csv(item[1], file_path)
         else:
             logging.error("Error: output_type is not managed: {}".format(output_type))
 
@@ -228,7 +216,7 @@ def write_metajson_collection(col_id, col_title, items, output_file_path):
 
 
 def write_csv(item, output_file_path):
-    logging.debug("write_csv type(item): {}".format(type(item)))
+    #logging.debug("write_csv type(item): {}".format(type(item)))
     with open(output_file_path, "w") as output_file:
         csvwriter = csv.DictWriter(output_file, delimiter=',', fieldnames=constants.csv_metajson_fieldnames)
         csvwriter.writeheader()

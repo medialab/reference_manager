@@ -113,28 +113,37 @@ def convert_marc(input_data, input_format, source, rec_id_prefix, only_first_rec
 
 
 def convert_metajson_list(metajson_list, output_format, all_in_one_file):
+    if all_in_one_file:
+        return convert_metajson_list_in_one_file(metajson_list, output_format)
+    else:
+        return convert_metajson_list_in_many_files(metajson_list, output_format)
+
+
+def convert_metajson_list_in_one_file(metajson_list, output_format):
     if metajson_list:
-        if all_in_one_file:
-            if output_format == constants.FORMAT_METAJSON or output_format == constants.FORMAT_HTML:
-                yield metajson_service.create_collection(None, None, metajson_list)
+        if output_format == constants.FORMAT_METAJSON or output_format == constants.FORMAT_HTML:
+            yield metajson_service.create_collection(None, None, metajson_list)
 
-            elif output_format == constants.FORMAT_MODS:
-                yield mods_crosswalk.metajson_list_to_mods_xmletree(metajson_list)
+        elif output_format == constants.FORMAT_MODS:
+            yield mods_crosswalk.metajson_list_to_mods_xmletree(metajson_list)
 
-            elif output_format == constants.FORMAT_METS:
-                yield mets_crosswalk.metajson_list_to_mets_xmletree(metajson_list)
+        elif output_format == constants.FORMAT_METS:
+            yield mets_crosswalk.metajson_list_to_mets_xmletree(metajson_list)
 
-            elif output_format == constants.FORMAT_REPEC:
-                yield repec_crosswalk.metajson_list_to_repec(metajson_list)
+        elif output_format == constants.FORMAT_REPEC:
+            yield repec_crosswalk.metajson_list_to_repec(metajson_list)
 
-            elif output_format == constants.FORMAT_CSV_METAJSON:
-                yield csv_crosswalk.metajson_list_to_csv_metajson(metajson_list)
+        elif output_format == constants.FORMAT_CSV_METAJSON:
+            yield csv_crosswalk.metajson_list_to_csv_metajson(metajson_list)
 
-            else:
-                logging.error("convert_metajson_list ERROR Not managed format: {}".format(output_format))
         else:
-            for metajson in metajson_list:
-                yield convert_metajson(metajson, output_format)
+            logging.error("convert_metajson_list ERROR Not managed format: {}".format(output_format))
+
+
+def convert_metajson_list_in_many_files(metajson_list, output_format):
+    if metajson_list:
+        for metajson in metajson_list:
+            yield convert_metajson(metajson, output_format)
 
 
 def convert_metajson(metajson, output_format):

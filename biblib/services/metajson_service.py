@@ -81,16 +81,16 @@ def copy_keys_between_dicts(keys, dict_a, dict_b):
 
 def pretty_print_document(document):
     #logging.info("# rec_source: {}".format(document.get_rec_source()))
-    logging.info("# rec_type: {}\trec_id: {}\ttitle: {}".format(document.get_rec_type(), document.get_rec_id(), document.get_title()))
+    logging.info("# rec_id: {}\trec_type: {}\t\ttitle: {}".format(document.get_rec_id(), document.get_rec_type(), document.get_title()))
     is_part_of = document.get_is_part_of()
     if is_part_of:
-        logging.info("# is_part_ofs[0].rec_type: {}\tis_part_ofs[0].rec_id: {}\tis_part_ofs[0].title: {}".format(is_part_of.get_rec_type(), is_part_of.get_rec_id(), is_part_of.get_title()))
+        logging.info("\t\t# is_part_ofs[0]:\trec_type: {}\t\ttitle: {}".format(is_part_of.get_rec_type(), is_part_of.get_title()))
         is_part_of_is_part_of = is_part_of.get_is_part_of()
         if is_part_of_is_part_of:
-            logging.info("# is_part_ofs[0].is_part_ofs[0].rec_type: {}\tis_part_ofs[0].is_part_ofs[0].rec_id: {}\tis_part_ofs[0].is_part_ofs[0].title: {}".format(is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of.get_rec_id(), is_part_of_is_part_of.get_title()))
+            logging.info("\t\t\t# is_part_ofs[0].is_part_ofs[0]:\trec_type: {}\t\ttitle: {}".format(is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of.get_title()))
             is_part_of_is_part_of_is_part_of = is_part_of_is_part_of.get_is_part_of()
             if is_part_of_is_part_of_is_part_of:
-                logging.info("# is_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_type: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].rec_id: {}\tis_part_ofs[0].is_part_ofs[0].is_part_ofs[0].title: {}".format(is_part_of_is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of_is_part_of.get_rec_id(), is_part_of_is_part_of_is_part_of.get_title()))
+                logging.info("\t\t\t\t# is_part_ofs[0].is_part_ofs[0].is_part_ofs[0]:\trec_type: {}\t\ttitle: {}".format(is_part_of_is_part_of_is_part_of.get_rec_type(), is_part_of_is_part_of_is_part_of.get_title()))
 
 
 def print_document(document):

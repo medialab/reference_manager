@@ -19,7 +19,7 @@ from biblib.util import jsonbson
 
 DB_PREFIX = "biblib-"
 DOCUMENTS = "documents"
-AGENTS = "agents"
+#AGENTS = "agents"
 TYPES = "types"
 FIELDS = "fields"
 
@@ -55,7 +55,7 @@ def delete_corpus(corpus):
 
 def empty_corpus(corpus):
     mongodb[database_name(corpus)][DOCUMENTS].drop()
-    mongodb[database_name(corpus)][AGENTS].drop()
+    #mongodb[database_name(corpus)][AGENTS].drop()
     mongodb[database_name(corpus)][TYPES].drop()
     mongodb[database_name(corpus)][FIELDS].drop()
 
@@ -64,14 +64,14 @@ def init_corpus_indexes(corpus):
     index_id = ('_id', pymongo.ASCENDING)
     index_rec_id = ('rec_id', pymongo.ASCENDING)
     index_title = ('title', pymongo.ASCENDING)
-    index_name = ('name', pymongo.ASCENDING)
-    index_name_family = ('name_family', pymongo.ASCENDING)
-    index_name_family = ('name_given', pymongo.ASCENDING)
+    #index_name = ('name', pymongo.ASCENDING)
+    #index_name_family = ('name_family', pymongo.ASCENDING)
+    #index_name_given = ('name_given', pymongo.ASCENDING)
 
     mongodb[database_name(corpus)][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
 
     mongodb[database_name(corpus)][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
-    mongodb[database_name(corpus)][AGENTS].ensure_index([index_id, index_rec_id, index_name, index_name_family], safe=True)
+    #mongodb[database_name(corpus)][AGENTS].ensure_index([index_id, index_rec_id, index_name, index_name_family, index_name_given], safe=True)
     mongodb[database_name(corpus)][TYPES].ensure_index([index_id], safe=True)
     mongodb[database_name(corpus)][FIELDS].ensure_index([index_id], safe=True)
 
@@ -159,8 +159,8 @@ def search(corpus, search_query):
         raise exceptions.metajsonprc_error(40)
     elif search_query["filter_class"] == "Document":
         collection = DOCUMENTS
-    elif search_query["filter_class"] in ["Agent", "Person", "OrgUnit", "Event", "Family"]:
-        collection = AGENTS
+    #elif search_query["filter_class"] in ["Agent", "Person", "OrgUnit", "Event", "Family"]:
+    #    collection = AGENTS
 
     # other filters
     # todo: filter_peer_review, filter_with_full_text, filter_favorite
