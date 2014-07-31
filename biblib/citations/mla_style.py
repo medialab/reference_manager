@@ -256,11 +256,11 @@ def format_title_of_document(document):
     if document and "title" in document and document["title"]:
         result = []
         if "title_non_sort" in document and document["title_non_sort"] is not None:
-            result.append(unicode(document["title_non_sort"], errors='ignore').encode('utf-8'))
-        result.append(remove_last_point(unicode(document["title"], errors='ignore').encode('utf-8')))
+            result.append(document["title_non_sort"])
+        result.append(remove_last_point(document["title"]))
         if "title_sub" in document and document["title_sub"]:
             result.append(u": ")
-            result.append(remove_last_point(unicode(document["title_sub"], errors='ignore').encode('utf-8')))
+            result.append(remove_last_point(document["title_sub"]))
         if "is_part_ofs" in document:
             return u"\"<span class=\"title\">{0}</span>.\" ".format(u"".join(result))
         else:
