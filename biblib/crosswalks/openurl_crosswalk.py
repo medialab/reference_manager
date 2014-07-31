@@ -323,7 +323,8 @@ def metajson_to_openurl(document):
     openurl_str = {}
     if openurl_dict:
         for k, v in openurl_dict.iteritems():
-            openurl_str[k] = unicode(v, errors='ignore').encode('utf-8')
+            openurl_str[k] = str(v)
+            #openurl_str[k] = unicode(v, errors='ignore').encode('utf-8')
     if openurl_str:
         result = quoteattr(urllib.urlencode(openurl_str))
         #logging.debug("{}".format(result))
