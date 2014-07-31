@@ -69,7 +69,7 @@ def unimarc_file_path_to_metasjon_list(unimarc_file_path, source, rec_id_prefix,
 
 def unimarc_file_to_metasjon_list(unimarc_file, source, rec_id_prefix, only_first_record):
     #logging.debug("unimarc_file_to_metasjon_list")
-    marc_reader = MARCReader(unimarc_file, to_unicode=False, force_utf8=False)
+    marc_reader = MARCReader(unimarc_file, to_unicode=True, force_utf8=False, hide_utf8_warnings=False, utf8_handling='ignore')
     return unimarc_marcreader_to_metasjon_list(marc_reader, source, rec_id_prefix, only_first_record)
 
 
@@ -104,10 +104,10 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     
 
     # Debug
-    #output_dir = os.path.join("data", "num", "output")
-    #output_file_path = os.path.join(output_dir, rec_id + ".marc.txt")
-    #with open(output_file_path, "w") as output_file:
-    #    output_file.write(str(record))
+    output_dir = os.path.join("data", "num", "output")
+    output_file_path = os.path.join(output_dir, rec_id + ".marc.txt")
+    with open(output_file_path, "w") as output_file:
+        output_file.write(str(record))
     # output_filexml_path = os.path.join(output_dir, rec_id + ".marcxml.xml")
     # with open(output_filexml_path, "w") as output_filexml:
     #     output_filexml.write(record_to_xml(record))
@@ -1217,43 +1217,116 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
                 document[titles_dict[field.tag]].append(title_info)
 
 
+    # subjects
     # 600, 601, 602 -> subject agents
-    subjects = []
-    suject_agents = []
-    if record.get_fields('600', '601', '602'):
-        for field in record.get_fields('600', '601', '602'):
-            creator = extract_unimarc_creator(field)
-            if creator and "agent" in creator:
-                subject = {"agents": [creator["agent"]]}
-                suject_agents.append(subject)
-
     # 604, 605 -> subject documents
-
-    # 606 -> Nom commun
-
+    # 606 -> Nom commun *
     # 607 -> Nom géographique
-
     # 608 -> Forme, genre ou caractéristiques matérielles
-
     # 610 -> keywords
-
     # 615 -> Catégorie sujet (provisoire)
-
     # 616 -> Vedette matière - Nom de marque
-
     # 617 -> Vedette matière - Nom géographique hiérarchisé
-
     # 620 -> Lieu et date de publication, de représentation ou d’enregistrement, etc.
-
     # 621 -> Lieu et date de provenance
-
     # 626 -> Accès par les données techniques (ressources électroniques) [zone obsolète]
-
     # 660 -> Code d’aire géographique
-
     # 670 -> PRECIS
+    subject_types_dict = {
+        '600': "agent",
+        '601': "agent",
+        '602': "agent",
+        '606': "topic",
+        '607': "geo",
+        '608': "genre",
+        '615': "unknown",
+        '616': "brand",
+        '617': "geo",
+        '620': "unknown",
+        '621': "unknown",
+        '626': "unknown",
+        '660': "geo",
+        '670': "unknown"
+    }
+    subjects = []
+    if record.get_fields(*subject_types_dict.keys()):
+        for field in record.get_fields(*subject_types_dict.keys()):
+            subject = {}
+            if field.tag in subject_types_dict:
+                subject_type = subject_types_dict[field.tag]
+            else:
+                int("error")
+                subject_type = "unknown"
+            agents = []
+            genres = []
+            geographics = []
+            temporals = []
+            topics = []
+            do_common_part = True
+            if field.tag in ['600', '601', '602', '615']:
+                do_common_part = True
+                creator = extract_unimarc_creator(field)
+                if creator and "agent" in creator:
+                    agents.append(creator["agent"])
+            elif field.tag == '617':
+                do_common_part = False
+                if subfield[1] is not None and subfield[1].strip() is not None:
+                    if subfield[0] == "a":
+                        geographics.append({"geo_type": "country", "value": subfield[1].strip()})
+                    elif subfield[0] == "b":
+                        geographics.append({"geo_type": "state", "value": subfield[1].strip()})
+                    elif subfield[0] == "c":
+                        geographics.append({"geo_type": "region", "value": subfield[1].strip()})
+                    elif subfield[0] == "d":
+                        geographics.append({"geo_type": "city", "value": subfield[1].strip()})
+                    elif subfield[0] == "e":
+                        geographics.append({"geo_type": "place", "value": subfield[1].strip()})
+                    elif subfield[0] == "k":
+                        geographics.append({"geo_type": "city_section", "value": subfield[1].strip()})
+                    elif subfield[0] == "m":
+                        geographics.append({"geo_type": "area", "value": subfield[1].strip()})
+                    elif subfield[0] == "n":
+                        geographics.append({"geo_type": "extraterrestrial_area", "value": subfield[1].strip()})
+                    elif subfield[0] == "o":
+                        geographics.append({"geo_type": "continent", "value": subfield[1].strip()})
+            if do_common_part:
+                for subfield in field:
+                    if subfield[1] is not None and subfield[1].strip() is not None:
+                        if subfield[0] == "2":
+                            subject["authority"] = subfield[1].strip()
+                        if subfield[0] == "3":
+                            subject["subject_id"] = subfield[1].strip()
+                        if subfield[0] == "a":
+                            if field.tag == '606':
+                                topics.append({"topic_type": "main", "value": subfield[1].strip()})
+                            elif field.tag == '607':
+                                geographics.append({"geo_type": "main", "value": subfield[1].strip()})
+                            elif field.tag == '608':
+                                genres.append(subfield[1].strip())
+                        if subfield[0] == "j":
+                            genres.append(subfield[1].strip())
+                        if subfield[0] == "x":
+                            topics.append({"topic_type": "second", "value": subfield[1].strip()})
+                        if subfield[0] == "y":
+                            geographics.append({"geo_type": "second", "value": subfield[1].strip()})
+                        if subfield[0] == "z":
+                            temporals.append({"temporal_type": "second", "value": subfield[1].strip()})
+            if agents:
+                subject["agents"] = agents
+            if genres:
+                subject["genres"] = genres
+            if geographics:
+                subject["geographics"] = geographics
+            if temporals:
+                subject["temporals"] = temporals
+            if topics:
+                subject["topics"] = topics
+            if subject:
+                subject["subject_type"] = subject_type
+                subjects.append(subject)
     if subjects:
         document["subjects"] = subjects
+
 
     # 328$c, 675$a, 676$a, 680$a, 686$a -> classifications
     if record.get_fields('328','675','676','680','686'):
@@ -1502,13 +1575,17 @@ def extract_unimarc_creator(field):
                 if family:
                     creator["agent"] = family
 
+        elif field.tag == "615":
+            # todo brand
+            pass
+
         elif field.tag == "730":
             # todo Intellectual responsability
             pass
 
         if creator:
             return creator
-
+    
 
 def format_dates_as_list(dates):
     if dates:
