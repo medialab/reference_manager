@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-VERSION = '0.8'
+VERSION = '0.9'
 
 FILE_TYPE_BIBTEX = 'bibtex'
 FILE_TYPE_CSV = 'csv'
