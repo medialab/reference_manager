@@ -506,7 +506,7 @@ def endnotexml_record_to_metajson(record, source, rec_id_prefix):
     if title_abbreviated:
         document["title_abbreviateds"] = [{"title": title_abbreviated}]
 
-    logging.info("# endnote_type: {}".format(endnote_type))
+    #logging.debug("# endnote_type: {}".format(endnote_type))
     metajson_service.pretty_print_document(document)
     return document
 
