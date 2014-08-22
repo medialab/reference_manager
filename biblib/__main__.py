@@ -116,8 +116,7 @@ def convert_metadatas(args):
     # convert
     results = crosswalks_service.parse_and_convert_file(input_file_path, input_format, output_format, None, "", False, all_in_one_file)
     # export
-    # todo : all_in_one_file
-    io_service.write_items(None, None, results, output_file_path, output_format, all_in_one_file)
+    io_service.write_items_in_one_file(None, None, results, output_file_path, output_format)
 
 
 # Doc :
@@ -128,7 +127,7 @@ parser = argparse.ArgumentParser(description='Metadata management tool',
                                  epilog="That's how you should be using biblib")
 parser.add_argument('--version',
                     action='version',
-                    version='%(prog)s ' + constants.VERSION)
+                    version='%(prog)s ' + constants.BIBLIB_VERSION)
 
 subparsers = parser.add_subparsers(title='subcommands',
                                    description='valid subcommands',
