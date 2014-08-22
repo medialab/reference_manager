@@ -41,7 +41,7 @@ def ddi_xmletree_to_metajson(ddi_root, source, rec_id_prefix):
 
     # stdyDscr/citation/titlStmt/titl
     ddi_stdydscr = ddi_root.find(xmletree.prefixtag("ddi", "stdyDscr"))
-    if ddi_stdydscr:
+    if ddi_stdydscr is not None:
         ddi_stdydscr_citation = ddi_stdydscr.find(xmletree.prefixtag("ddi", "citation"))
         ddi_stdydscr_citation_titlstmt = ddi_stdydscr_citation.find(xmletree.prefixtag("ddi", "titlStmt"))
         ddi_stdydscr_citation_titlstmt_titl = ddi_stdydscr_citation_titlstmt.find(xmletree.prefixtag("ddi", "titl"))
