@@ -10,6 +10,7 @@ from pymarc import MARCReader
 from pymarc import record_to_xml
 import smc.bibencodings
 
+from biblib.metajson import Brand
 from biblib.metajson import Creator
 from biblib.metajson import Document
 from biblib.metajson import Event
@@ -17,6 +18,7 @@ from biblib.metajson import Family
 from biblib.metajson import Orgunit
 from biblib.metajson import Person
 from biblib.metajson import Resource
+from biblib.metajson import Rights
 from biblib.metajson import Subject
 from biblib.services import creator_service
 from biblib.services import date_service
@@ -43,7 +45,7 @@ charsets_dict = {
     "50": "ISO 10646 Niveau 3 (Unicode, UTF-8)",
 }
 
-target_audience_unimarc_to_marc21 = {
+target_audience_unimarc_to_marctarget = {
     'a': "juvenile",  # a=jeunesse (général)
     'b': "preschool",  # b=pré-scolaire, 0-5 ans
     'c': "juvenile",  # c=scolaire, 5-10 ans
@@ -104,10 +106,10 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     
 
     # Debug
-    output_dir = os.path.join("data", "num", "output")
-    output_file_path = os.path.join(output_dir, rec_id + ".marc.txt")
-    with open(output_file_path, "w") as output_file:
-        output_file.write(str(record))
+    #output_dir = os.path.join("data", "num", "output")
+    #output_file_path = os.path.join(output_dir, rec_id + ".marc.txt")
+    #with open(output_file_path, "w") as output_file:
+    #    output_file.write(str(record))
     # output_filexml_path = os.path.join(output_dir, rec_id + ".marcxml.xml")
     # with open(output_filexml_path, "w") as output_filexml:
     #     output_filexml.write(record_to_xml(record))
@@ -333,6 +335,10 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
         rec_type = constants.DOC_TYPE_DOCUMENT
     document["rec_type"] = rec_type
 
+    # 005 -> rec_modified_date
+    if record['005'] is not None and record['005'].data is not None:
+        tmp = record['005'].data.strip().split(".")[0]
+        document["rec_modified_date"] = date_service.parse_to_iso8601(tmp)
 
     # 0XX and 945$b -> identifiers
     identifiers = []
@@ -493,12 +499,12 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
         # 100$a/17-20 -> target_audiences
         targets = record['100']['a'][17:20]
         if targets.strip():
-            target_audiences = []
+            target_audiences_marctarget = []
             for target in targets:
-                if target in target_audience_unimarc_to_marc21:
-                    target_audiences.append(target_audience_unimarc_to_marc21[target])
-            if target_audiences:
-                document["target_audiences"] = target_audiences
+                if target in target_audience_unimarc_to_marctarget:
+                    target_audiences_marctarget.append(target_audience_unimarc_to_marctarget[target])
+            if target_audiences_marctarget:
+                document["target_audiences"] = {"marctarget": target_audiences_marctarget}
 
         # 100$a/22-24 -> rec_cataloging_languages
         rec_cataloging_language = record['100']['a'][22:25]
@@ -1038,7 +1044,7 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
         '445': ("is_partially_absorbed_intos", "same"),
         '446': ("is_split_intos", "same"),
         '447': ("merges_withs", "same"),
-        '448': ("rebecomes", "same"),
+        '448': ("re_becomes", "same"),
         '451': ("has_formats", "same"),
         '452': ("has_formats", "same"),
         '453': ("has_translations", "same"),
@@ -1240,7 +1246,7 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
         '607': "geo",
         '608': "genre",
         '615': "unknown",
-        '616': "brand",
+        '616': "agent",
         '617': "geo",
         '620': "unknown",
         '621': "unknown",
@@ -1255,7 +1261,6 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
             if field.tag in subject_types_dict:
                 subject_type = subject_types_dict[field.tag]
             else:
-                int("error")
                 subject_type = "unknown"
             agents = []
             genres = []
@@ -1263,7 +1268,7 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
             temporals = []
             topics = []
             do_common_part = True
-            if field.tag in ['600', '601', '602', '615']:
+            if field.tag in ['600', '601', '602', '616']:
                 do_common_part = True
                 creator = extract_unimarc_creator(field)
                 if creator and "agent" in creator:
@@ -1395,6 +1400,17 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
         if record['801']['h'] is not None:
             document["rec_source_rec_id"] = record['801']['h']
 
+    # 991$d -> rights/determination_date
+    # 991$n -> rights/determination_note
+    if record.get_fields('991') and (record['991']['d'] is not None or record['991']['n'] is not None):
+        rights = Rights()
+        rights["rights_type"] = "unknown"
+        if record['991']['d'] is not None:
+            rights["determination_date"] = record['991']['d']
+        if record['991']['n'] is not None:
+            rights["determination_note"] = record['991']['n']
+        document["rights"] = rights
+
     # resources
     # 856 : links -> resources
     resources = []
@@ -1487,11 +1503,13 @@ def extract_unimarc_creator(field):
         # $4 -> role
         if field['4'] and field['4'] in creator_service.role_unimarc_to_role_code:
             creator["roles"] = [creator_service.role_unimarc_to_role_code[field['4']]]
+        elif field.tag in ["700", "701", "710", "711", "720", "721", "740", "741"]:
+            creator["roles"] = ["aut"]
         else:
             creator["roles"] = ["ctb"]
 
         # 600, 700, 701, 702 -> Person
-        if field.tag in ["700", "701", "702"]:
+        if field.tag in ["600", "700", "701", "702"]:
             # Person
             person = Person()
             if field.subfields:
@@ -1511,7 +1529,7 @@ def extract_unimarc_creator(field):
                     creator["agent"] = person
 
         # 601, 710, 711, 712 -> Orgunit, Event
-        elif field.tag in ["710", "711", "712"]:
+        elif field.tag in ["601", "710", "711", "712"]:
             if field.subfields:
                 if field.indicator1 == "1":
                     # Event
@@ -1555,10 +1573,22 @@ def extract_unimarc_creator(field):
                     if orgunit:
                         creator["agent"] = orgunit
 
-        elif field.tag in ["716"]:
-            # todo Nom de marque
-            pass
+        # 616, 716 -> Brand (Nom de marque)
+        elif field.tag in ["616", "716"]:
+            if field.subfields:
+                brand = Brand()
+                if field.get_subfields('a'):
+                    brand["name"] = "".join(field.get_subfields('a'))
+                if field.get_subfields('f'):
+                    dates = format_dates_as_list(field.get_subfields('f'))
+                    if dates:
+                        brand["date_foundation"] = dates[0]
+                        if len(dates) > 1:
+                            brand["date_dissolution"] = dates[1]
+                if brand:
+                    creator["agent"] = brand
 
+        # 602, 720, 721, 722 -> Family
         elif field.tag in ["602", "720", "721", "722"]:
             if field.subfields:
                 # Family
@@ -1575,9 +1605,6 @@ def extract_unimarc_creator(field):
                 if family:
                     creator["agent"] = family
 
-        elif field.tag == "615":
-            # todo brand
-            pass
 
         elif field.tag == "730":
             # todo Intellectual responsability
