@@ -19,6 +19,7 @@ from biblib.services import date_service
 from biblib.services import language_service
 from biblib.services import metajson_service
 from biblib.util import constants
+from biblib.util import jsonbson
 from biblib.util import xmletree
 
 
@@ -127,7 +128,7 @@ MODS_GENRE_MARCGT_TO_METAJSON_DOCUMENT_TYPE = {
     "law report or digest": constants.DOC_TYPE_ANNOTATIONARTICLE,
     "legislation": constants.DOC_TYPE_STATUTE,
     "letter": constants.DOC_TYPE_LETTER,
-    "loose-leaf": constants.DOC_TYPE_PERIODICALISSUE,
+    "loose-leaf": constants.DOC_TYPE_LOOSELEAFPUBLICATION,
     "map": constants.DOC_TYPE_MAP,
     "motion picture": constants.DOC_TYPE_FILM,
     "memoir": constants.DOC_TYPE_BOOK,
@@ -172,13 +173,421 @@ MODS_TYPEOFRESOURCE_TO_METAJSON_DOCUMENT_TYPE = {
     "cartographic": constants.DOC_TYPE_MAP,
     "notated music": constants.DOC_TYPE_MUSICALSCORE,
     "sound recording-musical": constants.DOC_TYPE_MUSICRECORDING,
-    "sound recording-nonmusical": constants.DOC_TYPE_MUSICRECORDING,
+    "sound recording-nonmusical": constants.DOC_TYPE_AUDIORECORDING,
     "sound recording": constants.DOC_TYPE_AUDIORECORDING,
     "still image": constants.DOC_TYPE_IMAGE,
     "moving image": constants.DOC_TYPE_VIDEORECORDING,
     "three dimensional object": constants.DOC_TYPE_PHYSICALOBJECT,
     "software, multimedia": constants.DOC_TYPE_SOFTWARE,
     "mixed material": constants.DOC_TYPE_MIXEDMATERIAL
+}
+
+METAJSON_DOCUMENT_TYPE_TO_MODS_TYPEOFRESOURCE = {
+    constants.DOC_TYPE_ANCIENTTEXT : "text",
+    constants.DOC_TYPE_ANNOTATIONARTICLE : "text",
+    constants.DOC_TYPE_ARTICLEREVIEW : "text",
+    constants.DOC_TYPE_ARTWORK : "still image",
+    constants.DOC_TYPE_AUDIOBOOK : "sound recording-nonmusical",
+    constants.DOC_TYPE_AUDIOBROADCAST : "sound recording",
+    constants.DOC_TYPE_AUDIOPART : "sound recording",
+    constants.DOC_TYPE_AUDIORECORDING : "sound recording",
+    constants.DOC_TYPE_BIBLIOGRAPHY : "text",
+    constants.DOC_TYPE_BILL : "text",
+    constants.DOC_TYPE_BOOK : "text",
+    constants.DOC_TYPE_BOOKLET : "text",
+    constants.DOC_TYPE_BOOKPART : "text",
+    constants.DOC_TYPE_BOOKREVIEW : "text",
+    constants.DOC_TYPE_CASEBRIEF : "text",
+    constants.DOC_TYPE_CHART : "still image",
+    constants.DOC_TYPE_CODE : "text",
+    constants.DOC_TYPE_COLLECTION : "mixed material",
+    constants.DOC_TYPE_CONFERENCECONTRIBUTION : "text",
+    constants.DOC_TYPE_CONFERENCEPAPER : "text",
+    constants.DOC_TYPE_CONFERENCEPOSTER : "still image",
+    constants.DOC_TYPE_CONFERENCEPROCEEDINGS : "text",
+    constants.DOC_TYPE_COURTREPORTER : "text",
+    constants.DOC_TYPE_CURRICULUMVITAE : "text",
+    constants.DOC_TYPE_DATABASE : "software, multimedia",
+    constants.DOC_TYPE_DATASET : "software, multimedia",
+    constants.DOC_TYPE_DATASETQUALI : "software, multimedia",
+    constants.DOC_TYPE_DATASETQUANTI : "software, multimedia",
+    constants.DOC_TYPE_DICTIONARY : "text",
+    constants.DOC_TYPE_DICTIONARYENTRY : "text",
+    constants.DOC_TYPE_DISSERTATION : "text",
+    constants.DOC_TYPE_DOCTORALTHESIS : "text",
+    constants.DOC_TYPE_DOCUMENT : "text",
+    constants.DOC_TYPE_DRAWING : "still image",
+    constants.DOC_TYPE_EBOOK : "text",
+    constants.DOC_TYPE_EDITEDBOOK : "text",
+    constants.DOC_TYPE_EJOURNAL : "text",
+    constants.DOC_TYPE_EJOURNALARTICLE : "text",
+    constants.DOC_TYPE_EMAIL : "text",
+    constants.DOC_TYPE_ENCYCLOPEDIA : "text",
+    constants.DOC_TYPE_ENCYCLOPEDIAARTICLE : "text",
+    constants.DOC_TYPE_ENGRAVE : "still image",
+    constants.DOC_TYPE_EQUATION : "text",
+    constants.DOC_TYPE_ERESOURCE : "text",
+    constants.DOC_TYPE_EVENT : "mixed material",
+    constants.DOC_TYPE_EXCERPT : "text",
+    constants.DOC_TYPE_FILM : "moving image",
+    constants.DOC_TYPE_FONT : "software, multimedia",
+    constants.DOC_TYPE_GAME : "software, multimedia",
+    constants.DOC_TYPE_GOVERNMENTPUBLICATION : "text",
+    constants.DOC_TYPE_GRANT : "text",
+    constants.DOC_TYPE_HEARING : "text",
+    constants.DOC_TYPE_IMAGE : "still image",
+    constants.DOC_TYPE_INSTANTMESSAGE : "text",
+    constants.DOC_TYPE_INTERVIEWARTICLE : "text",
+    constants.DOC_TYPE_JOURNAL : "text",
+    constants.DOC_TYPE_JOURNALARTICLE : "text",
+    constants.DOC_TYPE_KIT : "mixed material",
+    constants.DOC_TYPE_LEGALCASE : "text",
+    constants.DOC_TYPE_LEGALDECISION : "text",
+    constants.DOC_TYPE_LETTER : "text",
+    constants.DOC_TYPE_LOOSELEAFPUBLICATION : "text",
+    constants.DOC_TYPE_MAGAZINE : "text",
+    constants.DOC_TYPE_MAGAZINEARTICLE : "text",
+    constants.DOC_TYPE_MANUEL : "text",
+    constants.DOC_TYPE_MANUSCRIPT : "text",
+    constants.DOC_TYPE_MAP : "cartographic",
+    constants.DOC_TYPE_MASTERTHESIS : "text",
+    constants.DOC_TYPE_MIXEDMATERIAL : "mixed material",
+    constants.DOC_TYPE_MULTIMEDIA : "software, multimedia",
+    constants.DOC_TYPE_MULTIVOLUMEBOOK : "text",
+    constants.DOC_TYPE_MUSICALSCORE : "notated music",
+    constants.DOC_TYPE_MUSICRECORDING : "sound recording-musical",
+    constants.DOC_TYPE_NEWSPAPER : "text",
+    constants.DOC_TYPE_NEWSPAPERARTICLE : "text",
+    constants.DOC_TYPE_NOTE : "text",
+    constants.DOC_TYPE_PAINTING : "still image",
+    constants.DOC_TYPE_PATENT : "text",
+    constants.DOC_TYPE_PERFORMANCE : "mixed material",
+    constants.DOC_TYPE_PERIODICALISSUE : "text",
+    constants.DOC_TYPE_PERSONALCOMMUNICATION : "text",
+    constants.DOC_TYPE_PHOTOGRAPH : "still image",
+    constants.DOC_TYPE_PHYSICALOBJECT : "three dimensional object",
+    constants.DOC_TYPE_POSTER : "text",
+    constants.DOC_TYPE_PREPRINT : "text",
+    constants.DOC_TYPE_PRESSCLIPPING : "text",
+    constants.DOC_TYPE_PROFESSORALTHESIS : "text",
+    constants.DOC_TYPE_REPORT : "text",
+    constants.DOC_TYPE_REPORTPART : "text",
+    constants.DOC_TYPE_RESEARCHPROPOSAL : "text",
+    constants.DOC_TYPE_SERIES : "text",
+    constants.DOC_TYPE_SERVICE : "software, multimedia",
+    constants.DOC_TYPE_SLIDE : "still image",
+    constants.DOC_TYPE_SOFTWARE : "software, multimedia",
+    constants.DOC_TYPE_SPEECH : "text",
+    constants.DOC_TYPE_STANDARD : "text",
+    constants.DOC_TYPE_STATUTE : "text",
+    constants.DOC_TYPE_TREATY : "text",
+    constants.DOC_TYPE_TECHREPORT : "text",
+    constants.DOC_TYPE_TEST : "text",
+    constants.DOC_TYPE_UNPUBLISHEDDOCUMENT : "text",
+    constants.DOC_TYPE_VIDEOBROADCAST : "moving image",
+    constants.DOC_TYPE_VIDEOPART : "moving image",
+    constants.DOC_TYPE_VIDEORECORDING : "moving image",
+    constants.DOC_TYPE_WEBARCHIVE : "software, multimedia",
+    constants.DOC_TYPE_WEBCLUSTER : "software, multimedia",
+    constants.DOC_TYPE_WEBENTITY : "software, multimedia",
+    constants.DOC_TYPE_WEBPAGE : "software, multimedia",
+    constants.DOC_TYPE_WEBPOST : "software, multimedia",
+    constants.DOC_TYPE_WEBSECTION : "software, multimedia",
+    constants.DOC_TYPE_WEBSITE : "software, multimedia",
+    constants.DOC_TYPE_WORKINGPAPER : "text",
+    constants.DOC_TYPE_WORKSHOP : "text"
+}
+
+METAJSON_DOCUMENT_TYPE_IS_MODS_COLLECTION = [
+    constants.DOC_TYPE_COLLECTION,
+    constants.DOC_TYPE_DATABASE,
+    constants.DOC_TYPE_DICTIONARY,
+    constants.DOC_TYPE_EDITEDBOOK,
+    constants.DOC_TYPE_EJOURNAL,
+    constants.DOC_TYPE_ENCYCLOPEDIA,
+    constants.DOC_TYPE_JOURNAL,
+    constants.DOC_TYPE_MAGAZINE,
+    constants.DOC_TYPE_MULTIVOLUMEBOOK,
+    constants.DOC_TYPE_NEWSPAPER,
+    constants.DOC_TYPE_PERIODICALISSUE,
+    constants.DOC_TYPE_SERIES,
+    constants.DOC_TYPE_WEBCLUSTER,
+    constants.DOC_TYPE_WEBENTITY,
+    constants.DOC_TYPE_WEBSECTION
+]
+
+METAJSON_DOCUMENT_TYPE_IS_MODS_MANUSCRIPT = [
+    constants.DOC_TYPE_ANCIENTTEXT,
+    constants.DOC_TYPE_MANUSCRIPT
+]
+
+METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_EUREPO = {
+    constants.DOC_TYPE_ANCIENTTEXT : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_ANNOTATIONARTICLE : "info:eu-repo/semantics/annotation",
+    constants.DOC_TYPE_ARTICLEREVIEW : "info:eu-repo/semantics/review",
+    constants.DOC_TYPE_ARTWORK : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_AUDIOBOOK : "info:eu-repo/semantics/book",
+    constants.DOC_TYPE_AUDIOBROADCAST : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_AUDIOPART : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_AUDIORECORDING : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_BIBLIOGRAPHY : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_BILL : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_BOOK : "info:eu-repo/semantics/book",
+    constants.DOC_TYPE_BOOKLET : "info:eu-repo/semantics/book",
+    constants.DOC_TYPE_BOOKPART : "info:eu-repo/semantics/bookPart",
+    constants.DOC_TYPE_BOOKREVIEW : "info:eu-repo/semantics/bookReview",
+    constants.DOC_TYPE_CASEBRIEF : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_CHART : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_CODE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_COLLECTION : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_CONFERENCECONTRIBUTION : "info:eu-repo/semantics/conferenceContribution",
+    constants.DOC_TYPE_CONFERENCEPAPER : "info:eu-repo/semantics/conferencePaper",
+    constants.DOC_TYPE_CONFERENCEPOSTER : "info:eu-repo/semantics/conferencePoster",
+    constants.DOC_TYPE_CONFERENCEPROCEEDINGS : "info:eu-repo/semantics/conferenceProceedings",
+    constants.DOC_TYPE_COURTREPORTER : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_CURRICULUMVITAE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_DATABASE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_DATASET : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_DATASETQUALI : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_DATASETQUANTI : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_DICTIONARY : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_DICTIONARYENTRY : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_DISSERTATION : "info:eu-repo/semantics/studentThesis",
+    constants.DOC_TYPE_DOCTORALTHESIS : "info:eu-repo/semantics/doctoralThesis",
+    constants.DOC_TYPE_DOCUMENT : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_DRAWING : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_EBOOK : "info:eu-repo/semantics/book",
+    constants.DOC_TYPE_EDITEDBOOK : "info:eu-repo/semantics/book",
+    constants.DOC_TYPE_EJOURNAL : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_EJOURNALARTICLE : "info:eu-repo/semantics/article",
+    constants.DOC_TYPE_EMAIL : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_ENCYCLOPEDIA : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_ENCYCLOPEDIAARTICLE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_ENGRAVE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_EQUATION : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_ERESOURCE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_EVENT : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_EXCERPT : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_FILM : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_FONT : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_GAME : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_GOVERNMENTPUBLICATION : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_GRANT : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_HEARING : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_IMAGE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_INSTANTMESSAGE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_INTERVIEWARTICLE : "info:eu-repo/semantics/article",
+    constants.DOC_TYPE_JOURNAL : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_JOURNALARTICLE : "info:eu-repo/semantics/article",
+    constants.DOC_TYPE_KIT : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_LEGALCASE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_LEGALDECISION : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_LETTER : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_LOOSELEAFPUBLICATION : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_MAGAZINE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_MAGAZINEARTICLE : "info:eu-repo/semantics/contributionToPeriodical",
+    constants.DOC_TYPE_MANUEL : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_MANUSCRIPT : "info:eu-repo/semantics/preprint",
+    constants.DOC_TYPE_MAP : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_MASTERTHESIS : "info:eu-repo/semantics/masterThesis",
+    constants.DOC_TYPE_MIXEDMATERIAL : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_MULTIMEDIA : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_MULTIVOLUMEBOOK : "info:eu-repo/semantics/book",
+    constants.DOC_TYPE_MUSICALSCORE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_MUSICRECORDING : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_NEWSPAPER : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_NEWSPAPERARTICLE : "info:eu-repo/semantics/contributionToPeriodical",
+    constants.DOC_TYPE_NOTE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_OFFPRINT : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_PAINTING : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_PATENT : "info:eu-repo/semantics/patent",
+    constants.DOC_TYPE_PERFORMANCE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_PERIODICALISSUE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_PERSONALCOMMUNICATION : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_PHOTOGRAPH : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_PHYSICALOBJECT : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_POSTER : "info:eu-repo/semantics/conferencePoster",
+    constants.DOC_TYPE_PREPRINT : "info:eu-repo/semantics/preprint",
+    constants.DOC_TYPE_PRESSCLIPPING : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_PROFESSORALTHESIS : "info:eu-repo/semantics/doctoralThesis",
+    constants.DOC_TYPE_REPORT : "info:eu-repo/semantics/report",
+    constants.DOC_TYPE_REPORTPART : "info:eu-repo/semantics/reportPart",
+    constants.DOC_TYPE_RESEARCHPROPOSAL : "info:eu-repo/semantics/researchProposal",
+    constants.DOC_TYPE_SERIES : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_SERVICE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_SLIDE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_SOFTWARE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_SPEECH : "info:eu-repo/semantics/lecture",
+    constants.DOC_TYPE_STANDARD : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_STATUTE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_TREATY : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_TECHREPORT : "info:eu-repo/semantics/technicalDocumentation",
+    constants.DOC_TYPE_TEST : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_UNPUBLISHEDDOCUMENT : "info:eu-repo/semantics/preprint",
+    constants.DOC_TYPE_VIDEOBROADCAST : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_VIDEOPART : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_VIDEORECORDING : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_WEBARCHIVE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_WEBCLUSTER : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_WEBENTITY : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_WEBPAGE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_WEBPOST : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_WEBSECTION : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_WEBSITE : "info:eu-repo/semantics/other",
+    constants.DOC_TYPE_WORKINGPAPER : "info:eu-repo/semantics/workingPaper",
+    constants.DOC_TYPE_WORKSHOP : "info:eu-repo/semantics/other"
+}
+
+METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_EPRINT = {
+    constants.DOC_TYPE_ANNOTATIONARTICLE : "http://purl.org/eprint/type/JournalArticle",
+    constants.DOC_TYPE_ARTICLEREVIEW : "http://purl.org/eprint/type/JournalArticle",
+    constants.DOC_TYPE_BOOK : "http://purl.org/eprint/type/Book",
+    constants.DOC_TYPE_BOOKLET : "http://purl.org/eprint/type/Book",
+    constants.DOC_TYPE_BOOKPART : "http://purl.org/eprint/type/BookItem",
+    constants.DOC_TYPE_BOOKREVIEW : "http://purl.org/eprint/type/JournalArticle",
+    constants.DOC_TYPE_CONFERENCECONTRIBUTION : "http://purl.org/eprint/type/ConferenceItem",
+    constants.DOC_TYPE_CONFERENCEPAPER : "http://purl.org/eprint/type/ConferencePaper",
+    constants.DOC_TYPE_CONFERENCEPOSTER : "http://purl.org/eprint/type/ConferencePoster",
+    constants.DOC_TYPE_CONFERENCEPROCEEDINGS : "http://purl.org/eprint/type/Book",
+    constants.DOC_TYPE_DOCTORALTHESIS : "http://purl.org/eprint/type/Thesis",
+    constants.DOC_TYPE_EBOOK : "http://purl.org/eprint/type/Book",
+    constants.DOC_TYPE_EDITEDBOOK : "http://purl.org/eprint/type/Book",
+    constants.DOC_TYPE_EJOURNALARTICLE : "http://purl.org/eprint/type/JournalArticle",
+    constants.DOC_TYPE_INTERVIEWARTICLE : "http://purl.org/eprint/type/JournalArticle",
+    constants.DOC_TYPE_JOURNALARTICLE : "http://purl.org/eprint/type/JournalArticle",
+    constants.DOC_TYPE_MAGAZINEARTICLE : "http://purl.org/eprint/type/NewsItem",
+    constants.DOC_TYPE_MASTERTHESIS : "http://purl.org/eprint/type/Thesis",
+    constants.DOC_TYPE_MULTIVOLUMEBOOK : "http://purl.org/eprint/type/Book",
+    constants.DOC_TYPE_NEWSPAPERARTICLE : "http://purl.org/eprint/type/NewsItem",
+    constants.DOC_TYPE_PATENT : "http://purl.org/eprint/type/Patent",
+    constants.DOC_TYPE_PERIODICALISSUE : "http://purl.org/eprint/type/JournalItem",
+    constants.DOC_TYPE_PREPRINT : "http://purl.org/eprint/type/SubmittedJournalArticle",
+    constants.DOC_TYPE_PROFESSORALTHESIS : "http://purl.org/eprint/type/Thesis",
+    constants.DOC_TYPE_REPORT : "http://purl.org/eprint/type/Report",
+    constants.DOC_TYPE_REPORTPART : "http://purl.org/eprint/type/Report",
+    constants.DOC_TYPE_SPEECH : "http://purl.org/eprint/type/ConferenceItem",
+    constants.DOC_TYPE_TECHREPORT : "http://purl.org/eprint/type/Report",
+    constants.DOC_TYPE_WORKINGPAPER : "http://purl.org/eprint/type/WorkingPaper"
+}
+
+METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_MARCGT = {
+    constants.DOC_TYPE_ANNOTATIONARTICLE : "legal article",
+    constants.DOC_TYPE_ARTICLEREVIEW : "review",
+    constants.DOC_TYPE_ARTWORK : "art original",
+    constants.DOC_TYPE_AUDIOBOOK : "book",
+    constants.DOC_TYPE_AUDIOBROADCAST : "sound",
+    constants.DOC_TYPE_AUDIOPART : "sound",
+    constants.DOC_TYPE_AUDIORECORDING : "sound",
+    constants.DOC_TYPE_BIBLIOGRAPHY : "bibliography",
+    constants.DOC_TYPE_BILL : "legislation",
+    constants.DOC_TYPE_BOOK : "book",
+    constants.DOC_TYPE_BOOKLET : "book",
+    constants.DOC_TYPE_BOOKREVIEW : "review",
+    constants.DOC_TYPE_CASEBRIEF : "legal case and case notes",
+    constants.DOC_TYPE_CHART : "chart",
+    constants.DOC_TYPE_CONFERENCEPROCEEDINGS : "book",
+    constants.DOC_TYPE_COURTREPORTER : "law report or digest",
+    constants.DOC_TYPE_DATABASE : "database",
+    constants.DOC_TYPE_DATASET : "numeric data",
+    constants.DOC_TYPE_DATASETQUALI : "numeric data",
+    constants.DOC_TYPE_DATASETQUANTI : "numeric data",
+    constants.DOC_TYPE_DICTIONARY : "dictionary",
+    constants.DOC_TYPE_DISSERTATION : "thesis",
+    constants.DOC_TYPE_DOCTORALTHESIS : "thesis",
+    constants.DOC_TYPE_DRAWING : "art original",
+    constants.DOC_TYPE_EBOOK : "book",
+    constants.DOC_TYPE_EDITEDBOOK : "book",
+    constants.DOC_TYPE_EJOURNAL : "journal",
+    constants.DOC_TYPE_EJOURNALARTICLE : "article",
+    constants.DOC_TYPE_ENCYCLOPEDIA : "encyclopedia",
+    constants.DOC_TYPE_FILM : "motion picture",
+    constants.DOC_TYPE_FONT : "font",
+    constants.DOC_TYPE_GAME : "game",
+    constants.DOC_TYPE_GOVERNMENTPUBLICATION : "government publication",
+    constants.DOC_TYPE_IMAGE : "picture",
+    constants.DOC_TYPE_INTERVIEWARTICLE : "interview",
+    constants.DOC_TYPE_JOURNAL : "journal",
+    constants.DOC_TYPE_JOURNALARTICLE : "article",
+    constants.DOC_TYPE_KIT : "kit",
+    constants.DOC_TYPE_LEGALCASE : "legal case and case notes",
+    constants.DOC_TYPE_LEGALDECISION : "legal case and case notes",
+    constants.DOC_TYPE_LETTER : "letter",
+    constants.DOC_TYPE_LOOSELEAFPUBLICATION : "loose-leaf",
+    constants.DOC_TYPE_MAGAZINE : "periodical",
+    constants.DOC_TYPE_MAGAZINEARTICLE : "article",
+    constants.DOC_TYPE_MANUEL : "handbook",
+    constants.DOC_TYPE_MAP : "map",
+    constants.DOC_TYPE_MASTERTHESIS : "thesis",
+    constants.DOC_TYPE_MIXEDMATERIAL : "kit",
+    constants.DOC_TYPE_MULTIVOLUMEBOOK : "multivolume monograph",
+    constants.DOC_TYPE_MUSICRECORDING : "sound",
+    constants.DOC_TYPE_NEWSPAPER : "newspaper",
+    constants.DOC_TYPE_NEWSPAPERARTICLE : "article",
+    constants.DOC_TYPE_OFFPRINT : "offprint",
+    constants.DOC_TYPE_PAINTING : "art original",
+    constants.DOC_TYPE_PATENT : "patent",
+    constants.DOC_TYPE_PERIODICALISSUE : "issue",
+    constants.DOC_TYPE_PHOTOGRAPH : "picture",
+    constants.DOC_TYPE_PROFESSORALTHESIS : "thesis",
+    constants.DOC_TYPE_REPORT : "report",
+    constants.DOC_TYPE_SERIES : "series",
+    constants.DOC_TYPE_SERVICE : "online system or service",
+    constants.DOC_TYPE_SLIDE : "slide",
+    constants.DOC_TYPE_SOFTWARE : "programmed text",
+    constants.DOC_TYPE_SPEECH : "speech",
+    constants.DOC_TYPE_STANDARD : "standard or specification",
+    constants.DOC_TYPE_STATUTE : "legislation",
+    constants.DOC_TYPE_TREATY : "treaty",
+    constants.DOC_TYPE_TECHREPORT : "technical report",
+    constants.DOC_TYPE_UNPUBLISHEDDOCUMENT : "preprint",
+    constants.DOC_TYPE_VIDEOBROADCAST : "videorecording",
+    constants.DOC_TYPE_VIDEOPART : "videorecording",
+    constants.DOC_TYPE_VIDEORECORDING : "videorecording",
+    constants.DOC_TYPE_WEBARCHIVE : "web site",
+    constants.DOC_TYPE_WEBCLUSTER : "web site",
+    constants.DOC_TYPE_WEBENTITY : "web site",
+    constants.DOC_TYPE_WEBPAGE : "web site",
+    constants.DOC_TYPE_WEBPOST : "web site",
+    constants.DOC_TYPE_WEBSECTION : "web site",
+    constants.DOC_TYPE_WEBSITE : "web site"
+}
+
+METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_OTHER = {
+    constants.DOC_TYPE_ANCIENTTEXT : "ancient text",
+    constants.DOC_TYPE_BOOKPART : "book chapter",
+    constants.DOC_TYPE_CODE : "code",
+    constants.DOC_TYPE_COLLECTION : "collection",
+    constants.DOC_TYPE_CONFERENCECONTRIBUTION : "conference contribution",
+    constants.DOC_TYPE_CONFERENCEPAPER : "conference paper",
+    constants.DOC_TYPE_CONFERENCEPOSTER : "conference poster",
+    constants.DOC_TYPE_CURRICULUMVITAE : "other",
+    constants.DOC_TYPE_DICTIONARYENTRY : "dictionary entry",
+    constants.DOC_TYPE_DOCUMENT : "other",
+    constants.DOC_TYPE_EMAIL : "email",
+    constants.DOC_TYPE_ENCYCLOPEDIAARTICLE : "encyclopedia article",
+    constants.DOC_TYPE_ENGRAVE : "engrave",
+    constants.DOC_TYPE_EQUATION : "equation",
+    constants.DOC_TYPE_ERESOURCE : "eresource",
+    constants.DOC_TYPE_EVENT : "event",
+    constants.DOC_TYPE_EXCERPT : "excerpt",
+    constants.DOC_TYPE_GRANT : "grant",
+    constants.DOC_TYPE_HEARING : "hearing",
+    constants.DOC_TYPE_INSTANTMESSAGE : "instant message",
+    constants.DOC_TYPE_MANUSCRIPT : "manuscript",
+    constants.DOC_TYPE_MULTIMEDIA : "multimedia",
+    constants.DOC_TYPE_MUSICALSCORE : "musical score",
+    constants.DOC_TYPE_NOTE : "note",
+    constants.DOC_TYPE_PERFORMANCE : "performance",
+    constants.DOC_TYPE_PERSONALCOMMUNICATION : "personal communication",
+    constants.DOC_TYPE_PHYSICALOBJECT : "physical object",
+    constants.DOC_TYPE_POSTER : "poster",
+    constants.DOC_TYPE_PREPRINT : "preprint",
+    constants.DOC_TYPE_PRESSCLIPPING : "press clipping",
+    constants.DOC_TYPE_REPORTPART : "report part",
+    constants.DOC_TYPE_RESEARCHPROPOSAL : "research proposal",
+    constants.DOC_TYPE_TEST : "test",
+    constants.DOC_TYPE_WORKINGPAPER : "working paper",
+    constants.DOC_TYPE_WORKSHOP : "workshop"
 }
 
 def mods_xmletree_to_metajson_list(mods_root, source, rec_id_prefix, only_first_record):
@@ -393,27 +802,29 @@ def get_mods_access_conditions(mods):
     result = {}
     mods_access_conditions = mods.findall(xmletree.prefixtag("mods", "accessCondition"))
     if mods_access_conditions is not None:
-        access_conditions = convert_mods_string_lang_types(mods_access_conditions, "rights_type")
-        if access_conditions:
+        mods_type_to_metajson_type  = {
+            "restriction on access": "display",
+            "use and reproduction": "print"
+        }
+        permissions = []
+        for mods_access_condition in mods_access_conditions:
+            if mods_access_condition is not None and mods_access_condition.text is not None:
+                description_value = mods_access_condition.text.strip()
+                description_language = mods_access_condition.get("lang")
+                mods_permission_type = mods_access_condition.get("type")
+                if description_value is not None:
+                    description = {"value": description_value}
+                    if description_language is not None:
+                        description["language"] = description_language.strip()
+                    permission_type = "other"
+                    if mods_permission_type is not None and mods_permission_type in mods_type_to_metajson_type:
+                        permission_type = mods_type_to_metajson_type[mods_permission_type]
+                    permissions.append({"permission_type": permission_type, "descriptions": [description]})
+        if permissions:
             rights = Rights()
-            for access_condition in access_conditions:
-                if "rights_type" in access_condition:
-                    if access_condition["rights_type"] == "restriction on access":
-                        del access_condition["rights_type"]
-                        if "restriction_on_access" not in rights:
-                            rights["restriction_on_access"] = []
-                        rights["restriction_on_access"].append(access_condition)
-                    elif access_condition["rights_type"] == "use and reproduction":
-                        del access_condition["rights_type"]
-                        if "use_and_reproduction" not in rights:
-                            rights["use_and_reproduction"] = []
-                        rights["use_and_reproduction"].append(access_condition)
-                else:
-                    if "other_conditions" not in rights:
-                        rights["other_conditions"] = []
-                    rights["other_conditions"].append(access_condition)
-            if rights:
-                result["rights"] = rights
+            rights["rights_type"] = "unknown"
+            rights["permissions"] = permissions
+            result["rights"] = rights
     return result
 
 
@@ -715,8 +1126,11 @@ def convert_mods_name_dai_dict_to_creator(mods_name, dai_dict):
             family = Family()
             creator["agent"] = family
 
+            if mods_name_parts:
+                orgunit["name"] = mods_name_parts[0].text.strip()
+
         if affiliation:
-            creator["affiliation"] = affiliation
+            creator["affiliations"] = [affiliation]
 
         if mods_name_roleterm is not None:
             creator["roles"] = convert_mods_name_roleterm(mods_name_roleterm)
@@ -1266,6 +1680,7 @@ def get_mods_subjects(mods):
                         if geographic:
                             geographics.append(geographic)
 
+                # TODO
                 # name
                 # occupation
                 # temporal
@@ -1359,7 +1774,6 @@ def get_mods_record_info(mods):
     result = {}
     mods_record_info = mods.find(xmletree.prefixtag("mods", "recordInfo"))
     if mods_record_info is not None:
-        # todo
         # descriptionStandard -> rec_cataloging_rules
         rec_cataloging_rules = get_mods_elements_text(mods_record_info, "descriptionStandard")
         if rec_cataloging_rules:
@@ -1369,7 +1783,7 @@ def get_mods_record_info(mods):
         if rec_cataloging_languages:
             result["rec_cataloging_languages"] = rec_cataloging_languages
         # recordContentSource -> rec_source
-        rec_source = get_mods_element_text(mods_record_info, "languageOfCataloging")
+        rec_source = get_mods_element_text(mods_record_info, "recordContentSource")
         if rec_source:
             result["rec_source"] = rec_source
         # recordCreationDate -> rec_created_date
@@ -1424,75 +1838,594 @@ def metajson_list_to_mods_xmletree(documents):
     return mods_collection_root
 
 
-def metajson_to_mods_xmletree(document, with_schema_location=False):
+def metajson_to_mods_xmletree(document, with_schema_location=True):
     """ MetaJSON Document -> MODS xmletree """
+    # rec_id
     rec_id = document["rec_id"]
+
+    # mods_root
     xmletree.register_namespaces()
-    # mods root
     mods_root = ET.Element(xmletree.prefixtag("mods", "mods"), version="3.5")
     if with_schema_location:
         mods_root.set(xmletree.prefixtag("xsi", "schemaLocation"), constants.xmlns_map["mods"] + " " + constants.xmlns_schema_map["mods"])
 
-    # titleInfoProper
-    titleInfoProper = ET.SubElement(mods_root, "titleInfo")
-    if "title" in document:
-        title = ET.SubElement(titleInfoProper, "title")
-        title.text = document["title"]
-    if "title_non_sort" in document:
-        nonSort = ET.SubElement(titleInfoProper, "nonSort")
-        nonSort.text = document["title_non_sort"]
-    if "title_sub" in document:
-        subTitle = ET.SubElement(titleInfoProper, "subTitle")
-        subTitle.text = document["title_sub"]
-    if "part_name" in document:
-        partName = ET.SubElement(titleInfoProper, "partName")
-        partName.text = document["part_name"]
-    if "part_number" in document:
-        partNumber = ET.SubElement(titleInfoProper, "partNumber")
-        partNumber.text = document["part_number"]
+    metajson_to_mods_root_or_related_item(document, mods_root)
+
+    return (rec_id, mods_root)
+
+
+def metajson_to_mods_root_or_related_item(document, mods_item):
+    # titleInfo
+    convert_metajson_document_titles(document, mods_item)
 
     # name
+    convert_metajson_document_creators(document, mods_item)
+
+    # typeOfResource, genre
+    convert_metajson_document_type(document, mods_item)
+
+    # originInfo
+    convert_metajson_document_origin_info(document, mods_item)
+
+    # language
+    convert_metajson_document_languages(document, mods_item)
+
+    # physicalDescription
+    convert_metajson_document_physical_description(document, mods_item)
+
+    # abstract
+    convert_metajson_document_descriptions(document, mods_item)
+
+    # tableOfContents
+    convert_metajson_document_table_of_contentss(document, mods_item)
+
+    # targetAudience
+    convert_metajson_document_target_audiences(document, mods_item)
+
+    # note
+    convert_metajson_document_notes(document, mods_item)
+
+    # subject
+    convert_metajson_document_subjects(document, mods_item)
+
+    # classification
+    convert_metajson_document_classifications(document, mods_item)
+
+    # relatedItem
+    convert_metajson_document_related_items(document, mods_item)
+
+    # identifier
+    convert_metajson_document_identifiers(document, mods_item)
+
+    # location
+    convert_metajson_document_resources(document, mods_item)
+
+    # accessCondition
+    convert_metajson_document_rights(document, mods_item)
+
+    # part
+    convert_metajson_document_parts(document, mods_item)
+
+    # extension
+
+    # recordInfo
+    convert_metajson_document_rec_infos(document, mods_item)
+
+
+def convert_metajson_document_titles(document, mods_item):
+    # document title properties -> titleInfo @type=null (proper)
+    convert_metajson_title(document, None, mods_item)
+    # title_abbreviateds -> titleInfo @type=abbreviated
+    if "title_abbreviateds" in document:
+        for title in document["title_abbreviateds"]:
+            convert_metajson_title(title, "abbreviated", mods_item)
+    # title_alternatives -> titleInfo @type=alternative
+    if "title_alternatives" in document:
+        for title in document["title_alternatives"]:
+            convert_metajson_title(title, "alternative", mods_item)
+    # title_forms -> ?
+    # title_translateds -> titleInfo @type=translated
+    if "title_translateds" in document:
+        for title in document["title_translateds"]:
+            convert_metajson_title(title, "translated", mods_item)
+    # title_uniforms -> titleInfo @type=uniform
+    if "title_uniforms" in document:
+        for title in document["title_uniforms"]:
+            convert_metajson_title(title, "uniform", mods_item)
+
+
+def convert_metajson_title(document, title_type, mods_item):
+    titleInfo = ET.SubElement(mods_item, xmletree.prefixtag("mods", "titleInfo"))
+    if title_type:
+        titleInfo.set("type", title_type)
+    if "title" in document:
+        title = ET.SubElement(titleInfo, xmletree.prefixtag("mods", "title"))
+        title.text = document["title"]
+    if "title_non_sort" in document:
+        nonSort = ET.SubElement(titleInfo, xmletree.prefixtag("mods", "nonSort"))
+        nonSort.text = document["title_non_sort"]
+    if "title_sub" in document:
+        subTitle = ET.SubElement(titleInfo, xmletree.prefixtag("mods", "subTitle"))
+        subTitle.text = document["title_sub"]
+    if "part_name" in document:
+        partName = ET.SubElement(titleInfo, xmletree.prefixtag("mods", "partName"))
+        partName.text = document["part_name"]
+    if "part_number" in document:
+        partNumber = ET.SubElement(titleInfo, xmletree.prefixtag("mods", "partNumber"))
+        partNumber.text = document["part_number"]
+
+
+def convert_metajson_document_creators(document, mods_item):
     if "creators" in document:
         for creator in document["creators"]:
-            if "agent" in creator:
-                # agent -> name
-                agent = creator["agent"]
-                mods_name = ET.SubElement(mods_root, "name")
-                if agent["rec_class"] == "Person":
-                    if "name_family" in agent:
-                        namePart_family = ET.SubElement(mods_name, "namePart", type="family")
-                        namePart_family.text = agent["name_family"]
-                    if "name_given" in agent:
-                        namePart_given = ET.SubElement(mods_name, "namePart", type="given")
-                        namePart_given.text = agent["name_given"]
-                    date = ""
-                    if "date_birth" in agent:
-                        date += agent["date_birth"]
-                    date += "-"
-                    if "date_death" in agent:
-                        date += agent["date_death"]
-                    if date != "-":
-                        namePart_date = ET.SubElement(mods_name, "namePart", type="date")
-                        namePart_date.text = date
-                elif agent["rec_class"] == "Orgunit":
-                    if "name" in agent:
-                        namePart_main = ET.SubElement(mods_name, "namePart")
-                        namePart_main.text = agent["name"]
-                elif agent["rec_class"] == "Event":
-                    if "name" in agent:
-                        namePart_main = ET.SubElement(mods_name, "namePart")
-                        namePart_main.text = agent["name"]
-                # affiliation -> affiliation
-                if "affiliation" in agent and "agent" in agent["affiliation"] and "name" in agent["affiliation"]["agent"]:
-                    mods_affiliation = ET.SubElement(mods_name, "affiliation")
-                    mods_affiliation.text = agent["affiliation"]["agent"]["name"]
-                # role -> role/roleTerm
-                if "roles" in creator and creator["roles"]:
-                    for role in creator["roles"]:
-                        mods_role = ET.SubElement(mods_name, "role")
-                        mods_roleTerm = ET.SubElement(mods_role, "roleTerm")
-                        #affiliation.text = agent["affiliation"]["agent"]["name"]
-    return (rec_id, mods_root)
+            convert_metajson_document_creator(creator, mods_item)
+
+
+def convert_metajson_document_creator(creator, mods_item):
+    if creator is not None:
+        if "agent" in creator:
+            # agent -> name
+            mods_name = convert_metajson_agent(creator["agent"], mods_item)
+            # roles -> role/roleTerm
+            if "roles" in creator and creator["roles"]:
+                for role in creator["roles"]:
+                    mods_role = ET.SubElement(mods_name, xmletree.prefixtag("mods", "role"))
+                    mods_roleTerm = ET.SubElement(mods_role, xmletree.prefixtag("mods", "roleTerm"), type="code", authority="marcrelator")
+                    mods_roleTerm.text = role
+
+
+def convert_metajson_agent(agent, mods_item):
+    mods_name = None
+    # Person
+    if agent["rec_class"] == constants.REC_CLASS_PERSON:
+        mods_name = ET.SubElement(mods_item, xmletree.prefixtag("mods", "name"), type="personal")
+        if "name_family" in agent:
+            namePart_family = ET.SubElement(mods_name, xmletree.prefixtag("mods", "namePart"), type="family")
+            namePart_family.text = agent["name_family"]
+        # TODO
+        # name_middle
+        # name_prefix
+        # name_prefix_dropping
+        # name_suffix
+        # titles[i]/value
+        if "name_given" in agent:
+            namePart_given = ET.SubElement(mods_name, xmletree.prefixtag("mods", "namePart"), type="given")
+            namePart_given.text = agent["name_given"]
+        if "date_birth" in agent or "date_death" in agent:
+            date = ""
+            if "date_birth" in agent:
+                date += agent["date_birth"]
+            date += "-"
+            if "date_death" in agent:
+                date += agent["date_death"]
+            if date != "-":
+                namePart_date = ET.SubElement(mods_name, xmletree.prefixtag("mods", "namePart"), type="date")
+                namePart_date.text = date
+    # Orgunit
+    elif agent["rec_class"] == constants.REC_CLASS_ORGUNIT:
+        mods_name = ET.SubElement(mods_item, xmletree.prefixtag("mods", "name"), type="corporate")
+        if "name" in agent:
+            namePart_main = ET.SubElement(mods_name, xmletree.prefixtag("mods", "namePart"))
+            namePart_main.text = agent["name"]
+        if "date_foundation" in agent or "date_dissolution" in agent:
+            date = ""
+            if "date_foundation" in agent:
+                date += agent["date_foundation"]
+            date += "-"
+            if "date_dissolution" in agent:
+                date += agent["date_dissolution"]
+            if date != "-":
+                namePart_date = ET.SubElement(mods_name, xmletree.prefixtag("mods", "namePart"), type="date")
+                namePart_date.text = date
+    # Event
+    elif agent["rec_class"] == constants.REC_CLASS_EVENT:
+        mods_name = ET.SubElement(mods_item, xmletree.prefixtag("mods", "name"), type="conference")
+        # title -> namePart@type=null
+        if "title" in agent:
+            namePart_main = ET.SubElement(mods_name, xmletree.prefixtag("mods", "namePart"))
+            namePart_main.text = agent["title"]
+        # number -> description(first token ;)
+        # international -> description(second token ;)
+        if "number" in agent or "international" in agent:
+            description_text = ""
+            if "number" in agent:
+                description_text = agent["number"]
+            if "international" in agent:
+                description_text = description_text + ";" + agent["international"]
+                description_mods = ET.SubElement(mods_name, xmletree.prefixtag("mods", "description"))
+                description_mods.text = description_text
+        # date_begin -> namePart@type=date(first token /)
+        # date_end -> namePart@type=date(second token /)
+        if "date_begin" in agent or "date_end" in agent:
+            date = ""
+            if "date_begin" in agent:
+                date += agent["date_begin"]
+            date += "-"
+            if "date_end" in agent:
+                date += agent["date_end"]
+            if date != "-":
+                namePart_date = ET.SubElement(mods_name, xmletree.prefixtag("mods", "namePart"), type="date")
+                namePart_date.text = date
+        # place -> name@type=conference/namePart@type=termsOfAddress/(first token ;)
+        # country -> name@type=conference/namePart@type=termsOfAddress/(second token ;)
+        if "place" in agent or "country" in agent:
+            termsOfAddress_text = ""
+            if "place" in agent:
+                termsOfAddress_text = agent["place"]
+            if "country" in agent:
+                termsOfAddress_text = termsOfAddress_text + ";" + agent["international"]
+                termsOfAddress = ET.SubElement(mods_name, xmletree.prefixtag("mods", "namePart"), type="termsOfAddress")
+                termsOfAddress.text = termsOfAddress_text
+    # Family
+    elif agent["rec_class"] == constants.REC_CLASS_FAMILY:
+        mods_name = ET.SubElement(mods_item, xmletree.prefixtag("mods", "name"), type="family")
+        if "name_family" in agent:
+            namePart_main = ET.SubElement(mods_name, xmletree.prefixtag("mods", "namePart"), type="family")
+            namePart_main.text = agent["name_family"]
+    # commons
+    # affiliations -> affiliation
+    if "affiliations" in agent:
+        for affiliation in agent["affiliations"]:
+            if "agent" in affiliation and "name" in affiliation["agent"]:
+                mods_affiliation = ET.SubElement(mods_name, xmletree.prefixtag("mods", "affiliation"))
+                mods_affiliation.text = affiliation["agent"]["name"]
+    # biographies_short[i]/value -> description
+    if "biographies_short" in agent:
+        for biographie_short in agent["biographies_short"]:
+            description_mods = ET.SubElement(mods_name, xmletree.prefixtag("mods", "description"))
+            description_mods.text = biographie_short["value"]
+    # biographies[i]/value -> description
+    if "biographies" in agent:
+        for biographie in agent["biographies"]:
+            description_mods = ET.SubElement(mods_name, xmletree.prefixtag("mods", "description"))
+            description_mods.text = biographie["value"]
+    # descriptions[i]/value -> description
+    if "descriptions" in agent:
+        for description in agent["descriptions"]:
+            description_mods = ET.SubElement(mods_name, xmletree.prefixtag("mods", "description"))
+            description_mods.text = description["value"]
+    # descriptions_short[i]/value -> description
+    if "descriptions_short" in agent:
+        for description_short in agent["descriptions_short"]:
+            description_mods = ET.SubElement(mods_name, xmletree.prefixtag("mods", "description"))
+            description_mods.text = description_short["value"]
+    # notes[i]/value -> description
+    if "notes" in agent:
+        for note in agent["notes"]:
+            description_mods = ET.SubElement(mods_name, xmletree.prefixtag("mods", "description"))
+            description_mods.text = note["value"]
+    return mods_name
+
+
+def convert_metajson_document_type(document, mods_item):
+    rec_type = document["rec_type"]
+    # typeOfResource
+    typeOfResource_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "typeOfResource"))
+    typeOfResource_mods.text = METAJSON_DOCUMENT_TYPE_TO_MODS_TYPEOFRESOURCE[document["rec_type"]]
+    if document["rec_type"] in METAJSON_DOCUMENT_TYPE_IS_MODS_COLLECTION:
+        typeOfResource_mods.set("collection", "yes")
+    if document["rec_type"] in METAJSON_DOCUMENT_TYPE_IS_MODS_MANUSCRIPT:
+        typeOfResource_mods.set("manuscript", "yes")
+    # genre
+    if rec_type in METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_EUREPO:
+        genre_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "genre"))
+        genre_mods.text = METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_EUREPO[rec_type]
+    if rec_type in METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_EPRINT:
+        genre_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "genre"))
+        genre_mods.text = METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_EPRINT[rec_type]
+    if rec_type in METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_MARCGT:
+        genre_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "genre"))
+        genre_mods.set("authority", "marcgt")
+        genre_mods.text = METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_MARCGT[rec_type]
+    if rec_type in METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_OTHER:
+        genre_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "genre"))
+        genre_mods.text = METAJSON_DOCUMENT_TYPE_TO_MODS_GENRE_OTHER[rec_type]
+
+
+def convert_metajson_document_origin_info(document, mods_item):
+    # todo
+    # publication_countries, publication_places, publication_states -> place/placeTerm
+    # publishers -> publisher
+    # date_issued -> dateIssued
+    # date_created -> dateCreated
+    # date_captured -> dateCaptured
+    # date_valid_begin, date_valid_end -> dateValid
+    # date_modified -> dateModified
+    # date_copyright -> copyrightDate
+    # date_other -> dateOther
+    # edition -> edition
+    # issuance -> issuance
+    # frequency -> frequency
+    pass
+
+
+def convert_metajson_document_languages(document, mods_item):
+    if "languages" in document:
+        for language in document["languages"]:
+            language_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "language"))
+            languageTerm_mods = ET.SubElement(language_mods, xmletree.prefixtag("mods", "languageTerm"))
+            languageTerm_mods.set("type", "code")
+            languageTerm_mods.set("authority", "rfc4646")
+            languageTerm_mods.text = language
+
+
+def convert_metajson_document_physical_description(document, mods_item):
+    # TODO
+    # form -> form
+    # reformatting_quality -> reformattingQuality
+    # -> internetMediaType
+    # -> extent
+    # digital_origin -> digitalOrigin
+    # physical_description_notes -> note
+    pass
+
+
+def convert_metajson_document_descriptions(document, mods_item):
+    if "descriptions" in document:
+        for description in document["descriptions"]:
+            if "value" in description:
+                abstract_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "abstract"))
+                abstract_mods.text = description["value"]
+                if "language" in description:
+                    abstract_mods.set("lang", description["language"])
+
+
+def convert_metajson_document_table_of_contentss(document, mods_item):
+    if "table_of_contentss" in document:
+        for table_of_contents in document["table_of_contentss"]:
+            if "value" in table_of_contents:
+                tableOfContents_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "tableOfContents"))
+                tableOfContents_mods.text = table_of_contents["value"]
+                if "language" in table_of_contents:
+                    tableOfContents_mods.set("lang", table_of_contents["language"])
+                if "content_type" in table_of_contents:
+                    tableOfContents_mods.set("type", table_of_contents["content_type"])
+
+
+def convert_metajson_document_target_audiences(document, mods_item):
+    if "target_audiences" in document:
+        for authority in document["target_audiences"].keys():
+            for value in document["target_audiences"][authority]:
+                targetAudience_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "targetAudience"))
+                targetAudience_mods.set("authority", authority)
+                targetAudience_mods.text = value
+
+
+def convert_metajson_document_notes(document, mods_item):
+    if "notes" in document:
+        for note in document["notes"]:
+            if "value" in note:
+                note_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "note"))
+                note_mods.text = note["value"]
+                if "language" in note:
+                    note_mods.set("lang", note["language"])
+                if "note_type" in note:
+                    note_mods.set("type", note["note_type"])
+
+
+def convert_metajson_document_subjects(document, mods_item):
+    if "subjects" in document:
+        #logging.debug(jsonbson.dumps_json(document["subjects"], True))
+        for subject in document["subjects"]:
+            subject_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "subject"))
+            # authority -> @authority
+            if "authority" in subject:
+                subject_mods.set("authority", subject["authority"])
+            if "subject_id" in subject:
+                subject_mods.set("authority", subject["subject_id"])
+            if "language" in subject:
+                subject_mods.set("lang", subject["language"])
+            #subject_type = subject["subject_type"]
+            # topics -> topic
+            if "topics" in subject:
+                for topic in subject["topics"]:
+                    topic_mods = ET.SubElement(subject_mods, xmletree.prefixtag("mods", "topic"))
+                    topic_mods.text = topic["value"]
+            # geographics -> geographic or geographicCode or hierarchicalGeographic
+            if "geographics" in subject:
+                for geographic in subject["geographics"]:
+                    geographic_mods = ET.SubElement(subject_mods, xmletree.prefixtag("mods", "geographic"))
+                    geographic_mods.text = geographic["value"]
+            # temporals -> temporal
+            if "temporals" in subject:
+                for temporal in subject["temporals"]:
+                    temporal_mods = ET.SubElement(subject_mods, xmletree.prefixtag("mods", "temporal"))
+                    temporal_mods.text = temporal["value"]
+            # documents -> titleInfo
+            if "documents" in subject:
+                for sub_doc in subject["documents"]:
+                    convert_metajson_document_titles(sub_doc, subject_mods)
+            # agents -> name
+            if "agents" in subject:
+                for agent in subject["agents"]:
+                    convert_metajson_agent(agent, subject_mods)
+            # genres -> genre
+            if "genres" in subject:
+                for genre in subject["genres"]:
+                    genre_mods = ET.SubElement(subject_mods, xmletree.prefixtag("mods", "genre"))
+                    genre_mods.text = genre
+            # occupations -> occupation
+            if "occupations" in subject:
+                for occupation in subject["occupations"]:
+                    occupation_mods = ET.SubElement(subject_mods, xmletree.prefixtag("mods", "occupation"))
+                    occupation_mods.text = occupation
+    # cartographics -> cartographics
+    if "cartographics" in document:
+        #logging.debug(jsonbson.dumps_json(document["cartographics"], True))
+        subject_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "subject"))
+        for cartographic in document["cartographics"]:
+            cartographics_mods = ET.SubElement(subject_mods, xmletree.prefixtag("mods", "cartographics"))
+            if "scale" in cartographic:
+                scale_mods = ET.SubElement(cartographics_mods, xmletree.prefixtag("mods", "scale"))
+                scale_mods.text = cartographic["scale"]
+            if "projection" in cartographic:
+                projection_mods = ET.SubElement(cartographics_mods, xmletree.prefixtag("mods", "projection"))
+                projection_mods.text = cartographic["projection"]
+            if "coordinates" in cartographic:
+                coordinates_value = ""
+                for coordinate in cartographic["coordinates"]:
+                    coordinates_value = coordinates_value + " " + coordinate
+                if coordinates_value:
+                    coordinates_mods = ET.SubElement(cartographics_mods, xmletree.prefixtag("mods", "coordinates"))
+                    coordinates_mods.text = coordinates_value
+            if "coordinates_unstructured" in cartographic:
+                coordinates_mods = ET.SubElement(cartographics_mods, xmletree.prefixtag("mods", "coordinates"))
+                coordinates_mods.text = cartographic["coordinates_unstructured"]
+
+
+def convert_metajson_document_classifications(document, mods_item):
+    if "classifications" in document:
+        for autority in document["classifications"].keys():
+            if document["classifications"][autority] is not None:
+                for value in document["classifications"][autority]:
+                    classification_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "classification"))
+                    classification_mods.set("authority", autority)
+                    classification_mods.text = value
+
+
+def convert_metajson_document_related_items(document, mods_item):
+    prop_to_mods_type = {
+        "absorbs": "succeeding",
+        "aggregates": "succeeding",
+        "becomes": "preceding",
+        "conforms_tos": "references",
+        "continues": "succeeding",
+        "describes": "references",
+        "has_formats": "otherFormat",
+        "has_offprints": "constituent",
+        "has_parts": "constituent",
+        "has_relation_withs": "references",
+        "has_reviews": "isReferencedBy",
+        "has_supplements": "constituent",
+        "has_translations": "otherVersion",
+        "has_versions": "otherVersion",
+        "is_absorbed_intos": "preceding",
+        "is_aggregated_bys": "preceding",
+        "is_bound_afters": "host",
+        "is_bound_withs": "host",
+        "is_described_bys": "is_described_bys",
+        "is_format_ofs": "otherFormat",
+        "is_merged_froms": "succeeding",
+        "is_offprint_ofs": "host",
+        "is_part_ofs": "host",
+        "is_partially_absorbed_intos": "preceding",
+        "is_partially_replaced_bys": "preceding",
+        "is_preceded_bys": "succeeding",
+        "is_published_withs": "host",
+        "is_referenced_bys": "isReferencedBy",
+        "is_replaced_bys": "preceding",
+        "is_review_ofs": "reviewOf",
+        "is_split_intos": "preceding",
+        "is_splitted_froms": "succeeding",
+        "is_succeeded_bys": "preceding",
+        "is_supplement_ofs": "host",
+        "is_translation_ofs": "otherVersion",
+        "is_updated_bys": "preceding",
+        "merges_withs": "succeeding",
+        "originals": "original",
+        "partially_absorbs": "succeeding",
+        "partially_becomes": "preceding",
+        "partially_continues": "succeeding",
+        "partially_replaces": "succeeding",
+        "re_becomes": "succeeding",
+        "references": "references",
+        "replaces": "succeeding",
+        "requires": "references",
+        "seriess": "series",
+        "sub_series": "constituent",
+        "updates": "succeeding"
+    }
+    for key in prop_to_mods_type.keys():
+        if key in document and document[key] is not None:
+            for related in document[key]:
+                relatedItem_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "relatedItem"))
+                relatedItem_mods.set("type", prop_to_mods_type[key])
+                metajson_to_mods_root_or_related_item(related, relatedItem_mods)
+
+
+def convert_metajson_document_identifiers(document, mods_item):
+    if "identifiers" in document:
+        for identifier in document["identifiers"]:
+            if "value" in identifier:
+                identifier_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "identifier"))
+                identifier_mods.text = identifier["value"]
+                if "language" in identifier:
+                    identifier_mods.set("lang", identifier["language"])
+                if "id_type" in identifier:
+                    identifier_mods.set("type", identifier["id_type"])
+
+
+def convert_metajson_document_resources(document, mods_item):
+    # todo
+    pass
+
+
+def convert_metajson_document_rights(document, mods_item):
+    if "rights" in document:
+        rights = document["rights"]
+        if "rights_holders" in rights:
+            for rights_holder in rights["rights_holders"]:
+                convert_metajson_document_creator(rights_holder, mods_item)
+        if "permissions" in rights:
+            metajson_type_to_mods_type  = {
+                "discover": "restriction on access",
+                "display": "restriction on access",
+                "print": "use and reproduction",
+                "play": "use and reproduction",
+                "execute": "use and reproduction"
+            }
+            for permission in rights["permissions"]:
+                if "descriptions" in permission:
+                    for description in permission["descriptions"]:
+                        accessCondition_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "accessCondition"))
+                        accessCondition_mods.text = description
+                        ac_type = "use and reproduction"
+                        if permission["permission_type"] in metajson_type_to_mods_type:
+                            ac_type = metajson_type_to_mods_type[permission["permission_type"]]
+                        accessCondition_mods.set("type", ac_type)
+
+
+def convert_metajson_document_parts(document, mods_item):
+    # todo
+    pass
+
+
+def convert_metajson_document_rec_infos(document, mods_item):
+    recordInfo_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "recordInfo"))
+    # rec_cataloging_charactersets -> 
+    # rec_cataloging_languages -> languageOfCataloging/languageTerm
+    if "rec_cataloging_languages" in document:
+        for rec_cataloging_language in document["rec_cataloging_languages"]:
+            languageOfCataloging_mods = ET.SubElement(recordInfo_mods, xmletree.prefixtag("mods", "languageOfCataloging"))
+            languageTerm_mods = ET.SubElement(languageOfCataloging_mods, xmletree.prefixtag("mods", "languageTerm"))
+            languageTerm_mods.set("type", "code")
+            languageTerm_mods.set("authority", "rfc4646")
+            languageTerm_mods.text = rec_cataloging_language
+    # rec_cataloging_transliteration -> languageOfCataloging/scriptTerm
+    # rec_created_date -> recordCreationDate
+    if "rec_created_date" in document:
+        recordCreationDate_mods = ET.SubElement(recordInfo_mods, xmletree.prefixtag("mods", "recordCreationDate"))
+        recordCreationDate_mods.set("encoding", "iso8601")
+        recordCreationDate_mods.text = document["rec_created_date"]
+    # rec_id -> recordIdentifier
+    if "rec_id" in document:
+        recordIdentifier_mods = ET.SubElement(recordInfo_mods, xmletree.prefixtag("mods", "recordIdentifier"))
+        recordIdentifier_mods.text = document["rec_id"]
+    # rec_modified_date -> recordChangeDate
+    if "rec_modified_date" in document:
+        recordChangeDate_mods = ET.SubElement(recordInfo_mods, xmletree.prefixtag("mods", "recordChangeDate"))
+        recordChangeDate_mods.set("encoding", "iso8601")
+        recordChangeDate_mods.text = document["rec_modified_date"]
+    # rec_source -> recordOrigin
+    if "rec_source" in document:
+        recordOrigin_mods = ET.SubElement(recordInfo_mods, xmletree.prefixtag("mods", "recordOrigin"))
+        recordOrigin_mods.text = document["rec_source"]
+    # rec_source_cataloging_rule -> ?
+    # rec_source_country -> ?
+    # rec_source_date -> ?
+    # rec_source_rec_id -> ?
+    # rec_type_description -> descriptionStandard
+
 
 #########
 # Utils #
