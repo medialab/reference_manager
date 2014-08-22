@@ -2715,7 +2715,7 @@ def convert_unknown_format_to_rfc5646(unknown):
         if result:
             return result
         else:
-            logging.warning("Fixme ! Unknown rfc5646 language for language term: {}".format(unknown))
+            logging.warning("Fixme ! Unrecognize language term: {}".format(unknown))
 
 
 def test():
