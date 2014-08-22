@@ -27,7 +27,7 @@ with open(os.path.join(here, 'requirements.txt')) as requirements_file,
 
     setup(
         name='biblib',
-        version=constants.VERSION,
+        version=constants.BIBLIB_VERSION,
         author='Sciences Po - médialab',
         author_email='medialab@sciences-po.fr',
         url='https://github.com/medialab/reference_manager',
