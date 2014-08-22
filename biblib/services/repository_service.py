@@ -61,19 +61,18 @@ def empty_corpus(corpus):
 
 
 def init_corpus_indexes(corpus):
-    index_id = ('_id', pymongo.ASCENDING)
     index_rec_id = ('rec_id', pymongo.ASCENDING)
+    index_rec_type = ('rec_type', pymongo.ASCENDING)
     index_title = ('title', pymongo.ASCENDING)
+    index_type_id = ('type_id', pymongo.ASCENDING)
     #index_name = ('name', pymongo.ASCENDING)
     #index_name_family = ('name_family', pymongo.ASCENDING)
     #index_name_given = ('name_given', pymongo.ASCENDING)
 
-    mongodb[database_name(corpus)][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
-
-    mongodb[database_name(corpus)][DOCUMENTS].ensure_index([index_id, index_rec_id, index_title], safe=True)
-    #mongodb[database_name(corpus)][AGENTS].ensure_index([index_id, index_rec_id, index_name, index_name_family, index_name_given], safe=True)
-    mongodb[database_name(corpus)][TYPES].ensure_index([index_id], safe=True)
-    mongodb[database_name(corpus)][FIELDS].ensure_index([index_id], safe=True)
+    #mongodb[database_name(corpus)][AGENTS].ensure_index([index_rec_id, index_name, index_name_family, index_name_given], safe=True)
+    mongodb[database_name(corpus)][DOCUMENTS].ensure_index([index_rec_id, index_rec_type, index_title], safe=True)
+    mongodb[database_name(corpus)][TYPES].ensure_index([index_type_id], safe=True)
+    mongodb[database_name(corpus)][FIELDS].ensure_index([index_rec_type], safe=True)
 
 
 def get_document_by_mongo_id(corpus, mongo_id):
