@@ -158,12 +158,12 @@ def convert_header(header):
 
 
 def convert_record(record, meta_orig_prefix, source):
-    logging.debug("convert_record")
+    #logging.debug("convert_record")
     header = convert_header(record[0])
     meta_orig_value = record[1].getField("orig").encode('utf-8')
-    logging.debug("meta_orig_value: {}".format(meta_orig_value))
+    #logging.debug("meta_orig_value: {}".format(meta_orig_value))
     metajson_list = crosswalks_service.parse_and_convert_string(meta_orig_value, meta_orig_prefix, constants.FORMAT_METAJSON, source, "", False, False)
-    logging.debug("metajson_list: {}".format(metajson_list))
+    #logging.debug("metajson_list: {}".format(metajson_list))
     metajson = None
     if metajson_list:
         metajson = metajson_list.next()
@@ -183,7 +183,7 @@ def convert_record(record, meta_orig_prefix, source):
             metajson["rec_status"] = "deleted"
         else:
             metajson["rec_status"] = "published"
-        logging.debug("metajson: {}".format(metajson))
+        #logging.debug("metajson: {}".format(metajson))
     return metajson
 
 
@@ -235,7 +235,7 @@ def get_record(target, identifier):
 
 
 def list_records(target, date_from, date_until, setspec):
-    logging.debug("list_records")
+    #logging.debug("list_records")
     if target is not None:
         client = Client(target['url'], registry)
         # todo : clean this, find simplified cases
