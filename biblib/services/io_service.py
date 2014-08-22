@@ -88,16 +88,16 @@ def get_relevant_file_list_by_format(dir_path, input_format):
 
 
 def get_relevant_file_list_by_extension(dir_path, file_extension):
-    logging.debug("Relevant file list for path : {} and file extension: {}".format(dir_path, file_extension))
+    #logging.debug("Relevant file list for path : {} and file extension: {}".format(dir_path, file_extension))
     if dir_path is None or not os.path.exists(dir_path):
-        logging.debug("Nonexistent directory path")
+        logging.error("Nonexistent directory path")
     else:
         files = os.listdir(dir_path)
         if files:
             for file_name in files:
                 if not file_name.startswith('.') and file_name.endswith("." + file_extension):
                     file_path = os.path.join(dir_path, file_name)
-                    logging.debug("file_path: {}".format(file_path))
+                    #logging.debug("file_path: {}".format(file_path))
                     yield file_path
 
 
@@ -165,45 +165,45 @@ def parse_metajson_file(file_path):
 # Write #
 #########
 
-def write_items(col_id, col_title, items, output_dir_path, output_format, all_in_one_file):
+def write_items(col_id, col_title, items, output_dir_path, output_format):
     #logging.debug("write_items type(items): {}".format(type(items)))
-    if all_in_one_file:
-        if isinstance(items, Collection):
-            write_item(items, output_dir_path, output_format)
-        elif isinstance(items, ET.Element):
-            write_item(items, output_dir_path, output_format)
-        elif isinstance(items, types.GeneratorType):
-            write_item(items.next(), output_dir_path, output_format)
-        elif isinstance(items, collections.Iterable):
-            write_item(items[0], output_dir_path, output_format)
-    else:
-        if items is not None:
-            for item in items:
-                write_item(item, output_dir_path, output_format)
+    if items is not None:
+        if not os.path.exists(output_dir_path):
+            os.mkdir(output_dir_path)
+        for item in items:
+            output_file_name =  item[0] + "." + output_format + "." + guess_file_extension_from_format(output_format)
+            output_file_path = os.path.join(output_dir_path, output_file_name)
+            write_item(item, output_file_path, output_format)
 
 
-def write_item(item, output_dir_path, output_format):
-    #logging.debug("write_item type(item): {}".format(type(item)))
+def write_items_in_one_file(col_id, col_title, items, output_file_path, output_format):
+    if isinstance(items, Collection):
+        write_item((col_id, items), output_file_path, output_format)
+    elif isinstance(items, ET.Element):
+        write_item((col_id, items), output_file_path, output_format)
+    elif isinstance(items, types.GeneratorType):
+        write_item((col_id, items.next()), output_file_path, output_format)
+    elif isinstance(items, collections.Iterable):
+        write_item((col_id, items[0]), output_file_path, output_format)
+
+
+def write_item(item, output_file_path, output_format):
+    #logging.debug("write_item type(item): {}, output_file_path:{}, output_format:{}".format(type(item), output_file_path, output_format))
     output_type = guess_type_from_format(output_format)
 
     if output_type is None:
         logging.error("Error: output_type is None")
     else:
-        if not os.path.exists(output_dir_path):
-            os.mkdir(output_dir_path)
-        file_name =  item[0] + "." + output_format + "." + guess_file_extension_from_format(output_format)
-        file_path = os.path.join(output_dir_path, file_name)
-        
         if output_type == constants.FILE_TYPE_JSON:
-            write_json(item[1], file_path)
+            write_json(item[1], output_file_path)
         elif output_type == constants.FILE_TYPE_TXT:
-            write_txt(item[1], file_path)
+            write_txt(item[1], output_file_path)
         elif output_type == constants.FILE_TYPE_XMLETREE:
-            write_xml(item[1], file_path)
+            write_xml(item[1], output_file_path)
         elif output_type == constants.FILE_TYPE_BIBTEX:
-            write_bibtex(item[1], file_path)
+            write_bibtex(item[1], output_file_path)
         elif output_type == constants.FILE_TYPE_CSV:
-            write_csv(item[1], file_path)
+            write_csv(item[1], output_file_path)
         else:
             logging.error("Error: output_type is not managed: {}".format(output_type))
 
@@ -243,8 +243,31 @@ def write_txt(item, output_file_path):
 def write_xml(item, output_file_path):
     #logging.debug("write_xml type(item): {}".format(type(item)))
     with open(output_file_path, "w") as output_file:
+        indent(item)
         xmletree_tree = ET.ElementTree(item)
-        xmletree_tree.write(output_file, "utf-8")
+        #xmletree_tree.write(output_file, "utf-8")
+        xmletree_tree.write(output_file, encoding="utf-8", xml_declaration=None, default_namespace=None, method="xml")
+
+
+'''
+copy and paste from http://effbot.org/zone/element-lib.htm#prettyprint
+it basically walks your tree and adds spaces and newlines so the tree is
+printed in a nice way
+'''
+def indent(elem, level=0):
+  i = "\n" + level*"    "
+  if len(elem):
+    if not elem.text or not elem.text.strip():
+      elem.text = i + "    "
+    if not elem.tail or not elem.tail.strip():
+      elem.tail = i
+    for elem in elem:
+      indent(elem, level+1)
+    if not elem.tail or not elem.tail.strip():
+      elem.tail = i
+  else:
+    if level and (not elem.tail or not elem.tail.strip()):
+      elem.tail = i
 
 
 def write_bibtex(item, output_file_path):

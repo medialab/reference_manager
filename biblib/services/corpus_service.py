@@ -115,7 +115,10 @@ def export_corpus(corpus, output_file_path, output_format, all_in_one_file, one_
         results = crosswalks_service.convert_metajson_list(metajson_tmp, output_format, all_in_one_file)
 
         # export
-        io_service.write_items(corpus, corpus, results, output_file_path, output_format, all_in_one_file)
+        if all_in_one_file:
+            io_service.write_items_in_one_file(corpus, corpus, results, output_file_path, output_format)
+        else:
+            io_service.write_items(corpus, corpus, results, output_file_path, output_format)
 
 
 def export_one_record_per_copy(metajson_list):
