@@ -76,7 +76,7 @@ def csv_dict_reader_to_metasjon(csv_row, input_format, source, rec_id_prefix):
         document["rec_type"] = "DatasetQuali"
         creators = []
         if "Laboratoire d'inventaire" in csv_row:
-            creators.append(creator_service.formatted_name_to_creator(csv_row["Laboratoire d'inventaire"], constants.CLASS_ORGUNIT, "dpt"))
+            creators.append(creator_service.formatted_name_to_creator(csv_row["Laboratoire d'inventaire"], constants.REC_CLASS_ORGUNIT, "dpt"))
         document["title"] = csv_row["Titre de l'enquete"]
         if "Sujet(s) de l'enquete" in csv_row:
             document["keywords"] = [x.strip() for x in csv_row["Sujet(s) de l'enquete"].split("\n") if x.strip()]

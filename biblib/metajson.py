@@ -4,8 +4,6 @@
 
 from biblib.util import constants
 
-REC_METAJSON = 1
-
 STYLE_GIVEN_FAMILY = "given_family"
 STYLE_FAMILY_COMMA_GIVEN = "family_comma_given"
 
@@ -45,12 +43,23 @@ class Common(dict):
                 self[key] = [item]
 
 
+# Brand
+class Brand(Common):
+    def __init__(self, *args, **kwargs):
+        Common.__init__(self, *args, **kwargs)
+        if "rec_class" not in self:
+            self["rec_class"] = constants.REC_CLASS_BRAND
+
+    def formatted_name(self):
+        if "name" in self:
+            return self["name"]
+
 # Call
 class Call(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_class" not in self:
-            self["rec_class"] = "Call"
+            self["rec_class"] = constants.REC_CLASS_CALL
 
 
 # Collection
@@ -58,9 +67,9 @@ class Collection(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
+            self["rec_metajson"] = constants.METAJSON_VERSION
         if "rec_class" not in self:
-            self["rec_class"] = "Collection"
+            self["rec_class"] = constants.REC_CLASS_COLLECTION
 
 
 # Creator
@@ -71,13 +80,15 @@ class Creator(Common):
             agent = self["agent"]
             if agent and "rec_class" in agent:
                 rec_class = agent["rec_class"]
-                if "Person" == rec_class:
+                if constants.REC_CLASS_PERSON == rec_class:
                     self["agent"] = Person(self["agent"])
-                elif "Orgunit" == rec_class:
+                elif constants.REC_CLASS_ORGUNIT == rec_class:
                     self["agent"] = Orgunit(self["agent"])
-                elif "Event" == rec_class:
+                elif constants.REC_CLASS_EVENT == rec_class:
                     self["agent"] = Event(self["agent"])
-                elif "Family" == rec_class:
+                elif constants.REC_CLASS_FAMILY == rec_class:
+                    self["agent"] = Family(self["agent"])
+                elif constants.REC_CLASS_BRAND == rec_class:
                     self["agent"] = Family(self["agent"])
 
     def formatted_name(self, style=STYLE_FAMILY_COMMA_GIVEN):
@@ -85,13 +96,15 @@ class Creator(Common):
             agent = self["agent"]
             if agent and "rec_class" in agent:
                 rec_class = agent["rec_class"]
-                if "Person" == rec_class:
+                if constants.REC_CLASS_PERSON == rec_class:
                     return agent.formatted_name(style)
-                elif "Orgunit" == rec_class:
+                elif constants.REC_CLASS_ORGUNIT == rec_class:
                     return agent.formatted_name()
-                elif "Event" == rec_class:
+                elif constants.REC_CLASS_EVENT == rec_class:
                     return agent.formatted_name()
-                elif "Family" == rec_class:
+                elif constants.REC_CLASS_FAMILY == rec_class:
+                    return agent.formatted_name()
+                elif constants.REC_CLASS_BRAND == rec_class:
                     return agent.formatted_name()
 
 
@@ -100,7 +113,7 @@ class Field(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_class" not in self:
-            self["rec_class"] = "Field"
+            self["rec_class"] = constants.REC_CLASS_FIELD
 
 
 # Document
@@ -108,7 +121,7 @@ class Document(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_class" not in self:
-            self["rec_class"] = "Document"
+            self["rec_class"] = constants.REC_CLASS_DOCUMENT
         if "creators" in self:
             self["creators"] = [Creator(x) for x in self["creators"]]
         if "absorbs" in self:
@@ -197,8 +210,8 @@ class Document(Common):
             self["partially_replaces"] = [Document(x) for x in self["partially_replaces"]]
         if "projects" in self:
             self["projects"] = [Project(x) for x in self["projects"]]
-        if "re-becomes" in self:
-            self["re-becomes"] = [Document(x) for x in self["re-becomes"]]
+        if "re_becomes" in self:
+            self["re_becomes"] = [Document(x) for x in self["re_becomes"]]
         if "references" in self:
             self["references"] = [Document(x) for x in self["references"]]
         if "replaces" in self:
@@ -420,7 +433,7 @@ class Event(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_class" not in self:
-            self["rec_class"] = "Event"
+            self["rec_class"] = constants.REC_CLASS_EVENT
 
     def formatted_name(self):
         if "title" in self:
@@ -432,7 +445,7 @@ class Family(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_class" not in self:
-            self["rec_class"] = "Family"
+            self["rec_class"] = constants.REC_CLASS_FAMILY
 
     def formatted_name(self):
         if "name_family" in self:
@@ -449,7 +462,7 @@ class Orgunit(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_class" not in self:
-            self["rec_class"] = "Orgunit"
+            self["rec_class"] = constants.REC_CLASS_ORGUNIT
 
     def formatted_name(self):
         if "name" in self:
@@ -462,7 +475,7 @@ class Person(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_class" not in self:
-            self["rec_class"] = "Person"
+            self["rec_class"] = constants.REC_CLASS_PERSON
 
     def formatted_name(self, style=STYLE_FAMILY_COMMA_GIVEN):
         result = ""
@@ -484,7 +497,7 @@ class Project(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_class" not in self:
-            self["rec_class"] = "Project"
+            self["rec_class"] = constants.REC_CLASS_PROJECT
 
 
 # Resource
@@ -492,7 +505,7 @@ class Resource(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_class" not in self:
-            self["rec_class"] = "Resource"
+            self["rec_class"] = constants.REC_CLASS_RESOURCE
 
 
 # Rights
@@ -505,9 +518,9 @@ class SearchQuery(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
+            self["rec_metajson"] = constants.METAJSON_VERSION
         if "rec_class" not in self:
-            self["rec_class"] = "SearchQuery"
+            self["rec_class"] = constants.REC_CLASS_SEARCH_QUERY
 
 
 # SearchResponse
@@ -515,9 +528,9 @@ class SearchResponse(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
+            self["rec_metajson"] = constants.METAJSON_VERSION
         if "rec_class" not in self:
-            self["rec_class"] = "SearchResponse"
+            self["rec_class"] = constants.REC_CLASS_SEARCH_RESPONSE
 
 
 # Subject
@@ -530,7 +543,7 @@ class Target(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_class" not in self:
-            self["rec_class"] = "Target"
+            self["rec_class"] = constants.REC_CLASS_TARGET
 
 
 # Type
@@ -538,7 +551,7 @@ class Type(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_class" not in self:
-            self["rec_class"] = "Type"
+            self["rec_class"] = constants.REC_CLASS_TYPE
 
 
 # Warpper
@@ -546,6 +559,6 @@ class Warpper(Common):
     def __init__(self, *args, **kwargs):
         Common.__init__(self, *args, **kwargs)
         if "rec_metajson" not in self:
-            self["rec_metajson"] = REC_METAJSON
+            self["rec_metajson"] = constants.METAJSON_VERSION
         if "rec_class" not in self:
-            self["rec_class"] = "Warpper"
+            self["rec_class"] = constants.REC_CLASS_WARPPER

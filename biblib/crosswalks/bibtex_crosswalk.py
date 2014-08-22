@@ -290,7 +290,7 @@ def extract_creators(entry, key, role):
         for author in authors:
             formatted_name = unicode(author).encode('utf-8')
             formatted_name = replace_special_characters(formatted_name)
-            creator = creator_service.formatted_name_to_creator(formatted_name, constants.CLASS_PERSON, role)
+            creator = creator_service.formatted_name_to_creator(formatted_name, constants.REC_CLASS_PERSON, role)
             creators.append(creator)
             return creators
     else:

@@ -91,6 +91,7 @@ class References_repository(jsonrpc.JSONRPC):
         if role == "":
             role = None
         try:
+            document["rec_modified_date"] = datetime.now().isoformat()
             doc_bson = jsonbson.json_to_bson(document)
             oid, rec_id = repository_service.save_document(corpus, doc_bson, role)
             return {"rec_id": rec_id}
@@ -223,7 +224,7 @@ class References_repository(jsonrpc.JSONRPC):
                 metadatas = metajson_service.load_dict_list(metadatas)
                 results = []
                 for metadata in metadatas:
-                    if "rec_class" in metadata and metadata["rec_class"] == constants.CLASS_DOCUMENT:
+                    if "rec_class" in metadata and metadata["rec_class"] == constants.REC_CLASS_DOCUMENT:
                         results.append(citations_manager.add_citations_to_metadata(metadata, styles, formats))
                 return jsonbson.bson_to_json(results)
             else:

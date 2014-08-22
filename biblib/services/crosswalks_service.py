@@ -91,7 +91,7 @@ def convert_json(input_data, input_format, source, rec_id_prefix, only_first_rec
 
             if input_format == constants.FORMAT_METAJSON:
                 # metajson
-                if input_data["rec_class"] == constants.CLASS_COLLECTION:
+                if input_data["rec_class"] == constants.REC_CLASS_COLLECTION:
                     return input_data["records"]
                 else:
                     return [input_data]

@@ -127,14 +127,15 @@ def enhance_metajson(document):
         document["rec_created_date"] = datetime.now().isoformat()
 
     # rec_modified_date
-    document["rec_modified_date"] = datetime.now().isoformat()
+    if "rec_modified_date" not in document or document["rec_modified_date"] is None:
+        document["rec_modified_date"] = datetime.now().isoformat()
     
     # rec_deleted_date
     if document["rec_status"] == constants.REC_STATUS_DELETED and "rec_deleted_date" not in metajson:
         document["rec_deleted_date"] = datetime.now().isoformat()
 
     # For "rec_class": "Document" only
-    if "rec_class" in document and document["rec_class"] == constants.CLASS_DOCUMENT:
+    if "rec_class" in document and document["rec_class"] == constants.REC_CLASS_DOCUMENT:
         # citations
         citations_manager.add_citations_to_metadata(document, None, None)
         # date_sort

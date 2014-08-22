@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding=utf-8
 
-VERSION = '0.9'
+BIBLIB_VERSION = '0.9'
+METAJSON_VERSION = 1
 
 FILE_TYPE_BIBTEX = 'bibtex'
 FILE_TYPE_CSV = 'csv'
@@ -194,13 +195,23 @@ xmltag_to_input_format = {
     'type': 'dc'
 }
 
-CLASS_COLLECTION = "Collection"
-CLASS_DOCUMENT = "Document"
-CLASS_EVENT = "Event"
-CLASS_FAMILY = "Family"
-CLASS_ORGUNIT = "Orgunit"
-CLASS_PERSON = "Person"
-CLASS_PROJECT = "Project"
+REC_CLASS_BRAND = "Brand"
+REC_CLASS_CALL = "Call"
+REC_CLASS_COLLECTION = "Collection"
+REC_CLASS_DOCUMENT = "Document"
+REC_CLASS_EVENT = "Event"
+REC_CLASS_FAMILY = "Family"
+REC_CLASS_FIELD = "Field"
+REC_CLASS_ORGUNIT = "Orgunit"
+REC_CLASS_PERSON = "Person"
+REC_CLASS_PROJECT = "Project"
+REC_CLASS_RESOURCE = "Resource"
+REC_CLASS_SEARCH_QUERY = "SearchQuery"
+REC_CLASS_SEARCH_RESPONSE = "SearchResponse"
+REC_CLASS_SOFTWARE = "Software"
+REC_CLASS_TARGET = "Target"
+REC_CLASS_TYPE = "Type"
+REC_CLASS_WARPPER = "Warpper"
 
 DOC_TYPE_ANCIENTTEXT = "AncientText"
 DOC_TYPE_ANNOTATIONARTICLE = "AnnotationArticle"
@@ -237,9 +248,9 @@ DOC_TYPE_DOCTORALTHESIS = "DoctoralThesis"
 DOC_TYPE_DOCUMENT = "Document"
 DOC_TYPE_DRAWING = "Drawing"
 DOC_TYPE_EBOOK = "EBook"
+DOC_TYPE_EDITEDBOOK = "EditedBook"
 DOC_TYPE_EJOURNAL = "EJournal"
 DOC_TYPE_EJOURNALARTICLE = "EJournalArticle"
-DOC_TYPE_EDITEDBOOK = "EditedBook"
 DOC_TYPE_EMAIL = "Email"
 DOC_TYPE_ENCYCLOPEDIA = "Encyclopedia"
 DOC_TYPE_ENCYCLOPEDIAARTICLE = "EncyclopediaArticle"
@@ -300,9 +311,9 @@ DOC_TYPE_SOFTWARE = "Software"
 DOC_TYPE_SPEECH = "Speech"
 DOC_TYPE_STANDARD = "Standard"
 DOC_TYPE_STATUTE = "Statute"  # Act / Statute: a bill passed and adopted by legislative assemblies that has become law.
-DOC_TYPE_TREATY = "Treaty"
 DOC_TYPE_TECHREPORT = "TechReport"
 DOC_TYPE_TEST = "Test"
+DOC_TYPE_TREATY = "Treaty"
 DOC_TYPE_UNPUBLISHEDDOCUMENT = "UnpublishedDocument"
 DOC_TYPE_VIDEOBROADCAST = "VideoBroadcast"
 DOC_TYPE_VIDEOPART = "VideoPart"

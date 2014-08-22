@@ -378,7 +378,7 @@ def get_rml_call(rml):
         if rml_funding is not None:
             # name -> agent.name
             name = get_rml_element_text(rml_funding, "name")
-            funding = creator_service.formatted_name_to_creator(name, constants.CLASS_ORGUNIT, None)
+            funding = creator_service.formatted_name_to_creator(name, constants.REC_CLASS_ORGUNIT, None)
             if funding is None:
                 funding = Creator()
                 funding["agent"] = Orgunit()
@@ -440,7 +440,7 @@ def get_rml_degrees(rml):
                 # creators
                 # name -> creators[0].agent.name
                 name = get_rml_element_text(rml_degree, "name")
-                creator = creator_service.formatted_name_to_creator(name, constants.CLASS_ORGUNIT, "dgg")
+                creator = creator_service.formatted_name_to_creator(name, constants.REC_CLASS_ORGUNIT, "dgg")
                 if creator is None:
                     creator = Creator()
                     creator["agent"] = Orgunit()
@@ -718,7 +718,7 @@ def get_rml_relationships(rml):
             if rml_relationship is not None:
                 # name -> agent.name
                 name = get_rml_element_text(rml_relationship, "name")
-                relationship = creator_service.formatted_name_to_creator(name, constants.CLASS_PERSON, None)
+                relationship = creator_service.formatted_name_to_creator(name, constants.REC_CLASS_PERSON, None)
                 if relationship is None:
                     relationship = {}
                     relationship["agent"] = Person()
@@ -913,7 +913,7 @@ def get_rml_teachings(rml):
                 # creators
                 # name -> creators[0].agent.name
                 name = get_rml_element_text(rml_teaching, "name")
-                creator = creator_service.formatted_name_to_creator(name, constants.CLASS_ORGUNIT, "dgg")
+                creator = creator_service.formatted_name_to_creator(name, constants.REC_CLASS_ORGUNIT, "dgg")
                 if creator is None:
                     creator = Creator()
                     creator["agent"] = Orgunit()
