@@ -160,7 +160,7 @@ def validate_metajson_creator(creator):
 
 def validate_metajson_resource(resource):
     errors = []
-    if resource["rec_type"] == "remote":
+    if resource["rec_type"] == "ResourceRemote":
         # temporally deactivate
         pass
         #if "url" in resource:
@@ -172,9 +172,9 @@ def validate_metajson_resource(resource):
         #        errors.append("Redirected URL: {}".format(url_dict["redirect_url"]))
         #else:
         #    errors.append("Missing URL in resource")
-    elif resource["rec_type"] == "physical":
-        if "physical_copy_number" not in resource:
-            errors.append("Missing physical_copy_number")
+    elif resource["rec_type"] == "ResourcePhysical":
+        if "call_number" not in resource:
+            errors.append("Missing call_number")
     return errors
 
 
