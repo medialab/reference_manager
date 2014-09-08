@@ -2667,6 +2667,11 @@ def convert_iso639_2t_to_rfc5646(iso639_2t):
             return iso639_2t_to_rfc5646[iso639_2t]
 
 
+def convert_iso639_3_to_rfc5646(iso639_3):
+    # todo
+    return convert_unknown_format_to_rfc5646(iso639_3)
+
+
 def convert_english_to_rfc5646(english):
     if english:
         english = english.lower()
