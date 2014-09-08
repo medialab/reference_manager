@@ -49,17 +49,17 @@ if __name__ == "__main__":
     date_validate = datetime.datetime.now()
     chrono.chrono_trace("Validate corpus", date_import, date_validate, None)
 
-    # Export oai_dc
-    corpus_service.export_corpus(corpus, output_dir_path, constants.FORMAT_OAI_DC, False, True)
-    date_export_oai_dc = datetime.datetime.now()
-    chrono.chrono_trace("Export corpus oai_dc", date_validate, date_export_oai_dc, None)
-
     # Export mods
     corpus_service.export_corpus(corpus, output_dir_path, constants.FORMAT_MODS, False, True)
     date_export_mods = datetime.datetime.now()
-    chrono.chrono_trace("Export corpus mods", date_export_oai_dc, date_export_mods, None)
+    chrono.chrono_trace("Export corpus mods", date_validate, date_export_mods, None)
+
+    # Export oai_dc
+    corpus_service.export_corpus(corpus, output_dir_path, constants.FORMAT_OAI_DC, False, True)
+    date_export_oai_dc = datetime.datetime.now()
+    chrono.chrono_trace("Export corpus oai_dc", date_export_mods, date_export_oai_dc, None)
 
     # Export CSV
     #corpus_service.export_corpus(corpus, output_dir_path, constants.FORMAT_CSV_METAJSON, True, True)
     #date_export_csv = datetime.datetime.now()
-    #chrono.chrono_trace("Export corpus csv", date_export_mods, date_export_csv, None)
+    #chrono.chrono_trace("Export corpus csv", date_export_oai_dc, date_export_csv, None)
