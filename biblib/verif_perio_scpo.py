@@ -108,11 +108,11 @@ def validate_perios(documents, csv_file_path):
                                     for resource in openurl_document["resources"]:
                                         if rel_response:
                                             rel_response.append("\n")
-                                        if "provider_name" in resource:
-                                            rel_response.append(resource["provider_name"])
-                                        if "database_name" in resource:
+                                        if "institution_name" in resource:
+                                            rel_response.append(resource["institution_name"])
+                                        if "service_name" in resource:
                                             rel_response.append(" - ")
-                                            rel_response.append(resource["database_name"])
+                                            rel_response.append(resource["service_name"])
                                         if "period_begin" in resource or "period_end" in resource:
                                             rel_response.append(" (")
                                             if "period_begin" in resource:
