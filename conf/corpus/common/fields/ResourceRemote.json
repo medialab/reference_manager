@@ -17,6 +17,16 @@
             "property": "date_last_accessed",
             "required": false,
             "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Labels",
+                "fr": "Libellés"
+            },
+            "multiple": true,
+            "property": "labels",
+            "required": false,
+            "type_ui": "LanguageValueField"
         }
     ],
     "labels": {

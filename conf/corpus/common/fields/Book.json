@@ -190,7 +190,8 @@
             "property": "resources",
             "required": false,
             "type_fields": [
-                "ResourceRemote"
+                "ResourceRemote",
+                "ResourcePhysical"
             ],
             "type_ui": "ComponentField"
         }

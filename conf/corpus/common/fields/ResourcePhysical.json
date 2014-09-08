@@ -1,0 +1,142 @@
+{
+    "children": [
+        {
+            "id_type": "rbccn",
+            "labels": {
+                "en": "RBCCN",
+                "fr": "RBCCN"
+            },
+            "multiple": true,
+            "only_one": true,
+            "property": "institution_identifiers",
+            "required": false,
+            "type_ui": "IdentifierField"
+        },
+        {
+            "labels": {
+                "en": "Location",
+                "fr": "Localisation"
+            },
+            "property": "location",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Sub-location",
+                "fr": "Sous-localisation"
+            },
+            "property": "sub_location",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Collection",
+                "fr": "Collection"
+            },
+            "property": "collection",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Bar code",
+                "fr": "Code barre"
+            },
+            "property": "rec_id",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Call number",
+                "fr": "Cote"
+            },
+            "property": "call_number",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Part number",
+                "fr": "Numéro de partie"
+            },
+            "property": "part_number",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Is periodical?",
+                "fr": "Est un périodique ?"
+            },
+            "property": "is_periodical",
+            "required": true,
+            "type_ui": "BooleanField"
+        },
+        {
+            "labels": {
+                "en": "Issue number",
+                "fr": "Numéro de numéro"
+            },
+            "property": "issue_number",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Issue date",
+                "fr": "date du numéro"
+            },
+            "property": "issue_date",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Category",
+                "fr": "Catégorie"
+            },
+            "property": "category",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Availability code",
+                "fr": "Code de disponibilité"
+            },
+            "property": "availability_code",
+            "required": true,
+            "type_ui": "CharField"
+        },
+        {
+            "labels": {
+                "en": "Last modified date",
+                "fr": "Date de derniére mise à jour"
+            },
+            "property": "rec_modified_date",
+            "required": true,
+            "type_ui": "DateField"
+        },
+        {
+            "labels": {
+                "en": "Notes",
+                "fr": "Notes"
+            },
+            "multiple": true,
+            "property": "notes",
+            "required": false,
+            "type_ui": "LanguageValueField"
+        }
+    ],
+    "labels": {
+        "en": "Physical Resource : copy",
+        "fr": "Resource physique : exemplaire"
+    },
+    "rec_class": "Field",
+    "rec_class_component": "Resource",
+    "rec_metajson": 1,
+    "rec_type": "ResourcePhysical"
+}
