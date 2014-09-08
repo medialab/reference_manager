@@ -933,8 +933,7 @@ def get_mods_languages(mods):
 
                                 elif mods_term.get("authority") == "iso639-3":
                                     # iso639-3
-                                    # todo
-                                    language = language_service.convert_unknown_format_to_rfc5646(mods_term_value)
+                                    language = language_service.convert_iso639_3_to_rfc5646(mods_term_value)
                             else:
                                 # text: natural language like french or english
                                 language = language_service.convert_unknown_format_to_rfc5646(mods_term_value)
@@ -954,23 +953,22 @@ def get_mods_locations(mods):
         for location in locations:
             if location is not None:
                 resource = Resource()
-                # url -> remote
+                # ResourceRemote
                 mods_url = location.find(xmletree.prefixtag("mods", "url"))
                 if mods_url is not None:
                     url = mods_url.text.strip()
                     date_last_accessed = mods_url.get("dateLastAccessed")
                     if url:
-                        resource["rec_type"] = "remote"
+                        resource["rec_type"] = "ResourceRemote"
                         resource["url"] = url
                         if date_last_accessed is not None:
-                            resource["dateLastAccessed"] = date_last_accessed.strip()
-
-                # todo
-                # physicalLocation
+                            resource["date_last_accessed"] = date_last_accessed.strip()
+                # ResourcePhysical
+                # physicalLocation@authority -> institution_identifiers[].id_type
+                # physicalLocation -> institution_identifiers[].value or 
                 # shelfLocator
                 # holdingSimple
-                # holdingExternal
-
+                # holdingExternal -> ?
                 resources.append(resource)
         if resources:
             result["resources"] = resources
@@ -2123,20 +2121,86 @@ def convert_metajson_document_type(document, mods_item):
 
 
 def convert_metajson_document_origin_info(document, mods_item):
-    # todo
-    # publication_countries, publication_places, publication_states -> place/placeTerm
-    # publishers -> publisher
-    # date_issued -> dateIssued
-    # date_created -> dateCreated
-    # date_captured -> dateCaptured
-    # date_valid_begin, date_valid_end -> dateValid
-    # date_modified -> dateModified
-    # date_copyright -> copyrightDate
-    # date_other -> dateOther
-    # edition -> edition
-    # issuance -> issuance
-    # frequency -> frequency
-    pass
+    origin_keys = [
+        "publication_countries",
+        "publication_states",
+        "publication_places",
+        "publishers",
+        "date_issued",
+        "date_created",
+        "date_captured",
+        "date_valid_begin",
+        "date_valid_end",
+        "date_modified",
+        "date_copyright",
+        "date_other",
+        "edition",
+        "issuance",
+        "frequency"
+    ]
+    if any(key in document for key in origin_keys):
+        origin_info_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "originInfo"))
+        # publication_countries, publication_places, publication_states -> place/placeTerm
+        if "publication_countries" in document or "publication_states" in document or "publication_places" in document:
+            place_mods = ET.SubElement(origin_info_mods, xmletree.prefixtag("mods", "place"))
+            if "publication_countries" in document:
+                for country in document["publication_countries"]:
+                    placeTerm_mods = ET.SubElement(place_mods, xmletree.prefixtag("mods", "placeTerm"))
+                    placeTerm_mods.set("type", "code")
+                    placeTerm_mods.text = country
+            if "publication_states" in document:
+                for place in document["publication_states"]:
+                    placeTerm_mods = ET.SubElement(place_mods, xmletree.prefixtag("mods", "placeTerm"))
+                    placeTerm_mods.set("type", "text")
+                    placeTerm_mods.text = place
+            if "publication_places" in document:
+                for place in document["publication_places"]:
+                    placeTerm_mods = ET.SubElement(place_mods, xmletree.prefixtag("mods", "placeTerm"))
+                    placeTerm_mods.set("type", "text")
+                    placeTerm_mods.text = place
+        # publishers -> publisher
+        if "publishers" in document:
+            for publisher in document["publishers"]:
+                publisher_mods = ET.SubElement(origin_info_mods, xmletree.prefixtag("mods", "publisher"))
+                publisher_mods.text = publisher
+        # date_issued -> dateIssued
+        if "date_issued" in document:
+            dateIssued_mods = ET.SubElement(origin_info_mods, xmletree.prefixtag("mods", "dateIssued"))
+            dateIssued_mods.text = document["date_issued"]
+        # date_created -> dateCreated
+        if "date_created" in document:
+            dateCreated_mods = ET.SubElement(origin_info_mods, xmletree.prefixtag("mods", "dateCreated"))
+            dateCreated_mods.text = document["date_created"]
+        # date_captured -> dateCaptured
+        if "date_captured" in document:
+            dateCaptured_mods = ET.SubElement(origin_info_mods, xmletree.prefixtag("mods", "dateCaptured"))
+            dateCaptured_mods.text = document["date_captured"]
+        # date_valid_begin, date_valid_end -> dateValid
+        # todo
+        # date_modified -> dateModified
+        if "date_modified" in document:
+            dateModified_mods = ET.SubElement(origin_info_mods, xmletree.prefixtag("mods", "dateModified"))
+            dateModified_mods.text = document["date_captured"]
+        # date_copyright -> copyrightDate
+        if "date_copyright" in document:
+            copyrightDate_mods = ET.SubElement(origin_info_mods, xmletree.prefixtag("mods", "copyrightDate"))
+            copyrightDate_mods.text = document["date_copyright"]
+        # date_other -> dateOther
+        if "date_other" in document:
+            dateOther_mods = ET.SubElement(origin_info_mods, xmletree.prefixtag("mods", "dateOther"))
+            dateOther_mods.text = document["date_other"]
+        # edition -> edition
+        if "edition" in document:
+            edition_mods = ET.SubElement(origin_info_mods, xmletree.prefixtag("mods", "edition"))
+            edition_mods.text = document["edition"]
+        # issuance -> issuance
+        if "issuance" in document:
+            issuance_mods = ET.SubElement(origin_info_mods, xmletree.prefixtag("mods", "issuance"))
+            issuance_mods.text = document["issuance"]
+        # frequency -> frequency
+        if "frequency" in document:
+            frequency_mods = ET.SubElement(origin_info_mods, xmletree.prefixtag("mods", "frequency"))
+            frequency_mods.text = document["frequency"]
 
 
 def convert_metajson_document_languages(document, mods_item):
@@ -2150,14 +2214,31 @@ def convert_metajson_document_languages(document, mods_item):
 
 
 def convert_metajson_document_physical_description(document, mods_item):
-    # TODO
-    # form -> form
-    # reformatting_quality -> reformattingQuality
-    # -> internetMediaType
-    # -> extent
-    # digital_origin -> digitalOrigin
-    # physical_description_notes -> note
-    pass
+    if "form" in document or "reformatting_quality" in document or "digital_origin" in document or "physical_description_notes" in document:
+        physicalDescription_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "physicalDescription"))
+        # form -> form
+        if "form" in document:
+            form_mods = ET.SubElement(physicalDescription_mods, xmletree.prefixtag("mods", "form"))
+            form_mods.text = document["form"]
+        # reformatting_quality -> reformattingQuality
+        if "reformatting_quality" in document:
+            reformattingQuality_mods = ET.SubElement(physicalDescription_mods, xmletree.prefixtag("mods", "reformattingQuality"))
+            reformattingQuality_mods.text = document["reformatting_quality"]
+        # -> internetMediaType
+        # -> extent
+        # digital_origin -> digitalOrigin
+        if "digital_origin" in document:
+            digitalOrigin_mods = ET.SubElement(physicalDescription_mods, xmletree.prefixtag("mods", "digitalOrigin"))
+            digitalOrigin_mods.text = document["digital_origin"]
+        # physical_description_notes -> note
+        if "physical_description_notes" in document:
+            for note in document["physical_description_notes"]:
+                note_mods = ET.SubElement(physicalDescription_mods, xmletree.prefixtag("mods", "note"))
+                note_mods.text = note["value"]
+                if "language" in note:
+                    note_mods.set("xml:lang", note["language"])
+                if "note_type" in note:
+                    note_mods.set("type", note["note_type"])
 
 
 def convert_metajson_document_descriptions(document, mods_item):
@@ -2356,8 +2437,74 @@ def convert_metajson_document_identifiers(document, mods_item):
 
 
 def convert_metajson_document_resources(document, mods_item):
-    # todo
-    pass
+    if "resources" in document:
+        for resource in document["resources"]:
+            if resource["rec_type"] == "ResourceRemote" and "url" in resource:
+                location_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "location"))
+                url_mods = ET.SubElement(location_mods, xmletree.prefixtag("mods", "url"))
+                url_mods.text = resource["url"]
+                if "labels" in resource:
+                    url_mods.set("displayLabel", resource["labels"][0]["value"])
+                if "date_last_accessed" in resource:
+                    url_mods.set("dateLastAccessed", resource["date_last_accessed"])
+            elif resource["rec_type"] == "ResourcePhysical":
+                location_mods = ET.SubElement(mods_item, xmletree.prefixtag("mods", "location"))
+                if "institution_identifiers" in resource:
+                    for identifier in resource["institution_identifiers"]:
+                        physical_location_mods = ET.SubElement(location_mods, xmletree.prefixtag("mods", "physicalLocation"))
+                        physical_location_mods.text = identifier["value"]
+                        physical_location_mods.set("authority", identifier["id_type"])
+                if "institution_name" in resource:
+                    physical_location_mods = ET.SubElement(location_mods, xmletree.prefixtag("mods", "physicalLocation"))
+                    physical_location_mods.text = resource["institution_name"]
+                holding_simple_mods = ET.SubElement(location_mods, xmletree.prefixtag("mods", "holdingSimple"))
+                copy_information_mods = ET.SubElement(holding_simple_mods, xmletree.prefixtag("mods", "copyInformation"))
+                if "form" in resource:
+                    form_mods = ET.SubElement(copy_information_mods, xmletree.prefixtag("mods", "form"))
+                    form_mods.text = resource["form"]
+                sublocation = ""
+                if "location" in resource:
+                    sublocation = sublocation + resource["location"]
+                    if "sub_location" in resource:
+                        sublocation = sublocation + ":"
+                if "sub_location" in resource:
+                    sublocation = sublocation + resource["sub_location"]
+                if sublocation:
+                    sublocation_mods = ET.SubElement(copy_information_mods, xmletree.prefixtag("mods", "sublocation"))
+                    sublocation_mods.text = sublocation
+                call_number = ""
+                if "call_number" in resource:
+                    call_number = resource["call_number"]
+                if "part_number" in resource:
+                    call_number = call_number + " " + resource["part_number"]
+                if call_number:
+                    shelflocator_mods = ET.SubElement(copy_information_mods, xmletree.prefixtag("mods", "shelfLocator"))
+                    shelflocator_mods.text = resource["call_number"]
+                if "notes" in resource:
+                    for note in resource["notes"]:
+                        note_mods = ET.SubElement(copy_information_mods, xmletree.prefixtag("mods", "note"))
+                        note_mods.text = note["value"]
+                        if "language" in note:
+                            note_mods.set("xml:lang", note["language"])
+                        if "note_type" in note:
+                            note_mods.set("type", note["note_type"])
+                enumerationAndChronology = ""
+                if "issue_number" in resource:
+                    enumerationAndChronology = resource["issue_number"]
+                    if "issue_date" in resource:
+                        enumerationAndChronology = enumerationAndChronology + " "
+                if "issue_date" in resource:
+                    enumerationAndChronology = enumerationAndChronology + resource["issue_date"]
+                if enumerationAndChronology:
+                    enumerationAndChronology_mods = ET.SubElement(copy_information_mods, xmletree.prefixtag("mods", "enumerationAndChronology"))
+                    enumerationAndChronology_mods.text = enumerationAndChronology
+                    enumerationAndChronology_mods.set("unitType", "1")
+            elif resource["rec_type"] == "ResourceBitstream":
+                # TODO
+                # like ResourceRemote with :
+                # bitstream dissemination url as url
+                # now as date_last_accessed
+                pass
 
 
 def convert_metajson_document_rights(document, mods_item):
@@ -2386,7 +2533,7 @@ def convert_metajson_document_rights(document, mods_item):
 
 
 def convert_metajson_document_parts(document, mods_item):
-    # todo
+    # TODO
     pass
 
 
