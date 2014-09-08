@@ -12,7 +12,7 @@ from biblib.util import console
 
 
 def test_crosswalk(input_format, output_format=constants.FORMAT_METAJSON, all_in_one_file=True):
-    logging.warning("*** Test crosswalk : {0}".format(input_format))
+    logging.info("*** Test crosswalk : {0}".format(input_format))
     base_dir = os.path.join(os.getcwd(), "data")
     input_dir = os.path.join(base_dir, input_format)
     output_file_extension = io_service.guess_file_extension_from_format(output_format)
@@ -22,13 +22,13 @@ def test_crosswalk(input_format, output_format=constants.FORMAT_METAJSON, all_in
         results = crosswalks_service.parse_and_convert_file_list(input_file_list, input_format, output_format, "test", "", False, all_in_one_file)
         col_id = "".join(["test_", input_format, "_to_", output_format])
         col_title = "".join(["Test ", input_format, " to ", output_format])
-        #if all_in_one_file:
-        output_path = os.path.join(base_dir, "result", "result_" + input_format + "_" + output_format + "." + output_file_extension)
-        io_service.write_items(col_id, col_title, results, output_path, output_format, all_in_one_file)
-        #else:
-        #    for idx, result in enumerate(results):
-        #        output_path = os.path.join(base_dir, "result", "result_" + input_format + "_" + output_format + "_" + str(idx) + "." + output_file_extension)
-        #        io_service.write_items(col_id, col_title, result, output_path, output_format, all_in_one_file)
+        if all_in_one_file:
+            output_file_path = os.path.join(base_dir, "result", "result_" + input_format + "_" + output_format + "." + output_file_extension)
+            io_service.write_items_in_one_file(col_id, col_title, results, output_file_path, output_format)
+        else:
+            #for idx, result in enumerate(results):
+            output_dir_path = os.path.join(base_dir, "result", "result_" + input_format + "_" + output_format)
+            io_service.write_items(col_id, col_title, results, output_dir_path, output_format)
 
 
 def test():
