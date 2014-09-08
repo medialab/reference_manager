@@ -58,7 +58,7 @@ def conf_corpus(corpus, corpus_conf_dir_name):
         results_types_corpus = conf_types(corpus, corpus_conf_dir_name)
         date_types = datetime.datetime.now()
         total_count = 0
-        logging.debug("# Import common types:")
+        logging.info("# Import common types:")
         if results_types_common:
             for entry in results_types_common:
                 total_count += 1
@@ -126,26 +126,33 @@ def export_one_record_per_copy(metajson_list):
         if document is not None and "resources" in document and document["resources"] is not None:
             res_phys_count = 0
             res_phys_numer_count = 0
+            remote_resources = []
             for resource in document["resources"]:
                 # only for physical resources
-                if "rec_type" in resource and resource["rec_type"] == "physical":
+                if "rec_type" in resource and resource["rec_type"] == "ResourcePhysical":
                     res_phys_count += 1
-                    if "note" in resource and resource["note"][:5].lower() == "numer":
+                    if "notes" in resource and resource["notes"][0]["value"][:5].lower() == "numer":
                         res_phys_numer_count += 1
+                elif "rec_type" in resource and resource["rec_type"] == "ResourceRemote":
+                    remote_resources.append(resource)
             if res_phys_count > 0:
                 for resource in document["resources"]:
-                    if "rec_type" in resource and resource["rec_type"] == "physical":
+                    if "rec_type" in resource and resource["rec_type"] == "ResourcePhysical":
                         new_doc = copy.deepcopy(document)
-                        if "physical_copy_number" in resource and resource["physical_copy_number"] is not None:
-                            new_doc["rec_id"] = new_doc["rec_id"] + "_" + resource["physical_copy_number"]
+                        if "rec_id" in resource and resource["rec_id"] is not None:
+                            new_doc["rec_id"] = new_doc["rec_id"] + "_" + resource["rec_id"]
                         if res_phys_numer_count == 0:
                             # Add all physical resources
                             new_doc["resources"] = [resource]
+                            if remote_resources:
+                                new_doc["resources"].extend(remote_resources)
                             yield new_doc
                         else:
                             # Only numer physical resources
-                            if "note" in resource and resource["note"][:5].lower() == "numer":
+                            if "notes" in resource and resource["notes"][0]["value"][:5].lower() == "numer":
                                 new_doc["resources"] = [resource]
+                                if remote_resources:
+                                    new_doc["resources"].extend(remote_resources)
                                 yield new_doc
 
 
