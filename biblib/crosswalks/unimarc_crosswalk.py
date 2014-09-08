@@ -1126,6 +1126,7 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
                         related["title"] = subfield[1].strip()
                     elif subfield[0] == "u":
                         resource = Resource()
+                        resource["rec_type"] = "ResourceRemote"
                         resource["url"] = subfield[1].strip()
                         resources.append(resource)
                     elif subfield[0] == "x":
@@ -1418,11 +1419,11 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     if fields_856:
         for field_856 in fields_856:
             resource = Resource()
-            resource["rec_type"] = "remote"
+            resource["rec_type"] = "ResourceRemote"
             if field_856.get_subfields('u'):
                 resource["url"] = field_856.get_subfields('u')[0]
             if field_856.get_subfields('z'):
-                resource["label"] = field_856.get_subfields('z')[0]
+                resource["labels"] = [{"value":field_856.get_subfields('z')[0], "language":"und"}]
             if resource:
                 resources.append(resource)
 
@@ -1431,49 +1432,49 @@ def unimarc_record_to_metajson(record, source, rec_id_prefix):
     if fields_995:
         for field_995 in fields_995:
             resource = Resource()
-            resource["rec_type"] = "physical"
-            # $b -> physical_library_identifier ex: 751072303
+            resource["rec_type"] = "ResourcePhysical"
+            # $b -> institution_identifiers[].value ex: 751072303
             if field_995.get_subfields('b'):
-                resource["physical_library_identifier"] = field_995.get_subfields('b')[0]
-            # $c -> physical_location ex: BIB01
+                resource["institution_identifiers"] = [{"value": field_995.get_subfields('b')[0], "id_type": "RBCCN"}]
+            # $c -> location ex: BIB01
             if field_995.get_subfields('c'):
-                resource["physical_location"] = field_995.get_subfields('c')[0]
+                resource["location"] = field_995.get_subfields('c')[0]
             # $d -> physical_sub_location ex: MAG1
             if field_995.get_subfields('d'):
-                resource["physical_sub_location"] = field_995.get_subfields('d')[0]
-            # $e -> physical_collection ex: cad
+                resource["sub_location"] = field_995.get_subfields('d')[0]
+            # $e -> collection ex: cad
             if field_995.get_subfields('e'):
-                resource["physical_collection"] = field_995.get_subfields('e')[0]
-            # $f -> physical_copy_number ex: 00000000926980
+                resource["collection"] = field_995.get_subfields('e')[0]
+            # $f -> rec_id ex: 00000000926980
             if field_995.get_subfields('f'):
-                resource["physical_copy_number"] = field_995.get_subfields('f')[0]
-            # $k -> physical_call_number ex: BR.8°0947(13)
+                resource["rec_id"] = field_995.get_subfields('f')[0]
+            # $k -> call_number ex: BR.8°0947(13)
             if field_995.get_subfields('k'):
-                resource["physical_call_number"] = field_995.get_subfields('k')[0].replace("Â°", "°")
-            # $l -> physical_part_number ex: 2
+                resource["call_number"] = field_995.get_subfields('k')[0].replace("Â°", "°")
+            # $l -> part_number ex: 2
             if field_995.get_subfields('l'):
-                resource["physical_part_number"] = field_995.get_subfields('l')[0]
-            # $o -> physical_category ex: L1
+                resource["part_number"] = field_995.get_subfields('l')[0]
+            # $o -> category ex: L1
             if field_995.get_subfields('o'):
-                resource["physical_category"] = field_995.get_subfields('o')[0]
-            # $p -> physical_is_periodical ex: p
+                resource["category"] = field_995.get_subfields('o')[0]
+            # $p -> is_periodical ex: p
             if field_995.get_subfields('p') and field_995.get_subfields('p')[0] == "p":
-                resource["physical_is_periodical"] = True
-            # $r -> physical_availability ex: DI
+                resource["is_periodical"] = True
+            # $r -> availability_code ex: DI
             if field_995.get_subfields('r'):
-                resource["physical_availability"] = field_995.get_subfields('r')[0]
+                resource["availability_code"] = field_995.get_subfields('r')[0]
             # $s -> rec_modified_date ex: YYYYMMDD
             if field_995.get_subfields('s'):
                 resource["rec_modified_date"] = field_995.get_subfields('s')[0]
-            # $u -> note ex: Ceci est une note
+            # $u -> notes[i]/value ex: Ceci est une note
             if field_995.get_subfields('u'):
-                resource["note"] = field_995.get_subfields('u')[0]
-            # $v -> physical_issue_number ex: Vol. 52, no 1>6, 2002 : vol. relié
+                resource["notes"] = [{"value":field_995.get_subfields('u')[0],"language":"und"}]
+            # $v -> issue_number ex: Vol. 52, no 1>6, 2002 : vol. relié
             if field_995.get_subfields('v'):
-                resource["physical_issue_number"] = field_995.get_subfields('v')[0]
-            # $w -> physical_issue_date ex: 2002
+                resource["issue_number"] = field_995.get_subfields('v')[0]
+            # $w -> issue_date ex: 2002
             if field_995.get_subfields('w'):
-                resource["physical_issue_date"] = field_995.get_subfields('w')[0]
+                resource["issue_date"] = field_995.get_subfields('w')[0]
             if resource:
                 resources.append(resource)
     if resources is not None:

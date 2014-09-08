@@ -382,22 +382,22 @@ def openurl_xmletree_to_metajson_list(openurl_response, source, rec_id_prefix, o
                         openurl_linkgroup_list = openurl_linkgroups.findall(xmletree.prefixtag("ssopenurl", "linkGroup"))
                         if openurl_linkgroup_list is not None:
                             for openurl_linkgroup in openurl_linkgroup_list:
-                                database_name = None
-                                provider_name = None
+                                service_name = None
+                                institution_name = None
                                 period_begin = None
                                 period_end = None
                                 url = None
                                 # holdingData
                                 openurl_holdingdata = openurl_linkgroup.find(xmletree.prefixtag("ssopenurl", "holdingData"))
                                 if openurl_holdingdata is not None:
-                                    # providerName
+                                    # institution_name
                                     openurl_providername = openurl_holdingdata.find(xmletree.prefixtag("ssopenurl", "providerName"))
                                     if openurl_providername is not None:
-                                        provider_name = openurl_providername.text
-                                    # databaseName
+                                        institution_name = openurl_providername.text
+                                    # service_name
                                     openurl_databasename = openurl_holdingdata.find(xmletree.prefixtag("ssopenurl", "databaseName"))
                                     if openurl_databasename is not None:
-                                        database_name = openurl_databasename.text
+                                        service_name = openurl_databasename.text
                                     # normalizedData
                                     openurl_normalizeddata = openurl_holdingdata.find(xmletree.prefixtag("ssopenurl", "normalizedData"))
                                     if openurl_normalizeddata is not None:
@@ -422,14 +422,14 @@ def openurl_xmletree_to_metajson_list(openurl_response, source, rec_id_prefix, o
                                     resource["rec_type"] = "ResourceRemote"
                                     resource["rec_state"] = "published"
                                     resource["relation_type"] = "eResource"
-                                    resource["relation_version"] = "publishedVersion"
+                                    resource["version_type"] = "publishedVersion"
                                     resource["access_rights"] = "closedAccess"
                                     resource["format_mimetype"] = "text/html"
                                     resource["url"] = url
-                                    if database_name:
-                                        resource["database_name"] = database_name
-                                    if provider_name:
-                                        resource["provider_name"] = provider_name
+                                    if service_name:
+                                        resource["service_name"] = service_name
+                                    if institution_name:
+                                        resource["institution_name"] = institution_name
                                     if period_begin:
                                         resource["period_begin"] = period_begin
                                     if period_end:
