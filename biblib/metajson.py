@@ -242,8 +242,12 @@ class Document(Common):
             return self["rec_source"]
 
     def get_title(self):
+        title = ""
+        if "title_non_sort" in self:
+            title = self["title_non_sort"]
         if "title" in self:
-            return self["title"]
+            title = title + self["title"]
+        return title
 
     def get_is_part_of(self):
         if "is_part_ofs" in self:
