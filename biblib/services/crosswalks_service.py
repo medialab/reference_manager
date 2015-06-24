@@ -73,8 +73,8 @@ def convert_native(input_data, input_format, output_format, source, rec_id_prefi
                 return convert_metajson_list(metajson_list, output_format, all_in_one_file)
 
 
-def convert_bibtext(input_data, input_format, source, rec_id_prefix, only_first_record):
-    return bibtex_crosswalk.bibtex_root_to_metasjon_list(input_data, source, rec_id_prefix, only_first_record)
+def convert_bibtext(input_data, source=None):
+    return bibtex_crosswalk.bibtex_root_to_metasjon_list(input_data, source)
 
 
 def convert_csv(input_data, input_format, source, rec_id_prefix, only_first_record):
