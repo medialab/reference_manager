@@ -6,6 +6,7 @@ import datetime
 import locale
 import logging
 import traceback
+from io import StringIO
 
 from txjsonrpc.web import jsonrpc
 from txjsonrpc import jsonrpclib
@@ -13,6 +14,7 @@ from twisted.web import server
 from twisted.application import service
 from twisted.application import internet
 from operator import itemgetter
+from pybtex.database.input import bibtex
 
 from biblib.citations import citations_manager
 from biblib.services import config_service
@@ -75,15 +77,17 @@ class References_repository(jsonrpc.JSONRPC):
         """ Return the default corpus"""
         return default_corpus
 
-    def jsonrpc_save(self, corpus, document, role=None):
+    def jsonrpc_save(self, corpus, document, format="metajson", role=None):
         """ insert or update a reference in the repository
             return object id if ok or error
             params:
                 - corpus: the corpus
                 - document: the document metadata to save 
+                - format : the format in wich the document is written
                 - role: the user role
 
         """
+        
         # default corpus management
         if not corpus:
             corpus = default_corpus
@@ -91,7 +95,11 @@ class References_repository(jsonrpc.JSONRPC):
         if role == "":
             role = None
         try:
-            document["rec_modified_date"] = datetime.now().isoformat()
+            if format == "bibtex" :
+                _p=bibtex.Parser()
+                document = _p.parse_stream(StringIO(document))
+                document=list(crosswalks_service.convert_bibtext(document))[0]
+            document["rec_modified_date"] = datetime.datetime.now().isoformat()
             doc_bson = jsonbson.json_to_bson(document)
             oid, rec_id = repository_service.save_document(corpus, doc_bson, role)
             return {"rec_id": rec_id}
