@@ -77,16 +77,19 @@ class References_repository(jsonrpc.JSONRPC):
         """ Return the default corpus"""
         return default_corpus
 
-    def jsonrpc_save(self, corpus, document, format="metajson", role=None):
+    def jsonrpc_save(self, corpus, document, format="metajson",rec_id=None, role=None):
         """ insert or update a reference in the repository
             return object id if ok or error
             params:
                 - corpus: the corpus
                 - document: the document metadata to save 
                 - format : the format in wich the document is written
+                - rec_id : the rec_id of the document to save modification, used only when using a different format than metajson
                 - role: the user role
 
         """
+        
+
         
         # default corpus management
         if not corpus:
@@ -99,6 +102,8 @@ class References_repository(jsonrpc.JSONRPC):
                 _p=bibtex.Parser()
                 document = _p.parse_stream(StringIO(document))
                 document=list(crosswalks_service.convert_bibtext(document))[0]
+                if rec_id:
+                    document["rec_id"]=rec_id
             document["rec_modified_date"] = datetime.datetime.now().isoformat()
             doc_bson = jsonbson.json_to_bson(document)
             oid, rec_id = repository_service.save_document(corpus, doc_bson, role)
@@ -150,6 +155,7 @@ class References_repository(jsonrpc.JSONRPC):
                 - output_format: the format wanted to describe references
             return the asked references in the specified format
         """
+
         # default corpus management
         if not corpus:
             corpus = default_corpus
@@ -160,7 +166,9 @@ class References_repository(jsonrpc.JSONRPC):
                 if output_format == constants.FORMAT_METAJSON:
                     results.append(jsonbson.bson_to_json(metajson_document))
                 else:
-                    results.append(crosswalks_service.convert_native(metajson_document, constants.FORMAT_METAJSON, output_format, corpus, corpus, False, False))
+                    results.append(crosswalks_service.convert_metajson(metajson_document,output_format))
+                    # I modified this line but I am not sure about that. Keeping the original in comment as a warning. Paul 
+                    #results.append(list(crosswalks_service.convert_native(metajson_document, constants.FORMAT_METAJSON, output_format, corpus, corpus, False, False))[0])
             return results
         except exceptions.metajsonprc_error as ex:
             return jsonrpclib.Fault(ex.code, str(ex))
