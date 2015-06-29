@@ -16,8 +16,8 @@ def cite(metajson_document, style, format):
     if format == "html":
         result = openurl_crosswalk.metajson_to_openurlcoins(metajson_document)
     else:
-        recult=["",""]
-        
+        result=["",""]
+
     if style == constants.STYLE_MLA:
         result = result[1] + mla_style.cite(metajson_document, format)
     return result
