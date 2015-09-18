@@ -1843,7 +1843,7 @@ def metajson_to_mods_xmletree(document, with_schema_location=True):
 
     # mods_root
     xmletree.register_namespaces()
-    mods_root = ET.Element(xmletree.prefixtag("mods", "mods"), version="3.5")
+    mods_root = ET.Element(xmletree.prefixtag("mods", "mods"), version="3.4")
     if with_schema_location:
         mods_root.set(xmletree.prefixtag("xsi", "schemaLocation"), constants.xmlns_map["mods"] + " " + constants.xmlns_schema_map["mods"])
 
