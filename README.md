@@ -376,6 +376,13 @@ Add BibLib paths to virtualenv
 
 ### 4.2. Terminal 2
 
+#### create log folder
+Would be better to let the script create the direcoty if doesn't exist...
+For now, one has to create the log folder
+
+    cd $BIBLIB_HOME (/store/opt/reference_manager)
+    mkdir log
+
 #### Clean corpus
 Be careful! Create the mongodb database of the specified corpus if not already existing, erase all data and create the indexes inside this corpus database.
 
@@ -385,6 +392,7 @@ Be careful! Create the mongodb database of the specified corpus if not already e
 
 #### Conf corpus
 Insert or update in a corpus the types and user interface fields located in a "conf" folder
+
     cd $BIBLIB_HOME
     v BIBLIB
     python biblib conf -c corpus -d corpus_conf_dir_name

@@ -112,13 +112,13 @@ special_to_u = [("{",           u""),
                 ("\ss",         u"ß")]
 
 
-def bibtex_root_to_metasjon_list(bibtex_root, source, rec_id_prefix, only_first_record):
+def bibtex_root_to_metasjon_list(bibtex_root, source):
     for entry_key in bibtex_root.entries.keys():
         bibtex_entry = bibtex_root.entries[entry_key]
-        yield bibtex_entry_to_metajson(bibtex_entry, source, rec_id_prefix)
+        yield bibtex_entry_to_metajson(bibtex_entry, source)
 
 
-def bibtex_entry_to_metajson(entry, source, rec_id_prefix):
+def bibtex_entry_to_metajson(entry, source):
     document = Document()
 
     # rec_type
