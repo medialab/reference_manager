@@ -22,7 +22,7 @@ if __name__ == "__main__":
     # conf params
     corpus = "num"
     source = "FNSP"
-    rec_id_prefix = "sc"
+    rec_id_prefix = "sc_"
     input_dir_path = os.path.join("data", "num", "input")
     input_format = constants.FORMAT_UNIMARC
     output_dir_path = os.path.join("data", "num", "output")
