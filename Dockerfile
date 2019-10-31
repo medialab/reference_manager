@@ -1,9 +1,10 @@
 FROM python:2.7-alpine
 
-COPY . /biblib
-WORKDIR /biblib
+COPY . /reference_manager
+WORKDIR /reference_manager
 
 ENV PIP_CACHE /tmp/pipcache
+ENV PYTHONPATH $PYTHONPATH:/reference_manager
 
 RUN apk --update add gcc git musl-dev libxml2-dev libxslt-dev libffi-dev openssl-dev \
     && pip install --cache-dir=$PIP_CACHE -U setuptools pip \
@@ -14,8 +15,8 @@ RUN apk --update add gcc git musl-dev libxml2-dev libxslt-dev libffi-dev openssl
     && rm -rf /tmp/pip-req-build* \
     && rm /var/cache/apk/*
 
-RUN cp conf/config.template.json conf/config.json
+RUN cp conf/config.docker.json conf/config.json
 
-RUN mkdir -p log
+RUN mkdir -p /logs
 
-CMD ["scripts/start_jsonrpc.sh", "", "."]
+ENTRYPOINT ["/reference_manager/entrypoint.sh"]

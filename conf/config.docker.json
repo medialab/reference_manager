@@ -1,0 +1,126 @@
+{
+  "logging": {
+      "version": 1,
+      "disable_existing_loggers": true,
+      "formatters": {
+          "detailed": {
+              "class": "logging.Formatter",
+              "format": "%(asctime)s %(levelname)-8s %(processName)-10s - %(message)s"
+          },
+          "simple": {
+              "class": "logging.Formatter",
+              "format": "%(levelname)-8s - %(message)s"
+          }
+      },
+      "handlers": {
+          "console": {
+              "class": "logging.StreamHandler",
+              "level": "DEBUG",
+              "formatter": "simple"
+          },
+          "file": {
+              "class": "logging.FileHandler",
+              "filename": "/logs/biblib.log",
+              "mode": "w",
+              "level": "INFO",
+              "formatter": "detailed"
+          },
+          "errors": {
+              "class": "logging.FileHandler",
+              "filename": "/logs/biblib-errors.log",
+              "mode": "w",
+              "level": "ERROR",
+              "formatter": "detailed"
+          }
+      },
+      "root": {
+          "level": "DEBUG",
+          "handlers": ["console", "file", "errors"]
+      }
+  },
+  "mongodb": {
+      "db": "biblib",
+      "host": "localhost",
+      "port": 27017
+  },
+  "jsonrpc": {
+      "port": 8080
+  },
+  "default_corpus": "aime",
+  "citations" : {
+      "formats": ["html"],
+      "styles": ["mla"]
+  },
+  "hal": {
+      "ref_endpoint": "http://api-preprod.archives-ouvertes.fr/ref/",
+      "sword_endpoint": "http://api-preprod.archives-ouvertes.fr/sword/servicedocument",
+      "sword_username": "test_ws",
+      "sword_password": "test",
+      "sword_onbehalhof": "test"
+  },
+  "openurl": {
+      "endpoint": "http://www.example.org/?"
+  },
+  "hyphe": {
+      "corpus_code": "corpus",
+      "corpus_name": "corpus name",
+      "jsonrpc_endpoint": "http://localhost:7991",
+      "mongodb": {
+          "db": "hci-corpus",
+          "host": "localhost",
+          "port": 27017
+      }
+  },
+  "tika": {
+      "endpoint": "http://localhost:9998/"
+  },
+  "anta": {
+      "endpoint": "http://anta.example.com/api/",
+      "endpoint_frog": "http://anta.example.com/api-frog/",
+      "username": "username",
+      "password": "password"
+  },
+  "sven": {
+      "endpoint": "http://sven.example.com/anta/api/",
+      "username": "username",
+      "password": "password"
+  },
+  "crossref_openurl": {
+      "endpoint": "http://www.crossref.org/openurl",
+      "format": "unixref",
+      "pid": "me@example.org"
+  },
+  "google_scholar": {
+      "endpoint": "http://scholar.google.com"
+  },
+  "google": {
+      "conf_key": "fgfgfgsg70qsf9fsf97",
+      "email": "me@gmail.com",
+      "password": "password"
+  },
+  "pubmed": {
+      "endpoint_baseurl": "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "db": "pubmed",
+      "tool": "biblib",
+      "email": "me@example.org",
+      "usehistory":"y",
+      "retmax":1
+  },
+  "summon": {
+      "host": "api.summon.serialssolutions.com",
+      "path": "/2.0.0/search",
+      "access_id": "university",
+      "secret_key": "***"
+  },
+  "abbyy": {
+      "endpoint": "http://cloud.ocrsdk.com/",
+      "application_id": "toolName",
+      "password": "***"
+  },
+  "ldap": {
+      "host": "ldap://ldap.example.org",
+      "port": 389,
+      "dn": "uid=me, ou=Users, o=example, c=com",
+      "password": "***"
+  }
+}

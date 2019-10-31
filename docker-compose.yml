@@ -5,6 +5,13 @@ services:
   api:
     build: .
     links:
-      - mongo:mongo
+      - mongo
     ports:
       - 8080:8080
+  blf:
+    build:
+      context: ./blf
+    links:
+      - api
+    ports:
+      - 3000:3000
