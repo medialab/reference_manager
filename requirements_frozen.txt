@@ -23,7 +23,7 @@ pyoai==2.4.4
 python-dateutil==1.5
 python-stdnum==1.0
 requests==2.6.2
-rsa==3.1.4
+rsa==4.1
 simplejson==3.6.5
 six==1.9.0
 smc.bibencodings==0.1
